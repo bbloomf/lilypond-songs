@@ -66,14 +66,14 @@ sopMusic = \relative c' {
   g4 bes ees d8. ees16 |
   c4 bes g8.[ aes16 bes8] g |
   f2 ees4 << bes4\rest\f { s8 \teeny bes'8 \normalsize} >> |
-  \slurDotted
+  \slurDashed
   ees4-> d-> c-> bes8\rest d16( ees) |
   d4-> c-> bes-> bes8\rest bes |
   
   c4. g8 g4 g |
   \slurSolid
   c4.( d8) ees4 ees\fermata |
-  \slurDotted
+  \slurDashed
   ees,4. f8 aes[ g] f( ees) |
   g4 bes ees\fermata d8( ees) |
   c4. bes8 g8.[ aes16 bes8] g |
@@ -129,13 +129,13 @@ altoMusic = \relative c' {
   ees4 f ees ees8. ees16 |
   ees4 ees ees4. ees8 |
   d2 ees4 s8 \teeny g \normalsize |
-  g4 f ees s8 \slurDotted f16( ees) |
+  g4 f ees s8 \slurDashed f16( ees) |
   f4 ees d s8 f |
   
   ees4. ees8 d4 d |
   \slurSolid
   c4.( f8) ees4 ees |
-  \slurDotted
+  \slurDashed
   ees4. bes8 bes4 d8( ees) |
   ees4 f ees ees8( ees) |
   ees4. ees8 ees4. ees8 |
@@ -174,12 +174,12 @@ tenorMusic = \relative c' {
   aes4 bes bes4. bes8 |
   \slurSolid
   bes4.( aes8) g4 s8 \teeny bes \normalsize |
-  bes4 b c s8 \slurDotted b16( c) |
+  bes4 b c s8 \slurDashed b16( c) |
   bes?4 a bes s8 d |
   
   c4. c8 b4 g |
   \slurSolid g4.( b8) c4 c |
-  \slurDotted bes4. aes8 f[ g] aes( g) |
+  \slurDashed bes4. aes8 f[ g] aes( g) |
   bes4 bes g bes8( bes) |
   aes4. bes8 bes4. bes8 |
   \slurSolid
@@ -207,13 +207,13 @@ bassMusic = \relative c' {
   ees4 d c g8. g16 |
   aes4 g ees'8.[ f16 g8] ees |
   bes2 ees4 << d4\rest {s8 \teeny ees8} >> \normalsize |
-  \slurDotted
+  \slurDashed
   ees4 g c, d8\rest g16( c,) |
   f4 < \tweak #'font-size #-3 f f,> bes, d8\rest f |
   
   c4. ees8 g4 f |
   \slurSolid ees4.( d8) c4 g'\fermata |
-  \slurDotted g4. f8 d[ ees] bes( ees) |
+  \slurDashed g4. f8 d[ ees] bes( ees) |
   ees4 d c\fermata g8( g) |
   aes4. g8 ees'8.[ f16 g8] ees |
   bes2 ees4 \bar"|."

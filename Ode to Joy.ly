@@ -94,7 +94,7 @@ sopWords = \lyricmode {
   
   Though by cus -- tom’s law di -- vid -- ed,
   Now we meet on com -- mon ground.
-  We are broth -- ers, all u -- nit -- ed
+  We __ are broth -- ers, all u -- nit -- ed
   When joy in our hearts is found.
 }
 
@@ -107,7 +107,7 @@ sopWordsII = \lyricmode {
   
   They who scorn the pledge of friend -- ship
   On -- ly for them -- selves do live,
-  They are doomed to walk for -- got -- ten
+  They __ are doomed to walk for -- got -- ten
   Who re -- fuse their hearts to give.
 }
 
@@ -120,7 +120,7 @@ sopWordsIII = \lyricmode {
   
   O ye mil -- lions, bow be -- fore Him;
   Seek Him, He is ev -- er nigh!
-  We are broth -- ers, all u -- nit -- ed,
+  We __ are broth -- ers, all u -- nit -- ed,
   Fa -- ther’d by one God on high.
 }
 

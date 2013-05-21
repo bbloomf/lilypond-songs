@@ -62,8 +62,8 @@ global = {
   %\set midiInstrument = "recorder"
   \autoBeamOff
   \override DynamicTextSpanner #'style = #'none
-  \slurDotted
-  \tieDotted
+  \slurDashed
+  \tieDashed
 }
 
 sopMusic = \relative c' {
@@ -116,9 +116,9 @@ sopWords = \lyricmode {
 	A cap -- it -- al ship for an o -- _ cean trip
   Was the Wal -- lop -- ing _ Win -- dow Blind!
   No wind that blew dis -- _ mayed _ her crew,
-  Or _ troub -- led the cap -- _ tain’s mind
+  Or __ _ troub -- led the cap -- _ tain’s mind
   
-  The _ man _ at the wheel was _ made _ to feel
+  The _ man _ at the wheel was __ _ made _ to feel
   Con -- _ tempt for the wild -- _ est blow -- ow -- ow,
   Tho’ it of -- ten ap -- peared when the gale had clear’d,
   That he’d been in his bunk _ be -- low.
@@ -128,11 +128,11 @@ sopWordsII = \lyricmode {
   \set stanza = #"2. "
   \set ignoreMelismata = ##t
   The bo’ -- _ swain’s mate was _ ver -- y se -- date,
-  Yet _ fond _ of a -- muse -- ment too;
+  Yet __ _ fond _ of a -- muse -- ment too;
   He played hop -- scotch with the star -- _ board watch
   While the cap -- _ tain tick -- led the crew.
   
-  And the gun -- ner we _ had was ap -- par -- ent -- ly mad
+  And the gun -- ner we __ _ had was ap -- par -- ent -- ly mad
   For he stood on the can -- _ non’s tai -- ai -- ail,
   And _ fired _ sal -- utes in the cap -- tain’s boots
   In the teeth of a boom -- _ ing gale.
@@ -152,13 +152,13 @@ sopWordsIII = \lyricmode {
   \set stanza = #"3. "
   \set ignoreMelismata = ##t
   The cap -- _ tain sat in a com -- mo -- dore’s hat
-  And _ dined _ in a roy -- al way
-  On toast -- ed pigs and _ pick -- les and figs
-  And _ gum -- mer -- y bread _ each day.
+  And __ _ dined _ in a roy -- al way
+  On toast -- ed pigs and __ _ pick -- les and figs
+  And __ _ gum -- mer -- y bread _ each day.
   
-  But the rest of us _ ate from an o -- di -- ous plate
+  But the rest of us __ _ ate from an o -- di -- ous plate
   For the food that was giv -- en the crew -- ew -- ew
-  Was a num -- ber of tons of _ hot cross buns
+  Was a num -- ber of tons of __ _ hot cross buns
   Served _ up with _ su -- gar and glue.
 }
 

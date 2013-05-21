@@ -50,7 +50,7 @@ global = {
   %\set midiInstrument = "recorder"
   \autoBeamOff
   \override DynamicTextSpanner #'style = #'none
-  \tieDotted
+  \tieDashed
 }
 
 sopMusic = \relative c' {
@@ -115,7 +115,7 @@ sopWords = \lyricmode {
   As free as a moun -- tain _ bird; _
   His en -- er -- get -- ic fist
   Should be rea -- dy to re -- sist
-  A _ dic -- _ ta -- _ tor -- ial word.
+  A __ _ dic -- _ ta -- _ tor -- ial word.
   
   \set associatedVoice = "altos" 
   His nose should \set associatedVoice = "sopranos" pant,
@@ -265,7 +265,7 @@ tenorMusic = \relative c' {
     a,8 a a cis e4 e8~ e |
     
     %page2
-    \slurDotted cis4 dis8( e) fis4 fis, |
+    \slurDashed cis4 dis8( e) fis4 fis, |
     \slurSolid b b8[ cis] dis4 b |
     fis'2 e4. e8 |
     
@@ -273,9 +273,9 @@ tenorMusic = \relative c' {
     e2 cis |
     ais4 cis8 cis fis4 e |
     
-    dis8[ fis] e dis \slurDotted cis( e) dis[ cis] |
+    dis8[ fis] e dis \slurDashed cis( e) dis[ cis] |
     b4 b8 cis dis4 dis |
-    \tieDotted e cis8~ cis fis4 fis,8~ fis |
+    \tieDashed e cis8~ cis fis4 fis,8~ fis |
     
     %page 3
     b8 e dis cis b[ a] << {\set midiInstrument = #"flute" \voiceOne \stemUp b'4\fermata | <gis e>} \\ \context Voice = "tenors" {\set midiInstrument = #"flute" \voiceTwo \stemDown gis,8[ fis]^\fermata |

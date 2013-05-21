@@ -121,7 +121,7 @@ sopWordsIV = \lyricmode {
   ’Tis His love His peo -- ple rais -- es
   O -- ver self to reign as kings,
   And as priests, his sol -- emn prais -- es
-  Each for a thank -- of -- f’ring brings.
+  Each for a \once \override LyricHyphen #'minimum-distance = #0.7 thank -- of -- f’ring brings.
 }
 
 sopWordsV = \lyricmode {

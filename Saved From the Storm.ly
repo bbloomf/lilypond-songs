@@ -160,7 +160,7 @@ sopWords = \lyricmode {
   In the chap -- el gray
   We’ll kneel and pray,
   \markup\italic Glo -- \markup\italic ri -- \markup\italic a \markup\italic ti -- \markup\italic bi, \markup\italic Do -- \markup\italic mi -- \markup\italic ne,
-  \markup\italic Glo -- \markup\italic ri -- \markup\italic a \markup\italic ti -- \markup\italic bi, \markup\italic ti -- \markup\italic bi, \markup\italic Do -- \markup\italic mi -- \markup\italic ne!
+  \markup\italic Glo -- \markup\italic ri -- \markup\italic a \markup\italic ti -- \markup\italic bi, __ \markup\italic ti -- \markup\italic bi, \markup\italic Do -- \markup\italic mi -- \markup\italic ne!
 }
 
 sopWordsII = \lyricmode {
@@ -189,7 +189,7 @@ altoMusic = \relative c' {
   d2. d4 |
   c b8[ ais] b4 b |
   e e e8 e e e |
-  e4 f fis fis |
+  e4 e fis fis |
   e2. f8 f |
   e4 f g c,8 c |
   e4 d c2 |
@@ -207,7 +207,7 @@ altoMusic = \relative c' {
   d4 d8 d d4 d |
   
   c2 e4 s |
-  dis dis8 dis dis4 dis |
+  dis dis8 dis d4 dis |
   e2. s4 |
   a,4 a8 a a4 b |
   b2. b4 |
@@ -243,7 +243,7 @@ altoMusic = \relative c' {
   
   e d c2 |
   e4 c8. e16 d4 d |
-  e c8.[ e16] d4( f) |
+  e c8.[ e16] d4( f)\fermata |
   e e8. e16 d4 c |
   c2 f |
   f4~ f8. e16 e2 \bar"|."
@@ -299,7 +299,7 @@ tenorMusic = \relative c' {
   gis4 gis8 gis gis4 gis |
   
   a2 c4 s |
-  a a8 a a4 a |
+  a a8 a b4 a |
   gis2. s4 |
   dis4 dis8 dis dis4 a' |
   gis2. g4 |
@@ -336,7 +336,7 @@ tenorMusic = \relative c' {
   a gis a2 |
   c4 g8. g16 g4 b |
   c c d2 |
-  c4 cis8. cis16 d4 d |
+  c4 c8. c16 d4 c8.[ d16] |
   e2 b |
   d4( b8.) g16 g2 \bar"|."
 }
@@ -416,8 +416,8 @@ bassMusic = \relative c' {
   
   a e' f2 |
   g4 g8. g16 g4 g |
-  c, c g'( gis) |
-  a a8. a16 d,4 f |
+  c, c g'( gis)\fermata |
+  a a8. a16 d,4 g8.[ f16] |
   g2 g |
   g4~ g8. g16 c,2 \bar"|."
 }

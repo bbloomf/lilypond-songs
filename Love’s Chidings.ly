@@ -115,8 +115,9 @@ sopWordsII = \lyricmode {
   Made Hope grow grey! __
   
   Hast thou no feel -- ing,
-  To see me kneel -- ing,
-  My love re -- veal -- ing,
+  To see me kneel -- ing, __
+  My love re -- \set associatedVoice = "altos" veal -- ing,
+  \unset associatedVoice
   Day af -- ter day?
 }
 

@@ -25,7 +25,7 @@
   top-system-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)
-       (padding . -1.5)
+       (padding . 0)
        (stretchability . 0))
   ragged-last-bottom = ##t
   ragged-bottom = ##f
@@ -62,6 +62,8 @@ global = {
   %\set midiInstrument = "recorder"
   \autoBeamOff
   \override DynamicTextSpanner #'style = #'none
+  \tieDashed
+  \slurDashed
 }
 
 sopMusic = \relative c' {
@@ -75,7 +77,7 @@ sopMusic = \relative c' {
     c d e e d c |
     
     b c d d c b |
-    a b c b4 a8 |
+    a( b) c b4 a8 |
     g4. \bar"" b4\rest \bar""
   } d,8 |
   d'4 d8 d4 d8 |
@@ -83,12 +85,13 @@ sopMusic = \relative c' {
   d' d d d4 cis8 |
   
   c?4. b4\rest c8 |
-  c d e e d c |
-  b c d d c b |
+  c( d) e e d c |
+  b( c) d d c b |
   a a gis a4 b8 |
   g4. b4\rest \bar"|."
 }
 sopWords = \lyricmode {
+  \set ignoreMelismata = ##t
   \set stanza = #"1. "
   When I go out of door,
   Of dam -- o -- zels a score,
@@ -104,12 +107,13 @@ sopWords = \lyricmode {
   
   A most in -- tense young man,
   A soul -- _ ful -- eyed young man,
-  An ul -- tra -- po -- et -- ic -- al,
-  su -- per -- æs -- thet -- ic -- al,
+  An ul -- \once \override LyricHyphen #'minimum-distance = #0.7 tra -- po -- et -- ic -- al,
+  su -- \once \override LyricHyphen #'minimum-distance = #0.7 per -- æs -- thet -- ic -- al,
   Out of the way young man!
 }
 
 sopWordsII = \lyricmode {
+  \set ignoreMelismata = ##t
   \set stanza = #"2. "
   Con -- ceive me, if you can,
   An ev -- ’ry -- day young man;
@@ -118,7 +122,7 @@ sopWordsII = \lyricmode {
   And a half -- _ bred black -- and -- tan.
   
   Who thinks sub -- ur -- ban “hops,”
-  More fund than “Mon -- day Pops.”
+  More fun than “Mon -- day Pops.”
   Who’s fond of his din -- ner,
   And does -- n’t get thin -- ner
   On bot -- _ tled beer and chops.
@@ -131,6 +135,7 @@ sopWordsII = \lyricmode {
 }
 
 sopWordsIII = \lyricmode {
+  \set ignoreMelismata = ##t
   \set stanza = #"3. "
   A Jap -- a -- nese young man—
   A blue and white young man—
@@ -146,17 +151,22 @@ sopWordsIII = \lyricmode {
   
   Con -- ceive me, if you can,
   A crot -- chet -- y, cracked young man,
-  An ul -- tra po -- et -- ic -- al, su -- per -- æs -- thet -- ic -- al,
-  Out -- of -- the -- way young man!
+  An ul -- tra po -- et -- ic -- al, su -- \once \override LyricHyphen #'minimum-distance = #0.7 per -- æs -- thet -- ic -- al,
+  \once \override LyricHyphen #'minimum-distance = #0.7 Out --
+  \once \override LyricHyphen #'minimum-distance = #0.7 of -- 
+  \once \override LyricHyphen #'minimum-distance = #0.7 the -- way young man!
 }
 
 sopWordsIV = \lyricmode {
+  \set ignoreMelismata = ##t
   \set stanza = #"4. "
   A pallid and thin young man—
   A haggard and lank young man—
-  A green -- e -- ry -- yal -- le -- ry,
+  A green -- e -- \once \override LyricHyphen #'minimum-distance = #0.7 ry -- yal -- le -- ry,
   Gros -- ve -- nor Gal -- le -- ry,
-  Foot -- in -- the -- grave young man!
+  \once \override LyricHyphen #'minimum-distance = #0.7 Foot --
+  \once \override LyricHyphen #'minimum-distance = #0.7 in --
+  \once \override LyricHyphen #'minimum-distance = #0.7 the -- grave young man!
   
   A Sewell and Cross young man—
   A Howell and James young man—
@@ -185,7 +195,7 @@ altoMusic = \relative c' {
     a8 b c c b a |
     
     g a b b a g |
-    fis fis fis fis4 fis8 |
+    fis~ fis fis fis4 fis8 |
     g4. s4
   }
   d8 |
@@ -194,8 +204,8 @@ altoMusic = \relative c' {
   b' b b b4 ais8 |
   
   a?4. s4 a8 |
-  a b c c b a |
-  g a b b a g |
+  a( b) c c b a |
+  g( a) b b a g |
   fis fis eis fis4 fis8 |
   g4. s4 \bar"|."
 }
@@ -229,7 +239,7 @@ tenorMusic = \relative c' {
     d d d d d d |
     
     d d d d d d |
-    c b a d4 c8 |
+    c( b) a d4 c8 |
     b4. s4
   }
   b8 |
@@ -238,8 +248,8 @@ tenorMusic = \relative c' {
   d d d d4 e8 |
   
   fis4. s4 d8 |
-  d8 d d d d d |
-  d d d d d d |
+  d8~ d d d d d |
+  d~ d d d d d |
   c c c c4 d8 |
   b4. s4 \bar"|."
 }
@@ -263,7 +273,7 @@ bassMusic = \relative c' {
     fis fis d fis fis d |
     
     g g g g g g |
-    d d d d4 d8 |
+    d~ d d d4 d8 |
     g4. d4\rest 
   }
   g8 |
@@ -272,8 +282,8 @@ bassMusic = \relative c' {
   g g g g4 g8 |
   
   d4. d4\rest d8 |
-  d d d d d d |
-  g g g g g g |
+  d~ d d d d d |
+  g~ g g g g g |
   d d d d4 d8 |
   g4. d4\rest \bar"|."
 }

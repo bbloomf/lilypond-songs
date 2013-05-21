@@ -74,7 +74,7 @@ sopMusic = \relative c' {
   
   d8[ d] fis a[ a] b8 |
   c4.~ c8 b\rest c16[ d] |
-  e8[ e] d16[ d] c8[ b] a |
+  e8[ e] d c8[ b] a |
   g4.~ g8 b\rest \bar"||"\break
   \once \override Score.RehearsalMark #'break-visibility = #end-of-line-visible
   \once \override Score.RehearsalMark #'self-alignment-X = #RIGHT
@@ -99,7 +99,7 @@ sopWords = \lyricmode {
   A life on the o -- _ cean wave, _
   A __ _ home on the roll -- ing deep, __ _
   Where the scat -- _ tered wa -- _ ters rave, __ _
-  And the winds _ their _ rev -- _ els keep: __ _
+  And the winds _ their rev -- _ els keep: __ _
   
   Like an ea -- gle __ _ caged I pine __ _
   On this dull, un -- _ chang -- ing shore; _
@@ -113,7 +113,7 @@ sopWordsII = \lyricmode {
   Once more on the deck _ I stand _
   Of my own __ _ swift -- glid -- ing craft, __ _ 
   Set __ _ sail! _ fare -- well to the land, __ _
-  The __ _ gale __ _ fol -- lows far __ _ a -- baft. __ _
+  The __ _ gale fol -- lows far __ _ a -- baft. __ _
   
   We __ _ shoot thro’ the spark -- ling foam, __ _
   Like an o -- cean _ bird set free; __ _
@@ -127,7 +127,7 @@ sopWordsIII = \lyricmode {
   The land is no long -- er in view, _
   The _ clouds have be -- gun to frown, _
   But __ _ with a stout ves -- sel and crew __ _
-  We’ll _ say, “Let the __ _ storm _ come down!” _
+  We’ll _ say, “Let the storm _ come down!” _
   
   And the song of our heart shall be, __ _
   While the winds and the wa -- ters rave, __ _
@@ -152,7 +152,7 @@ altoMusic = \relative c' {
   
   d8[ d] d fis[ fis] g8 |
   a4.~ a8 s fis16[ fis] |
-  fis8[ fis] fis16[ fis] fis8[ g] fis |
+  fis8[ fis] fis fis8[ g] fis |
   g4.~ g8 s 
   
   d16[ d] |
@@ -195,7 +195,7 @@ tenorMusic = \relative c' {
   
   fis8[ fis] a d[ d] d8 |
   d4.~ d8 s a16[ b] |
-  c8[ c] b16[ b] a8[ b] c |
+  c8[ c] b a8[ b] c |
   b4.~ b8 s 
   
   g16[ g] |
@@ -228,7 +228,7 @@ bassMusic = \relative c' {
   
   d8[ d] d d[ d] d8 |
   d4.~ d8 d\rest d16[ d] |
-  d8[ d] d16[ d] d4 d8 |
+  d8[ d] d d4 d8 |
   g4.~ g8 d\rest 
   
   b16[ b] |

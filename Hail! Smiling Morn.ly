@@ -25,7 +25,12 @@
     #'((basic-distance . 0)
        (minimum-distance . 0)
        (padding . 0)
-       (stretchability . 0))
+       (stretchability . 50))
+  last-bottom-spacing =
+    #'((basic-distance . 0)
+       (minimum-distance . 0)
+       (padding . 0)
+       (stretchability . 50))
   score-markup-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)

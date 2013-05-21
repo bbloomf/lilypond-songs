@@ -78,10 +78,10 @@ sopMusic = \relative c' {
   f2 f4 \bar"" c'8[ bes] |
   a4 c d e |
   f c a f8[ g] |
-  \slurDotted a4( c) \slurSolid d e |
+  \slurDashed a4( c) \slurSolid d e |
   
   f2 e4 \bar"" f8[ e] |
-  d4 c8[ bes] a4 \tieDotted g8~ g |
+  d4 c8[ bes] a4 \tieDashed g8~ g |
   a4 f d\fermata e8 f |
   e4 g c, d8[ e] |
   f2 f4 \bar"|."
@@ -156,10 +156,10 @@ altoMusic = \relative c' {
   c2 c4 e |
   f f f g |
   a f f c |
-  \tieDotted f~ f \tieSolid f g |
+  \tieDashed f~ f \tieSolid f g |
   
   a2 g4 a8[ c] |
-  bes4 f f4 \tieDotted e8~ e |
+  bes4 f f4 \tieDashed e8~ e |
   f4 c d c8 c |
   c8[ d] e4 c c |
   c2 c4 \bar"|."
@@ -198,10 +198,10 @@ tenorMusic = \relative c' {
   a2 a4 g |
   f a bes c |
   c a c a |
-  \slurDotted c( a) \slurSolid bes c |
+  \slurDashed c( a) \slurSolid bes c |
   
   c2 c4 c |
-  bes4 d c4 \tieDotted bes8~ bes |
+  bes4 d c4 \tieDashed bes8~ bes |
   c4 a bes g8 a |
   g4 bes g bes |
   a2 a4 \bar"|."
@@ -230,10 +230,10 @@ bassMusic = \relative c' {
   f2 f4 c |
   f f f f |
   f f f f |
-  \tieDotted f~ f \tieSolid f f |
+  \tieDashed f~ f \tieSolid f f |
   
   f2 c4 f |
-  f f f4 \tieDotted f8~ f |
+  f f f4 \tieDashed f8~ f |
   f4 f f\fermata c8 c |
   c4 c e c |
   f2 f4 \bar"|."

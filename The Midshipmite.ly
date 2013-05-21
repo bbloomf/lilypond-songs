@@ -70,7 +70,7 @@ global = {
 }
 
 sopMusic = \relative c' {
-	\partial 4 \slurDotted\tieDotted
+	\partial 4 \slurDashed\tieDashed
   g'8~ g |
   c4 c b8~ b b8~ b |
   a4 a g b\rest |
@@ -129,7 +129,7 @@ sopWords = \lyricmode {
   Cheer -- i -- ly my lads yo -- ho!
   
   "" "" “Who -- ’ll go a -- shore to -- _ night,” __ _ _ says he,
-  “An’ _ spike their _ guns a -- _ long wi’ me?”
+  “An’ __ _ spike their _ guns a -- _ long wi’ me?”
   “Why, _ bless ’ee, __ _ sir, come a -- long!” says we,
   
   
@@ -138,7 +138,7 @@ sopWords = \lyricmode {
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
   \set ignoreMelismata = ##t
-  We _ launch’d the cut -- ter and _ shoved her out,
+  We __ _ launch’d the cut -- ter and _ shoved her out,
   Cheer -- i -- ly my lads yo -- ho!
   The lub -- bers _ might ha’ _ heard us shout,
   As the Mid -- dy __ _ cried, “Now, my lads, put a -- bout.”
@@ -160,7 +160,7 @@ sopWordsII = \lyricmode {
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
   \set ignoreMelismata = ##t
-  “I’m _ done for "now;" _ good -- _ bye!” says he,
+  “I’m __ _ done for "now;" _ good -- _ bye!” says he,
   Stead -- i -- ly, my lads, yo -- ho!
   “You make for the boat, nev -- er mind for me!”
   “We’ll _ take ’ee __ _ back, sir or die,” "" says we,
@@ -180,8 +180,8 @@ sopWordsV = \lyricmode {
 
 altoMusic = \relative c' {
   \partial 4
-  \slurDotted
-  \tieDotted
+  \slurDashed
+  \tieDashed
   e8~ e |
   e4 e e8~ e e8~ e |
   f4 f e s |
@@ -251,8 +251,8 @@ altoWordsVI = \lyricmode {
 }
 tenorMusic = \relative c' {
   \partial 4
-  \slurDotted
-  \tieDotted
+  \slurDashed
+  \tieDashed
   c8~ c |
   a4 a g8~ g g8~ g |
   f4 c' c s |
@@ -313,8 +313,8 @@ tenorWordsIII = \lyricmode {
 
 bassMusic = \relative c' {
   \partial 4
-  \slurDotted
-  \tieDotted
+  \slurDashed
+  \tieDashed
   c,8~ c |
   a'4 a, e'8~ e e8~ e |
   f4 f c d\rest |

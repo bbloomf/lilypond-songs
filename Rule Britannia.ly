@@ -102,7 +102,7 @@ sopMusic = \relative c' {
 }
 sopWords = \lyricmode {
   \set stanza = #"1. "
-	When Brit -- ain first at Heav’n’s com -- mand,
+	When Brit -- ain first __ at Heav’n’s com -- mand,
   A -- rose __ from out the a -- zure main,
   A -- rose, a -- rose, a -- rose from out the a -- zure main,
   This was the char -- ter, the char -- ter of the land,
@@ -111,23 +111,23 @@ sopWords = \lyricmode {
 
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
-  The na -- tions not so blest as thee,
+  The na -- tions not __ so blest as thee,
   Shall in __ their turn to ty -- rants bend,
   Shall in their turn, shall in their turn to ty -- rants bend.
-  While thou shalt flour -- ish, shall flour -- ish great and free,
-  And to the weak pro -- tec -- tion lend.
+  While thou shalt flour -- ish, shalt flour -- ish great and free,
+  And to the weak __ pro -- tec -- tion lend.
   
   Rule, Bri -- tan -- nia, Bri -- tan -- nia rule the waves!
-  Bri -- tons nev -- er shall be slaves.
+  Brit -- ons nev -- er shall be slaves.
 }
 
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
-  To thee be -- longs the ru -- ral reign,
+  To thee be -- longs __ the ru -- ral reign,
   Thy cit -- ies shall with com -- merce shine,
   Thy cit -- ies shall with com -- merce, shall with com -- merce shine,
   And lands far o -- ver, far o’er the spread -- ing main,
-  Shall stretch a hand to grasp with thine.
+  Shall stretch a hand __ to grasp with thine.
 }
 
 sopWordsIV = \lyricmode {

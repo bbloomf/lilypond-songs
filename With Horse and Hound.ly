@@ -90,7 +90,7 @@ sopMusic = \relative c' {
   
   %page2/61
   g4. e4( d8) |
-  \slurDotted g4. e4( d8) 
+  \slurDashed g4. e4( d8) 
   \slurSolid g4.\< b |
   d4\f-> b8 b4 b8 |
   d4 cis8 d4 e8 |
@@ -98,23 +98,23 @@ sopMusic = \relative c' {
   fis4-> d8 cis4 b8 |
   a4. e' |
   d d,4\mf d8 |
-  \tieDotted c'4. c4~ c8 |
+  \tieDashed c'4. c4~ c8 |
   \tieSolid c4. b4( a8) |
   
   b4. g4( e8) |
-  \tieDotted d4. d4~ d8 |
+  \tieDashed d4. d4~ d8 |
   c'4. c4~ c8 |
   \tieSolid c4. b4 a8 |
   b4. g4( e8) |
   
   %page3/62
   d4. g4 g8 |
-  \tieDotted fis4.\< b4~ b8 |
-  \slurDotted d4. cis4( b8) |
+  \tieDashed fis4.\< b4~ b8 |
+  \slurDashed d4. cis4( b8) |
   \slurSolid fis'4.\! cis4( e8) |
   \tieSolid d4. d |
   
-  \slurDotted d\cresc a4\!( fis8) |
+  \slurDashed d\cresc a4\!( fis8) |
   \slurSolid e4.~ e4 fis8 |
   d4 d'8\ff d4 e8 |
   d4.~ d8\fermata d,4\mf \time 2/4 \break
@@ -244,7 +244,7 @@ altoMusic = \relative c' {
   
   %page2/61
   d4( b8) b4( d8) |
-  d4( b8) \slurDotted b4( d8) |
+  d4( b8) \slurDashed b4( d8) |
   \slurSolid d4. g |
   g4 g8 g4 g8 |
   g4 g8 g4 g8 |
@@ -252,23 +252,23 @@ altoMusic = \relative c' {
   fis4 fis8 fis4 fis8 |
   g4. g |
   fis d4 d8 |
-  d4. \tieDotted e4~ e8 |
+  d4. \tieDashed e4~ e8 |
   \tieSolid d4. d |
   
   e e |
-  d \tieDotted d4~ d8 |
+  d \tieDashed d4~ d8 |
   fis4. fis4~ fis8 |
   \tieSolid fis4. fis4 fis8 |
   g4. g4( e8) |
   
   %page3/62
   d4. e4 e8 |
-  d4. \tieDotted fis4~ fis8 |
-  \tieSolid \slurDotted fis4. fis4( b8) |
+  d4. \tieDashed fis4~ fis8 |
+  \tieSolid \slurDashed fis4. fis4( b8) |
   \slurSolid ais4. ais4( fis8) |
   fis4. eis |
   
-  fis \tieDotted d4~ d8 |
+  fis \tieDashed d4~ d8 |
   \tieSolid cis4.~ cis4 cis8 |
   d4 d8 d4 e8 |
   d4.~ d8 d4 |
@@ -351,7 +351,7 @@ tenorMusic = \relative c' {
   
   %page2/61
   b4. g |
-  b \tieDotted g4~ g8 |
+  b \tieDashed g4~ g8 |
   b4. d4( e8) |
   d4 d8 d4 d8 |
   d4 d8 d4 d8 |
@@ -364,7 +364,7 @@ tenorMusic = \relative c' {
   
   b b |
   b b4~ b8 |
-  a4( gis8) \slurDotted a4( b8) |
+  a4( gis8) \slurDashed a4( b8) |
   \slurSolid c4( e8) d4 d8 |
   d4. b |
   
@@ -375,7 +375,7 @@ tenorMusic = \relative c' {
   cis4. e4( cis8) |
   b4. b |
   
-  d \slurDotted d4( a8) |
+  d \slurDashed d4( a8) |
   \tieSolid g4.~ g4 g8 |
   \slurSolid fis4 d'8 d4 e8 |
   d4.~ d8 d4 |
@@ -449,7 +449,7 @@ bassMusic = \relative c' {
   
   %page2/61
   g4. e4( d8) |
-  \slurDotted g4. e4( d8) |
+  \slurDashed g4. e4( d8) |
   g4. g |
   b4 g8 g4 g8 |
   b4 b8 bes4 bes8 |
@@ -457,7 +457,7 @@ bassMusic = \relative c' {
   a4 a8 a4 a8 |
   a4. a |
   d, d4 d8 |
-  fis4. \tieDotted d4~ d8 |
+  fis4. \tieDashed d4~ d8 |
   fis4. d |
   
   g4. d |

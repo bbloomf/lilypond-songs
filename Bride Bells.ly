@@ -72,11 +72,11 @@ sopMusic = \relative c' {
   c2. c4 |
   c bes aes c |
   
-  \tieDotted
+  \tieDashed
   bes4. aes8 g4~ g8 g |
   \tieSolid
   f4 g aes bes |
-  \slurDotted
+  \slurDashed
   c2 d4( ees) |
   \slurSolid
   bes8 g4. \acciaccatura g8 f4. ees8 |
@@ -166,7 +166,7 @@ sopWordsII = \lyricmode {
   A year since then has died.
   And El -- sie at the al -- tar stands,
   Her sai -- lor at her side,
-  Her sai -- lor at her side,
+  Her __ sai -- lor at her side,
   While Kling, lang, ling,
   Their bon -- nie bride bells gai -- ly ring,
   Kling, lang, ling,
@@ -193,11 +193,11 @@ altoMusic = \relative c' {
   ees2. ees4 |
   e g f f |
   
-  \tieDotted
+  \tieDashed
   f4. f8 ees4~ ees8 ees |
   \tieSolid
   c4 e f ees |
-  \slurDotted
+  \slurDashed
   ees2 ees4( ees) |
   \slurSolid
   g8 ees4. d ees8 |
@@ -275,11 +275,11 @@ tenorMusic = \relative c' {
   aes2. aes4 |
   g c c aes |
   
-  \tieDotted
+  \tieDashed
   bes4. bes8 bes4~ bes8 bes |
   \tieSolid
   aes4 c c g |
-  \slurDotted
+  \slurDashed
   aes2 fis4( fis) |
   \slurSolid
   g8 bes4. aes g8 |
@@ -347,11 +347,11 @@ bassMusic = \relative c' {
   aes,2. aes4 |
   c e f f |
   
-  \tieDotted
+  \tieDashed
   d4. d8 ees4~ ees8 ees |
   \tieSolid
   aes4 g f ees |
-  \slurDotted
+  \slurDashed
   aes,2 a4( a) |
   \slurSolid
   bes8 bes4. bes ees8 |

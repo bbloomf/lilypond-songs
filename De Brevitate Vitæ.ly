@@ -68,7 +68,7 @@ global = {
   %\set midiInstrument = "recorder"
   \autoBeamOff
   \override DynamicTextSpanner #'style = #'none
-  \tieDotted
+  \tieDashed
 }
 
 sopMusic = \relative c' {
@@ -78,7 +78,7 @@ sopMusic = \relative c' {
     a8. bes16 c4 a |
     bes8[ d] bes2
   }
-  \slurDotted
+  \slurDashed
   a8. bes16 c4 c |
   d8 bes c4~ c |
   a8. bes16 c4 c |
@@ -143,7 +143,7 @@ altoMusic = \relative c' {
     ees8. d16 ees4 ees |
     d8[ f] d2 |
   }
-  \slurDotted
+  \slurDashed
   f8. g16 a4 a |
   f8 f f4~ f |
   f8. g16 a4 a |
@@ -182,7 +182,7 @@ tenorMusic = \relative c' {
     a8. f16 a4 c |
     bes8[ d] bes2 |
   }
-  \slurDotted
+  \slurDashed
   
   c8. bes16 a4 f |
   bes8 bes a4~ a |
@@ -213,7 +213,7 @@ bassMusic = \relative c' {
     bes bes2
   }
   
-  \tieDotted
+  \tieDashed
   <f \tweak #'font-size #-2 f'>8. <f \tweak #'font-size #-2 f'>16 <f \tweak #'font-size #-2 f'>4 <f \tweak #'font-size #-2 f'> |
   bes8 d <f, \tweak #'font-size #-2 f'>4~ q4 |
   <f \tweak #'font-size #-2 f'>8. <f \tweak #'font-size #-2 f'>16 <f \tweak #'font-size #-2 f'>4 <f \tweak #'font-size #-2 f'> |

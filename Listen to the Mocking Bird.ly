@@ -61,16 +61,17 @@ global = {
   %\set midiInstrument = "recorder"
   \autoBeamOff
   \override DynamicTextSpanner #'style = #'none
+  \slurDashed
 }
 
 sopMusic = \relative c' {
 	\partial 4
   d4 |
-  d4. d8 fis4 e8. fis16 |
-  a8 g4.~ g8 b\rest e,8. d16 |
-  d8 fis4.~ fis8 b8\rest e,8. d16 |
+  d4. d8 fis4 e8.( fis16) |
+  a8 g4.~ g8 b\rest e,8.( d16) |
+  d8 fis4.~ fis8 b8\rest e,8.( d16) |
   d8 g4.~ g8 b\rest d,4 |
-  d4. d8 fis4 e8. fis16 |
+  d4. d8 fis4 e8.( fis16) |
   
   a8 g4.~ g8 b\rest b b |
   c e e e e d c a |
@@ -101,27 +102,31 @@ sopMusic = \relative c' {
 }
 sopWords = \lyricmode {
   \set stanza = #"1. "
-	I’m dream -- ing now of sweet Hal -- lie,
-  my sweet Hal -- lie, my sweet Hal -- lie,
-  I’m dream -- ing now of my Hal -- lie,
+	\set ignoreMelismata = ##t
+  I’m dream -- ing now of sweet Hal -- lie, __ _
+  my sweet Hal -- lie, __ _ my sweet Hal -- lie, __ _
+  I’m dream -- ing now of my Hal -- lie, __ _
   For the thought of her is one that nev -- er dies;
   
-  She’s sleep -- ing here in the val -- ley,
-  in the val -- ley, in the val -- ley,
-  She’s slee -- ping here in the val -- ley,
+  \unset ignoreMelismata
+  She’s sleep -- ing here in the val -- ley, __
+  in the val -- ley, __ in the val -- ley, __
+  She’s sleep -- ing here in the val -- ley, __
   And the mock -- ing bird is sing -- ing where she lies.
 }
 
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
-  Ah! well I can yet re -- mem -- ber,
-  I re -- mem -- ber, I re -- mem -- ber,
-  Ah! well I can yet re -- mem -- ber,
+	\set ignoreMelismata = ##t
+  Ah! well I can yet re -- mem -- ber, __ _
+  I re -- mem -- ber, __ _ I re -- mem -- ber, __ _
+  Ah! well I can yet re -- mem -- ber, __ _
   When we gath -- ered in the cot -- ton side by side;
   
-  ’Twas in the mild mid -- Sep -- tem -- ber,
-  in Sep -- tem -- ber, in Sep -- tem -- ber,
-  ’Twas in the mild mid -- Sep -- tem -- ber,
+  \unset ignoreMelismata
+  ’Twas in the mild \once \override LyricHyphen #'minimum-distance = #0.7 mid -- Sep -- tem -- ber, __
+  in Sep -- tem -- ber, __ in Sep -- tem -- ber, __
+  ’Twas in the mild \once \override LyricHyphen #'minimum-distance = #0.7 mid -- Sep -- tem -- ber,
   And the mock -- ing bird was sing -- ing far and wide.
   
   Lis -- ten to the mock -- ing bird,
@@ -134,14 +139,14 @@ sopWordsII = \lyricmode {
 
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
-  When charms of spring a -- _ wak -- en,
-  a -- _ wak -- en, a -- _ wak -- en,
-  When charms of spring a -- _ wak -- en,
+  When charms of spring a -- wak -- en, __
+  a -- wak -- en, __ a -- wak -- en, __
+  When charms of spring a -- wak -- en, __
   And the mock -- ing bird is sing -- ing on the bough,
   
-  I feel like one so for -- sak -- en,
-  so for -- sak -- en, so for -- sak -- en,
-  I feel like one so for -- sak -- en,
+  I feel like one so for -- sak -- en, __
+  so for -- sak -- en, __ so for -- sak -- en, __
+  I feel like one so for -- sak -- en, __
   Since my Hal -- lie is no long -- er with me now.
 }
 
@@ -155,11 +160,11 @@ sopWordsV = \lyricmode {
 
 altoMusic = \relative c' {
   d4 |
-  d4. d8 d4 e8. d16 |
-  d8 d4.~ d8 s b8. d16 |
-  d8 d4.~ d8 s c8. d16 |
+  d4. d8 d4 e8.( d16) |
+  d8 d4.~ d8 s b8.( d16) |
+  d8 d4.~ d8 s c8.( d16) |
   d8 d4.~ d8 s \bar"" d4 |
-  d4. d8 d4 e8. d16 |
+  d4. d8 d4 e8.( d16) |
   
   d8 d4.~ d8 s g g |
   g g g g fis fis fis fis |
@@ -211,12 +216,13 @@ altoWordsVI = \lyricmode {
 }
 tenorMusic = \relative c' {
   b4 |
-  b4. b8 c4 c8. c16 |
-  c8 b4.~ b8 s b8. b16 |
-  c8 c4.~ c8 s a8. a16 |
-  b8 b4.~ b8 s b4 |
-  c4. c8 a4 c8. c16 |
+  \tieDashed b4. b8 c4 c8.~ c16 |
+  \tieSolid c8 b4.~ b8 s \tieDashed b8.~ b16 |
+  \tieSolid c8 c4.~ c8 s \tieDashed a8.~ a16 |
+  \tieSolid b8 b4.~ b8 s b4 |
+  c4. c8 a4 \tieDashed c8.~ c16 |
   
+  \tieSolid
   c8 b4.~ b8 s d d |
   e c c c a a a c |
   b2 s4 b4 |
@@ -257,12 +263,13 @@ tenorWordsIII = \lyricmode {
 
 bassMusic = \relative c' {
   g4 |
-  g4. g8 d4 d8. d16 |
-  g8 g4.~ g8 d\rest g8. g16 |
-  d8 d4.~ d8 d\rest d8. d16 |
-  g8 g4.~ g8 d\rest g4 |
-  d4. d8 d4 d8. d16 |
+  \tieDashed g4. g8 d4 d8.~ d16 |
+  \tieSolid g8 g4.~ g8 d\rest \tieDashed g8.~ g16 |
+  \tieSolid d8 d4.~ d8 d\rest \tieDashed d8.~ d16 |
+  \tieSolid g8 g4.~ g8 d\rest g4 |
+  d4. d8 d4 \tieDashed d8.~ d16 |
   
+  \tieSolid
   g8 g4.~ g8 d\rest g g |
   c, c c c d d d d |
   g2 d4\rest g4 |

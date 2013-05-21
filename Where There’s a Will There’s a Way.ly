@@ -108,7 +108,7 @@ sopWordsIII = \lyricmode {
   \set stanza = #"3. "
   Mis -- for -- tunes un -- count -- ed Are of -- ten sur -- mount -- ed,
   If on -- ly we quit not the field in dis -- may;
-  Then one more en -- dea -- vor, Re -- mem -- ber -- ing ev -- er,
+  Then one more en -- deav -- or, Re -- mem -- ber -- ing ev -- er,
   That where there’s a will there is al -- ways a way.
   
   \set associatedVoice = "tenors" ""

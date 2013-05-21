@@ -135,6 +135,9 @@ sopWordsIII = \lyricmode {
   Ver -- dure broid -- ers or be -- sprints.
   Vir -- gin there the green grass grows,
   Ev -- ’ry morn springs na -- tal day,
+  
+	
+  \once \override LyricHyphen  #'minimum-distance = #0.7
   Bright -- hued ber -- ries daff the snows,
   Smil -- ing win -- ter’s frown a -- way.
   

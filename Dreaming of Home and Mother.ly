@@ -11,6 +11,11 @@
   paper-width = 8.5\in
   indent = 0\in
   %system-system-spacing = #'((basic-distance . 10) (padding . 0))
+  top-markup-spacing =
+    #'((basic-distance . 0)
+       (minimum-distance . 0)
+       (padding . -14)
+       (stretchability . 0))
   system-system-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)
@@ -42,7 +47,7 @@
         \fill-line{\headerLine}
   }
 }
-#(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
+#(set-global-staff-size 17.5) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 17.5 20))) }
 global = {
   \key ees \major
   \time 4/4
@@ -92,7 +97,7 @@ sopWords = \lyricmode {
   I’ve been dream -- ing of home and mo -- ther.
   
   Home, dear home, child -- hood’s hap -- py home!
-  Where I played with sis -- ter and with bro -- ther;
+  When I played with sis -- ter and with bro -- ther;
   ’Twas the sweet -- est joy when we did roam,
   O -- ver hill and through dale with mo -- ther.
   
@@ -108,18 +113,26 @@ sopWordsII = \lyricmode {
   \set stanza = #"2. "
   Sleep, balm -- y sleep, close mine eyes,
   Keep me still think -- ing of mo -- ther,
-  Hark ’tis her voice I seem to hear,
+  Hark! ’tis her voice I seem to hear,
   Yes, I’m dream -- ing of home and mo -- ther.
   
   An -- gels come, sooth -- ing me to rest,
-  I can feel their pres -- ence as no oth -- er;
+  I can feel their pres -- ence and none oth -- er;
   For they sweet -- ly say I shall be blest
   With bright vis -- ions of home and mo -- ther.
 }
 
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
+  Child -- hood has come, come a -- gain,
+  Sleep -- ing, I see my dear mo -- ther;
+  See her loved form be -- side me kneel,
+  While I’m dream -- ing of home and mo -- ther.
   
+  Mo -- ther dear, whis -- per to me now,
+  Tell me of my sis -- ter and my bro -- ther;
+  Now I feel thy hand up -- on my brow,
+  Yes I’m dream -- ing of home and mo -- ther.
 }
 
 sopWordsIV = \lyricmode {
@@ -150,8 +163,7 @@ altoMusic = \relative c' {
   
   d4 d8 d d4. d8 |
   d ees4. s2 \bar"||"
-  g4 ees8 g |
-  g2 |
+  g4 ees8 g g2 |
   aes4 ees g2 |
   ees4 ees8 d ees4 c8 c |
   
@@ -206,7 +218,7 @@ tenorMusic = \relative c' {
   g4 bes8 bes bes4 a8 a |
   
   bes bes4. s2 |
-  g4 bes8 aes aes4( bes8) b |
+  g4 bes8 aes g8[ aes bes] b |
   c4 aes g g8 g |
   f4 aes8 g f4. aes8 |
   aes g4. s2 \bar"|."

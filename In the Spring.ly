@@ -91,7 +91,7 @@ sopWordsII = \lyricmode {
   My fond heart yearns toward Him still.
   
   Should the heav’ns be o -- ver -- cloud -- ed,
-  All the earth in dark -- ness shourd -- ed,
+  All the earth in dark -- ness shroud -- ed,
   Light will sure -- ly shine a -- gain.
   
   As God will, as God will,

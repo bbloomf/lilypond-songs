@@ -111,37 +111,37 @@ sopWords = \lyricmode {
   Yes, I’ve neared the riv -- er side,
   Soon I’ll launch up -- on its tide—
   Soon my boat, with noise -- less oar,
-  Safe will pass to yon -- der shore.
+  Safe will pass __ to yon -- der shore.
 }
 
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
   Oh! those chords with mag -- ic pow’r!
   Take me back to child -- hood’s hour—
-  To that cot be -- side the sea,
+  To that cot __ be -- side the sea,
   Where I knelt at moth -- er’s knee;
   
   But that moth -- er, she has gone—
   Calm she sleeps be -- neath the stone,
   While I wan -- der here a -- lone,
-  Sigh -- ing for a bright -- er home.
+  Sigh -- ing for __ a bright -- er home.
   
   Bring my Harp to me a -- gain,
-  Let me sing a gen -- tle strain—
-  Let me hear its chords once more,
+  Let me sing __ a gen -- tle strain—
+  Let me hear __ its chords once more,
   Ere I pass to yon bright shore.
 }
 
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
-  Soon I’ll be a -- mong the blest,
+  Soon I’ll be __ a -- mong the blest,
   Where the wea -- ry are at rest—
   Soon I’ll tread the gold -- en shore,
   Sing -- ing prais -- es ev -- er -- more.
   
   Now my boat is on the stream,
-  I can see its wa -- ters gleam—
-  Soon I’ll be where an -- gels roam—
+  I can see __ its wa -- ters gleam—
+  Soon I’ll be __ where an -- gels roam—
   Dear old Harp, I’m go -- ing home.
 }
 

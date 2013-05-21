@@ -110,7 +110,7 @@ sopWordsII = \lyricmode {
 
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
-  No! that hal -- low’d form is ne’r for -- got,
+  No! that hal -- low’d form is ne’er for -- got,
   Which first love traced;
   Still it ling -- ’ring haunts the green -- est spot
   On mem -- ’ry’s waste;

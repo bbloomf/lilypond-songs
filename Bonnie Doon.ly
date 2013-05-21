@@ -91,7 +91,7 @@ sopWords = \lyricmode {
   Thou’lt break my heart, thou warb -- ling bird,
   That won -- tons through the flow -- ’ry thorn,
   Thou mindst me o’ de -- part -- ed joys,
-  De -- part -- ed nev -- er to re -- turn.
+  De -- part -- ed nev -- er to __ re -- turn.
 }
 
 sopWordsII = \lyricmode {
@@ -101,7 +101,7 @@ sopWordsII = \lyricmode {
   When il -- ka bird sang o’ its love,
   And fond -- ly sae did I o’ mine.
   Wi’ light -- some heart I pu’d a rose,
-  Fu’ sweet up -- on its thorn -- y tree;
+  Fu’ sweet up -- on __ its thorn -- y tree;
   But my fause lov -- er stole my rose,
   And, ah! he left the thorn wi’ me.
 }

@@ -84,8 +84,8 @@ sopMusicFirst = \relative c' {
   aes4 c,2-- |
   g'4-. f2-- |
   ees2. |
-  r2. |
-  r4 r4 aes4-. |
+  bes'2.\rest |
+  bes4\rest bes4\rest aes4-. |
   g4( d) g-. |
   g2. |
   
@@ -264,8 +264,8 @@ altoMusicFirst = \relative c' {
   f4-. c2-- |
   c4-. d2-- |
   ees2.-- |  
-  r2. |
-  r4 r ees4-. |
+  s2. |
+  s4 s ees4-. |
   d2-- d4-. |
   ees8[ d]( c2) |
   
@@ -687,8 +687,8 @@ bassMusicSecond = \relative c' {
   %page6 (87) bass
   c8.[ des16] c8 bes aes8[ g] |
   aes16[ bes aes g] f2 |
-  s8 f16[ g aes8 f] g[ aes] |
-  s8 bes16[ c des8 bes] c[ des] |
+  r8 f16[ g aes8 f] g[ aes] |
+  r8 bes16[ c des8 bes] c[ des] |
   c4 c, e |
   f2. |
   

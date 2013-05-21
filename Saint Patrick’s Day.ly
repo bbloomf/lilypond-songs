@@ -59,8 +59,8 @@ global = {
   %\set midiInstrument = "recorder"
   \autoBeamOff
   \override DynamicTextSpanner #'style = #'none
-  \tieDotted
-  \slurDotted
+  \tieDashed
+  \slurDashed
 }
 
 sopMusic = \relative c' {
@@ -120,13 +120,13 @@ sopWordsII = \lyricmode {
   \set stanza = #"2. "
   Her scep -- ter, a -- las! passed a -- way to the stran -- ger;
   And trea -- son sur -- ren -- dered what val -- or hath held;
-  But true hearts re -- mained a -- mid dark -- ness and dan -- ger,
+  But __ true hearts re -- mained a -- mid dark -- ness and dan -- ger,
   Which ’spite of her ty -- rants would not be quelled.
   Oft, oft, through the night flashed gleams of light
   Which al -- most the dark -- ness of bond -- age dis -- pelled;
   \set ignoreMelismata = ##t
   But a star now is near, her heav -- en to cheer,
-  Not like the wild gleams which so fit -- ful -- ly dart -- ed,
+  Not _ like the wild gleams which so fit -- ful -- ly dart -- ed,
   But long to shine down with its hal -- low -- ing ray
   On daugh -- ters as fair, and on sons as true heart -- ed,
   As Er -- in be -- holds on Saint Pat -- rick’s Day.
@@ -136,14 +136,14 @@ sopWordsIII = \lyricmode {
   \set stanza = #"3. "
   Oh! blest be the hour, when be -- girt by her can -- non,
   And hailed as it rose by a na -- tion’s ap -- plause,
-  That flag waved a -- loft o’er the spires of Dun -- gan -- non,†
+  That __ flag waved a -- loft o’er the spires of Dun -- gan -- non,†
   As -- sert -- ing for I -- rish -- men, I -- rish laws.
   Once more it shall wave o’er hearts as brave,
   De -- spite of the das -- tards who mock at her cause,
   \set ignoreMelismata = ##t
   And like broth -- ers a -- greed, what -- ev -- er their creed,
-  Her chil -- dren in -- spired by those glo -- ries de -- part -- ed,
-  No lon -- ger in dark -- nes de -- spond -- ing will stay,
+  Her _ chil -- dren in -- spired by those glo -- ries de -- part -- ed,
+  No lon -- ger in dark -- ness de -- spond -- ing will stay,
   But join in her cause like the brave and true heart -- ed
   Who rise for their rights on Saint Pat -- rick’s Day.
 }

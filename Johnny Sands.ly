@@ -158,7 +158,7 @@ sopWordsII = \lyricmode {
   Now ran with all her force,
   To push him in, he stepped a -- side,
   And she fell in, of course;
-  Now splash -- ing, dash -- ing, life a fish,
+  Now splash -- ing, dash -- ing, like a fish,
   “Oh, save me, John -- ny Sands.”
   “I can’t, my dear, though much I wish,
   For you have tied my hands,

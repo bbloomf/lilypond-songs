@@ -51,13 +51,14 @@ global = {
   %\set midiInstrument = "recorder"
   \autoBeamOff
   \override DynamicTextSpanner #'style = #'none
+  \tieDashed
 }
 
 sopMusic = \relative c' {
 	\partial 8 |
   c8 |
   f4 f8. g16 a4. f8 |
-  g8 a8 g8 f d4. c8 |
+  g8 a8 g8 f d4. c16~ c |
   f4 f8. e16 f4 a16 c8. |
   d2 c4. c8 |
   
@@ -75,14 +76,14 @@ sopMusic = \relative c' {
   d4 d8. c16 a4 a8 c |
   bes16( a8.) g8. f16 d4.\fermata c16[ d] |
   f4 a16 c8. d4 c8 a |
-  g2 f~ |
+  \tieSolid g2 f~ |
   f4 \bar"|."
 }
 sopWords = \lyricmode {
   \set ignoreMelismata = ##t
   \set stanza = #"1. "
 	Come o -- ver the hills, my bon -- nie I -- rish lass,
-  Come o -- ver the hills to your dar -- ling. ""
+  Come _ o -- ver the hills to your dar -- ling. ""
   You choose the rose, love, and I -- ’ll make the vow,
   And _ I’ll be your true love for -- ev -- er.
   
@@ -90,14 +91,14 @@ sopWords = \lyricmode {
   Red is the rose that in yon -- der gar -- den grows;
   Fair is the lil -- y of the val -- ley;
   Clear is the wa -- ter that flows from the Boyne
-  But my love is fair -- er than an -- y.
+  But my love is fair -- er than an -- y. __
 }
 
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
   \set ignoreMelismata = ##t
   ’Twas down by Kil -- lar -- ney’s green woods that we strayed
-  When_the moon and the stars they were shin -- ing.
+  When the moon and the stars they were shin -- ing.
   The moon shone its rays on her locks of gold -- en hair
   And she swore she’d be my love for -- ev -- er.
 }
@@ -106,7 +107,7 @@ sopWordsIII = \lyricmode {
   \set ignoreMelismata = ##t
   \set stanza = #"3. "
   It’s not for the part -- ing that my sis -- ter pains;
-  It’s not for the grief of my moth -- er.
+  It’s __ _ not for the grief of my moth -- er.
   ’Tis all for the loss of my bon -- nie I -- rish lass
   That _ my heart is break -- ing for -- ev -- er.
 }
@@ -122,7 +123,7 @@ sopWordsV = \lyricmode {
 altoMusic = \relative c' {
   c8 |
   c4 c8. e16 f4. f8 |
-  d8 d d8 d bes4. c8 |
+  d8 d d8 d bes4. c16~ c |
   c4 c8. e16 d4 ees16 ees8. |
   d4( f) e4. e8 |
   
@@ -139,7 +140,7 @@ altoMusic = \relative c' {
   f4 f8. f16 e4 e8 e |
   d4 c8. c16 bes4. c8 |
   c4 f16 f8. f4 f8 f |
-  e2 f2~ |
+  \tieSolid e2 f2~ |
   f4 \bar"|."
 }
 altoWords = \lyricmode {
@@ -165,7 +166,7 @@ altoWordsVI = \lyricmode {
 tenorMusic = \relative c' {
   a8 |
   a4 a8. bes16 c4. a8 |
-  bes8 bes bes8 bes f4. e8 |
+  bes8 bes bes8 bes f4. e16~ e |
   a4 a8. a16 a4 f16 f8. |
   f4( g) g4. a8 |
   
@@ -182,7 +183,7 @@ tenorMusic = \relative c' {
   a4 a8. a16 a4 a8 a |
   g4 f8. f16 f4. g8 |
   f4 c'16 a8. bes4 f8 c' |
-  bes2 a~ |
+  \tieSolid bes2 a~ |
   a4 \bar"|."
 }
 
@@ -198,12 +199,12 @@ tenorWordsIII = \lyricmode {
 bassMusic = \relative c' {
   f,8 |
   f4 f8. f16 f4. f8 |
-  bes,8 bes bes8 bes bes4. c8 |
+  bes,8 bes bes8 bes bes4. c16~ c |
   f4 f8. f16 d4 c16 c8. |
   bes4( g) c4. a8 |
   
   d4 d8. d16 c4 c8 c |
-  g16 g8. a a16 bes4.\fermata c8 |
+  g16 g8. a a16 bes4.\fermata c16[ c] |
   d4 c16 c8. bes4 a8 a |
   c2 f\fermata |
   
@@ -215,7 +216,7 @@ bassMusic = \relative c' {
   d4 d8. d16 c4 c8 c |
   g4 a8. a16 bes4.\fermata bes8 |
   a4 f'16 f8. bes,4 a8 f |
-  c'2 f~ |
+  \tieSolid c'2 f~ |
   f4 \bar"|."
 }
 bassWords = \lyricmode {

@@ -61,7 +61,7 @@ global = {
   %\set midiInstrument = "recorder"
   \autoBeamOff
   \override DynamicTextSpanner #'style = #'none
-  \slurDotted
+  \slurDashed
 }
 
 sopMusic = \relative c' {

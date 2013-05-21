@@ -92,13 +92,13 @@ sopWords = \lyricmode {
   \set stanza = #"1. "
 	\set ignoreMelismata = ##t
   They _ sailed a -- way in a gal -- lant bark,
-  Roy _ Neal and his fair young bride;
+  Roy __ _ Neal and his fair young bride;
   They had ven -- tured all in that bound -- ing ark,
-  That _ danced o’er the sil -- _ v’ry tide;
+  That __ _ danced o’er the sil -- _ v’ry tide;
   But their hearts were _ young and spi -- rits light,
-  And they dashed the _ tears a -- way,
-  As they watched the _ shore _ re -- cede from sight
-  Of their own _ sweet Dub -- _ lin Bay.
+  And they dashed the __ _ tears a -- way,
+  As they watched the __ _ shore _ re -- cede from sight
+  Of their own __ _ sweet Dub -- _ lin Bay.
   
   \dropLyricsXV
   sailed from Dub -- _ lin Bay.
@@ -111,10 +111,10 @@ sopWordsII = \lyricmode {
   And the light -- _ ning swept the deep;
   When the thun -- der crash broke the short re -- pose
   Of the wea -- _ ry sail -- _ or’s sleep.
-  Roy _ Neal he _ clasped his weep -- ing bride,
-  And he kissed the _ tears a -- way,
+  Roy __ _ Neal he __ _ clasped his weep -- ing bride,
+  And he kissed the __ _ tears a -- way,
   “Oh, _ love, ’twas a fear -- _ ful hour,” he cried,
-  “When we left _ sweet Dub -- _ lin Bay.”
+  “When we left __ _ sweet Dub -- _ lin Bay.”
 }
 
 sopWordsIII = \lyricmode {
@@ -122,12 +122,12 @@ sopWordsIII = \lyricmode {
 	\set ignoreMelismata = ##t
   On the crowd -- ed deck of that doom -- ed ship,
   Some _ fell in their mute de -- spair,
-  But _ some more calm, with a ho -- lier lip,
-  Sought the God _ of storm _ in prayer.
+  But __ _ some more calm, with a ho -- lier lip,
+  Sought the God __ _ of storm _ in prayer.
   “She has struck on a rock!” the sea -- men cried,
   In the depth of their wild dis -- may;
   And the ship went _ down with that fair young bride,
-  That _
+  That __ _
 }
 
 sopWordsIV = \lyricmode {
@@ -158,13 +158,13 @@ altoMusic = \relative c' {
     fis4. s4 ees16[ ees] |
     d8[ f] f16[ f] d8[ c] bes |
     
-    c4 c8 ees4 ees16[ ees] |
+    c4 c8 ees4 ees16[ ees]
   }
   \alternative {
     {
       \partial 2.
       d8[ g] f ees4 ees8 |
-      d4. s4 |
+      d4. s4
     }
     {
       d4 d8 d[ ees] ees |
@@ -204,7 +204,7 @@ tenorMusic = \relative c' {
     bes4 f8 bes a bes |
     bes4 c8 c4 c16[ c] |
     bes8[ bes] bes a4 c8 |
-    bes4. s4 bes8 |
+    bes4. s4 bes16[ bes] |
     a4 a16[ a] c4 c8 |
     
     bes4 bes8 bes4 bes16 bes |
@@ -212,7 +212,7 @@ tenorMusic = \relative c' {
     a4. s4 a16[ a] |
     bes4 d16[ d] bes8[ a] bes |
     
-    bes4 c8 c4 c16[ c] |
+    bes4 c8 c4 c16[ c]
   }
   \alternative {
     {
@@ -248,7 +248,7 @@ bassMusic = \relative c' {
     bes4 bes8 bes bes bes |
     ees4 ees8 c4 c16[ c] |
     f8[ f] f f4 f8 |
-    bes,4. d4\rest g8 |
+    bes,4. d4\rest g16[ g] |
     d4 d16[ d] fis4 fis8 |
     
     g4 g8 g4 g16 g |
@@ -256,13 +256,13 @@ bassMusic = \relative c' {
     d4. d4\rest f16[ f] |
     bes,4 bes16[ bes] bes8[ bes] bes |
     
-    ees4 ees8 c4 c16[ c] |
+    ees4 ees8 c4 c16[ c]
   }
   \alternative {
     {
       \partial 2.
       f4 f8 f4 f8 |
-      bes,4. d4\rest |
+      bes,4. d4\rest
     }
     {
       f4 f8 f[ ees] c |

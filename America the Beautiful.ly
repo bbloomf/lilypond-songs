@@ -105,7 +105,7 @@ sopWordsII = \lyricmode {
   \set associatedVoice = "altos"
   O beau -- ti -- ful for pil -- grim feet,
   Whose stern im -- pas -- sion’d stress, __
-  A thor -- ough -- fare for free -- dome beat
+  A thor -- ough -- fare for free -- dom beat
   A -- cross the wil -- der -- ness! __
   A -- mer -- i -- ca! A -- mer -- i -- ca!
   God mend thine ev -- ’ry flaw, __

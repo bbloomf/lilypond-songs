@@ -52,15 +52,15 @@ global = {
   %\set midiInstrument = "recorder"
   \autoBeamOff
   \override DynamicTextSpanner #'style = #'none
-  \slurDotted
-  \tieDotted
+  \slurDashed
+  \tieDashed
 }
 
 sopMusic = \relative c' {
 	\partial 8
   g'8 |
   c8. d16 c8 b c d |
-  \tieDotted
+  \tieDashed
   e d c d4 
   
   b16~ b |
@@ -89,7 +89,7 @@ sopWords = \lyricmode {
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
   But since we have learned from ef -- fem -- in -- ate France
-  To __ eat their rag -- outs __ as well as to dance,
+  To __ eat their ra -- gouts __ as well as to dance,
   We’re fed up with noth -- ing but vain com -- plais -- sance.
 }
 
@@ -125,7 +125,7 @@ altoMusic = \relative c' {
   e8. e16 g8 g g b |
   g g g g4 \bar""\break
   
-  \tieDotted
+  \tieDashed
   g16~ g |
   fis8. fis16 fis8 g( fis) g |
   fis d c b4 \bar""\break
@@ -165,7 +165,7 @@ tenorMusic = \relative c' {
   g8. g16 c8 d e f |
   c e e f4
   
-  \tieDotted
+  \tieDashed
   f16~ f |
   d8. d16 d8 d( c) b |
   c c a d4
@@ -195,7 +195,7 @@ bassMusic = \relative c' {
   c,8. c16 e8 g g g |
   c, c c b4
   
-  \tieDotted
+  \tieDashed
   g16~ g |
   a8. a16 a8 g( d') e |
   d fis d g4

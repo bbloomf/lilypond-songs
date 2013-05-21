@@ -61,25 +61,25 @@ sopMusic = \relative c' {
   bes[ \acciaccatura d c] bes |
   g4 g8 |
   bes aes e |
-  \slurDotted
+  \slurDashed
   f( bes8.) aes16 |
   
   \slurSolid
   g[ f]( ees4)~ |
   ees8 \bar""\break bes' bes |
-  \slurDotted bes( ees) d |
+  \slurDashed bes( ees) d |
   bes( d) c |
   bes( \slurSolid \acciaccatura d c) bes |
   g4 g8 |
-  \slurDotted bes( aes) e |
+  \slurDashed bes( aes) e |
   
   f( bes8.) aes16 |
   \slurSolid g[ f]( ees4)~ |
   ees \bar""\break bes'16 bes |
-  \slurDotted c8( f) ees |
+  \slurDashed c8( f) ees |
   ces( f) ees |
   bes[ f'] ees |
-  \tieDotted bes4 bes16~ bes |
+  \tieDashed bes4 bes16~ bes |
   
   a8[ bes] c |
   d4 d8 |
@@ -147,7 +147,7 @@ sopWordsV = \lyricmode {
 
 altoMusic = \relative c' {
   g'8 |
-  \tieDotted g4 g8 |
+  \tieDashed g4 g8 |
   g4 g8 |
   g4 g8 |
   ees4 ees8 |
@@ -156,7 +156,7 @@ altoMusic = \relative c' {
   
   \tieSolid ees4.~ |
   ees8 g g |
-  \tieDotted g~ g g |
+  \tieDashed g~ g g |
   g~ g g |
   g8~ g g8 |
   ees4 ees8 |
@@ -165,7 +165,7 @@ altoMusic = \relative c' {
   d~ d8. d16 |
   \tieSolid ees4.~ |
   ees4 ees16 ees |
-  \tieDotted aes8~ aes aes |
+  \tieDashed aes8~ aes aes |
   aes~ aes aes |
   g4 g8 |
   g4 g16~ g |
@@ -213,7 +213,7 @@ altoWordsVI = \lyricmode {
 }
 tenorMusic = \relative c' {
   bes8 |
-  \tieDotted bes4 bes8 |
+  \tieDashed bes4 bes8 |
   bes4 bes8 |
   ees4 ees8 |
   bes4 bes8 |
@@ -231,7 +231,7 @@ tenorMusic = \relative c' {
   bes~ bes8. bes16 |
   \tieSolid g4.~ |
   g4  g16 g |
-  \tieDotted c8~ c c |
+  \tieDashed c8~ c c |
   ces~ ces ces |
   bes4 bes8 |
   ees4 c16~ c |
@@ -275,11 +275,11 @@ bassMusic = \relative c' {
   ees4 ees8 |
   ees4 ees8 |
   bes bes bes |
-  \tieDotted bes~ bes8. bes16 |
+  \tieDashed bes~ bes8. bes16 |
   
   \tieSolid ees4.~ |
   ees8 ees ees |
-  \tieDotted ees~ ees ees |
+  \tieDashed ees~ ees ees |
   ees~ ees ees |
   ees~ ees ees |
   ees4 ees8 |
@@ -288,7 +288,7 @@ bassMusic = \relative c' {
   bes~ bes8. bes16 |
   \tieSolid ees4.~ |
   ees4 ees16 ees |
-  \tieDotted ees8~ ees ees |
+  \tieDashed ees8~ ees ees |
   ees~ ees ees |
   ees4 ees8 |
   ees4 ees16~ ees |

@@ -15,7 +15,7 @@
   system-system-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)
-       (padding . 1)
+       (padding . 3)
        (stretchability . 100))
   ragged-last-bottom = ##t
   ragged-bottom = ##f
@@ -65,7 +65,7 @@ sopMusic = \relative c' {
   e4 d cis d |
   b \bar"" d, e g |
   b2 b |
-  b2. ais8. b16 |
+  b2. \bar"" ais8. b16 |
   c4 b ais b |
   
   g g fis g |
@@ -74,7 +74,18 @@ sopMusic = \relative c' {
   g1 \bar"|."
 }
 sopWords = \lyricmode {
-  %\set stanza = #"1. "
+%{  \set stanza = #"1. "
+  \set ignoreMelismata = ##t 
+  When you hear that the preach -- ing does be -- gin
+  Bend down low for to drive a -- way your sin
+  and when you gets re -- ligion
+  You _ want to shout and sing
+  there’ll be a hot time in the old town to -- night. % my ba -- by
+%}
+}
+
+sopWordsII = \lyricmode {
+%  \set stanza = \markup\smallCapsOldStyle" refrain "
 	When you hear dem a bells go ding, ling, ling,
   All join ’round
   And sweet -- ly you must sing,
@@ -83,12 +94,15 @@ sopWords = \lyricmode {
   There’ll be a hot time in the old town to -- night.
 }
 
-sopWordsII = \lyricmode {
-  \set stanza = #"2. "
-}
-
 sopWordsIII = \lyricmode {
-  \set stanza = #"3. "
+%{  \set stanza = #"2. "
+  \set ignoreMelismata = ##t 
+  Please oh, please, oh, _ do not let me fall
+  You’re all mine and I love you best of all
+  and you must be my man
+  Or I’ll have no man at all
+  there’ll be a hot time in the old town to -- night. % my ba -- by
+%}
 }
 
 sopWordsIV = \lyricmode {

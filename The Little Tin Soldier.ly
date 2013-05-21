@@ -62,7 +62,7 @@ sopMusic = \relative c' {
   
   bes4 g8[ bes] a[ g] f[ a] |
   g4 f b2\rest |
-  bes4 g a8[ bes] c[ a] |
+  bes4 g8[ g] a8[ bes] c[ a] |
   bes2 bes\rest |
   
   a4 a8 a a4 b8[ cis] |
@@ -92,11 +92,11 @@ sopWords = \lyricmode {
   He was a lit -- tle tin _ sol -- dier,
   One lit -- tle leg __ _ had _ he;
   She was a lit -- tle fai -- ry danc -- er,
-  Bright as bright _ could _ be.
+  Bright as __ _ bright _ could _ be.
   
   She had a cas -- tle and gar -- den,
   He but an old box __ _ dim;
-  She was a dain -- ty __ _ rose -- love,
+  She was a dain -- ty __ _ \once \override LyricHyphen #'minimum-distance = #0.7 rose -- love,
   Far too grand for him.
   
   
@@ -109,10 +109,10 @@ sopWords = \lyricmode {
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
 	\set ignoreMelismata = ##t
-  Once as he watch’d _ his _ rose -- love,
+  Once as he watch’d _ his _ \once \override LyricHyphen #'minimum-distance = #0.7 rose -- love,
   Winds from the north _ did _ blow,
   Swept him _ out _ of the case -- ment
-  Down to_a stream _ be -- _ low.
+  Down to a stream _ be -- _ low.
   
   True to his lit -- tle __ _ la -- dy,
   Still he __ _ shoul -- dered his gun;
@@ -129,10 +129,10 @@ sopWordsII = \lyricmode {
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
 	\set ignoreMelismata = ##t
-  Once more he sees _ his _ rose -- love,
+  Once more he sees _ his _ \once \override LyricHyphen #'minimum-distance = #0.7 rose -- love,
   Still she is danc -- _ ing _ gay,
   He is __ _ worn _ and _ fad -- ed,
-  Loy -- al still _ for _ aye.
+  Loy -- al __ _ still _ for _ aye.
   
   Then came a hand that _ swept them,
   In -- to a fur -- nace __ _ wide,
@@ -161,7 +161,7 @@ altoMusic = \relative c' {
   
   d4 d8[ d] ees8[ ees] ees[ ees] |
   d4 d s2 |
-  d4 d ees ees |
+  d4 d8[ d] ees4 ees |
   d2 s |
   
   f4 f8 f g4 g8[ g] |
@@ -214,7 +214,7 @@ tenorMusic = \relative c' {
   
   f4 f8[ f] f[ f] a[ a] |
   f4 bes s2 |
-  f4 f f a |
+  f4 f8[ f] f4 a |
   f2 s |
   
   a4 a8 a a4 a8[ a] |
@@ -257,7 +257,7 @@ bassMusic = \relative c' {
   
   bes4 bes8[ bes] c[ c] f[ f] |
   bes,4 bes d2\rest |
-  bes4 bes c f |
+  bes4 bes8[ bes] c4 f |
   bes,2 d\rest |
   
   d4 d8 d e4 a,8[ a] |

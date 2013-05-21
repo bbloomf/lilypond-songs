@@ -49,8 +49,8 @@ global = {
   %\set midiInstrument = "recorder"
   \autoBeamOff
   \override DynamicTextSpanner #'style = #'none
-  \tieDotted
-  \slurDotted
+  \tieDashed
+  \slurDashed
 }
 
 sopMusic = \relative c' {
@@ -70,34 +70,34 @@ sopMusic = \relative c' {
 sopWords = \lyricmode {
   \set stanza = #"1. "
   \set ignoreMelismata = ##t
-	Fa -- ther! I bend to thee,
-  Life, it was thy gift, _
+	Fa -- ther! I bend to Thee,
+  Life, it was Thy gift, __ _
   Thou now canst shield it,
-  From Thee it came, and to Thee _ I yield it,
-  In life _ or death _ for -- sake not me,
-  Fa -- ther, I bend to thee!
+  From Thee it came, and to Thee __ _ I yield it,
+  In life __ _ or death _ for -- sake not me,
+  Fa -- ther, I bend to Thee!
 }
 
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
   \set ignoreMelismata = ##t
-  Fa -- ther! I trust to thee,
+  Fa -- ther! I trust to Thee,
   When midst the bat -- tle’s strife,
   Death did sur -- round me,
   E’en at the can -- non’s mouth,
   Death has not found me. _
-  Fa -- ther, ’twas thy will! I trust in thee.
+  Fa -- ther, ’twas Thy will! I trust in Thee.
   Fa -- ther, still guide Thou me!
 }
 
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
   \set ignoreMelismata = ##t
-  All I give back to thee!
-  When at thy call, I my
-  Life then shall yield, _
-  When in the cold tomb, my fate shall be seal’d, _ _
-  Fa -- ther, my soul _ take un -- to thee!
+  All I give back to Thee!
+  When at Thy call, I my
+  Life then shall yield, __ _
+  When in the cold tomb, my fate shall be seal’d, __ _ _
+  Fa -- ther, my soul __ _ take un -- to Thee!
   Fa -- ther, for -- sake not me!
 }
 

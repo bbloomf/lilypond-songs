@@ -51,7 +51,7 @@ global = {
   %\set midiInstrument = "recorder"
   \autoBeamOff
   \override DynamicTextSpanner #'style = #'none
-  \slurDotted \tieDotted
+  \slurDashed \tieDashed
 }
 
 sopMusic = \relative c' {
@@ -59,14 +59,14 @@ sopMusic = \relative c' {
   \teeny bes'16 |
   \normalsize
   ees8 bes g bes16~ bes |
-  c8 bes g8. g16 |
-  f8 g aes f |
+  c8 bes16~ bes g8~ g16 g |
+  f8 g aes f16~ f |
   g8 c bes8~ bes16~ bes16 |
   
   ees8 bes g bes16~ bes |
-  c8 bes g8~ g16~ g16 |
-  f8 g aes f |
-  ees ees ees4 |
+  c8 bes g8~ g16 g16 |
+  f8 g16~ g aes8 f16~ f |
+  ees8 ees ees4 |
   
   \repeat volta 2 {
     c'8 c c16 d ees8 |
@@ -84,28 +84,28 @@ sopMusic = \relative c' {
 sopWords = \lyricmode {
   \set stanza = #"1. "
   \set ignoreMelismata = ##t
-	"" Spring once said to the night -- in -- gale,
-  I mean to give you birds a ball; __ _ _
+	"" Spring once said to the night -- in -- _ gale, __ _
+  I mean to give you __ _ birds a ball; __ _ _
   Pray, ma’am ask the __ _ bird -- ies all, __ _
-  The birds and bird -- ies, great and small.
+  The birds and __ _ bird -- ies, __ _ great and small.
 }
 
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
   \set ignoreMelismata = ##t
-  "" Soon they came from the bush and tree, ""
-  Sing -- ing sweet their songs of glee: __ _ _
-  Each one fresh from its co -- zy nest, __ _ _
-  Each one dressed in_its Sun -- day best.
+  "" Soon they came from the bush and _ tree, __ _
+  "" Sing -- ing sweet their _ songs of glee: __ _ _
+  Each one fresh from its co -- zy nest, __ _ ""
+  Each one __ _ dressed in its Sun -- day best.
 }
 
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
   \set ignoreMelismata = ##t
-  The Wren and Cuck -- oo _ danced for life,
-  The ra -- ven waltzed with_the yellow -- bird’s wife,
-  The __ _ awk -- ward owl and the bash -- ful jay, __ _ _
-  Wished each other a “very good day.”
+  The Wren and Cuck -- oo __ _ danced for _ life, __ _
+  The ra -- ven waltzed with the yellow -- bird’s wife,
+  The __ _ awk -- ward owl and the bash -- ful jay, __ _ ""
+  Wished each _ other a __ _ “very good day.”
   
   Tra la la la la,
   Tra la la la la,
@@ -122,32 +122,32 @@ sopWordsIII = \lyricmode {
 sopWordsIV = \lyricmode {
   \set stanza = #"4. "
   \set ignoreMelismata = ##t
-  A Wood -- pecker  came from his hole in_the tree,
-  And brought his bill to_the com -- pa -- ny,
+  A Wood -- pecker  came from his hole in the tree, __ _
+  And brought his bill to the com -- pa -- ny,
   For the cher -- ries ripe and the ber -- ries red;
-  ’Twas a very long bill so_the bird -- ies said.
+  ’Twas a very long __ _ bill so the bird -- ies said.
 }
 
 sopWordsV = \lyricmode {
   \set stanza = #"5. "
   \set ignoreMelismata = ##t
-  They danced all day till the sun was low,
-  ’Till_the moth -- er birds pre -- pared to go,
+  They danced all day till the sun was _ low,
+  ’Till the moth -- er birds pre -- _ pared to go,
   When _ one and all both _ great and small, __ _
-  Flew home to_their nests from_the bird -- ies’ ball.
+  Flew home to their nests from the bird -- ies’ ball.
 }
 
 altoMusic = \relative c' {
   \teeny g'16 |
   \normalsize g8 g g g16~ g |
-  aes8 g ees8. ees16 |
-  d8 ees f d |
-  ees aes g8~ g16~ g |
+  aes8 g16~ g ees8~ ees16 ees16 |
+  d8 ees f d16~ d |
+  ees8 aes g8~ g16~ g |
   
   g8 g ees g16~ g |
-  aes8 g ees8~ ees16~ ees16 |
-  d8 ees f d |
-  bes bes ees4 |
+  aes8 g ees8~ ees16 ees16 |
+  d8 ees16~ ees f8 d16~ d |
+  bes8 bes ees4 |
   
   ees8 ees ees16 ees ees8 |
   ees ees ees16 ees ees8 |
@@ -182,14 +182,14 @@ altoWordsVI = \lyricmode {
 tenorMusic = \relative c' {
   \teeny bes16 |
   \normalsize bes8 bes bes ees16~ ees |
-  ees8 ees bes8. bes16 |
-  bes8 bes bes bes |
-  bes ees ees8~ ees16~ ees |
+  ees8 ees16~ ees bes8~ bes16 bes16 |
+  bes8 bes bes bes16~ bes |
+  bes8 ees ees8~ ees16~ ees |
   
   bes8 bes bes ees16~ ees |
-  ees8 ees bes8~ bes16~ bes16 |
-  bes8 bes bes aes |
-  g g g4 |
+  ees8 ees bes8~ bes16 bes16 |
+  bes8 bes16~ bes bes8 aes16~ aes |
+  g8 g g4 |
   
   aes8 aes aes16 aes aes8 |
   g8 g g16 aes bes8 |
@@ -214,14 +214,14 @@ tenorWordsIII = \lyricmode {
 bassMusic = \relative c' {
   \teeny ees,16 |
   \normalsize ees8 ees ees ees16~ ees |
-  ees8 ees ees8. ees16 |
-  bes8 bes bes bes |
-  ees ees ees8~ ees16~ ees |
+  ees8 ees16~ ees ees8~ ees16 ees16 |
+  bes8 bes bes bes16~ bes |
+  ees8 ees ees8~ ees16~ ees |
   
   ees8 ees ees ees16~ ees |
-  ees8 ees ees8~ ees16~ ees16 |
-  bes8 bes bes bes |
-  ees ees ees4 |
+  ees8 ees ees8~ ees16 ees16 |
+  bes8 bes16~ bes bes8 bes16~ bes |
+  ees8 ees ees4 |
   
   aes,8 aes aes16 bes c[ d] |
   ees8 ees ees16 ees ees8 |

@@ -101,7 +101,7 @@ sopWordsII = \lyricmode {
     That fault you may for -- give __ me.
   Or if my hands had stray’d \set ignoreMelismata = ##t but a touch,
   \unset ignoreMelismata
-    Then just -- ly might you leave me.	 
+    Then just -- ly might you leave __ me.	 
 
   I ask’d you leave, you \set associatedVoice = "altos" bade me \unset associatedVoice love;
   \set associatedVoice = "tenors"

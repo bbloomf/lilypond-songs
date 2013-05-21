@@ -67,8 +67,8 @@ sopMusic = \relative c' {
   c( bes) bes( aes) |
   aes2( g4) ees |
   aes2. aes4 |
-  bes2. bes4 |
-  c( aes) f( bes) |
+  \tieDashed bes2.~ bes4 |
+  \tieSolid c( aes) f( bes) |
   aes2( g4) ees8[ f] |
   g4( aes) bes( c) |
   
@@ -97,7 +97,7 @@ sopWords = \lyricmode {
   \set stanza = #"1. "
 	The spa -- cious firm -- a -- ment on __ high,
   And all __ \set associatedVoice = "altos" the blue \unset associatedVoice e -- _ the -- real sky, __
-  And span -- gled heav’ns, a shin -- ing frame,
+  \set ignoreMelismata = ##t And span -- gled heav’ns, \unset ignoreMelismata a shin -- ing frame,
   Their great \set associatedVoice = "altos" O -- ri -- \unset associatedVoice gi -- _ nal pro -- claim.
   Th’un wear -- ied sun from day to day
   Does his __ Cre -- a -- tor’s pow’r dis -- play,
@@ -111,7 +111,7 @@ sopWordsII = \lyricmode {
   \set stanza = #"2. "
   Soon as the eve -- ning shades pre -- vail,
   The moon \set associatedVoice = "altos" takes up \unset associatedVoice the "" won -- drous tale, __
-  And night -- ly to the list -- ’ning earth
+  \set ignoreMelismata = ##t And night -- ly to the \unset ignoreMelismata list -- ’ning earth
   Re -- peats \set associatedVoice = "altos" the sto -- \unset associatedVoice ry "" of __ her birth;
   Whilst all the stars that round her burn,
   And all __ the plan -- ets in __ their turn,
@@ -125,7 +125,7 @@ sopWordsIII = \lyricmode {
   \set stanza = #"3. "
   What though, in sol -- emn si -- lence, all
   Move round \set associatedVoice = "altos" the dark \unset associatedVoice ter -- "" rest -- rial ball;
-  What though nor real "" voice, nor sound
+  What though nor real __ voice, nor sound
   A -- midst \set associatedVoice = "altos" their ra -- \unset associatedVoice diant "" orbs be __ found;
   In rea -- son’s ear they all re -- joice,
   And ut -- ter forth a glo -- rious voice;
@@ -156,8 +156,8 @@ altoMusic = \relative c' {
   f f |
   ees2. ees4 |
   c2. ees4 |
-  ees2. ees4 |
-  ees2 f |
+  \tieDashed ees2.~ ees4 |
+  \tieSolid ees2 f |
   ees2. ees4 |
   ees2 ees |
   
@@ -216,8 +216,8 @@ tenorMusic = \relative c' {
   f f4( bes) |
   bes2. ees,4 |
   ees2. aes4 |
-  g2. g4 |
-  aes2 aes4( des) |
+  \tieDashed g2.~ g4 |
+  \tieSolid aes2 aes4( des) |
   c2( bes4) g8[ aes] |
   bes4( aes) g( aes) |
   
@@ -266,8 +266,8 @@ bassMusic = \relative c' {
   des d |
   ees2. ees4 |
   aes,2. c4 |
-  ees2. ees4 |
-  aes( c,) des( bes) |
+  \tieDashed ees2.~ ees4 |
+  \tieSolid aes( c,) des( bes) |
   ees2. ees4 |
   des( c) bes( aes) |
   

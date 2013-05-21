@@ -18,6 +18,16 @@
        (minimum-distance . 0)
        (padding . -3)
        (stretchability . 100))
+  top-system-spacing =
+    #'((basic-distance . 0)
+       (minimum-distance . 0)
+       (padding . 0)
+       (stretchability . 67))
+  last-bottom-spacing =
+    #'((basic-distance . 0)
+       (minimum-distance . 0)
+       (padding . 0)
+       (stretchability . 67))
   ragged-last-bottom = ##f
   ragged-bottom = ##f
   two-sided = ##t
@@ -132,8 +142,8 @@ sopWords = \lyricmode {
   Op -- ’ning buds,
   black -- bird’s call,
   Lark’s sweet car -- ol,
-  sun -- ny \dropLyricsXII days,
-  Fruit -- ful show -- ers,
+  sun -- ny days,
+  Fruit -- ful \dropLyricsXII show -- ers,
   balm -- y \raiseLyrics gale,
   balm -- y gale!
   

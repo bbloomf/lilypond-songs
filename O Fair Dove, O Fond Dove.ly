@@ -53,7 +53,7 @@ global = {
   %\set midiInstrument = "recorder"
   \autoBeamOff
   \override DynamicTextSpanner #'style = #'none
-  \tieDotted
+  \tieDashed
 }
 
 sopMusic = \relative c' {
@@ -72,7 +72,7 @@ sopMusic = \relative c' {
     
     d8 b'\rest e, b'\rest fis b\rest e,[ d] |
     g b\rest a b\rest b b\rest  a[ g] |
-    \slurDotted
+    \slurDashed
     a4 a a( g8) e |
     \slurSolid
     d2 b'4\rest \bar"" d,8[ d] |
@@ -127,7 +127,7 @@ sopMusic = \relative c' {
 }
 sopWords = \lyricmode {
   \set stanza = #"1. "
-	Me -- though the stars were blink -- ing bright,
+	Me -- thought the stars were blink -- ing bright,
   And the old brig’s sails un -- furled;
   \set ignoreMelismata = ##t
   I said, “I will sail to my love this night
@@ -199,7 +199,7 @@ altoMusic = \relative c' {
     
     e e8 dis e4 dis8[ e] |
     e8 s e s e s e[ e] |
-    e~ e4. dis4 dis8.~ dis16 |
+    << {e~ e4.} {s4. \teeny e8} >> \normalsize dis4 dis8.~ dis16 |
     e2 s4 e |
     
     d8 s e s c s c[ c] |
@@ -285,7 +285,7 @@ tenorMusic = \relative c' {
     
     g g8 a b4 a8[ g] |
     a s gis s a s gis[ a] |
-    g?~ g4. fis4 fis8.( a16) |
+    << { g?~ g4. } {s4. \teeny g8} >> \normalsize fis4 fis8.( a16) |
     g2 s4 g |
     
     a8 s g s a s g[ fis] |
@@ -362,7 +362,7 @@ bassMusic = \relative c' {
     
     e e8 e e4 e |
     c8 d\rest b d\rest a d\rest b[ c] |
-    b~ b4. b4 b8.~ b16 |
+    << { b~ b4. } {s4. \teeny b8} >> \normalsize b4 b8.~ b16 |
     e2 d4\rest e |
     
     fis8 d\rest e d\rest d d\rest d[ d] |

@@ -52,6 +52,7 @@ global = {
   %\set midiInstrument = "recorder"
   \autoBeamOff
   \override DynamicTextSpanner #'style = #'none
+  \slurDashed
 }
 
 sopMusic = \relative c' {
@@ -71,7 +72,7 @@ sopMusic = \relative c' {
   b4 g8 g4. |
   c4. b8. g16 e8 |
   a4 a8 g4. |
-  g8.^\markup\italic"rall." f16 e8 g f e |
+  g8.(^\markup\italic"rall." f16) e8 g f e |
   d4 c8 c4.\fermata |
   f8.^\markup{\dynamic"p" \italic" meno mosso"} g16 a8 bes4. |
   
@@ -82,6 +83,7 @@ sopMusic = \relative c' {
   g4 f8 f4.\fermata \bar"|."
 }
 sopWords = \lyricmode {
+  \set ignoreMelismata = ##t
   \set stanza = #"1. "
 	Dar -- by dear, we are old and gray,
   Fif -- ty years since our wed -- ding day,
@@ -92,6 +94,7 @@ sopWords = \lyricmode {
   “Things will be bet -- ter, sweet wife, a -- gain!”
 }
 chorusWords = \lyricmode {
+  \set ignoreMelismata = ##t
   \repeat unfold 61 \skip 1
   Al -- ways the same, Dar -- by my own,
   Al -- ways the same to your old wife Joan,
@@ -99,6 +102,7 @@ chorusWords = \lyricmode {
 }
 
 sopWordsII = \lyricmode {
+  \set ignoreMelismata = ##t
   \set stanza = #"2. "
   Dar -- by dear, but my heart was wild
   When we bur -- ied our ba -- by child,
@@ -115,6 +119,7 @@ sopWordsII = \lyricmode {
 }
 
 sopWordsIII = \lyricmode {
+  \set ignoreMelismata = ##t
   \set stanza = #"3. "
   Hand in hand when our life was May,
   Hand in hand when our hair is gray,
@@ -150,7 +155,7 @@ altoMusic = \relative c' {
   d4 d8 d4. |
   e4. e8. e16 e8 |
   f4 f8 e4. |
-  e8. d16 cis8 d d c |
+  e8.( d16) cis8 d d c |
   b4 c8 c4. |
   c8. e16 f8 f4. |
   
@@ -197,7 +202,7 @@ tenorMusic = \relative c' {
   g4 b8 b4. |
   a4. g8. b16 g8 |
   c4 c8 c4. |
-  a8. a16 a8 a a g |
+  a8.( a16) a8 a a g |
   g4 e8 e4. |
   a8. bes16 c8 d4. |
   
@@ -234,7 +239,7 @@ bassMusic = \relative c' {
   g,4 g'8 g4. |
   a,4. e'8. e16 e8 |
   f4 f8 c4. |
-  cis8. a16 a8 d d e |
+  cis8.( a16) a8 d d e |
   g4 c,8 c4.\fermata |
   f8. f16 f8 f4. |
   

@@ -91,6 +91,8 @@ sopWords = \lyricmode {
   That can no com -- fort bring, that can, that can no com -- fort bring;
   To those ex -- cit -- ing scenes will blend,
   O’er plea -- sure’s path -- way thrown;
+  
+  \set associatedVoice = "altos"
   But mem -- ’ry is the on -- ly friend
   That grief can call its own,
   That grief can call its own,
@@ -106,6 +108,8 @@ sopWordsII = \lyricmode {
   that were too beau -- ti -- ful to last;
   To long de -- part -- ed years ex -- tend,
   Its vis -- ions with them flown;
+  
+  \set associatedVoice = "altos"
   For mem -- ’ry is the on -- ly friend
   That grief can call its own,
   That grief can call its own,

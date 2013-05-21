@@ -52,8 +52,8 @@ global = {
   %\set midiInstrument = "recorder"
   \autoBeamOff
   \override DynamicTextSpanner #'style = #'none
-  \slurDotted
-  \tieDotted
+  \slurDashed
+  \tieDashed
 }
 
 sopMusic = \relative c' {
@@ -144,7 +144,7 @@ sopWords = \lyricmode {
   A -- dy -- ing for news of me,
   I’ve a dear, dear love, on a dis -- tant shore, _
   A -- dy -- ing for news of _ me.”
-  And the wind was _ llis -- ten -- ing near,
+  And the wind was _ lis -- ten -- ing near,
   And saw that the maid was _ fair,
   So the kind wind _ whis -- pered a hope in her ear,
   As he played with her bright brown _ hair:

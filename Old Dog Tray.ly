@@ -61,6 +61,7 @@ global = {
   %\set midiInstrument = "recorder"
   \autoBeamOff
   \override DynamicTextSpanner #'style = #'none
+  \tieDashed
 }
 
 sopMusic = \transpose d ees {
@@ -74,7 +75,7 @@ sopMusic = \transpose d ees {
     b4 ais8 b
     
     d4 c8 a |
-    g4 g8 b
+    g~ g g8 b
     a4 a8\rest d, |
     d g fis g
     a4. a8 |
@@ -106,7 +107,7 @@ sopWords = \lyricmode {
   \set stanza = #"1. "
 	The morn of life is past,
   And eve -- ning comes at last,
-  It brings me a dream of a once hap -- py day,
+  It brings me a dream of a once __ hap -- py day,
   Of mer -- ry forms I’ve seen
   Up -- on the vil -- lage green, ""
   Sport -- ing with my old dog Tray.
@@ -116,7 +117,7 @@ sopWordsII = \lyricmode {
   \set stanza = #"2. "
   The forms I call’d my own
   Have van -- ish’d one by one,
-  The loved ones, the dear ones have all pass’d a -- way,
+  The loved ones, the dear ones have all __ pass’d a -- way,
   Their hap -- py smiles are flown,
   Their gen -- tle voic -- es gone,
   I’ve no -- thing left but old dog Tray.
@@ -130,9 +131,10 @@ sopWordsII = \lyricmode {
 
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
+  \set ignoreMelismata = ##t
   When thoughts re -- call the past,
   His eyes are on me cast,
-  I know that he feels what my breaking heart would say;
+  I know that he feels what my break -- ing heart would say;
   Al -- though he can -- not speak,
   I’ll vain -- ly, vain -- ly seek
   A bet -- ter friend than old dog Tray.
@@ -152,7 +154,7 @@ altoMusic = \relative c' {
   g g ees ees c4 s8 ees |
   ees4 ees8 ees f4 f8 f |
   
-  ees4 ees8 ees ees4 s8 des |
+  ees~ ees ees8 ees ees4 s8 des |
   c ees ees ees g4 s8 g |
   g g ees ees ees4. \teeny ges8 \normalsize |
   
@@ -194,7 +196,7 @@ tenorMusic = \relative c' {
   ees des bes g aes4 s8 aes |
   aes4 aes8 aes aes4 bes8 des |
   
-  c4 aes8 aes g4 s8 g |
+  c~ c aes8 aes g4 s8 g |
   aes aes bes c ees4 s8 ees |
   ees des bes g aes4. \teeny aes8 \normalsize |
   
@@ -226,7 +228,7 @@ bassMusic = \relative c' {
   ees ees ees ees aes,4 d8\rest aes'|
   aes4 aes8 aes des,4 bes8 bes |
   
-  ees4 c8 aes ees'4 d8\rest ees |
+  ees~ ees c8 aes ees'4 d8\rest ees |
   aes, c ees ees ees4 d8\rest ees |
   ees ees ees ees aes,4. \teeny aes8 \normalsize |
   

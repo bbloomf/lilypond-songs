@@ -117,7 +117,7 @@ sopWords = \lyricmode {
   Live we sing -- ing, live sing -- ing, live we sing -- ing,
   And al -- ways full of plea -- sure,
   Not care and grief,
-  Live we sing -- ing, danc -- ing, spring -- ing,
+  Live __ we sing -- ing, danc -- ing, spring -- ing,
   Al -- ways full of plea -- sure,
   Live we but for hap -- pi -- ness,
   Not for care and grief,

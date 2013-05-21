@@ -80,13 +80,13 @@ sopMusic = \relative c' {
   ees d c bes |
   c bes ees g, |
   bes2 b4\rest bes4 |
-  ees4. d8 ees4 f |
-  ees d c bes |
+  ees4. d8 ees4 g8[ f] |
+  ees4 d c bes |
   
   c bes aes g |
   c2 b4\rest d4 |
   ees4. d8 c4 bes |
-  c4. d8 ees4\fermata c |
+  c4 d ees\fermata c |
   bes g f4. g8 |
   ees2. \bar"|."
 }
@@ -99,7 +99,7 @@ sopWords = \lyricmode {
   So sleeps the pride of form -- er days,
   So glo -- ry’s thrill is o’er;
   And hearts that once beat high for praise,
-  Now feel that praise no more.
+  Now feel that pulse no more.
 }
 
 sopWordsII = \lyricmode {
@@ -137,13 +137,13 @@ altoMusic = \relative c' {
   f f aes f |
   g g g ees |
   f2 s4 f |
-  g4. f8 g4 f |
-  f f aes f |
+  g4. f8 g4 aes |
+  g f aes f |
   
   ees ees ees ees |
   ees2 s4 aes |
   g4. bes8 aes4 g |
-  ees4. aes8 g4 g |
+  ees aes g fis |
   g ees d4. d8 |
   bes2. \bar"|."
 }
@@ -184,7 +184,7 @@ tenorMusic = \relative c' {
   aes g c bes |
   aes2 s4 bes |
   bes4. ees8 ees4 ees |
-  c4. c8 c4 ees |
+  c c c ees |
   ees bes aes4. bes8 |
   g2. \bar"|."
 }
@@ -209,13 +209,13 @@ bassMusic = \relative c' {
   bes bes c d |
   ees ees c c |
   d2 d4\rest d |
-  ees4. ees8 ees4 a, |
+  ees4. ees8 ees4 aes, |
   bes bes c d |
   
   ees ees ees ees |
   aes2 d,4\rest f |
   ees4. g8 aes4 ees |
-  aes4. f8 c4\fermata a |
+  aes f c\fermata a |
   bes bes bes4. bes8 |
   ees2. \bar"|."
 }

@@ -122,7 +122,7 @@ sopWordsIV = \lyricmode {
   Un -- til we bid the world good -- bye:
   \set associatedVoice = "tenors"
   Then love, \markup\italic then \unset associatedVoice \markup\italic love, then \set associatedVoice = "altos" love, \markup\italic then \unset associatedVoice \markup\italic love,
-  then love, good -- bye, bood -- bye!
+  then love, good -- bye, good -- bye!
 }
 
 sopWordsV = \lyricmode {

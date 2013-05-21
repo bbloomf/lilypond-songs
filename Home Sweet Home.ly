@@ -68,19 +68,19 @@ sopMusic = \relative c' {
 	\partial 4
   e8[ fis] |
   gis4.( a8) a4 cis |
-  \slurDotted b4.( gis8) gis4( b) | \slurSolid
+  \slurDashed b4.( gis8) gis4( b) | \slurSolid
   a4.( gis8) a4 fis |
   gis2 b4\rest e,8[ fis] |
   gis4.( a8) a4 cis |
   
   b2 gis4 b |
   a4.( gis8) a4 fis |
-  e2 b'4\rest \tieDotted b8~ b | \tieSolid
+  e2 b'4\rest \tieDashed b8~ b | \tieSolid
   e4.( dis8) cis4. b8 |
   b2 gis4 b |
   a4.( gis8) a4 fis |
   
-  gis2 b4\rest \tieDotted b8~ b | \tieSolid
+  gis2 b4\rest \tieDashed b8~ b | \tieSolid
   e4.( dis8) cis4. b8 |
   b2 gis4 b |
   b4 a2 fis4 |
@@ -140,19 +140,19 @@ sopWordsV = \lyricmode {
 altoMusic = \relative c' {
   e8[ dis] |
   e4.( fis8) fis4 a |
-  \slurDotted gis4.( e8) e4( gis) | \slurSolid
+  \slurDashed gis4.( e8) e4( gis) | \slurSolid
   fis4.( e8) fis4 dis |
   e2 s4 e8[ dis] |
   e4.( fis8) fis4 a |
   
   gis2 e4 gis |
   fis4.( e8) fis4 dis |
-  e2 s4 \tieDotted gis8~ gis | \tieSolid
+  e2 s4 \tieDashed gis8~ gis | \tieSolid
   gis4.( b8) a4. gis8 |
   gis2 e4 gis |
   fis4.( e8) fis4 dis |
   
-  e2 s4 \tieDotted gis8~ gis | \tieSolid
+  e2 s4 \tieDashed gis8~ gis | \tieSolid
   gis4.( b8) a4. gis8 |
   gis2 e4 gis |
   fis4 dis2 dis4 |
@@ -190,19 +190,19 @@ altoWordsVI = \lyricmode {
 tenorMusic = \relative c' {
   gis8[ a] |
   b2 b4 e |
-  \tieDotted \slurDotted e4.( b8) b4~ b | \slurSolid \tieSolid
+  \tieDashed \slurDashed e4.( b8) b4~ b | \slurSolid \tieSolid
   b2 b4 b |
   b2 s4 gis8[ a] |
   b2 b4 e |
   
   e2 b4 b |
   b2 b4 a |
-  gis2 s4 \tieDotted b8~ b | \tieSolid
+  gis2 s4 \tieDashed b8~ b | \tieSolid
   b2 e4. e8 |
   e2 b4 b |
   b2 b4 b |
   
-  b2 s4 \tieDotted b8~ b | \tieSolid
+  b2 s4 \tieDashed b8~ b | \tieSolid
   b2 e4. e8 |
   e2 b4 b |
   dis4 b2 a4 |
@@ -230,19 +230,19 @@ tenorWordsIII = \lyricmode {
 bassMusic = \relative c' {
   e,4 |
   e2 e4 e |
-  \tieDotted e4.~ e8 e4~ e | \tieSolid
+  \tieDashed e4.~ e8 e4~ e | \tieSolid
   b2 b4 b |
   e2 d4\rest e |
   e2 e4 e |
   
   e2 e4 e |
   b2 b4 b |
-  e2 d4\rest \tieDotted e8~ e | \tieSolid
+  e2 d4\rest \tieDashed e8~ e | \tieSolid
   e2 e4. e8 |
   e2 e4 e |
   b2 b4 b |
   
-  e2 d4\rest \tieDotted e8~ e | \tieSolid
+  e2 d4\rest \tieDashed e8~ e | \tieSolid
   e2 e4. e8 |
   e2 e4 e |
   b4 b2 b4 |

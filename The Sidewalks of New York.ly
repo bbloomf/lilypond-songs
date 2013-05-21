@@ -71,7 +71,7 @@ sopMusic = \relative c' {
   g2 g4 |
   a( g) e |
   d g2~ |
-  \tieDotted g b8~ b | \tieSolid
+  \tieDashed g b8~ b | \tieSolid
   
   b2 a4 |
   e2 b'4 |
@@ -81,15 +81,15 @@ sopMusic = \relative c' {
   a2 b4 |
   
   g4 b2~ |
-  b2 \teeny \tieDotted g8~ g | \normalsize \tieSolid
+  b2 \teeny \tieDashed g8~ g | \normalsize \tieSolid
   g2 g4 |
   a( g) e |
   g2.~ |
-  g2 \teeny \tieDotted g8~ g | \normalsize \tieSolid
+  g2 \teeny \tieDashed g8~ g | \normalsize \tieSolid
   g2 a4 |
   
   g2 e4 |
-  \tieDotted << {d4 \normalsize g2} {s32 \teeny d2*1/4 s16. s4 \teeny g4} >> | \normalsize
+  \tieDashed << {d4 \normalsize g2} {s32 \teeny d2*1/4 s16. s4 \teeny g4} >> | \normalsize
   c2\fermata b8~ b | \tieSolid |
   b2 a4 |
   e2 fis4 |
@@ -206,7 +206,7 @@ altoMusic = \relative c' {
   e2 e4 |
   e2 c4 |
   b4 d2~ |
-  d \tieDotted g8~ g | \tieSolid
+  d \tieDashed g8~ g | \tieSolid
   g4( fis) e4 |
   cis2 g'4 |
   fis2.~ |
@@ -215,15 +215,15 @@ altoMusic = \relative c' {
   g2 g4 |
   fis2 fis4 |
   g4 d2~ |
-  d2 \teeny \tieDotted g8~ g | \normalsize \tieSolid
+  d2 \teeny \tieDashed g8~ g | \normalsize \tieSolid
   e2 e4 |
   e2 c4 |
   d2.~ |
-  d2 \teeny \tieDotted d8~ d | \normalsize \tieSolid 
+  d2 \teeny \tieDashed d8~ d | \normalsize \tieSolid 
   
   e2 e4 |
   cis2 cis4 |
-  \tieDotted << {d4 \normalsize b2} {s32 \teeny d2*1/4 s16. s4 \teeny b4} >> | \normalsize
+  \tieDashed << {d4 \normalsize b2} {s32 \teeny d2*1/4 s16. s4 \teeny b4} >> | \normalsize
   d2 d8~ d | \tieSolid
   cis2 cis4 |
   c?2 c4 |
@@ -303,7 +303,7 @@ tenorMusic = \relative c' {
   g2 g4 |
   c2 g4 |
   g b2~ |
-  b \tieDotted d8~ d | \tieSolid
+  b \tieDashed d8~ d | \tieSolid
   cis2 cis4 |
   a4( b) cis4 |
   d2.~ |
@@ -312,15 +312,15 @@ tenorMusic = \relative c' {
   d2 b4 |
   c2 c4 |
   d b2~ |
-  b \tieDotted \teeny b8~ b | \normalsize \tieSolid
+  b \tieDashed \teeny b8~ b | \normalsize \tieSolid
   g2 g4 |
   c2 c4 |
   b2.~ |
-  b2 \tieDotted \teeny b8~ b | \normalsize \tieSolid
+  b2 \tieDashed \teeny b8~ b | \normalsize \tieSolid
   
   g2 g4 |
   e2 g4 |
-  \tieDotted << {b \normalsize g2} {s32 \teeny b2*1/4 s16. s4 \teeny g4} >> | \normalsize
+  \tieDashed << {b \normalsize g2} {s32 \teeny b2*1/4 s16. s4 \teeny g4} >> | \normalsize
   gis2 gis8~ gis  | \tieSolid
   g?2 g4 |
   fis2 a4 |
@@ -390,7 +390,7 @@ bassMusic = \relative c' {
   c,2 c4 |
   c2 c4 |
   g'4 g2~ |
-  g \tieDotted g8~ g | \tieSolid
+  g \tieDashed g8~ g | \tieSolid
   
   %page2
   e2 g4 |
@@ -401,15 +401,15 @@ bassMusic = \relative c' {
   d2 d4 |
   
   b'4 g2~ |
-  g \teeny \tieDotted g8~ g | \normalsize \tieSolid
+  g \teeny \tieDashed g8~ g | \normalsize \tieSolid
   c,2 c4 |
   c2 c4 |
   g'2.~ |
-  g2 \teeny \tieDotted g8~ g | \normalsize \tieSolid
+  g2 \teeny \tieDashed g8~ g | \normalsize \tieSolid
   c,2 c4 |
   
   a2 a4 |
-  \tieDotted << {d \normalsize g,2} {s32 \teeny d'2*1/4 s16. s4 \teeny g,4} >> | \normalsize
+  \tieDashed << {d \normalsize g,2} {s32 \teeny d'2*1/4 s16. s4 \teeny g,4} >> | \normalsize
   e'2 e8~ e | \tieSolid
   e2 e4 |
   d2 d4 |

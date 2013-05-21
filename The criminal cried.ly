@@ -59,7 +59,7 @@ sopMusic = \relative c' {
   \repeat volta 3 {
     \oneVoice
     b8 |
-    e e g \tieDotted e~ e g | \tieSolid
+    e e g \tieDashed e~ e g | \tieSolid
     e4 g8 e4 fis16 fis |
     
     g8[ fis] e d[ d] c8 |
@@ -107,7 +107,7 @@ sopMusic = \relative c' {
   }
   \alternative {
     {
-      \partial 8*5
+       \partial 8*5
       e4.~ e8 b'8\rest
     }
     {
@@ -125,20 +125,20 @@ sopWords = \lyricmode {
   \set stanza = #"1. "
 	The crim -- in -- al \set ignoreMelismata = ##t cried, as he dropp’d him down, \unset ignoreMelismata
   In a state of wild a -- larm—
-  \set ignoreMelismata = ##t With a \unset ignoreMelismata fright -- ful, fran -- tic, fear -- ful frown I bar’d my big right arm.
-  I seiz’d him by his \set ignoreMelismata = ##t lit -- tle pig -- tail, \unset ignoreMelismata
-  And on his knees fell he,
+  \set ignoreMelismata = ##t With a \unset ignoreMelismata fright -- ful, fran -- tic, __ fear -- ful frown I __ bared my big right arm.
+  I __ seiz’d him by __ his \set ignoreMelismata = ##t lit -- tle pig -- tail, \unset ignoreMelismata
+  And on __ his knees fell he,
   As he squirm’d and \set ignoreMelismata = ##t strug -- gled
   And gur -- gled and gur -- gled, \unset ignoreMelismata 
-  I drew my snick -- er snee,
-  my snick -- er snee!
+  I __ drew my snick -- er snee, __
+  my snick -- er snee! __
   
-  Oh ne’er shall I
-  For -- get the cry,
-  Or the shriek that shriek -- ed he,
+  Oh __ ne’er shall I
+  For -- get __ the cry,
+  Or the shriek that shriek -- ed he, __
   \set ignoreMelismata = ##t As I \unset ignoreMelismata gnash’d my teeth,
   When from its sheath
-  I drew my snick -- er -- snee!
+  I drew my snick -- er -- snee! __
   
   We know him well,
   He can -- not tell
@@ -155,20 +155,20 @@ sopWordsII = \lyricmode {
   \set stanza = #"2. "
   He shiv -- er’d and \set ignoreMelismata = ##t shook as he gave the sign \unset ignoreMelismata
   For the stroke he \set ignoreMelismata = ##t did -- n’t de -- serve, \unset ignoreMelismata
-  When \set ignoreMelismata = ##t all of a sud -- den his _ eye met mine,
+  When \set ignoreMelismata = ##t all of a sud -- den his  __ _ eye met mine,
   And it \unset ignoreMelismata seem’d to brace his nerve,
   \set ignoreMelismata = ##t For he nod -- ded \unset ignoreMelismata his head and kiss’d his hand,
-  \set ignoreMelismata = ##t And he whis -- tled an \unset ignoreMelismata air, did he,
-  As the sa -- bre true
+  \set ignoreMelismata = ##t And he whis -- tled an \unset ignoreMelismata air, __ did he,
+  As the sa -- bre true __
   Cut clean -- ly through
-  His \set ignoreMelismata = ##t cer -- vi -- cal \unset ignoreMelismata ver -- te -- bræ, his ver -- te -- bræ!
+  His \set ignoreMelismata = ##t cer -- vi -- cal \unset ignoreMelismata ver -- te -- bræ, __ his ver -- te -- bræ! __
   
   \set ignoreMelismata = ##t When a man’s a -- fraid
   A beau -- ti -- ful maid
-  Is a \unset ignoreMelismata cheer -- ing sight to see;
-  \set ignoreMelismata = ##t And it’s \unset ignoreMelismata oh, I’m glad,
+  Is a \unset ignoreMelismata cheer -- ing sight to see; __
+  \set ignoreMelismata = ##t And it’s \unset ignoreMelismata oh, __ I’m glad,
   That mo -- ment sad
-  Was sooth’d by sight of me!
+  Was sooth’d by sight of me! __
   
   Her \set ignoreMelismata = ##t ter -- ri -- ble tale \unset ignoreMelismata 
   You can’t as -- sail,
@@ -181,23 +181,23 @@ sopWordsII = \lyricmode {
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
   \set ignoreMelismata = ##t 
-  Now tho’ you’d have said _ that head was dead
+  Now tho’ you’d have said __ _ that head was dead
   (For its own -- _ er dead _ was he),
   It _ stood on its neck _ with a smile well bred,
   And _ bow’d _ three times to me! _
   It was none of your im -- pu -- dent off -- _ hand nods,
-  But as hum -- _ ble as _ could be,
-  For it clear -- ly knew _
-  The def -- er -- ence due _
-  To a man _ of ped -- i -- gree, _
-  of ped -- i -- gree! _
+  But as hum -- _ ble as __ _ could be,
+  For it clear -- ly knew __ _
+  The def -- er -- ence due __ _
+  To a man _ of ped -- i -- gree, __ _
+  of ped -- i -- gree! __ _
   
   And it’s oh, I vow,
   This death -- _ ly bow
-  Was a touch -- _ ing sight to see; _
+  Was a touch -- _ ing sight to see; __ _
   Though _ trunk -- _ less, yet
   It could -- n’t for -- get
-  The def -- er -- ence due to me! _
+  The def -- er -- ence due to me! __ _
   
   The haugh -- _ ty youth
   He speaks the truth
@@ -361,7 +361,7 @@ bassMusic = \relative c' {
   \repeat volta 3 {
     \oneVoice
     b,8 |
-    e e g \tieDotted e~ e g | \tieSolid
+    e e g \tieDashed e~ e g | \tieSolid
     e4 g8 e4 fis16 fis |
     
     g8[ fis] e d[ d] c8 |

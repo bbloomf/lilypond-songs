@@ -89,7 +89,7 @@ sopMusic = \relative c' {
   a a b |
   cis^\pp e\fermata d |
   e, e gis |
-  \partial 2 a2 \bar "|."
+  a2 \bar "|."
 }
 sopWords = \lyricmode {
   
@@ -147,8 +147,8 @@ altoWords = \lyricmode {
 }
 altoWordsII = \lyricmode {
   \set stanza = #"2. "
-  How loft -- y, sweet Af -- ton, thy neigh -- bor -- in hills,
-  Far marked with the cours -- es of clear -- wind -- ing rills!
+  How loft -- y, sweet Af -- ton, thy neigh -- bor -- ing hills,
+  Far marked with the cours -- es of \once \override LyricHyphen #'minimum-distance = #0.7 clear -- wind -- ing rills!
   There dai -- ly I wan -- der, as morn ris -- es high,
   My flocks and my Ma -- ry’s sweet cot in my eye.
   How pleas -- ant thy banks and green val -- leys be -- low,
@@ -162,7 +162,7 @@ altoWordsIII = \lyricmode {
   And winds by the cot where my Ma -- ry re -- sides!
   How wan -- ton thy wa -- ters her snow -- y feet lave,
   As, gath -- ’ring sweet flow -- ’rets, she stems thy clear wave!
-  low gent -- ly, sweet Af -- ton, a -- mong thy green braes,
+  Flow gent -- ly, sweet Af -- ton, a -- mong thy green braes,
   Flow gent -- ly, sweet riv -- er, the theme of my lays;
   My Ma -- ry’s a -- sleep by the mur -- mur -- ing stream,
   Flow gent -- ly, sweet Af -- ton, dis -- turb not her dream.

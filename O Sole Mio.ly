@@ -99,9 +99,9 @@ sopWords = \lyricmode {
   Be -- hold the bril -- liant sun in all its splen -- dor!
   
   \dropLyricsXII A sun I know of that’s bright -- er yet,
-  This sun, my dear -- est ’tis naught but \raiseLyrics thee
-  Thy face, so fair to see,
-  That now my sun shall ev -- er be!
+  This sun, my dear -- est ’tis naught but \raiseLyrics thee __
+  Thy face, __ so fair to see, __
+  That now my sun shall ev -- er be! __
 }
 
 sopWordsII = \lyricmode {

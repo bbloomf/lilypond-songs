@@ -161,7 +161,7 @@ altoMusic = \relative c' {
   ees4. ees8 d2 |
   
   g4. g8 fis4 s8 fis |
-  g4 g8 g fis4. fis8 |
+  g4~ g8 g fis4. fis8 |
   g2. g4 |
   e4 e s4. e8 |
   d4. d8 fis4 fis |

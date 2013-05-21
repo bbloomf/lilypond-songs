@@ -168,8 +168,7 @@ sopWords = \lyricmode {
   but have ev -- er -- last -- ing 
   \set associatedVoice = "altos"
   life,
-  ev -- er -- last -- ing life, ev -- er -- last -- ing, ev -- er -- last -- ing
-  \unset associatedVoice
+  ev -- er -- last -- ing life, ev -- er -- last -- ing, ev -- er -- \unset associatedVoice last -- ing
   life,
   
   

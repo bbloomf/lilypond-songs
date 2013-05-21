@@ -63,10 +63,10 @@ sopMusic = \relative c' {
   c'\< c c d4\> c8 |
   << {bes4.~\! bes} {s2 s8 \teeny bes8} >> | \normalsize \break
   
-  \tieDotted
+  \tieDashed
   bes4( bes8) c8[\< c] c |
   \tieSolid
-  d\! << {bes4~ bes4.} {s2 \teeny bes8} >> | \normalsize
+  d\! << {bes4~ bes4.} {s2 \teeny f8} >> | \normalsize
   bes8[ bes] bes c4 c8\< |
   d4.~ d4.\fermata\! |\break
   

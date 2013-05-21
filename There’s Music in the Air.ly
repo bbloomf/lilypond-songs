@@ -83,7 +83,7 @@ sopWords = \lyricmode {
   When the in -- fant morn is nigh,
   And faint its blush is seen
   On the bright and laugh -- ing sky.
-  Ma -- ny~a harp’s ecs -- tat -- ic sound
+  Ma -- ny~a harp’s ec -- stat -- ic sound
   Thrills us with its joy pro -- found,
   While we list, en -- chant -- ed there,
   To the mu -- sic in the air.

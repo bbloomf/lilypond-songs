@@ -66,8 +66,8 @@ global = {
 
 sopMusic = \relative c' {
 	b'4 gis8. a16 b8. e16 dis8. cis16 |
-  b2 gis |
-  a4( a16[) gis a8] b4 a |
+  \slurDashed b2( gis) |
+  \slurSolid a4( a16[) gis a8] b4 a |
   gis2. b4\rest |
   b gis8. a16 b8. e16 dis8. cis16 |
   b2 gis |
@@ -94,7 +94,9 @@ sopMusic = \relative c' {
 }
 sopWords = \lyricmode {
   \set stanza = #"1. "
-	Hail to the crys -- tal foun -- tain flow -- ing
+	\set ignoreMelismata = ##t
+  Hail to the crys -- tal foun -- tain flow -- ing
+  \unset ignoreMelismata
   Pure, bright and clear;
   Touch not the ru -- by wine -- cup glow -- ing,
   Shun it with man -- ly fear.
@@ -107,7 +109,9 @@ sopWords = \lyricmode {
 
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
+  \set ignoreMelismata = ##t
   Let not Co -- lum -- bia’s sons and daugh -- ters
+  \unset ignoreMelismata
   The wine ex -- tol;
   But let us quaff the spark -- ling wa -- ters,
   Wine to the he -- ro’s soul.
@@ -125,7 +129,7 @@ sopWordsII = \lyricmode {
 
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
-  No lur -- ing blush shall chain the hours __ _
+  No lur -- ing blush shall chain the hours __
   That Free -- dom loves;
   No lurk -- ing fiend shall steal the pow -- ers
   Vir -- tue so well ap -- proves.
@@ -146,8 +150,8 @@ sopWordsV = \lyricmode {
 
 altoMusic = \relative c' {
   gis'4 e8. fis16 gis8. gis16 b8. a16 |
-  gis2 e |
-  fis4( fis16)[ e fis8] gis4 fis |
+  \slurDashed gis2( e) |
+  \slurSolid fis4( fis16)[ e fis8] gis4 fis |
   e2. s4 |
   gis4 e8. fis16 gis8. gis16 b8. a16 |
   gis2 e |
@@ -194,8 +198,8 @@ altoWordsVI = \lyricmode {
 }
 tenorMusic = \relative c' {
   e4 b8. b16 b8. b16 b8. b16 |
-  e2 b |
-  b b4 b |
+  \slurDashed e2( b) |
+  \slurSolid b b4 b |
   b2. s4 |
   e4 b8. b16 b8. b16 b8. b16 |
   e2 b |
@@ -211,8 +215,7 @@ tenorMusic = \relative c' {
   b4 fis8. fis16 b4 a |
   gis2. s4 |
   
-  b4. b8 |
-  cis4 e |
+  b4. b8 cis4 e |
   e4. e8 e4 b |
   a4. a8 e'4 cis |
   b2. s4 |
@@ -234,8 +237,8 @@ tenorWordsIII = \lyricmode {
 
 bassMusic = \relative c' {
   e,4 e8. e16 e8. e16 e8. e16 |
-  e2 e |
-  b b4 b |
+  \tieDashed e2~ e |
+  \tieSolid b b4 b |
   e2. d4\rest |
   e4 e8. e16 e8. e16 e8. e16 |
   e2 e |

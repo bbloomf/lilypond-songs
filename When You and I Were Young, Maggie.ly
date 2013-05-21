@@ -62,8 +62,8 @@ global = {
   %\set midiInstrument = "recorder"
   \autoBeamOff
   \override DynamicTextSpanner #'style = #'none
-  \tieDotted
-  \slurDotted
+  \tieDashed
+  \slurDashed
 }
 
 sopMusic = \relative c' {
@@ -182,7 +182,7 @@ altoMusic = \relative c' {
     e4 g8.~ g16 f4 g8( f) |
     \slurSolid e4( f g) \bar""
     
-    \slurDotted e8.~ e16 |
+    \slurDashed e8.~ e16 |
     f4 f8. f16 f4 ees8.~ ees16 |
     d2 bes8 d4 d8 |
     c4 c8.[ f16] e4 e |

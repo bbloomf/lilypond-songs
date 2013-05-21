@@ -51,7 +51,7 @@ global = {
   %\set midiInstrument = "recorder"
   \autoBeamOff
   \override DynamicTextSpanner #'style = #'none
-  \tieDotted\slurDotted
+  \tieDashed\slurDashed
 }
 
 sopMusic = \relative c' {
@@ -63,7 +63,7 @@ sopMusic = \relative c' {
     b a b\rest g g fis b\rest g |
     a2. \bar""
     
-    \teeny a8 \normalsize a |
+    \teeny g8 \normalsize a |
     b4 b g a8. b16 |
     c8 b c8. e16 d4 \bar"" g,8. a16 
   }
@@ -161,7 +161,7 @@ altoMusic = \relative c' {
     g d s d cis cis s cis |
     d2. \bar""
     
-    \teeny fis8 \normalsize fis |
+    \teeny d8 \normalsize fis |
     g4 g d fis8. g16 |
     g8 g g8. g16 g4 g8. g16
   }
@@ -218,7 +218,7 @@ tenorMusic = \relative c' {
     d c s b a a s g |
     fis2. \bar""
     
-    \teeny d'8 \normalsize d |
+    \teeny b8 \normalsize d |
     d4 d b c8. d16 |
     e8 d e8. c16 b4 b8. cis16 |
   }
@@ -265,7 +265,7 @@ bassMusic = \relative c' {
     g g d\rest g e e d\rest e |
     d2. \bar""
     
-    \teeny d8 \normalsize d |
+    \teeny g8 \normalsize d |
     g4 g g g8. g16 |
     g8 g g8. g16 g4 e8. e16 |
   }

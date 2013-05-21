@@ -74,7 +74,7 @@ sopMusic = \relative c' {
   f4.~ f8 b\rest \bar""\break bes |
   
   bes8. c16 bes8 g8. f16 ees8 |
-  c'4.~ c8 b\rest \tieDotted ees16~ ees |
+  c'4.~ c8 b\rest \tieDashed ees16~ ees |
   \tieSolid bes8. g16 ees8 f8. ees16 f8 |
   ees4.~ ees8 b'\rest \bar""\break ees, |
   
@@ -111,7 +111,7 @@ sopWords = \lyricmode {
 	I’m think -- ing of Er -- in to -- night,
   And the lit -- tle white cot by the sea, __
   Where Jen -- ny my dar -- ling now dwells,
-  The fair -- est and dear -- est to me; __
+  The __ fair -- est and dear -- est to me; __
   
   I know that she waits for me day af -- ter day,
   My heart ev -- er longs to be there,
@@ -161,7 +161,7 @@ altoMusic = \relative c' {
   d4.~ d8 s ees |
   ees8. ees16 ees8 ees8. ees16 ees8 |
   
-  ees4.~ ees8 s \tieDotted ees16~ ees |
+  ees4.~ ees8 s \tieDashed ees16~ ees |
   \tieSolid
   ees8. ees16 ees8 d8. bes16 d8 |
   ees4.~ ees8 s c |
@@ -222,7 +222,7 @@ tenorMusic = \relative c' {
   bes4.~ bes8 s g |
   g8. aes16 g8 bes8. aes16 g8 |
   
-  aes4.~ aes8 s \tieDotted c16~ c |
+  aes4.~ aes8 s \tieDashed c16~ c |
   \tieSolid g8. bes16 g8 aes8. g16 aes8 |
   g4.~ g8 s aes |
   aes8. aes16 aes8 c8. bes16 aes8 |
@@ -269,7 +269,7 @@ bassMusic = \relative c' {
   bes,4.~ bes8 d\rest ees |
   ees8. ees16 ees8 ees8. ees16 ees8 |
   
-  aes,4.~ aes8 d\rest \tieDotted aes16~ aes |
+  aes,4.~ aes8 d\rest \tieDashed aes16~ aes |
   \tieSolid
   bes8. bes16 bes8 bes8. bes16 bes8 |
   ees4.~ ees8 d\rest aes |
@@ -315,9 +315,10 @@ pianoLH = \relative c' {
       \new Voice = "sopranos" { \voiceOne << \global \sopMusic >> }
       \new Voice = "altos" { \voiceTwo << \global \altoMusic >> }
     >>
+    \new Lyrics \lyricsto "altos" \altoWords
     \new Lyrics = "sop"  \lyricsto "sopranos" \sopWords
     \new Lyrics = "sopII"  \lyricsto "sopranos" \sopWordsII
-    \new Lyrics = "altosII"  \lyricsto "altos" \altoWords
+    \new Lyrics \lyricsto "altos" \altoWords
     \new Lyrics = "altosIII"  \lyricsto "sopranos" \sopWordsIII
     \new Lyrics = "altosIV"  \lyricsto "sopranos" \sopWordsIV
     \new Lyrics = "altosV"  \lyricsto "sopranos" \sopWordsV

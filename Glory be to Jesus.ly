@@ -108,7 +108,7 @@ sopWordsIII = \lyricmode {
   \set stanza = #"3. "
   Oft as earth ex -- ult -- ing
   Wafts its praise on high,
-  An -- gel -- hosts, re -- joic -- ing,
+  An -- \once \override LyricHyphen #'minimum-distance = #0.7 gel -- hosts, re -- joic -- ing,
   Make their glad re -- ply.
   
   Lift ye then your voic -- es;

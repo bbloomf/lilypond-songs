@@ -51,20 +51,21 @@ global = {
   %\set midiInstrument = "recorder"
   \autoBeamOff
   \override DynamicTextSpanner #'style = #'none
-  \tieDotted
+  \tieDashed
+  \slurDashed
 }
 
 sopMusic = \relative c' {
-	\partial 4 |
+	\partial 4
   c8[ e] |
   f4 f8 g a4 g8. f16 |
   g4 g8 f d4 c8 e |
   f4 f8~ f f4 a8 c |
   d2 c4 c8~ c |
   
-  d~ d d8 c a4~ a8 c |
+  \slurDashed d~ d d8( c) a4~ a8 c |
   bes a g f d4\fermata c8 e |
-  f16 f8. a16 c8. d4 c8 a |
+  f16~ f8. a16( c8.) d4 c8 a |
   g2 f4 c\fermata | \break
   
   f4 f8 g a4 a8 g |
@@ -85,7 +86,7 @@ sopWords = \lyricmode {
 	By _ yon bon -- nie banks,
   And by yon bon -- nie braes,
   Where the sun shines _ bright on Loch Lo -- mond,
-  Where _ me _ and my true love
+  Where _ me __ _ and my true love
   Were ev -- er wont to gae
   On the bon -- nie, bon -- nie banks of Loch Lo -- mond.
   Oh!
@@ -94,16 +95,16 @@ sopWords = \lyricmode {
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
   \set ignoreMelismata = ##t
-  ’Twas _ then that we part -- ed
+  ’Twas _ there that we part -- ed
   In yon shad -- y glen
   On the steep, steep _ side of Ben Lo -- mond
-  Where in pur -- _ ple _ hue __ _
-  The High -- land hils we view
+  Where in pur -- _ ple __ _ hue __ _
+  The High -- land hills we view
   And the moon _ com -- in’ out in the gloam -- ing.
   
   Oh! ye’ll take the high road and I’ll take the low road,
   And I’ll be in Scot -- land a -- fore ye,
-  But me and my true love we’ll nev -- er meeat a -- gain
+  But me and my true love we’ll nev -- er meet a -- gain
   On the bon -- nie, bon -- nie banks of Loch Lo -- mond. _
 }
 
@@ -131,17 +132,17 @@ altoMusic = \relative c' {
   c c8 e f4 e8. f16 |
   d4 d8 d bes4 c8 c |
   c4 e8~ e d4 ees8 ees |
-  d4( f) e e8~ e |
+  \slurSolid d4( f) e e8~ e |
   
-  f~ f f f e4~ e8 e |
+  f~ f f~ f e4~ e8 e |
   d d c c bes4 bes8 e |
-  d16 d8. e16 e8. f4 f8 f |
+  d16~ d8. e16~ e8. f4 f8 f |
   e2 f4 c |
   
   c d8 d e4 cis8 cis |
   d4 d8 bes bes4 c8 c |
   c4 d8 d d4 f8 f |
-  f4( e) f4 f |
+  \slurSolid f4( e) f4 f |
   
   f f8 f e4 e8 e |
   d d c c bes4 c8 c |
@@ -175,11 +176,11 @@ tenorMusic = \relative c' {
   a a8 bes c4 bes8. a16 |
   bes4 bes8 bes f4 e8 g |
   a4 a8~ a a4 f8 f |
-  f4( g) g a8~ a |
+  \slurSolid f4( g) g a8~ a |
   
-  a~ a a a a4~ a8 a |
+  a~ a a~ a a4~ a8 a |
   g g f f f4 e8 bes' |
-  a16 a8. a16 a8. bes4 f8 f |
+  a16~ a8. a16~ a8. bes4 f8 f |
   bes2 a4 bes |
   
   a4 a8 a a4 a8 a |
@@ -209,17 +210,17 @@ bassMusic = \relative c' {
   f f8 f f4 f8. f16 |
   bes,4 bes8 bes bes4 c8 c |
   f4 f8~ f d4 c8 c |
-  bes4( g) c a8~ a |
+  \slurSolid bes4( g) c a8~ a |
   
-  d~ d d d c4~ c8 c |
+  d~ d d~ d c4~ c8 c |
   g g a a bes4\fermata c8 c |
-  d16 d8. c16 c8. bes4 a8 a |
+  d16~ d8. c16~ c8. bes4 a8 a |
   c2 f4 e\fermata |
   
   f d8 d cis4 a8 a |
   bes4 g8 g c4 c8 c |
   a4 d8 d d4 f8 f |
-  bes,4( g) a f' |
+  \slurSolid bes,4( g) a f' |
   
   d d8 d c4 c8 c |
   g g a a bes4\fermata bes8 bes |

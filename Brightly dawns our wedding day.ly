@@ -225,8 +225,8 @@ sopWordsII = \lyricmode {
   
   This the close of ev -- ’ry song,
   this the \set associatedVoice = "altos" close,
-  Ding dong!
-  Ding dong!
+  Ding __ dong!
+  Ding __ dong!
   
   What, though
   

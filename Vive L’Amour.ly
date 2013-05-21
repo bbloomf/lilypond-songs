@@ -96,16 +96,16 @@ sopWords = \lyricmode {
 sopWordsII = \lyricmode {
   \set stanza = #"2."
   Now let ev -- ’ry mar -- ried man drink to his wife.
-    Vi -- ve la com -- pag -- nie,
+    \markup\italic Vi -- ve \markup\italic la \markup\italic com -- \markup\italic pag -- \markup\italic nie,
   The joy of his bo -- som and plague of his life.
-    Vi -- ve la com -- pag -- nie.
+    \markup\italic Vi -- \markup\italic ve \markup\italic la \markup\italic com -- \markup\italic pag -- \markup\italic nie.
     
   \set stanza = \markup\dynamic"ff "
-  Vi -- ve la, vi -- ve la, vi -- ve l’a -- mour,
-  Vi -- ve la, vi -- ve la, vi -- ve l’a -- mour,
-  vi -- ve l’a -- mour,
-  vi -- ve l’a -- mour,
-  vi -- ve la com -- pag -- nie!
+  \markup\italic Vi -- \markup\italic ve \markup\italic la, \markup\italic vi -- \markup\italic ve \markup\italic la, \markup\italic vi -- \markup\italic ve \markup\italic l’a -- \markup\italic mour,
+  \markup\italic Vi -- \markup\italic ve \markup\italic la, \markup\italic vi -- \markup\italic ve \markup\italic la, \markup\italic vi -- \markup\italic ve \markup\italic l’a -- \markup\italic mour,
+  \markup\italic vi -- \markup\italic ve \markup\italic l’a -- \markup\italic mour,
+  \markup\italic vi -- \markup\italic ve \markup\italic l’a -- \markup\italic mour,
+  \markup\italic vi -- \markup\italic ve \markup\italic la \markup\italic com -- \markup\italic pag -- \markup\italic nie!
 }
 sopWordsIII = \lyricmode {
   \set stanza = #"3."

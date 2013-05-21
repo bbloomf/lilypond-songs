@@ -125,7 +125,7 @@ sopMusic = \relative c' {
 }
 sopWords = \lyricmode {
   \set stanza = #"1. "
-	Of all the wives as e’er you know, __
+	Of all __ the wives as e’er you know, __
   Yeo -- ho! lads, ho! Yeo -- ho! yeo -- ho!
   There’s none like Nan -- cy Lee, I trow, __
   Yeo -- ho! lads, ho! yeo -- ho!
@@ -228,7 +228,7 @@ altoMusic = \relative c' {
   g4 g8 aes4 aes8 |
   g4.~ g4 ees8 |
   ees4. e |
-  c4 ees8 c4 ees8 |
+  c4 ees?8 c4 ees8 |
   ees4. aes |
   g s4 \bar"|."
 }

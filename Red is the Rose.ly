@@ -178,7 +178,7 @@ tenorMusic = \relative c' {
   a4 a8. a16 a4. a16 a |
   f8. f16 g8 g f4. s8 |
   f4 a8. a16 a a8. c8 a |
-  bes2 c |
+  bes2 a |
   
   a4 a8. a16 a4 a8 a |
   g4 f8. f16 f4. g8 |
@@ -211,9 +211,9 @@ bassMusic = \relative c' {
   f4 d8. d16 c4. a16 a |
   bes8. bes16 g8 g bes4. d8\rest |
   a4 d8. d16 d d8. f8 f |
-  bes,4( g) a2 |
+  bes,4( g) f2 |
   
-  d4 d8. d16 c4 c8 c |
+  d'4 d8. d16 c4 c8 c |
   g4 a8. a16 bes4.\fermata bes8 |
   a4 f'16 f8. bes,4 a8 f |
   \tieSolid c'2 f~ |

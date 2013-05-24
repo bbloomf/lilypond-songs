@@ -31,7 +31,12 @@ Function getBlock([string]$haystack, [long]$index) {
 $pages = '';
 del mapped\* -Recurse;
 $toc = Get-Content -Path "!Contents.ly" -Encoding UTF8 -Raw
-$toc += Get-Content -Path "Contents\!Contents.ly" -Encoding UTF8 -Raw
+$contents = Get-Content -Path "Contents\!Contents.ly" -Encoding UTF8 -Raw
+if($toc.IndexOf('%CONTENTS%') -ge 0) {
+  $toc = $toc.Replace('%CONTENTS%',$contents);
+} else {
+  $toc += $contents;
+}
 Set-Content -Path "mapped\0.ly" -Value $toc -Encoding UTF8
 foreach($_ in $map) {
     $_ = $_ -replace $regexComment,'';

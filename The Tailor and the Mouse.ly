@@ -106,7 +106,7 @@ sopWordsII = \lyricmode {
 
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
-  The tai -- lor though his mouse would die,
+  The tai -- lor thought his mouse would die,
   Hi did -- dle un -- kum fee -- dle!
   He baked him in an ap -- ple pie,
   Hi did -- dle un -- kum fee -- dle!

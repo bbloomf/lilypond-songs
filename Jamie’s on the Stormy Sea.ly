@@ -129,7 +129,7 @@ sopWordsV = \lyricmode {
   Sweet -- ly woo -- ing heav’n to bring her
   Ja -- mie from the storm -- y sea;
   And while yet her lips did name me,
-  Forth I sprang, my hear o’er -- came me;
+  Forth I sprang, my heart o’er -- came me;
   “Grieve no more, sweet, I am Ja -- mie,
   Home re -- turned to love and thee!”
 }

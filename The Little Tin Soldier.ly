@@ -222,7 +222,7 @@ tenorMusic = \relative c' {
   a a8[ a] g4 a8[ a] |
   a2. s4 |
   
-  a4 a8[ a] a4 a8 a |
+  a4 a8[ a] a4 a8[ a] |
   a4 a s2 |
   a4 g bes bes |
   a1 |

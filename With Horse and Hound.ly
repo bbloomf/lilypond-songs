@@ -177,7 +177,7 @@ sopWords = \lyricmode {
   
   So the dogs be -- gin to bark and bay,
   \set ignoreMelismata = ##t
-  And the \unset ignoreMelismata hors -- es am -- ble a -- long the way,
+  And the \unset ignoreMelismata hors -- es __ am -- ble a -- long the way,
   While the red -- coats \set ignoreMelismata = ##t mus -- ter in strong ar -- _ ray,
   They mus -- ter in strong _ ar -- ray,
   \unset ignoreMelismata

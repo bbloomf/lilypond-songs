@@ -108,13 +108,13 @@ sopWords = \lyricmode {
   \set stanza = #"1. "
 	I dreamt _ I dwelt _ in mar -- _ ble halls,
   With vas -- sals and serfs at my side, _ _ _
-  And of all who as -- sem -- bled with -- in _ those walls
-  That I was the hope and the pride. _ _ _
+  And of all who as -- sem -- bled with -- in __ _ those walls
+  That I was the hope and the pride. __ _ _ _
   I had rich -- es too great _ to count; _ could boast
-  Of a high _ an -- ces -- tral name; _
+  Of a high _ an -- ces -- tral name; __ _
   \unset ignoreMelismata
   But I al -- so dreamt, which pleased me most,
-  That you loved me still the same, that you loved me you loved my still the same,
+  That you loved me still the same, that you loved me you loved me still the same,
   That you loved me, you loved me still the same.
 }
 
@@ -124,9 +124,9 @@ sopWordsII = \lyricmode {
   I dreamt _ that suit -- _ ors sought _ my hand;
   That knights up -- on bend -- _ ed knee, _ _ _
   And with vows _ no maid -- _ en heart could with -- stand,
-  They pledged _ their faith _ to me, _ _ _
+  They pledged _ their faith _ to me, __ _ _ _
   And I dreamt _ that one of that no -- _ ble host
-  Came _ forth _ my hand to claim; _
+  Came _ forth _ my hand to claim; __ _
   \unset ignoreMelismata
   But I al -- so dreamt, which charmed me most,
   That you loved me still the same, that you loved me, you loved me still the same,

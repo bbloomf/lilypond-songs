@@ -106,7 +106,7 @@ sopMusic = \relative c' {
 sopWords = \lyricmode {
   \set ignoreMelismata = ##t
   \set stanza = #"1. "
-	I dreamt _ I dwelt _ in mar -- _ ble halls,
+  I dreamt _ I dwelt _ in mar -- _ ble halls,
   With vas -- sals and serfs at my side, _ _ _
   And of all who as -- sem -- bled with -- in __ _ those walls
   That I was the hope and the pride. __ _ _ _

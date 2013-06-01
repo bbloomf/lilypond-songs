@@ -115,7 +115,7 @@ sopWords = \lyricmode {
   \unset ignoreMelismata
   But I al -- so dreamt, which pleased me most,
   That you loved me still the same, that you loved me you loved my still the same,
-  That you loved my, you loved me still the same.
+  That you loved me, you loved me still the same.
 }
 
 sopWordsII = \lyricmode {

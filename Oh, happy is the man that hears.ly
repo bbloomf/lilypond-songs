@@ -2,8 +2,8 @@
 \include "util.ly"
 \header {
   title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Oh, happy is the man that hears"}}
-  composer = \markup\oldStyleNum"Michael Bruce (1746–1767)"
-  poet = \markup\oldStyleNum"George Frideric Handel (1685–1759)"
+  poet = \markup\oldStyleNum"Michael Bruce (1746–1767)"
+  composer = \markup\oldStyleNum"George Frideric Handel (1685–1759)"
   tagline = ""
 }
 \paper {

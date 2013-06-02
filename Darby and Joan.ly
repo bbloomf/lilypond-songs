@@ -67,7 +67,7 @@ sopMusic = \relative c' {
   c2. |
   c4 d8 e8. f16 g8 |
   a4 e8 e4. |
-  fis4 << e8 {s16 \teeny d16 \normalsize} >> d8. fis16 a8 |
+  fis4 << e8 {s16 \teeny e16*1/2 d \normalsize} >> d8. fis16 a8 |
   
   b4 g8 g4. |
   c4. b8. g16 e8 |
@@ -89,7 +89,7 @@ sopWords = \lyricmode {
   Fif -- ty years since our wed -- ding day,
   Shad -- ow and sun for ev -- ’ry one as the years roll on:
   Dar -- by dear, when the world went wry,
-  Hard and "" sor -- row -- ful then was I,
+  Hard and "" "" sor -- row -- ful then was I,
   Ah! lad, how you cheered me then,
   “Things will be bet -- ter, sweet wife, a -- gain!”
 }
@@ -108,7 +108,7 @@ sopWordsII = \lyricmode {
   When we bur -- ied our ba -- by child,
   Un -- til you whis -- pered, “Heav’n knows best!” and my heart found rest;
   Dar -- by dear, ’twas your lov -- ing hand
-  Show’d me the way to the bet -- ter land;
+  Show’d "" me the way to the bet -- ter land;
   Ah! lad, as you kissed each tear,
   Life __ _ grew bet -- ter and Heav’n more near:
   
@@ -125,7 +125,7 @@ sopWordsIII = \lyricmode {
   Hand in hand when our hair is gray,
   Shad -- ow and sun for ev -- ’ry -- one as the years roll on:
   Hand in hand when the long night -- tide
-  Gent -- ly "" cov -- ers us side by side:
+  Gent -- ly "" "" cov -- ers us side by side:
   Ah! lad, tho’ we know not when,
   Love will be with us for -- ev -- er then:
 }
@@ -150,7 +150,7 @@ altoMusic = \relative c' {
   c2. |
   c4 b8 bes8. a16 e'8 |
   e4 cis8 cis4. |
-  c?4 << c8 {s16 \teeny c16 \normalsize} >> c8. c16 d8 |
+  c?4 << c8 {s16 \teeny c16*1/2 c \normalsize} >> c8. c16 d8 |
   
   d4 d8 d4. |
   e4. e8. e16 e8 |
@@ -197,7 +197,7 @@ tenorMusic = \relative c' {
   e2. |
   e4 f8 g8. f16 g8 |
   a4 a8 a4. |
-  a4 << g8 {s16 \teeny fis} >> \normalsize fis!8. a16 fis8 |
+  a4 << g8 {s16 \teeny g16*1/2 fis} >> \normalsize fis!8. a16 fis8 |
   
   g4 b8 b4. |
   a4. g8. b16 g8 |
@@ -234,7 +234,7 @@ bassMusic = \relative c' {
   c2. |
   c4 c8 c8. c16 c8 |
   cis4 a8 a4. |
-  d4 << d8 {s16 \teeny d} >> \normalsize d8. d16 d8 |
+  d4 << d8 {s16 \teeny d16*1/2 d} >> \normalsize d8. d16 d8 |
   
   g,4 g'8 g4. |
   a,4. e'8. e16 e8 |

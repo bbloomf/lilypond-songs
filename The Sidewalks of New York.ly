@@ -138,9 +138,9 @@ sopWords = \lyricmode {
 	Down in front of Ca -- sey’s __ ""
   Old brown wood -- en stoop, __ ""
   On a sum -- mer’s eve -- ning, __
-  We formed a mer -- ry group; __
+  We formed a mer -- \set associatedVoice = "tenors" ry group; __
   
-  Boys and girls to -- geth -- er, __ ""
+  Boys \unset associatedVoice and girls to -- geth -- er, __ ""
   We would sing and waltz, __
   \set ignoreMelismata = ##t
   While the “gin -- nie” played the or -- "" gan "" \unset ignoreMelismata
@@ -152,8 +152,9 @@ sopWordsII = \lyricmode {
   That’s where John -- ny Ca -- sey, __
   And lit -- tle Jim -- my Crowe, __
   With Jak -- ey Krause the bak -- er, __
-  Who al -- ways had the dough; __
+  Who al -- ways had \set associatedVoice = "tenors" the dough; __
   
+  \unset associatedVoice
   Pret -- ty Nel -- lie Shan -- non, __
   \set ignoreMelismata = ##t
   With a dude \unset ignoreMelismata as light as cork, __ ""
@@ -176,8 +177,9 @@ sopWordsIII = \lyricmode {
   Some are up in “G,” __ ""
   Oth -- ers, they are wand -- ’rers, __
   \set ignoreMelismata = ##t
-  But they all \unset ignoreMelismata feel just like me; __
+  But they all \unset ignoreMelismata feel just \set associatedVoice = "tenors" like me; __
   
+  \unset associatedVoice
   They’d part with all they’ve got, __
   Could they but once more walk, __
   With their best girl and "" have "" a twirl
@@ -306,8 +308,8 @@ tenorMusic = \relative c' {
   b \tieDashed d8~ d | \tieSolid
   cis2 cis4 |
   a4( b) cis4 |
-  d2.~ |
-  d |
+  d4( a b |
+  c? b a) |
   
   d2 b4 |
   c2 c4 |
@@ -467,11 +469,9 @@ pianoLH = \relative c' {
       \new Voice = "sopranos" { \voiceOne << \global \sopMusic >> }
       \new Voice = "altos" { \voiceTwo << \global \altoMusic >> }
     >>
-    \new Lyrics = "altos"  \lyricsto "sopranos" \sopWords
-    \new Lyrics = "altosII"  \lyricsto "sopranos" \sopWordsII
-    \new Lyrics = "altosIII"  \lyricsto "sopranos" \sopWordsIII
-    \new Lyrics = "altosIV"  \lyricsto "sopranos" \sopWordsIV
-    \new Lyrics = "altosV"  \lyricsto "sopranos" \sopWordsV
+    \new Lyrics = "altos"
+    \new Lyrics = "altosII"
+    \new Lyrics = "altosIII"
    \new Staff = men <<
       \clef bass
       \new Voice = "tenors" { \voiceOne << \global \tenorMusic >> }
@@ -480,6 +480,9 @@ pianoLH = \relative c' {
     \new Lyrics \with { alignAboveContext = #"tenors" } \lyricsto "tenors" \tenorWordsIII
     \new Lyrics \with { alignAboveContext = #"tenors" } \lyricsto "tenors" \tenorWordsII
     \new Lyrics \with { alignAboveContext = #"tenors" } \lyricsto "tenors" \tenorWords
+    \context Lyrics = "altos"  \lyricsto "sopranos" \sopWords
+    \context Lyrics = "altosII"  \lyricsto "sopranos" \sopWordsII
+    \context Lyrics = "altosIII"  \lyricsto "sopranos" \sopWordsIII
   >>
 %    \new PianoStaff << \new Staff { \new Voice { \pianoRH } } \new Staff { \clef "bass" \pianoLH } >>
   >>

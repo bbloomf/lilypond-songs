@@ -68,9 +68,9 @@ sopMusic = \relative c' {
   f2 ees4 << bes4\rest\f { s8 \teeny bes'8 \normalsize} >> |
   \slurDashed
   ees4-> d-> c-> bes8\rest d16( ees) |
-  d4-> c-> bes-> bes8\rest bes |
+  d4-> c-> bes-> bes8\rest b |
   
-  c4. g8 g4 g |
+  c4. g8 g4 b |
   \slurSolid
   c4.( d8) ees4 ees\fermata |
   \slurDashed
@@ -84,12 +84,12 @@ sopWords = \lyricmode {
 	The min -- strel boy to the war is gone,
   In the ranks of death you’ll find him;
   His fa -- ther’s sword he hath gird -- ed on,
-  And his wild harp slung be -- hind him.
+  And his wild harp slung __ be -- hind him.
   "" “Land of song!” \set ignoreMelismata = ##t said the war -- rior bard,
   \unset ignoreMelismata
-  “Tho’ all the world be -- trays __ thee,
+  “Tho’ all the world be -- tray __ thee,
   One sword at least thy __ rights shall guard,
-  One __ faith -- ful harp shall praise thee.”
+  One __ faith -- ful harp __ shall praise thee.”
 }
 
 sopWordsII = \lyricmode {
@@ -209,7 +209,7 @@ bassMusic = \relative c' {
   bes2 ees4 << d4\rest {s8 \teeny ees8} >> \normalsize |
   \slurDashed
   ees4 g c, d8\rest g16( c,) |
-  f4 < \tweak #'font-size #-3 f f,> bes, d8\rest f |
+  f4 < \tweak #'font-size #-3 f f,> bes, d8\rest g, |
   
   c4. ees8 g4 f |
   \slurSolid ees4.( d8) c4 g'\fermata |

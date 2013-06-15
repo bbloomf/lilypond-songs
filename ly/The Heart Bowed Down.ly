@@ -189,7 +189,7 @@ tenorMusic = \relative c' {
   b d e4. e8 |
   d4 cis b b |
   
-  a d c( a8.) a16 |
+  a d cis( a8.) g16 |
   fis2 s4 fis |
   c' c c c |
   \times 2/3 {b4 b8} b2 b4 |

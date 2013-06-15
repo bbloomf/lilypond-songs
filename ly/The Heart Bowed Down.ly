@@ -105,7 +105,7 @@ sopWordsII = \lyricmode {
   Still pon -- der o’er the past,
   On mo -- ments of de -- light that were
   Too beau -- ti -- ful to last,
-  that were too beau -- ti -- ful to last;
+  that were too beau -- ti -- ful __ to last;
   To long de -- part -- ed years ex -- tend,
   Its vis -- ions with them flown;
   
@@ -189,7 +189,7 @@ tenorMusic = \relative c' {
   b d e4. e8 |
   d4 cis b b |
   
-  a d c a8. a16 |
+  a d c( a8.) a16 |
   fis2 s4 fis |
   c' c c c |
   \times 2/3 {b4 b8} b2 b4 |
@@ -228,7 +228,7 @@ bassMusic = \relative c' {
   g g e4. cis8 |
   d4 fis g gis |
   
-  a a a, a8.\fermata a16 |
+  a a a,~ a8.\fermata a16 |
   d2 d4\rest d |
   fis fis fis fis |
   \times 2/3 {g4 g8} g2 g4 |

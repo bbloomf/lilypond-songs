@@ -14,9 +14,9 @@
   system-system-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)
-       (padding . 2)
+       (padding . -3)
        (stretchability . 100))
-  ragged-last-bottom = ##t
+  ragged-last-bottom = ##f
   ragged-bottom = ##f
   two-sided = ##t
   inner-margin = 1\in
@@ -44,64 +44,49 @@
 }
 #(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
 global = {
-  \key g \major
+  \key bes \major
   \time 6/4
   \dynamicUp
   %\set crescendoSpanner = #'dashed-line
   %\set midiInstrument = "recorder"
   \autoBeamOff
   \override DynamicTextSpanner #'style = #'none
+  \slurDashed
 }
 
 sopMusic = \relative c' {
 	\partial 4
-  g'8 a |
-  b2. a |
-  g4 e fis g2 a8 b |
-  c2. b |
-  a4 fis4. g8 a2 b8[ c] |
+  bes'8 c |
+  d2.^> c2.^> |
+  bes4 g a bes2 c8 d |
+  ees2.^> d^> |
   
-  d4. e8 d[ c] b4 b2 |
-  c4 c4. b8 a2 b4 |
-  g4 e a fis d g |
+  c4 a4. bes8 c2 d8( ees) |
+  f4. g8 f ees d4 d2 |
   
-  %page2
-  g g4. fis8 g2 g8 a |
-  b2. a |
-  g4 e fis g2 a8 b |
-  
-  c2. b |
-  a4 fis4. g8 a2 b8 c |
-  d4. e8 d c b4 b2 |
-  
-  c4 c4. b8 a2 b4 |
-  c2 e4 d2 b4 |
-  a4 d c^\markup\italic"poco rit." b2 \bar"|."
+  ees4 ees4. d8 c2 d4 |
+  bes4 g c a f bes |
+  bes4 bes4. a8 bes2 \bar ":|"
 }
 sopWords = \lyricmode {
-  %\set stanza = \markup{\dynamic"f  " "1."}
+  \set stanza = \markup{\dynamic"f  " "1."}
 	Let us all sing, mer -- ri -- ly sing,
   let us all sing, mer -- ri -- ly sing,
   
-  Till ech -- o a -- round us,
+  Till ech -- o a -- _ round us,
   ech -- o a -- round us,
   ech -- o a -- round us re -- spon -- sive shall ring!
-  
-  
-  
-  Fa la la la la la la la,
-  Fa la la la la la la la,
-  Fa la la la la la la \set associatedVoice = "altos" la,
-  la __ la \unset associatedVoice la _ la, 
-  \set associatedVoice = "altos"
-  Fa la la la la la,
-  \unset associatedVoice
-  Fa la la la la!
 }
 
 sopWordsII = \lyricmode {
   \set ignoreMelismata = ##t
   \set stanza = \markup{\dynamic"pp " "2."}
+  Fa la la la la la la la,
+  fa la la la la la la la,
+  fa la la la la la la la,
+  fa la la la,
+  fa la la la la la,
+  fa la la la la!
 }
 
 sopWordsIII = \lyricmode {
@@ -117,28 +102,17 @@ sopWordsV = \lyricmode {
 }
 
 altoMusic = \relative c' {
-  \partial 4
-  b8 c |
-  d2. d |
-  e4 c a b2 d8 g |
-  e2. d |
-  d4 d4. d8 d2 g8[ a] |
+  \partial 4 d8 ees |
+  f2. f |
+  d4 d f d2 ees8 f |
+  g2. f |
   
-  b4. c8 b[ a] g4 g2 |
-  e4 a4. g8 fis2 d4 |
-  c4 c e d d b |
+  f4 f4. f8 f2 d8( c) |
+  d4. ees8 d c bes4 bes2 |
   
-  %page2
-  a4 d c b2 b8 c |
-  d2. d |
-  e4 c a b2 d8 g |
-  
-  e2. d |
-  d4 d4. d8 d2 g8 g |
-  g4. g8 g fis g4 d g~ |
-  g e g a2 b4 |
-  g e a fis d g |
-  g g4. fis8 g2 \bar"|."
+  c4 c4. bes8 a2 f'4 |
+  ees4 ees ees8[ d] c4 c d |
+  d4 c4. c8 d2 \bar ":|"
 }
 altoWords = \lyricmode {
 }
@@ -162,24 +136,18 @@ altoWordsVI = \lyricmode {
 }
 tenorMusic = \relative c' {
   \partial 4 
-  g8 a |
-  b2. d |
-  c4 g a g2 a8 g |
-  g2. g |
-  d'4 a4. g8 fis2 g4 |
-  g4. c8 g[ d'] d4 d2 |
-  c4 e g, a2 b4 |
-  c4 g a d a g |
-  a a a g2 g8 a |
-  b2. d |
-  c4 g a g2 a8 g |
+  bes8 bes |
+  bes2. a |
+  bes4 bes a g2 a8 a |
+  bes2. bes |
   
-  g2. g |
-  d'4 a4. g8 fis2 g8 a |
-  b4. c8 b a g4 g2 |
-  c4 a4. g8 fis4~ fis g |
-  c c c a a d |
-  a a4. a8 g2 \bar"|."
+  a4 c4. bes8 a2 a8( a) |
+  a4. a8 a8 a bes4 g2 |
+  
+  \slurSolid
+  g4 g4. g8 a4( f) bes8[ a] |
+  g4 bes c c a bes |
+  f4 f4. f8 f2 \bar":|"
 }
 
 tenorWords = \lyricmode {
@@ -192,29 +160,17 @@ tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  \partial 4
-  g8 g |
-  g2. fis |
-  e4 e d g2 fis8 g |
-  c,2. g' |
-  fis4 d4. e8 fis2 g4 |
-
-  g4. g8 g[ fis] g4 g2 |
-  c,4 a' g d2 g4 |
-  e4 c c d fis g |
+  \partial 4 bes8 bes |
+  bes2.-> f-> |
+  g4 g f g2 f8 f |
+  ees2.-> bes-> |
   
-  %page2
-  d d d g2 g8 g |
-  g2. fis |
-  e4 e d g2 fis8 g |
+  f'4 f4. f8 f2 d8( d) |
+  d4. d8 d8 d g4 g2 |
   
-  c,2. g' |
-  fis4 d4. e8 fis2 g8 a |
-  b4. c8 b a g4 g2 |
-  
-  e4 a4. g8 fis4( d) g |
-  e c c d fis g |
-  d d d g2 \bar"|."
+  c,4 c4. c8 f2 d4 |
+  ees4 ees c f f bes, |
+  f'4 f4. f8 bes,2 \bar ":|"
 }
 bassWords = \lyricmode {
 }

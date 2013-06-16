@@ -167,7 +167,7 @@ tenorMusic = \relative c' {
   c4 g a g2 a8 g |
   g2. g |
   d'4 a4. g8 fis2 g4 |
-  g4. c8 g[ d'] d4 d2 |
+  g4. g8 g[ d'] d4 d2 |
   c4 e g, a2 b4 |
   c4 g a d a g |
   a a a g2 g8 a |
@@ -178,8 +178,8 @@ tenorMusic = \relative c' {
   d'4 a4. g8 fis2 g8 a |
   b4. c8 b a g4 g2 |
   c4 a4. g8 fis4~ fis g |
-  c c c a a d |
-  a a4. a8 g2 \bar"|."
+  c2 c4 a2 d4|
+  a a a g2 \bar"|."
 }
 
 tenorWords = \lyricmode {

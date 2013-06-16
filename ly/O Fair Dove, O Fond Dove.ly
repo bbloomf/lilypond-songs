@@ -149,7 +149,7 @@ sopWords = \lyricmode {
   Me -- thought he said, “In this far land,
   O, is it thus we meet?
   Ah! maid, most dear, I am not here;
-  I have not place, no part,
+  I have no place, no part,
   No dwell -- ing more by sea or shore,
   But on -- ly in thy heart.”
   

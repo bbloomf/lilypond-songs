@@ -5,8 +5,8 @@ var regexTitle = /(?:title = \\markup{\\override #'\(font-name . "Garamond Premi
     regexFileTitle = /(?:\d+-)(.*)(?=\.ly)/,
     regexComment = /\s*%.*$/g,
     regexMapLine = /(\d+):((?:([^;]+);?)+)/,
-    regexPageNum = /(?:first-page-number\s+=\s+#)(\d+)',
-    regexRaggedLast = /(?:ragged-last-bottom\s+=\s+##)(t)';
+    regexPageNum = /(?:first-page-number\s+=\s+#)(\d+)/,
+    regexRaggedLast = /(?:ragged-last-bottom\s+=\s+##)(t)/;
 
 function getBlock(haystack, index) {
     var open = 0,
@@ -89,7 +89,7 @@ for(j in map) {
             while( (pos = current.indexOf('\\score',pos)) >= 0) {
                 scoreBlock = getBlock(current,pos);
                 if(scoreBlock.indexOf('\\layout') < 0) {
-                    current = current.slice(0,pos) + current.slice(pos + $scoreBlock.length);
+                    current = current.slice(0,pos) + current.slice(pos + scoreBlock.length);
                 } else {
                     pos += scoreBlock.length;
                     numScoreBlocks++;
@@ -128,7 +128,7 @@ for(j in map) {
             } else {
                 //Add line: print-all-headers = ##t
                 //Add line: ragged-right = ##f
-                pos = current.IndexOf('\\paper');
+                pos = current.indexOf('\\paper');
                 if(pos < 0) {
                     console.error("\\paper block not found...EXITING");
                     return;

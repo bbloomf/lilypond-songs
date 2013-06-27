@@ -88,7 +88,7 @@ sopWords = \lyricmode {
   Swing, swing to -- geth -- er, __
   \set ignoreMelismata = ##t
   With your bod -- ies be -- tween your knees; __ _
-  Sing, swing to -- geth -- er, __ _
+  Swing, swing to -- geth -- er, __ _
   With your bod -- ies be -- tween your knees. __ _
 }
 

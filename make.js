@@ -38,16 +38,16 @@ allFiles = temp;
 var pages = '';
 //TODO: del mapped\* -Recurse;
 var toc = fs.readFileSync('ly/!Contents.ly','utf8');
-var contents = fs.readFileSync('ly/Contents/!Contents.ly','utf8');
+var contents = fs.readFileSync('ly/Contents/!contents.ly','utf8');
 if(toc.indexOf('%CONTENTS%') >= 0) {
   toc = toc.replace('%CONTENTS%',contents);
 } else {
   toc += contents;
 }
 fs.writeFile('ly/mapped/0.ly',toc);
-for(j in map) {
+for(var j in map) {
     var file = map[j].trim().replace(regexComment,'');
-    if(file.length == 0) {
+    if(file.length === 0) {
         continue;
     }
     var m = regexMapLine.exec(file);
@@ -87,7 +87,7 @@ for(j in map) {
             pos = 0;
             //remove score blocks that do not contain \layout block
             while( (pos = current.indexOf('\\score',pos)) >= 0) {
-                scoreBlock = getBlock(current,pos);
+                var scoreBlock = getBlock(current,pos);
                 if(scoreBlock.indexOf('\\layout') < 0) {
                     current = current.slice(0,pos) + current.slice(pos + scoreBlock.length);
                 } else {
@@ -108,7 +108,7 @@ for(j in map) {
                 if(pos >= 0) {
                     var headerBlock = getBlock(current,pos);
                     var replaceHeaderBlock = '\\header{ tagline = ""}';
-                    if(i != 0) {
+                    if(i !== 0) {
                         replaceHeaderBlock = '';
                     }
                     current = current.slice(0,pos) +
@@ -119,7 +119,7 @@ for(j in map) {
                 }
             }
 
-            if(i != 0) {
+            if(i !== 0) {
                 //remove beginning part of file
                 pos = current.indexOf('global = {');
                 if(pos >= 0) {
@@ -147,7 +147,7 @@ for(j in map) {
             
             result += current;
             ++i;
-            if(files != null) {
+            if(files !== null) {
                 if(i >= files.length) {
                     break;
                 }

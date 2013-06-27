@@ -44,7 +44,7 @@
 \markup\fill-line \center-align {\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #32 \smallCapsOldStyle"Contents"}}
 \markup\vspace #2
 
-\markup{{\override #'(line-width . 41.3) \column{
+\markup{{\override #'(line-width . 41.3) \override #'(word-space . 0) \column{
 {\page-link #143 {\fill-with-pattern #0.1 #RIGHT . "Abide with me" \smallCapsOldStyle 139}}
 {\page-link #109 {\fill-with-pattern #0.1 #RIGHT . "America" \smallCapsOldStyle 105}}
 {\page-link #58 {\fill-with-pattern #0.1 #RIGHT . "America the Beautiful" \smallCapsOldStyle 54}}
@@ -82,7 +82,7 @@
 {\page-link #42 {\fill-with-pattern #0.1 #RIGHT . "Ein Prosit" \smallCapsOldStyle 38}}
 {\page-link #94 {\fill-with-pattern #0.1 #RIGHT . "Fairy Belle" \smallCapsOldStyle 90}}
 }
-\hspace #0.01 \path #0.1 #'((moveto 0 1.4) (lineto 0 -105.1)) \hspace #0.01 \override #'(line-width . 41.3) \column {
+\hspace #0.01 \path #0.1 #'((moveto 0 1.4) (lineto 0 -105.1)) \hspace #0.01 \override #'(line-width . 41.3) \override #'(word-space . 0) \column {
 {\page-link #29 {\fill-with-pattern #0.1 #RIGHT . "The Flight of Love" \smallCapsOldStyle 25}}
 {\page-link #117 {\fill-with-pattern #0.1 #RIGHT . "The Flowers that Bloom in the Spring" \smallCapsOldStyle 113}}
 {\page-link #37 {\fill-with-pattern #0.1 #RIGHT . "Flow Gently, Sweet Afton" \smallCapsOldStyle 33}}
@@ -120,7 +120,7 @@
 {\page-link #114 {\fill-with-pattern #0.1 #RIGHT . "Johnny Sands" \smallCapsOldStyle 110}}
 {\page-link #32 {\fill-with-pattern #0.1 #RIGHT . "Killarney" \smallCapsOldStyle 28}}
 }}}
-\markup{{\override #'(line-width . 41.3) \column{
+\markup{{\override #'(line-width . 41.3) \override #'(word-space . 0) \column{
 {\page-link #118 {\fill-with-pattern #0.1 #RIGHT . "La ci darem la mano" \smallCapsOldStyle 114}}
 {\page-link #140 {\fill-with-pattern #0.1 #RIGHT . "Lead Kindly Light" \smallCapsOldStyle 136}}
 {\page-link #11 {\fill-with-pattern #0.1 #RIGHT . "Let Us Sing (The Waits)" \smallCapsOldStyle 7}}
@@ -157,7 +157,7 @@
 {\page-link #70 {\fill-with-pattern #0.1 #RIGHT . "The Old Musician and His Harp" \smallCapsOldStyle 66}}
 {\page-link #59 {\fill-with-pattern #0.1 #RIGHT . "The Old Time" \smallCapsOldStyle 55}}
 }
-\hspace #0.01 \path #0.1 #'((moveto 0 1.4) (lineto 0 -102.1)) \hspace #0.01 \override #'(line-width . 41.3) \column {
+\hspace #0.01 \path #0.1 #'((moveto 0 1.4) (lineto 0 -102.1)) \hspace #0.01 \override #'(line-width . 41.3) \override #'(word-space . 0) \column {
 {\page-link #64 {\fill-with-pattern #0.1 #RIGHT . "On the Banks of the Wabash, Far Away" \smallCapsOldStyle 60}}
 {\page-link #41 {\fill-with-pattern #0.1 #RIGHT . "O Sole Mio" \smallCapsOldStyle 37}}
 {\page-link #8 {\fill-with-pattern #0.1 #RIGHT . "Praise of Spring" \smallCapsOldStyle 4}}

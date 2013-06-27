@@ -344,4 +344,3 @@ pianoLH = \relative c' {
 }}
 
 
-

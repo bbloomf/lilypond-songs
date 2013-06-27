@@ -485,4 +485,3 @@ pianoLH = \relative c' {
   composer = \markup\oldStyleNum"Arthur Sullivan (1842–1900)"
   tagline = ""
 }}
-

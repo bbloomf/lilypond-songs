@@ -763,4 +763,3 @@ pianoLH = \relative c' {
   tagline = ""
 }}
 
-

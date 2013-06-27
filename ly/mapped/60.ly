@@ -577,4 +577,3 @@ pianoLH = \relative c' {
   composer = \markup\oldStyleNum"Theodore August Metz, 1896"
   tagline = ""
 }}
-

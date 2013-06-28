@@ -44,7 +44,7 @@ if(toc.indexOf('%CONTENTS%') >= 0) {
 } else {
   toc += contents;
 }
-fs.writeFile('ly/mapped/0.ly',toc);
+fs.writeFileSync('ly/mapped/0.ly',toc);
 for(var j in map) {
     var file = map[j].trim().replace(regexComment,'');
     if(file.length === 0) {
@@ -164,7 +164,7 @@ for(var j in map) {
             if(index>=0) allFiles.splice(index);
             current = fs.readFileSync('ly/' + file,'utf8');
         }
-        fs.writeFile('ly/mapped/' + page + '.ly',result);
+        fs.writeFileSync('ly/mapped/' + page + '.ly',result);
         //&'C:\Program Files (x86)\lilypond\usr\bin\lilypond.exe' -dno-point-and-click --ps -o"tmp/$page" "mapped\$page.ly"
     }
 }
@@ -214,7 +214,7 @@ function processLy(lyFile,callback) {
             console.error(stderr);
             console.info(stdout);
         } else {
-            fs.writeFile(lyName,lyContent);
+            fs.writeFileSync(lyName,lyContent);
         }
         
         if(typeof(callback)=='function'){

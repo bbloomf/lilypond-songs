@@ -54,10 +54,10 @@ global = {
 sopMusic = \relative c' {
 	g'4\p g8 g bes4. bes8 |
   ees,2. b'4\rest |
-  g4\p g8. g16 g4\cresc g8.~ g16 |
+  g4\p g8. g16 g8.~ g16 \cresc g8.~ g16 |
   
   g4\f a8. b16 c4( c,) |
-  bes'4\p bes8. bes16 bes4\cresc bes8. bes16 |
+  bes'4\p bes8. bes16 bes8.~ bes16 \cresc bes8.~ bes16 |
   bes4\f( c8.) d16 ees4( ees,8)~ ees |
   
   g4\p~ g8. g16 aes4\cresc~ aes8. aes16 |
@@ -69,9 +69,9 @@ sopWords = \lyricmode {
   \set stanza = #"1. "
   \set ignoreMelismata = ##t
 	Fa -- ther! I bend to Thee,
-  Life, it was Thy gift, __ _
+  Life, it was Thy __ _ gift, __ _
   Thou now canst shield it,
-  From Thee it came, and to Thee __ _ I yield it,
+  From Thee it came, _ and to Thee __ _ I yield it,
   In life __ _ or death _ for -- sake not me,
   Fa -- ther, I bend to Thee!
 }
@@ -80,9 +80,9 @@ sopWordsII = \lyricmode {
   \set stanza = #"2. "
   \set ignoreMelismata = ##t
   Fa -- ther! I trust to Thee,
-  When midst the bat -- tle’s strife,
+  When midst the bat -- tle’s strife, __ _
   Death did sur -- round me,
-  E’en at the can -- non’s mouth,
+  E’en at the can -- non’s mouth, _
   Death has not found me. _
   Fa -- ther, ’twas Thy will! I trust in Thee.
   Fa -- ther, still guide Thou me!
@@ -92,9 +92,9 @@ sopWordsIII = \lyricmode {
   \set stanza = #"3. "
   \set ignoreMelismata = ##t
   All I give back to Thee!
-  When at Thy call, I my
+  When at Thy call, __ _ I my
   Life then shall yield, __ _
-  When in the cold tomb, my fate shall be seal’d, __ _ _
+  When in the cold __ _ tomb, my fate shall be seal’d, __ _ _
   Fa -- ther, my soul __ _ take un -- to Thee!
   Fa -- ther, for -- sake not me!
 }
@@ -110,10 +110,10 @@ sopWordsV = \lyricmode {
 altoMusic = \relative c' {
   ees4 ees8 ees d4. d8 |
   ees2. s4 |
-  d4 d8. d16 ees4 ees8.~ ees16 |
+  d4 d8. d16 ees8.~ ees16 ees8.~ ees16 |
   
   f4 f8. f16 ees4( c) |
-  f4 f8. f16 g4 g8. g16 |
+  f4 f8. f16 g8.~ g16 g8.~ g16 |
   aes4~ aes8. aes16 g4( ees8)~ ees |
   
   ees4~ ees8. ees16 ees4~ ees8. ees16 |
@@ -144,10 +144,10 @@ altoWordsVI = \lyricmode {
 tenorMusic = \relative c' {
   bes4 bes8 bes aes4. aes8 |
   g2. s4 |
-  b4 b8. b16 c4 c8.~ c16 |
+  b4 b8. b16 c8.~ c16 c8.~ c16 |
   
   d4 d8. d16 c4~ c |
-  d4 d8. d16 ees4 ees8. ees16 |
+  d4 d8. d16 ees8.~ ees16 ees8.~ ees16 |
   f4~ f8. f16 ees4~ ees8~ ees |
   
   bes4~ bes8. bes16 aes4~ aes8. aes16 |
@@ -168,10 +168,10 @@ tenorWordsIII = \lyricmode {
 bassMusic = \relative c' {
   ees,4 ees8 ees bes4. bes8 |
   c2. d4\rest |
-  g4 g8. g16 g4 g8.~ g16 |
+  g4 g8. g16 g8.~ g16 g8.~ g16 |
   
   g,4 g8. g16 c4~ c |
-  bes'4 bes8. bes16 bes4 bes8. bes16 |
+  bes'4 bes8. bes16 bes8.~ bes16 bes8.~ bes16 |
   bes,4~ bes8. bes16 ees4~ ees8~ ees |
   
   des4~ des8. des16 c4~ c8. c16 |

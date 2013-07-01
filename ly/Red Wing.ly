@@ -141,7 +141,49 @@ sopWordsV = \lyricmode {
 }
 
 altoMusic = \relative c' {
+  \partial 8
+  bes8 |
+  bes ees16 bes ees8 ees |
+  des4. ees8 |
+  c8 c16 ees c8 ees |
+  ees4. ees8 |
   
+  f f16[ ees] d8 f |
+  ees ees16[ bes] c8 ees |
+  c c bes c |
+  d16 ees bes bes bes8 aes
+  
+  
+  bes ees16[ bes] ees8 ees |
+  des4. ees8 |
+  c8 c16[ ees] c8 ees |
+  ees4. ees8 |
+  
+  f f16[ ees] d8 f |
+  ees ees16[ bes] c8 ees |
+  c c bes bes |
+  bes s \bar"||"
+  
+  %Chorus
+  ees f |
+  ees4 ees8. ees16 |
+  ees8 ees d ees |
+  ees4 ees~ |
+  ees8 ees ees ees |
+  
+  d4 aes~ |
+  aes8 d d d |
+  ees4 bes~ |
+  bes ees8 f |
+  
+  ees4 ees8. ees16 |
+  ees8 ees d ees |
+  ees4 ees~ |
+  ees8 ees ees ees |
+  d4 aes~ |
+  aes8 d d d |
+  bes2~ |
+  bes8 s4 \bar"|."
 }
 altoWords = \lyricmode {
 }
@@ -166,7 +208,47 @@ altoWordsVI = \lyricmode {
 tenorMusic = \relative c' {
   \partial 8 bes8 |
   g bes16 bes g8 bes |
-  g4.
+  g4. g8 |
+  ees8 ees16 aes aes8 aes |
+  g4. bes8 |
+  
+  bes8 bes16[ ees,] bes'8 bes |
+  bes8 bes16[ bes] g8 c |
+  a8 a a a |
+  bes16 bes bes f d8 d
+  
+  
+  g bes16[ bes] g8 bes |
+  g4. g8 |
+  ees8 ees16[ aes] aes8 aes |
+  g4. bes8 |
+  
+  bes8 bes16[ ees,] bes'8 bes |
+  bes8 bes16[ bes] g8 c |
+  a8 a bes aes |
+  g s \bar "||"
+  
+  %Chorus
+  g bes |
+  aes4 aes8. aes16 |
+  aes8 c bes aes |
+  g4 bes~ |
+  bes8 g g g |
+  
+  aes4 d,~ |
+  d8 aes' aes aes |
+  g4 ees~ |
+  ees g8 bes |
+  
+  aes4 aes8. aes16 |
+  aes8 c bes aes |
+  g4 bes~ |
+  bes8 g g g |
+  
+  aes4 d,~ |
+  d8 c' bes aes |
+  g2~ |
+  g8 s4 \bar"|."
 }
 
 tenorWords = \lyricmode {
@@ -186,11 +268,11 @@ bassMusic = \relative c' {
   aes,8 aes16 aes aes8 c |
   ees4. ees8 |
   
-  d8 d16[ c] bes8 d |
-  ees ees16[ d] ees8 ees |
+  d8 d16[ bes] bes8 d |
+  ees ees16[ d] c8 c |
   f f f f |
   
-  f16 ees d d ees8 ees |
+  f16 ees d bes bes8 bes |
   ees8 g16 f ees8 ees |
   
   ees4. ees8 |
@@ -203,8 +285,8 @@ bassMusic = \relative c' {
   ees8 d\rest \bar"||"
   
   %Chorus
-  ees8 ees |
-  aes,4 aes8. aes16 |
+  ees8 bes |
+  aes4 aes8. aes16 |
   aes8 aes bes c |
   ees4 <ees ees,>4~ |
   q8 ees ees ees |
@@ -212,9 +294,9 @@ bassMusic = \relative c' {
   f4 bes,~ |
   bes8 f' f f |
   ees4 ees~ |
-  ees ees8 ees |
+  ees ees8 bes |
   
-  aes,4 aes8. aes16 |
+  aes4 aes8. aes16 |
   aes8 aes bes c |
   ees4 <ees ees,>~ |
   q8 ees ees ees |

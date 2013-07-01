@@ -15,7 +15,7 @@
   system-system-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)
-       (padding . 1)
+       (padding . -1)
        (stretchability . 100))
   ragged-last-bottom = ##t
   ragged-bottom = ##f
@@ -110,7 +110,7 @@ sopWords = \lyricmode {
   
   She loved a __ _ war -- rior bold,
   this shy lit -- tle maid of old,
-  But brave and __ _ gay, he rode one _ day to bat -- tle far __ _ a -- way.
+  But brave and __ _ gay, he rode one __ _ day to bat -- tle far __ _ a -- way.
   
   Now, the moon shines to -- night on pret -- ty Red Wing, __ _
   The breeze is sigh -- ing, __ _ the night bird’s cry -- ing, __ _
@@ -128,7 +128,7 @@ sopWordsII = \lyricmode {
   
   But when all the braves re -- turned,
   the heart of __ _ Red Wing yearned,
-  For far, far a -- way, her war -- rior _ gay, fell brave -- ly in __ _ the fray.
+  For far, far a -- way, her war -- rior __ _ gay, fell brave -- ly in __ _ the fray.
 }
 
 sopWordsIII = \lyricmode {
@@ -337,7 +337,7 @@ pianoLH = \relative c' {
 %    \new PianoStaff << \new Staff { \new Voice { \pianoRH } } \new Staff { \clef "bass" \pianoLH } >>
   >>
   \midi {
-    \tempo 4 = 90
+    \tempo 4 = 80
     \set Staff.midiInstrument = "flute"
     \context {
       \Voice

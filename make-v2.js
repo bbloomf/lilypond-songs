@@ -191,8 +191,7 @@ function processLy(lyFile,callback,makePdf) {
     var psName = outputName + '.ps',
         lyContent = fs.readFileSync(lyFile,'utf8'),
         doCallback = function(error,stdout,stderr,startedWorker){
-            if(makePdf && !fs.existsSync('gh-pages/downloads/' + pdfName)) {
-                console.info('File not existing: ' + 'gh-pages/downloads/' + pdfName);
+            if(makePdf && (startedWorker || !fs.existsSync('gh-pages/downloads/' + pdfName))) {
                 ps2pdf(psName,8.5,11,outputName +'.pdf',function(error,stdout,stderr){
                    if(typeof(callback)=='function') {
                        callback(error,stdout,stderr,psName,true);
@@ -277,8 +276,8 @@ var dir = 'ly/mapped/',
             var downloadDir = 'gh-pages/downloads/',
                 fullMidi = psName.replace(/\.ps$/,'.midi'),
                 fullPdf = psName.replace(/\.ps$/,'.pdf'),
-                midi = fullMidi.replace(/$.*\/(?=[^\/]+)/,downloadDir),
-                pdf = fullPdf.replace(/$.*\/(?=[^\/]+)/,downloadDir);
+                midi = fullMidi.replace(/^.*\/(?=[^\/]+)/,downloadDir),
+                pdf = fullPdf.replace(/^.*\/(?=[^\/]+)/,downloadDir);
             if(fs.existsSync(fullMidi)) {
                 console.info(fullMidi + ' exists; moving to ' + midi);
                 fs.renameSync(fullMidi,midi);

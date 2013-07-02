@@ -2,7 +2,7 @@
 \include "util.ly"
 \header {
   title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Maid of Athens"}}
-  composer = \markup\oldStyleNum"Lord Byron (1788–1824)"
+  poet = \markup\oldStyleNum"Lord Byron (1788–1824)"
   composer = \markup\oldStyleNum"Henry Robinson Allen (1809–1876)"
   tagline = ""
 }
@@ -97,12 +97,12 @@ sopWords = \lyricmode {
   Keep it now, and take the rest!
   
   Hear my vow be -- fore I go,
-  Hear my vow be -- fore I go,
+  Hear my vow be -- fore __ I go,
   
   
-  My life, I love thee,
+  My life, __ I love thee,
   My dear -- est life, I love thee.
-  Hear my vow, be -- fore I go.
+  Hear my vow, be -- fore I go. __
   My life, I love but thee.
 }
 
@@ -114,15 +114,33 @@ sopWordsII = \lyricmode {
   Kiss thy soft cheeks’ bloom -- ing tinge,
   
   By those wild eyes like the roe,
-  By those wild eyes like the roe,
+  By those wild eyes like __ the roe,
   
-  My life, I love thee,
+  My life, __ I love thee,
   My dear -- est life, I love thee.
-  Hear my vow, be -- fore I go.
+  By those wild eyes like the roe, __
   My life, I love but thee.
 }
 
 sopWordsIII = \lyricmode {
+%{  \set stanza = #"3. "
+  By that lip I long to taste;
+  By that \once \override LyricHyphen #'minimum-distance = #0.7 zone -- en -- cir -- cled waist;
+  By all the to -- \once \override LyricHyphen #'minimum-distance = #0.7 ken -- flow’rs that tell
+  What words can nev -- er speak so well;
+  
+  By love’s al -- ter -- nate joy and woe,
+  By love’s al -- ter -- nate joy and woe,
+  
+  I vow, I love thee,
+  I vow, dear girl, I love thee.
+  By love’s al -- ter -- nate joy and woe,
+  I vow, I love but thee.
+%  Ζωή μου, σᾶς ἀγαπῶ.
+%}
+}
+
+sopWordsIV = \lyricmode {
   \set stanza = #"3. "
   Maid of Ath -- ens, I am gone,
   Think of me, sweet, when a -- lone,
@@ -130,17 +148,13 @@ sopWordsIII = \lyricmode {
   Ath -- ens holds my heart and soul.
   
   Can I cease to love thee? No!
-  Can I cease to love thee? No!
+  Can I cease to love __ thee? No!
   
   
-  My life, I love thee,
+  My life, __ I love thee,
   My dear -- est life, I love thee!
-  Can I cease to love thee? No!
+  Can I cease to love thee? No! __
   My life, I love but thee.
-}
-
-sopWordsIV = \lyricmode {
-  \set stanza = #"4. "
 }
 
 sopWordsV = \lyricmode {

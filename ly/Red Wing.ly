@@ -1,4 +1,4 @@
-﻿\version "2.14.2"
+\version "2.14.2"
 \include "util.ly"
 \header {
   title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Red Wing"}}
@@ -15,7 +15,7 @@
   system-system-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)
-       (padding . -1)
+       (padding . 0)
        (stretchability . 100))
   score-markup-spacing =
     #'((basic-distance . 0)

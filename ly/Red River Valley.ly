@@ -17,7 +17,7 @@
        (minimum-distance . 0)
        (padding . 0)
        (stretchability . 100))
-  ragged-last-bottom = ##f
+  ragged-last-bottom = ##t
   ragged-bottom = ##f
   two-sided = ##t
   inner-margin = 1\in

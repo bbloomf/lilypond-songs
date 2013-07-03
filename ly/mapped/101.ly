@@ -12,7 +12,7 @@
   system-system-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)
-       (padding . 2)
+       (padding . 1)
        (stretchability . 100))
   ragged-last-bottom = ##f
   ragged-bottom = ##f
@@ -21,7 +21,7 @@
   outer-margin = 0.75\in
   top-margin = 0.26\in
   bottom-margin = 0.25\in
-  first-page-number = #39
+  first-page-number = #101
   print-first-page-number = ##t
   headerLine = ""
   oddHeaderMarkup = \markup\fill-line{
@@ -42,7 +42,7 @@
 }
 #(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
 global = {
-  \key aes \major
+  \key g \major
   \time 3/4
   \dynamicUp
   %\set crescendoSpanner = #'dashed-line
@@ -52,72 +52,51 @@ global = {
 }
 
 sopMusic = \relative c' {
-	\partial 4
-  \repeat unfold 2 {
-    ees4 |
-    aes c ees8[ des] |
-    
-    c4 aes aes |
-    bes des8[ c] bes[ aes] |
-    g4 ees ees |
-    aes4 c8[ bes] aes[ g] |
-    f4 des f |
-    
-    ees4 aes g |
-    %\partial 2
-    aes2
-  }
-  %\partial 4
-  c8[ des] |
-  ees4 c8[ des] ees[ f] |
-  ees4 des c |
-  des bes8[ c] des[ ees] |
-  des4 c bes |
+	g'4\p\< g g |
+  b4.\! a8\> g4 |
+  b\! b\< b |
+  d4.\! c8\> b4 |
+  d\!\f c\dim b\! |
   
-  c4 aes8[ bes] c[ des] |
-  c4 bes aes |
-  g ees' d |
-  ees4 b\rest ees, |
-  aes c ees8[ des] |
-  c4 aes aes |
-  bes4 des8[ c] bes[ aes] |
-  g4 ees ees |
-  aes c8[ bes] aes[ g] |
-  f4 des f |
-  ees aes g |
-  aes2 \bar"|."
+  a2 b4\rest |
+  a2\p g8 fis |
+  g4 a b |
+  c2\cresc b8\! a |
+  b4 c d |
+  \times 2/3 { e8[^\markup{\dynamic f \italic"rit. e dim."} d c] } b4 a |
+  g2\fermata b4\rest \bar "|."
 }
 sopWords = \lyricmode {
   \set stanza = #"1. "
-	The ash grove, how grace -- ful, how plain -- ly ’tis speak -- ing,
-  The wind through it play -- ing has lan -- guage for me;
+	If I a bird -- ling were,
+  And with two wings could fly,
+  I’d fly to thee;
   
-  When o -- ver its branch -- es the sun -- light is break -- ing,
-  A host of kind fac -- es is gaz -- ing on me;
-  
-  The friends of my child -- hood a -- gain are be -- fore me,
-  Fond mem -- o -- ries wak -- en, as free -- ly I roam;
-  With soft whis -- pers lad -- en its leaves rus -- tle o’er me,
-  The ash grove, the ash grove that shel -- tered my home.
+  But, as no wings are mine,
+  But, as no wings are mine,
+  That can -- not be.
 }
 
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
-  My laugh -- ter is o -- ver, my step los -- es light -- ness,
-  Old coun -- try -- side mea -- sures steal soft on my ear;
+  Though far a -- way from thee,
+  Dream -- ing I’m e’er with thee,
+  Whis -- p’ring to thee;
   
-  I on -- ly re -- mem -- ber the past and its bright -- ness,
-  The dear ones I mourn for a -- gain gath -- er here.
-  
-  From out of the shad -- ows their lov -- ing looks greet me,
-  And wist -- ful -- ly search -- ing the leaf -- y green dome,
-  I find oth -- er fac -- es fond bend -- ing to greet me,
-  The ash grove, the ash grove a -- lone is my home.
+  But, when I wake at last,
+  But, when I wake at last,
+  Then I’m a -- lone.
 }
 
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
+  There is no hour at night
+  When thy dear im -- age bright
+  Strays from my heart.
   
+  Thou’st said ten thou -- sand times,
+  Thou’st said ten thou -- sand times,
+  That mine thou art.
 }
 
 sopWordsIV = \lyricmode {
@@ -129,37 +108,19 @@ sopWordsV = \lyricmode {
 }
 
 altoMusic = \relative c' {
-  \repeat unfold 2 {
-    ees4 |
-    c ees ees |
-    
-    ees ees f |
-    f f f |
-    ees ees ees |
-    ees ees ees |
-    des des des |
-    c c ees8[ des] |
-    c2 |
-  }
-  aes'8[ bes] |
-  c4 aes aes |
-  aes aes aes |
-  f ees ees |
-  ees ees ees |
+  d4 d d |
+  g4. fis8 g4 |
+  g g g |
+  b4. a8 g4 |
+  g fis g |
   
-  ees f f |
-  f f f |
-  g g f |
-  g s ees |
-  c ees ees |
-  ees ees f |
-  
-  f f f |
-  ees ees ees |
-  ees ees ees |
-  des des des |
-  c c ees8[ des] |
-  c2 \bar"|."
+  fis2 s4 |
+  d2 d8 d |
+  d4 fis g |
+  g2 g8 g |
+  g4 g g |
+  a g fis |
+  d2 s4 \bar "|."
 }
 altoWords = \lyricmode {
 }
@@ -182,6 +143,19 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
+  b4 b b |
+  d4. c8 b4 |
+  d d d |
+  d4. d8 d4 |
+  d d d |
+  
+  d2 s4 |
+  c2 b8 a |
+  g4 d' d |
+  e2 d8 c |
+  d4 d d |
+  e d c |
+  b2 s4 \bar"|."
 }
 
 tenorWords = \lyricmode {
@@ -194,49 +168,21 @@ tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  \repeat unfold 2 {
-    ees,4 |
-    aes aes g |
-    
-    aes c f, |
-    des f des |
-    ees g ees'8[ des] |
-    c[ bes] aes4 c |
-    des des des, |
-    
-    ees ees ees |
-    aes2
-  }
-  r4 |
-  r aes8[ bes] c[ des] |
-  c4 bes aes |
-  bes g8[ aes] bes[ c] |
-  bes4 aes g |
+  g4 g g |
+  g4. g8 g4 |
+  g g g |
+  g4. g8 g4 |
+  b4 a g |
   
-  aes f8[ g] aes[ bes] |
-  aes4 g f |
-  ees ees bes' |
-  ees, ees'8[ des c bes] |
-  aes4 aes g |
-  aes c f, |
-  
-  des f des |
-  ees g ees'8[ des] |
-  c[ bes] aes4 c |
-  des des des, |
-  ees ees ees |
-  aes2 \bar"|."
+  d2 d4\rest |
+  d2 d8 c |
+  b4 a g |
+  g'2 g8 g |
+  g4 a b |
+  c4 d d, |
+  g2\fermata d4\rest \bar"|."
 }
 bassWords = \lyricmode {
-  \repeat unfold 23 \skip1
-  \repeat unfold 23 \skip1
-  Friends of __
-}
-bassWordsII = \lyricmode {
-  \repeat unfold 23 \skip1
-  \repeat unfold 23 \skip1
-  \set ignoreMelismata = ##t
-  Out _ of the
 }
 
 pianoRH = \relative c' {
@@ -258,10 +204,12 @@ pianoLH = \relative c' {
     \new Lyrics = "altosV"  \lyricsto "sopranos" \sopWordsV
    \new Staff = men <<
       \clef bass
-      \new Voice = "basses" { << \global \bassMusic >> }
+      \new Voice = "tenors" { \voiceOne << \global \tenorMusic >> }
+      \new Voice = "basses" { \voiceTwo << \global \bassMusic >> }
     >>
-    \new Lyrics \lyricsto "basses" \bassWords
-    \new Lyrics \lyricsto "basses" \bassWordsII
+    \new Lyrics \with { alignAboveContext = #"tenors" } \lyricsto "tenors" \tenorWordsIII
+    \new Lyrics \with { alignAboveContext = #"tenors" } \lyricsto "tenors" \tenorWordsII
+    \new Lyrics \with { alignAboveContext = #"tenors" } \lyricsto "tenors" \tenorWords
   >>
 %    \new PianoStaff << \new Staff { \new Voice { \pianoRH } } \new Staff { \clef "bass" \pianoLH } >>
   >>
@@ -290,9 +238,8 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"The Ash Grove"}}
-  composer = \markup\oldStyleNum{"Welsh Folk Song," \italic"Llwyn Onn"}
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"The Pretty Girl Milking Her Cow"}}
+  subtitle = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #12.5 \smallCapsOldStyle"Cailin Deas Crúite na mBó"}}
+  composer = \markup\oldStyleNum"Folk Song"
   tagline = ""
 }}
-
-

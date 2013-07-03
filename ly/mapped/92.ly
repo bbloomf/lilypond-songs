@@ -43,106 +43,115 @@
 #(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
 global = {
   \key ees \major
-  \time 4/4
+  \time 2/4
   \dynamicUp
   %\set crescendoSpanner = #'dashed-line
   %\set midiInstrument = "recorder"
   \autoBeamOff
   \override DynamicTextSpanner #'style = #'none
-  \tieDashed
-  
 }
 
 sopMusic = \relative c' {
-	\partial 4
-  ees8 f |
-  g4 g8 g g bes4 g8 |
-  f ees ees f g4 c8. bes16 |
-  bes4 g8~ g g ees f8. f16 |
+	ees8. ees16 ees8 ees |
+  g ees g16 bes8. |
+  c ees16 bes8 g |
+  f8. ees16 c ees8. |
   
-  ees2 b'4\rest ees,8 f |
-  g4 g8 g g bes4 g8 |
-  f ees ees f g4 c\fermata |
-  bes g g8 ees8 f8. f16 |
-  ees2 b'4\rest \bar"||"\break
+  ees8. ees16 ees8 ees |
+  g ees g16 bes8. |
+  c8 ees bes8. g16 |
+  f8. ees16 ees4 |
   
-  g8 aes |
-  bes4 bes8\rest bes bes4 a8 bes |
-  c2 bes4 bes\rest |
-  ees bes c bes |
-  g8 g f ees f4\fermata ees8 f |
+  bes'8 c ees bes |
+  c8. bes16 g bes8. |
+  c bes16 bes8 g |
+  f ees c16 ees8. |
   
-  g4 g8 g g bes4 g8 |
-  f ees ees f g4 c\fermata |
-  bes g g8 ees f8. f16 |
-  ees2 b'4\rest \bar"|."
+  ees ees16 ees8 ees |
+  g ees g16 bes8. |
+  c16 ees8.\fermata \acciaccatura c16 bes8.\fermata g16 |
+  f8. ees16 ees4\fermata \bar"|."
 }
 sopWords = \lyricmode {
   \set stanza = #"1. "
-	Let us pause in life’s plea -- sures and count its ma -- ny tears
-  While we all sup __ sor -- row with the poor;
-  There’s a song that will lin -- ger for -- ev -- er in our ears;
-  Oh! Hard Times, come a -- gain no more.
-  
-  ’Tis the song, the sigh of the wea -- ry;
-  Hard Times, Hard Times, come a -- gain no more:
-  Ma -- ny days you have lin -- gered a -- round my cab -- in door,
-  Oh! Hard Times, come a -- gain no more.
+	Ere the twi -- light bat was flit -- ting,
+  In the sun -- set, at her knit -- ting,
+  Sang a lone -- ly maid -- en, sit -- ting
+  Un -- der -- neath her thes -- hold tree;
+  And, ere day -- light died be -- fore us,
+  And the ves -- per stars shone o’er us,
+  Fit -- ful rose her ten -- der cho -- rus,
+  “Ja -- mie’s on the storm -- y sea!”
 }
 
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
-  While we seek mirth and beau -- ty and mu -- sic light and gay
-  There are frail forms __ faint -- ing at the door:
-  Though their voic -- es are si -- lent, their plead -- ing looks will say:
-  Oh! Hard Times, come a -- gain no more.
+  Warm -- ly shone the sun -- set glow -- ing;
+  Sweet -- ly breathed the young flow’rs blow -- ing;
+  Earth with beau -- ty o -- ver -- flow -- ing,
+  Seemed the home of love to be.
+  As those an -- gel tones as -- cend -- ing,
+  With the scene and sea -- son blend -- ing,
+  Ev -- er had the same low end -- ing,
+  “Ja -- mie’s on the storm -- y sea!”
 }
 
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
-  \set ignoreMelismata = ##t
-  There’s a pale droop -- ing maid -- en who toils her life a -- way,
-  With a worn heart whose bet -- ter days are o’er;
-  Though her voice would be mer -- ry, ’tis sigh -- ing all the day:
-  Oh! Hard Times, come a -- gain no more.
+  Cur -- few bells re -- mote -- ly ring -- ing
+  Min -- gled with that sweet voice sing -- ing,
+  And the last red ray seemed cling -- ing,
+  Lin -- g’ring -- ly to tower and tree;
+  Near -- er as I came, and near -- er,
+  Fin -- er rose the notes and clear -- er!
+  Oh! ’twas heav’n it -- self to hear her,
+  “Ja -- mie’s on the storm -- y sea!”
 }
 
 sopWordsIV = \lyricmode {
   \set stanza = #"4. "
-  \set ignoreMelismata = ##t
-  ’Tis a sigh that is waft -- ed a -- cross the trou -- bled wave,
-  ’Tis a wail that is heard up -- on the shore,
-  ’Tis a dirge that is mur -- mured a -- round the low -- ly grave:
-  Oh! Hard Times, come a -- gain no more.
+  “Blow ye west winds! bland -- ly hov -- er
+  O’er the bark that bears my lov -- er;
+  Gent -- ly blow, and bear him o -- ver
+  To his own dear home and me;
+  For, when night winds bend the wil -- low,
+  Sleep for -- sakes my lone -- ly pil -- low,
+  Think -- ing of the foam -- ing bil -- low,
+  “Ja -- mie’s on the storm -- y sea!”
 }
 
 sopWordsV = \lyricmode {
   \set stanza = #"5. "
+  How could I but list, but lin -- ger,
+  To the song, and near the sing -- er,
+  Sweet -- ly woo -- ing heav’n to bring her
+  Ja -- mie from the storm -- y sea;
+  And while yet her lips did name me,
+  Forth I sprang, my heart o’er -- came me;
+  “Grieve no more, sweet, I am Ja -- mie,
+  Home re -- turned to love and thee!”
 }
 
 altoMusic = \relative c' {
-  ees8 d |
-  ees4 ees8 ees ees ees4 ees8 |
-  bes bes bes d ees4 |
-  ees8. ees16 |
-  ees4 ees8~ ees ees ees d8. d16 |
+  bes8. bes16 bes8 bes |
+  ees ees ees16 ees8. |
+  ees ees16 ees8 ees |
+  c8. c16 aes c8. |
   
-  ees2 s4 ees8 d |
-  ees4 ees8 ees ees ees4 ees8 |
-  bes bes bes d ees4 ees |
-  ees ees ees8 bes bes8. bes16 |
-  bes2 s4 |
+  bes bes16 bes8 bes |
+  ees ees ees16 ees8. |
+  ees8 ees ees8. ees16 |
+  d8. ees16 ees4 |
   
-  ees8 f |
-  g4 s8 g g4 fis8 g |
-  aes2 g4 s |
-  g g aes g |
-  ees8 ees c c d4 ees8 d |
+  ees8 ees ees ees |
+  ees8. ees16 ees ees8. |
+  ees ees16 ees8 ees |
+  c c aes16 c8. |
   
-  ees4 ees8 ees ees ees4 ees8 |
-  bes bes bes d ees4 ees |
-  ees ees ees8 bes d8. d16 |
-  ees2 s4 \bar"|."
+  bes bes16 bes8 bes |
+  ees ees ees16 ees8. |
+  ees16 ees8. ees ees16 |
+  d8. ees16 ees4 \bar"|."
 }
 altoWords = \lyricmode {
 }
@@ -165,27 +174,25 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
-  g8 aes |
-  bes4 bes8 bes bes g4 bes8 |
-  aes g g bes bes4 aes8. g16 |
-  g4 bes8~ bes bes g aes8. aes16 |
+  g8. g16 g8 g |
+  bes g bes16 g8. |
+  aes c16 bes8 bes |
+  aes8. aes16 ees aes8. |
   
-  g2 s4 g8 aes |
-  bes4 bes8 bes bes g4 bes8 |
-  aes g g bes bes4 aes |
-  g bes bes8 g aes8. aes16 |
-  g2 s4 |
+  g g16 g8 g |
+  bes g bes16 g8. |
+  aes8 c bes8. bes16 |
+  aes8. g16 g4 |
   
-  bes8 bes |
-  ees4 s8 ees ees4 ees8 ees |
-  ees2 ees4 s |
-  bes ees ees ees |
-  bes8 bes a a bes4 g8 aes |
+  g8 aes c g |
+  aes8. g16 bes g8. |
+  aes8. g16 g8 bes |
+  aes aes ees16 aes8. |
   
-  bes4 bes8 bes bes g4 bes8 |
-  aes8 g g bes bes4 aes |
-  g bes bes8 g aes8. aes16 |
-  g2 s4 \bar"|."
+  g8. g16 g8 g |
+  bes g bes16 g8. |
+  aes16 c8. bes bes16 |
+  aes8. g16 g4 \bar"|."
 }
 
 tenorWords = \lyricmode {
@@ -198,27 +205,25 @@ tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  ees,8 ees |
-  ees4 ees8 ees ees ees4 ees8 |
-  bes bes bes bes ees4 ees8. ees16 |
-  bes4 bes8~ bes bes bes bes8. bes16 |
+  ees,8. ees16 ees8 ees |
+  ees ees ees16 ees8. |
+  aes8. aes16 g8 ees |
+  aes,8. aes16 aes aes8. |
   
-  ees2 d4\rest ees8 ees |
-  ees4 ees8 ees ees ees4 ees8 |
-  bes bes bes bes ees4 aes,\fermata |
-  bes bes bes8 bes bes8. bes16 |
-  ees2 d4\rest |
+  ees'8. ees16 ees8 ees |
+  ees ees ees16 ees8. |
+  aes8 aes g8. ees16 |
+  bes8. ees16 ees4 |
   
-  ees8 ees |
-  ees4 d8\rest ees ees4 ees8 ees |
-  aes2 ees4 d\rest |
-  ees ees ees ees |
-  ees8 ees f f bes,4\fermata ees8 ees |
+  ees8 ees ees ees |
+  ees8. ees16 ees ees8. |
+  ees ees16 ees8 ees |
+  aes, aes aes16 aes8. |
   
-  ees4 ees8 ees ees ees4 ees8 |
-  bes bes bes bes ees4 aes,\fermata |
-  bes bes bes8 bes bes8. bes16 |
-  ees2 d4\rest \bar"|."
+  ees'8. ees16 ees8 ees |
+  ees ees ees16 ees8. |
+  aes16 aes8.\fermata g\fermata ees16 |
+  bes8. ees16 ees4\fermata \bar"|."
 }
 bassWords = \lyricmode {
 }
@@ -276,8 +281,8 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Hard Times"}}
-  composer = \markup\oldStyleNum"Stephen Foster (1826–1864)"
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Jamie’s on the Stormy Sea"}}
+  composer = \markup\oldStyleNum"Bernard Covert, 1847"
   tagline = ""
 }}
 

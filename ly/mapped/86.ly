@@ -42,8 +42,8 @@
 }
 #(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
 global = {
-  \key ees \major
-  \time 2/4
+  \key c \major
+  \time 4/4
   \dynamicUp
   %\set crescendoSpanner = #'dashed-line
   %\set midiInstrument = "recorder"
@@ -52,106 +52,198 @@ global = {
 }
 
 sopMusic = \relative c' {
-	ees8. ees16 ees8 ees |
-  g ees g16 bes8. |
-  c ees16 bes8 g |
-  f8. ees16 c ees8. |
+	g'4 g8. g16 c4 c, |
+  e2 d4 b'\rest |
+  b\rest d, f e8 d |
+  e2. b'4\rest |
+  e,4\< e8 e\! fis4 g8[ a] |
+  b2 g4 b\rest |
   
-  ees8. ees16 ees8 ees |
-  g ees g16 bes8. |
-  c8 ees bes8. g16 |
-  f8. ees16 ees4 |
+  d4 b8 g a4. a8 |
+  g2. g4 |
+  e d8[ cis] d4 b |
+  a'4 g8[ fis] g fis\< g a\! |
+  b4 g8[ a] b4-> b-> |
+  b2. a8 g |
   
-  bes'8 c ees bes |
-  c8. bes16 g bes8. |
-  c bes16 bes8 g |
-  f ees c16 ees8. |
+  e'4 d c e,8 e |
+  c'4 b a2 |
+  e4 f8 e a4 a |
+  d,4 e8[ d] g2 |
+  f4 e8 e d4 c |
+  g'2( f4) d |
+  c2. b'4\rest \bar"||"
   
-  ees ees16 ees8 ees |
-  g ees g16 bes8. |
-  c16 ees8.\fermata \acciaccatura c16 bes8.\fermata g16 |
-  f8. ees16 ees4\fermata \bar"|."
+  %verse2
+  e,4 e8 e a4 c |
+  c2 b4 b\rest |
+  a2 a4 g8 f |
+  e2. b'4\rest |
+  e, e8 e f4 e |
+  
+  a2 a4 b\rest |
+  c\> b8 a gis4 a\! |
+  b2. b4\rest |
+  b,4 b8 b c4 b |
+  e2. e4 |
+  e d8[ cis] d4 b |
+  
+  a'4 g8.[ fis16] g8\< fis g a |
+  b4\! g8[ a] b4 b |
+  b2. a8[ g] |
+  e'4 d c e, |
+  c' b a2 |
+  e4 f8 e a4 a |
+  
+  %page2
+  d,4( e8) d g2 |
+  f4 e8 e d4 c |
+  g'2( f4) d4\fermata |
+  c2. b'4\rest |
+  %verse3
+  g4\f g8 g c4 c, |
+  e2 d4 b'\rest |
+  
+  a2 a4 g8 f |
+  e2. b'4\rest |
+  e,4\< e8 e fis4\! g8[ a] |
+  b2 g4 b\rest |
+  d b8 g b4. a8 |
+  g2. g4^\markup\italic"a tempo" |
+  
+  e4 d8.[ cis16] d4 b |
+  a'4 g8.[ fis16] g8\< fis g a |
+  b4\! g8. a16 b4\> b |
+  b2.\! a8\mf g |
+  e'4 d c e, |
+  
+  c' b a2 |
+  g4\f e8. c'16 b4 g |
+  g e8.[ c'16] b2\fermata |
+  c4^\markup\italic"a tempo" e,8. e16 f4 e8.[ d16] |
+  g2\< a |
+  b4(\! d8.)\fermata c16 c2 \bar"|."
 }
 sopWords = \lyricmode {
   \set stanza = #"1. "
-	Ere the twi -- light bat was flit -- ting,
-  In the sun -- set, at her knit -- ting,
-  Sang a lone -- ly maid -- en, sit -- ting
-  Un -- der -- neath her thes -- hold tree;
-  And, ere day -- light died be -- fore us,
-  And the ves -- per stars shone o’er us,
-  Fit -- ful rose her ten -- der cho -- rus,
-  “Ja -- mie’s on the storm -- y sea!”
+	It was a Bret -- on vil -- lage,
+  That lay by the sea,
+  She was a fish -- er -- maid -- en,
+  Ma -- rin -- er stout was he;
+  Fare -- well true heart, for we must part,
+  The winds are call -- ing down the sea,
+  But for me thou’lt pray in the chap -- el gray,
+  \markup\italic Na -- \markup\italic vi -- \markup\italic tas \markup\italic Sal -- \markup\italic va, \markup\italic Do -- \markup\italic mi -- \markup\italic ne,
+  \markup\italic Na -- \markup\italic vi -- \markup\italic tas \markup\italic Sal -- \markup\italic va, \markup\italic Do -- \markup\italic mi -- \markup\italic ne.
+  
+  \set stanza = #"2. "
+  It was a night of ter -- ror,
+  Wild, wild was the sea!
+  He in the storm is drift -- ing,
+  Watch -- ing in prayer is she,
+  Watch -- ing in prayer is she,
+  Sweet heart! sweet heart! And must we part?
+  No boat can live in such a sea,
+  But still she cries with stream -- ing eyes,
+  \markup\italic Na -- \markup\italic vi -- \markup\italic tas \markup\italic Sal -- \markup\italic va, \markup\italic Do -- \markup\italic mi -- \markup\italic ne,
+  \markup\italic Na -- \markup\italic vi -- \markup\italic tas \markup\italic Sal -- \markup\italic va, \markup\italic Do -- \markup\italic mi -- \markup\italic ne!
+  
+  \set stanza = #"3. "
+  Bright was the Bret -- on vil -- lage,
+  Bright, bright was the sea,
+  She was a fish -- er -- maid -- en,
+  Ma -- rin -- er stout was he,
+  ’Twas Heav’n a -- bove that saved me, love! and brought me back from the storm to thee,
+  In the chap -- el gray
+  We’ll kneel and pray,
+  \markup\italic Glo -- \markup\italic ri -- \markup\italic a \markup\italic ti -- \markup\italic bi, \markup\italic Do -- \markup\italic mi -- \markup\italic ne,
+  \markup\italic Glo -- \markup\italic ri -- \markup\italic a \markup\italic ti -- \markup\italic bi, __ \markup\italic ti -- \markup\italic bi, \markup\italic Do -- \markup\italic mi -- \markup\italic ne!
 }
 
 sopWordsII = \lyricmode {
-  \set stanza = #"2. "
-  Warm -- ly shone the sun -- set glow -- ing;
-  Sweet -- ly breathed the young flow’rs blow -- ing;
-  Earth with beau -- ty o -- ver -- flow -- ing,
-  Seemed the home of love to be.
-  As those an -- gel tones as -- cend -- ing,
-  With the scene and sea -- son blend -- ing,
-  Ev -- er had the same low end -- ing,
-  “Ja -- mie’s on the storm -- y sea!”
 }
 
 sopWordsIII = \lyricmode {
-  \set stanza = #"3. "
-  Cur -- few bells re -- mote -- ly ring -- ing
-  Min -- gled with that sweet voice sing -- ing,
-  And the last red ray seemed cling -- ing,
-  Lin -- g’ring -- ly to tower and tree;
-  Near -- er as I came, and near -- er,
-  Fin -- er rose the notes and clear -- er!
-  Oh! ’twas heav’n it -- self to hear her,
-  “Ja -- mie’s on the storm -- y sea!”
 }
 
 sopWordsIV = \lyricmode {
   \set stanza = #"4. "
-  “Blow ye west winds! bland -- ly hov -- er
-  O’er the bark that bears my lov -- er;
-  Gent -- ly blow, and bear him o -- ver
-  To his own dear home and me;
-  For, when night winds bend the wil -- low,
-  Sleep for -- sakes my lone -- ly pil -- low,
-  Think -- ing of the foam -- ing bil -- low,
-  “Ja -- mie’s on the storm -- y sea!”
 }
 
 sopWordsV = \lyricmode {
   \set stanza = #"5. "
-  How could I but list, but lin -- ger,
-  To the song, and near the sing -- er,
-  Sweet -- ly woo -- ing heav’n to bring her
-  Ja -- mie from the storm -- y sea;
-  And while yet her lips did name me,
-  Forth I sprang, my heart o’er -- came me;
-  “Grieve no more, sweet, I am Ja -- mie,
-  Home re -- turned to love and thee!”
 }
 
 altoMusic = \relative c' {
-  bes8. bes16 bes8 bes |
-  ees ees ees16 ees8. |
-  ees ees16 ees8 ees |
-  c8. c16 aes c8. |
+  e4 e8. e16 e4 c |
+  c2 c4 s |
+  s b d c8 b |
+  c2. s4 |
+  c c8 c dis4 e8[ fis] |
+  g2 e4 s |
   
-  bes bes16 bes8 bes |
-  ees ees ees16 ees8. |
-  ees8 ees ees8. ees16 |
-  d8. ees16 ees4 |
+  g g8 d fis4. d8 |
+  d2. d4 |
+  c b8[ ais] b4 b |
+  e e e8 e e e |
+  e4 e fis fis |
+  e2. f8 f |
+  e4 f g c,8 c |
+  e4 d c2 |
+  c4 d8 c c4 c |
+  b b c2 |
+  d4 c8 c a4 a |
+  c2( d4) b |
+  c2. s4 |
   
-  ees8 ees ees ees |
-  ees8. ees16 ees ees8. |
-  ees ees16 ees8 ees |
-  c c aes16 c8. |
+  %verse 2(alto)
+  c4 c8 c e4 e |
+  e2 e4 s |
+  e2 f4 e8 d |
+  c2. s4 |
+  d4 d8 d d4 d |
   
-  bes bes16 bes8 bes |
-  ees ees ees16 ees8. |
-  ees16 ees8. ees ees16 |
-  d8. ees16 ees4 \bar"|."
+  c2 e4 s |
+  dis dis8 dis d4 dis |
+  e2. s4 |
+  a,4 a8 a a4 b |
+  b2. b4 |
+  b b b b |
+  
+  e e e8 e e e |
+  e4 e dis dis |
+  e2( f4) f |
+  e f g c, |
+  e e e2 |
+  c4 c8 c f4 f |
+  
+  %page2(alto)
+  b,4~ b8 b c2 |
+  d4 c8 c c4 c |
+  c2( b4) b |
+  c2. s4 |
+  e4 e8 e e4 c |
+  c2 c4 s |
+  
+  f2 f4 d8 d |
+  c2. s4 |
+  c c8 c dis4 e8[ fis] |
+  g2 e4 s |
+  g g8 d fis4. d8 |
+  d2. d4 |
+  
+  b4 b b b |
+  e e e8 dis e e |
+  e4 e8. e16 dis4 dis |
+  e2. f8 f |
+  e4 f g c, |
+  
+  e d c2 |
+  e4 c8. e16 d4 d |
+  e c8.[ e16] d4( f)\fermata |
+  e e8. e16 d4 c |
+  c2 f |
+  f4~ f8. e16 e2 \bar"|."
 }
 altoWords = \lyricmode {
 }
@@ -174,25 +266,76 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
-  g8. g16 g8 g |
-  bes g bes16 g8. |
-  aes c16 bes8 bes |
-  aes8. aes16 ees aes8. |
+  c4 c8. c16 a4 a |
+  a2 a4 s |
+  s g g g8 g |
+  g2. s4 |
+  g4 g8 g b4 b |
+  b2 b4 s4 |
   
-  g g16 g8 g |
-  bes g bes16 g8. |
-  aes8 c bes8. bes16 |
-  aes8. g16 g4 |
+  b4 d8 b c4. c8 |
+  b2. b4 |
+  g g g g |
+  g g g8 g g g |
+  g4 b b b |
+  gis2. b8 b |
   
-  g8 aes c g |
-  aes8. g16 bes g8. |
-  aes8. g16 g8 bes |
-  aes aes ees16 aes8. |
+  c4 b c c8 c |
+  a4 gis a2 |
+  a4 a8 a f4 f |
+  g g g2 |
+  a4 g8 g d'4 d |
+  e2( b4) f |
+  e2. s4 |
   
-  g8. g16 g8 g |
-  bes g bes16 g8. |
-  aes16 c8. bes bes16 |
-  aes8. g16 g4 \bar"|."
+  %verse2 (tenor)
+  a4 a8 a a4 a |
+  a2 gis4 s |
+  c2 d4 a8 a |
+  a2. s4 |
+  gis4 gis8 gis gis4 gis |
+  
+  a2 c4 s |
+  a a8 a b4 a |
+  gis2. s4 |
+  dis4 dis8 dis dis4 a' |
+  gis2. g4 |
+  g g g g |
+  
+  g g g8 g g g |
+  g4 b fis fis |
+  g2. b4 |
+  c b c g |
+  a gis a2 |
+  c4 c8 c c4 c |
+  
+  %page2 (tenor)
+  g4~ g8 g g2 |
+  a4 a8 a a4 f |
+  e2( d4) f |
+  e2. s4 |
+  c' c8 c a4 a |
+  a2 a4 s |
+  
+  b2 b4 g8 g |
+  g2. s4 |
+  g g8 g b4 b |
+  b2 b4 s |
+  b d8 b d4. c8 |
+  b2. b4 |
+  
+  g f f g |
+  g c c8 c c fis, |
+  g4 g8. g16 fis4 fis |
+  gis2. b8 b |
+  c4 b c g |
+  
+  a gis a2 |
+  c4 g8. g16 g4 b |
+  c c d2 |
+  c4 c8. c16 d4 c8.[ d16] |
+  e2 b |
+  d4( b8.) g16 g2 \bar"|."
 }
 
 tenorWords = \lyricmode {
@@ -205,25 +348,75 @@ tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  ees,8. ees16 ees8 ees |
-  ees ees ees16 ees8. |
-  aes8. aes16 g8 ees |
-  aes,8. aes16 aes aes8. |
+  c,4 c8. c16 a'4 a |
+  f2 f4 d4\rest |
+  d\rest g, g g8 g |
+  c2. d4\rest |
+  c c8 c b4 b |
+  e2 e4 d4\rest |
   
-  ees'8. ees16 ees8 ees |
-  ees ees ees16 ees8. |
-  aes8 aes g8. ees16 |
-  bes8. ees16 ees4 |
+  d d8 d d4. d8 |
+  g2. g4 |
+  g, g g d' |
+  c c c8 c c c |
+  e4 e dis dis |
+  e2. g8 g |
   
-  ees8 ees ees ees |
-  ees8. ees16 ees ees8. |
-  ees ees16 ees8 ees |
-  aes, aes aes16 aes8. |
+  c,4 d e g8 g |
+  a4 e a,2 |
+  a4 a8 a f'4 f |
+  f f e2 |
+  d4 e8 e f4 fis |
+  g2. g,4 |
+  c2. d4\rest |
   
-  ees'8. ees16 ees8 ees |
-  ees ees ees16 ees8. |
-  aes16 aes8.\fermata g\fermata ees16 |
-  bes8. ees16 ees4\fermata \bar"|."
+  a4 a8 a c4 a |
+  e'2 e4 d\rest |
+  a'2 d,4 d8 d |
+  a2. d4\rest |
+  e e8 e e4 e |
+  
+  a2 a4 d,4\rest |
+  f f8 f f4 f |
+  e2. d4\rest |
+  b4 b8 b b4 dis? |
+  e2. g,4 |
+  g g g g |
+  
+  c c c8 c c c |
+  b4 b b b |
+  e2( d4) g |
+  c, d e c |
+  a b c2 |
+  g'4 g8 g f4 f |
+  
+  %page2 (bass)
+  f4~ f8 f e2 |
+  d4 e8 e f4 d |
+  g,2. g4 |
+  c2. d4\rest |
+  c4 c8 c a'4 a |
+  f2 f4 d\rest |
+  
+  g2 g4 b,8 b |
+  c2. d4\rest |
+  c c8 c b4 b |
+  e2 e4 d\rest |
+  d d8 d d4. d8 |
+  g2. g4 |
+  
+  g, g g g |
+  c c c8 c c c |
+  b4 b8. b16 b4 b |
+  e2. g8 g |
+  c,4 d e c |
+  
+  a e' f2 |
+  g4 g8. g16 g4 g |
+  c, c g'( gis)\fermata |
+  a a8. a16 d,4 g8.[ f16] |
+  g2 g |
+  g4~ g8. g16 c,2 \bar"|."
 }
 bassWords = \lyricmode {
 }
@@ -281,8 +474,9 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Jamie’s on the Stormy Sea"}}
-  composer = \markup\oldStyleNum"Bernard Covert, 1847"
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Saved from the Storm"}}
+  composer = \markup\oldStyleNum"Odoardo Barri (1844–1920)"
+  poet = \markup\oldStyleNum"Frederic Weatherly (1848–1929)"
   tagline = ""
 }}
 

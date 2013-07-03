@@ -21,7 +21,7 @@
   outer-margin = 0.75\in
   top-margin = 0.26\in
   bottom-margin = 0.25\in
-  first-page-number = #27
+  first-page-number = #99
   print-first-page-number = ##t
   headerLine = ""
   oddHeaderMarkup = \markup\fill-line{
@@ -42,64 +42,85 @@
 }
 #(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
 global = {
-  \key ees \major
+  \key bes \major
   \time 4/4
   \dynamicUp
   %\set crescendoSpanner = #'dashed-line
   %\set midiInstrument = "recorder"
   \autoBeamOff
   \override DynamicTextSpanner #'style = #'none
+  \tieDashed
+  \slurDashed
 }
 
 sopMusic = \relative c' {
 	\partial 4
-  bes4\mf |
-  ees4. f8 aes[ g] f ees |
-  g4 bes ees d8. ees16 |
-  c4. bes8 g8.[ aes16 bes8] g |
-  f4..( ees16) ees4 bes |
-  ees4. f8 aes[ g] f ees |
+  f4 |
+  d f f bes8 a |
+  g4 ees ees g8 g |
   
-  g4 bes ees d8. ees16 |
-  c4 bes g8.[ aes16 bes8] g |
-  f2 ees4 << bes4\rest\f { s8 \teeny bes'8 \normalsize} >> |
-  \slurDashed
-  ees4-> d-> c-> bes8\rest d16( ees) |
-  d4-> c-> bes-> bes8\rest b |
+  f4 a c ees |
+  d2. f,8 ees |
+  d4 f f bes8 a |
+  g4 ees ees b'8\rest g |
   
-  c4. g8 g4 b |
-  \slurSolid
-  c4.( d8) ees4 ees\fermata |
-  \slurDashed
-  ees,4. f8 aes[ g] f( ees) |
-  g4 bes ees\fermata d8( ees) |
-  c4. bes8 g8.[ aes16 bes8] g |
-  f2 ees4 \bar "|."
+  f8 a c ees d4 c |
+  bes2. f8 ees |
+  d4 f f bes8 a |
+  g4 ees ees g8 g |
+  
+  f4 a c ees |
+  d2. f,8 ees |
+  d4 f f bes8 a |
+  g4 ees ees g8~ g |
+  
+  f8 a c ees d4 c8 c |
+  bes2. b4\rest |
+  
+  %chorus
+  d8 c4. bes g8 |
+  f2. b4\rest |
+  bes8 a4. bes d8 |
+  
+  c2. f,8 ees |
+  d4 f f bes8 a |
+  g4 ees ees g8 g |
+  f8 ees'4. d c8 |
+  bes2. \bar"|."
 }
 sopWords = \lyricmode {
   \set stanza = #"1. "
-	The min -- strel boy to the war is gone,
-  In the ranks of death you’ll find him;
-  His fa -- ther’s sword he hath gird -- ed on,
-  And his wild harp slung __ be -- hind him.
-  "" “Land of song!” \set ignoreMelismata = ##t said the war -- rior bard,
-  \unset ignoreMelismata
-  “Tho’ all the world be -- tray __ thee,
-  One sword at least thy __ rights shall guard,
-  One __ faith -- ful harp __ shall praise thee.”
+	I sit me down by my own fire -- side
+  When the win -- ter nights come on,
+  And I calm -- ly dream as the dim hours glide,
+  Of ma -- ny plea -- sant scenes now gone;
+  Of our health -- ful plays in my school -- boy days,
+  That can nev -- er come a -- gain;
+  Of our sum -- mer joys and our Christ -- mas toys,
+  And ram -- bles o’er the stream -- let and plain.
+  
+  Hap -- py hours at home!
+  Hap -- py hours at home!
+  How the mo -- ments glide by the bright fire -- side,
+  In the hap -- py hours at home.
 }
 
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
-  The min -- strel fell, but the foe -- man’s chain
-  Could not bring his proud soul un -- der;
-  The harp he lov’d nev -- er spoke a -- gain,
-  For he tore its chords a -- sun -- der,
-  And said, “No chains shall sul -- ly thee,
-  Thou soul of love and brave -- ry!
+  I sit me down by my own fire -- side
+  Where the chil -- dren sport in glee,
+  While the clear young voice of our house -- hold pride
+  Makes mel -- o -- dy that’s dear to me.
+  And by ev -- ’ry art that can charm the heart,
+  They al -- lure my cares a -- way,
+  To pre -- pare my soul as the swift hours roll,
   \set ignoreMelismata = ##t
-  Thy songs were made _ for the pure and free,
-  They shall nev -- er sound _ _ in slave -- ry.”
+  For the du -- ties of the bright com -- ing day.
+  
+  \set associatedVoice = "tenors"
+  \skip1
+  \dropLyricsXV
+  Hap -- py hours at \raiseLyrics home!
 }
 
 sopWordsIII = \lyricmode {
@@ -115,28 +136,37 @@ sopWordsV = \lyricmode {
 }
 
 altoMusic = \relative c' {
-  \partial 4
-  bes4 |
-  ees4. ees8 ees4 bes8 bes |
-  ees4 f ees ees8. ees16 |
-  ees4. ees8 ees4. ees8 |
-  d2 ees4 bes |
-  ees4. ees8 ees4 bes8 bes |
+  d4 |
+  bes d f f8 f |
+  ees4 bes bes ees8 ees |
+  f4 f a a |
+  bes2. d,8 c |
   
-  ees4 f ees ees8. ees16 |
-  ees4 ees ees4. ees8 |
-  d2 ees4 s8 \teeny g \normalsize |
-  g4 f ees s8 \slurDashed f16( ees) |
-  f4 ees d s8 f |
+  bes4 d f f8 f |
+  ees4 bes bes s8 ees |
+  f8 f a a f4 a |
+  bes2. d,8 c |
   
-  ees4. ees8 d4 d |
-  \slurSolid
-  c4.( f8) ees4 ees |
-  \slurDashed
-  ees4. bes8 bes4 d8( ees) |
-  ees4 f ees ees8( ees) |
-  ees4. ees8 ees4. ees8 |
-  d2 ees4 \bar"|."
+  bes4 d f f8 f |
+  ees4 bes bes ees8 ees |
+  f4 f a a |
+  bes2. d,8 c |
+  
+  bes4 d f f8 f |
+  ees4 bes bes ees8~ ees |
+  f8 f a a f4 a8 a |
+  bes2. s4 |
+  
+  %Chorus
+  bes8 a4. g ees8 |
+  d2. s4 |
+  bes'8 fis4. g bes8 |
+  
+  a2. d,8 c |
+  bes4 d f f8 f |
+  g4 ees ees g8 g |
+  f f4. f f8 |
+  f2. \bar"|."
 }
 altoWords = \lyricmode {
 }
@@ -159,28 +189,37 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
-  \partial 4
-  g4 |
-  g4. aes8 c[ bes] aes g |
-  bes4 bes g bes8. bes16 |
-  aes4. bes8 bes4. bes8 |
-  bes4( aes) g g |
-  g4. aes8 c[ bes] aes g |
+  bes4 |
+  f bes d d8 d |
+  bes4 g g bes8 bes |
+  a4 c ees c |
+  bes2. d8 ees |
   
-  bes4 bes g bes8. bes16 |
-  aes4 bes bes4. bes8 |
-  \slurSolid
-  bes4.( aes8) g4 s8 \teeny bes \normalsize |
-  bes4 b c s8 \slurDashed b16( c) |
-  bes?4 a bes s8 d |
+  f4 f d d8 d |
+  bes4 g g s8 bes |
+  a c ees c f4 ees |
+  d2. d8 ees |
   
-  c4. c8 b4 g |
-  \slurSolid g4.( b8) c4 c |
-  \slurDashed bes4. aes8 f[ g] aes( g) |
-  bes4 bes g bes8( bes) |
-  aes4. bes8 bes4. bes8 |
-  \slurSolid
-  bes4.( aes8) g4 \bar"|."
+  f4 f d d8 d |
+  bes4 g g bes8 bes |
+  a4 c ees c |
+  bes2. d8 ees |
+  
+  f4 f d d8 d |
+  bes4 g g bes8~ bes |
+  a c ees c f4 ees8 ees |
+  d2. s4 |
+  
+  %Chorus
+  r1 |
+  d,8 f4. bes c8 |
+  d2. s8 g |
+  
+  f2. d8 ees |
+  f4 f d d8 d |
+  ees4 bes bes bes8 bes |
+  a a4. f' ees8 |
+  d2. \bar"|."
 }
 
 tenorWords = \lyricmode {
@@ -193,27 +232,37 @@ tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  \partial 4
-  ees,4 |
-  ees4. ees8 ees4 ees8 ees |
-  ees4 d c g8. g16 |
-  aes4. g8 ees'8.[ f16 g8] ees |
-  bes2 <\tweak #'font-size #-3 ees ees,>4 ees |
-  ees4. ees8 ees4 ees8 ees |
+  bes,4 |
+  bes bes bes bes8 bes |
+  ees4 ees ees ees8 ees |
+  f4 f f f |
+  bes,2. bes8 bes |
   
-  ees4 d c g8. g16 |
-  aes4 g ees'8.[ f16 g8] ees |
-  bes2 ees4 << d4\rest {s8 \teeny ees8} >> \normalsize |
-  \slurDashed
-  ees4 g c, d8\rest g16( c,) |
-  f4 < \tweak #'font-size #-3 f f,> bes, d8\rest g, |
+  bes4 bes bes bes8 bes |
+  ees4 ees ees s8 ees |
+  f f f f f4 f|
+  bes,2. bes8 bes |
   
-  c4. ees8 g4 f |
-  \slurSolid ees4.( d8) c4 g'\fermata |
-  \slurDashed g4. f8 d[ ees] bes( ees) |
-  ees4 d c\fermata g8( g) |
-  aes4. g8 ees'8.[ f16 g8] ees |
-  bes2 ees4 \bar"|."
+  bes4 bes bes bes8 bes |
+  ees4 ees ees ees8 ees |
+  f4 f f f |
+  bes,2. bes8 bes |
+  
+  bes4 bes bes bes8 bes |
+  ees4 ees ees ees8~ ees |
+  f f f f f4 f8 f |
+  bes,2. d4\rest |
+  
+  %Chorus
+  bes8 bes4. ees ees8 |
+  bes2. d4\rest |
+  g,8 g4. c c8 |
+  
+  f,2. bes8 bes |
+  bes4 bes bes bes8 bes |
+  ees4 ees ees ees8 ees |
+  f f4. f f8 |
+  bes,2. \bar"|."
 }
 bassWords = \lyricmode {
 }
@@ -231,16 +280,18 @@ pianoLH = \relative c' {
       \new Voice = "altos" { \voiceTwo << \global \altoMusic >> }
     >>
     \new Lyrics = "altos"  \lyricsto "sopranos" \sopWords
-    \new Lyrics = "altosII"  \lyricsto "sopranos" \sopWordsII
+    \new Lyrics = "altosII" 
     \new Lyrics = "altosIII"  \lyricsto "sopranos" \sopWordsIII
     \new Lyrics = "altosIV"  \lyricsto "sopranos" \sopWordsIV
     \new Lyrics = "altosV"  \lyricsto "sopranos" \sopWordsV
+    \new Lyrics = "tenors"
    \new Staff = men <<
       \clef bass
       \new Voice = "tenors" { \voiceOne << \global \tenorMusic >> }
       \new Voice = "basses" { \voiceTwo << \global \bassMusic >> }
     >>
-    \new Lyrics \with { alignAboveContext = #"tenors" } \lyricsto "tenors" \tenorWordsIII
+    \context Lyrics = "altosII"  \lyricsto "sopranos" \sopWordsII
+    \context Lyrics = "tenors" \with { alignAboveContext = #"tenors" } \lyricsto "tenors" \tenorWordsIII
     \new Lyrics \with { alignAboveContext = #"tenors" } \lyricsto "tenors" \tenorWordsII
     \new Lyrics \with { alignAboveContext = #"tenors" } \lyricsto "tenors" \tenorWords
   >>
@@ -271,9 +322,8 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"The Minstrel Boy"}}
-  poet = \markup\oldStyleNum"Thomas Moore (1779–1852)"
-  composer = \markup\oldStyleNum{"Irish Air," \italic"The Moreen"}
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Happy Hours at Home"}}
+  composer = \markup\oldStyleNum"Stephen Foster (1826–1864)"
   tagline = ""
 }}
 

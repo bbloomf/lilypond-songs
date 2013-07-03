@@ -52,108 +52,110 @@ global = {
 }
 
 sopMusic = \relative c' {
-	\partial 2.
-  a'4 g a |
-  bes2. a4 |
-  g a f4. g8 |
-  g4( a2.)~ |
-  a4 a g a |
-  bes2. a4 |
-  g a f4. g8 |
-  a1~ |
+	f4. g8 a4 g |
+  bes a g8[ e] f4 |
+  d' c bes a |
+  g a8[ f] c'2 |
   
-  a4 c c c |
-  d2. a4 |
-  a c c4. g8 |
-  g4( bes2.)~ |
-  bes4 bes a g |
-  a2. f4 |
-  f g g4. a8 |
-  a1~ |
+  f,4. g8 a4 g |
+  bes a g8[ e] f4 |
+  d'4 c bes a |
+  g a8[ f] c'2\fermata |
   
-  a4 c c c |
-  d2. a4 |
-  a c c4. g8 |
-  g4( bes2.)~ |
-  bes4 bes a g |
-  a2. f4 |
-  f g g4. f8 |
-  f1~ |
-  f4 \bar"|."
+  g4 a g8[ e] c4 |
+  bes' a g8[ e] c4 |
+  c' bes a4. a8 |
+  b4. b8 c2 |
+  
+  \repeat volta 2 {
+    f4. e8 e[ d] c4 |
+    d4. c8 c[ bes] a4 |
+    g a8[ bes] c[ d] bes[ g] |
+    f4 a8[ g] f2 |
+  }
 }
 sopWords = \lyricmode {
   \set stanza = #"1. "
-	Be still, my soul; the Lord is on thy side; __
-  Bear pa -- tient -- ly the cross of grief or pain; __
-  Leave to thy God to or -- der and pro -- vide; __
-  In eve -- ry change He faith -- ful will re -- main. __
-  Be still, my soul; thy best, thy heav’n -- ly Friend __
-  Through thorn -- y ways leads to a joy -- ful end. __
+	Glor -- ious things of thee are spok -- en,
+  Zi -- on, cit -- y of our God!
+  He, Whose word can -- not be brok -- en,
+  Formed thee for His own a -- bode;
+  On the rock of a -- ges found -- ed,
+  What can shake thy sure re -- pose?
+  With sal -- va -- tion’s walls sur -- round -- ed
+  Thou may’st smile at all thy foes.
 }
 
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
-  Be still, my soul; thy God doth un -- der -- take __
-  To guide the fu -- ture as He has the past. __
-  Thy hope, thy con -- fid -- ence, let no -- thing shake; __
-  All now mys -- te -- rious shall be bright at last. __
-  Be still, my soul; the waves and winds still know __
-  His voice who ruled them while He dwelt be -- low. __
+  See! the streams of liv -- ing wa -- ters
+  Spring -- ing from e -- ter -- nal love,
+  Well sup -- ply thy sons and daugh -- ters,
+  And all fear of want re -- move:
+  Who can faint when such a riv -- er
+  Ev -- er flows their thirst t'as -- suage?
+  Grace, which like the Lord the giv -- er,
+  Nev -- er fails from age to age.
 }
 
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
-  Be still, my soul, when dear -- est friends de -- part __
-  And all is dark -- ened in the vale of tears; __
-  Then shalt thou bet -- ter know His love, His heart, __
-  Who comes to soothe thy sor -- rows and thy fears. __
-  Be still, my soul; thy Je -- sus can re -- pay __
-  From His own full -- ness all He takes a -- way. __
+  Round each hab -- i -- ta -- tion hov -- ’ring
+  See the cloud and fire ap -- pear!
+  For a glo -- ry and a cov -- ’ring,
+  Show -- ing that the Lord is near:
+  Thus de -- riv -- ing from their ban -- ner
+  Light by night and shade by day,
+  Safe they feed up -- on the man -- na
+  Which he gives them when they pray.
 }
 
 sopWordsIV = \lyricmode {
   \set stanza = #"4. "
-  Be still, my soul; the hour is hast -- ’ning on __
-  When we shall be for -- ev -- er with the Lord, __
-  When dis -- ap -- point -- ment, grief, and fear are gone, __
-  Sor -- row for -- got, love’s pur -- est joys re -- stored. __
-  Be still, my soul; when change and tears are past, __
-  All safe and bless -- ed we shall meet at last. __
+  Blest in -- hab -- i -- tants of Zi -- on,
+  Washed in the Re -- deem -- er’s blood!
+  Je -- sus, whom their souls re -- ly on,
+  Makes them kings and priests to God;
+  ’Tis His love His peo -- ple rais -- es
+  O -- ver self to reign as kings,
+  And as priests, his sol -- emn prais -- es
+  Each for a \once \override LyricHyphen #'minimum-distance = #0.7 thank -- of -- f’ring brings.
 }
 
 sopWordsV = \lyricmode {
   \set stanza = #"5. "
+  Sav -- ior, if of Zi -- on’s cit -- y
+  I through grace a mem -- ber am;
+  Let the world de -- ride or pit -- y,
+  I will glo -- ry in Thy Name;
+  Fad -- ing is the world -- ling’s plea -- sure,
+  All his boast -- ed pomp and show!
+  Sol -- id joys and last -- ing trea -- sure,
+  None but Zi -- on’s chil -- dren know.
 }
 
 altoMusic = \relative c' {
-  \partial 2.
-  f4 e f |
-  e2. f4 |
-  e f d4. e8 |
-  e4( f2.)~ |
-  f4 f e f |
-  e2. f4 |
-  e f d4. e8 |
-  f1~ |
+  f4. f8 f4 e |
+  g f e8[ c] c4 |
+  d8[ e] f4 e f |
+  f f e2 |
   
-  f4 f f f |
-  f2. f4 |
-  f f f4. e8 |
-  e4( g2.)~ |
-  g4 g fis g |
-  f?2. f4 |
-  f f e4. e8 |
-  e1~ |
+  f4. f8 f4 e |
+  g f e8[ c] c4 |
+  d8[ e] f4 e f |
+  f f e2 |
   
-  e4 a f f |
-  f2. f4 |
-  f f f4. e8 |
-  e4( g2.)~ |
-  g4 g fis g |
-  f?2. c4 |
-  f f e4. f8 |
-  f1~ |
-  f4 \bar"|."
+  e4 f e8[ c] c4 |
+  g' f e8[ c] c4 |
+  f e f4. f8 |
+  f4. f8 e2 |
+
+  \repeat volta 2{
+    f4. f8 f4 f |
+    f4. f8 e4 f |
+    e f8[ g] f4 d |
+    c e f2 |
+  }
 }
 altoWords = \lyricmode {
 }
@@ -176,34 +178,27 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
-  \partial 2.
-  c4 c c |
-  c2. c4 |
-  c c bes4. bes8 |
-  c1~ |
-  c4 c c c |
-  c2. c4 |
-  c c bes4. bes8 |
-  c1~ |
+  a4. bes8 c4 c |
+  c c bes8[ g] a4 |
+  bes4 c c c |
+  d d c2 |
   
-  c4 a a a |
-  a2. d4 |
-  d c c4. c8 |
-  c4( d2.)~ |
-  d4 d c d |
-  c2. c4 |
-  d d d4. cis8 |
-  cis1~ |
+  a4. bes8 c4 c |
+  c c bes8[ g] a4 |
+  bes4 c c c |
+  d d c2 |
   
-  cis!4 c a a |
-  a2. d4 |
-  d c c4. c8 |
-  c4( d2.)~ |
-  d4 d c d |
-  c2. a4 |
-  a4 bes bes4. a8 |
-  a1~ |
-  a4 \bar"|."
+  c4 c c8[ g] e4 |
+  c' c c8[ g] e4 |
+  c' c c4. c8 |
+  d4. d8 c2 |
+  
+  \repeat volta 2 {
+    c4. c8 bes4 a |
+    bes4. a8 g[ c] c4 |
+    c c c bes |
+    a c8[ bes] a2 |
+  }
 }
 
 tenorWords = \lyricmode {
@@ -216,34 +211,27 @@ tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  \partial 2.
-  f,4 bes a |
-  g2. f4 |
-  bes a bes4. g8 |
-  g4( f2.)~ |
-  f4 f bes a |
-  g2. f4 |
-  bes a bes4. g8 |
-  f1~ |
+  f,4. f8 f4 c |
+  e f c f |
+  bes a g f |
+  bes, b c2 |
   
-  f4 f f e |
-  d2. d4 |
-  d a a4. c8 |
-  c4( g2.)~ |
-  g4 g a bes |
-  a2. c'4 |
-  bes bes bes4. cis8 |
-  a1~ |
+  f4. f8 f4 c |
+  e f c f |
+  bes a g f |
+  bes, b c2\fermata |
   
-  a4 f f e |
-  d2. c4 |
-  d a' a4. c8 |
-  c4( g2.)~ |
-  g4 g, a bes |
-  c2. c4 |
-  c c c4. f8 |
-  f1~ |
-  f4 \bar"|."
+  c4 c c c |
+  e f c c |
+  a' g f4. f8 |
+  d4. g8 c,2 |
+  
+  \repeat volta 2 {
+    a'4. a8 bes4 f |
+    bes,4. f'8 c4 f |
+    c c8[ bes] a4 bes |
+    c c f2 |
+  }
 }
 bassWords = \lyricmode {
 }
@@ -276,7 +264,6 @@ pianoLH = \relative c' {
   >>
 %    \new PianoStaff << \new Staff { \new Voice { \pianoRH } } \new Staff { \clef "bass" \pianoLH } >>
   >>
-  
   \layout {
     \context {
       \Lyrics
@@ -301,11 +288,11 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Be Still, My Soul"}}
-  composer = \markup\oldStyleNum{\concat{\italic"Finlandia" ", Jean Sibelius (1865–1957)"}}
-  poet = \markup\oldStyleNum"Katharina von Schlegel (1697–1768)"
-  meter = \markup\oldStyleNum"Translated by Jane L. Borthwick (1813–1897)"
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Glorious Things of Thee Are Spoken"}}
+  composer = \markup\oldStyleNum"Franz Josef Haydn (1732–1809)"
   tagline = ""
 }}
+
+
 
 

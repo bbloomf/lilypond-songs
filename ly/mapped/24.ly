@@ -10,25 +10,20 @@
   indent = 0\in
   %system-system-spacing = #'((basic-distance . 10) (padding . 0))
   system-system-spacing =
-    #'((basic-distance . -1)
-       (minimum-distance . -1)
+    #'((basic-distance . 0)
+       (minimum-distance . 0)
        (padding . -3)
        (stretchability . 100))
+  markup-system-spacing =
+    #'((basic-distance . 0)
+       (minimum-distance . 0)
+       (padding . -2.4)
+       (stretchability . 100))
   top-markup-spacing =
-    #'((basic-distance . 0)
-       (minimum-distance . 0)
+    #'((basic-distance . -5)
+       (minimum-distance . -5)
        (padding . -14)
        (stretchability . 0))
-  top-system-spacing =
-    #'((basic-distance . 0)
-       (minimum-distance . 0)
-       (padding . 0)
-       (stretchability . 0))
-  score-markup-spacing =
-    #'((basic-distance . 0)
-       (minimum-distance . 0)
-       (padding . -14)
-       (stretchability . 70))
   ragged-last-bottom = ##f
   ragged-bottom = ##f
   two-sided = ##t
@@ -57,529 +52,9 @@
 }
 #(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
 global = {
-  \key g \major
-  \time 6/8
-  \dynamicUp
-  %\set crescendoSpanner = #'dashed-line
-  %\set midiInstrument = "recorder"
-  \autoBeamOff
-  \override DynamicTextSpanner #'style = #'none
-}
-
-sopMusic = \relative c' {
-  \tempo "Allegro vivace" 4. = 116
-	\partial 2
-  d'8 d4 e8 |
-  d4-> a8 d4 e8 |
-  d4 d,8 d4 e8 |
-  d4-> a'8 a4 a8 |
-  
-  c4.->~ c~ |
-  c4 b8\rest b4\rest\fermata d,8 |
-  g4. e4( d8) g4. e4( d8) |
-  g4.\< b |
-  d4\!->  b8\mf d4 e8 |
-  
-  d4 a8 c4 e8 |
-  d4 b8 g4 b8 |
-  a4. e |
-  a~ a8 b\rest d, |
-  
-  %page2/61
-  g4. e4( d8) |
-  \slurDashed g4. e4( d8) 
-  \slurSolid g4.\< b |
-  d4\f-> b8 b4 b8 |
-  d4 cis8 d4 e8 |
-  
-  fis4-> d8 cis4 b8 |
-  a4. e' |
-  d d,4\mf d8 |
-  \tieDashed c'4. c4~ c8 |
-  \tieSolid c4. b4( a8) |
-  
-  b4. g4( e8) |
-  \tieDashed d4. d4~ d8 |
-  c'4. c4~ c8 |
-  \tieSolid c4. b4 a8 |
-  b4. g4( e8) |
-  
-  %page3/62
-  d4. g4 g8 |
-  \tieDashed fis4.\< b4~ b8 |
-  \slurDashed d4. cis4( b8) |
-  \slurSolid fis'4.\! cis4( e8) |
-  \tieSolid d4. d |
-  
-  \slurDashed d\cresc a4\!( fis8) |
-  \slurSolid e4.~ e4 fis8 |
-  d4 d'8\ff d4 e8 |
-  d4.~ d8\fermata d,4\mf \time 2/4 \break
-  
-  \tempo "Allegretto" 4 = 138
-  g4-> g |
-  g a8[ g] |
-  fis([ a] d4->)~ |
-  d d, |
-  a'4->\< a |
-  a b8[\! a] |
-  g([ b] d4->)~ |
-  d d |
-  \once\override DynamicText #'self-alignment-X = #4
-  e4.->\f c8 |
-  
-  %page4/63
-  c4 e |
-  e-> d |
-  b4. b8 |
-  b4-> a |
-  a e |
-  fis8[( g] a4)~ |
-  a d,\mp |
-  
-  g4-> g |
-  g\< a8[ g] |
-  fis([\! a] d4--)~ |
-  d d,4\mf |
-  a'4-> a |
-  a b8[ a] |
-  g(([ b] d4)~ |
-  d d4\cresc |
-  e e |
-  
-  \once\override DynamicText #'self-alignment-X = #4
-  \once\override DynamicLineSpanner #'extra-offset = #'( 0 . 4 )
-  g4.\f-> d8 |
-  c4 d8[ c] |
-  b4 g8\cresc[ a]\! |
-  b4 a8[ g] |
-  a4 g8[ e] |
-  g8. d'16\ff d8. d16 |
-  g2~ |
-  g8 b,\rest\fermata \bar"|."
-}
-sopWords = \lyricmode {
-  \set stanza = \markup\dynamic"ff  "
-  Ta -- ran -- ta -- ra,
-  Ta -- ran -- ta -- ra,
-  Ta -- ran -- ta -- ra,
-  Ta -- ran -- ta -- ra __
-  \set stanza = #"1. "
-  For horse and hound the horn doth sound,
-  Ta -- ran -- ta -- ra, Ta -- ran -- ta -- ra, Ta -- ran -- ta -- ra, ta -- ra. __
-  
-  The horn doth sound
-  For horse and hound,
-  Ta -- ran -- ta -- ra, Ta -- ran -- ta -- ra, Ta -- ran -- ta -- ra, ta -- ra.
-  
-  So the dogs be -- gin to bark and bay,
-  \set ignoreMelismata = ##t
-  And the \unset ignoreMelismata hors -- es __ am -- ble a -- long the way,
-  While the red -- coats \set ignoreMelismata = ##t mus -- ter in strong ar -- _ ray,
-  They mus -- ter in strong _ ar -- ray,
-  \unset ignoreMelismata
-  Ta -- ran -- ta -- ra. __ A --
-  
-  hunt -- ing we will go, __
-  A -- hunt -- ing we will go, __
-  Through ma -- ny~a co -- zy cov -- ert,
-  For the scent is keen I trow, __
-  A -- hunt -- ing we will go, __
-  A -- hunt -- ing we will go, __
-  With horse and hound, where game is found,
-  A -- hunt -- ing we will go,
-  Ta -- ran -- ta -- ra. __
-}
-
-sopWordsII = \lyricmode {
-  \repeat unfold 16 \skip1
-  \set stanza = #"2. "
-  The fox is found, the horn doth sound,
-  Ta -- ran -- ta -- ra, Ta -- ran -- ta -- ra, Ta -- ran -- ta -- ra, ta -- ra. __
-  
-  The horn doth sound, \set ignoreMelismata = ##t
-  For the fox is found, \unset ignoreMelismata
-  Ta -- ran -- ta -- ra, Ta -- ran -- ta -- ra, Ta -- ran -- ta -- ra, ta -- ra.
-  
-  \set ignoreMelismata = ##t
-  To be in at the death \unset ignoreMelismata the hunt -- ers ride,
-  And skim \set ignoreMelismata = ##t like the wind \unset ignoreMelismata o’er the coun -- try side,
-  For the brush \set ignoreMelismata = ##t is the Queen of _ Beau -- ty’s _ pride,
-  The Queen of _ Beau -- _ ty’s pride,
-  Ta -- ran -- ta -- ra. __ _ A --
-}
-
-sopWordsIII = \lyricmode {
-  \set stanza = #"3. "
-}
-
-sopWordsIV = \lyricmode {
-  \set stanza = #"4. "
-}
-
-sopWordsV = \lyricmode {
-  \set stanza = #"5. "
-}
-
-altoMusic = \relative c' {
-  d'8 d4 e8 |
-  d4 a8 d4 e8 |
-  d4 d,8 d4 e8 |
-  d4 a8 d4 e8 |
-  
-  fis4.~ fis~ |
-  fis4 s8 s4 d8 |
-  b4. b |
-  b b |
-  d g4( fis8) |
-  g4 g8 g4 g8 |
-  
-  fis4 fis8 fis4 fis8 |
-  g4 g8 g4 g8 |
-  g4. e |
-  d~ d8 s d |
-  
-  %page2/61
-  d4( b8) b4( d8) |
-  d4( b8) \slurDashed b4( d8) |
-  \slurSolid d4. g |
-  g4 g8 g4 g8 |
-  g4 g8 g4 g8 |
-  
-  fis4 fis8 fis4 fis8 |
-  g4. g |
-  fis d4 d8 |
-  d4. \tieDashed e4~ e8 |
-  \tieSolid d4. d |
-  
-  e e |
-  d \tieDashed d4~ d8 |
-  fis4. fis4~ fis8 |
-  \tieSolid fis4. fis4 fis8 |
-  g4. g4( e8) |
-  
-  %page3/62
-  d4. e4 e8 |
-  d4. \tieDashed fis4~ fis8 |
-  \tieSolid \slurDashed fis4. fis4( b8) |
-  \slurSolid ais4. ais4( fis8) |
-  fis4. eis |
-  
-  fis \tieDashed d4~ d8 |
-  \tieSolid cis4.~ cis4 cis8 |
-  d4 d8 d4 e8 |
-  d4.~ d8 d4 |
-  
-  \time 2/4
-  d d |
-  d d |
-  d8([ e] fis4)~ |
-  fis fis |
-  d fis |
-  d fis |
-  g2~ |
-  g4 g |
-  g4. g8 |
-  
-  %page4/63
-  g4 g |
-  g g |
-  g4. g8 |
-  g4 g |
-  g e |
-  d8[( e] fis4)~ |
-  fis d |
-  
-  d d |
-  d d |
-  d8([ e] fis4)~ |
-  fis fis |
-  d fis |
-  d fis |
-  g2~ |
-  g4 g |
-  g g |
-  
-  g4. g8 g4 fis |
-  g g8[ a] |
-  b4 a8[ g] |
-  a4 g8[ e] |
-  g8. d16 d8. d16 |
-  b'2~ |
-  b8 s \bar"|."
-}
-altoWords = \lyricmode {
-}
-altoWordsII = \lyricmode {
-%\markup\italic
-  \set stanza = #"2. "
-}
-altoWordsIII = \lyricmode {
-  \set stanza = #"3. "
-}
-altoWordsIV = \lyricmode {
-  \set stanza = #"4. "
-}
-altoWordsV = \lyricmode {
-  \set stanza = #"5. "
-  \set ignoreMelismata = ##t
-}
-altoWordsVI = \lyricmode {
-  \set stanza = #"6. "
-  \set ignoreMelismata = ##t
-}
-tenorMusic = \relative c' {
-  d8 d4 e8 |
-  d4 a8 d4 e8 |
-  d4 d,8 d4 e8 |
-  d4 a'8 a4 a8 |
-  
-  a4.~ a~ |
-  a4 s8 s4 d,8 |
-  b'4. g |
-  b g |
-  b d |
-  d4 d8 d4 d8 |
-  
-  d4 d8 d4 d8 |
-  d4 d8 b4 d8 |
-  cis4. cis |
-  c?~ c8 s c |
-  
-  %page2/61
-  b4. g |
-  b \tieDashed g4~ g8 |
-  b4. d4( e8) |
-  d4 d8 d4 d8 |
-  d4 d8 d4 d8 |
-  
-  d4 d8 d4 d8 |
-  cis4. cis |
-  d d,4 d8 |
-  a'4. a4~ a8 |
-  a4. c |
-  
-  b b |
-  b b4~ b8 |
-  a4( gis8) \slurDashed a4( b8) |
-  \slurSolid c4( e8) d4 d8 |
-  d4. b |
-  
-  %page3/62
-  b4. b4 b8 |
-  b4. d4~ d8 |
-  b4. d4~ d8 |
-  cis4. e4( cis8) |
-  b4. b |
-  
-  d \slurDashed d4( a8) |
-  \tieSolid g4.~ g4 g8 |
-  \slurSolid fis4 d'8 d4 e8 |
-  d4.~ d8 d4 |
-  
-  \time 2/4
-  b4-> b4 |
-  b b |
-  c2~ |
-  c4 c |
-  c-> c |
-  c c |
-  b2~ |
-  b4 d |
-  c4.-> e8 |
-  
-  %page4/63
-  e4 c |
-  c-> d |
-  d4. d8 |
-  cis4-> cis |
-  cis cis |
-  c?2~ |
-  c4 d8[ c] |
-  
-  b4-> b |
-  b b |
-  c2~ |
-  c4 c |
-  c-> c |
-  c c |
-  b2~ |
-  b4 d |
-  c e |
-  
-  d4.-> d8 |
-  e4 d |
-  d g,8[ a] |
-  b4 a8[ g] |
-  a4 g8[ e] |
-  g8. d'16 d8. d16 |
-  d2~ |
-  d8 s \bar"|."
-}
-
-tenorWords = \lyricmode {
-}
-
-tenorWordsII = \lyricmode {
-}
-
-tenorWordsIII = \lyricmode {
-}
-
-bassMusic = \relative c' {
-  d8 d4 e8 |
-  d4 a8 d4 e8 |
-  d4 d,8 d4 e8 |
-  d4 a8 d4 e8 |
-  
-  d4.~ d~ |
-  d4 d8\rest d4\rest\fermata d8 |
-  g4. e4( d8) |
-  g4. e4( d8) |
-  g4. d |
-  b'4 b8 b4 b8 |
-  
-  c4 c8 c4 c8 |
-  b4 g8 g4 d8 |
-  e4. g |
-  fis( e8) d\rest d |
-  
-  %page2/61
-  g4. e4( d8) |
-  \slurDashed g4. e4( d8) |
-  g4. g |
-  b4 g8 g4 g8 |
-  b4 b8 bes4 bes8 |
-  
-  a4 a8 a4 a8 |
-  a4. a |
-  d, d4 d8 |
-  fis4. \tieDashed d4~ d8 |
-  fis4. d |
-  
-  g4. d |
-  g d4~ d8 |
-  d'4. d,4~ d8 |
-  d'4. d,4 d8 |
-  g4. d |
-  
-  %page3/62
-  g4. e4 e8 |
-  fis4. fis4~ fis8 |
-  fis4. fis4~ fis8 |
-  fis4. fis |
-  b gis |
-  
-  a fis4( d8) |
-  \tieSolid a4.~ a4 a8 |
-  d4 \slurSolid d8 d4 e8 |
-  d4.~ d8\fermata d4 |
-  
-  \time 2/4
-  g4 d |
-  g d |
-  a'4( d, |
-  a') d, |
-  fis d |
-  fis d |
-  g( d |
-  b') b |
-  c4. c8 |
-  
-  %page4/63
-  c4 c |
-  c b |
-  g4. g8 |
-  e4 e |
-  e a |
-  d,2~ |
-  d4 d |
-  
-  g d |
-  g d |
-  a'( d, |
-  a') d, |
-  fis d |
-  fis d |
-  g( d |
-  b') b |
-  c c |
-  
-  b4. b8 |
-  a4 d, |
-  g g8[ a] |
-  b4 a8[ g] |
-  a4 g8[ e] |
-  g8. d'16 d8. d16 |
-  g,2~ |
-  g8 d8\rest\fermata \bar"|."
-}
-bassWords = \lyricmode {
-}
-
-pianoRH = \relative c' {
-}
-pianoLH = \relative c' {
-}
-
-\score {
-<<
-   \new ChoirStaff <<
-    \new Staff = women <<
-      \new Voice = "sopranos" { \voiceOne << \global \sopMusic >> }
-      \new Voice = "altos" { \voiceTwo << \global \altoMusic >> }
-    >>
-    \new Lyrics = "altos"  \lyricsto "sopranos" \sopWords
-    \new Lyrics = "altosII"  \lyricsto "sopranos" \sopWordsII
-    \new Lyrics = "altosIII"  \lyricsto "sopranos" \sopWordsIII
-    \new Lyrics = "altosIV"  \lyricsto "sopranos" \sopWordsIV
-    \new Lyrics = "altosV"  \lyricsto "sopranos" \sopWordsV
-   \new Staff = men <<
-      \clef bass
-      \new Voice = "tenors" { \voiceOne << \global \tenorMusic >> }
-      \new Voice = "basses" { \voiceTwo << \global \bassMusic >> }
-    >>
-    \new Lyrics \with { alignAboveContext = #"tenors" } \lyricsto "tenors" \tenorWordsIII
-    \new Lyrics \with { alignAboveContext = #"tenors" } \lyricsto "tenors" \tenorWordsII
-    \new Lyrics \with { alignAboveContext = #"tenors" } \lyricsto "tenors" \tenorWords
-  >>
-%    \new PianoStaff << \new Staff { \new Voice { \pianoRH } } \new Staff { \clef "bass" \pianoLH } >>
-  >>
-  
-  \layout {
-    \context {
-      \Lyrics
-      \override LyricText #'font-size = #1.3
-      \override VerticalAxisGroup #'staff-affinity = #0
-      \override LyricText #'X-offset = #center-on-word
-    }
-    \context {
-      \Score
-      \override SpacingSpanner #'base-shortest-duration = #(ly:make-moment 1 8)
-      \override SpacingSpanner #'common-shortest-duration = #(ly:make-moment 1 4)
-    }
-    \context {
-      % Remove all empty staves
-      \Staff \RemoveEmptyStaves \override VerticalAxisGroup #'remove-first = ##t
-      
-      \override VerticalAxisGroup #'staff-staff-spacing =
-      #'((basic-distance . 0)
-         (minimum-distance . 0)
-         (padding . -1)
-         (stretchability . 2))
-    }
-  }
-\header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"With Horse and Hound"}}
-  poet = \markup\oldStyleNum"H. L. D’arcy Jaxone (d. 1915)"
-  composer = \markup\oldStyleNum"Alfred J. Caldicott (1842–1897)"
-  tagline = ""
-}}
-
-
-global = {
-  \key g \major
+  \key ees \major
   \time 3/4
+  \tempo 4 = 126
   \dynamicUp
   %\set crescendoSpanner = #'dashed-line
   %\set midiInstrument = "recorder"
@@ -587,52 +62,176 @@ global = {
   \override DynamicTextSpanner #'style = #'none
 }
 
-sopMusic = \relative c' {
-	g'4\p\< g g |
-  b4.\! a8\> g4 |
-  b\! b\< b |
-  d4.\! c8\> b4 |
-  d\!\f c\dim b\! |
+sopMusicFirst = \relative c' {
+	bes'8[ c] bes[ g] bes[ ees] |
+  d4-. d2-- |
+  c4-. c2-- |
+  bes4-. bes2-- |
+  c8[ bes] g[ c] bes[ g] |
+  aes4 aes2-- |
   
-  a2 b4\rest |
-  a2\p g8 fis |
-  g4 a b |
-  c2\cresc b8\! a |
-  b4 c d |
-  \times 2/3 { e8[^\markup{\dynamic f \italic"rit. e dim."} d c] } b4 a |
-  g2\fermata b4\rest \bar "|."
+  c4-. c2-- |
+  bes4-. bes2-- |
+  bes8[ c] bes[ g] bes[ ees] |
+  d4-. d2-- |
+  c4-. c2-- |
+  bes4-. bes2 -- |
+  c8[ bes] g[ c] bes[ g] |
+  
+  %page2
+  aes4 c,2-- |
+  g'4-. f2-- |
+  ees2. |
+  bes'2.\rest |
+  bes4\rest bes4\rest aes4-. |
+  g4( d) g-. |
+  g2. |
+  
+  aes8[ bes] c4. ees8 |
+  ees4-. d2-- |
+  aes2 aes4 |
+  aes4( g2) |
+  r2. |
+  r4 r4 aes |
+  g( d) g |
+  
+  %page3
+  g2. |
+  aes4-. aes2-> |
+  g4-. g2-> |
+  ees8[ f]( ees4) d |
+  c2. |
+  bes'8[ c] bes[ g] bes[ ees] |
+  d4-. d2-- |
+  
+  c4-. c2-- |
+  bes4-. bes2-- |
+  c8[ bes] g[ c] bes[ g] |
+  aes4-. aes2-- |
+  c4-. c2-- |
+  bes4-. bes2-- |
+  bes8[ c] bes[ g] bes[ ees] |
+  
+  %page4
+  d4-. d2-- |
+  c4-. c2-- |
+  bes4-. bes2-- |
+  c8[ bes] g[ c] bes[ g] |
+  aes4-. c,2-- |
+  g'4-. f2-- |
+  ees2. |
+  
+  \once \override Score.RehearsalMark #'break-visibility = #end-of-line-visible
+  %\once \override Score.RehearsalMark #'self-alignment-X = #RIGHT
+  \once \override Score.RehearsalMark #'extra-offset = #'( 0 . -1 )
+  \mark \markup\musicglyph #"scripts.coda"
+  \break
+}
+sopMusicSecond = \relative c' {
+  \key aes\major
+  \repeat unfold 6 r2. |
+  
+  %page5
+  \repeat unfold 6 r2. |
+  
+  \repeat unfold 4 r2. | \pageBreak
+  c'8.\f c16 f4-> c\< |
+  des8.[ c16]\! bes2-> |
+  
+  %page6 (sop)
+  c8.[ des16] c8 bes aes[ g] |
+  aes16[ bes aes g] f2 |
+  c'4-.\cresc f2->\! |
+  des8.[ c16] bes2-> |
+  c8.[^\markup\italic"rall." des16] c8[ bes] aes[ g] |
+  f2. |
+  
+  <bes aes>8.-.\p <c aes>16 <des aes>4-. <des aes>-. |
+  r2. %bes8.-. c16 des4-. des-. |  %(Tenors sing this line NOT sopranos)
+  c8.[\ff des16]^\markup\italic"molto rall." c8 bes aes[ g] |
+  f2\> ees4\!\fermata |
+  r2. |
+  
+  %page7
+  \repeat unfold 3 r2.
+  aes4-.\mp aes2-> |
+  
+  aes4-. aes2-> |
+  ees4 ees d |
+  d( ees2) |
+  c'4.\mf des8 d ees |
+  f[ ees] aes,4-. aes-. |
+  
+  %page8
+  aes8\< g des'4-.\! des-. |
+  f,8 ees c'4-. c-. |
+  c4. des8 d ees |
+  f ees aes,4-. aes-. |
+  
+  g8[ des'] f,4-. g-. |
+  aes2. \bar"||"
+  r2. |
+  bes2.-> |
+  
+  %page9
+  bes2.-> |
+  bes2.->\fermata \bar":|"
+  \mark"D.C. al Coda"
+  \once \override Score.RehearsalMark #'self-alignment-X = #RIGHT
+  \key ees\major
+  c2->\ff^\tweak #'X-offset #-3
+  ^\markup\musicglyph #"scripts.coda" c4-> |
+  ees2.-> |
+  c,4-> c-> c-> |
+  ees2.->\fermata \bar"|."
 }
 sopWords = \lyricmode {
-  \set stanza = #"1. "
-	If I a bird -- ling were,
-  And with two wings could fly,
-  I’d fly to thee;
+	Come ye where gold of May is shin -- ing,
+  Come ye where buds of flow’rs are twin -- ing;
+  As to the bells of fair -- ies chim -- ing,
+  Trip we thro’ bow’rs of ra -- diant \set associatedVoice = "tenorsFirst" Spring.
   
-  But, as no wings are mine,
-  But, as no wings are mine,
-  That can -- not be.
+  
+  Glad -- some the morn -- ing,
+  %\unset associatedVoice
+  
+  \set associatedVoice = "altosFirst"
+  The land is gay,
+  O -- ver the mead -- ows trip \unset associatedVoice (trip) a -- \set associatedVoice = "basses" way;
+  
+  
+  Ech -- oes the brook -- let
+  
+  \set associatedVoice = "altosFirst"
+  by wood and lea: “Sing, sing, O heart, be glad with me!”
+  
+  \unset associatedVoice
+  Come ye where gold of May is shin -- ing,
+  Come ye where buds of flow’rs are twin -- ing,
+  As to the bells of fair -- ies chim -- ing,
+  Trip we thro’ bow’rs of ra -- diant Spring.
+  
+  
+  Light of Day re -- turn -- eth, glo -- ry of Spring burn -- eth;
+  Joy notes peal -- ing, gay mu -- sic make.
+  Light re -- turn -- eth,
+  %Light re -- turn -- eth,
+  Glo -- ry of Spring burn -- eth;
+  
+  “Wel -- come, Wel -- come, Wel -- come the May!”
+  Gai -- ly is the lark sing -- ing,
+  Up -- ward wing -- ing, glad -- ness ring -- ing,
+  Un -- to all the mes -- sage bring -- ing:
+  “Wel -- come the May!”
+  
+  Come, oh, come.
+  “Sing, O heart! be glad with me!”
 }
 
 sopWordsII = \lyricmode {
-  \set stanza = #"2. "
-  Though far a -- way from thee,
-  Dream -- ing I’m e’er with thee,
-  Whis -- p’ring to thee;
-  
-  But, when I wake at last,
-  But, when I wake at last,
-  Then I’m a -- lone.
 }
 
 sopWordsIII = \lyricmode {
-  \set stanza = #"3. "
-  There is no hour at night
-  When thy dear im -- age bright
-  Strays from my heart.
-  
-  Thou’st said ten thou -- sand times,
-  Thou’st said ten thou -- sand times,
-  That mine thou art.
 }
 
 sopWordsIV = \lyricmode {
@@ -643,22 +242,169 @@ sopWordsV = \lyricmode {
   \set stanza = #"5. "
 }
 
-altoMusic = \relative c' {
-  d4 d d |
-  g4. fis8 g4 |
-  g g g |
-  b4. a8 g4 |
-  g fis g |
+altoMusicFirst = \relative c' {
+  g'4 ees g |
+  aes4-. aes2-- |
+  aes4-. aes2-- |
+  g4-. g2-. |
+  ees4 ees ees |
+  f4-. f2-- |
   
-  fis2 s4 |
-  d2 d8 d |
-  d4 fis g |
-  g2 g8 g |
+  aes4-. aes2-- |
+  g4-. g2-- |
+  g4 ees g |
+  aes4-. aes2-- |
+  aes4-. aes2-- |
+  g4-. g2-- |
   g4 g g |
-  a g fis |
-  d2 s4 \bar "|."
+  
+  %page2 (alto)
+  f4-. c2-- |
+  c4-. d2-- |
+  ees2.-- |  
+  s2. |
+  s4 s ees4-. |
+  d2-- d4-. |
+  ees8[ d]( c2) |
+  
+  f8[ g] aes4. c8 |
+  c4-. bes2-- |
+  c,8[-> d] ees4.-> d8 |
+  c4->( bes2) |
+  r2. |
+  r4 r ees4-. |
+  d2-- d4-. |
+  
+  %page3 (alto)
+  ees8[ d]( c4) g'4-. |
+  f4-. f2-> |
+  c4-. c2-> |
+  b4-. b2 |
+  c2. |
+  g'4 ees g |
+  aes4-. aes2-- |
+  
+  aes4-. aes2-- |
+  g4-. g2-- |
+  ees4 ees ees |
+  f4-. f2-- |
+  aes4-. aes2-- |
+  g4-. g2-- |
+  g4 ees g |
+  
+  %page4 (alto)
+  aes4-. aes2-- |
+  aes4-. aes2-- |
+  g4-. g2-- |
+  g4 g g |
+  f4-. c2-- |
+  c4-. d2-- |
+  ees2. |
+}
+altoMusic = \relative c' {
+  \repeat unfold 48 s2. |
+  
+  \key aes\major
+  \tempo 4 = 104
+  c4.\(\mp des8 d ees |
+  f[ ees] aes4\) aes4-. |
+  aes8\( g des'4-.\) f, |
+  f8[\( ees] c'4-.\) c, |
+  c4.\(\cresc des8\! d[ ees] |
+  f[ ees] aes4\) aes |
+  
+  %page5 (alto)
+  g8\( bes bes,4\) f'-. |
+  f-.\> ees->( des)\! |
+  c4.\(\mp des8 d ees |
+  f[ ees] aes4\) aes4-. |
+  aes8[\( g] des'4-.\) f,-. |
+  f8[\( ees] c'4-.\) c,-. |
+  
+  c4.\(\cresc des8\! d ees |
+  f[ ees] aes4-.\) aes-. |
+  g8[ des']( f,4-.) g-. |
+  aes2.-- |
+  aes8. aes16 f4-> f |
+  f4-. f2-> |
+  
+  %page6 (alto)
+  c'8.[ des16] c8 bes aes[ g] |
+  aes16[ bes aes g] f2 |
+  aes4-. c2-> |
+  f,4-. f2-> |
+  f4 e c |
+  c2. |
+  
+  <f des>8.-. <f c>16 <f bes,>4-. q4-. |
+  r2. |
+  c'8.[ des16] c8 bes aes[ g] |
+  f2 des4 |
+  c4.\(^\mp des8^\markup\italic"a tempo" d ees |
+  
+  %page7 (alto)
+  f8[ ees] aes4-.\) aes-. |
+  aes8\( g des'4-.\) des-. |
+  f,8\( ees c'4-.\) c-. |
+  c,4.\( des8 d ees |
+  
+  f ees aes4-.\) aes-. |
+  g8->[ bes] \parenthesize bes,4-> f'-> | %parenthetic note MUST be checked
+  f4->( ees des) |
+  c4.\( des8 d ees |
+  f[ ees] aes4-.\) aes-. |
+  
+  %page8 (alto)
+  aes8\( g des'4-.\) des-. |
+  f,8\( ees c'4-.\) c-. |
+  c,4.\( des8 d ees |
+  f ees aes4-.\) aes-. |
+  
+  g8[ des'] f,4-. g |
+  aes2. |
+  r2. |
+  aes2.-> |
+  
+  %page9
+  bes,8-> bes-> c4->\< d-> |
+  <d g>2->\!( <d f>4\fermata) \bar":|"
+  \key ees\major
+  ees8[ f] ees[ c] ees[ aes] |
+  g2.-> |
+  <aes, \tweak #'font-size #-3 aes'>4-> aes-> aes-> |
+  bes2.-> \bar"|."
 }
 altoWords = \lyricmode {
+%  Come ye where gold of May is shin -- ing,
+%  Come ye where buds of flow’rs are twin -- ing;
+%  As to the bells of fair -- ies chim -- ing,
+%  Trip we thro’ bow’rs of ra -- diant Spring.
+%  The land is gay,
+%  O -- ver the mead -- ows trip, trip a -- way;
+%  By wood and lea:
+%  “Sing, sing, O heart, be glad with me!”
+%  Come ye where gold of May is shin -- ing,
+%  Come ye where buds of flow’rs are twin -- ing,
+%  As to the bells of fair -- ies chim -- ing,
+%  Trip we thro’ bow’rs of ra -- diant Spring.
+  
+  
+  Trip we, oh, so light -- ly, where dew -- y grass is sway -- ing,
+  Where ’mid the fair blos -- som the but -- ter flies are stray -- ing.
+  ’Tis the hour of play -- ing; all voi -- ces are say -- ing:
+  “Come, come ye forth a May -- ing; to joy a -- wake!”
+  Light of Day re -- turn -- eth, glo -- ry of Spring burn -- eth;
+  Joy -- notes peal -- ing, gay mu -- sic make.
+  Light re -- turn -- eth,
+  Glo -- ry of Spring burn -- eth;
+  
+  Gai -- ly is the lark sing -- ing, Up -- ward wing -- ing, glad -- ness ring -- ing,
+  Un -- to all the mes -- sage bring -- ing: “Wel -- come the May!”
+  Gai -- ly is the lark sing -- ing,
+  Up -- ward wing -- ing, glad -- nes ring -- ing,
+  Un -- to all the mes -- sage bring -- ing: “Wel -- come the May!”
+  Come, light -- ly trip -- ping, come.
+  “Sing, sing, O heart! be glad with me!”
 }
 altoWordsII = \lyricmode {
 %\markup\italic
@@ -678,23 +424,173 @@ altoWordsVI = \lyricmode {
   \set stanza = #"6. "
   \set ignoreMelismata = ##t
 }
-tenorMusic = \relative c' {
-  b4 b b |
-  d4. c8 b4 |
-  d d d |
-  d4. d8 d4 |
-  d d d |
+tenorMusicFirst = \relative c' {
+  %page1 (82) tenors
+  ees4 ees ees |
+  bes4-. bes2-- |
+  d4-. d2-- |
+  ees4-. ees2-- |
+  ees4 ees ees |
+  c4-. c2-- |
   
-  d2 s4 |
-  c2 b8 a |
-  g4 d' d |
-  e2 d8 c |
-  d4 d d |
-  e d c |
-  b2 s4 \bar"|."
+  d4-. d2-- |
+  ees4-. ees2-- |
+  ees4 ees ees |
+  bes4-. bes2-- |
+  d4-. d2-- |
+  ees4-. ees2-- |
+  e4 c e |
+  
+  %page2 (83) tenors
+  c4 aes2 |
+  bes4-. aes2-- |
+  g2. |  
+  g4-> c-> g-> |
+  aes8[ g] f4-. c'-. |
+  b2-- g4-. |
+  g8[ f]( ees2) |
+  
+  f2-> f4-. |
+  bes-. bes2-> |
+  r2. r2. |
+  g4->\f c-> g-> |
+  aes8[ g] f4-. c'-. |
+  b2-- g4-. |
+  
+  %page3 (84) tenors
+  g8[ f]( ees4) c'-. |
+  c8[ aes]( f4) c' |
+  c8[ g]( ees4) c'4 |
+  g2 f4 |
+  ees'2. |
+  ees4 ees ees |
+  bes4-. bes2-- |
+  
+  d4-. d2-- |
+  ees4-. ees2-- |
+  ees4 ees ees |
+  c4-. c2-- |
+  d4-. d2-- |
+  ees4-. ees2-- |
+  ees4 ees ees |
+  
+  %page 4 (85) tenors
+  bes4-. bes2-- |
+  d4-. d2-- |
+  ees4-. ees2-- |
+  e4 c e |
+  c4 aes2-- |
+  bes4-. aes2-- |
+  g2.
+}
+tenorMusic = \relative c' {
+  \repeat unfold 48 s2. |
+  
+  \key aes\major
+  aes4.\( bes8 b c |
+  des4 c\) c-. |
+  bes8\( des f4-.\) des-. |
+  aes8[\( c] ees4-.\) aes,-. |
+  aes4.\( bes8 b[ c] |
+  des4 c-.\) c-. |
+  
+  %page 5 (86) tenors
+  bes8\( bes g4-.\) aes4-. |
+  aes4-. g2-- |
+  aes4.\( bes8 b c |
+  des4 c\) c4-. |
+  bes8[\( des] f4-.\) des-. |
+  aes8[ c] ees4-. aes,-. |
+  
+  aes4.\( bes8 b c |
+  des4 c-.\) c-. |
+  des4-. des2-> |
+  c2.-- |
+  c8. c16 c4-> c |
+  bes4-. bes2-> |
+  
+  %page 6 (87) tenors
+  c8.[ des16] c8 bes aes[ g] |
+  aes16[ bes aes g] f2 |
+  f4-. f2-> |
+  bes4-. bes2-> |
+  aes8.[ bes16] c8[ des] c[ bes] |
+  aes2. |
+  
+  r2. |
+  <bes aes>8. <c aes>16 <des aes>4-. q-. |
+  c8.[ des16] c8 bes aes[ g] |
+  f2 bes4 |
+  ees4-. ees2->( |
+  
+  %page 7 (88) tenors
+  des8[) ees]( c2) |
+  des4--( f2->)( |
+  c4--)( ees2->) |
+  ees4-. ees2->\( |
+  
+  des8[ ees] c2\) |
+  bes4( g)( f)( |
+  aes)( g2) |
+  aes4.\( bes8 b c |
+  des4 c-.\) c-. |
+  
+  %page 8 (89) tenors
+  bes8\( des f4-.\) f-. |
+  aes,8\( c ees4-.\) ees4-. |
+  aes,4.\( bes8 b c |
+  des des c4-.\) c-. |
+  
+  des4-. des2-> |
+  c2. |
+  r2. |
+  ees8-> ees-> d4-> d-> |
+  
+  %page 9 (90) tenors
+  d,4->( ees) f-> |
+  aes2.-> \bar":|"
+  \key ees\major
+  aes2-> aes4-> |
+  bes2->( ees,4) |
+  ees8[ f] ees[ c] ees[ aes] |
+  g2.-> \bar"|."
 }
 
+tenorWordsFirst = \lyricmode {
+  \repeat unfold 44 \skip1
+  O’er
+}
 tenorWords = \lyricmode {
+%  Come ye where gold of May is shin -- ing,
+%  Come ye where buds of flow’rs are twin -- ing;
+%  As to the bells of fair -- ies chim -- ing,
+%  Trip we thro’ bow’rs of ra -- diant Spring.
+%  Glad -- some the morn -- ing, the land is gay,
+%  O’er the mead -- ows,
+%  Ech -- oes the brook -- let by wood and lea:
+%  “Sing, sing, O heart, be glad with me!”
+  
+%  Come ye where gold of May is shin -- ing,
+%  Come ye where buds of flow’rs are twin -- ing,
+%  As to the bells of fair -- ies chim -- ing,
+%  Trip we thro’ bow’rs of ra -- diant Spring.
+  
+  Trip we, oh, so light -- ly, where dew -- y grass is sway -- ing,
+  Where ’mid the fair blos -- som the but -- ter -- flies are stray -- ing.
+  ’Tis the hour of play -- ing; all voi -- ces are say -- ing:
+  “Come, come ye forth a -- May -- ing; to joy a -- wake!”
+  Light of Day re -- turn -- eth, glo -- ry of Spring burn -- eth;
+  Joy -- notes peal -- ing, gay mu -- sic make.
+  Light re -- turn -- eth,
+  Glo -- ry of Spring burn -- eth;
+  \markup\italic"Tenors humming" _
+  \repeat unfold 6 \skip 1
+  Gai -- ly is the lark sing -- ing,
+  Up -- ward wing -- ing, glad -- ness ring -- ing,
+  Un -- to all the mes -- sage bring -- ing:
+  “Wel -- come May!”
+  Light -- ly trip -- ping, come, oh, come.
+  “Sing, O heart! be glad with me!”  
 }
 
 tenorWordsII = \lyricmode {
@@ -703,22 +599,168 @@ tenorWordsII = \lyricmode {
 tenorWordsIII = \lyricmode {
 }
 
-bassMusic = \relative c' {
-  g4 g g |
-  g4. g8 g4 |
-  g g g |
-  g4. g8 g4 |
-  b4 a g |
+bassMusicFirst = \relative c' {
+  ees,4 g ees |
+  f2 bes,4 |
+  bes'2 bes,4 |
+  ees2 <ees ees,>4 |
+  g ees g |
+  f2 bes,4 |
   
-  d2 d4\rest |
-  d2 d8 c |
-  b4 a g |
-  g'2 g8 g |
-  g4 a b |
-  c4 d d, |
-  g2\fermata d4\rest \bar"|."
+  bes'2 bes,4 |
+  ees2 <ees ees,>4 |
+  ees g ees |
+  f2 bes,4 |
+  bes'2 bes,4 |
+  ees2 des4 |
+  c e c |
+  
+  %page2 (83) bass
+  f2 f4 |
+  bes2 bes,4 |
+  ees2. |
+  g4-> c-> g-> |
+  aes8[ g] f4-. f-. |
+  g2-- b,4-. |
+  c2. |
+  
+  r2. r2. |
+  bes2-> bes4-. |
+  ees2.-> |
+  g4-> c-> g-> |
+  aes8[ g] f4-. f-. |
+  g2-- b,4-. |
+  
+  %page3 (84) bass
+  c2( ees4) |
+  f4-. f2-> |
+  ees4-. ees2-> |
+  d4-. g,2-> |
+  c2. |
+  ees4 g ees |
+  f2 bes,4 |
+  
+  bes'2 bes,4 |
+  ees2 <ees ees,>4 |
+  g ees g |
+  f2 bes,4 |
+  bes'2 bes,4 |
+  ees2 <ees ees,>4 |
+  ees g ees |
+  
+  %page4 (85) bass
+  f2 bes,4 |
+  bes'2 bes,4 |
+  ees2 des4 |
+  c e c |
+  f2 f4 |
+  bes2 bes,4 |
+  ees2. |
+}
+bassMusicSecond = \relative c' {
+  
+  \key aes\major
+  aes4-. aes2->~ |
+  aes2. |
+  ees2.\( |
+  aes,\) |
+  aes'4-. aes2~ |
+  aes2. |
+  
+  %page5 (86) bass
+  bes4\( bes, d |
+  ees2.\) |
+  aes4-. aes2~ |
+  aes2. |
+  ees2.\( |
+  aes,\) |
+  
+  aes'4-. aes2~ |
+  aes2. |
+  bes4~ <bes ees,>2( |
+  <aes aes,>2.) |
+  f8. g16 aes8[ f] g[ aes] |
+  bes8.[ c16] des8[ bes c des] |
+  
+  %page6 (87) bass
+  c8.[ des16] c8 bes aes8[ g] |
+  aes16[ bes aes g] f2 |
+  r8 f16[ g aes8 f] g[ aes] |
+  r8 bes16[ c des8 bes] c[ des] |
+  c4 c, e |
+  f2. |
+  
+  r2. |
+  <f des>8.-. <f c>16 <f bes,>4-. q-. |
+  <c c'>8.-.[ <des des'>16] <c c'>8 <bes bes'> <aes aes'>[ <g g'>] |
+  <f f'>2 <g g'>4\fermata |
+  aes4.\( bes8 b c |
+  
+  %page7 (88) bass
+  des8[ c] aes4\)-. aes-. |
+  bes4-. <ees ees,>2-> |
+  aes,4-. aes2-> |
+  aes4.\( bes8 b c |
+  
+  des c aes4-.\) aes-. |
+  bes4-> bes-> bes-> |
+  <bes ees,>2. |
+  aes4-. aes2-> |
+  aes'2.( |
+  
+  %page8 (89) bass
+  ees2.) |
+  aes,2. |
+  aes'4-. aes2->~ |
+  aes2. |
+  
+  bes4-. <bes ees,>2-> |
+  <aes aes,>2. |
+  bes8-> bes-> bes,4-> bes-> |
+  bes'2.-> |
+  
+  %page9 (90) bass
+  bes,2.-> |
+  bes2.->\fermata \bar":|"
+  \key ees\major
+  aes'4-> c-> aes-> |
+  ees2. |
+  aes,4-> c-> aes-> |
+  <ees ees'>2.->\fermata \bar"|."
 }
 bassWords = \lyricmode {
+%  Come ye where gold of May is shin -- ing,
+%  Come ye where buds of flow’rs are twin -- ing;
+%  As to the bells of fair -- ies chim -- ing,
+%  Trip we thro’ bow’rs of ra -- diant Spring.
+   \repeat unfold 35 \skip1
+
+%  Glad -- some the morn -- ing, the land is gay,
+%  Trip a -- way;
+%  Ech -- oes the brook -- let by wood and lea:
+%  “Sing, O heart, be glad with me!”
+   \repeat unfold 28 \skip1
+  
+%  Come ye where gold of May is shin -- ing,
+%  Come ye where buds of flow’rs are twin -- ing,
+%  As to the bells of fair -- ies chim -- ing,
+%  Trip we thro’ bow’rs of ra -- diant Spring.
+   \repeat unfold 35 \skip1
+  
+  \markup\italic"Basses humming" _
+  \repeat unfold 15 \skip 1
+  Light of Day re -- turn -- eth, glo -- ry of Spring burn -- eth;
+  Joy -- notes peal -- ing, gay mu -- sic make.
+  Ligh re -- turn -- eth,
+  Glo -- ry of Spring burn -- eth;
+  Gai -- ly is the lark sing -- ing,
+  Glad -- ness ring -- ing,
+  Un -- to all the mes -- sage bring -- ing:
+  “Wel -- come the May!
+  Wel -- come, Wel -- come, Wel -- come,
+  Wel -- come May!”
+  Light -- ly trip -- ping, come, oh, come.
+  “Sing, sing, O heart! be glad with me!”
 }
 
 pianoRH = \relative c' {
@@ -729,32 +771,37 @@ pianoLH = \relative c' {
 \score {
 <<
    \new ChoirStaff <<
-    \new Staff = women <<
-      \new Voice = "sopranos" { \voiceOne << \global \sopMusic >> }
-      \new Voice = "altos" { \voiceTwo << \global \altoMusic >> }
+    \new Staff = sopranos <<
+      \new Voice = "sopranos" { \global \voiceOne \sopMusicFirst \oneVoice \sopMusicSecond }
+      \new Voice = "altosFirst" { \global \voiceTwo \altoMusicFirst }
     >>
-    \new Lyrics = "altos"  \lyricsto "sopranos" \sopWords
-    \new Lyrics = "altosII"  \lyricsto "sopranos" \sopWordsII
-    \new Lyrics = "altosIII"  \lyricsto "sopranos" \sopWordsIII
-    \new Lyrics = "altosIV"  \lyricsto "sopranos" \sopWordsIV
-    \new Lyrics = "altosV"  \lyricsto "sopranos" \sopWordsV
-   \new Staff = men <<
+    \new Lyrics = "sopranos"
+   \new Staff <<
+      \new Voice = "altos" { \global \altoMusic }
+    >>
+    \new Lyrics = "altos"  \lyricsto "altos" \altoWords
+    
+   \new Staff = tenors <<
+      \clef "treble_8"
+      \new Voice = "tenors" { \global \tenorMusic }
+    >>
+    \new Lyrics = "tenors" \lyricsto "tenors" \tenorWords
+    \new Staff = basses <<
       \clef bass
-      \new Voice = "tenors" { \voiceOne << \global \tenorMusic >> }
-      \new Voice = "basses" { \voiceTwo << \global \bassMusic >> }
+      \new Voice = "tenorsFirst" { \global \voiceOne \tenorMusicFirst }
+      \new Voice = "basses" { \global \voiceTwo \bassMusicFirst \oneVoice \bassMusicSecond }
     >>
-    \new Lyrics \with { alignAboveContext = #"tenors" } \lyricsto "tenors" \tenorWordsIII
-    \new Lyrics \with { alignAboveContext = #"tenors" } \lyricsto "tenors" \tenorWordsII
-    \new Lyrics \with { alignAboveContext = #"tenors" } \lyricsto "tenors" \tenorWords
+    \new Lyrics = "basses" \lyricsto "basses" \bassWords
+    \context Lyrics = "sopranos" \lyricsto "sopranos" \sopWords
+    \context Lyrics = "tenors" \lyricsto "tenorsFirst" \tenorWordsFirst
   >>
-%    \new PianoStaff << \new Staff { \new Voice { \pianoRH } } \new Staff { \clef "bass" \pianoLH } >>
-  >>
+>>
   
   \layout {
     \context {
       \Lyrics
       \override LyricText #'font-size = #1.3
-      \override VerticalAxisGroup #'staff-affinity = #0
+      %\override VerticalAxisGroup #'staff-affinity = #0
       \override LyricText #'X-offset = #center-on-word
     }
     \context {
@@ -768,14 +815,14 @@ pianoLH = \relative c' {
       
       \override VerticalAxisGroup #'staff-staff-spacing =
       #'((basic-distance . 0)
-         (minimum-distance . 0)
+         (minimum-distance . 8)
          (padding . -1)
          (stretchability . 2))
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"The Flight of Love"}}
-  composer = \markup\oldStyleNum"Folk Song"
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Song of Spring"}}
+  composer = \markup\oldStyleNum"Arthur Pearson (1866–1936)"
   tagline = ""
 }}
 

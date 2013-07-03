@@ -42,7 +42,7 @@
 }
 #(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
 global = {
-  \key g \major
+  \key ees \major
   \time 4/4
   \dynamicUp
   %\set crescendoSpanner = #'dashed-line
@@ -53,65 +53,53 @@ global = {
 
 sopMusic = \relative c' {
 	\partial 4
-  d4 |
-  b' b b b |
-  \times 2/3 {b8[ a] d,} a'2 d4 |
-  d b d8.[ c16] \times2/3{a8[ e fis]} |
-  g2 b4\rest \bar"" d,4 |
+  bes4\mf |
+  ees4. f8 aes[ g] f ees |
+  g4 bes ees d8. ees16 |
+  c4. bes8 g8.[ aes16 bes8] g |
+  f4..( ees16) ees4 bes |
+  ees4. f8 aes[ g] f ees |
   
-  b'4 b b b |
-  \times 2/3 {b8[ a] d,} a'2 d4 |
-  d b cis8[ d16 cis]( b8) a |
-  a4 ais b cis8[ d] |
+  g4 bes ees d8. ees16 |
+  c4 bes g8.[ aes16 bes8] g |
+  f2 ees4 << bes4\rest\f { s8 \teeny bes'8 \normalsize} >> |
+  \slurDashed
+  ees4-> d-> c-> bes8\rest d16( ees) |
+  d4-> c-> bes-> bes8\rest b |
   
-  d[ fis,] b[ a] \times 2/3{ais8[ b cis,](} fis8.)\fermata e16 |
-  d2 b'4\rest d,4 |
-  a' a a a |
-  \times 2/3 {a8[ g] b,} d2 g4 |
-  
-  fis4 fis g( c8) b | % TODO put in a turn here.
-  a2\fermata b4\rest d, |
-  b' b b b |
-  \times 2/3 {b8[ a] d,} a'2 d4 |
-  d b d( c8) a |
-  
-  bes2 \bar"" g4( a) |
-  b4. b8 c4. a8 |
-  dis2( e4)\fermata g,8[ a] |
-  b4.. a16 c4.. b16\fermata |
-  g2. \bar"|."
+  c4. g8 g4 b |
+  \slurSolid
+  c4.( d8) ees4 ees\fermata |
+  \slurDashed
+  ees,4. f8 aes[ g] f( ees) |
+  g4 bes ees\fermata d8( ees) |
+  c4. bes8 g8.[ aes16 bes8] g |
+  f2 ees4 \bar "|."
 }
 sopWords = \lyricmode {
   \set stanza = #"1. "
-	The heart bowed down by weight of woe,
-  To weak -- est hopes will cling,
-  To thought and im -- pulse while they flow,
-  That can no com -- fort bring, that can, that can no com -- fort bring;
-  To those ex -- cit -- ing scenes will blend,
-  O’er plea -- sure’s path -- way thrown;
-  
-  \set associatedVoice = "altos"
-  But mem -- ’ry is the on -- ly friend
-  That grief can call its own,
-  That grief can call its own,
-  That grief can call its own.
+	The min -- strel boy to the war is gone,
+  In the ranks of death you’ll find him;
+  His fa -- ther’s sword he hath gird -- ed on,
+  And his wild harp slung __ be -- hind him.
+  "" “Land of song!” \set ignoreMelismata = ##t said the war -- rior bard,
+  \unset ignoreMelismata
+  “Tho’ all the world be -- tray __ thee,
+  One sword at least thy __ rights shall guard,
+  One __ faith -- ful harp __ shall praise thee.”
 }
 
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
-  The mind will in its worst de -- spair
-  Still pon -- der o’er the past,
-  On mo -- ments of de -- light that were
-  Too beau -- ti -- ful to last,
-  that were too beau -- ti -- ful __ to last;
-  To long de -- part -- ed years ex -- tend,
-  Its vis -- ions with them flown;
-  
-  \set associatedVoice = "altos"
-  For mem -- ’ry is the on -- ly friend
-  That grief can call its own,
-  That grief can call its own,
-  That grief can call its own.
+  The min -- strel fell, but the foe -- man’s chain
+  Could not bring his proud soul un -- der;
+  The harp he lov’d nev -- er spoke a -- gain,
+  For he tore its chords a -- sun -- der,
+  And said, “No chains shall sul -- ly thee,
+  Thou soul of love and brave -- ry!
+  \set ignoreMelismata = ##t
+  Thy songs were made _ for the pure and free,
+  They shall nev -- er sound _ _ in slave -- ry.”
 }
 
 sopWordsIII = \lyricmode {
@@ -127,33 +115,28 @@ sopWordsV = \lyricmode {
 }
 
 altoMusic = \relative c' {
-  d4 |
-  d d d d |
-  \times 2/3 {d4 d8} d2 d4 |
-  d d d c |
-  b2 s4 d |
+  \partial 4
+  bes4 |
+  ees4. ees8 ees4 bes8 bes |
+  ees4 f ees ees8. ees16 |
+  ees4. ees8 ees4. ees8 |
+  d2 ees4 bes |
+  ees4. ees8 ees4 bes8 bes |
   
-  d d d d |
-  \times 2/3 {d4 d8} d2 fis4 |
-  g g g4. g8 |
-  fis4 e d8[ e] eis4 |
+  ees4 f ees ees8. ees16 |
+  ees4 ees ees4. ees8 |
+  d2 ees4 s8 \teeny g \normalsize |
+  g4 f ees s8 \slurDashed f16( ees) |
+  f4 ees d s8 f |
   
-  fis8[ d] fis4 \times2/3 {e4 cis8(} cis8.) cis16 |
-  d2 s4 d |
-  d d d d |
-  \times 2/3 {d4 d8} d2 d4 |
-  
-  d d d( fis8) g |
-  fis2 s4 d |
-  d d d d |
-  \times 2/3 {d4 d8} d2 fis4 |
-  g g g( e8) ees |
-  
-  ees2 cis2 |
-  d4. d8 e4. e8 |
-  fis2( e4) e |
-  d4.. fis16 fis4.. fis16 |
-  g2. \bar"|."
+  ees4. ees8 d4 d |
+  \slurSolid
+  c4.( f8) ees4 ees |
+  \slurDashed
+  ees4. bes8 bes4 d8( ees) |
+  ees4 f ees ees8( ees) |
+  ees4. ees8 ees4. ees8 |
+  d2 ees4 \bar"|."
 }
 altoWords = \lyricmode {
 }
@@ -176,33 +159,28 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
-  b4 |
-  b b b b |
-  \times 2/3 {c4 c8} c2 c4 |
-  b g fis \times2/3{fis8[ g a]} |
-  g2 s4 b |
+  \partial 4
+  g4 |
+  g4. aes8 c[ bes] aes g |
+  bes4 bes g bes8. bes16 |
+  aes4. bes8 bes4. bes8 |
+  bes4( aes) g g |
+  g4. aes8 c[ bes] aes g |
   
-  b b b b |
-  \times 2/3 {c4 c8} c2 c4 |
-  b d e4. e8 |
-  d4 cis b b |
+  bes4 bes g bes8. bes16 |
+  aes4 bes bes4. bes8 |
+  \slurSolid
+  bes4.( aes8) g4 s8 \teeny bes \normalsize |
+  bes4 b c s8 \slurDashed b16( c) |
+  bes?4 a bes s8 d |
   
-  a d cis( a8.) g16 |
-  fis2 s4 fis |
-  c' c c c |
-  \times 2/3 {b4 b8} b2 b4 |
-  
-  a a b( a8) d |
-  d2 s4 c |
-  b b b b |
-  \times 2/3 {c4 c8} c2 a4 |
-  b d b( c8) c |
-  
-  bes2 bes |
-  b?4. g8 c4. c8 |
-  b4( a g) g |
-  g4.. d'16 d4.. d16 |
-  b2. \bar"|."
+  c4. c8 b4 g |
+  \slurSolid g4.( b8) c4 c |
+  \slurDashed bes4. aes8 f[ g] aes( g) |
+  bes4 bes g bes8( bes) |
+  aes4. bes8 bes4. bes8 |
+  \slurSolid
+  bes4.( aes8) g4 \bar"|."
 }
 
 tenorWords = \lyricmode {
@@ -215,33 +193,27 @@ tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  g4 |
-  g g g g |
-  \times 2/3 {fis4 fis8} fis2 d4 |
-  g g d d |
-  g,2 d'4\rest g |
+  \partial 4
+  ees,4 |
+  ees4. ees8 ees4 ees8 ees |
+  ees4 d c g8. g16 |
+  aes4. g8 ees'8.[ f16 g8] ees |
+  bes2 <\tweak #'font-size #-3 ees ees,>4 ees |
+  ees4. ees8 ees4 ees8 ees |
   
-  g g g g |
-  \times 2/3 {fis4 fis8} fis2 d4 |
-  g g e4. cis8 |
-  d4 fis g gis |
+  ees4 d c g8. g16 |
+  aes4 g ees'8.[ f16 g8] ees |
+  bes2 ees4 << d4\rest {s8 \teeny ees8} >> \normalsize |
+  \slurDashed
+  ees4 g c, d8\rest g16( c,) |
+  f4 < \tweak #'font-size #-3 f f,> bes, d8\rest g, |
   
-  a a a,~ a8.\fermata a16 |
-  d2 d4\rest d |
-  fis fis fis fis |
-  \times 2/3 {g4 g8} g2 g4 |
-  
-  d d d4. d8 |
-  d2\fermata d4\rest d |
-  g g g g |
-  \times 2/3 {fis4 fis8} fis2 d4 |
-  g g g4. g8 |
-  
-  g2 ees |
-  d4. d8 c4. c8 |
-  b2( c4)\fermata c |
-  d4.. d16 d4.. d16\fermata |
-  g,2. \bar"|."
+  c4. ees8 g4 f |
+  \slurSolid ees4.( d8) c4 g'\fermata |
+  \slurDashed g4. f8 d[ ees] bes( ees) |
+  ees4 d c\fermata g8( g) |
+  aes4. g8 ees'8.[ f16 g8] ees |
+  bes2 ees4 \bar"|."
 }
 bassWords = \lyricmode {
 }
@@ -299,8 +271,9 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"The Heart Bowed Down"}}
-  composer = \markup\oldStyleNum"Michael William Balfe (1808–1870)"
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"The Minstrel Boy"}}
+  poet = \markup\oldStyleNum"Thomas Moore (1779–1852)"
+  composer = \markup\oldStyleNum{"Irish Air," \italic"The Moreen"}
   tagline = ""
 }}
 

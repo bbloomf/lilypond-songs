@@ -21,7 +21,7 @@
   outer-margin = 0.75\in
   top-margin = 0.26\in
   bottom-margin = 0.25\in
-  first-page-number = #134
+  first-page-number = #51
   print-first-page-number = ##t
   headerLine = ""
   oddHeaderMarkup = \markup\fill-line{
@@ -42,75 +42,72 @@
 }
 #(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
 global = {
-  \key aes \major
-  \time 6/8
+  \key f \major
+  \time 4/4
   \dynamicUp
   %\set crescendoSpanner = #'dashed-line
   %\set midiInstrument = "recorder"
   \autoBeamOff
   \override DynamicTextSpanner #'style = #'none
+  \tieDashed
 }
 
 sopMusic = \relative c' {
-	\partial 8
-  ees16[ ees] |
-  c'8 bes aes aes g aes |
-  bes aes f ees b'\rest c,16[ des] |
-  ees aes b8\rest ees, ees16 bes' b8\rest ees, |
+	\partial 8 |
+  c8 |
+  f4 f8. g16 a4. f8 |
+  g8 a8 g8 f d4. c16~ c |
+  f4 f8. e16 f4 a16 c8. |
+  d2 c4. c8 |
   
-  ees16 aes~ aes4 b4\rest ees,16 ees |
-  c'8 bes aes aes g aes |
-  bes aes f ees b'\rest aes16[ aes] |
-  g bes b8\rest g f16 bes b8\rest f |
+  d4 d8. c16 a4 a8 c |
+  bes16 a8. g f16 d4.\fermata c16[ d] |
+  f4 a16 c8. d4 c8 a |
+  g2 f2\fermata | \break
   
-  g16 ees~ ees4 b'\rest ees,16[ f] |
-  ges8. aes16 ges8 f8. e16 f8 |
-  c' bes a bes b\rest ees,16[ f] |
-  ges8. aes16 ges8 f8. e16 f8 |
   
-  c' bes a bes b\rest bes16 c |
-  des8. c16 bes8 aes f aes |
-  c8. bes16 aes8 bes\fermata b8\rest ees, |
-  ees16 aes b8\rest ees, f16 aes b8\rest f |
-  ees16 aes~ aes4 b4\rest \bar"|."
+  f4 f8. g16 a4. g16 f |
+  g8. a16 g8 f d4. b'8\rest |
+  f4 f8. e16 f16 f8. a8 c |
+  d2 c2 |
+  
+  d4 d8. c16 a4 a8 c |
+  bes16( a8.) g8. f16 d4.\fermata c16[ d] |
+  f4 a16 c8. d4 c8 a |
+  \tieSolid g2 f~ |
+  f4 \bar"|."
 }
 sopWords = \lyricmode {
-  \set stanza = #"1. "
   \set ignoreMelismata = ##t
-	On a tree by a riv -- er a lit -- tle tom -- tit
-  Sang, _ “Wil -- low, tit -- wil -- low, tit -- wil -- low!” _
-  And I said to him, “Dick -- y -- bird, why do you sit
-  Sing -- ing, ‘Wil -- low, tit -- wil -- low, tit -- wil -- low’?” _
-  “Is it weak -- ness of in -- tel -- lect, bird -- ie?” I cried,
-  “Or a ra -- ther tough worm in your lit -- tle in -- side?”
-  With a shake of his poor lit -- tle head, he re -- plied,
-  “Oh, wil -- low, tit -- wil -- low, tit -- wil -- low!” _
+  \set stanza = #"1. "
+	Come o -- ver the hills, my bon -- nie I -- rish lass,
+  Come _ o -- ver the hills to your dar -- ling. ""
+  You choose the rose, love, and I -- ’ll make the vow,
+  And _ I’ll be your true love for -- ev -- er.
+  
+  \unset ignoreMelismata
+  Red is the rose that in yon -- der gar -- den grows;
+  Fair is the lil -- y of the val -- ley;
+  Clear is the wa -- ter that flows from the Boyne
+  But my love is fair -- er than an -- y. __
 }
 
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
   \set ignoreMelismata = ##t
-  He _ slapped at his chest, as he sat on that bough,
-  Sing -- ing, “Wil -- low, tit -- wil -- low, tit -- wil -- low!” _
-  And a cold per -- spi -- ra -- tion be -- span -- gled his brow,
-  Oh, _ wil -- low, tit -- wil -- low, tit -- wil -- low! _
-  He __ _ sobbed and he sighed, and a gur -- gle he gave,
-  Then he plunged him -- self in -- to the bil -- low -- y wave,
-  And an ech -- o a -- rose from the su -- i -- cide’s grave:
-  “Oh, wil -- low, tit -- wil -- low, tit -- wil -- low!” _
+  ’Twas down by Kil -- lar -- ney’s green woods that we strayed
+  When the moon and the stars they were shin -- ing.
+  The moon shone its rays on her locks of gold -- en hair
+  And she swore she’d be my love for -- ev -- er.
 }
 
 sopWordsIII = \lyricmode {
-  \set stanza = #"3. "
   \set ignoreMelismata = ##t
-  Now I feel just as sure as I’m sure that my name
-  Is -- n’t Wil -- low, tit -- wil -- low, tit -- wil -- low, _
-  That ’twas blight -- ed af -- fec -- tion that made him ex -- claim,
-  “Oh, _ wil -- low, tit -- wil -- low, tit -- wil -- low!” _
-  And if you re -- main cal -- lous and ob -- du -- rate, I
-  Shall _ per -- ish as he did, and you will know why,
-  Though I prob -- ab -- ly shall not ex -- claim as I die,
-  “Oh, wil -- low, tit -- wil -- low, tit -- wil -- low!” _
+  \set stanza = #"3. "
+  It’s not for the part -- ing that my sis -- ter pains;
+  It’s __ _ not for the grief of my moth -- er.
+  ’Tis all for the loss of my bon -- nie I -- rish lass
+  That _ my heart is break -- ing for -- ev -- er.
 }
 
 sopWordsIV = \lyricmode {
@@ -122,26 +119,27 @@ sopWordsV = \lyricmode {
 }
 
 altoMusic = \relative c' {
-  c16[ c] |
-  ees8 des c ees ees ees |
-  f f des c s aes16[ bes] |
-  c c s s c8 des16 des s8 des |
+  c8 |
+  c4 c8. e16 f4. f8 |
+  d8 d d8 d bes4. c16~ c |
+  c4 c8. e16 d4 ees16 ees8. |
+  d4( f) e4. e8 |
   
-  c16 c~ c4 s c16 c |
-  ees8 des c ees ees ees |
-  f f des c s ees16[ ees] |
-  ees ees s8 ees d16 d s8 d |
+  f4 f8. f16 e4 e8 e |
+  d16 d8. c c16 bes4. bes16[ d] |
+  d4 e16 e8. f4 f8 f |
+  e2 f2 |
   
-  ees16 ees~ ees4 s ees16[ bes] |
-  ees8. ees16 ees8 d8. cis16 d8 |
-  ees des ees des s ees16[ bes] |
-  ees8. ees16 ees8 d8. cis16 d8 |
+  c4 d8. d16 e4. c16 c |
+  d8. d16 bes8 bes bes4. s8 |
+  c4 d8. d16 d d8. f8 f |
+  f4( e) f2 |
   
-  ees des ees f s des16 ees |
-  f8. ees16 des8 des des des |
-  d8. d16 d8 ees s des |
-  c16 c s8 c des16 des s8 des |
-  c16 c~ c4 s \bar"|."
+  f4 f8. f16 e4 e8 e |
+  d4 c8. c16 bes4. c8 |
+  c4 f16 f8. f4 f8 f |
+  \tieSolid e2 f2~ |
+  f4 \bar"|."
 }
 altoWords = \lyricmode {
 }
@@ -164,26 +162,27 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
-  aes16[ aes] |
-  aes8 aes aes c c c |
-  des des aes aes s ees16[ ees] |
-  ees ees s8 aes g16 g s8 g |
+  a8 |
+  a4 a8. bes16 c4. a8 |
+  bes8 bes bes8 bes f4. e16~ e |
+  a4 a8. a16 a4 f16 f8. |
+  f4( g) g4. a8 |
   
-  aes16 aes~ aes4 s aes16 aes |
-  aes8 aes aes c c c |
-  des des aes aes s c16[ c] |
-  bes g s8 bes aes16 aes s8 bes |
+  a4 a8. a16 a4 a8 a |
+  g16 g8. f f16 f4. e16[ bes'] |
+  a4 a16 a8. bes4 f8 f |
+  bes2 a |
   
-  bes16 g~ g4 s g16[ aes] |
-  bes8. bes16 bes8 bes8. bes16 bes8 |
-  a bes c bes s g16[ aes] |
-  bes8. bes16 bes8 bes8. bes16 bes8 |
+  a4 a8. a16 a4. a16 a |
+  f8. f16 g8 g f4. s8 |
+  f4 a8. a16 a a8. c8 a |
+  bes2 a |
   
-  a bes c des s bes16 a? |
-  bes8. a16 bes8 f aes f |
-  aes8. aes16 bes8 g s g |
-  aes16 aes s8 aes aes16 f s8 aes |
-  aes16 ees~ ees4 s \bar"|."
+  a4 a8. a16 a4 a8 a |
+  g4 f8. f16 f4. g8 |
+  f4 c'16 a8. bes4 f8 c' |
+  \tieSolid bes2 a~ |
+  a4 \bar"|."
 }
 
 tenorWords = \lyricmode {
@@ -196,26 +195,27 @@ tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  aes,16[ aes] |
-  aes8 aes aes aes' aes aes |
-  des, des des aes d\rest ees16[ ees] |
-  aes, aes d8\rest aes ees'16 ees d8\rest ees |
+  f,8 |
+  f4 f8. f16 f4. f8 |
+  bes,8 bes bes8 bes bes4. c16~ c |
+  f4 f8. f16 d4 c16 c8. |
+  bes4( g) c4. a8 |
   
-  aes,16 aes~ aes4 d\rest aes16 aes |
-  aes8 aes aes aes' aes aes |
-  des, des des aes d\rest aes'16[ aes] |
-  bes, bes d8\rest bes bes16 bes d8\rest bes |
+  d4 d8. d16 c4 c8 c |
+  g16 g8. a a16 bes4.\fermata c16[ c] |
+  d4 c16 c8. bes4 a8 a |
+  c2 f\fermata |
   
-  ees16 ees~ ees4 d\rest ees16[ d] |
-  ees8. ees16 ees8 bes8. bes16 bes8 |
-  f' f f bes, d\rest ees16[ d] |
-  ees8. ees16 ees8 bes8. bes16 bes8 |
+  f4 d8. d16 c4. a16 a |
+  bes8. bes16 g8 g bes4. d8\rest |
+  a4 d8. d16 d d8. f8 f |
+  bes,4( g) f2 |
   
-  f' f f bes, d\rest bes16 f' |
-  bes8. f16 ges8 des des des |
-  bes8. bes16 bes8 ees\fermata d\rest ees |
-  aes,16 aes d8\rest aes des16 des d8\rest des |
-  aes16 aes~ aes4 d4\rest \bar"|."
+  d'4 d8. d16 c4 c8 c |
+  g4 a8. a16 bes4.\fermata bes8 |
+  a4 f'16 f8. bes,4 a8 f |
+  \tieSolid c'2 f~ |
+  f4 \bar"|."
 }
 bassWords = \lyricmode {
 }
@@ -273,9 +273,8 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Tit-Willow"}}
-  poet = \markup\oldStyleNum"W. S. Gilbert (1836–1911)"
-  composer = \markup\oldStyleNum"Arthur Sullivan (1842–1900)"
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Red is the Rose"}}
+  composer = \markup\oldStyleNum"Irish Folk Song"
   tagline = ""
 }}
 

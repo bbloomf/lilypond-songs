@@ -1,4 +1,4 @@
-﻿\version "2.14.2"
+\version "2.14.2"
 \include "util.ly"
 \header{ tagline = ""}
 \paper {
@@ -12,18 +12,8 @@
   system-system-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)
-       (padding . 2)
+       (padding . -3)
        (stretchability . 100))
-  score-markup-spacing =
-    #'((basic-distance . 0)
-       (minimum-distance . 0)
-       (padding . -14)
-       (stretchability . 80))
-  top-system-spacing =
-    #'((basic-distance . 0)
-       (minimum-distance . 0)
-       (padding . -1.5)
-       (stretchability . 0))
   ragged-last-bottom = ##f
   ragged-bottom = ##f
   two-sided = ##t
@@ -31,7 +21,7 @@
   outer-margin = 0.75\in
   top-margin = 0.26\in
   bottom-margin = 0.25\in
-  first-page-number = #131
+  first-page-number = #79
   print-first-page-number = ##t
   headerLine = ""
   oddHeaderMarkup = \markup\fill-line{
@@ -52,73 +42,89 @@
 }
 #(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
 global = {
-  \key g \major
-  \time 4/4
+  \key f \major
+  \time 6/8
   \dynamicUp
   %\set crescendoSpanner = #'dashed-line
   %\set midiInstrument = "recorder"
   \autoBeamOff
   \override DynamicTextSpanner #'style = #'none
+  \slurDashed
 }
 
 sopMusic = \relative c' {
-	b'4 b c d |
-  d c b a |
-  g g a b |
-  b4. a8 a2 |
+    f4 g8 a8. g16 f8 |
+  g4 f8 f4. |
+  g4 a8 bes8. a16 g8 |
+  a4 g8 g4. |
+  g8.\cresc a16\! bes8 c4 a8 |
   
-  b4 b c d |
-  d c b a |
-  g g a b |
-  a4. g8 g2 |
+  g4 f8 f8. e16 d8 |
+  e4. d |
+  c2. |
+  c4 d8 e8. f16 g8 |
+  a4 e8 e4. |
+  fis4 << e8 {s16 \teeny d16 \normalsize} >> d8. fis16 a8 |
   
-  a4 a b g |
-  a b8[ c] b4 g |
-  a b8[ c] b4 a |
-  g a d, b'~ |
+  b4 g8 g4. |
+  c4. b8. g16 e8 |
+  a4 a8 g4. |
+  g8.(^\markup\italic"rall." f16) e8 g f e |
+  d4 c8 c4.\fermata |
+  f8.^\markup{\dynamic"p" \italic" meno mosso"} g16 a8 bes4. |
   
-  b b c d |
-  d c b a |
-  g^\markup\italic"rall." g a b |
-  a4. g8 g2\fermata \bar"|."
+  a8. g16 f8 g4. |
+  g8. a16 bes8 c8. a16 g8 |
+  f4 d8 c4. |
+  c8 d f g a f |
+  g4 f8 f4.\fermata \bar"|."
 }
 sopWords = \lyricmode {
+  \set ignoreMelismata = ##t
   \set stanza = #"1. "
-  Hail to Joy, from heav’n de -- scend -- ing;
-  Hail Joy, all ye here be -- low.
-  At her shrine we now are bend -- ing;
-  Let the world our glad -- ness know.
-  
-  Though by cus -- tom’s law di -- vid -- ed,
-  Now we meet on com -- mon ground.
-  We __ are broth -- ers, all u -- nit -- ed
-  When joy in our hearts is found.
+	Dar -- by dear, we are old and gray,
+  Fif -- ty years since our wed -- ding day,
+  Shad -- ow and sun for ev -- ’ry one as the years roll on:
+  Dar -- by dear, when the world went wry,
+  Hard and "" sor -- row -- ful then was I,
+  Ah! lad, how you cheered me then,
+  “Things will be bet -- ter, sweet wife, a -- gain!”
+}
+chorusWords = \lyricmode {
+  \set ignoreMelismata = ##t
+  \repeat unfold 61 \skip 1
+  Al -- ways the same, Dar -- by my own,
+  Al -- ways the same to your old wife Joan,
+  Al -- ways the same to your old wife Joan.
 }
 
 sopWordsII = \lyricmode {
+  \set ignoreMelismata = ##t
   \set stanza = #"2. "
-  We, with whom kind for -- tune fa -- vors
-  Lov -- ing friend in -- stead of foe,
-  We should be for -- e’er re -- joic -- ing,
-  For through him we heav -- en know.
+  Dar -- by dear, but my heart was wild
+  When we bur -- ied our ba -- by child,
+  Un -- til you whis -- pered, “Heav’n knows best!” and my heart found rest;
+  Dar -- by dear, ’twas your lov -- ing hand
+  Show’d me the way to the bet -- ter land;
+  Ah! lad, as you kissed each tear,
+  Life __ _ grew bet -- ter and Heav’n more near:
   
-  They who scorn the pledge of friend -- ship
-  On -- ly for them -- selves do live,
-  They __ are doomed to walk for -- got -- ten
-  Who re -- fuse their hearts to give.
+  
+  Al -- ways the same, Dar -- by my own,
+  Al -- ways the same to your old wife Joan,
+  Al -- ways the same to your old wife Joan.
 }
 
 sopWordsIII = \lyricmode {
+  \set ignoreMelismata = ##t
   \set stanza = #"3. "
-  Hail to Joy, from heav’n de -- scend -- ing;
-  Bring -- ing heav’n on earth to you!
-  Broth -- ers, in yon might -- y spac -- es
-  Dwells our God whose love is true.
-  
-  O ye mil -- lions, bow be -- fore Him;
-  Seek Him, He is ev -- er nigh!
-  We __ are broth -- ers, all u -- nit -- ed,
-  Fa -- ther’d by one God on high.
+  Hand in hand when our life was May,
+  Hand in hand when our hair is gray,
+  Shad -- ow and sun for ev -- ’ry -- one as the years roll on:
+  Hand in hand when the long night -- tide
+  Gent -- ly "" cov -- ers us side by side:
+  Ah! lad, tho’ we know not when,
+  Love will be with us for -- ev -- er then:
 }
 
 sopWordsIV = \lyricmode {
@@ -130,25 +136,31 @@ sopWordsV = \lyricmode {
 }
 
 altoMusic = \relative c' {
-  d4 d d d |
-  d d d d8[ c] |
-  b4 d d d |
-  d4. d8 d2 |
+  c4 e8 f8. e16 f8 |
+  d4 d8 d4. |
+  d4 d8 d8. d16 d8 |
+  e4 e8 e4. |
+  e8. e16 e8 f4 f8 |
   
-  d4 d e f |
-  f e d c |
-  b b c b |
-  c4. b8 b2 |
+  d4 d8 d8. c16 d8 |
+  c4. b |
+  c2. |
+  c4 b8 bes8. a16 e'8 |
+  e4 cis8 cis4. |
+  c?4 << c8 {s16 \teeny c16 \normalsize} >> c8. c16 d8 |
   
-  d4 d d d |
-  d d d d |
-  d b8[ a] fis'4 fis |
-  b, cis d d~ |
+  d4 d8 d4. |
+  e4. e8. e16 e8 |
+  f4 f8 e4. |
+  e8.( d16) cis8 d d c |
+  b4 c8 c4. |
+  c8. e16 f8 f4. |
   
-  d d e f |
-  f e d c |
-  b b c d |
-  c4. b8 b2 \bar"|."
+  f8. e16 d8 e4. |
+  e8. f16 e8 f8. f16 e8 |
+  d4 b8 c4. |
+  a8 bes? c e e c |
+  c4 c8 c4. \bar"|."
 }
 altoWords = \lyricmode {
 }
@@ -171,25 +183,31 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
-  g4 g a b |
-  b a g g8[ a] |
-  b4 b fis g |
-  g4. fis8 fis2 |
+  a4 bes8 c8. bes16 a8 |
+  bes4 a8 a4. |
+  bes4 c8 d8. c16 bes8 |
+  c4 c8 c4. |
+  c8. c16 c8 a4 c8 |
   
-  g4 g g g |
-  g g g g |
-  g g fis g |
-  fis4. g8 g2 |
+  bes4 a8 a8. a16 a8 |
+  g4. f |
+  e2. |
+  e4 f8 g8. f16 g8 |
+  a4 a8 a4. |
+  a4 << g8 {s16 \teeny fis} >> \normalsize fis!8. a16 fis8 |
   
-  fis4 fis g b |
-  fis g8[ a] g4 b |
-  fis g8[ a] fis4 dis |
-  e e fis g~ |
+  g4 b8 b4. |
+  a4. g8. b16 g8 |
+  c4 c8 c4. |
+  a8.( a16) a8 a a g |
+  g4 e8 e4. |
+  a8. bes16 c8 d4. |
   
-  g g g a8[ b] |
-  c4 c g e |
-  d g g g |
-  fis4. g8 g2 \bar"|."
+  c8. bes16 a8 c4. |
+  c8. c16 c8 a8. c16 bes8 |
+  a4 f8 e4. |
+  f8 f a bes c a |
+  bes4 a8 a4. \bar"|."
 }
 
 tenorWords = \lyricmode {
@@ -202,25 +220,31 @@ tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  g4 g g g |
-  d d d e8[ fis] |
-  g4 d d d |
-  d4. d8 d2 |
+  f,4 f8 f8. f16 f8 |
+  d4 d8 d4. |
+  g4 g8 g8. g16 g8 |
+  c,4 c8 c4. |
+  bes'8. a16 g8 f4 f8 |
   
-  g4 g g g |
-  c, c c c |
-  d d d d |
-  d4. d8 g,2 |
+  d4 d8 d8. e16 f8 |
+  g4. g, |
+  c2. |
+  c4 c8 c8. c16 c8 |
+  cis4 a8 a4. |
+  d4 << d8 {s16 \teeny d} >> \normalsize d8. d16 d8 |
   
-  d'4 d d d |
-  d d d d |
-  d d dis b |
-  e a, d? d( |
+  g,4 g'8 g4. |
+  a,4. e'8. e16 e8 |
+  f4 f8 c4. |
+  cis8.( a16) a8 d d e |
+  g4 c,8 c4.\fermata |
+  f8. f16 f8 f4. |
   
-  g) g g g |
-  c, c c c |
-  d d d d |
-  d4. d8 g,2 \bar"|."
+  f8. f16 f8 c4. |
+  bes'8. a16 g8 f8. f16 c8 |
+  d4 g,8 c4. |
+  c8 c c c c c |
+  c4 c8 f4.\fermata \bar"|."
 }
 bassWords = \lyricmode {
 }
@@ -278,10 +302,8 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Ode to Joy"}}
-  composer = \markup\oldStyleNum"Ludwig van Beethoven (1770–1827)"
-  poet = \markup\oldStyleNum"Friedrich von Schiller (1759–1805)"
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Darby and Joan"}}
+  composer = \markup\oldStyleNum"James Lynam Molloy (1837–1909)"
+  poet = \markup\oldStyleNum"Frederic Weatherly (1848–1929)"
   tagline = ""
 }}
-
-

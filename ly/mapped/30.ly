@@ -42,93 +42,75 @@
 }
 #(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
 global = {
-  \key ees \major
-  \time 3/8
+  \key aes \major
+  \time 2/4
   \dynamicUp
   %\set crescendoSpanner = #'dashed-line
   %\set midiInstrument = "recorder"
   \autoBeamOff
   \override DynamicTextSpanner #'style = #'none
+  \slurDashed
 }
 
 sopMusic = \relative c' {
-  \partial 8
-  bes'8 |
-  bes[ ees] d |
-  bes[ d] c |
-  bes[ \acciaccatura d c] bes |
-  g4 g8 |
-  bes aes e |
-  \slurDashed
-  f( bes8.) aes16 |
+	c'4\p\< c8. bes16 |
+  aes16\!\> f8. f8 aes\p |
+  ees8. ees16\< aes8 c |
+  bes[\! c16 des] c8\> b\rest |
   
-  \slurSolid
-  g[ f]( ees4)~ |
-  ees8 \bar""\break bes' bes |
-  \slurDashed bes( ees) d |
-  bes( d) c |
-  bes( \slurSolid \acciaccatura d c) bes |
-  g4 g8 |
-  \slurDashed bes( aes) e |
+  c4\p\< c8. bes16 |
+  aes8.\!\> f16 f8 aes\p |
+  ees16\< ees8. c'8.\! aes16 |
+  bes4\> aes8\! b16\rest ees,\mf |
   
-  f( bes8.) aes16 |
-  \slurSolid g[ f]( ees4)~ |
-  ees \bar""\break bes'16 bes |
-  \slurDashed c8( f) ees |
-  ces( f) ees |
-  bes[ f'] ees |
-  \tieDashed bes4 bes16~ bes |
+  ees8.\cresc aes16\! aes8. aes16 |
+  bes8. aes16 aes8 b16\rest aes\f |
+  c8. aes16 aes8 aes |
+  bes4\> aes8\! b16\rest ees,\f |
   
-  a8[ bes] c |
-  d4 d8 |
-  \tieSolid d4.~ |
-  d8\fermata \bar""\break c8 bes |
-  \slurSolid
-  bes[ ees] d8 |
-  bes[ d] c |
-  bes[ \acciaccatura d c] bes |
+  ees8.\< aes16 aes8. aes16 |
+  bes8.\!\> aes16 aes8\! b16\rest aes
+  c8.\< aes16 aes8 aes\!^\markup\italic"rit." |
+  bes[\> c16 des] c8\fermata\! b\rest\fermata |
   
-  g4 g16 g |
-  bes8[ aes] e |
-  f4 aes8 |
-  g aes bes |
-  c d ees |
-  ees[ \acciaccatura { f16[ ees]} d8] ees |
-  f[ c] d |
-  g, aes bes |
-  c d ees |
-  ees[ \acciaccatura { f16[ ees]} d8] ees |
-  g16[ f c8] d |
-  ees4 \bar"|."
+  c4\pp\< c8. bes16 |
+  aes16\!\> f8. f8 aes\! |
+  ees8. ees16\< aes8 c |
+  bes[\!\> c16 des] c8\! b\rest |
+  
+  c4\pp\< c8. bes16 |
+  aes8.\!\> f16 f8[ g16] aes |
+  ees\pp\< ees8. c' aes16\!^\markup\italic"rit." |
+  bes4\> aes8 b\rest\fermata\! \bar"|."
 }
 sopWords = \lyricmode {
-  \set ignoreMelismata = ##t
-  \set stanza = #"1. "
-  I dreamt _ I dwelt _ in mar -- _ ble halls,
-  With vas -- sals and serfs at my side, _ _ _
-  And of all who as -- sem -- bled with -- in __ _ those walls
-  That I was the hope and the pride. __ _ _ _
-  I had rich -- es too great _ to count; _ could boast
-  Of a high _ an -- ces -- tral name; __ _
-  \unset ignoreMelismata
-  But I al -- so dreamt, which pleased me most,
-  That you loved me still the same, that you loved me you loved me still the same,
-  That you loved me, you loved me still the same.
+  \set stanza = #"1."
+	Oft in the stil -- ly night,
+  Ere slum -- ber’s chain hath bound me,
+  Fond mem -- ’ry brings the light
+  Of oth -- er days a -- round me.
+  The smiles, the tears of boy -- hood’s years,
+  The words of love then spo -- ken,
+  The eyes that shone, now dimm’d and gone,
+  The cheer -- ful hearts now bro -- ken!
+  
+  \dropLyricsXV
+  Thus, in the stil -- ly night,
+  Ere slum -- ber’s chain hath \raiseLyrics bound me,
+  Sad mem -- ’ry brings the light
+  Of oth -- er days a -- round me.
 }
 
 sopWordsII = \lyricmode {
-  \set ignoreMelismata = ##t
-  \set stanza = #"2. "
-  I dreamt _ that suit -- _ ors sought _ my hand;
-  That knights up -- on bend -- _ ed knee, _ _ _
-  And with vows _ no maid -- _ en heart could with -- stand,
-  They pledged _ their faith _ to me, __ _ _ _
-  And I dreamt _ that one of that no -- _ ble host
-  Came _ forth _ my hand to claim; __ _
-  \unset ignoreMelismata
-  But I al -- so dreamt, which charmed me most,
-  That you loved me still the same, that you loved me, you loved me still the same,
-  That you loved me, you loved me still the same.
+  \set stanza = #"2."
+  When I re -- mem -- ber all
+  The friends so link’d to -- geth -- er,
+  I’ve seen a -- round me fall
+  Like leaves in au -- tumn weath -- er,
+  I feel like one who treads a -- lone
+  Some ban -- quet hall de -- sert -- ed,
+  Whose lights are fled, whose gar -- lands dead,
+  And all but he de -- part -- ed.
 }
 
 sopWordsIII = \lyricmode {
@@ -144,50 +126,35 @@ sopWordsV = \lyricmode {
 }
 
 altoMusic = \relative c' {
-  g'8 |
-  \tieDashed g4 g8 |
-  g4 g8 |
-  g4 g8 |
-  ees4 ees8 |
-  d d cis |
-  d8~ d8. d16 |
+  aes'4 ees8. e16 |
+  f16 des8. des8 des |
+  c8. c16 ees8 ees |
+  ees4 ees8 s |
   
-  \tieSolid ees4.~ |
-  ees8 g g |
-  \tieDashed g~ g g |
-  g~ g g |
-  g8~ g g8 |
-  ees4 ees8 |
-  d~ d cis |
+  aes4 ees8. e16 |
+  f8. des16 des8 des |
+  c16 ees8. aes8. ees16 |
+  g4 ees8 s16 c |
   
-  d~ d8. d16 |
-  \tieSolid ees4.~ |
-  ees4 ees16 ees |
-  \tieDashed aes8~ aes aes |
-  aes~ aes aes |
-  g4 g8 |
-  g4 g16~ g |
+  c8. f16 ees8. aes16 |
+  g8. aes16 ees8 s16 ees |
+  aes8. ees16 f8 f |
+  aes[ g] aes s16 c, |
   
-  fis8[ g] a |
-  fis4 fis8 |
-  g4.( |
-  aes8) aes aes |
-  g4 g8 |
-  g4 g8 |
-  g4 g8 |
+  c8. f16 ees8. aes16 |
+  g8. aes16 ees8 s16 ees |
+  aes8. ees16 f8 f |
+  aes[ g] aes8 s |
   
-  ees4 ees16 ees |
-  d4 cis8 |
-  d4 f8 |
-  ees f g |
-  aes aes aes |
-  g4 g8 |
+  aes4 ees8. e16 |
+  f des8. des8 des |
+  c8. c16 ees8 ees |
+  ees4 ees8 s |
   
-  aes4 aes8 g f g |
-  aes aes aes |
-  g4 g8 |
-  aes4 aes8 |
-  g4 \bar"|."
+  aes4 ees8. e16 |
+  f8. des16 des8. f16 |
+  c ees8. aes ees16 |
+  ees8[ des] c s \bar"|."
 }
 altoWords = \lyricmode {
 }
@@ -210,51 +177,35 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
-  bes8 |
-  \tieDashed bes4 bes8 |
-  bes4 bes8 |
-  ees4 ees8 |
-  bes4 bes8 |
-  bes bes bes |
-  bes~ bes8. bes16 |
+  ees4 c8. c16 |
+  des aes8. aes8 aes |
+  aes8. aes16 aes8 aes |
+  g8[ aes16 bes] aes8 s |
   
-  g4.~ |
-  g8 ees' ees |
-  bes~ bes bes |
-  bes~ bes bes |
-  ees~ ees ees |
-  bes4 bes8 |
-  bes~ bes bes |
+  ees'4 c8. c16 |
+  des8. aes16 aes8 aes8 |
+  aes16 c8. ees8. c16 |
+  ees8[ des] c s16 aes |
   
-  bes~ bes8. bes16 |
-  \tieSolid g4.~ |
-  g4  g16 g |
-  \tieDashed c8~ c c |
-  ces~ ces ces |
-  bes4 bes8 |
-  ees4 c16~ c |
+  aes8. des16 c8. ees16 |
+  ees8[ des16] c c8 s16 c |
+  ees8. c16 c8 c |
+  f[ ees] c s16 aes |
   
-  d4 d8 |
-  aes4 aes8 |
-  b4.( |
-  bes?8) bes bes |
-  bes4 bes8 |
-  bes4 bes8 |
-  ees4 ees8 |
+  aes8. des16 c8. ees16 |
+  ees8[ des16] c c8 s16 c |
+  ees8. c16 c8 c |
+  f[ ees] ees s |
+
+  ees4 c8. c16 |
+  des aes8. aes8 aes |
+  aes8. aes16 aes8 aes |
+  g8[ aes16 bes] aes8 s |
   
-  bes4 bes16 bes |
-  bes4 bes8 |
-  bes4 bes8 |
-  bes bes ees |
-  ees d c |
-  bes4 bes8 |
-  
-  bes4 bes8 |
-  bes bes ees |
-  ees d c |
-  bes4 bes8 |
-  d[ bes] bes |
-  bes4 \bar"|."
+  ees'4 c8. c16 |
+  des8. aes16 aes8. aes16 |
+  aes c8. ees c16 |
+  g4 aes8 s \bar"|."
 }
 
 tenorWords = \lyricmode {
@@ -267,51 +218,35 @@ tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  ees,8 |
-  ees4 ees8 |
-  ees4 ees8 |
-  ees4 ees8 |
-  ees4 ees8 |
-  bes bes bes |
-  \tieDashed bes~ bes8. bes16 |
+  aes4 aes8. aes16 |
+  des, des8. des8 f |
+  aes8. ees16 c8 aes |
+  ees'4 aes,8 d\rest |
   
-  \tieSolid ees4.~ |
-  ees8 ees ees |
-  \tieDashed ees~ ees ees |
-  ees~ ees ees |
-  ees~ ees ees |
-  ees4 ees8 |
-  bes~ bes bes |
+  aes'4 aes8. aes16 |
+  des,8. des16 des8 f |
+  aes16 aes8. aes8. aes16 |
+  ees4 aes8 d,16\rest aes |
   
-  bes~ bes8. bes16 |
-  \tieSolid ees4.~ |
-  ees4 ees16 ees |
-  \tieDashed ees8~ ees ees |
-  ees~ ees ees |
-  ees4 ees8 |
-  ees4 ees16~ ees |
+  aes8. aes'16 aes8. aes16 |
+  ees8. aes16 aes8 d,16\rest aes'16 |
+  aes8. aes16 f8 f |
+  des[ ees] aes, d16\rest aes |
   
-  d4 d8 |
-  d4 d8 |
-  g4.( |
-  f8)\fermata d d |
-  ees4 ees8 |
-  ees4 ees8 |
-  ees4 ees8 |
+  aes8. aes'16 aes8. aes16 |
+  ees8. aes16 aes8 d,16\rest aes' |
+  aes8. aes16 f8 f |
+  des[ ees] aes,\fermata d\rest\fermata |
   
-  ees4 ees16 ees |
-  bes4 bes8 |
-  bes4 d8 |
-  ees ees ees |
-  aes aes aes |
-  bes4 bes,8 |
+  aes'4 aes8. aes16 |
+  des, des8. des8 f |
+  aes8. ees16 c8 aes |
+  ees'4 aes,8 d\rest |
   
-  bes4 bes8 |
-  ees ees ees |
-  aes aes aes |
-  bes4 bes8 |
-  bes4 f8 |
-  ees4 \bar"|."
+  aes'4 aes8. aes16 |
+  des,8. des16 des8. des16 |
+  ees ees8. ees ees16 |
+  ees4 aes,8 d\rest\fermata \bar"|."
 }
 bassWords = \lyricmode {
 }
@@ -369,8 +304,9 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"I dreamt I dwelt in marble halls"}}
-  composer = \markup\oldStyleNum"Michael William Balfe (1808–1870)"
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Oft in the stilly night"}}
+  composer = \markup\oldStyleNum"Scotch Air"
+  poet = \markup\oldStyleNum"Thomas Moore (1779–1852)"
   tagline = ""
 }}
 

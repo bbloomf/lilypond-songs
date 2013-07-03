@@ -12,8 +12,18 @@
   system-system-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)
-       (padding . -3)
+       (padding . 2)
        (stretchability . 100))
+  score-markup-spacing =
+    #'((basic-distance . 0)
+       (minimum-distance . 0)
+       (padding . -14)
+       (stretchability . 80))
+  top-system-spacing =
+    #'((basic-distance . 0)
+       (minimum-distance . 0)
+       (padding . -1.5)
+       (stretchability . 0))
   ragged-last-bottom = ##f
   ragged-bottom = ##f
   two-sided = ##t
@@ -21,7 +31,7 @@
   outer-margin = 0.75\in
   top-margin = 0.26\in
   bottom-margin = 0.25\in
-  first-page-number = #26
+  first-page-number = #139
   print-first-page-number = ##t
   headerLine = ""
   oddHeaderMarkup = \markup\fill-line{
@@ -42,79 +52,73 @@
 }
 #(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
 global = {
-  \key aes \major
-  \time 2/4
+  \key g \major
+  \time 4/4
   \dynamicUp
   %\set crescendoSpanner = #'dashed-line
   %\set midiInstrument = "recorder"
   \autoBeamOff
   \override DynamicTextSpanner #'style = #'none
-  \slurDashed
 }
 
 sopMusic = \relative c' {
-	c'4\p\< c8. bes16 |
-  aes16\!\> f8. f8 aes\p |
-  ees8. ees16\< aes8 c |
-  bes[\! c16 des] c8\> b\rest |
+	b'4 b c d |
+  d c b a |
+  g g a b |
+  b4. a8 a2 |
   
-  c4\p\< c8. bes16 |
-  aes8.\!\> f16 f8 aes\p |
-  ees16\< ees8. c'8.\! aes16 |
-  bes4\> aes8\! b16\rest ees,\mf |
+  b4 b c d |
+  d c b a |
+  g g a b |
+  a4. g8 g2 |
   
-  ees8.\cresc aes16\! aes8. aes16 |
-  bes8. aes16 aes8 b16\rest aes\f |
-  c8. aes16 aes8 aes |
-  bes4\> aes8\! b16\rest ees,\f |
+  a4 a b g |
+  a b8[ c] b4 g |
+  a b8[ c] b4 a |
+  g a d, b'~ |
   
-  ees8.\< aes16 aes8. aes16 |
-  bes8.\!\> aes16 aes8\! b16\rest aes
-  c8.\< aes16 aes8 aes\!^\markup\italic"rit." |
-  bes[\> c16 des] c8\fermata\! b\rest\fermata |
-  
-  c4\pp\< c8. bes16 |
-  aes16\!\> f8. f8 aes\! |
-  ees8. ees16\< aes8 c |
-  bes[\!\> c16 des] c8\! b\rest |
-  
-  c4\pp\< c8. bes16 |
-  aes8.\!\> f16 f8[ g16] aes |
-  ees\pp\< ees8. c' aes16\!^\markup\italic"rit." |
-  bes4\> aes8 b\rest\fermata\! \bar"|."
+  b b c d |
+  d c b a |
+  g^\markup\italic"rall." g a b |
+  a4. g8 g2\fermata \bar"|."
 }
 sopWords = \lyricmode {
-  \set stanza = #"1."
-	Oft in the stil -- ly night,
-  Ere slum -- ber’s chain hath bound me,
-  Fond mem -- ’ry brings the light
-  Of oth -- er days a -- round me.
-  The smiles, the tears of boy -- hood’s years,
-  The words of love then spo -- ken,
-  The eyes that shone, now dimm’d and gone,
-  The cheer -- ful hearts now bro -- ken!
+  \set stanza = #"1. "
+  Hail to Joy, from heav’n de -- scend -- ing;
+  Hail Joy, all ye here be -- low.
+  At her shrine we now are bend -- ing;
+  Let the world our glad -- ness know.
   
-  \dropLyricsXV
-  Thus, in the stil -- ly night,
-  Ere slum -- ber’s chain hath \raiseLyrics bound me,
-  Sad mem -- ’ry brings the light
-  Of oth -- er days a -- round me.
+  Though by cus -- tom’s law di -- vid -- ed,
+  Now we meet on com -- mon ground.
+  We __ are broth -- ers, all u -- nit -- ed
+  When joy in our hearts is found.
 }
 
 sopWordsII = \lyricmode {
-  \set stanza = #"2."
-  When I re -- mem -- ber all
-  The friends so link’d to -- geth -- er,
-  I’ve seen a -- round me fall
-  Like leaves in au -- tumn weath -- er,
-  I feel like one who treads a -- lone
-  Some ban -- quet hall de -- sert -- ed,
-  Whose lights are fled, whose gar -- lands dead,
-  And all but he de -- part -- ed.
+  \set stanza = #"2. "
+  We, with whom kind for -- tune fa -- vors
+  Lov -- ing friend in -- stead of foe,
+  We should be for -- e’er re -- joic -- ing,
+  For through him we heav -- en know.
+  
+  They who scorn the pledge of friend -- ship
+  On -- ly for them -- selves do live,
+  They __ are doomed to walk for -- got -- ten
+  Who re -- fuse their hearts to give.
 }
 
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
+  Hail to Joy, from heav’n de -- scend -- ing;
+  Bring -- ing heav’n on earth to you!
+  Broth -- ers, in yon might -- y spac -- es
+  Dwells our God whose love is true.
+  
+  O ye mil -- lions, bow be -- fore Him;
+  Seek Him, He is ev -- er nigh!
+  We __ are broth -- ers, all u -- nit -- ed,
+  Fa -- ther’d by one God on high.
 }
 
 sopWordsIV = \lyricmode {
@@ -126,35 +130,25 @@ sopWordsV = \lyricmode {
 }
 
 altoMusic = \relative c' {
-  aes'4 ees8. e16 |
-  f16 des8. des8 des |
-  c8. c16 ees8 ees |
-  ees4 ees8 s |
+  d4 d d d |
+  d d d d8[ c] |
+  b4 d d d |
+  d4. d8 d2 |
   
-  aes4 ees8. e16 |
-  f8. des16 des8 des |
-  c16 ees8. aes8. ees16 |
-  g4 ees8 s16 c |
+  d4 d e f |
+  f e d c |
+  b b c b |
+  c4. b8 b2 |
   
-  c8. f16 ees8. aes16 |
-  g8. aes16 ees8 s16 ees |
-  aes8. ees16 f8 f |
-  aes[ g] aes s16 c, |
+  d4 d d d |
+  d d d d |
+  d b8[ a] fis'4 fis |
+  b, cis d d~ |
   
-  c8. f16 ees8. aes16 |
-  g8. aes16 ees8 s16 ees |
-  aes8. ees16 f8 f |
-  aes[ g] aes8 s |
-  
-  aes4 ees8. e16 |
-  f des8. des8 des |
-  c8. c16 ees8 ees |
-  ees4 ees8 s |
-  
-  aes4 ees8. e16 |
-  f8. des16 des8. f16 |
-  c ees8. aes ees16 |
-  ees8[ des] c s \bar"|."
+  d d e f |
+  f e d c |
+  b b c d |
+  c4. b8 b2 \bar"|."
 }
 altoWords = \lyricmode {
 }
@@ -177,35 +171,25 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
-  ees4 c8. c16 |
-  des aes8. aes8 aes |
-  aes8. aes16 aes8 aes |
-  g8[ aes16 bes] aes8 s |
+  g4 g a b |
+  b a g g8[ a] |
+  b4 b fis g |
+  g4. fis8 fis2 |
   
-  ees'4 c8. c16 |
-  des8. aes16 aes8 aes8 |
-  aes16 c8. ees8. c16 |
-  ees8[ des] c s16 aes |
+  g4 g g g |
+  g g g g |
+  g g fis g |
+  fis4. g8 g2 |
   
-  aes8. des16 c8. ees16 |
-  ees8[ des16] c c8 s16 c |
-  ees8. c16 c8 c |
-  f[ ees] c s16 aes |
+  fis4 fis g b |
+  fis g8[ a] g4 b |
+  fis g8[ a] fis4 dis |
+  e e fis g~ |
   
-  aes8. des16 c8. ees16 |
-  ees8[ des16] c c8 s16 c |
-  ees8. c16 c8 c |
-  f[ ees] ees s |
-
-  ees4 c8. c16 |
-  des aes8. aes8 aes |
-  aes8. aes16 aes8 aes |
-  g8[ aes16 bes] aes8 s |
-  
-  ees'4 c8. c16 |
-  des8. aes16 aes8. aes16 |
-  aes c8. ees c16 |
-  g4 aes8 s \bar"|."
+  g g g a8[ b] |
+  c4 c g e |
+  d g g g |
+  fis4. g8 g2 \bar"|."
 }
 
 tenorWords = \lyricmode {
@@ -218,35 +202,25 @@ tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  aes4 aes8. aes16 |
-  des, des8. des8 f |
-  aes8. ees16 c8 aes |
-  ees'4 aes,8 d\rest |
+  g4 g g g |
+  d d d e8[ fis] |
+  g4 d d d |
+  d4. d8 d2 |
   
-  aes'4 aes8. aes16 |
-  des,8. des16 des8 f |
-  aes16 aes8. aes8. aes16 |
-  ees4 aes8 d,16\rest aes |
+  g4 g g g |
+  c, c c c |
+  d d d d |
+  d4. d8 g,2 |
   
-  aes8. aes'16 aes8. aes16 |
-  ees8. aes16 aes8 d,16\rest aes'16 |
-  aes8. aes16 f8 f |
-  des[ ees] aes, d16\rest aes |
+  d'4 d d d |
+  d d d d |
+  d d dis b |
+  e a, d? d( |
   
-  aes8. aes'16 aes8. aes16 |
-  ees8. aes16 aes8 d,16\rest aes' |
-  aes8. aes16 f8 f |
-  des[ ees] aes,\fermata d\rest\fermata |
-  
-  aes'4 aes8. aes16 |
-  des, des8. des8 f |
-  aes8. ees16 c8 aes |
-  ees'4 aes,8 d\rest |
-  
-  aes'4 aes8. aes16 |
-  des,8. des16 des8. des16 |
-  ees ees8. ees ees16 |
-  ees4 aes,8 d\rest\fermata \bar"|."
+  g) g g g |
+  c, c c c |
+  d d d d |
+  d4. d8 g,2 \bar"|."
 }
 bassWords = \lyricmode {
 }
@@ -304,9 +278,9 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Oft in the stilly night"}}
-  composer = \markup\oldStyleNum"Scotch Air"
-  poet = \markup\oldStyleNum"Thomas Moore (1779–1852)"
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Ode to Joy"}}
+  composer = \markup\oldStyleNum"Ludwig van Beethoven (1770–1827)"
+  poet = \markup\oldStyleNum"Friedrich von Schiller (1759–1805)"
   tagline = ""
 }}
 

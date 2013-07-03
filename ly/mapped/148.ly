@@ -21,7 +21,7 @@
   outer-margin = 0.75\in
   top-margin = 0.26\in
   bottom-margin = 0.25\in
-  first-page-number = #95
+  first-page-number = #148
   print-first-page-number = ##t
   headerLine = ""
   oddHeaderMarkup = \markup\fill-line{
@@ -43,7 +43,7 @@
 #(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
 global = {
   \key f \major
-  \time 2/4
+  \time 4/4
   \dynamicUp
   %\set crescendoSpanner = #'dashed-line
   %\set midiInstrument = "recorder"
@@ -52,95 +52,73 @@ global = {
 }
 
 sopMusic = \relative c' {
-	a'16 a8. a a16 |
-  c4. c8 |
-  f,8 f g8. g16 |
-  a4. a8 |
-  d8. d16 d8 d |
-  d c a f |
-  g g a8. f16 |
-  g4. \bar"" g8 |
+	\partial 2.
+  a'4 g a |
+  bes2. a4 |
+  g a f4. g8 |
+  g4( a2.)~ |
+  a4 a g a |
+  bes2. a4 |
+  g a f4. g8 |
+  a1~ |
   
-  a8 a a8. a16 |
-  c4. c8 |
-  f,8. f16 g8. g16 |
-  a4. a8 |
-  d8. d16 d8. d16 |
-  d8 c a f |
-  g g a8. g16 |
-  f4. \bar"||"
+  a4 c c c |
+  d2. a4 |
+  a c c4. g8 |
+  g4( bes2.)~ |
+  bes4 bes a g |
+  a2. f4 |
+  f g g4. a8 |
+  a1~ |
   
-  %chorus
-  c'8 |
-  c4 d8. d16 |
-  c4. c8 |
-  d d f8. f16 |
-  e4. e8 |
-  f8. f16 c8. a16 |
-  g8. a16 bes8. d16 |
-  c8. c16 bes8. bes16 |
-  a4. \bar"" c8 |
-  
-  c16 c8. d d16 |
-  c4. c8 |
-  d d f8. f16 |
-  e4. e8 |
-  f8. f16 c8. a16 |
-  g8. a16 bes8. d16 |
-  c8. c16 e8. e16 |
-  f2 \bar"|."
+  a4 c c c |
+  d2. a4 |
+  a c c4. g8 |
+  g4( bes2.)~ |
+  bes4 bes a g |
+  a2. f4 |
+  f g g4. f8 |
+  f1~ |
+  f4 \bar"|."
 }
 sopWords = \lyricmode {
   \set stanza = #"1. "
-	Broth -- ers of the plow,
-  The pow -- er is with you;
-  The world in ex -- pec -- ta -- tion waits
-  For ac -- tion prompt and true,
-  
-  Op -- pres -- sion stalks a -- broad,
-  Mo -- nop -- o -- lies a -- bound;
-  Their gi -- ant hands al -- read -- y clutch
-  The till -- ers of the ground.
+	Be still, my soul; the Lord is on thy side; __
+  Bear pa -- tient -- ly the cross of grief or pain; __
+  Leave to thy God to or -- der and pro -- vide; __
+  In eve -- ry change He faith -- ful will re -- main. __
+  Be still, my soul; thy best, thy heav’n -- ly Friend __
+  Through thorn -- y ways leads to a joy -- ful end. __
 }
 
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
-  Broth -- ers of the plow,
-  In calm and qui -- et might,
-  You’ve wait -- ed long and pa -- tient -- ly
-  For what was yours by right;
-  
-  A fair re -- ward for toil,
-  A free and o -- pen field;
-  An hon -- est share for wife and home
-  Of what your har -- vests yield.
-  
-  A -- wake, then, a -- wake!
-  the great world must be fed,
-  And heav -- en gives the pow -- er
-  To the hand that holds the bread,
-  
-  Yes, broth -- ers of the plow,
-  The peo -- ple must be fed,
-  And heav -- en gives the pow -- er
-  To the hand that holds the bread.
+  Be still, my soul; thy God doth un -- der -- take __
+  To guide the fu -- ture as He has the past. __
+  Thy hope, thy con -- fid -- ence, let no -- thing shake; __
+  All now mys -- te -- rious shall be bright at last. __
+  Be still, my soul; the waves and winds still know __
+  His voice who ruled them while He dwelt be -- low. __
 }
 
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
-  Broth -- ers of the plow,
-  Come ral -- ly once a -- gain,
-  Come gath -- er from the prai -- rie wide,
-  The hill -- side and the plain;
-  
-  Not as in days of yore,
-  With trump of bat -- tle’s sound,
-  But come and make the world re -- spect
-  The till -- ers of the ground.
+  Be still, my soul, when dear -- est friends de -- part __
+  And all is dark -- ened in the vale of tears; __
+  Then shalt thou bet -- ter know His love, His heart, __
+  Who comes to soothe thy sor -- rows and thy fears. __
+  Be still, my soul; thy Je -- sus can re -- pay __
+  From His own full -- ness all He takes a -- way. __
 }
 
 sopWordsIV = \lyricmode {
   \set stanza = #"4. "
+  Be still, my soul; the hour is hast -- ’ning on __
+  When we shall be for -- ev -- er with the Lord, __
+  When dis -- ap -- point -- ment, grief, and fear are gone, __
+  Sor -- row for -- got, love’s pur -- est joys re -- stored. __
+  Be still, my soul; when change and tears are past, __
+  All safe and bless -- ed we shall meet at last. __
 }
 
 sopWordsV = \lyricmode {
@@ -148,45 +126,34 @@ sopWordsV = \lyricmode {
 }
 
 altoMusic = \relative c' {
-  f16 f8. f f16 |
-  g4. g8 |
-  d d e8. e16 |
-  f4. f8 |
-  f8. f16 f8 f |
-  f f f f |
-  e e f8. f16 |
-  e4. e8 |
+  \partial 2.
+  f4 e f |
+  e2. f4 |
+  e f d4. e8 |
+  e4( f2.)~ |
+  f4 f e f |
+  e2. f4 |
+  e f d4. e8 |
+  f1~ |
   
-  f8 f8 f8. f16 |
-  g4. g8 |
-  d8. d16 e8. e16 |
-  f4. f8 |
-  f8. f16 f8. f16 |
-  f8 f f f |
-  e e e8. e16 |
-  c4.
+  f4 f f f |
+  f2. f4 |
+  f f f4. e8 |
+  e4( g2.)~ |
+  g4 g fis g |
+  f?2. f4 |
+  f f e4. e8 |
+  e1~ |
   
-  
-  %chorus
-  f8 |
-  f4 f8. f16 |
-  f4. f8 |
-  f f f8. f16 |
-  g4. g8 |
-  a8. a16 a8. f16 |
-  f8. f16 f8. bes16 |
-  a8. a16 g8. g16 |
-  f4. f8
-  
-  f16 f8. f f16 |
-  f4. f8 |
-  f f f8. f16 |
-  g4. g8 |
-  a8. a16 a8. f16 |
-  f8. f16 f8. bes16 |
-  a8. a16 bes8. bes16 |
-  a2 \bar"|."
-  
+  e4 a f f |
+  f2. f4 |
+  f f f4. e8 |
+  e4( g2.)~ |
+  g4 g fis g |
+  f?2. c4 |
+  f f e4. f8 |
+  f1~ |
+  f4 \bar"|."
 }
 altoWords = \lyricmode {
 }
@@ -209,44 +176,34 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
-  c16 c8. c c16 |
-  c4. c8
-  a a c8. c16
-  c4. c8
-  bes8. bes16 bes8 bes
-  bes8 a a a 
-  c c c8. a16
-  c4. c8
+  \partial 2.
+  c4 c c |
+  c2. c4 |
+  c c bes4. bes8 |
+  c1~ |
+  c4 c c c |
+  c2. c4 |
+  c c bes4. bes8 |
+  c1~ |
   
-  c8 c8 c8. c16 |
-  c4. c8
-  a8. a16 c8. c16
-  c4. c8
-  bes8. bes16 bes8. bes16
-  bes8 a a a 
-  bes bes c8. bes16
-  a4.
-  \bar"||"
+  c4 a a a |
+  a2. d4 |
+  d c c4. c8 |
+  c4( d2.)~ |
+  d4 d c d |
+  c2. c4 |
+  d d d4. cis8 |
+  cis1~ |
   
-  %chorus
-  a8 |
-  a4 bes8. bes16 |
-  a4. a8 |
-  a a b8. b16 |
-  c4. c8 |
-  c8. c16 c8. c16 |
-  d8. d16 d8. f16 |
-  f8. c16 c8. c16 |
-  c4. a8 |
-  
-  a16 a8. bes bes16 |
-  a4. a8 |
-  a a b8. b16 |
-  c4. c8 |
-  c8. c16 c8. c16 |
-  d8. d16 d8. f16 |
-  f8. c16 c8. c16 |
-  c2 \bar"|."
+  cis!4 c a a |
+  a2. d4 |
+  d c c4. c8 |
+  c4( d2.)~ |
+  d4 d c d |
+  c2. a4 |
+  a4 bes bes4. a8 |
+  a1~ |
+  a4 \bar"|."
 }
 
 tenorWords = \lyricmode {
@@ -259,42 +216,34 @@ tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  f,16 f8. f f16 |
-  e4. e8 |
-  d8 d c8. c16 f4. f8 |
-  bes,8. bes16 bes8 bes |
-  bes8 f' f f |
-  c c f8. f16 |
-  c4. \bar""
+  \partial 2.
+  f,4 bes a |
+  g2. f4 |
+  bes a bes4. g8 |
+  g4( f2.)~ |
+  f4 f bes a |
+  g2. f4 |
+  bes a bes4. g8 |
+  f1~ |
   
-  c8
-  f8 f8 f8. f16 |
-  e4. e8 |
-  d8. d16 c8. c16 f4. f8 |
-  bes,8. bes16 bes8. bes16 |
-  bes8 f' f f |
-  c c c8. c16 |
-  f4. \bar"||"
+  f4 f f e |
+  d2. d4 |
+  d a a4. c8 |
+  c4( g2.)~ |
+  g4 g a bes |
+  a2. c'4 |
+  bes bes bes4. cis8 |
+  a1~ |
   
-  %chorus
-  f8 |
-  f4 f8. f16 |
-  f4. f8 |
-  d d d8. d16 |
-  c4. c8 |
-  f8. f16 f8. f16 |
-  bes,8. bes16 bes8. bes16 |
-  c8. c16 c8. c16 |
-  f4. f8 |
-  
-  f16 f8. f f16 |
-  f4. f8 |
-  d d d8. d16 |
-  c4. c8 |
-  f8. f16 f8. f16 |
-  bes,8. bes16 bes8. bes16 |
-  c8. c16 c8. c16 |
-  f2 \bar"|."
+  a4 f f e |
+  d2. c4 |
+  d a' a4. c8 |
+  c4( g2.)~ |
+  g4 g, a bes |
+  c2. c4 |
+  c c c4. f8 |
+  f1~ |
+  f4 \bar"|."
 }
 bassWords = \lyricmode {
 }
@@ -352,8 +301,10 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"The Hand that Holds the Bread"}}
-  composer = \markup\oldStyleNum"George Frederick Root (1820–1895)"
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Be Still, My Soul"}}
+  composer = \markup\oldStyleNum{\concat{\italic"Finlandia" ", Jean Sibelius (1865–1957)"}}
+  poet = \markup\oldStyleNum"Katharina von Schlegel (1697–1768)"
+  meter = \markup\oldStyleNum"Translated by Jane L. Borthwick (1813–1897)"
   tagline = ""
 }}
 

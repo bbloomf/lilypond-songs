@@ -1,100 +1,95 @@
-﻿%idea: This file could represent the order of ly files, which can then be (in some cases) glued together with a script.
-%Format:
-%page number:filename[;filename]*
-%3:A British Tar                                   %Just set the page number of "A British Tar.ly" and remove any midi blocks
-%5:Hark! the vesper hymn is stealing;Come Follow   %Put together "Hark! the vesper hymn is stealing.ly" and "Come Follow"
-%                                                  %This must be done by putting the header into the score block, and not duplicating the \paper block.
-1:Hail! Smiling Morn;How Lovely Is the Evening
-4:Praise of Spring
-6:Live we singing;The Waits
-8:Now is the month of maying
-10:My bonny lass she smileth
-12:It was a lover and his lass
-14:Shoot false love I care not
-17:Trust
-18:Come again, sweet love
-19:Since first I saw your face
-20:Song of Spring
-24:With Horse and Hound;The Flight of Love
-26:Oft in the stilly night
-27:The Minstrel Boy
-28:Killarney;Love’s Young Dream
-30:I dreamt I dwelt in marble halls
-31:The Heart Bowed Down
-32:John Anderson, my jo
-33:Flow Gently, Sweet Afton
-34:Bonnie Doon;Hark! the vesper hymn is stealing;In the Spring
-36:The Harp that Once Through Tara’s Halls;Could I a maiden find;O Sole Mio
-38:O Calm of Night;Ein Prosit
-39:The Ash Grove
-40:The Battle Hymn of the Republic;The Roast Beef of Old England
-42:De Brevitate Vitæ;Vive L’Amour
-43:Am I Not Fondly Thine Own;Integer Vitae
-44:Night Song;Robin Adair;Annie Laurie
-46:Loch Lomond
-47:Red is the Rose
-48:Dreaming of Home and Mother
-49:By the Sad Sea Waves
-50:Sailing;How can I leave thee
-52:O Fair Dove, O Fond Dove
-54:America the Beautiful;There’s Music in the Air;The Old Time
-56:Dixie
-57:The Lorelei
-58:Santa Lucia
-59:The Hazel Dell
-60:On the Banks of the Wabash, Far Away;A Hot Time in the Old Town
-62:Boating Song
-63:Long, Long Ago
-64:Scotch Lassie Jean;Love’s Chidings
-66:The Old Musician and His Harp;A Life on the Ocean Wave
-68:Jenny the Flower of Kildare;Come Follow;Come Follow Me Merrily
-70:When You and I Were Young, Maggie;The Girl I Left Behind Me
-72:Dublin Bay
-73:Darby and Joan
-74:The Midshipmite;Home Sweet Home
-76:Nancy Lee;The Blue Bells of Scotland
-78:Punchinello;Old Dog Tray
-80:Saved From the Storm
-82:The Little Tin Soldier
-83:Sweet Genevieve
-84:Bride Bells;Gaudeamus Hodie;Ego sum pauper
-86:Jamie’s on the Stormy Sea
-87:The Birds’ Ball
-88:Listen to the Mocking Bird;The Old Folks at Home
-90:Fairy Belle
-91:My Old Kentucky Home
-92:Hard Times
-93:Happy Hours at Home
-94:’Twere vain to tell
-95:The Hand that Holds the Bread
-96:Merrily Sing;Good Night Ladies;Oh My Love
-98:The March of Prohibition;God be with you till we meet again
-100:A Warrior Bold;Rule Britannia
-102:The Sidewalks of New York;For he’s a jolly good fellow
-104:A Capital Ship;America
-106:The Tailor and the Mouse;Maid of Athens;Come Let Us All A-Maying Go
-108:Saint Patrick’s Day;The bell doth toll
-110:Johnny Sands;He that Will an Alehouse Keep;Skating
-112:Where There’s a Will There’s a Way
-113:The Flowers that Bloom in the Spring
-114:La ci darem la mano
-116:The Distant Shore
-118:A British Tar
-120:Brightly dawns our wedding day
-122:When I go out of door;Merrily Greet the Morn;Catch Round the Table
-124:The criminal cried
-126:Tit-Willow
-127:Mister Speaker, though ’tis late
-128:Soldier’s Hymn;When Jesus Wept
-129:When I in pain and sorrow moan;Jesus! the very thought of Thee
-130:The Spacious Firmament on High
-131:Ode to Joy
-132:Glorious Things of Thee Are Spoken
-133:Come, Thou Fount of Every Blessing
-134:Jesus, Lover of my soul
-135:The Battle Prayer
-136:Lead Kindly Light;Glory be to Jesus;Oh, happy is the man that hears
-138:God so loved the world;Abide with me
-140:Be Still, My Soul
-141:Red Wing
-142:It’s Delightful to be Married!
+4:Come again, sweet love
+5:Since first I saw your face
+6:Trust
+7:Hail! Smiling Morn;How Lovely Is the Evening
+10:Praise of Spring
+12:Live we singing;The Waits
+14:Now is the month of maying
+16:My bonny lass she smileth
+18:It was a lover and his lass
+20:Shoot false love I care not
+23:The Hand that Holds the Bread
+24:Song of Spring
+28:With Horse and Hound;The Flight of Love
+30:Oft in the stilly night
+31:The Minstrel Boy
+32:Killarney;Love’s Young Dream
+34:I dreamt I dwelt in marble halls
+35:The Heart Bowed Down
+36:John Anderson, my jo
+37:Flow Gently, Sweet Afton
+38:Bonnie Doon;Hark! the vesper hymn is stealing;In the Spring
+40:The Harp that Once Through Tara’s Halls;Could I a maiden find;O Sole Mio
+42:O Calm of Night;Ein Prosit
+43:The Ash Grove
+44:The Battle Hymn of the Republic;The Roast Beef of Old England
+46:De Brevitate Vitæ;Vive L’Amour
+47:Am I Not Fondly Thine Own;Integer Vitae
+48:Night Song;Robin Adair;Annie Laurie
+50:Loch Lomond
+51:Red is the Rose
+52:Dreaming of Home and Mother
+53:By the Sad Sea Waves
+54:Sailing;How can I leave thee
+56:O Fair Dove, O Fond Dove
+58:America the Beautiful;There’s Music in the Air;The Old Time
+60:Dixie
+61:The Lorelei
+62:Santa Lucia
+63:The Hazel Dell
+64:On the Banks of the Wabash, Far Away;A Hot Time in the Old Town
+66:Boating Song
+67:Long, Long Ago
+68:Red Wing;Red River Valley
+70:Scotch Lassie Jean;Love’s Chidings
+72:The Old Musician and His Harp;A Life on the Ocean Wave
+74:Jenny the Flower of Kildare;Come Follow;Come Follow Me Merrily
+76:When You and I Were Young, Maggie;The Girl I Left Behind Me
+78:Dublin Bay
+79:Darby and Joan
+80:The Midshipmite;Home Sweet Home
+82:Nancy Lee;The Blue Bells of Scotland
+84:Punchinello;Old Dog Tray
+86:Saved From the Storm
+88:The Little Tin Soldier
+89:Sweet Genevieve
+90:Bride Bells;Gaudeamus Hodie;Ego sum pauper
+92:Jamie’s on the Stormy Sea
+93:The Birds’ Ball
+94:Listen to the Mocking Bird;The Old Folks at Home
+96:Fairy Belle
+97:My Old Kentucky Home
+98:Hard Times
+99:Happy Hours at Home
+100:’Twere vain to tell
+101:The Pretty Girl Milking Her Cow
+102:Merrily Sing;Good Night Ladies;Oh My Love
+104:The March of Prohibition;God be with you till we meet again
+106:A Warrior Bold;Rule Britannia
+108:The Sidewalks of New York;For he’s a jolly good fellow
+110:It’s Delightful to be Married!
+112:A Capital Ship;America
+114:The Tailor and the Mouse;Maid of Athens;Come Let Us All A-Maying Go
+116:Saint Patrick’s Day;The bell doth toll
+118:Johnny Sands;He that Will an Alehouse Keep;Skating
+120:Where There’s a Will There’s a Way
+121:The Flowers that Bloom in the Spring
+122:La ci darem la mano
+124:The Distant Shore
+126:A British Tar
+128:Brightly dawns our wedding day
+130:When I go out of door;Merrily Greet the Morn;Catch Round the Table
+132:The criminal cried
+134:Tit-Willow
+135:Mister Speaker, though ’tis late
+136:Soldier’s Hymn;When Jesus Wept
+137:When I in pain and sorrow moan;Jesus! the very thought of Thee
+138:The Spacious Firmament on High
+139:Ode to Joy
+140:Glorious Things of Thee Are Spoken
+141:Come, Thou Fount of Every Blessing
+142:Jesus, Lover of my soul
+143:The Battle Prayer
+144:Lead Kindly Light;Glory be to Jesus;Oh, happy is the man that hears
+146:God so loved the world;Abide with me
+148:Be Still, My Soul

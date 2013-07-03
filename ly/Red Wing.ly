@@ -15,9 +15,9 @@
   system-system-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)
-       (padding . -1)
+       (padding . -2)
        (stretchability . 100))
-  ragged-last-bottom = ##t
+  ragged-last-bottom = ##f
   ragged-bottom = ##f
   two-sided = ##t
   inner-margin = 1\in
@@ -77,7 +77,7 @@ sopMusic = \relative c' {
   
   g g16[ f] ees8 g |
   f c d16[ c] bes8 |
-  ees8 b'\rest \bar"||" \break
+  ees8 b'\rest \bar"||" %\break
   
   %chorus
   ees8 d |

@@ -17,7 +17,7 @@
        (minimum-distance . 0)
        (padding . 1)
        (stretchability . 100))
-  ragged-last-bottom = ##t
+  ragged-last-bottom = ##f
   ragged-bottom = ##f
   two-sided = ##t
   inner-margin = 1\in
@@ -78,7 +78,7 @@ sopMusic = \relative c' {
   e4 d a fis |
   cis' cis2 cis8 b |
   a4 ais b cis |
-  d2. \bar"||"
+  d2. \bar"||" \break
   
   
   %Chorus

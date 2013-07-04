@@ -111,7 +111,7 @@ sopWordsIII = \lyricmode {
   \set stanza = "2. "
   I have prom -- ised you dar -- ling that nev -- er,
   Shall a word from my lips cause you pain
-  And my life it shall be yours for -- ev -- er,
+  And my life it will be yours for -- ev -- er,
   If you on -- ly will love me a -- gain.
 }
 
@@ -119,7 +119,7 @@ sopWordsIV = \lyricmode {
   Won’t you think of the val -- ley you’re leav -- ing,
   Oh! how lone -- ly and drear it will be,
   Won’t you think of the fond heart you’re break -- ing,
-  And the grief you are caus -- ing for me.
+  And the pain you are caus -- ing to me.
 }
 
 sopWordsV = \lyricmode {

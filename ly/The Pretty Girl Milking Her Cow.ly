@@ -59,23 +59,23 @@ sopMusic = \relative c' {
 	\partial 8
   e16[ fis] |
   g8 b g fis a fis |
-  e8 d4 b'4\rest e,16[ fis] |
+  e8 d4 b'4\rest \bar"" e,16[ fis] |
   g8 b g fis a g16[ fis] |
   
-  e4. b'4\rest e,16[ fis] |
+  e4. b'4\rest \bar""\break e,16[ fis] |
   g8 b g fis a fis |
-  e8 d4 b'4\rest b,8 % d8 |
+  e8 d4 b'4\rest \bar"" b,8 % d8 |
   
   %c16[ b] a[ g] fis[ e] b8 e dis |
   g'8. fis16 e8 b e dis |
-  e4. b'4\rest fis8 |
+  e4. b'4\rest \bar""\break fis8 |
   g g16[ a] b[ c] d8 b g |
-  fis d4 b'\rest e,16[ fis] |
+  fis d4 b'\rest \bar"" e,16[ fis] |
   
   g8 g16[ a] b[ c] d8 b d |
-  e4. b4\rest e16[ e] |
+  e4. b4\rest \bar""\break e16[ e] |
   \slurDashed d8. b16 b8 c8.( b16) a[ g] |
-  a fis8. b8\rest b4\rest e,16[ fis] |
+  a fis8. b8\rest b4\rest \bar"" e,16[ fis] |
   
   g8 fis e b'8. a16 g[ fis] |
   e4.~ e4 \bar"|."
@@ -86,9 +86,9 @@ sopWords = \lyricmode {
   The birds sweet -- ly tuned on each bough.
   And as I walk’d out for my plea -- sure,
   I saw a maid milk -- ing her cow.
-  Her voice so en -- chant -- ing mel -- o -- dious,
+  Her voice so __ en -- chant -- ing mel -- o -- dious,
   Left me quite un -- a -- ble to go,
-  \set ignoreMelismata = ##t My _ heart it was load -- ed with _ sor -- row,
+  \set ignoreMelismata = ##t My __ _ heart it was load -- ed with _ sor -- row,
   \unset ignoreMelismata
   For Col -- leen dhas cru -- then na moe.
   
@@ -105,7 +105,7 @@ sopWordsII = \lyricmode {
   “Pray Sir, do not ban -- ter,” she said,
   “I’m not such a rare pre -- cious Jew -- el,
   That I should en -- am -- our you so.
-  I am but a poor \set ignoreMelismata = ##t lit -- tle milk girl.”
+  I __ am but a poor \set ignoreMelismata = ##t lit -- tle milk girl.”
   \unset ignoreMelismata
   Says Col -- leen dhas cru -- then na moe.
 }
@@ -116,9 +116,9 @@ sopWordsIII = \lyricmode {
   So bright and trans -- par -- ent -- ly clear,
   Ah! do not add flame to my fu -- el!
   Con -- sent but to love me, my dear.
-  Ah! had I the lamp of A -- lad -- din,
+  Ah! had I __ the lamp of A -- lad -- din,
   \set ignoreMelismata = ##t
-  Or the wealth of _ the _ Af -- ri -- can shore,
+  Or the wealth of __ _ the _ Af -- ri -- can shore,
   I would rath -- er be poor _ in a Cot -- tage,
   \unset ignoreMelismata
   With Col -- leen dhas cru -- then na moe.
@@ -148,7 +148,7 @@ altoMusic = \relative c' {
   g4. s4 g16[ g] |
   \tieDashed g8. d16 e8 e8.~ e16 e[ e] |
   dis16 dis8. s8 s4 e8
-  e8 e b dis8. dis16 dis8 |
+  \tieSolid e8 e b dis8. dis16 dis8 |
   e4.~ e4 \bar"|."
 }
 altoWords = \lyricmode {

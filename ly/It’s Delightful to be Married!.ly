@@ -62,18 +62,18 @@ sopMusic = \relative c' {
   fis4 d4. b'8\rest e,8 fis |
   g4 e4. b'8\rest cis8 b |
   a4 g fis e |
-  d'2. cis8 d |
+  d'2. \bar"" cis8 d |
   e4 d a fis |
   cis' cis2 b8 cis |
   
   %page2
   d4 cis b fis |
-  a2. d,8 e |
+  a2. \bar"" d,8 e |
   fis4 d4. b'8\rest e,8 fis |
   
   g4 e4. b'8\rest cis8 b |
   a4 g fis e |
-  d'2. cis8 d |
+  d'2. \bar"" cis8 d |
   
   e4 d a fis |
   cis' cis2 cis8 b |
@@ -172,7 +172,7 @@ sopWordsIII = \lyricmode {
   It’s de -- light -- ful to be mar -- ried!
   To be, to be, to be, to be, to be mar -- ried!
   For the heart won’t be un -- ru -- ly,
-  If it real -- ly loves on tru -- _ ly;
+  If it real -- ly loves one tru -- _ ly;
   
   And your life will not be lone -- ly,
   For I’ll love you, I will love you on -- ly, on -- ly,
@@ -209,7 +209,7 @@ altoMusic = \relative c' {
       fis2. \bar"||"
     }
   }
-  \repeat unfold 2 {
+  \repeat unfold 1 {
     d8 d |
     fis4 fis fis fis |
     d d4. s8 f fis |
@@ -227,6 +227,15 @@ altoMusic = \relative c' {
       d2. \bar"|."
     }
   }
+    d8 d |
+    fis4 fis fis fis |
+    d d4. s8 f( fis) |
+    f fis f fis f fis g d |
+    e4 cis2 e8 g |
+    g4. g8 e4. g8 |
+    g4 g e4. d8 |
+    e4 e cis a |
+    d2. \bar"|."
 }
 altoWords = \lyricmode {
 }
@@ -271,7 +280,7 @@ tenorMusic = \relative c' {
     }
   }
   
-  \repeat unfold 2 {
+  \repeat unfold 1 {
     a8 fis |
     a4 a a a |
     a a4. s8 b8 a |
@@ -289,6 +298,15 @@ tenorMusic = \relative c' {
       fis2.
     }
   }
+    a8 fis |
+    a4 a a a |
+    a a4. s8 b8( a) |
+    gis a b a gis a b a |
+    cis4 a2 cis8 cis |
+    cis4 a a a |
+    cis cis a4. b8 |
+    cis4 a a g |
+    fis2.
 }
 
 tenorWords = \lyricmode {
@@ -322,14 +340,14 @@ bassMusic = \relative c' {
     }
   }
   
-  \repeat unfold 2 {
+  \repeat unfold 1 {
     d8 d |
     d4 fis d d |
     d fis4. d8\rest d8 d |
     d d d d d d d d |
     a'4 g2 a8 a |
-    a4 a g g |
-    a a a, a |
+    a4 a g4. g8 |
+    a4 a a, a |
     a cis a cis |
   }
   \alternative {
@@ -340,6 +358,15 @@ bassMusic = \relative c' {
       d2. \bar"|."
     }
   }
+    d8 d |
+    d4 fis d d |
+    d fis4. d8\rest d8~ d |
+    d d d d d d d d |
+    a'4 g2 a8 a |
+    a4 a g4. g8 |
+    a4 a a, a |
+    a cis a cis |
+      d2. \bar"|."
 }
 bassWords = \lyricmode {
 }

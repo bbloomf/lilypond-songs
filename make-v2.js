@@ -285,7 +285,7 @@ var dir = 'ly/mapped/',
             if(fs.existsSync(fullPdf)) {
                 console.info(fullPdf + ' exists; moving to ' + pdf);
                 fs.renameSync(fullPdf,pdf);
-            } else console.info(fullPdf + ' does not exist; not moving to ' + pdf);
+            }// else console.info(fullPdf + ' does not exist; not moving to ' + pdf);
         }
         if(doNotProcess) return;
         if(currentlyActive > 0 && startedWorker) --currentlyActive;

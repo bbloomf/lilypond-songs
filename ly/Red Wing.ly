@@ -230,7 +230,7 @@ tenorMusic = \relative c' {
   
   bes8 bes16[ bes] bes8 bes |
   bes8 bes g c |
-  a8 a bes aes |
+  a8 a f aes |
   g s \bar "||"
   
   %Chorus
@@ -285,8 +285,8 @@ bassMusic = \relative c' {
   ees4. ees8 |
   
   d8 d16[ ees] bes8 d |
-  ees ees16[ d] ees8 ees |
-  f f16[ ees] d8 d |
+  ees ees16[ d] c8 c |
+  f f16[ ees] bes8 d |
   ees8 d\rest \bar"||"
   
   %Chorus

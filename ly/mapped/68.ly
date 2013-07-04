@@ -451,7 +451,7 @@ sopWordsV = \lyricmode {
 
 altoMusic = \relative c' {
   b8 b |
-  d4 d8 c b4 f'8 f |
+  d4 d8 c d4 f8 f |
   e8 e4. s4 d8 d |
   
   d4 d8 d g4 g8 g |
@@ -468,7 +468,7 @@ altoMusic = \relative c' {
   e e4. s4 d8 d |
   
   d4 d8 g gis4 gis8 gis |
-  g?2( fis4) d8 e |
+  g?2( fis4) g8 e |
   g4 g8 d d4 f8 f |
   
   e e4. s4 bes8 bes |
@@ -497,8 +497,8 @@ altoWordsVI = \lyricmode {
 }
 tenorMusic = \relative c' {
   d,8 d |
-  g4 g8 g g4 b8 b |
-  g8 c4. s4 g8 g |
+  g4 g8 g b4 b8 b |
+  g8 c4. s4 g8 b |
   
   g4 b8 g b4 e8 d |
   c2. b8 c |
@@ -512,7 +512,7 @@ tenorMusic = \relative c' {
   
   g8 g |
   g4 a8 b b4 b8 b |
-  g c4. s4 g8 g |
+  g c4. s4 g8 b |
   
   g4 g8 b b4 e8 d |
   cis2( c4) b8 c |
@@ -535,7 +535,7 @@ tenorWordsIII = \lyricmode {
 bassMusic = \relative c' {
   g,8 g |
   g4 g8 g g4 g8 g |
-  c c4. d4\rest b8 b |
+  c c4. d4\rest b8 g |
   
   g4 g'8 g g4 g8 g |
   \slurSolid d4( e8[ ees] d4) g8 g |
@@ -549,7 +549,7 @@ bassMusic = \relative c' {
   
   g8 g |
   g4 fis8 fis e4 d8 d |
-  c c4. d4\rest b8 b |
+  c c4. d4\rest b8 g |
   
   g4 f'8 f e4 e8 e |
   \slurSolid e4( ees d) g8 g |

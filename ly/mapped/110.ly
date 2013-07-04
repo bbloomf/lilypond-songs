@@ -189,15 +189,15 @@ altoMusic = \relative c' {
   \repeat unfold 2 {
     d8 a |
     d4 d4. s8 cis8 d |
-    e4 cis4. s8 e8 e |
+    cis4 cis4. s8 e8 e |
     e4 cis cis cis |
-    d2. a8 d |
+    d2. a8 fis' |
     d4 d fis d |
   }
   \alternative {
     {
       e e2 cis8 e |
-      fis4 e dis e |
+      fis4 e dis dis |
       e2.
     }
     {
@@ -208,7 +208,7 @@ altoMusic = \relative c' {
   }
   \repeat unfold 2 {
     d8 d |
-    fis4 d d d |
+    fis4 fis fis fis |
     d d4. s8 f fis |
     f fis f fis f fis g d |
     e4 cis2 e8 g |
@@ -250,16 +250,16 @@ tenorMusic = \relative c' {
   \repeat unfold 2 {
     fis,8 g |
     a4 a4. s8 a8 a |
-    g4 a4. s8 a8 g |
+    a4 a4. s8 a8 g |
     g4 a fis g |
     fis2. g8 a |
     a4 a d a |
   }
   \alternative {
     {
-      a g2 g8 a |
-      a4 a b a |
-      a2.
+      a g2 g8 g |
+      a4 a b bis |
+      cis2.
     }
     {
       a4 g2 g8 g |
@@ -270,13 +270,13 @@ tenorMusic = \relative c' {
   
   \repeat unfold 2 {
     a8 fis |
-    a4 a fis d |
-    a' a4. s8 b8 a |
+    a4 a a a |
+    a a4. s8 b8 a |
     gis a b a gis a b a |
-    cis4 a2 cis8 b |
+    cis4 a2 cis8 cis |
     cis4 a a a |
     cis cis a4. b8 |
-    cis4 b a g |
+    cis4 a a g |
   }
   \alternative {
     {
@@ -301,19 +301,19 @@ bassMusic = \relative c' {
   \repeat unfold 2 {
     d,8 cis |
     d4 fis4. d8\rest g fis |
-    e4 cis4. d8\rest a e' |
+    e4 a,4. d8\rest a e' |
     cis[ b] a4 a a 
     d2. e8 d |
     fis4 fis d d |
   }
   \alternative {
     {
-      cis a2 a8 a |
-      d4 d b bis |
-      cis2.
+      a a2 a8 a |
+      d4 d b fis' |
+      e2.
     }
     {
-      cis4 a2 a8 a |
+      a,4 a2 a8 a |
       e'4 e a, a |
       d2. \bar "||"
     }
@@ -323,8 +323,8 @@ bassMusic = \relative c' {
     d8 d |
     d4 fis d d |
     d fis4. d8\rest d8 d |
-    d d d d d d d fis |
-    a4 g2 a8 g |
+    d d d d d d d d |
+    a'4 g2 a8 a |
     a4 a g g |
     a a a, a |
     a cis a cis |

@@ -254,7 +254,7 @@ pianoLH = \relative c' {
 %    \new PianoStaff << \new Staff { \new Voice { \pianoRH } } \new Staff { \clef "bass" \pianoLH } >>
   >>
   \midi {
-    \tempo 4 = 90
+    \tempo 4 = 67
     \set Staff.midiInstrument = "flute"
     \context {
       \Voice

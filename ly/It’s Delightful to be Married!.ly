@@ -200,8 +200,8 @@ altoMusic = \relative c' {
   \alternative {
     {
       e e2 cis8 e |
-      fis4 e dis dis |
-      e2.
+      fis4 e dis bis |
+      cis2.
     }
     {
       e4 e2 e8 cis |
@@ -270,8 +270,8 @@ tenorMusic = \relative c' {
   \alternative {
     {
       a g2 g8 g |
-      a4 a b bis |
-      cis2.
+      a4 a fis a |
+      a2.
     }
     {
       a4 g2 g8 g |
@@ -330,7 +330,7 @@ bassMusic = \relative c' {
   \alternative {
     {
       a a2 a8 a |
-      d4 d b fis' |
+      d4 d b dis |
       e2.
     }
     {

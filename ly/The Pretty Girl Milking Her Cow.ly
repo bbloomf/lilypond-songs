@@ -17,7 +17,7 @@
        (minimum-distance . 0)
        (padding . 1)
        (stretchability . 100))
-  ragged-last-bottom = ##t
+  ragged-last-bottom = ##f
   ragged-bottom = ##f
   two-sided = ##t
   inner-margin = 1\in
@@ -46,60 +46,82 @@
 #(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
 global = {
   \key g \major
-  \time 3/4
+  \time 6/8
   \dynamicUp
   %\set crescendoSpanner = #'dashed-line
   %\set midiInstrument = "recorder"
   \autoBeamOff
   \override DynamicTextSpanner #'style = #'none
+  \slurDashed
 }
 
 sopMusic = \relative c' {
-	g'4\p\< g g |
-  b4.\! a8\> g4 |
-  b\! b\< b |
-  d4.\! c8\> b4 |
-  d\!\f c\dim b\! |
+	\partial 8
+  e16[ fis] |
+  g8 b g fis a fis |
+  e8 d4 b'4\rest e,16[ fis] |
+  g8 b g fis a g16[ fis] |
   
-  a2 b4\rest |
-  a2\p g8 fis |
-  g4 a b |
-  c2\cresc b8\! a |
-  b4 c d |
-  \times 2/3 { e8[^\markup{\dynamic f \italic"rit. e dim."} d c] } b4 a |
-  g2\fermata b4\rest \bar "|."
+  e4. b'4\rest e,16[ fis] |
+  g8 b g fis a fis |
+  e8 d4 b'4\rest b,8 % d8 |
+  
+  %c16[ b] a[ g] fis[ e] b8 e dis |
+  g'8. fis16 e8 b e dis |
+  e4. b'4\rest fis8 |
+  g g16[ a] b[ c] d8 b g |
+  fis d4 b'\rest e,16[ fis] |
+  
+  g8 g16[ a] b[ c] d8 b d |
+  e4. b4\rest e16[ e] |
+  \slurDashed d8. b16 b8 c8.( b16) a[ g] |
+  a fis8. b8\rest b4\rest e,16[ fis] |
+  
+  g8 fis e b'8. a16 g[ fis] |
+  e4.~ e4 \bar"|."
 }
 sopWords = \lyricmode {
   \set stanza = #"1. "
-	If I a bird -- ling were,
-  And with two wings could fly,
-  I’d fly to thee;
+	It was on a fine sum -- mer’s morn -- ing,
+  The birds sweet -- ly tuned on each bough.
+  And as I walk’d out for my plea -- sure,
+  I saw a maid milk -- ing her cow.
+  Her voice so en -- chant -- ing mel -- o -- dious,
+  Left me quite un -- a -- ble to go,
+  \set ignoreMelismata = ##t My _ heart it was load -- ed with _ sor -- row,
+  \unset ignoreMelismata
+  For Col -- leen dhas cru -- then na moe.
   
-  But, as no wings are mine,
-  But, as no wings are mine,
-  That can -- not be.
+  
+  Col -- leen, Col -- leen, Col -- leen,
+  Col -- leen dhas cru -- then na moe.
 }
 
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
-  Though far a -- way from thee,
-  Dream -- ing I’m e’er with thee,
-  Whis -- p’ring to thee;
-  
-  But, when I wake at last,
-  But, when I wake at last,
-  Then I’m a -- lone.
+  Then to her I made my ad -- van -- ces;
+  “Good mor -- row, most beau -- ti -- ful maid!
+  Your beau -- ty my heart so en -- tran -- ces,”
+  “Pray Sir, do not ban -- ter,” she said,
+  “I’m not such a rare pre -- cious Jew -- el,
+  That I should en -- am -- our you so.
+  I am but a poor \set ignoreMelismata = ##t lit -- tle milk girl.”
+  \unset ignoreMelismata
+  Says Col -- leen dhas cru -- then na moe.
 }
 
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
-  There is no hour at night
-  When thy dear im -- age bright
-  Strays from my heart.
-  
-  Thou’st said ten thou -- sand times,
-  Thou’st said ten thou -- sand times,
-  That mine thou art.
+  The In -- dies af -- ford no such Jew -- el
+  So bright and trans -- par -- ent -- ly clear,
+  Ah! do not add flame to my fu -- el!
+  Con -- sent but to love me, my dear.
+  Ah! had I the lamp of A -- lad -- din,
+  \set ignoreMelismata = ##t
+  Or the wealth of _ the _ Af -- ri -- can shore,
+  I would rath -- er be poor _ in a Cot -- tage,
+  \unset ignoreMelismata
+  With Col -- leen dhas cru -- then na moe.
 }
 
 sopWordsIV = \lyricmode {
@@ -111,19 +133,23 @@ sopWordsV = \lyricmode {
 }
 
 altoMusic = \relative c' {
-  d4 d d |
-  g4. fis8 g4 |
-  g g g |
-  b4. a8 g4 |
-  g fis g |
-  
-  fis2 s4 |
-  d2 d8 d |
-  d4 fis g |
-  g2 g8 g |
-  g4 g g |
-  a g fis |
-  d2 s4 \bar "|."
+  e8 |
+  e e e dis dis dis |
+  c8 b4 s e8 |
+  e e e dis dis dis |
+  e4. s4 e8 |
+  e e e dis dis dis |
+  c8 b4 s b8 |
+  e8. e16 b8 b b a |
+  b4. s4 d8 |
+  d8 d8 d16[ c] b8 d d |
+  d d4 s4 e16[ d] |
+  d8 d8 d16[ c] b8 d g |
+  g4. s4 g16[ g] |
+  \tieDashed g8. d16 e8 e8.~ e16 e[ e] |
+  dis16 dis8. s8 s4 e8
+  e8 e b dis8. dis16 dis8 |
+  e4.~ e4 \bar"|."
 }
 altoWords = \lyricmode {
 }
@@ -146,19 +172,24 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
-  b4 b b |
-  d4. c8 b4 |
-  d d d |
-  d4. d8 d4 |
-  d d d |
+  e,8 |
+  b' g b a fis a |
+  g8 g4 s4 e8 |
+  b' g b a fis a |
+  g4. s4 e8 |
+  b' g b a fis a |
+  g8 g4 s4 g8 |
+  b8. a16 g8 g g fis |
+  g4. s4 a8 |
+  b8 b16[ a] g8 g g b |
+  a8 fis4 s4 e16[ a]
+  b8 b16[ a] g8 g g b |
+  c4. s4 c16[ c] |
+  b8. g16 e8 a8.( b16) c[ a] |
+  fis16 a8. s8 s4 g8 |
+  b a g fis8. fis16 a8 |
+  g4.~ g4
   
-  d2 s4 |
-  c2 b8 a |
-  g4 d' d |
-  e2 d8 c |
-  d4 d d |
-  e d c |
-  b2 s4 \bar"|."
 }
 
 tenorWords = \lyricmode {
@@ -171,19 +202,25 @@ tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  g4 g g |
-  g4. g8 g4 |
-  g g g |
-  g4. g8 g4 |
-  b4 a g |
+  e,8 |
+  e8 e e b b b |
+  c g4 d'\rest e8 |
+  e e e b b b |
+  e4. d4\rest e8 |
   
-  d2 d4\rest |
-  d2 d8 c |
-  b4 a g |
-  g'2 g8 g |
-  g4 a b |
-  c4 d d, |
-  g2\fermata d4\rest \bar"|."
+  e e e b b b |
+  c g4 d'\rest g8 |
+  e8. e16 e8 e e b |
+  e4. d4\rest d8 |
+  
+  g, g g g g g |
+  d' d4 d\rest e16[ d] |
+  g,8 g g g g g |
+  c4. d4\rest c16[ c] |
+  \tieDashed g8. g16 gis8 a8.~ a16 a16[ a]|
+  b16 b8. d8\rest d4\rest e8 |
+  e e e b8. b16 b8 |
+  \tieSolid e4.~ e4 \bar"|."
 }
 bassWords = \lyricmode {
 }

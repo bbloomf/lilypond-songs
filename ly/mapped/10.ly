@@ -129,27 +129,29 @@ sopWords = \lyricmode {
   Fruit -- ful show -- ers,
   balm -- y gale!
   
-  When of such sweet things we’re chant -- ing,
+  \set associatedVoice = "altos"
+  When of such \unset associatedVoice sweet _ things we’re chant -- ing,
   Say, O Spring, what is there want -- ing
-  Here on \dropLyricsXII earth to swell thy praise,
-  \raiseLyrics here on earth to swell thy praise,
-  \dropLyricsXII here on earth to swell thy \raiseLyrics praise?
+  Here on earth to swell thy praise,
+  here on earth to swell thy praise,
+  here on earth to swell thy \raiseLyrics praise?
   
   Op -- ’ning buds,
   black -- bird’s call,
   Lark’s sweet car -- ol,
   sun -- ny days,
-  Fruit -- ful \dropLyricsXII show -- ers,
-  balm -- y \raiseLyrics gale,
+  Fruit -- ful show -- ers,
+  balm -- y gale,
   balm -- y gale!
   
-  \dropLyricsXII When of such sweet things we’re chant -- ing,
+  When of such sweet things we’re chant -- ing,
   Say, O Spring, what is there want -- ing
-  Here on earth to swell thy praise, \raiseLyrics
+  Here on earth to swell thy praise,
   here on earth to swell thy praise,
   here on earth to swell thy praise,
   here on earth to swell thy praise,
-  \set associatedVoice = "tenors" here on earth to swell thy praise,
+  %\set associatedVoice = "tenors" 
+  here on earth to swell thy praise,
   \set associatedVoice = "altos"
   here on earth, to swell thy praise,
   on earth to swell thy praise?
@@ -269,7 +271,7 @@ tenorMusic = \relative c' {
   
   %page3
   fis4 r d4.\f cis8 |
-  cis b r4 d4.^\dim cis8\! |
+  cis b r4 d4._\dim cis8\! |
   b1~ |
   b2\fermata b4\cresc b\! |
   a4. a8 b[ cis] d4 |

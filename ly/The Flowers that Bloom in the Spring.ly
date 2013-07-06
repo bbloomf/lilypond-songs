@@ -199,7 +199,7 @@ altoWordsVI = \lyricmode {
 }
 tenorMusic = \relative c' {
   c8 |
-  c8. c16 c8 c8. c16 c8 |
+  c8. des16 c8 c8. des16 c8 |
   c8 s c c s aes |
   aes8. g16 aes8 g g g |
   aes4. s4

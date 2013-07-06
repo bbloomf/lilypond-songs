@@ -383,7 +383,7 @@ bassMusic = \relative c' {
     c8[ c] e c4 b8 |
     ais4.( cis |
     d4) d8 cis4 cis8 |
-    b4.~ b8\fermata d\rest b8 |
+    b4.~ b8\fermata d\rest b16[ b] |
     
     
     \key e \major

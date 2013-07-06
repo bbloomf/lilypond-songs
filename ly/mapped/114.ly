@@ -395,7 +395,7 @@ sopWordsV = \lyricmode {
 }
 
 altoMusic = \relative c' {
-  g'4. g8 g g d d |
+  g'4. g8 g g e d |
   e2. s4 |
   fis4. fis8 fis fis c c |
   b2. s4 |

@@ -580,7 +580,7 @@ bassMusic = \relative c' {
   bes, ees8[ g] bes4( aes) |
   g2 g4-- g |
   
-  c,4 c c2-- |
+  c,4 g' c,2-- |
   f2 f4 f |
   bes, bes bes2\fermata |
   c2 c4 f |

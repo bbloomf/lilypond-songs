@@ -34,7 +34,7 @@ for(i in allFiles){
   var file = allFiles[i];
   if(file.match(/\.ly$/)) temp.push(file);
 }
-allFiles = temp;
+allFiles = temp.sort().slice();
 var pages = '';
 //TODO: del mapped\* -Recurse;
 var toc = fs.readFileSync('ly/!Contents.ly','utf8');
@@ -176,8 +176,8 @@ if(allFiles.length > 0) {
 }
 
     
-function processLy(lyFile,callback) {
-    var outputName = lyFile.match(/^(?:.*\/)?((\d+).*\.ly)$/);
+function processLy(lyFile,callback,makePdf) {
+    var outputName = lyFile.match(/^(?:.*\/)?((\d+|[^.]+).*\.ly)$/);
     if(!outputName) {
         console.info('Skipping "' + lyFile + '" because it is not a .ly file.');
         if(typeof(callback)=='function') {
@@ -186,18 +186,28 @@ function processLy(lyFile,callback) {
         return false;
     }
     var lyName = 'lytemp/'+outputName[1];
+    var pdfName = outputName[2] + '.pdf';
     outputName = 'lytemp/'+outputName[2];
     var psName = outputName + '.ps',
-        lyContent = fs.readFileSync(lyFile,'utf8');
+        lyContent = fs.readFileSync(lyFile,'utf8'),
+        doCallback = function(error,stdout,stderr,startedWorker){
+            if(makePdf && (startedWorker || !fs.existsSync('gh-pages/downloads/' + pdfName))) {
+                ps2pdf(psName,8.5,11,outputName +'.pdf',function(error,stdout,stderr){
+                   if(typeof(callback)=='function') {
+                       callback(error,stdout,stderr,psName,true);
+                   }
+                });
+            } else if(typeof(callback)=='function'){
+                callback(error,stdout,stderr,psName,startedWorker);
+            }
+        };
     if(fs.existsSync(psName)) {
         //Check if the .ly file was the same.
         if(fs.existsSync(lyName)) {
             var oldLyContent = fs.readFileSync(lyName,'utf8');
             if(lyContent == oldLyContent) {
                 //console.info('Skipping "' + lyFile + '" because its .ps file already exists and the lilypond content was the same.');
-                if(typeof(callback)=='function') {
-                    callback(null,'','',psName,false);
-                }
+                doCallback(null,'','',false);
                 return false;
             }
         }
@@ -216,23 +226,21 @@ function processLy(lyFile,callback) {
         } else {
             fs.writeFileSync(lyName,lyContent);
         }
-        
-        if(typeof(callback)=='function'){
-            callback(error,stdout,stderr,psName,true);
-        }
+        doCallback(error,stdout,stderr,true);
     });
     return true;
 }
 var gsCmds = ['gs','gswin64c','gswin32c'],
     gsI = 0;
-function ps2pdf(psFiles,width,height,outputName) {
+function ps2pdf(psFiles,width,height,outputName,callback) {
     outputName = outputName || '!full.pdf';
     width *= 72;
     height*= 72;
     if(typeof(psFiles)=='string') psFiles = [psFiles];
     var args = ['-q','-dSAFER','-dDEVICEWIDTHPOINTS='+width,'-dDEVICEHEIGHTPOINTS='+height,'-dCompatibilityLevel=1.4','-dNOPAUSE','-dBATCH',
                 '-r1200','-sDEVICE=pdfwrite','-dEmbedAllFonts=true','-dSubsetFonts=true','-sOutputFile='+outputName,'-c.setpdfwrite','-f'].concat(psFiles);
-    console.info('Processing PDF of ' + psFiles.length + ' files...');
+    var message = psFiles.length == 1? psFiles[0] : psFiles.length + ' files...';
+    console.info('Processing PDF of ' + message);
     //console.info('gs ' + args.join(' '));
     var gsCmd = gsCmds[gsI];
     var cb = function(error,stdout,stderr){
@@ -241,9 +249,15 @@ function ps2pdf(psFiles,width,height,outputName) {
             console.error(stderr);
             console.info(stdout);
             if ((gsCmd=gsCmds[++gsI])) child_process.execFile(gsCmd,args,undefined,cb);
+            if(typeof(callback)=='function') {
+                callback(error,stdout,stderr);
+            }
             return;
         }
-        console.info('Finished');
+        console.info('Finished with ' + outputName);
+        if(typeof(callback)=='function') {
+            callback(error,stdout,stderr);
+        }
     };
     child_process.execFile(gsCmd,args,undefined,cb);
 }
@@ -256,6 +270,41 @@ var dir = 'ly/mapped/',
     currentlyActive = 0,
     i = 0,
     psFiles = [],
+    doNotProcess = false,
+    callbackA = function(error,stdout,stderr,psName,startedWorker) {
+        if(typeof(psName)=='string' && psName.length > 0) {
+            var downloadDir = 'gh-pages/downloads/',
+                fullMidi = psName.replace(/\.ps$/,'.midi'),
+                fullPdf = psName.replace(/\.ps$/,'.pdf'),
+                midi = fullMidi.replace(/^.*\/(?=[^\/]+)/,downloadDir),
+                pdf = fullPdf.replace(/^.*\/(?=[^\/]+)/,downloadDir);
+            if(fs.existsSync(fullMidi)) {
+                console.info(fullMidi + ' exists; moving to ' + midi);
+                fs.renameSync(fullMidi,midi);
+            }
+            if(fs.existsSync(fullPdf)) {
+                console.info(fullPdf + ' exists; moving to ' + pdf);
+                fs.renameSync(fullPdf,pdf);
+            }// else console.info(fullPdf + ' does not exist; not moving to ' + pdf);
+        }
+        if(doNotProcess) return;
+        if(currentlyActive > 0 && startedWorker) --currentlyActive;
+        while(i < temp.length && currentlyActive < maxConcurrent) {
+            //++currentlyActive;
+            if(processLy('ly/' + temp[i++], callbackA, true)) {
+                console.info('Processing file ' + i + ' of ' + temp.length + '; ' + (++currentlyActive) + ' active');
+            }
+        }
+        if(i==temp.length && currentlyActive < maxConcurrent) {
+            if(currentlyActive === 0) {
+                i = 0;
+                doNotProcess = true;
+                callback();
+            } else if(startedWorker) {
+                console.info(currentlyActive + ' active');
+            }
+        }
+    },
     callback = function(error,stdout,stderr,psName,startedWorker) {
         if(typeof(psName)=='string' && psName.length > 0) {
             psFiles.push(psName);
@@ -287,4 +336,4 @@ var dir = 'ly/mapped/',
             }
         }
     };
-callback();
+callbackA();

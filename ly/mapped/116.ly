@@ -220,7 +220,7 @@ tenorMusic = \relative c' {
   
   a8. bes16 a8 a c a 
   c8. c16 c8 c a f 
-  f4 c8 c4 a'8 |
+  f4 c8 f4 a8 |
   
   g8 g c a4 a8 |
   bes4 bes8 a4 a8 |
@@ -241,7 +241,7 @@ tenorMusic = \relative c' {
   
   a8. bes16 a8 a8. c16 a8
   c8. c16 c8 c a f
-  f4 c8 c4 \bar"|."
+  f4 c8 f4 \bar"|."
 }
 
 tenorWords = \lyricmode {

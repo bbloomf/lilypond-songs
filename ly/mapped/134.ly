@@ -203,8 +203,8 @@ bassMusic = \relative c' {
   
   aes,16 aes~ aes4 d\rest aes16 aes |
   aes8 aes aes aes' aes aes |
-  des, des des aes d\rest aes'16[ aes] |
-  bes, bes d8\rest bes bes16 bes d8\rest bes |
+  des, des des aes d\rest aes16[ aes] |
+  bes bes d8\rest bes bes16 bes d8\rest bes |
   
   ees16 ees~ ees4 d\rest ees16[ d] |
   ees8. ees16 ees8 bes8. bes16 bes8 |

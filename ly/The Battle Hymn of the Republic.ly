@@ -93,7 +93,7 @@ sopWords = \lyricmode {
 	Mine eyes have seen the glo -- ry of the com -- ing of the Lord;
   He is tramp -- ling out the vin -- tage where the grapes of wrath are stored;
   He hath loosed the fate -- ful light -- ning of His ter -- ri -- ble swift sword;
-  His truth is march -- ing %on.
+  His truth is march -- ing on.
 }
 
 sopWordsII = \lyricmode {
@@ -102,7 +102,7 @@ sopWordsII = \lyricmode {
   I have seen Him in the watch -- fires of a hun -- dred cir -- cling camps;
   They have build -- ed Him an al -- tar in the eve -- ning dews and damps;
   I can read His right -- eous sen -- tence in the dim and flar -- ing lamps:
-  His day is march -- ing %on.
+  His day is march -- ing on.
 }
 
 sopWordsIII = \lyricmode {
@@ -125,7 +125,7 @@ sopWordsIV = \lyricmode {
   He has sound -- ed forth the trum -- pet that shall nev -- er call re -- treat;
   He is sift -- ing out the hearts of men be -- fore His judg -- ment seat:
   Oh, be swift, my soul, to an -- swer Him! be ju -- bi -- lant, my feet!
-  Our God is march -- ing %on.
+  Our God is march -- ing on.
 }
 
 sopWordsV = \lyricmode {
@@ -134,7 +134,7 @@ sopWordsV = \lyricmode {
   In the beau -- ty of the lil -- ies Christ was born a -- cross the sea,
   With a glo -- ry in His bo -- som that trans -- fig -- ures you and me;
   As He died to make men ho -- ly, let us die to make men free,
-  While God is march -- ing %on.
+  While God is march -- ing on.
 }
 
 altoMusic = \relative c' {
@@ -143,7 +143,7 @@ altoMusic = \relative c' {
   d8. d16 d8. c16 bes8. d16 f8. f16 |
   f8. f16 f8. f16 d4 \bar"" f8. f16 |
   
-  ees8. ees16 ees8. f16 g8. f16 g8. ees16 |
+  ees8. ees16 ees8. ees16 ees8. ees16 ees8. ees16 |
   d8. ees16 d8. bes16 d4 \bar"" d8. d16 |
   
   d8. d16 d8. c16 bes8. d16 f8. f16 |
@@ -187,7 +187,7 @@ tenorMusic = \relative c' {
   bes8. f16 f8. f16 f8. bes16 bes8. a16 |
   bes8. bes16 bes8. a16 bes4 bes8. bes16 |
   
-  bes8. bes16 bes8. bes16 ees8. ees16 ees8. bes16 |
+  bes8. bes16 bes8. c16 bes8. c16 bes8. bes16 |
   bes8. bes16 bes8. f16 bes4 bes8. bes16 |
   
   bes8. f16 f8. f16 f8. bes16 bes8. a16 |
@@ -197,7 +197,7 @@ tenorMusic = \relative c' {
   
   bes4 bes4 f8. bes16 bes8. a16 |
   bes2 bes |
-  bes4. c8 bes8. c16 bes8. c16 |
+  bes4. c8 bes8. c16 bes8. a16 |
   bes2 bes |
   
   a4. a8 f8. a16 d8. c16 |
@@ -220,7 +220,7 @@ bassMusic = \relative c' {
   bes8. bes16 bes8. bes16 bes8. bes16 d8. f16 |
   bes8. bes16 bes8. f16 bes,4 d8. d16 |
   
-  ees8. ees16 ees8. ees16 ees8. ees16 ees8. ees16 |
+  ees8. ees16 ees8. f16 g8. f16 g8. ees16 |
   bes8. bes16 bes8. bes16 bes4 bes8. bes16 |
   
   bes8. bes16 bes8. bes16 bes8. bes16 d8. c16 |

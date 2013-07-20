@@ -15,7 +15,7 @@
   system-system-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)
-       (padding . -3)
+       (padding . 0)
        (stretchability . 100))
   score-markup-spacing =
     #'((basic-distance . 0)
@@ -65,7 +65,7 @@ global = {
 }
 
 sopMusic = \relative c' {
-	\partial 8 |
+	\partial 8
   f16[\mf f] |
   f8. f16 f8. ees16 d8. f16 bes8. c16 |
   d8. d16 d8. c16 bes4 bes8. a16 |
@@ -93,7 +93,7 @@ sopWords = \lyricmode {
 	Mine eyes have seen the glo -- ry of the com -- ing of the Lord;
   He is tramp -- ling out the vin -- tage where the grapes of wrath are stored;
   He hath loosed the fate -- ful light -- ning of His ter -- ri -- ble swift sword;
-  His truth is march -- ing on.
+  His truth is march -- ing %on.
 }
 
 sopWordsII = \lyricmode {
@@ -102,7 +102,7 @@ sopWordsII = \lyricmode {
   I have seen Him in the watch -- fires of a hun -- dred cir -- cling camps;
   They have build -- ed Him an al -- tar in the eve -- ning dews and damps;
   I can read His right -- eous sen -- tence in the dim and flar -- ing lamps:
-  His day is march -- ing on.
+  His day is march -- ing %on.
 }
 
 sopWordsIII = \lyricmode {
@@ -125,7 +125,7 @@ sopWordsIV = \lyricmode {
   He has sound -- ed forth the trum -- pet that shall nev -- er call re -- treat;
   He is sift -- ing out the hearts of men be -- fore His judg -- ment seat:
   Oh, be swift, my soul, to an -- swer Him! be ju -- bi -- lant, my feet!
-  Our God is march -- ing on.
+  Our God is march -- ing %on.
 }
 
 sopWordsV = \lyricmode {
@@ -134,7 +134,7 @@ sopWordsV = \lyricmode {
   In the beau -- ty of the lil -- ies Christ was born a -- cross the sea,
   With a glo -- ry in His bo -- som that trans -- fig -- ures you and me;
   As He died to make men ho -- ly, let us die to make men free,
-  While God is march -- ing on.
+  While God is march -- ing %on.
 }
 
 altoMusic = \relative c' {
@@ -151,12 +151,12 @@ altoMusic = \relative c' {
   g g f f |
   f1 |
   
-  d4. c8 bes8. d16 d8. ees16 |
-  f2 f |
-  ees4. f8 g8. f16 g8. ees16 |
+  d4. c8 bes8. d16 f8. f16 |
+  f2 d |
+  ees4. ees8 ees8. ees16 ees8. ees16 |
   d2 bes |
   
-  d4. c8 bes8. d16 f8. g16 |
+  c4. c8 bes8. c16 g'8. g16 |
   fis2 d4 d |
   g g f f |
   f2. s8 \bar"|."
@@ -195,12 +195,12 @@ tenorMusic = \relative c' {
   ees ees d c |
   d1 |
   
-  bes4. f8 f8. bes16 bes8. bes16 |
+  bes4 bes4 f8. bes16 bes8. a16 |
   bes2 bes |
-  bes4. bes8 bes8. bes16 bes8. bes16 |
-  bes2 f |
+  bes4. c8 bes8. c16 bes8. c16 |
+  bes2 bes |
   
-  bes4. f8 f8. bes16 d8. c16 |
+  a4. a8 f8. a16 d8. c16 |
   a2 bes4 bes |
   ees ees d c |
   d2. s8 \bar "|."
@@ -228,12 +228,12 @@ bassMusic = \relative c' {
   ees ees f f |
   bes,1 |
   
-  bes4. bes8 bes8. bes16 bes8. bes16 |
-  bes2 d |
-  ees4. ees8 ees8. ees16 ees8. ees16 |
-  bes2 bes |
+  bes4 bes bes8. f'16 d8. c16 |
+  bes2 bes4( d) |
+  ees4. f8 g8. f16 g8. a16 |
+  bes4( a) g( f) |
   
-  bes4. bes8 bes8. bes16 bes8. ees16 |
+  f4. f8 bes,8. f'16 g8. ees16 |
   d2 g4 f |
   ees ees f f |
   bes,2. d8\rest \bar"|."

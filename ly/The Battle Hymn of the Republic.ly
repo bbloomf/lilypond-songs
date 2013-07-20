@@ -184,13 +184,13 @@ altoWordsVI = \lyricmode {
 tenorMusic = \relative c' {
   \partial 8
   bes16[ bes] |
-  bes8. f16 f8. f16 f8. bes16 bes8. a16 |
+  bes8. bes16 bes8. bes16 f8. bes16 bes8. a16 |
   bes8. bes16 bes8. a16 bes4 bes8. bes16 |
   
   bes8. bes16 bes8. c16 bes8. c16 bes8. bes16 |
   bes8. bes16 bes8. f16 bes4 bes8. bes16 |
   
-  bes8. f16 f8. f16 f8. bes16 bes8. a16 |
+  bes8. bes16 bes8. bes16 f8. bes16 bes8. a16 |
   bes8. bes16 bes8. a16 bes4 bes |
   ees ees d c |
   d1 |
@@ -223,7 +223,7 @@ bassMusic = \relative c' {
   ees8. ees16 ees8. f16 g8. f16 g8. ees16 |
   bes8. bes16 bes8. bes16 bes4 bes8. bes16 |
   
-  bes8. bes16 bes8. bes16 bes8. bes16 d8. c16 |
+  bes8. bes16 bes8. bes16 bes8. f'16 d8. c16 |
   bes8. d16 f8. fis16 g4 f |
   ees ees f f |
   bes,1 |

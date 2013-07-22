@@ -54,17 +54,26 @@ global = {
 }
 
 sopMusic = \relative c' {
-  \repeat unfold 2 {
-    a'8 a8. d16 |
-    d16 cis cis4 |
-    g8 g8. b16 |
-    b[ a] a4 |
-    fis8 b a |
-    
-    a16[ gis] g4 |
-    g8 fis e |
-    b' a4 |
-  } \break
+  a'8 a8. d16 |
+  d16[ cis] cis4 |
+  g8 g8. b16 |
+  b[ a] a4 |
+  fis8 b a |
+  
+  a16[ gis] g4 |
+  g8 fis e |
+  b' a4 |
+  
+  a8 a8. d16 |
+  d16 cis cis4 |
+  g8 g8. b16 |
+  b[ a] a4 |
+  fis8 b a |
+  
+  a16[ gis] g4 |
+  g8 fis e |
+  b' a4 |
+  \break
   \bar "||"
   fis'8 e d |
   cis16 b e4 |
@@ -90,7 +99,7 @@ sopMusic = \relative c' {
 }
 sopWords = \lyricmode {
   \set stanza = #"1. "
-  Now ’neath the sil -- ver moon
+  Now ’neath the \set ignoreMelismata = ##t  sil -- ver moon \unset ignoreMelismata
   O -- cean is glow -- ing,
   O’er the calm bil -- low
   Soft winds are blow -- ing.
@@ -113,7 +122,7 @@ sopWords = \lyricmode {
 
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
-  When o’er thy wa -- _ ters
+  When o’er thy wa -- ters
   Light winds are play -- ing,
   Thy spell can soothe us,
   All care al -- lay -- ing.
@@ -138,17 +147,26 @@ sopWordsV = \lyricmode {
 }
 
 altoMusic = \relative c' {
-  \repeat unfold 2 {
-    fis8 fis8. fis16 |
-    g g g4 |
-    e8 e8. g16 |
-    g[ fis] fis4 |
-    d8 g fis |
-    
-    fis16[ eis] e4 |
-    e8 d cis |
-    g' fis4 |
-  }
+  fis8 fis8. fis16 |
+  g[ g] g4 |
+  e8 e8. g16 |
+  g[ fis] fis4 |
+  d8 g fis |
+  
+  fis16[ eis] e4 |
+  e8 d cis |
+  g' fis4 |
+  
+  fis8 fis8. fis16 |
+  g g g4 |
+  e8 e8. g16 |
+  g[ fis] fis4 |
+  d8 g fis |
+  
+  fis16[ eis] e4 |
+  e8 d cis |
+  g' fis4 |
+  
   d'8 cis b |
   a16 g g4 |
   
@@ -190,17 +208,27 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
-  \repeat unfold 2 {
-    a8 a8. a16 |
-    a a a4 |
-    cis8 a cis |
-    d d4 |
-    a8 a a |
-    
-    a8 a4 |
-    a8 a a |
-    b8 d4 |
-  }
+  a8 a8. a16 |
+  a[ a] a4 |
+  cis8 a cis |
+  d d4 |
+  a8 a a |
+  
+  a8 a4 |
+  a8 a a |
+  b8 d4 |
+  
+  a8 a8. a16 |
+  a a a4 |
+  cis8 a cis |
+  d d4 |
+  a8 a a |
+  
+  a8 a4 |
+  a8 a a |
+  b8 d4 |
+  
+  
   a8 g b |
   e16 b b4 |
   
@@ -233,17 +261,26 @@ tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  \repeat unfold 2 {
-    d,8 d8. d16 |
-    e e e4 |
-    a,8 cis a |
-    d8 a'4 |
-    d,8 d d |
-    
-    cis8 cis4 |
-    cis8 d a |
-    d a'4 |
-  }
+  d,8 d8. d16 |
+  e[ e] e4 |
+  a,8 cis a |
+  d8 a'4 |
+  d,8 d d |
+  
+  cis8 cis4 |
+  cis8 d a |
+  d a'4 |
+  
+  d,8 d8. d16 |
+  e e e4 |
+  a,8 cis a |
+  d8 a'4 |
+  d,8 d d |
+  
+  cis8 cis4 |
+  cis8 d a |
+  d a'4 |
+  
   d,8 e g |
   g16 g e4 |
   

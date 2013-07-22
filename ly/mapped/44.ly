@@ -12,7 +12,7 @@
   system-system-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)
-       (padding . -3)
+       (padding . 0)
        (stretchability . 100))
   score-markup-spacing =
     #'((basic-distance . 0)
@@ -62,7 +62,7 @@ global = {
 }
 
 sopMusic = \relative c' {
-	\partial 8 |
+	\partial 8
   f16[\mf f] |
   f8. f16 f8. ees16 d8. f16 bes8. c16 |
   d8. d16 d8. c16 bes4 bes8. a16 |
@@ -140,7 +140,7 @@ altoMusic = \relative c' {
   d8. d16 d8. c16 bes8. d16 f8. f16 |
   f8. f16 f8. f16 d4 \bar"" f8. f16 |
   
-  ees8. ees16 ees8. f16 g8. f16 g8. ees16 |
+  ees8. ees16 ees8. ees16 ees8. ees16 ees8. ees16 |
   d8. ees16 d8. bes16 d4 \bar"" d8. d16 |
   
   d8. d16 d8. c16 bes8. d16 f8. f16 |
@@ -148,12 +148,12 @@ altoMusic = \relative c' {
   g g f f |
   f1 |
   
-  d4. c8 bes8. d16 d8. ees16 |
-  f2 f |
-  ees4. f8 g8. f16 g8. ees16 |
+  d4. c8 bes8. d16 f8. f16 |
+  f2 d |
+  ees4. ees8 ees8. ees16 ees8. ees16 |
   d2 bes |
   
-  d4. c8 bes8. d16 f8. g16 |
+  c4. c8 bes8. c16 g'8. g16 |
   fis2 d4 d |
   g g f f |
   f2. s8 \bar"|."
@@ -181,23 +181,23 @@ altoWordsVI = \lyricmode {
 tenorMusic = \relative c' {
   \partial 8
   bes16[ bes] |
-  bes8. f16 f8. f16 f8. bes16 bes8. a16 |
+  bes8. bes16 bes8. bes16 f8. bes16 bes8. a16 |
   bes8. bes16 bes8. a16 bes4 bes8. bes16 |
   
-  bes8. bes16 bes8. bes16 ees8. ees16 ees8. bes16 |
+  bes8. bes16 bes8. c16 bes8. c16 bes8. bes16 |
   bes8. bes16 bes8. f16 bes4 bes8. bes16 |
   
-  bes8. f16 f8. f16 f8. bes16 bes8. a16 |
+  bes8. bes16 bes8. bes16 f8. bes16 bes8. a16 |
   bes8. bes16 bes8. a16 bes4 bes |
   ees ees d c |
   d1 |
   
-  bes4. f8 f8. bes16 bes8. bes16 |
+  bes4 bes4 f8. bes16 bes8. a16 |
   bes2 bes |
-  bes4. bes8 bes8. bes16 bes8. bes16 |
-  bes2 f |
+  bes4. c8 bes8. c16 bes8. a16 |
+  bes2 bes |
   
-  bes4. f8 f8. bes16 d8. c16 |
+  a4. a8 f8. a16 d8. c16 |
   a2 bes4 bes |
   ees ees d c |
   d2. s8 \bar "|."
@@ -217,20 +217,20 @@ bassMusic = \relative c' {
   bes8. bes16 bes8. bes16 bes8. bes16 d8. f16 |
   bes8. bes16 bes8. f16 bes,4 d8. d16 |
   
-  ees8. ees16 ees8. ees16 ees8. ees16 ees8. ees16 |
+  ees8. ees16 ees8. f16 g8. f16 g8. ees16 |
   bes8. bes16 bes8. bes16 bes4 bes8. bes16 |
   
-  bes8. bes16 bes8. bes16 bes8. bes16 d8. c16 |
+  bes8. bes16 bes8. bes16 bes8. f'16 d8. c16 |
   bes8. d16 f8. fis16 g4 f |
   ees ees f f |
   bes,1 |
   
-  bes4. bes8 bes8. bes16 bes8. bes16 |
-  bes2 d |
-  ees4. ees8 ees8. ees16 ees8. ees16 |
-  bes2 bes |
+  bes4 bes bes8. f'16 d8. c16 |
+  bes2 bes4( d) |
+  ees4. f8 g8. f16 g8. a16 |
+  bes4( a) g( f) |
   
-  bes4. bes8 bes8. bes16 bes8. ees16 |
+  f4. f8 bes,8. f'16 g8. ees16 |
   d2 g4 f |
   ees ees f f |
   bes,2. d8\rest \bar"|."

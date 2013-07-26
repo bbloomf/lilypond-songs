@@ -1,4 +1,4 @@
-ï»¿\version "2.14.2"
+\version "2.14.2"
 \include "util.ly"
 \header {
   title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"The Bonnie Blue Flag"}}
@@ -113,8 +113,8 @@ sopWordsII = \lyricmode {
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
   \set ignoreMelismata = ##t
-  Then hereâ€™s to our Con -- fed -- e -- ra -- cy, so strong we are and brave, _
-  Like pa -- tri -- ots of old weâ€™ll fight, our her -- i -- tage to save: __ _
+  Then here’s to our Con -- fed -- e -- ra -- cy, so strong we are and brave, _
+  Like pa -- tri -- ots of old we’ll fight, our her -- i -- tage to save: __ _
   And ra -- ther than sub -- mit __ _ to shame, to die we would pre -- fer, __ _
   So cheer __ _ for the Bon -- nie Blue Flag that bears a sin -- gle star. __ _
 }

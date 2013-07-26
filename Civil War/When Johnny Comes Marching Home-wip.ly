@@ -78,23 +78,37 @@ sopMusic = \relative c' {
 }
 sopWords = \lyricmode {
   \set stanza = #"1. "
-	When John -- ny comes march -- ing home a -- gain, hur -- rah, hur -- rah,
-  We’ll give him a heart -- y wel -- come then, hur -- rah, hur -- rah,
+	When John -- ny comes march -- ing home a -- gain, Hur -- rah, Hur -- rah,
+  We’ll give him a heart -- y wel -- come then, Hur -- rah, Hur -- rah,
   The men will cheer, the boys will shout,
   The la -- dies, they will all turn out,
-  And we’ll all feel gay, When John -- ny comes march -- ing home.
 }
 
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
+  The old "" church bell will peal with joy, Hur -- rah, Hur -- rah,
+  To wel -- "" come home our dar -- ling boy, Hur -- rah, Hur -- rah,
+  The vil -- lage lads and lass -- es say,
+  With ro -- ses they will strew the way,
+  
+  \dropLyricsXV
+  And we’ll all feel gay, When John -- ny comes march -- ing home.
 }
 
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
+  Get rea -- "" dy for the Ju -- bi -- lee, Hur -- rah, Hur -- rah,
+  We’ll give "" the he -- ro three time three, Hur -- rah, Hur -- rah,
+  The laur -- el wreath is rea -- dy now,
+  To place up -- on his loy -- al brow,
 }
 
 sopWordsIV = \lyricmode {
   \set stanza = #"4. "
+  Let love "" and friend -- ship on that day, Hur -- rah, Hur -- rah,
+  Their choic -- "" est trea -- sures then dis -- play, Hur -- rah, Hur -- rah,
+  And let each one per -- form som part,
+  To fill with joy the war -- rior’s heart,
 }
 
 sopWordsV = \lyricmode {
@@ -182,8 +196,8 @@ bassMusic = \relative c' {
   
   bes4.~ bes4 bes8 |
   f4.~ f4 g8 |
-  g g g g4 g8 |
-  g4 g8 g4 f8 |
+  g g g g4 a8 |
+  g4 a8 g4 f8 |
   bes4.~ bes4 d8 |
   
   d4.~ d4 d8 |

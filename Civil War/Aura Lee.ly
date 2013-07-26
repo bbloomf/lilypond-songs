@@ -83,7 +83,7 @@ sopWords = \lyricmode {
   
   
   Au -- ra Lee! Au -- ra Lee!
-  MAid of gold -- en hair!
+  Maid of gold -- en hair!
   Sun -- shine came a -- long with thee,
   And swal -- lows in the air.
 }

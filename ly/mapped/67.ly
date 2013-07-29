@@ -13,11 +13,6 @@
     #'((basic-distance . 0)
        (minimum-distance . 0)
        (padding . -3)
-       (stretchability . 150))
-  score-markup-spacing =
-    #'((basic-distance . 0)
-       (minimum-distance . 0)
-       (padding . 0)
        (stretchability . 100))
   ragged-last-bottom = ##f
   ragged-bottom = ##f
@@ -47,7 +42,7 @@
 }
 #(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
 global = {
-  \key f \major
+  \key g \major
   \time 4/4
   \dynamicUp
   %\set crescendoSpanner = #'dashed-line
@@ -57,69 +52,79 @@ global = {
 }
 
 sopMusic = \relative c' {
-	f4 f8 g a4 a8 bes |
-  c4 d8 c a4 b4\rest |
-  c bes8 a g4 b\rest |
-  bes a8 g f4 b\rest |
+	\partial 4
+  b'8 c |
+  d4 g, g8 a g fis |
+  e2 g |
+  d8 << {g4.} {s8 \teeny g4} >> \normalsize g4 b |
+  a2. \bar"" b8 c |
   
-  f4 f8 g a4 a8 bes |
-  c4 d8 c a4 b\rest |
-  c4 bes8 a g4 a8.\fermata g16 |
-  f2 b\rest |
+  d4 g, g8 a g fis |
+  e2 g |
+  d8 << d'4. {s8 \teeny d4} >> \normalsize b a |
+  g2. \bar"" b8 c |
   
-  c4 bes8 a g4 c,8 c |
-  bes'4 a8 g f4 b\rest |
-  c bes8 a g4 c,8 c |
-  bes'4 a8 g f4 b\rest |
+  d4 g, g8 a g fis |
+  e2 g |
+  d4 g g b |
+  a2. \bar"" b8 c |
   
-  f4 f8 g a4 a8 bes |
-  c4 d8 c a4 b\rest |
-  c\p bes8 a g4 a8.\fermata g16 |
-  f2 b\rest \bar"|."
+  
+  d4 g, g8 a g fis |
+  e2 g |
+  d8 d'4. b4 a |
+  g2. b4\rest \bar"||"
+  
+  %Chorus
+  c4. c8 b4 b |
+  b a g a |
+  b d, e g |
+  a2. \bar"" b8 c |
+  
+  d4 g, g8 a g fis |
+  e2 g |
+  d8 d'4. b4 a |
+  g2. \bar"|."
 }
 sopWords = \lyricmode {
   \set stanza = #"1. "
-	Tell me the tales that to me were so dear,
-  Long, long a -- go,
-  Long, long a -- go;
-  
-  Sing me the songs I de -- light -- ed to hear,
-  Long, long a -- go, long a -- go.
-  
-  Now you are come, all my grief is re -- moved,
-  Let me for -- get that so long you have roved,
-  Let me be -- lieve that you love as you loved,
-  Long, long a -- go, long -- a -- go.
+	In the Ha -- zel Dell my Nel -- ly’s sleep -- ing,
+  Nel -- ly "" loved so long!
+  And my lone -- ly lone -- ly watch I’m keep -- ing,
+  Nel -- ly "" lost and gone;
+  Here in moon -- light oft -- en we have wan -- dered
+  Through the si -- lent shade,
+  Now where leaf -- y branch -- es droop -- ing down -- ward,
+  Lit -- tle Nel -- ly’s laid.
 }
 
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
-  Do you re -- mem -- ber the path where we met,
-  Long, long a -- go,
-  Long, long a -- go?
+  In the Ha -- zel Dell my Nel -- ly’s sleep -- ing,
+  Where "" the flow -- ers wave,
+  And the si -- lent stars are night -- ly weep -- ing,
+  O’er "" poor Nel -- ly’s grave;
+  Hopes that once my bos -- om fond -- ly cher -- ished
+  Smile no more on me,
+  Ev -- ’ry dream of joy a -- las has per -- ished,
+  Nel -- ly dear, with thee.
   
-  Ah, yes, you told me you ne’er would for -- get,
-  Long, long a -- go, long -- a -- go.
-  
-  Then, to all oth -- ers my smile you pre -- ferr’d,
-  Love, when you spoke, gave a charm to each word,
-  Still my heart  trea -- sures the prais -- es I heard,
-  Long, long a -- go, long a -- go.
+  All a -- lone my watch I’m keep -- ing
+  In the Ha -- zel Dell,
+  For my dar -- ling Nel -- ly’s near me sleep -- ing,
+  Nel -- ly dear, fare -- well.
 }
 
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
-  Though by your kind -- ness my fond hopes were raised,
-  Long, long a -- go,
-  Long, long a -- go;
-  
-  You by more el -- o -- quent lips have been praised,
-  Long, long a -- go, long a -- go.
-  
-  But by long ab -- sence your truth has been tried,
-  Still to your ac -- cents I lis -- ten with pride,
-  Blest as I was when I sat by your side,
-  Long, long a -- go, long a -- go.
+  Now I’m wea -- ry, friend -- less, and for -- sak -- en,
+  Watch -- \skip1 ing here a -- lone,
+  Nel -- ly, thou no more will fond -- ly cheer me,
+  With "" thy lov -- ing tone;
+  Yet for -- ev -- er shall thy gen -- tle im -- age
+  In my mem -- ’ry dwell.
+  And my tears thy lone -- ly grave shall moist -- en,
+  Nel -- ly dear, fare -- well.
 }
 
 sopWordsIV = \lyricmode {
@@ -131,25 +136,37 @@ sopWordsV = \lyricmode {
 }
 
 altoMusic = \relative c' {
-  f4 f8 e f4 f8 g |
-  a4 bes8 a f4 s |
-  a g8 f e4 s |
-  f f8 e f4 s |
+  g'8 e |
+  d4 d d8 d d d |
+  c2 e |
+  d8 << d4. {s8 \teeny d4} >> \normalsize d d |
+  d2. g8 e |
   
-  c c8 e f4 f8 g |
-  a4 bes8 a f4 s |
-  f f8 f e4 e8. e16 |
-  f2 s |
+  d4 d d8 d d d |
+  c2 e |
+  d8 << g4. {s8 \teeny g4} >> \normalsize g fis |
+  g2. g8 e |
   
-  a4 g8 f e4 c8 c |
-  e4 f8 e f4 s |
-  a g8 f e4 c8 c |
-  e4 f8 e f4 s |
+  d4 d d8 d d d |
+  c2 e |
+  d4 d d d |
+  d2. g8 e |
   
-  c4 c8 e f4 f8 g |
-  a4 bes8 a f4 s |
-  a4 g8 f e4 e8. e16 |
-  f2 s \bar"|."
+  d4 d d8 d d d |
+  c2 e |
+  d8 g4. g4 fis |
+  g2. s4 \bar"||"
+  
+  %Chorus
+  g4. g8 g4 g |
+  g d d d |
+  d b c d |
+  fis2. g8 e |
+  
+  d4 d d8 d d d |
+  c2 e |
+  d8 g4. g4 fis |
+  g2. \bar"|."
 }
 altoWords = \lyricmode {
 }
@@ -172,25 +189,36 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
-  a4 a8 c c4 c8 c |
-  c4 c8 c c4 s |
-  c4 c8 c c4 s |
-  d4 c8 bes a4 s |
+  g8 g |
+  g4 g b8 c b a |
+  g2 c |
+  b8 << b4. {s8 \teeny b4} >> \normalsize b g |
+  fis2. g8 g |
   
-  a a8 c c4 c8 c |
-  c4 c8 c c4 s |
-  a d8 c bes4 c8. bes16 |
-  a2 s |
+  g4 g b8 c b a |
+  g2 c |
+  b8 << b4. {s8 \teeny b4} >> \normalsize d c |
+  b2. g8 g |
   
-  c4 c8 c c4 g8 g |
-  c4 c8 bes a4 s |
-  c4 c8 c c4 g8 g |
-  c4 c8 c16[ bes] a4 s |
+  g4 g b8 c b a |
+  g2 c |
+  b4 b b g |
+  fis2. g8 g |
   
-  a4 a8 c c4 c8 c |
-  c4 c8 c c4 s |
-  c c8 c c4 c8. bes16 |
-  a2 s \bar"|."
+  g4 g b8 c b a |
+  g2 c |
+  b8 b4. d4 c |
+  b2. s4 \bar"||"
+  
+  %Chorus
+  e4. e8 d4 d |
+  d c b c |
+  d g, c b |
+  a2. g8 g |
+  g4 g b8 c b a |
+  g2 c |
+  b8 b4. d4 c |
+  b2. \bar"|."
 }
 
 tenorWords = \lyricmode {
@@ -203,25 +231,37 @@ tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  f,4 f8 c f4 f8 f |
-  f4 f8 f f4 d\rest |
-  c e8 f c4 d\rest |
-  c c8 c f4 d\rest |
+  d,8 c |
+  b4 b g8 g g g |
+  c2 c |
+  d8 << b4. {s8 \teeny b4} >> \normalsize g4 g |
+  d'2. d8 c |
   
-  f f8 c c4 f8 f |
-  f4 f8 f f4 d\rest |
-  f f8 f c4 c8.\fermata c16 |
-  f2 d\rest |
+  b4 b g8 g g g |
+  c2 c |
+  d8 << d4. {s8 \teeny d4} >> \normalsize d4 d |
+  g,2. d'8 c |
   
-  c4 e8 f c4 e8 e |
-  g4 f8 c f4 d\rest |
-  f e8 f c4 e8 e |
-  g4 f8 c f4 d\rest |
+  b4 b g8 g g g |
+  c2 c |
+  d4 b g g |
+  d'2. d8 c |
   
-  f f8 c f4 f8 f |
-  f4 f8 f f4 d\rest |
-  f e8 f c4 c8.\fermata c16 |
-  f2 d\rest \bar"|."
+  b4 b g8 g g g |
+  c2 c |
+  d8 d4. d4 d |
+  g,2. d'4\rest \bar"||"
+  
+  %Chorus
+  g4. g8 g4 g |
+  d d d d |
+  g, g g g |
+  d'2. d8 c |
+  
+  b4 b g8 g g g |
+  c2 c |
+  d8 d4. d4 d |
+  g,2. \bar"|."
 }
 bassWords = \lyricmode {
 }
@@ -279,8 +319,8 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Long, Long Ago"}}
-  composer = \markup\oldStyleNum"Thomas Haynes Bayly (1797–1839)"
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"The Hazel Dell"}}
+  composer = \markup\oldStyleNum"George Frederick Root (1820–1895)"
   tagline = ""
 }}
 

@@ -12,7 +12,7 @@
   system-system-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)
-       (padding . -1)
+       (padding . -3)
        (stretchability . 100))
   ragged-last-bottom = ##f
   ragged-bottom = ##f
@@ -42,142 +42,171 @@
 }
 #(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
 global = {
+  \key a \major
+  \time 2/4
+  \tempo Andante
   \dynamicUp
   %\set crescendoSpanner = #'dashed-line
   %\set midiInstrument = "recorder"
   \autoBeamOff
   \override DynamicTextSpanner #'style = #'none
-  \tieDashed
 }
 
 sopMusic = \relative c' {
-  \partial 4
+	a'8 a16 b cis8 a |
+  fis b4. |
+  gis8 gis16 gis a8 b |
+  e,4 b'\rest |
+  a8 a16 b cis8 a |
+  fis b4 a8 |
+  
+  a16[ gis] fis16[ e] e8 fis16[ gis] |
+  a4 b8\rest e,^\markup\smallCapsOldStyle"Zerline" |
+  a8. b16 cis8 a |
+  fis b4 a8 |
+  gis8. gis16 a8 b |
+  e,4 b'8\rest e, |
+  
+  a8. b16 cis8 a |
+  fis b4 a8 |
+  a16[ gis] fis[ e] e8 fis16[ gis] |
+  a[ cis]( e4) b8 |
+  d16[ cis] b[ a] a8 cis16[ b] |
+  a4 b\rest |
+  
+  b8^\markup\smallCapsOldStyle"Don G." gis16 e cis'8 e16[ cis] |
+  b8.[ gis16] b8 b^\markup\smallCapsOldStyle"Zer." |
+  ais16[ b] cis[ b] ais[ b] a[ fis] |
+  gis8 gis b4\rest |
+  b8^\markup\smallCapsOldStyle"Don G." gis16 e cis'8 e16[ cis] |
+  
+  b8.[ gis16] b8 b~^\markup\smallCapsOldStyle"Zer." |
+  b b16 b ais[ b] a[ b] |
+  gis[ b] b b ais[ b] a[ b] |
+  gis[ b] b b ais[ b] a[ b] |
+  gis8 e b'^\markup\smallCapsOldStyle"Don G." gis |
+  
+  d'4 b8 b\rest |
+  a a16 b cis8 a |
+  fis b b\rest a^\markup\smallCapsOldStyle"Zer." |
+  gis8. gis16 a8 b |
+  b e, b'4\rest |
+  a8^\markup\smallCapsOldStyle"Don G." a16 b cis8 a |
+  
+  %page2
+  d4 b8\rest d^\markup\smallCapsOldStyle"Zer." |
+  \acciaccatura d16 gis,8. gis16 gis8 a16[ b] |
+  a16 a^\markup\smallCapsOldStyle"Don G." a b cis8 a |
+  d4 fis~^\markup\smallCapsOldStyle"Zer." |
+  fis16[ gis,] gis gis gis32[ a b cis]( d16) b |
+  
+  a4 b8\rest e |
+  dis16[ e] fis[ e] dis[ e] d[ b] |
+  cis8 cis b\rest e~ |
+  e e16 e dis[ e] d[ e] |
+  
+  e[ cis] cis cis bis[ cis] b[ cis] |
+  cis[ a] a a gis[ a] g[ a] |
+  a[ fis] fis8 b\rest d^\markup\smallCapsOldStyle"Don G." |
+  gis,4 b8\rest e |
+  a,4 b8\rest fis'^\markup\smallCapsOldStyle"Zer." |
+  \acciaccatura e16 d4\fermata b8\rest\fermata \break
+  
+  \time 6/8 \tempo Allegro \partial 8
+  \bar"||:"
   \repeat volta 2 {
-    b8\rest b8 |
-    e4 e e b8 cis |
-    b4. a8 gis4 b8\rest a8 |
-    b4 b8~ b cis4 b8[ a] |
-    
-    gis4( fis) b\rest b |
-    e8 e e e gis4 fis8 e |
-    dis cis e cis b4 b8~ b |
-    
-    %page2
-    e4 dis8~ dis cis4. b8 |
-    b2 b4\rest r |
-    r2 r4 gis8 ais |
-    
-    b4 ais gis r |
-    r2 r4 ais8 b |
-    cis4 b ais r |
-    
-    r2 r4 gis8 ais |
-    b4 ais gis fis8~ fis |
-    gis b ais gis ais cis b ais |
-    
-    %page3
-    b4^\markup\italic"rall." b, b \oneVoice b'\fermata \bar"||"
-    b b b cis8 dis |
-    e4 dis cis b\cresc |
-    
-    cis4\~ cis cis dis8 e |
-    fis4 e dis cis |
-    b8~ b b4 b cis8 dis |
-    
-    e4 dis cis b8~ b |
-    cis8\f e dis cis b a gis fis |
+    b8^\markup\smallCapsOldStyle"Both" |
+    cis4 b8 cis4 d8 |
+    b e4~ e b8 |
+    cis4 b8 cis4 d8 |
+    b8 e4~ e b8 |
+    cis4. d8[ fis d] |
+    cis4. b |
   }
   \alternative {
     {
-      gis4 e e b'4\rest\fermata
+      \partial 8*5
+      a4. b4\rest
     }
     {
-      gis e e e' |
+      a4 b8\rest a4.^\markup\smallCapsOldStyle"Don G." |
     }
   }
+  d8 b4\rest e4.^\markup\smallCapsOldStyle"Zer." |
+  cis8 b4\rest a4. |
+  fis'8 b,4\rest e,4.^\markup\smallCapsOldStyle"Don G." |
+  a8 b4\rest b\rest e8^\markup\smallCapsOldStyle"Both" |
   
-  fis2 dis |
-  
-  e b4\rest e4 |
-  fis2 dis |
-  e b4\rest e |
-  fis1 |
-  <b dis,>\fermata |
-  e,2.
+  cis4 cis8 b4 b8 |
+  cis4 b8\rest b4\rest e8 |
+  cis4 cis8 b4 b8 |
+  cis4. e |
+  cis8.[ d16] cis8 b8.[ a16] b8 |
+  a4 b8\rest b4\rest b8\rest \bar"|."
 }
 sopWords = \lyricmode {
-  \set stanza = #"1. "
-  \set ignoreMelismata = ##t
-	A Brit -- ish tar is a soar -- ing soul,
-  As free as a moun -- tain _ bird; _
-  His en -- er -- get -- ic fist
-  Should be rea -- dy to re -- sist
-  A __ _ dic -- _ ta -- _ tor -- ial word.
+  \set stanza = \markup\smallCapsOldStyle"Don G."
+	“Nay, bid me not re -- sign, love,
+  Cold -- ly the hand I press,
+  Oh! say thou wilt be mine, love,
+  Breathe but that one word, ‘Yes.’”
   
-  \set associatedVoice = "altos" 
-  His nose should \set associatedVoice = "sopranos" pant,
-  \set associatedVoice = "sopranos"
-  And his lip should \set associatedVoice = "altos" curl,
-  \set associatedVoice = "altos"
-  His cheeks should \set associatedVoice = "sopranos" flame
-  \set associatedVoice = "sopranos"
-  And his brow should \set associatedVoice = "altos" furl,
-  \set associatedVoice = "altos"
-  His bo -- som should \set associatedVoice = "sopranos" heave,
-  \set associatedVoice = "sopranos"
-  And his heart should glow,
-  And his fist be ev -- er rea -- dy
-  For a knock down blow.
+  “I would and yet I would not,
+  I feel my heart mis -- give,
+  Shouldst thou prove false, I could not
+  Be -- come thy scorn and live,
+  Be -- come thy scorn and live.”
   
+  “Come then, oh, come then, dear -- est.”
   
-  His nose should pant,
-  And his lip should curl,
-  His cheeks should flame
-  And his brow should furl,
-  His bo -- som should heave,
-  And his heart should glow,
-  And his fist be ev -- er rea -- dy
-  For a knock down blow.
+  “Yet should thy fond -- ness al -- ter!”
+  
+  “Nay, love, in vain thou fear -- est.”
+  
+  “Still, still this heart will fal -- ter,
+  this heart will fal -- ter,
+  this heart will fal -- ter.”
+  
+  “Come then, come then!
+  Nay bid me not re -- sign, love.”
+  
+  “I would, and yet I would not.”
+  
+  “Oh, say thou wilt be mine.”
+  
+  “I feel my heart mis -- give,”
+  
+  “Nay, love, in vain thou fear’st,”
+  
+  “I feel my heart mis -- give,
+  Yet should thy fond -- ness al -- ter,
+  Still, still this heart will fal -- ter,
+  this heart will fal -- ter,
+  this heart will fal -- ter,”
+  
+  “Oh, come, then come,”
+  
+  “I come.”
+  
+  Yes, hand and heart u -- nit -- ing,
+  Each oth -- er’s vows re -- quit -- ing,
+  Our joy no bounds shall know, know,
+  
+  Oh, come,
+  
+  I come, I come.
+  
+  Oh, come!
+  
+  Our joy no bounds shall know,
+  Our joy no bounds shall know,
+  Our joy no bounds shall know.
 }
 
 sopWordsII = \lyricmode {
-  \set stanza = #"2. "
-  \set ignoreMelismata = ##t
-  His eyes should flash with an in -- born fire,
-  His brow with _ scorn be _ wrung; _
-  He nev -- er should bow down
-  To a dom -- i -- neer -- ing frown,
-  Or the tang _ of a ty -- rant tongue.
-  
-  
-  \set associatedVoice = "altos"
-  His foot should \set associatedVoice = "sopranos" stamp,
-  \set associatedVoice = "sopranos"
-  And his throat should \set associatedVoice = "altos" growl,
-  \set associatedVoice = "altos"
-  His hair should \set associatedVoice = "sopranos" twirl,
-  \set associatedVoice = "sopranos"
-  And his face should \set associatedVoice = "altos" scowl,
-  \set associatedVoice = "altos"
-  His eyes _ should \set associatedVoice = "sopranos" flash
-  \set associatedVoice = "sopranos"
-  And his breast pro -- trude.
-  And _ this should be his cus -- tom -- a -- ry at -- ti -- tude.
-  
-  
-  His foot should stamp,
-  And his throat should growl,
-  His hair should twirl,
-  And his face should scowl,
-  His eyes _ should flash
-  And his breast pro -- trude.
-  And _ this should be his cus -- tom -- a -- ry "" "" ""
-  at -- ti -- tude,
-  his at -- ti -- tude, his at -- ti -- tude, his at -- ti -- tude.
 }
 
 sopWordsIII = \lyricmode {
-  \set stanza = #"3. "
 }
 
 sopWordsIV = \lyricmode {
@@ -189,46 +218,94 @@ sopWordsV = \lyricmode {
 }
 
 altoMusic = \relative c' {
+  cis8 cis16 e e8 e |
+  d fis4. |
+  e8 e16 e fis8 dis |
+  e4 s |
+  cis8 cis16 e e8 e |
+  d fis4 fis8 |
+  
+  e d d d |
+  cis4 s8 cis |
+  cis8. e16 e8 e |
+  d fis4 fis8 |
+  e8. e16 fis8 dis |
+  e4 s8 d |
+  
+  cis8. e16 e8 e |
+  d fis4 fis8 |
+  e d d d |
+  cis16[( e] a4) e8 |
+  e e e gis |
+  a4 s |
+  
+  e8 e16 e e8 e |
+  e4 e8 e |
+  d d d d |
+  e e s4 |
+  e8 e16 e e8 e |
+  
+  e4 e8 e~ |
+  e e16 e fis8 dis |
+  e e16 e fis8 dis |
+  e e16 e fis8 dis |
+  e e e e |
+  
+  gis4 gis8 s |
+  e cis16 e e8 e |
+  d fis s dis |
+  e8. e16 fis8 dis |
+  e e s4 |
+  cis8 cis16 e e8 e |
+  
+  %page2
+  a4 s8 fis |
+  e8. e16 e8 e |
+  e16 e cis e e8 e |
+  fis4 a( |
+  gis8) e16 e e8( gis16) gis |
+  
+  a4 s8 a |
+  gis gis gis gis |
+  a a s a( |
+  gis) gis16 gis gis8 gis |
+  
+  a8 e16 e eis8 eis |
+  fis fis16 fis e8 e |
+  d d s fis |
+  e4 s8 e |
+  fis4 s8 a |
+  gis4 s8 |
+  
+  \time 6/8
   \repeat volta 2 {
-    s8 b8 |
-    gis4 gis gis gis8 gis |
-    fis4 dis e s8 e |
-    e4 e8~ e a4 gis8[ fis] |
-    
-    e4( dis) s b' |
-    gis8 gis gis gis b4 a8 gis |
-    b a cis a gis4 gis8~ gis |
-    
-    %page2
-    gis8[ ais] b~ b b4 ais |
-    b2 s4 fis |
-    fis fis fis r |
-    
-    r2 r4 fis |
-    gis gis gis r |
-    r2 r4 gis |
-    
-    fis8~ fis fis4 fis r |
-    r2 r4 fis8~ fis |
-    gis b ais gis ais cis b ais |
-    
-    %page3
-    b4 b, b s4 |
-    s1*2 |
-    
-    s1*3 |
-    
-    s1*2 |
+    gis8 |
+    a4 gis8 a4 b8 |
+    gis gis4~ gis gis8 |
+    a4 gis8 a4 b8 |
+    gis gis4~ gis gis8 |
+    a4. a |
+    a gis |
   }
   \alternative {
     {
-      s1
+      a s4 |
     }
     {
-      s1
+      a4 s8 fis4. |
     }
   }
-  %page4
+  fis8 s4 gis4. |
+  a8 s4 g4. |
+  fis8 s4 d4. |
+  cis8 s4 s a'8 |
+  
+  a4 a8 gis4 gis8 |
+  a4 s8 s4 a8 |
+  a4 a8 gis4 gis8 |
+  a4. a |
+  a8.[ b16] a8 gis8.[ fis16] gis8 |
+  a4 s2 \bar"|."
 }
 altoWords = \lyricmode {
 }
@@ -251,170 +328,219 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
+  a8 a16 gis a8 a |
+  a b4. |
+  b8 b16 b b8 b |
+  gis4 s |
+  a8 a16 gis a8 a |
+  a a4 b8 |
+  
+  b a16[ gis] gis8 a16[ b] |
+  a4 s8 a |
+  a8. gis16 a8 a |
+  a b4 b8 |
+  b8. b16 b8 b |
+  gis4 s8 gis |
+  
+  a8. gis16 a8 a |
+  a b4 b8 |
+  b gis gis a16[ b] |
+  a8( cis4) gis8 |
+  a a a d |
+  cis4 s |
+  
+  gis8 b16 gis a8 cis16[ a] |
+  gis8.[ b16] gis8 gis |
+  fis a fis b |
+  b b s4 |
+  gis8 b16 gis a8 cis16[ a] |
+  
+  gis8.[ b16] gis8 gis~ |
+  gis gis16 gis b8 b |
+  b16[ gis] gis gis b8 b |
+  b16[ gis] gis gis b8 b |
+  b gis gis b |
+  
+  b4 d8 s |
+  cis a16 gis a8 a |
+  a b s b |
+  b8. b16 b8 a |
+  gis gis s4 |
+  a8 a16 gis a8 cis |
+  
+  %page2 (tenor)
+  d4 s8 d |
+  b8. b16 b8 cis16[ d] |
+  cis cis a gis a8 a |
+  a4 d~ |
+  d8 d16 d b8~ b16 d |
+  
+  cis4 s8 cis |
+  b b b e |
+  e e s cis( b) b16 b b8 b |
+  
+  cis a16 a gis8 gis |
+  a cis16 cis a8 a |
+  fis a s d |
+  b4 s8 d |
+  cis4 s8 d |
+  b4 s8 \bar"||:"
+  
+  \time 6/8
   \repeat volta 2 {
-    s8 b8 |
-    e,4 e e e8 e |
-    dis4 b e d8\rest cis |
-    gis4 gis8~ gis a4 a |
-    
-    b2 d4\rest b'4 |
-    e,8 e e e e4 e8 e |
-    a,8 a a cis e4 e8~ e |
-    
-    %page2
-    \slurDashed cis4 dis8( e) fis4 fis, |
-    \slurSolid b b8[ cis] dis4 b |
-    fis'2 e4. e8 |
-    
-    \tieSolid dis2~ dis8 b cis dis |
-    e2 cis |
-    ais4 cis8 cis fis4 e |
-    
-    dis8[ fis] e dis \slurDashed cis( e) dis[ cis] |
-    b4 b8 cis dis4 dis |
-    \tieDashed e cis8~ cis fis4 fis,8~ fis |
-    
-    %page 3
-    b8 e dis cis b[ a] << {\set midiInstrument = #"flute" \voiceOne \stemUp b'4\fermata | <gis e>} \\ \context Voice = "tenors" {\set midiInstrument = #"flute" \voiceTwo \stemDown gis,8[ fis]^\fermata |
-    e4}>> \oneVoice \stemNeutral <gis' e>4 q q8 q |
-    q4 q q q |
-    
-    <a e>4 q q q8 q |
-    q4 q q q |
-    <gis e>8~ q q4 <a fis> q8 q |
-    
-    <b gis>4 q q b8~ b |
-    cis8 e dis cis b a gis fis |
+    e8 |
+    e4 e8 e4 e8 |
+    e b4~ b e8 |
+    e4 e8 e4 e8 |
+    e b4~ b e8 |
+    e4. d |
+    e d |
   }
   \alternative {
     {
-      gis4 e e d4\rest\fermata |
+      cis s4 |
     }
     {
-      gis4 e e <gis b> |
+      cis4 s8 d4. |
     }
   }
+  a8 s4 d4. |
+  cis8 s4 cis4. |
+  d8 s4 gis,4. |
+  a8 s4 s cis8 |
   
-  <a cis>2 |
-  <a b,> |
-  
-  <gis cis,>2 d4\rest <gis b> |
-  <a cis>2 <a b,> |
-  <gis cis,> d4\rest <gis b> |
-  <a cis>1 |
-  <a b,>_\fermata |
-  <gis e>2.
+  e4 e8 e4 e8 |
+  e4 s4. cis8 |
+  e4 e8 e4 e8 e4. cis |
+  e4 e8 d4 d8 |
+  cis4 s2 \bar"|."
 }
 
 tenorWords = \lyricmode {
-  \set ignoreMelismata = ##t
-  \repeat unfold 37\skip1
-  His _ nose should pant,
-  And his lip _ should curl,
-  His cheeks should flame,
-  And his brow should furl, _
-  And his bo -- som should _ heave,
-  And his heart should glow,
-  And his fist ev -- er rea -- dy for a knock -- _ down _ blow.
-  
 }
 
 tenorWordsII = \lyricmode {
-  \set ignoreMelismata = ##t
-  \repeat unfold 37\skip1
-  \set ignoreMelismata = ##t
-  His _ foot should stamp,
-  And his throat _ should growl,
-  His hair should twirl,
-  And his face should scowl, _
-  And his eyes _ should _ flash,
-  And his breast pro -- trude,
-  And _ this his _ cus -- tom -- a -- ry at -- _ ti -- _ tude.
-  
 }
 
 tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
+  a,8 a16 e' a8 cis, |
+  d dis4. |
+  e8 e16 e dis8 b |
+  e4 d\rest |
+  a8 a16 e' a8 cis, |
+  d d4 d8 |
+  
+  e e e e |
+  a,4 d8\rest a |
+  a8. e'16 a8 cis, |
+  d d4 dis8 |
+  e8. e16 dis8 b |
+  e4 d8\rest e |
+  
+  a,8. e'16 a8 cis, |
+  d dis4 dis8 |
+  e e e e |
+  a,( a'4) e8 |
+  a, cis cis e |
+  a4 d,\rest |
+  
+  e8 e16 e e8 e |
+  e4 e8 e |
+  b b b b |
+  e e d4\rest |
+  e8 e16 e e8 e |
+  
+  e4 e8 e~ |
+  e e16 e dis8 b |
+  e e16 e dis8 b |
+  e e16 e dis8 b |
+  e e e e |
+  e4 e8 d\rest |
+  a' a,16 e' a8 cis, |
+  d dis d\rest b |
+  e8. e16 dis8 b |
+  e e d4\rest |
+  a8 a16 e' a8 gis |
+  
+  %page2 (bass)
+  fis4 d8\rest d |
+  e8. e16 e8 e |
+  a16 a a, e' a8 cis, |
+  d4 d( |
+  e8) e16 e e8~ e16 e |
+  
+  a4 d,8\rest a' |
+  e e e e |
+  a a d,\rest a'( e) e16 e e8 e |
+  
+  a a,16 a cis8 cis |
+  fis fis16 fis cis8 cis |
+  d d d\rest d |
+  e4 d8\rest e |
+  fis4 d8\rest d |
+  e4\fermata d8\rest \fermata \bar"||:"
+  
+  \time 6/8
+  \repeat volta 2 {
+    e8 |
+    a4 e8 a4 gis8 |
+    e e4~ e e8 |
+    a4 e8 a4 gis8 |
+    e e4~ e e8 |
+    a4. fis8[ d fis] |
+    e4. e |
+  }
+  \alternative {
+    {
+      a d,4\rest |
+    }
+    {
+      a'4 d,8\rest d4. |
+    }
+  }
+  d8 d4\rest e4. |
+  a8 d,4\rest a'4. |
+  d,8 d4\rest e4. |
+  a,8 d4\rest d\rest a'8 |
+  
+  a4 a8 e4 e8 |
+  a4 d,8\rest d4\rest a'8 |
+  a4 a8 e4 e8 |
+  a4. a |
+  e4 e8 e4 e8 |
+  a4 d,8\rest d4\rest d8\rest \bar"|."
 }
 bassWords = \lyricmode {
 }
 
 pianoRH = \relative c' {
-  \partial 4
-  b'4 |
-  <gis e'>4.( <a fis'>8) <b dis gis>4.( <a fis'>8) |
-  <gis e'>4( <cis e cis'> <b e b'>) gis'8[( e]) |
-  dis([ cis <a e'> cis]) <b gis>[( gis b e]) |
-  << {gis4.( fis8 s4)} \\ {<dis a>2 <e gis,>4} >> \bar"||:" \break
 }
 pianoLH = \relative c' {
-  \partial 4
-  b4 |
-  <e e,>2( <b b,>) |
-  <cis cis,>4( <a a,> <gis gis,>) r |
-  r <a cis e>( <b e>8) r r4 |
-  <b b,>2_(~ <b e,>4) \bar"||:"
-}
-pianoRHend = \relative c' {
-  \clef "treble"
-  <b' b'>4 |
-  q q q cis'8[ dis] |
-  <e e,>4 <dis dis,> <cis cis,> <b b,> |
-  <cis cis,> q q dis8[ e] |
-  <fis fis,>4 <e e,> <dis dis,> <cis cis,> |
-  
-  <b b,>4 q q cis8[ dis] |
-  <e e,>4 <dis dis,> <cis cis,> <b b,> |
-  cis8[ e dis cis] b[ a gis fis] |
-  e4 r <e gis e'> r |
-  <e gis, e>\fermata r r2 \bar"|."
-}
-pianoLHend = \relative c' {
-  <b gis e>4 |
-  q q q q |
-  q q q q |
-  <cis a e> q q q |
-  <dis b a e> q q q |
-  <e b gis e> q <dis b a fis> q |
-  <e b gis> q q q |
-  <e cis a> q <dis b> q |
-  <e e,> r <e, e,> r |
-  q\fermata r r2 \bar"|."
 }
 
 \score {
 <<
    \new ChoirStaff <<
-    \new Staff = women {
-      \global 
-      \key e \major
-      \time 4/4
-      \new Voice = "pianoRH" {\pianoRH}
-      \clef "treble_8"
-      <<
-        \new Voice = "sopranos" { \voiceOne << \global \sopMusic >> }
-        \new Voice = "altos" { \voiceTwo << \global \altoMusic >> }
-      >>
-      \context Voice = "pianoRH" {\pianoRHend}
-    }
-    \new Lyrics = "altos"  \lyricsto "altos" \sopWords
-    \new Lyrics = "altosII"  \lyricsto "altos" \sopWordsII
+    \new Staff = women <<
+      \new Voice = "sopranos" { \voiceOne << \global \sopMusic >> }
+      \new Voice = "altos" { \voiceTwo << \global \altoMusic >> }
+    >>
+    \new Lyrics = "altos"  \lyricsto "sopranos" \sopWords
+    \new Lyrics = "altosII"  \lyricsto "sopranos" \sopWordsII
     \new Lyrics = "altosIII"  \lyricsto "sopranos" \sopWordsIII
     \new Lyrics = "altosIV"  \lyricsto "sopranos" \sopWordsIV
     \new Lyrics = "altosV"  \lyricsto "sopranos" \sopWordsV
-   \new Staff = men {
+   \new Staff = men <<
       \clef bass
-      \key e \major
-      \time 4/4
-      \new Voice = "pianoLH" {\set midiInstrument = #"acoustic grand" \pianoLH}
-      \new Voice = "tenors" { << \global \tenorMusic >> }
-      \context Voice = "pianoLH" {\pianoLHend}
-    }
-    \new Lyrics \with { alignBelowContext = #"men" } \lyricsto "tenors" \tenorWordsIII
-    \new Lyrics \with { alignBelowContext = #"men" } \lyricsto "tenors" \tenorWordsII
-    \new Lyrics \with { alignBelowContext = #"men" } \lyricsto "tenors" \tenorWords
+      \new Voice = "tenors" { \voiceOne << \global \tenorMusic >> }
+      \new Voice = "basses" { \voiceTwo << \global \bassMusic >> }
+    >>
+    \new Lyrics \with { alignAboveContext = #"tenors" } \lyricsto "tenors" \tenorWordsIII
+    \new Lyrics \with { alignAboveContext = #"tenors" } \lyricsto "tenors" \tenorWordsII
+    \new Lyrics \with { alignAboveContext = #"tenors" } \lyricsto "tenors" \tenorWords
   >>
 %    \new PianoStaff << \new Staff { \new Voice { \pianoRH } } \new Staff { \clef "bass" \pianoLH } >>
   >>
@@ -437,14 +563,14 @@ pianoLHend = \relative c' {
       \override VerticalAxisGroup #'staff-staff-spacing =
       #'((basic-distance . 0)
          (minimum-distance . 0)
-         (padding . 1)
+         (padding . -1)
          (stretchability . 2))
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"A British Tar"}}
-  poet = \markup\oldStyleNum"W. S. Gilbert (1836–1911)"
-  composer = \markup\oldStyleNum"Arthur Sullivan (1842–1900)"
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"La ci darem la mano"}}
+  composer = \markup\oldStyleNum"Wolfgang Amadeus Mozart (1756–1791)"
+  arranger = \markup\oldStyleNum{"From" \italic"Don Giovanni"}
   tagline = ""
 }}
 

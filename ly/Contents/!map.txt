@@ -34,62 +34,66 @@
 56:O Fair Dove, O Fond Dove
 58:America the Beautiful;There’s Music in the Air;The Old Time
 60:Dixie
-61:The Lorelei
-62:Santa Lucia
-63:The Hazel Dell
-64:On the Banks of the Wabash, Far Away;A Hot Time in the Old Town
-66:Boating Song
-67:Long, Long Ago
-68:Red Wing;Red River Valley
-70:Scotch Lassie Jean;Love’s Chidings
-72:The Old Musician and His Harp;A Life on the Ocean Wave
-74:Jenny the Flower of Kildare;Come Follow;Come Follow Me Merrily
-76:When You and I Were Young, Maggie;The Girl I Left Behind Me
-78:Dublin Bay
-79:Darby and Joan
-80:The Midshipmite;Home Sweet Home
-82:Nancy Lee;The Blue Bells of Scotland
-84:Punchinello;Old Dog Tray
-86:Saved From the Storm
-88:The Little Tin Soldier
-89:Sweet Genevieve
-90:Bride Bells;Gaudeamus Hodie;Ego sum pauper
-92:Jamie’s on the Stormy Sea
-93:The Birds’ Ball
-94:Listen to the Mocking Bird;The Old Folks at Home
-96:Fairy Belle
-97:My Old Kentucky Home
-98:Hard Times
-99:Happy Hours at Home
-100:’Twere vain to tell
-101:The Pretty Girl Milking Her Cow
-102:Merrily Sing;Good Night Ladies;Oh My Love
-104:The March of Prohibition;God be with you till we meet again
-106:A Warrior Bold;Rule Britannia
-108:The Sidewalks of New York;For he’s a jolly good fellow
-110:It’s Delightful to be Married!
-112:A Capital Ship;America
-114:The Tailor and the Mouse;Maid of Athens;Come Let Us All A-Maying Go
-116:Saint Patrick’s Day;The bell doth toll
-118:Johnny Sands;He that Will an Alehouse Keep;Skating
-120:Where There’s a Will There’s a Way
-121:The Flowers that Bloom in the Spring
-122:La ci darem la mano
-124:The Distant Shore
-126:A British Tar
-128:Brightly dawns our wedding day
-130:When I go out of door;Merrily Greet the Morn;Catch Round the Table
-132:The criminal cried
-134:Tit-Willow
-135:Mister Speaker, though ’tis late
-136:Soldier’s Hymn;When Jesus Wept
-137:When I in pain and sorrow moan;Jesus! the very thought of Thee
-138:The Spacious Firmament on High
-139:Ode to Joy
-140:Glorious Things of Thee Are Spoken
-141:Come, Thou Fount of Every Blessing
-142:Jesus, Lover of my soul
-143:The Battle Prayer
-144:Lead Kindly Light;Glory be to Jesus;Oh, happy is the man that hears
-146:God so loved the world;Abide with me
-148:Be Still, My Soul
+61:The Bonnie Blue Flag
+62:The Battle Cry of Freedom
+63:The Battle Cry of Freedom
+64:Tramp! Tramp! Tramp!
+65:The Lorelei
+66:Santa Lucia
+67:The Hazel Dell
+68:On the Banks of the Wabash, Far Away;A Hot Time in the Old Town
+70:Boating Song
+71:Long, Long Ago
+72:Red Wing;Red River Valley
+74:Scotch Lassie Jean;Love’s Chidings
+76:The Old Musician and His Harp;A Life on the Ocean Wave
+78:Jenny the Flower of Kildare;Come Follow;Come Follow Me Merrily
+80:When You and I Were Young, Maggie;The Girl I Left Behind Me
+82:Dublin Bay
+83:Darby and Joan
+84:The Midshipmite;Home Sweet Home
+86:Nancy Lee;The Blue Bells of Scotland
+88:Punchinello;Old Dog Tray
+90:Saved From the Storm
+92:The Little Tin Soldier
+93:Sweet Genevieve
+94:Bride Bells;Gaudeamus Hodie;Ego sum pauper
+96:Jamie’s on the Stormy Sea
+97:The Birds’ Ball
+98:Listen to the Mocking Bird;The Old Folks at Home
+100:Fairy Belle
+101:My Old Kentucky Home
+102:Hard Times
+103:Happy Hours at Home
+104:’Twere vain to tell
+105:The Pretty Girl Milking Her Cow
+106:Merrily Sing;Good Night Ladies;Oh My Love
+108:The March of Prohibition;God be with you till we meet again
+110:A Warrior Bold;Rule Britannia
+112:The Sidewalks of New York;For he’s a jolly good fellow
+114:It’s Delightful to be Married!
+116:A Capital Ship;America
+118:The Tailor and the Mouse;Maid of Athens;Come Let Us All A-Maying Go
+120:Saint Patrick’s Day;The bell doth toll
+122:Johnny Sands;He that Will an Alehouse Keep;Skating
+124:Where There’s a Will There’s a Way
+125:The Flowers that Bloom in the Spring
+126:La ci darem la mano
+128:The Distant Shore
+130:A British Tar
+132:Brightly dawns our wedding day
+134:When I go out of door;Merrily Greet the Morn;Catch Round the Table
+136:The criminal cried
+138:Tit-Willow
+139:Mister Speaker, though ’tis late
+140:Soldier’s Hymn;When Jesus Wept
+141:When I in pain and sorrow moan;Jesus! the very thought of Thee
+142:The Spacious Firmament on High
+143:Ode to Joy
+144:Glorious Things of Thee Are Spoken
+145:Come, Thou Fount of Every Blessing
+146:Jesus, Lover of my soul
+147:The Battle Prayer
+148:Lead Kindly Light;Glory be to Jesus;Oh, happy is the man that hears
+150:God so loved the world;Abide with me
+152:Be Still, My Soul

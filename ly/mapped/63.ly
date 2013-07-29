@@ -12,7 +12,7 @@
   system-system-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)
-       (padding . -3)
+       (padding . 1)
        (stretchability . 100))
   ragged-last-bottom = ##f
   ragged-bottom = ##f
@@ -42,7 +42,7 @@
 }
 #(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
 global = {
-  \key g \major
+  \key aes \major
   \time 4/4
   \dynamicUp
   %\set crescendoSpanner = #'dashed-line
@@ -52,83 +52,65 @@ global = {
 }
 
 sopMusic = \relative c' {
-	\partial 4
-  b'8 c |
-  d4 g, g8 a g fis |
-  e2 g |
-  d8 << {g4.} {s8 \teeny g4} >> \normalsize g4 b |
-  a2. \bar"" b8 c |
+  \partial 4
+  aes'8 bes |
+  c c c8. bes16 aes4 f8. g16 |
+  aes8 aes aes8. g16 f2 |
+  ees4 ees8. des16 c8 ees aes8. bes16 |
+  c2 bes4 \bar""
   
-  d4 g, g8 a g fis |
-  e2 g |
-  d8 << d'4. {s8 \teeny d4} >> \normalsize b a |
-  g2. \bar"" b8 c |
+  aes8 bes |
+  c c c8. bes16 aes4 f8. g16 |
+  aes8 aes aes8. g16 f2 |
+  ees4 ees8. des16 c8 ees aes8. c16 |
+  bes2 aes4 \bar"||"\break
   
-  d4 g, g8 a g fis |
-  e2 g |
-  d4 g g b |
-  a2. \bar"" b8 c |
+  b8\rest ees |
+  ees4 c8. des16 ees8 f4 ees8 |
+  ees4 c8. des16 ees2 |
+  ees4 c8. des16 ees8 f4. |
+  ees4 c8. aes16 bes4 \bar"" aes8 bes 
   
-  
-  d4 g, g8 a g fis |
-  e2 g |
-  d8 d'4. b4 a |
-  g2. b4\rest \bar"||"
-  
-  %Chorus
-  c4. c8 b4 b |
-  b a g a |
-  b d, e g |
-  a2. \bar"" b8 c |
-  
-  d4 g, g8 a g fis |
-  e2 g |
-  d8 d'4. b4 a |
-  g2. \bar"|."
+  c8 c c8. bes16 aes4 f |
+  aes8 aes aes8. g16 f2 |
+  ees4 ees8. des16 c8 ees aes8. c16 |
+  bes2 aes4 \bar"|."
 }
 sopWords = \lyricmode {
   \set stanza = #"1. "
-	In the Ha -- zel Dell my Nel -- ly’s sleep -- ing,
-  Nel -- ly "" loved so long!
-  And my lone -- ly lone -- ly watch I’m keep -- ing,
-  Nel -- ly "" lost and gone;
-  Here in moon -- light oft -- en we have wan -- dered
-  Through the si -- lent shade,
-  Now where leaf -- y branch -- es droop -- ing down -- ward,
-  Lit -- tle Nel -- ly’s laid.
+  Yes, we’ll ral -- ly round the flag, boys, we’ll ral -- ly once a -- gain,
+  Shout -- ing the bat -- tle -- cry of Free -- dom,
+  We will ral -- ly from the hill -- side, we’ll gath -- er from the plain,
+  Shout -- ing the bat -- tle -- cry of Free -- dom!
+  
+  The U -- nion for -- ev -- er, Hur -- rah, boys, Hur -- rah!
+  Down with the trai -- tor, Up with the stars;
+  While we ral -- ly round the flag, boys, ral -- ly once a -- gain,
+  Shout -- ing the bat -- tle -- cry of Free -- dom.
 }
 
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
-  In the Ha -- zel Dell my Nel -- ly’s sleep -- ing,
-  Where "" the flow -- ers wave,
-  And the si -- lent stars are night -- ly weep -- ing,
-  O’er "" poor Nel -- ly’s grave;
-  Hopes that once my bos -- om fond -- ly cher -- ished
-  Smile no more on me,
-  Ev -- ’ry dream of joy a -- las has per -- ished,
-  Nel -- ly dear, with thee.
-  
-  All a -- lone my watch I’m keep -- ing
-  In the Ha -- zel Dell,
-  For my dar -- ling Nel -- ly’s near me sleep -- ing,
-  Nel -- ly dear, fare -- well.
+  We are spring -- ing to the call of our bro -- thers gone be -- fore,
+  Shout -- ing the bat -- tle cry of free -- dom!
+  And we’ll fill our va -- cant ranks with a mil -- lion free -- men more,
+  Shout -- ing the bat -- tle cry of free -- dom!
 }
 
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
-  Now I’m wea -- ry, friend -- less, and for -- sak -- en,
-  Watch -- \skip1 ing here a -- lone,
-  Nel -- ly, thou no more will fond -- ly cheer me,
-  With "" thy lov -- ing tone;
-  Yet for -- ev -- er shall thy gen -- tle im -- age
-  In my mem -- ’ry dwell.
-  And my tears thy lone -- ly grave shall moist -- en,
-  Nel -- ly dear, fare -- well.
+  We will wel -- come to our num -- bers the loy -- al, true, and brave,
+  Shout -- ing the bat -- tle cry of free -- dom!
+  And al -- though they may be poor, not a man shall be a slave,
+  Shout -- ing the bat -- tle cry of free -- dom!
 }
 
 sopWordsIV = \lyricmode {
   \set stanza = #"4. "
+  So we’re spring -- ing to the call from the East and from the West,
+  Shout -- ing the bat -- tle cry of free -- dom;
+  And we’ll hurl the reb -- el crew from the land that we love best,
+  Shout -- ing the bat -- tle cry of free -- dom!
 }
 
 sopWordsV = \lyricmode {
@@ -136,37 +118,29 @@ sopWordsV = \lyricmode {
 }
 
 altoMusic = \relative c' {
-  g'8 e |
-  d4 d d8 d d d |
-  c2 e |
-  d8 << d4. {s8 \teeny d4} >> \normalsize d d |
-  d2. g8 e |
+  ees8 des |
+  c c c8. c16 c4 c8. c16 |
+  c8 c c8. bes16 aes2 |
+  c4 c8. bes16 aes8 c ees8. ees16 |
+  ees2 ees4
   
-  d4 d d8 d d d |
-  c2 e |
-  d8 << g4. {s8 \teeny g4} >> \normalsize g fis |
-  g2. g8 e |
+  ees8 des |
+  c c c8. c16 c4 c8. c16 |
+  c8 c c8. bes16 aes2 |
+  c4 c8. bes16 aes8 c ees8. ees16 |
+  des2 c4
   
-  d4 d d8 d d d |
-  c2 e |
-  d4 d d d |
-  d2. g8 e |
   
-  d4 d d8 d d d |
-  c2 e |
-  d8 g4. g4 fis |
-  g2. s4 \bar"||"
+  s8 aes' |
+  aes4 aes8. aes16 aes8 aes4 aes8 |
+  aes4 aes8. aes16 aes2 |
+  aes4 aes8. aes16 aes8 aes4. |
+  ees4 f8. f16 g4 ees8 des |
   
-  %Chorus
-  g4. g8 g4 g |
-  g d d d |
-  d b c d |
-  fis2. g8 e |
-  
-  d4 d d8 d d d |
-  c2 e |
-  d8 g4. g4 fis |
-  g2. \bar"|."
+  c c c8. c16 c4 c |
+  c8 c c8. bes16 aes2 |
+  c4 c8. bes16 aes8 c ees8. ees16 |
+  des2 c4
 }
 altoWords = \lyricmode {
 }
@@ -189,36 +163,29 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
-  g8 g |
-  g4 g b8 c b a |
-  g2 c |
-  b8 << b4. {s8 \teeny b4} >> \normalsize b g |
-  fis2. g8 g |
+  aes8 g |
+  aes aes aes8. aes16 aes4 aes8. g16 |
+  f8 f e8. e16 f2 |
+  aes4 aes8. aes16 aes8 aes aes8. g16 |
+  aes2 g4 
   
-  g4 g b8 c b a |
-  g2 c |
-  b8 << b4. {s8 \teeny b4} >> \normalsize d c |
-  b2. g8 g |
+  aes8 g |
+  aes aes aes8. aes16 aes4 aes8. g16 |
+  f8 f e8. e16 f2 |
+  aes4 aes8. aes16 aes8 aes aes8. aes16 |
+  g2 aes4 
   
-  g4 g b8 c b a |
-  g2 c |
-  b4 b b g |
-  fis2. g8 g |
   
-  g4 g b8 c b a |
-  g2 c |
-  b8 b4. d4 c |
-  b2. s4 \bar"||"
+  s8 c8 |
+  c4 aes8. bes16 c8 des4 c8 |
+  c4 aes8. bes16 c2 |
+  c4 aes8. bes16 c8 des4. |
+  c4 aes8. aes16 g4 aes8 g |
   
-  %Chorus
-  e4. e8 d4 d |
-  d c b c |
-  d g, c b |
-  a2. g8 g |
-  g4 g b8 c b a |
-  g2 c |
-  b8 b4. d4 c |
-  b2. \bar"|."
+  aes aes aes8. aes16 aes4 aes |
+  f8 f e8. e16 f2 |
+  aes4 aes8. aes16 aes8 aes aes8. aes16 |
+  g2 aes4 
 }
 
 tenorWords = \lyricmode {
@@ -231,37 +198,29 @@ tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  d,8 c |
-  b4 b g8 g g g |
-  c2 c |
-  d8 << b4. {s8 \teeny b4} >> \normalsize g4 g |
-  d'2. d8 c |
+  c,8 bes |
+  aes aes aes8. aes16 f4 f8. f16 |
+  c'8 c c8. c16 des2 |
+  aes4 aes8. aes16 aes8 aes c8. ees16 |
+  aes,2 ees'4 
   
-  b4 b g8 g g g |
-  c2 c |
-  d8 << d4. {s8 \teeny d4} >> \normalsize d4 d |
-  g,2. d'8 c |
+  c8 bes |
+  aes aes aes8. aes16 f4 f8. f16 |
+  c'8 c c8. c16 des2 |
+  aes4 aes8. aes16 aes8 aes c8. c16 |
+  ees2 aes,4 
   
-  b4 b g8 g g g |
-  c2 c |
-  d4 b g g |
-  d'2. d8 c |
   
-  b4 b g8 g g g |
-  c2 c |
-  d8 d4. d4 d |
-  g,2. d'4\rest \bar"||"
+  d8\rest aes' |
+  aes4 aes8. aes16 aes8 aes4 aes8 |
+  aes4 aes8. aes16 aes2 |
+  aes4 aes8. aes16 aes8 aes4. |
+  aes4 f8. f16 ees8[ des] c8 bes |
   
-  %Chorus
-  g4. g8 g4 g |
-  d d d d |
-  g, g g g |
-  d'2. d8 c |
-  
-  b4 b g8 g g g |
-  c2 c |
-  d8 d4. d4 d |
-  g,2. \bar"|."
+  aes aes aes8. aes16 f4 f |
+  c'8 c c8. c16 des2 |
+  aes4 aes8. aes16 aes8 aes c8. c16 |
+  ees2 aes,4 
 }
 bassWords = \lyricmode {
 }
@@ -319,9 +278,7 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"The Hazel Dell"}}
-  composer = \markup\oldStyleNum"George Frederick Root (1820–1895)"
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"The Battle Cry of Freedom"}}
+  composer = \markup\oldStyleNum"George Frederick Root (1825–1895)"
   tagline = ""
 }}
-
-

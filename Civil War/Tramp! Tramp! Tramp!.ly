@@ -1,8 +1,9 @@
 ﻿\version "2.14.2"
 \include "util.ly"
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Tramp, Tramp, Tramp!"}}
-  composer = \markup\oldStyleNum"George F. Root"
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Tramp! Tramp! Tramp!"}}
+  subtitle = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #12.5 \smallCapsOldStyle"The Prisoner’s Hope"}}
+  composer = \markup\oldStyleNum"George Frederick Root (1825–1895)"
   tagline = ""
 }
 \paper {
@@ -14,9 +15,9 @@
   system-system-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)
-       (padding . 2)
+       (padding . 0)
        (stretchability . 100))
-  ragged-last-bottom = ##t
+  ragged-last-bottom = ##f
   ragged-bottom = ##f
   two-sided = ##t
   inner-margin = 1\in
@@ -78,11 +79,20 @@ sopMusic = \relative c' {
 }
 sopWords = \lyricmode {
   \set stanza = #"1. "
-	In the pris -- on cell I sit, Think -- ing, mo -- ther dear, of you,
+  In the pris -- on cell I sit, Think -- ing, mo -- ther dear, of you,
   And our bright and hap -- py home so far a -- way,
   And the tears they fill my eyes Spite of all that I can do,
   Tho’ I try to cheer my com -- rades and be gay.
   
+  
+}
+
+sopWordsII = \lyricmode {
+  \set stanza = #"2. "
+  In the bat -- tle front we stood, When their fierc -- est charge they made,
+  And they swept us off, a hun -- dred men or more;
+  But be -- fore we reached their lines, They were beat -- en back, dis -- mayed,
+  And we heard the cry of vic -- t’ry o’er and o’er.
   
   Tramp, tramp, tramp, the boys are march -- ing,
   Cheer up, com -- rades, they will come,
@@ -91,13 +101,12 @@ sopWords = \lyricmode {
   Of the free -- land in our own be -- lov -- ed home.
 }
 
-sopWordsII = \lyricmode {
-  \set stanza = #"2. "
-  
-}
-
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
+  So with -- in the pris -- on cell We are wait -- ing for the day
+  That shall come to o -- pen wide the i -- ron door;
+  And the hol -- low eyes grow bright, And the poor heart al -- most gay,
+  As we think of see -- ing home and friends once more.
 }
 
 sopWordsIV = \lyricmode {
@@ -121,7 +130,7 @@ altoMusic = \relative c' {
   d2. s4 |
   
   f4 f f8. d16 ees8. ees16 |
-  d2 d |
+  d4 d d d |
   f4 f f8. ees16 d8. f16 |
   f2. f8. ees16 |
   
@@ -163,9 +172,9 @@ tenorMusic = \relative c' {
   bes2. s4 |
   
   bes4 bes bes8. f16 g8. g16 |
-  bes2 f |
-  a4 a bes8. a16 bes8. bes16 |
-  a4 a8. a16 a4 f8. ees16 |
+  bes4 bes f f |
+  a4 a bes bes |
+  a4 a a4 f8. ees16 |
   
   d8. f16 bes8. c16 bes4 bes8. a16 |
   g8. bes16 bes8. g16 f4 f8. f16 |
@@ -174,7 +183,8 @@ tenorMusic = \relative c' {
 }
 
 tenorWords = \lyricmode {
-  \repeat unfold 65 ""
+  \repeat unfold 56 ""
+  march -- ing on, O cheer up, com -- rades,
   they will come,
 }
 
@@ -197,9 +207,9 @@ bassMusic = \relative c' {
   bes,2. d4\rest |
   
   bes4 bes bes8. bes16 bes8. bes16 |
-  bes2 bes |
-  f'4 f f8. f16 f8. f16 |
-  f4 f8. f16 f4 f8. ees16 |
+  bes4 bes bes bes |
+  f'4 f bes, d |
+  f4 f f4 f8. ees16 |
   
   d8. f16 bes8. c16 bes4 bes8. a16 |
   g8. bes16 bes8. g16 f4 bes,8. bes16 |

@@ -1,11 +1,9 @@
 ﻿\version "2.14.2"
 \include "util.ly"
-\header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"The Battle Cry of Freedom"}}
-  composer = \markup\oldStyleNum"George Frederick Root (1825–1895)"
-  tagline = ""
-}
+\header{ tagline = ""}
 \paper {
+  print-all-headers = ##t
+  ragged-right = ##f
   %print-all-headers = ##t
   paper-height = 11\in
   paper-width = 8.5\in
@@ -23,7 +21,7 @@
   outer-margin = 0.75\in
   top-margin = 0.26\in
   bottom-margin = 0.25\in
-  first-page-number = #196
+  first-page-number = #105
   print-first-page-number = ##t
   headerLine = ""
   oddHeaderMarkup = \markup\fill-line{
@@ -44,75 +42,87 @@
 }
 #(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
 global = {
-  \key aes \major
-  \time 4/4
+  \key g \major
+  \time 6/8
   \dynamicUp
   %\set crescendoSpanner = #'dashed-line
   %\set midiInstrument = "recorder"
   \autoBeamOff
   \override DynamicTextSpanner #'style = #'none
+  \slurDashed
 }
 
 sopMusic = \relative c' {
-  \partial 4
-  aes'8 bes |
-  c c c8. bes16 aes4 f8. g16 |
-  aes8 aes aes8. g16 f2 |
-  ees4 ees8. des16 c8 ees aes8. bes16 |
-  c2 bes4 \bar""
+	\partial 8
+  e16[ fis] |
+  g8 b g fis a fis |
+  e8 d4 b'4\rest \bar"" e,16[ fis] |
+  g8 b g fis a g16[ fis] |
   
-  aes8 bes |
-  c c c8. bes16 aes4 f8. g16 |
-  aes8 aes aes8. g16 f2 |
-  ees4 ees8. des16 c8 ees aes8. c16 |
-  bes2 aes4 \bar"||"\break
+  e4. b'4\rest \bar""\break e,16[ fis] |
+  g8 b g fis a fis |
+  e8 d4 b'4\rest \bar"" b,8 % d8 |
   
-  b8\rest ees |
-  ees4 c8. des16 ees8 f4 ees8 |
-  ees4 c8. des16 ees2 |
-  ees4 c8. des16 ees8 f4. |
-  ees4 c8. aes16 bes4 \bar"" aes8 bes 
+  %c16[ b] a[ g] fis[ e] b8 e dis |
+  g'8. fis16 e8 b e dis |
+  e4. b'4\rest \bar""\break fis8 |
+  g g16[ a] b[ c] d8 b g |
+  fis d4 b'\rest \bar"" e,16[ fis] |
   
-  c8 c c8. bes16 aes4 f |
-  aes8 aes aes8. g16 f2 |
-  ees4 ees8. des16 c8 ees aes8. c16 |
-  bes2 aes4 \bar"|."
+  g8 g16[ a] b[ c] d8 b d |
+  e4. b4\rest \bar""\break e16[ e] |
+  \slurDashed d8. b16 b8 c8.( b16) a[ g] |
+  a fis8. b8\rest b4\rest \bar"" e,16[ fis] |
+  
+  g8 fis e b'8. a16 g[ fis] |
+  e4.~ e4 \bar"|."
 }
 sopWords = \lyricmode {
   \set stanza = #"1. "
-  Yes, we’ll ral -- ly round the flag, boys, we’ll ral -- ly once a -- gain,
-  Shout -- ing the bat -- tle -- cry of Free -- dom,
-  We will ral -- ly from the hill -- side, we’ll gath -- er from the plain,
-  Shout -- ing the bat -- tle -- cry of Free -- dom!
+	It was on a fine sum -- mer’s morn -- ing,
+  The birds sweet -- ly tuned on each bough.
+  And as I walk’d out for my plea -- sure,
+  I saw a maid milk -- ing her cow.
+  Her voice so __ en -- chant -- ing mel -- o -- dious,
+  Left me quite un -- a -- ble to go,
+  \set ignoreMelismata = ##t My __ _ heart it was load -- ed with _ sor -- row,
+  \unset ignoreMelismata
+  For Col -- leen dhas cru -- then na moe.
   
-  The U -- nion for -- ev -- er, Hur -- rah, boys, Hur -- rah!
-  Down with the trai -- tor, Up with the stars;
-  While we ral -- ly round the flag, boys, ral -- ly once a -- gain,
-  Shout -- ing the bat -- tle -- cry of Free -- dom.
+  
+  Col -- leen, Col -- leen, Col -- leen,
+  Col -- leen dhas cru -- then na moe.
 }
 
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
-  We are spring -- ing to the call of our bro -- thers gone be -- fore,
-  Shout -- ing the bat -- tle cry of free -- dom!
-  And we’ll fill our va -- cant ranks with a mil -- lion free -- men more,
-  Shout -- ing the bat -- tle cry of free -- dom!
+  Then to her I made my ad -- van -- ces;
+  “Good mor -- row, most beau -- ti -- ful maid!
+  Your beau -- ty my heart so en -- tran -- ces,”
+  “Pray Sir, do not ban -- ter,” she said,
+  “I’m not such a rare pre -- cious Jew -- el,
+  That I should en -- am -- our you so.
+  I __ am but a poor \set ignoreMelismata = ##t lit -- tle milk girl.”
+  \unset ignoreMelismata
+  Says Col -- leen dhas cru -- then na moe.
 }
 
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
-  We will wel -- come to our num -- bers the loy -- al, true, and brave,
-  Shout -- ing the bat -- tle cry of free -- dom!
-  And al -- though they may be poor, not a man shall be a slave,
-  Shout -- ing the bat -- tle cry of free -- dom!
+  The In -- dies af -- ford no such Jew -- el
+  So bright and trans -- par -- ent -- ly clear,
+  Ah! do not add flame to my fu -- el!
+  Con -- sent but to love me, my dear.
+  Ah! had I __ the lamp of A -- lad -- din,
+  \set ignoreMelismata = ##t
+  Or the wealth of __ _ the _ Af -- ri -- can shore,
+  I would rath -- er be poor _ in a Cot -- tage,
+  \unset ignoreMelismata
+  With Col -- leen dhas cru -- then na moe.
 }
 
 sopWordsIV = \lyricmode {
   \set stanza = #"4. "
-  So we’re spring -- ing to the call from the East and from the West,
-  Shout -- ing the bat -- tle cry of free -- dom;
-  And we’ll hurl the reb -- el crew from the land that we love best,
-  Shout -- ing the bat -- tle cry of free -- dom!
 }
 
 sopWordsV = \lyricmode {
@@ -120,29 +130,23 @@ sopWordsV = \lyricmode {
 }
 
 altoMusic = \relative c' {
-  ees8 des |
-  c c c8. c16 c4 c8. c16 |
-  c8 c c8. bes16 aes2 |
-  c4 c8. bes16 aes8 c ees8. ees16 |
-  ees2 ees4
-  
-  ees8 des |
-  c c c8. c16 c4 c8. c16 |
-  c8 c c8. bes16 aes2 |
-  c4 c8. bes16 aes8 c ees8. ees16 |
-  des2 c4
-  
-  
-  s8 aes' |
-  aes4 aes8. aes16 aes8 aes4 aes8 |
-  aes4 aes8. aes16 aes2 |
-  aes4 aes8. aes16 aes8 aes4. |
-  ees4 f8. f16 g4 ees8 des |
-  
-  c c c8. c16 c4 c |
-  c8 c c8. bes16 aes2 |
-  c4 c8. bes16 aes8 c ees8. ees16 |
-  des2 c4
+  e8 |
+  e e e dis dis dis |
+  c8 b4 s e8 |
+  e e e dis dis dis |
+  e4. s4 e8 |
+  e e e dis dis dis |
+  c8 b4 s b8 |
+  e8. e16 b8 b b a |
+  b4. s4 d8 |
+  d8 d8 d16[ c] b8 d d |
+  d d4 s4 e16[ d] |
+  d8 d8 d16[ c] b8 d g |
+  g4. s4 g16[ g] |
+  \tieDashed g8. d16 e8 e8.~ e16 e[ e] |
+  dis16 dis8. s8 s4 e8
+  \tieSolid e8 e b dis8. dis16 dis8 |
+  e4.~ e4 \bar"|."
 }
 altoWords = \lyricmode {
 }
@@ -165,29 +169,24 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
-  aes8 g |
-  aes aes aes8. aes16 aes4 aes8. g16 |
-  f8 f e8. e16 f2 |
-  aes4 aes8. aes16 aes8 aes aes8. g16 |
-  aes2 g4 
+  e,8 |
+  b' g b a fis a |
+  g8 g4 s4 e8 |
+  b' g b a fis a |
+  g4. s4 e8 |
+  b' g b a fis a |
+  g8 g4 s4 g8 |
+  b8. a16 g8 g g fis |
+  g4. s4 a8 |
+  b8 b16[ a] g8 g g b |
+  a8 fis4 s4 e16[ a]
+  b8 b16[ a] g8 g g b |
+  c4. s4 c16[ c] |
+  b8. g16 e8 a8.( b16) c[ a] |
+  fis16 a8. s8 s4 g8 |
+  b a g fis8. fis16 a8 |
+  g4.~ g4
   
-  aes8 g |
-  aes aes aes8. aes16 aes4 aes8. g16 |
-  f8 f e8. e16 f2 |
-  aes4 aes8. aes16 aes8 aes aes8. aes16 |
-  g2 aes4 
-  
-  
-  s8 c8 |
-  c4 aes8. bes16 c8 des4 c8 |
-  c4 aes8. bes16 c2 |
-  c4 aes8. bes16 c8 des4. |
-  c4 aes8. aes16 g4 aes8 g |
-  
-  aes aes aes8. aes16 aes4 aes |
-  f8 f e8. e16 f2 |
-  aes4 aes8. aes16 aes8 aes aes8. aes16 |
-  g2 aes4 
 }
 
 tenorWords = \lyricmode {
@@ -200,29 +199,25 @@ tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  c,8 bes |
-  aes aes aes8. aes16 f4 f8. f16 |
-  c'8 c c8. c16 des2 |
-  aes4 aes8. aes16 aes8 aes c8. ees16 |
-  aes,2 ees'4 
+  e,8 |
+  e8 e e b b b |
+  c g4 d'\rest e8 |
+  e e e b b b |
+  e4. d4\rest e8 |
   
-  c8 bes |
-  aes aes aes8. aes16 f4 f8. f16 |
-  c'8 c c8. c16 des2 |
-  aes4 aes8. aes16 aes8 aes c8. c16 |
-  ees2 aes,4 
+  e e e b b b |
+  c g4 d'\rest g8 |
+  e8. e16 e8 e e b |
+  e4. d4\rest d8 |
   
-  
-  d8\rest aes' |
-  aes4 aes8. aes16 aes8 aes4 aes8 |
-  aes4 aes8. aes16 aes2 |
-  aes4 aes8. aes16 aes8 aes4. |
-  aes4 f8. f16 ees8[ des] c8 bes |
-  
-  aes aes aes8. aes16 f4 f |
-  c'8 c c8. c16 des2 |
-  aes4 aes8. aes16 aes8 aes c8. c16 |
-  ees2 aes,4 
+  g, g g g g g |
+  d' d4 d\rest e16[ d] |
+  g,8 g g g g g |
+  c4. d4\rest c16[ c] |
+  \tieDashed g8. g16 gis8 a8.~ a16 a16[ a]|
+  b16 b8. d8\rest d4\rest e8 |
+  e e e b8. b16 b8 |
+  \tieSolid e4.~ e4 \bar"|."
 }
 bassWords = \lyricmode {
 }
@@ -255,14 +250,7 @@ pianoLH = \relative c' {
   >>
 %    \new PianoStaff << \new Staff { \new Voice { \pianoRH } } \new Staff { \clef "bass" \pianoLH } >>
   >>
-  \midi {
-    \tempo 4 = 100
-    \set Staff.midiInstrument = "flute"
-    \context {
-      \Voice
-      \remove "Dynamic_performer"
-    }
-  }
+  
   \layout {
     \context {
       \Lyrics
@@ -286,4 +274,9 @@ pianoLH = \relative c' {
          (stretchability . 2))
     }
   }
-}
+\header {
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"The Pretty Girl Milking Her Cow"}}
+  subtitle = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #12.5 \smallCapsOldStyle"Colleen dhas Cruthen na Moe"}}
+  composer = \markup\oldStyleNum"Folk Song"
+  tagline = ""
+}}

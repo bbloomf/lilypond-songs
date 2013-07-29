@@ -12,7 +12,7 @@
   system-system-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)
-       (padding . 2)
+       (padding . -3)
        (stretchability . 100))
   ragged-last-bottom = ##f
   ragged-bottom = ##f
@@ -42,107 +42,116 @@
 }
 #(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
 global = {
-  \key c \major
-  \time 4/4
+  \key ees \major
+  \time 2/4
   \dynamicUp
   %\set crescendoSpanner = #'dashed-line
   %\set midiInstrument = "recorder"
   \autoBeamOff
   \override DynamicTextSpanner #'style = #'none
-  \tieDashed
 }
 
 sopMusic = \relative c' {
-  \partial 8 
-  g'8 |
-  g4 g8 g a c c8. a16 |
-  g8 g e'8. c16 g4 b8\rest g16~ g |
+	ees8. ees16 ees8 ees |
+  g ees g16 bes8. |
+  c ees16 bes8 g |
+  f8. ees16 c ees8. |
   
-  a4 b8 c c4 d8 e |
-  e d d c d4 b8\rest g |
-  g4 g8 g a c c8. a16 |
+  ees8. ees16 ees8 ees |
+  g ees g16 bes8. |
+  c8 ees bes8. g16 |
+  f8. ees16 ees4 |
   
-  g8~ g e'8. c16 g4 b8\rest g16~ g |
-  a4 b8 c c b c d |
-  e d a b c2 \bar"||"\break
+  bes'8 c ees bes |
+  c8. bes16 g bes8. |
+  c bes16 bes8 g |
+  f ees c16 ees8. |
   
-  %Chorus
-  e4. c8 g4 b\rest |
-  a8 c c8. a16 g4 b8\rest g |
-  
-  a4 b8 c c4 d8 e |
-  e d d8. c16 d2 |
-  e4. c8 g4 b8\rest g |
-  
-  a c c8. a16 g4 b\rest |
-  a b8 c c b c d |
-  e b\rest e16 d8. c2 \bar"|."
+  ees ees16 ees8 ees |
+  g ees g16 bes8. |
+  c16 ees8.\fermata \acciaccatura c16 bes8.\fermata g16 |
+  f8. ees16 ees4\fermata \bar"|."
 }
-
 sopWords = \lyricmode {
   \set stanza = #"1. "
-	The pride of the vil -- lage and the fair -- est in the dell
-  \set ignoreMelismata = ##t
-  Is the queen of my song, and her name is Fair -- y Belle;
-  The sound of her light step may be heard up -- on the hill
-  Like the fall of the snow -- drop or the drip -- ping of the rill.
+	Ere the twi -- light bat was flit -- ting,
+  In the sun -- set, at her knit -- ting,
+  Sang a lone -- ly maid -- en, sit -- ting
+  Un -- der -- neath her thes -- hold tree;
+  And, ere day -- light died be -- fore us,
+  And the ves -- per stars shone o’er us,
+  Fit -- ful rose her ten -- der cho -- rus,
+  “Ja -- mie’s on the storm -- y sea!”
 }
 
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
-  \set ignoreMelismata = ##t
-  She sings to the mead -- ows and she car -- ols to the streams,
-  She _ laughs in the sun -- light and smiles while in her dreams,
-  Her hair like the this -- tle down is borne up -- on the air,
-  And her heart, like the hum -- ming bird’s, is free from ev -- ’ry care.
-  
-  Fair -- y Belle, gen -- tle Fair -- y Belle,
-  The star of the night and the lil -- y of the day,
-  Fair -- y Belle, the queen of all the dell,
-  Long may she rev -- el on her bright sun -- ny way.
+  Warm -- ly shone the sun -- set glow -- ing;
+  Sweet -- ly breathed the young flow’rs blow -- ing;
+  Earth with beau -- ty o -- ver -- flow -- ing,
+  Seemed the home of love to be.
+  As those an -- gel tones as -- cend -- ing,
+  With the scene and sea -- son blend -- ing,
+  Ev -- er had the same low end -- ing,
+  “Ja -- mie’s on the storm -- y sea!”
 }
 
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
-  \set ignoreMelismata = ##t
-  Her soft notes of mel -- o -- dy a -- round me sweet -- ly fall,
-  Her _ eye full of love is now beam -- ing on my soul.
-  The sound of that gen -- tle voice, the glance _ of that eye,
-  Sur -- _ round me with rap -- ture that no oth -- er heart could sigh.
+  Cur -- few bells re -- mote -- ly ring -- ing
+  Min -- gled with that sweet voice sing -- ing,
+  And the last red ray seemed cling -- ing,
+  Lin -- g’ring -- ly to tower and tree;
+  Near -- er as I came, and near -- er,
+  Fin -- er rose the notes and clear -- er!
+  Oh! ’twas heav’n it -- self to hear her,
+  “Ja -- mie’s on the storm -- y sea!”
 }
 
 sopWordsIV = \lyricmode {
   \set stanza = #"4. "
+  “Blow ye west winds! bland -- ly hov -- er
+  O’er the bark that bears my lov -- er;
+  Gent -- ly blow, and bear him o -- ver
+  To his own dear home and me;
+  For, when night winds bend the wil -- low,
+  Sleep for -- sakes my lone -- ly pil -- low,
+  Think -- ing of the foam -- ing bil -- low,
+  “Ja -- mie’s on the storm -- y sea!”
 }
 
 sopWordsV = \lyricmode {
   \set stanza = #"5. "
+  How could I but list, but lin -- ger,
+  To the song, and near the sing -- er,
+  Sweet -- ly woo -- ing heav’n to bring her
+  Ja -- mie from the storm -- y sea;
+  And while yet her lips did name me,
+  Forth I sprang, my heart o’er -- came me;
+  “Grieve no more, sweet, I am Ja -- mie,
+  Home re -- turned to love and thee!”
 }
 
 altoMusic = \relative c' {
-  e8 |
-  e4 e8 e f a a8. f16 |
-  e8 e g8. e16 e4 s8 e16~ e |
+  bes8. bes16 bes8 bes |
+  ees ees ees16 ees8. |
+  ees ees16 ees8 ees |
+  c8. c16 aes c8. |
   
-  f4 f8 f fis4 a8 a |
-  g g g g g4 s8 f |
-  e4 e8 e f a a8. f16 |
+  bes bes16 bes8 bes |
+  ees ees ees16 ees8. |
+  ees8 ees ees8. ees16 |
+  d8. ees16 ees4 |
   
-  e8~ e g8. e16 e4 s8 e16~ e |
-  f4 dis8 dis e e e g |
-  g g f f e2 \bar"||"
+  ees8 ees ees ees |
+  ees8. ees16 ees ees8. |
+  ees ees16 ees8 ees |
+  c c aes16 c8. |
   
-  %chorus
-  g4. e8 e4 s |
-  f8 a a8. f16 e4 s8 e |
-  
-  f4 f8 f fis4 fis8 fis |
-  g g g8. g16 g2 |
-  g4. e8 e4 s8 e |
-  
-  f a a8. f16 e4 s |
-  f dis8 dis e e e g |
-  g s g16 f8. e2 \bar"|."
+  bes bes16 bes8 bes |
+  ees ees ees16 ees8. |
+  ees16 ees8. ees ees16 |
+  d8. ees16 ees4 \bar"|."
 }
 altoWords = \lyricmode {
 }
@@ -165,29 +174,25 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
-  c8 |
-  c4 c8 c c c c8. c16 |
-  c8 c c8. g16 c4 s8 c16~ c |
+  g8. g16 g8 g |
+  bes g bes16 g8. |
+  aes c16 bes8 bes |
+  aes8. aes16 ees aes8. |
   
-  c4 b8 c a4 fis8 fis |
-  b b b a b4 s8 b |
-  c4 c8 c c c c8. c16 |
+  g g16 g8 g |
+  bes g bes16 g8. |
+  aes8 c bes8. bes16 |
+  aes8. g16 g4 |
   
-  c8~ c c8. g16 c4 s8 c16~ c |
-  d4 a8 a c b c b |
-  c b a d c2 \bar"||"
+  g8 aes c g |
+  aes8. g16 bes g8. |
+  aes8. g16 g8 bes |
+  aes aes ees16 aes8. |
   
-  %Chorus
-  c4. g8 c4 s |
-  c8 c c8. c16 c4 s8 c |
-  
-  c4 b8 a a4 a8 a |
-  b b b8. a16 b2 |
-  c4. g8 c4 s8 c |
-  
-  c c c8. c16 c4 s |
-  a a8 a g g e' d |
-  c s b16 g8. g2 \bar"|."
+  g8. g16 g8 g |
+  bes g bes16 g8. |
+  aes16 c8. bes bes16 |
+  aes8. g16 g4 \bar"|."
 }
 
 tenorWords = \lyricmode {
@@ -200,29 +205,25 @@ tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  c,8 |
-  c4 c8 c f f f8. f16 |
-  c8 c c8. c16 c4 d8\rest c16~ c |
+  ees,8. ees16 ees8 ees |
+  ees ees ees16 ees8. |
+  aes8. aes16 g8 ees |
+  aes,8. aes16 aes aes8. |
   
-  f4 g8 a d,4 d8 d |
-  g g g g g4 d8\rest g |
-  c,4 c8 c f f f8. f16 |
+  ees'8. ees16 ees8 ees |
+  ees ees ees16 ees8. |
+  aes8 aes g8. ees16 |
+  bes8. ees16 ees4 |
   
-  c8~ c c8. c16 c4 d8\rest c16~ c |
-  f4 fis8 fis g g g g |
-  g g d g, c2 \bar"||"
+  ees8 ees ees ees |
+  ees8. ees16 ees ees8. |
+  ees ees16 ees8 ees |
+  aes, aes aes16 aes8. |
   
-  %chorus
-  c4. c8 c4 d\rest |
-  c8 c c8. c16 c4 d8\rest c |
-  
-  f4 f8 f d4 d8 d |
-  g g g8. g16 g2 |
-  c,4. c8 c4 d8\rest c |
-  
-  c c c8. c16 c4 d\rest |
-  f fis8 fis g g g g |
-  g d\rest g16 g8. c,2 \bar"|."
+  ees'8. ees16 ees8 ees |
+  ees ees ees16 ees8. |
+  aes16 aes8.\fermata g\fermata ees16 |
+  bes8. ees16 ees4\fermata \bar"|."
 }
 bassWords = \lyricmode {
 }
@@ -280,8 +281,8 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Fairy Belle"}}
-  composer = \markup\oldStyleNum"Stephen Foster (1826–1864)"
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Jamie’s on the Stormy Sea"}}
+  composer = \markup\oldStyleNum"Bernard Covert, 1847"
   tagline = ""
 }}
 

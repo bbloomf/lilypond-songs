@@ -12,18 +12,8 @@
   system-system-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)
-       (padding . 2)
+       (padding . -3)
        (stretchability . 100))
-  score-markup-spacing =
-    #'((basic-distance . 0)
-       (minimum-distance . 0)
-       (padding . -14)
-       (stretchability . 80))
-  top-system-spacing =
-    #'((basic-distance . 0)
-       (minimum-distance . 0)
-       (padding . -1.5)
-       (stretchability . 0))
   ragged-last-bottom = ##f
   ragged-bottom = ##f
   two-sided = ##t
@@ -52,9 +42,9 @@
 }
 #(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
 global = {
-  \key g \major
-  \time 4/4
-  \dynamicUp
+  \key c \major
+  \time 6/8
+  %\dynamicUp
   %\set crescendoSpanner = #'dashed-line
   %\set midiInstrument = "recorder"
   \autoBeamOff
@@ -62,99 +52,73 @@ global = {
 }
 
 sopMusic = \relative c' {
-	b'4 b c d |
-  d c b a |
-  g g a b |
-  b4. a8 a2 |
+	\partial 4.
+  c'4 g8 |
+  e4 c8 c4 e8 |
+  g4. e'4 c8 |
+  b4 g8 g[ a] b |
   
-  b4 b c d |
-  d c b a |
-  g g a b |
-  a4. g8 g2 |
+  c4. e,8[ d] c |
+  g'4.\fermata c4 d8 |
+  e4.~ e~ |
+  e4 e8 \acciaccatura e d4 cis8 |
   
-  a4 a b g |
-  a b8[ c] b4 g |
-  a b8[ c] b4 a |
-  g a d, b'~ |
+  d4. b4 cis8 |
+  d4.~ d~ |
+  d4 d8 c4 b8 |
+  c4. c4 c8 |
   
-  b b c d |
-  d c b a |
-  g^\markup\italic"rall." g a b |
-  a4. g8 g2\fermata \bar"|."
+  a4 a8 d4 d8 |
+  b4. e4 d8 |
+  c[ d] e d[ c] b |
+  c4. \bar"|."
 }
 sopWords = \lyricmode {
   \set stanza = #"1. "
-  Hail to Joy, from heav’n de -- scend -- ing;
-  Hail Joy, all ye here be -- low.
-  At her shrine we now are bend -- ing;
-  Let the world our glad -- ness know.
-  
-  Though by cus -- tom’s law di -- vid -- ed,
-  Now we meet on com -- mon ground.
-  We __ are broth -- ers, all u -- nit -- ed
-  When joy in our hearts is found.
-}
-
-sopWordsII = \lyricmode {
-  \set stanza = #"2. "
-  We, with whom kind for -- tune fa -- vors
-  Lov -- ing friend in -- stead of foe,
-  We should be for -- e’er re -- joic -- ing,
-  For through him we heav -- en know.
-  
-  They who scorn the pledge of friend -- ship
-  On -- ly for them -- selves do live,
-  They __ are doomed to walk for -- got -- ten
-  Who re -- fuse their hearts to give.
-}
-
-sopWordsIII = \lyricmode {
-  \set stanza = #"3. "
-  Hail to Joy, from heav’n de -- scend -- ing;
-  Bring -- ing heav’n on earth to you!
-  Broth -- ers, in yon might -- y spac -- es
-  Dwells our God whose love is true.
-  
-  O ye mil -- lions, bow be -- fore Him;
-  Seek Him, He is ev -- er nigh!
-  We __ are broth -- ers, all u -- nit -- ed,
-  Fa -- ther’d by one God on high.
-}
-
-sopWordsIV = \lyricmode {
-  \set stanza = #"4. "
-}
-
-sopWordsV = \lyricmode {
-  \set stanza = #"5. "
+	Mis -- ter Speak -- er, though ’tis late,
+  Mis -- ter Speak -- er, though ’tis late,
+  though ’tis late,
+  I must length -- en the de -- bate,
+  I must length -- en the de -- bate,
+  Mis -- ter Speak -- er, though ’tis late,
+  I must length -- en the de -- bate.
 }
 
 altoMusic = \relative c' {
-  d4 d d d |
-  d d d d8[ c] |
-  b4 d d d |
-  d4. d8 d2 |
+  \partial 4.
+  r4 r8 |
+  c'4 g8 c4 g8 |
+  d'4 b8 r4 r8 |
+  d4 b8 d4 g,8 |
   
-  d4 d e f |
-  f e d c |
-  b b c b |
-  c4. b8 b2 |
+  e'4 c8 g4 c8 |
+  b4.\fermata r4 r8 |
+  r4 r8 e, f g |
+  a[ b] cis] d4 a8 |
   
-  d4 d d d |
-  d d d d |
-  d b8[ a] fis'4 fis |
-  b, cis d d~ |
+  d,4. r8 f e |
+  d4. d8 e f |
+  g[ a] b c4 g8 |
+  c,4. c8 d e |
   
-  d d e f |
-  f e d c |
-  b b c d |
-  c4. b8 b2 \bar"|."
+  f4 f8 d e f |
+  g4 g8 e f g |
+  a4 e8 f4 g8 |
+  c,4. \bar"|."
 }
 altoWords = \lyricmode {
+  \set stanza = \markup{\dynamic"f " "2. "}
+  Ques -- tion, ques -- tion, ques -- tion,
+  ques -- tion, ques -- tion, hear him! hear him! hear!
+  \set stanza = \markup\dynamic"mp"
+  Sir, I shall name you if you stir, if you stir,
+  Sir, I shall name you if you stir,
+  Sir, I shall name you,
+  Sir, I shall name you,
+  Sir, I shall name you if you stir.
 }
 altoWordsII = \lyricmode {
 %\markup\italic
-  \set stanza = #"2. "
 }
 altoWordsIII = \lyricmode {
   \set stanza = #"3. "
@@ -171,85 +135,56 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
-  g4 g a b |
-  b a g g8[ a] |
-  b4 b fis g |
-  g4. fis8 fis2 |
+  \partial 4.
+  r4 r8 |
+  r4 r8 e'4\ff c8 |
+  g'4 d8 g4 e8 |
+  g4\fff d8 g4 d8 |
   
-  g4 g g g |
-  g g g g |
-  g g fis g |
-  fis4. g8 g2 |
+  g4 e8 g[ f] e |
+  d4.\fermata e4\mp f8 |
+  g4 g8 g4. |
+  g4 g8 \acciaccatura g f4 e8 |
   
-  fis4 fis g b |
-  fis g8[ a] g4 b |
-  fis g8[ a] fis4 dis |
-  e e fis g~ |
+  f4. d4 e8 |
+  f4 f8 f4. |
+  f4 f8 e4 d8 |
+  e4. e4 e8 |
   
-  g g g a8[ b] |
-  c4 c g e |
-  d g g g |
-  fis4. g8 g2 \bar"|."
+  c4 c8 f4 f8 |
+  d4. g4 f8 |
+  e[ f] g f[ e] d |
+  e4. \bar"|."
 }
 
 tenorWords = \lyricmode {
-}
-
-tenorWordsII = \lyricmode {
-}
-
-tenorWordsIII = \lyricmode {
-}
-
-bassMusic = \relative c' {
-  g4 g g g |
-  d d d e8[ fis] |
-  g4 d d d |
-  d4. d8 d2 |
-  
-  g4 g g g |
-  c, c c c |
-  d d d d |
-  d4. d8 g,2 |
-  
-  d'4 d d d |
-  d d d d |
-  d d dis b |
-  e a, d? d( |
-  
-  g) g g g |
-  c, c c c |
-  d d d d |
-  d4. d8 g,2 \bar"|."
-}
-bassWords = \lyricmode {
-}
-
-pianoRH = \relative c' {
-}
-pianoLH = \relative c' {
+  \set stanza = #"3. "
+  Or -- der, or -- der, or -- der,
+  hear him! hear him! hear him! hear him! hear!
+  pray sup -- port the chair,
+  pray sup -- port the chair,
+  pray sup -- port the chair,
+  pray sup -- port the chair,
+  Ques -- tion,
+  Or -- der, hear him! hear!
+  pray sup -- port, sup -- port the chair.
 }
 
 \score {
 <<
    \new ChoirStaff <<
-    \new Staff = women <<
-      \new Voice = "sopranos" { \voiceOne << \global \sopMusic >> }
-      \new Voice = "altos" { \voiceTwo << \global \altoMusic >> }
+    \new Staff = first <<
+      \new Voice = "sopranos" { << \global \sopMusic >> }
     >>
-    \new Lyrics = "altos"  \lyricsto "sopranos" \sopWords
-    \new Lyrics = "altosII"  \lyricsto "sopranos" \sopWordsII
-    \new Lyrics = "altosIII"  \lyricsto "sopranos" \sopWordsIII
-    \new Lyrics = "altosIV"  \lyricsto "sopranos" \sopWordsIV
-    \new Lyrics = "altosV"  \lyricsto "sopranos" \sopWordsV
-   \new Staff = men <<
-      \clef bass
-      \new Voice = "tenors" { \voiceOne << \global \tenorMusic >> }
-      \new Voice = "basses" { \voiceTwo << \global \bassMusic >> }
+    \new Lyrics \lyricsto "sopranos" \sopWords
+    \new Staff = second <<
+      \new Voice = "altos" { << \global \altoMusic >> }
     >>
-    \new Lyrics \with { alignAboveContext = #"tenors" } \lyricsto "tenors" \tenorWordsIII
-    \new Lyrics \with { alignAboveContext = #"tenors" } \lyricsto "tenors" \tenorWordsII
-    \new Lyrics \with { alignAboveContext = #"tenors" } \lyricsto "tenors" \tenorWords
+    \new Lyrics \lyricsto "altos" \altoWords
+    \new Staff = third <<
+      \new Voice = "tenors" { << \global \tenorMusic >> }
+    >>
+    \new Lyrics \lyricsto "tenors" \tenorWords
   >>
 %    \new PianoStaff << \new Staff { \new Voice { \pianoRH } } \new Staff { \clef "bass" \pianoLH } >>
   >>
@@ -258,7 +193,7 @@ pianoLH = \relative c' {
     \context {
       \Lyrics
       \override LyricText #'font-size = #1.3
-      \override VerticalAxisGroup #'staff-affinity = #0
+      %\override VerticalAxisGroup #'staff-affinity = #0
       \override LyricText #'X-offset = #center-on-word
     }
     \context {
@@ -278,9 +213,9 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Ode to Joy"}}
-  composer = \markup\oldStyleNum"Ludwig van Beethoven (1770–1827)"
-  poet = \markup\oldStyleNum"Friedrich von Schiller (1759–1805)"
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Mister Speaker, though ’tis late"}}
+  subtitle = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #12.5 \smallCapsOldStyle"(Round)"}}
+  composer = \markup\oldStyleNum"Joseph Baildon (d. 1774)"
   tagline = ""
 }}
 

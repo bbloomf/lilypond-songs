@@ -1,4 +1,4 @@
-﻿\version "2.14.2"
+\version "2.14.2"
 \include "util.ly"
 \header {
   title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"The Bonnie Blue Flag"}}
@@ -89,7 +89,7 @@ sopMusic = \relative c' {
 sopWords = \lyricmode {
   \set stanza = #"1. "
   \set ignoreMelismata = ##t
-  We are a band of broth -- ers, __ _ "" and na -- tive to the soil, __ _
+  We are a band of broth -- ers, _ "" and na -- tive to the soil, __ _
   "" Fight -- ing for our Lib -- er -- ty, With trea -- sure, blood, and toil; __ _
   And when our rights were threat -- ened, _ "" the cry rose near and far, __ _
   Hur -- rah __ _ for the Bon -- nie Blue Flag that bears a sin -- gle star. __ _

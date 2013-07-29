@@ -357,7 +357,7 @@ bassMusic = \relative c' {
     d4 d8[ d] d4 d |
     g,2 d'4\rest g |
     
-    e e8 e e4 e |
+    e e8 e e4 e8[ e] |
     c8 d\rest b d\rest a d\rest b[ c] |
     << { b~ b4. } {s4. \teeny b8} >> \normalsize b4 b8.~ b16 |
     e2 d4\rest e |

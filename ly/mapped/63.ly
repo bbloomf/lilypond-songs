@@ -12,7 +12,7 @@
   system-system-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)
-       (padding . 1)
+       (padding . 0)
        (stretchability . 100))
   ragged-last-bottom = ##f
   ragged-bottom = ##f
@@ -49,68 +49,74 @@ global = {
   %\set midiInstrument = "recorder"
   \autoBeamOff
   \override DynamicTextSpanner #'style = #'none
+  \tieDashed
+  \slurDashed
 }
 
 sopMusic = \relative c' {
   \partial 4
-  aes'8 bes |
-  c c c8. bes16 aes4 f8. g16 |
+  aes'8( bes) |
+  c~ c c8. bes16 aes8~ aes f8. g16 |
   aes8 aes aes8. g16 f2 |
   ees4 ees8. des16 c8 ees aes8. bes16 |
   c2 bes4 \bar""
   
-  aes8 bes |
-  c c c8. bes16 aes4 f8. g16 |
-  aes8 aes aes8. g16 f2 |
+  aes8( bes) |
+  c~ c c8. bes16 aes8~ aes f8.( g16) |
+  aes8~ aes aes8.( g16) f2 |
   ees4 ees8. des16 c8 ees aes8. c16 |
   bes2 aes4 \bar"||"\break
   
   b8\rest ees |
   ees4 c8. des16 ees8 f4 ees8 |
-  ees4 c8. des16 ees2 |
-  ees4 c8. des16 ees8 f4. |
+  ees8 ees c8. des16 ees2 |
+  ees4 c8. des16 ees8 f4 f8 |
   ees4 c8. aes16 bes4 \bar"" aes8 bes 
   
-  c8 c c8. bes16 aes4 f |
+  c8 c c8. bes16 aes8 aes f8. g16 |
   aes8 aes aes8. g16 f2 |
   ees4 ees8. des16 c8 ees aes8. c16 |
   bes2 aes4 \bar"|."
 }
 sopWords = \lyricmode {
   \set stanza = #"1. "
-  Yes, we’ll ral -- ly round the flag, boys, we’ll ral -- ly once a -- gain,
-  Shout -- ing the bat -- tle -- cry of Free -- dom,
-  We will ral -- ly from the hill -- side, we’ll gath -- er from the plain,
-  Shout -- ing the bat -- tle -- cry of Free -- dom!
+  \set ignoreMelismata = ##t
+  Our __ _ flag is proud -- ly float -- ing on the land and on the main,
+  Shout, shout the bat -- tle cry of Free -- dom!
+  Be -- _ neath it oft we’ve con -- quered, and we’ll con -- quer oft a -- gain!
+  Shout, shout the bat -- tle cry of Free -- dom!
   
-  The U -- nion for -- ev -- er, Hur -- rah, boys, Hur -- rah!
-  Down with the trai -- tor, Up with the stars;
-  While we ral -- ly round the flag, boys, ral -- ly once a -- gain,
-  Shout -- ing the bat -- tle -- cry of Free -- dom.
+  Our Dix -- ie for -- ev -- er! She’s nev -- er at a loss!
+  Down with the ea -- gle and up with the cross
+  We -- ’ll ral -- ly ’round the bon -- ny flag, we’ll ral -- ly once a -- gain,
+  Shout, shout the bat -- tle cry of Free -- dom!
 }
 
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
-  We are spring -- ing to the call of our bro -- thers gone be -- fore,
-  Shout -- ing the bat -- tle cry of free -- dom!
-  And we’ll fill our va -- cant ranks with a mil -- lion free -- men more,
-  Shout -- ing the bat -- tle cry of free -- dom!
+  \set ignoreMelismata = ##t
+  Our __ _ gal -- lant boys have marched _ to the rol -- ling of the drums.
+  Shout, shout the bat -- tle cry of Free -- dom!
+  And the lead -- _ ers in charge cry out, __ _ “Come, _ boys, __ _ come!”
+  Shout, shout the bat -- tle cry of Free -- dom!
 }
 
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
-  We will wel -- come to our num -- bers the loy -- al, true, and brave,
-  Shout -- ing the bat -- tle cry of free -- dom!
-  And al -- though they may be poor, not a man shall be a slave,
-  Shout -- ing the bat -- tle cry of free -- dom!
+  \set ignoreMelismata = ##t
+  They have laid __ _ down their lives __ _ on the blood -- y bat -- tle field.
+  Shout, shout the bat -- tle cry of Free -- dom!
+  Their _ mot -- to is re -- sis -- tance— “To the ty -- rants nev -- er yield!”
+  Shout, shout the bat -- tle cry of Free -- dom!
 }
 
 sopWordsIV = \lyricmode {
   \set stanza = #"4. "
-  So we’re spring -- ing to the call from the East and from the West,
-  Shout -- ing the bat -- tle cry of free -- dom;
-  And we’ll hurl the reb -- el crew from the land that we love best,
-  Shout -- ing the bat -- tle cry of free -- dom!
+  \set ignoreMelismata = ##t
+  While our boys __ _ have re -- spond -- _ ed and to the fields have gone.
+  Shout, shout the bat -- tle cry of Free -- dom!
+  Our __ _ no -- ble wo -- men al -- _ so have aid -- ed them at home.
+  Shout, shout the bat -- tle cry of Free -- dom!
 }
 
 sopWordsV = \lyricmode {
@@ -118,26 +124,26 @@ sopWordsV = \lyricmode {
 }
 
 altoMusic = \relative c' {
-  ees8 des |
-  c c c8. c16 c4 c8. c16 |
+  ees8( des) |
+  c~ c c8. c16 c8~ c c8. c16 |
   c8 c c8. bes16 aes2 |
   c4 c8. bes16 aes8 c ees8. ees16 |
   ees2 ees4
   
-  ees8 des |
-  c c c8. c16 c4 c8. c16 |
-  c8 c c8. bes16 aes2 |
+  ees8( des) |
+  c~ c c8. c16 c8~ c c8.~ c16 |
+  c8~ c c8.( bes16) aes2 |
   c4 c8. bes16 aes8 c ees8. ees16 |
   des2 c4
   
   
   s8 aes' |
   aes4 aes8. aes16 aes8 aes4 aes8 |
-  aes4 aes8. aes16 aes2 |
-  aes4 aes8. aes16 aes8 aes4. |
+  aes8 aes aes8. aes16 aes2 |
+  aes4 aes8. aes16 aes8 aes4 aes8 |
   ees4 f8. f16 g4 ees8 des |
   
-  c c c8. c16 c4 c |
+  c c c8. c16 c8 c c8. c16 |
   c8 c c8. bes16 aes2 |
   c4 c8. bes16 aes8 c ees8. ees16 |
   des2 c4
@@ -163,26 +169,26 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
-  aes8 g |
-  aes aes aes8. aes16 aes4 aes8. g16 |
+  aes8( g) |
+  aes~ aes aes8. aes16 aes8~ aes aes8. g16 |
   f8 f e8. e16 f2 |
   aes4 aes8. aes16 aes8 aes aes8. g16 |
   aes2 g4 
   
-  aes8 g |
-  aes aes aes8. aes16 aes4 aes8. g16 |
-  f8 f e8. e16 f2 |
+  aes8( g) |
+  aes~ aes aes8. aes16 aes8~ aes aes8.( g16) |
+  f8~ f e8.~ e16 f2 |
   aes4 aes8. aes16 aes8 aes aes8. aes16 |
   g2 aes4 
   
   
   s8 c8 |
   c4 aes8. bes16 c8 des4 c8 |
-  c4 aes8. bes16 c2 |
-  c4 aes8. bes16 c8 des4. |
+  c8 c aes8. bes16 c2 |
+  c4 aes8. bes16 c8 des4 des8 |
   c4 aes8. aes16 g4 aes8 g |
   
-  aes aes aes8. aes16 aes4 aes |
+  aes aes aes8. aes16 aes8 aes aes8. g16 |
   f8 f e8. e16 f2 |
   aes4 aes8. aes16 aes8 aes aes8. aes16 |
   g2 aes4 
@@ -198,26 +204,26 @@ tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  c,8 bes |
-  aes aes aes8. aes16 f4 f8. f16 |
+  c,8( bes) |
+  aes~ aes aes8. aes16 f8~ f f8. f16 |
   c'8 c c8. c16 des2 |
   aes4 aes8. aes16 aes8 aes c8. ees16 |
   aes,2 ees'4 
   
-  c8 bes |
-  aes aes aes8. aes16 f4 f8. f16 |
-  c'8 c c8. c16 des2 |
+  c8( bes) |
+  aes~ aes aes8. aes16 f8~ f f8.~ f16 |
+  c'8~ c c8.~ c16 des2 |
   aes4 aes8. aes16 aes8 aes c8. c16 |
   ees2 aes,4 
   
   
   d8\rest aes' |
   aes4 aes8. aes16 aes8 aes4 aes8 |
-  aes4 aes8. aes16 aes2 |
-  aes4 aes8. aes16 aes8 aes4. |
+  aes8 aes aes8. aes16 aes2 |
+  aes4 aes8. aes16 aes8 aes4 aes8 |
   aes4 f8. f16 ees8[ des] c8 bes |
   
-  aes aes aes8. aes16 f4 f |
+  aes aes aes8. aes16 f8 f f8. f16 |
   c'8 c c8. c16 des2 |
   aes4 aes8. aes16 aes8 aes c8. c16 |
   ees2 aes,4 
@@ -279,6 +285,8 @@ pianoLH = \relative c' {
   }
 \header {
   title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"The Battle Cry of Freedom"}}
+  subtitle = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #12.5 \smallCapsOldStyle"(Confederate Version)"}}
   composer = \markup\oldStyleNum"George Frederick Root (1825–1895)"
+  poet = \markup\oldStyleNum"W. H. Barnes"
   tagline = ""
 }}

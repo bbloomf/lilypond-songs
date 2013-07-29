@@ -5,8 +5,8 @@
 [/Title (Am I Not Fondly Thine Own) /Page 47 /OUT pdfmark
 [/Title (Annie Laurie) /Page 49 /OUT pdfmark
 [/Title (The Ash Grove) /Page 43 /OUT pdfmark
+[/Title (The Battle Cry of Freedom (Confederate)) /Page 63 /OUT pdfmark
 [/Title (The Battle Cry of Freedom) /Page 62 /OUT pdfmark
-[/Title (The Battle Cry of Freedom) /Page 63 /OUT pdfmark
 [/Title (The Battle Hymn of the Republic) /Page 44 /OUT pdfmark
 [/Title (The Battle Prayer) /Page 147 /OUT pdfmark
 [/Title (The bell doth toll (Round)) /Page 121 /OUT pdfmark
@@ -27,11 +27,10 @@
 [/Title (Come Follow (Round)) /Page 79 /OUT pdfmark
 [/Title (Come Follow Me Merrily (Round)) /Page 79 /OUT pdfmark
 [/Title (Come Let Us All A-Maying Go (Round)) /Page 119 /OUT pdfmark
-[/Title (Confederate) /Page 63 /OUT pdfmark
 [/Title (Could I a maiden find) /Page 40 /OUT pdfmark
 [/Title (The criminal cried) /Page 136 /OUT pdfmark
 [/Title (Darby and Joan) /Page 83 /OUT pdfmark
-[/Title (De Brevitate Vitæ) /Page 46 /OUT pdfmark
+[/Title (De Brevitate VitÃ¦) /Page 46 /OUT pdfmark
 [/Title (The Distant Shore) /Page 128 /OUT pdfmark
 [/Title (Dixie) /Page 60 /OUT pdfmark
 [/Title (Dreaming of Home and Mother) /Page 52 /OUT pdfmark
@@ -144,10 +143,10 @@
 [/Title (Vive L'Amour) /Page 46 /OUT pdfmark
 [/Title (The Waits) /Page 13 /OUT pdfmark
 [/Title (A Warrior Bold) /Page 110 /OUT pdfmark
-[/Title (We won’t go home until morning) /Page 113 /OUT pdfmark
+[/Title (We wonâ€™t go home until morning) /Page 113 /OUT pdfmark
 [/Title (When I go out of door) /Page 134 /OUT pdfmark
 [/Title (When I in pain and sorrow moan) /Page 141 /OUT pdfmark
 [/Title (When Jesus Wept (Round)) /Page 140 /OUT pdfmark
 [/Title (When You and I Were Young, Maggie) /Page 80 /OUT pdfmark
-[/Title (Where There's a Will There’s a Way) /Page 124 /OUT pdfmark
+[/Title (Where There's a Will Thereâ€™s a Way) /Page 124 /OUT pdfmark
 [/Title (With Horse and Hound) /Page 28 /OUT pdfmark

@@ -27,7 +27,6 @@
 {\page-link #79 {\fill-with-pattern #0.1 #CENTER . "Come Follow (Round)" \smallCapsOldStyle 79}}
 {\page-link #79 {\fill-with-pattern #0.1 #CENTER . "Come Follow Me Merrily (Round)" \smallCapsOldStyle 79}}
 {\page-link #119 {\fill-with-pattern #0.1 #CENTER . "Come Let Us All A-Maying Go (Round)" \smallCapsOldStyle 119}}
-{\page-link #63 {\fill-with-pattern #0.1 #CENTER . "Confederate (The Battle Cry of Freedom)" \smallCapsOldStyle 63}}
 {\page-link #40 {\fill-with-pattern #0.1 #CENTER . "Could I a maiden find" \smallCapsOldStyle 40}}
 {\page-link #136 {\fill-with-pattern #0.1 #CENTER . "The criminal cried" \smallCapsOldStyle 136}}
 {\page-link #83 {\fill-with-pattern #0.1 #CENTER . "Darby and Joan" \smallCapsOldStyle 83}}
@@ -35,9 +34,9 @@
 {\page-link #128 {\fill-with-pattern #0.1 #CENTER . "The Distant Shore" \smallCapsOldStyle 128}}
 {\page-link #60 {\fill-with-pattern #0.1 #CENTER . "Dixie" \smallCapsOldStyle 60}}
 {\page-link #52 {\fill-with-pattern #0.1 #CENTER . "Dreaming of Home and Mother" \smallCapsOldStyle 52}}
+{\page-link #82 {\fill-with-pattern #0.1 #CENTER . "Dublin Bay" \smallCapsOldStyle 82}}
 }
 \hspace #0.01 \path #0.1 #'((moveto 0 1.4) (lineto 0 -105.1)) \hspace #0.01 \override #'(line-width . 41.3) \override #'(word-space . 0) \column {
-{\page-link #82 {\fill-with-pattern #0.1 #CENTER . "Dublin Bay" \smallCapsOldStyle 82}}
 {\page-link #95 {\fill-with-pattern #0.1 #CENTER . "Ego sum pauper (Round)" \smallCapsOldStyle 95}}
 {\page-link #42 {\fill-with-pattern #0.1 #CENTER . "Ein Prosit" \smallCapsOldStyle 42}}
 {\page-link #100 {\fill-with-pattern #0.1 #CENTER . "Fairy Belle" \smallCapsOldStyle 100}}
@@ -73,9 +72,9 @@
 {\page-link #114 {\fill-with-pattern #0.1 #CENTER . "It’s Delightful to be Married!" \smallCapsOldStyle 114}}
 {\page-link #96 {\fill-with-pattern #0.1 #CENTER . "Jamie’s on the Stormy Sea" \smallCapsOldStyle 96}}
 {\page-link #78 {\fill-with-pattern #0.1 #CENTER . "Jenny the Flower of Kildare" \smallCapsOldStyle 78}}
+{\page-link #146 {\fill-with-pattern #0.1 #CENTER . "Jesus, Lover of my soul" \smallCapsOldStyle 146}}
 }}}
 \markup{{\override #'(line-width . 41.3) \override #'(word-space . 0) \column{
-{\page-link #146 {\fill-with-pattern #0.1 #CENTER . "Jesus, Lover of my soul" \smallCapsOldStyle 146}}
 {\page-link #141 {\fill-with-pattern #0.1 #CENTER . "Jesus! the very thought of Thee" \smallCapsOldStyle 141}}
 {\page-link #36 {\fill-with-pattern #0.1 #CENTER . "John Anderson, my jo" \smallCapsOldStyle 36}}
 {\page-link #122 {\fill-with-pattern #0.1 #CENTER . "Johnny Sands" \smallCapsOldStyle 122}}
@@ -116,7 +115,7 @@
 {\page-link #76 {\fill-with-pattern #0.1 #CENTER . "The Old Musician and His Harp" \smallCapsOldStyle 76}}
 {\page-link #59 {\fill-with-pattern #0.1 #CENTER . "The Old Time" \smallCapsOldStyle 59}}
 }
-\hspace #0.01 \path #0.1 #'((moveto 0 1.4) (lineto 0 -117.1)) \hspace #0.01 \override #'(line-width . 41.3) \override #'(word-space . 0) \column {
+\hspace #0.01 \path #0.1 #'((moveto 0 1.4) (lineto 0 -114.1)) \hspace #0.01 \override #'(line-width . 41.3) \override #'(word-space . 0) \column {
 {\page-link #68 {\fill-with-pattern #0.1 #CENTER . "On the Banks of the Wabash, Far Away" \smallCapsOldStyle 68}}
 {\page-link #41 {\fill-with-pattern #0.1 #CENTER . "O Sole Mio" \smallCapsOldStyle 41}}
 {\page-link #10 {\fill-with-pattern #0.1 #CENTER . "Praise of Spring" \smallCapsOldStyle 10}}
@@ -150,7 +149,6 @@
 {\page-link #46 {\fill-with-pattern #0.1 #CENTER . "Vive L’Amour" \smallCapsOldStyle 46}}
 {\page-link #13 {\fill-with-pattern #0.1 #CENTER . "The Waits (Let Us Sing)" \smallCapsOldStyle 13}}
 {\page-link #110 {\fill-with-pattern #0.1 #CENTER . "A Warrior Bold" \smallCapsOldStyle 110}}
-{\page-link #113 {\fill-with-pattern #0.1 #CENTER . "We won’t go home until morning" \smallCapsOldStyle 113}}
 {\page-link #134 {\fill-with-pattern #0.1 #CENTER . "When I go out of door" \smallCapsOldStyle 134}}
 {\page-link #141 {\fill-with-pattern #0.1 #CENTER . "When I in pain and sorrow moan" \smallCapsOldStyle 141}}
 {\page-link #140 {\fill-with-pattern #0.1 #CENTER . "When Jesus Wept (Round)" \smallCapsOldStyle 140}}

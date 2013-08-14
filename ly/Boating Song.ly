@@ -2,6 +2,8 @@
 \include "util.ly"
 \header {
   title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Boating Song"}}
+  poet = \markup\oldStyleNum"William Johnson Cory (1823–1892)"
+  composer = \markup\oldStyleNum"Algernon Drummond"
   tagline = ""
 }
 \paper {

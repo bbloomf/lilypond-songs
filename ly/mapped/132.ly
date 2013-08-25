@@ -175,6 +175,7 @@ sopWords = \lyricmode {
   Fa la,
   Fa la la,
   Fa la la,
+  \set associatedVoice = "sopranos"
   Fa la __ la.
   la.
 }
@@ -367,7 +368,7 @@ tenorMusic = \relative c' {
     ees4 ees2 d8[ c] |
     d2. r4 |
     bes1 |
-    bes2 s4 r |
+    bes2 s8 f'2*3/4\rest |
     bes,1 |
     bes2 bes4 d |
     

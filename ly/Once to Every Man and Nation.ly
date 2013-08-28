@@ -95,7 +95,7 @@ sopWordsII = \lyricmode {
   Ere her _ _ cause bring fame and _ _ prof -- it,
   And ’tis _ _ prosp -- ’rous to be just;
   Then it _ _ is the brave man _ _ choos -- es,
-  While the _ _ cow -- ard stands a _ _ -- side
+  While the _ _ cow -- ard stands a -- _ _ side
   Till the _ _ mul -- ti -- tude make _ _ vir -- tue
   Of the _ _ faith they had de -- nied.
 }
@@ -104,7 +104,7 @@ sopWordsIII = \lyricmode {
   \set stanza = #"3. "
   By the _ _ light of burn -- ing _ _ mar -- tyrs
   Je -- sus’ _ _ bleed -- ing feet I track,
-  Toil -- ing _ _ up new Cal -- va -- ries _ _ ev -- er
+  Toil -- ing _ _ up new Cal -- v’ries _ _ ev -- er
   With the _ _ cross that turns not back;
   New oc -- _ _ ca -- sions teach new _ _ du -- ties,
   Time makes _ _ an -- cient good un -- _ _ couth;

@@ -1,9 +1,8 @@
 ﻿\version "2.14.2"
 \include "util.ly"
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Once to Every Man and Nation"}}
-  poet = \markup\oldStyleNum"James Russell Lowell (1819–1891)"
-  composer = \markup\oldStyleNum"Thomas John Williams (1869–1944)"
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Who would not fight for freedom?"}}
+  composer = \markup\oldStyleNum"Old Scotch Air"
   tagline = ""
 }
 \paper {
@@ -15,9 +14,9 @@
   system-system-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)
-       (padding . 1)
+       (padding . -5)
        (stretchability . 100))
-  ragged-last-bottom = ##f
+  ragged-last-bottom = ##t
   ragged-bottom = ##f
   two-sided = ##t
   inner-margin = 1\in
@@ -45,83 +44,86 @@
 }
 #(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
 global = {
-  \key aes \major
-  \time 4/2
+  \key ees \major
+  \time 4/4
   \dynamicUp
   %\set crescendoSpanner = #'dashed-line
-  %\set midiInstrument = "recorder"
+  \set midiInstrument = #"flute"
   \autoBeamOff
   \override DynamicTextSpanner #'style = #'none
-  %\override TupletBracket #'bracket-visibility = ##f
 }
 
 sopMusic = \relative c' {
-	f2 \times 2/3 {f4 g aes} g2 f |
-  g \times 2/3 {g4 aes bes} aes4.( g8) f2 |
-  c' \times 2/3 {bes4 c des} c4.( bes8) aes2 |
-  bes4.( aes8) g2 f1 |
+  \set midiInstrument = #"acoustic grand"
+  <ees bes>4 <ees c>8.[ <f d>16] << {g8.[ f16] g16[ bes8.] } \\ {ees,4 d} >> |
+  <c ees aes c>4->_\markup\italic"poco rit." <ees aes ees'>-> <g bes ees g>2->\fermata
+  \set midiInstrument = #"flute"
+  ees4 ees8. f16 g8. f16 g bes8. |
   
-  f2 \times 2/3 {f4 g aes} g2 f |
-  g \times 2/3 {g4 aes bes} aes4.( g8) f2 |
-  c' \times 2/3 {bes4 c des} c4.( bes8) aes2 |
-  bes4.( aes8) g2 f1 |
+  ees,4 ees8. aes16 g8. bes16 f4 |
+  ees ees8. f16 g8. f16 g bes8. |
+  c8 ees bes ees g, ees' f,4 |
   
-  c'2 \times 2/3 {aes4 bes c} bes2 bes |
-  aes \times 2/3 {f4 g aes} g2 g |
-  f2 \times 2/3 {f4 g aes} bes2 bes |
-  aes \times 2/3 {bes4 aes bes} c1 |
+  g8 bes bes c16[ d] ees8 bes c bes |
+  g bes bes c16[ d] ees8 g, f4 |
   
-  f,2 \times 2/3 {f4 g aes} g2 f |
-  g \times 2/3 {g4 aes bes} aes4.( g8) f2 |
-  c' \times 2/3 {bes4 c des} c4.( bes8) aes2 |
-  bes4.( aes8) g2 f1 \bar"|."
+  g8 bes bes c16[ d] ees8 bes c bes |
+  c8 ees bes8 ees g, ees' f,4 \bar"||"
+  
+  ees4 ees8. f16 g8. f16 g bes8. |
+  ees,4 ees8. aes16 g8. bes16 f4 |
+  
+  ees ees8. f16 g8. f16 g bes8. |
+  c8 ees bes8 g f8. g16 ees4\fermata \bar"|."
+  
 }
 sopWords = \lyricmode {
+  \repeat unfold 5 \skip1
   \set stanza = #"1. "
-  Once to _ _ ev -- ’ry man and _ _ na -- tion
-  Comes the _ _ mo -- ment to de -- cide,
-  In the _ _ strife of truth with _ _ false -- hood,
-  For the _ _ good or e -- vil side;
-  Some great _ _ cause, some great de -- _ _ ci -- sion,
-  Of -- f’ring _ _ each the bloom or _ _ blight,
-  And the _ _ choice goes by for -- _ _ ev -- er
-  ’Twixt that _ _ dark -- ness and that light.
+  Who would not fight for Free -- dom?
+  Who would not draw the sword?
+  Who would not up and ral -- ly
+  At the great Re -- pub -- lic’s word?
+  It -- a -- ly’s fair plains are rav -- aged,
+  Ven -- ice threat -- en’d by the Hun,
+  Quick -- ly let us cross the o -- cean
+  Ere the cru -- el deed is done.
 }
 
 sopWordsII = \lyricmode {
+  \set stanza = \markup\dynamic"f"
+  \repeat unfold 5 \skip1
   \set stanza = #"2. "
-  Then to _ _ side with truth is _ _ no -- ble,
-  When we _ _ share her wretch -- ed crust,
-  Ere her _ _ cause bring fame and _ _ prof -- it,
-  And ’tis _ _ prosp -- ’rous to be just;
-  Then it _ _ is the brave man _ _ choos -- es,
-  While the _ _ cow -- ard stands a _ _ -- side
-  Till the _ _ mul -- ti -- tude make _ _ vir -- tue
-  Of the _ _ faith they had de -- nied.
+  Who would not fight for Bel -- gium?
+  Who would not fight for France?
+  Who would not stand with Eng -- land
+  To re -- pel the foe’s ad -- vance?
+  We have heard their wo -- men call -- ing
+  For our help a -- cross the sea,
+  We have heard their weep -- ing chil -- dren;
+  Come and fight and set them free.
+  
+  Who would not fight for Free -- dom?
+  Who would not draw the sword?
+  Who would not up and ral -- ly
+  At the great Re -- pub -- lic’s word?
 }
 
 sopWordsIII = \lyricmode {
+  \repeat unfold 5 \skip1
   \set stanza = #"3. "
-  By the _ _ light of burn -- ing _ _ mar -- tyrs
-  Je -- sus’ _ _ bleed -- ing feet I track,
-  Toil -- ing _ _ up new Cal -- va -- ries _ _ ev -- er
-  With the _ _ cross that turns not back;
-  New oc -- _ _ ca -- sions teach new _ _ du -- ties,
-  Time makes _ _ an -- cient good un -- _ _ couth;
-  They must _ _ up -- ward still and _ _ on -- ward
-  Who would _ _ keep a -- breast of truth.
+  Who would not fight the Prus -- sian?
+  What man would be a slave?
+  Up, then, let ev -- ’ry free -- man
+  Fight, his coun -- try’s life to save.
+  Ev -- ’ry man whose heart is loy -- al,
+  Ev -- ’ry man of cour -- age tried,
+  Let him heed his coun -- try’s sum -- mons,
+  Let him stand on Free -- dom’s side.
 }
 
 sopWordsIV = \lyricmode {
   \set stanza = #"4. "
-  Though the _ _ cause of e -- vil _ _ pros -- per,
-  Yet ’tis _ _ truth a -- lone is strong;
-  Though her _ _ por -- tion be the _ _ scaf -- fold,
-  And up -- _ _ on the throne be wrong,
-  Yet that _ _ scaf -- fold sways the _ _ fu -- ture,
-  And, be -- _ _ hind the dim un -- _ _ known,
-  Stand -- eth _ _ God with -- in the _ _ shad -- ow
-  Keep -- ing _ _ watch a -- bove his own.
 }
 
 sopWordsV = \lyricmode {
@@ -129,25 +131,24 @@ sopWordsV = \lyricmode {
 }
 
 altoMusic = \relative c' {
-  c2 c e f |
-  f e f c |
-  c \times 2/3 {ees?2 f4} g2 f |
-  f e f1 |
+  s1*2 |
+  bes4 c8. d16 ees8. ees16 d16 d8. |
   
-  c2 c e f |
-  f e f c |
-  c \times 2/3 {ees?2 f4} g2 f |
-  f e f1 |
+  c4 bes8. d16 ees8. ees16 d4 |
+  bes4 c8. d16 ees8. d16 d16 g8. |
+  aes8 aes ees ees ees ees d4 |
   
-  ees2 ees ees ees |
-  c f f e |
-  f c f ees |
-  c f e1 |
+  ees8 ees ees g g g ees ees |
+  ees8 ees ees g g ees d4 |
   
-  aes,2 f' e f |
-  f e f f |
-  ees? ees ees f |
-  f e f1 \bar"|."
+  ees8 ees ees g g g ees ees |
+  aes8 aes ees8 ees ees ees d4 |
+  
+  bes4 c8. d16 ees8. ees16 d16 d8. |
+  c4 bes8. d16 ees8. ees16 d4 |
+  
+  bes4 c8. d16 ees8. d16 d16 ees8. |
+  aes8 aes g8 ees c d bes4 \bar"|."
 }
 altoWords = \lyricmode {
 }
@@ -170,25 +171,24 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
-  aes2 c c aes |
-  des c c4.( bes8) aes2 |
-  ees' \times 2/3 {bes2 aes4} c2 c |
-  des4.( c8) bes2 aes1 |
+  s1*2 |
+  g4 g8. bes16 bes8. bes16 bes bes8. |
   
-  aes2 c c aes |
-  des c c4.( bes8) aes2 |
-  ees' \times 2/3 {bes2 aes4} c2 c |
-  des4.( c8) bes2 aes1 |
+  aes4 bes8. bes16 bes8. bes16 bes4 |
+  g g8. bes16 bes8. bes16 bes bes8. |
+  ees8 c bes bes bes bes bes4 |
   
-  aes2 aes aes g |
-  aes c c c |
-  f, aes aes g |
-  aes f g1 |
+  bes8 g g g bes bes g g |
+  bes g g g bes bes bes4 |
   
-  f2 c' c aes |
-  des c c4.( bes8) aes2 |
-  aes \times 2/3 {g4 aes bes} aes4.( g8) f2 |
-  des'4.( c8) bes2 aes1 \bar"|."
+  bes8 g g g bes bes g g |
+  ees'8 c bes bes bes bes bes4 |
+  
+  g4 g8. bes16 bes8. bes16 bes bes8. |
+  aes4 bes8. bes16 bes8. bes16 bes4 |
+  
+  g g8. bes16 bes8. bes16 bes bes8. |
+  ees8 c ees bes aes g g4 \bar"|."
 }
 
 tenorWords = \lyricmode {
@@ -201,25 +201,28 @@ tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  f,2 aes, c des |
-  bes c f f |
-  aes \times 2/3 {g2 f4} e2 f |
-  bes, c f1 |
+  \override DynamicLineSpanner #'Y-extent = #'(-6 . 0)
+  \set midiInstrument = #"acoustic grand"
+  <g ees>4 <g c,>8.[ <bes bes,>16] <bes ees,>4 <bes g> |
+  <aes aes,>4->\< <c aes>-> <bes ees,>2->\fermata\!
+  \set midiInstrument = #"flute"
+  ees,4 c8. bes16 ees8. ees16 g g8. |
   
-  f,2 aes c des |
-  bes c f f |
-  aes \times 2/3 {g2 f4} e2 f |
-  bes, c f1 |
+  aes4 g16 f8. ees8. ees16 bes4 |
+  ees c8. bes16 ees8. ees16 g g8. |
+  aes8 aes g g ees ees bes4 |
   
-  aes,2 c ees ees |
-  f aes, c c |
-  f ees des ees |
-  f4( ees) des2 c1 |
+  ees8 ees ees ees16[ d] ees8 ees c ees 
+  ees8 ees ees ees16[ d] ees8 g, bes4 |
   
-  des2 aes c des |
-  bes c f f |
-  aes ees aes, des |
-  bes c f1 \bar"|."
+  ees8 ees ees ees16[ d] ees8 ees c ees |
+  aes8 aes g g ees ees bes4 \bar"||"
+  
+  ees4 c8. bes16 ees8. ees16 g g8. |
+  aes4 g8 f ees8. ees16 bes4 |
+  
+  ees c8. bes16 ees8. ees16 g g8. |
+  aes8 aes g g, aes bes ees4 \bar"|."
 }
 bassWords = \lyricmode {
 }
@@ -253,11 +256,15 @@ pianoLH = \relative c' {
 %    \new PianoStaff << \new Staff { \new Voice { \pianoRH } } \new Staff { \clef "bass" \pianoLH } >>
   >>
   \midi {
-    \tempo 4 = 180
-    \set Staff.midiInstrument = "flute"
+    \tempo 4 = 90
+    \context {
+      \Staff
+      \remove "Staff_performer"
+    }
     \context {
       \Voice
-      \remove "Dynamic_performer"
+      \consists "Staff_performer"     
+      \remove "Dynamic_performer" 
     }
   }
   \layout {

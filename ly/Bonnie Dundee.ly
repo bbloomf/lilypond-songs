@@ -17,7 +17,7 @@
        (minimum-distance . 0)
        (padding . 1)
        (stretchability . 100))
-  ragged-last-bottom = ##t
+  ragged-last-bottom = ##f
   ragged-bottom = ##f
   two-sided = ##t
   inner-margin = 1\in
@@ -100,7 +100,7 @@ sopWordsII = \lyricmode {
   \unset ignoreMelismata
   Come fill up my cup, come fill up my can,
   Come sad -- dle my hors -- es and call out my men;
-  Un -- hook the West -- port and let us gae free,
+  Un -- hook the West -- port and let us gang free,
   For it’s up wi’ the bon -- nets o’ Bon -- nie Dun -- dee!
 }
 
@@ -129,14 +129,14 @@ sopWordsV = \lyricmode {
 altoMusic = \relative c' {
   ees16[ d] |
   ees8. ees16 ees8 ees ees ees |
-  aes aes ees ees4 ees16[ d] |
+  aes aes ees ees4 ees16[ c] |
   
   ees8 ees ees ees ees ees |
   d8. d16 d8 d4
   
   ees16[ d] |
-  ees8. ees16 ees8 ees ees ees |
-  aes aes ees ees4 ees16[ d] |
+  ees8.[ ees16] ees8 ees ees ees |
+  aes aes ees ees4 ees16[ c] |
   
   ees8 ees bes d16 d8. bes8 |
   bes16 bes8. c8 bes4 \bar"||"
@@ -149,7 +149,7 @@ altoMusic = \relative c' {
   
   ees16[ d] |
   ees8. d16 ees8 c8.[ ees16] d8 |
-  ees8. c16 ees8 ees4 ees16 d |
+  ees8. c16 ees8 ees4 ees16 c |
   ees8 ees bes d16 d8. bes8 |
   bes16 bes8. c8 bes4 \bar"|."
 }
@@ -176,17 +176,17 @@ altoWordsVI = \lyricmode {
 tenorMusic = \relative c' {
   bes16[ bes] |
   g8. aes16 g8 g aes g |
-  c bes aes g4 g16[ f] |
+  c bes aes g4 g16[ aes] |
   
-  ees8 g g ees g g |
+  bes8 g g bes g g |
   bes8. bes16 bes8 bes4
   
   
   bes16[ bes] |
   g8.[ aes16] g8 g aes g |
-  c bes aes g4 g16[ f] |
+  c bes aes g4 g16[ aes] |
   
-  ees8 g g bes16 f8. f8 |
+  bes8 g g bes16 f8. f8 |
   g16 g8. aes8 g4 \bar"||"
   
   bes8 |
@@ -197,8 +197,8 @@ tenorMusic = \relative c' {
   
   bes8 |
   bes8. bes16 bes8 aes8.[ bes16] bes8 |
-  g8. aes16 g8 aes4 bes16 bes |
-  ees,8 g g bes16 f8. f8 |
+  g8. aes16 g8 aes4 bes16 aes |
+  bes8 g g bes16 f8. f8 |
   g16 g8. aes8 g4 \bar"|."
 }
 
@@ -214,27 +214,27 @@ tenorWordsIII = \lyricmode {
 bassMusic = \relative c' {
   g16[ f] |
   ees8. aes,16 ees'8 ees aes, ees' |
-  ees bes c ees4 ees16[ bes] |
+  ees bes c ees4 ees16[ aes,] |
   
-  bes8 bes bes bes bes bes |
+  ees'8 ees ees ees ees c |
   bes8. bes16 bes8 bes4 g'16[ f] |
   
   ees8.[ aes,16] ees'8 ees aes, ees' |
-  ees bes c ees4 ees16[ bes] |
+  ees bes c ees4 ees16[ aes,] |
   
-  bes8 bes bes bes16 bes8. d8 |
+  ees'8 ees ees bes16 bes8. bes8 |
   ees16 ees8. aes,8 ees'4 \bar"||"
   
   bes'8 |
   ees,16 ees8. ees8 ees[ aes,] ees' |
-  bes16 d8. d8 d4 d8 |
+  bes16 d8. d8 bes4 d8 |
   bes16 bes8. bes8 bes ees d |
   
   ees ees8 ees8 ees4 g16[ f] |
   ees8. d16 ees8 ees4 f8 |
   
-  ees8. ees16 ees8 aes,4\fermata g16 bes |
-  bes8 bes bes bes16 bes8. d8 |
+  ees8. ees16 ees8 aes,4\fermata g16 aes |
+  ees'8 ees ees bes16 bes8. bes8 |
   ees16 ees8. aes,8 ees'4\fermata \bar"|."
 }
 bassWords = \lyricmode {

@@ -56,7 +56,7 @@ global = {
 sopMusic = \relative c' {
   \set midiInstrument = #"acoustic grand"
   <ees bes>4 <ees c>8.[ <f d>16] << {g8.[ f16] g16[ bes8.] } \\ {ees,4 d} >> |
-  <c ees aes c>4->_\markup\italic"poco rit." <ees aes ees'>-> <g bes ees g>2->\fermata
+  <c ees aes c>4->^\markup\italic"poco rit." <ees aes ees'>-> <g bes ees g>2->\fermata
   \set midiInstrument = #"flute"
   ees4 ees8. f16 g8. f16 g bes8. |
   
@@ -135,7 +135,7 @@ altoMusic = \relative c' {
   bes4 c8. d16 ees8. ees16 d16 d8. |
   
   c4 bes8. d16 ees8. ees16 d4 |
-  bes4 c8. d16 ees8. d16 d16 g8. |
+  bes4 c8. d16 ees8. ees16 d16 g8. |
   aes8 aes ees ees ees ees d4 |
   
   ees8 ees ees g g g ees ees |
@@ -147,7 +147,7 @@ altoMusic = \relative c' {
   bes4 c8. d16 ees8. ees16 d16 d8. |
   c4 bes8. d16 ees8. ees16 d4 |
   
-  bes4 c8. d16 ees8. d16 d16 ees8. |
+  bes4 c8. d16 ees8. d16 ees16 g8. |
   aes8 aes g8 ees c d bes4 \bar"|."
 }
 altoWords = \lyricmode {
@@ -172,23 +172,23 @@ altoWordsVI = \lyricmode {
 }
 tenorMusic = \relative c' {
   s1*2 |
-  g4 g8. bes16 bes8. bes16 bes bes8. |
+  g4 g8. bes16 bes8. aes16 bes bes8. |
   
-  aes4 bes8. bes16 bes8. bes16 bes4 |
-  g g8. bes16 bes8. bes16 bes bes8. |
-  ees8 c bes bes bes bes bes4 |
+  aes4 bes8. bes16 bes8. g16 bes4 |
+  g g8. bes16 bes8. aes16 bes d8. |
+  ees8 c bes bes bes g bes4 |
   
-  bes8 g g g bes bes g g |
-  bes g g g bes bes bes4 |
+  bes8 g g bes bes bes g g |
+  bes g g bes bes bes bes4 |
   
-  bes8 g g g bes bes g g |
-  ees'8 c bes bes bes bes bes4 |
+  bes8 g g bes bes bes g g |
+  ees'8 c bes bes bes g bes4 |
   
-  g4 g8. bes16 bes8. bes16 bes bes8. |
-  aes4 bes8. bes16 bes8. bes16 bes4 |
+  g4 g8. bes16 bes8. aes16 bes bes8. |
+  aes4 bes8. bes16 bes8. g16 bes4 |
   
-  g g8. bes16 bes8. bes16 bes bes8. |
-  ees8 c ees bes aes g g4 \bar"|."
+  g g8. bes16 bes8. bes16 bes ees8. |
+  ees8 c ees bes aes f g4 \bar"|."
 }
 
 tenorWords = \lyricmode {
@@ -208,7 +208,7 @@ bassMusic = \relative c' {
   \set midiInstrument = #"flute"
   ees,4 c8. bes16 ees8. ees16 g g8. |
   
-  aes4 g16 f8. ees8. ees16 bes4 |
+  aes4 g8. f16 ees8. ees16 bes4 |
   ees c8. bes16 ees8. ees16 g g8. |
   aes8 aes g g ees ees bes4 |
   
@@ -219,9 +219,9 @@ bassMusic = \relative c' {
   aes8 aes g g ees ees bes4 \bar"||"
   
   ees4 c8. bes16 ees8. ees16 g g8. |
-  aes4 g8 f ees8. ees16 bes4 |
+  aes4 g8. f16 ees8. ees16 bes4 |
   
-  ees c8. bes16 ees8. ees16 g g8. |
+  ees c8. bes16 ees8. aes16 g ees8. |
   aes8 aes g g, aes bes ees4 \bar"|."
 }
 bassWords = \lyricmode {

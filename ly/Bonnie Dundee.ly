@@ -55,66 +55,71 @@ global = {
 }
 
 sopMusic = \relative c' {
-  g16[ aes] |
-  bes8. c16 bes8 bes bes c bes |
-  ees d c bes4 bes16[ aes] |
+  \partial 8 g'16[ aes] |
+  bes8. c16 bes8 bes c bes |
+  ees d c bes4 \bar"" bes16[ aes] |
   
   g8 bes ees, g bes ees, |
-  f8. f16 f8 f4 g16[ aes] |
+  f8. f16 f8 f4 \bar"" g16[ aes] |
   
   bes8.[ c16] bes8 bes c bes |
-  ees d c bes4 bes16 aes |
+  ees d c bes4 \bar"" bes16[ aes] |
   
-  g8 bes bes, f16 bes8. bes,8 |
-  ees16 ees8. ees8 ees4 \bar"||"
+  g8 bes bes, f'16 bes8. bes,8 |
+  ees16 ees8. ees8 ees4 \bar"||"\break
   
   bes8 |
   ees16 ees8. ees8 ees8[ aes] g |
   f16 bes,8. bes8 bes4 bes8 |
   f'16 f8. f8 f g aes |
   
-  aes g8 g g4 ees16[ f] |
+  aes g8 g g4 \bar"" ees16[ f] |
   g8. f16 g8 aes8.[ g16] aes8 |
   
   bes8. aes16 bes8 c4\fermata bes16 aes |
-  g8 bes bes, f16 bes8. bes,8 |
+  g8 bes bes, f'16 bes8. bes,8 |
   ees16 ees8. ees8 ees4\fermata \bar"|."
 }
 sopWords = \lyricmode {
+  \set ignoreMelismata = ##t
   \set stanza = #"1. "
-	If I a bird -- ling were,
-  And with two wings could fly,
-  I’d fly to thee;
-  
-  But, as no wings are mine,
-  But, as no wings are mine,
-  That can -- not be.
+  To the Lords o’ Con -- ven -- tion ’twas Cla -- ver who spoke,
+  “Ere the King’s crown go down there are crowns to be broke;
+  So let each Cav -- a -- lier who loves hon -- our and me,
+  Come _ fol -- low the bon -- nets o’ Bon -- nie Dun -- dee.”
 }
 
 sopWordsII = \lyricmode {
+  \set ignoreMelismata = ##t
   \set stanza = #"2. "
-  Though far a -- way from thee,
-  Dream -- ing I’m e’er with thee,
-  Whis -- p’ring to thee;
+  Dun -- _ dee he is mount -- ed, he rides up the street,
+  The _ bells are rung back -- ward, the drums they are beat,
+  But the pro -- vost, douce man, said, “Just e’en let it be,
+  For the town is weel rid o’ that de’il o’ Dun -- dee.”
   
-  But, when I wake at last,
-  But, when I wake at last,
-  Then I’m a -- lone.
+  \unset ignoreMelismata
+  Come fill up my cup, come fill up my can,
+  Come sad -- dle my hors -- es and call out my men;
+  Un -- hook the West -- port and let us gae free,
+  For it’s up wi’ the bon -- nets o’ Bon -- nie Dun -- dee!
 }
 
 sopWordsIII = \lyricmode {
+  \set ignoreMelismata = ##t
   \set stanza = #"3. "
-  There is no hour at night
-  When thy dear im -- age bright
-  Strays from my heart.
-  
-  Thou’st said ten thou -- sand times,
-  Thou’st said ten thou -- sand times,
-  That mine thou art.
+  There are hills be -- yond Pent -- land, and lands be -- yond Forth,
+  If there’s lords in the Low -- lands, there’s chiefs in the North;
+  There are brave _ Duinne -- was -- seis, three thou -- sand times three,
+  Will cry, “Hie, for the bon -- nets o’ Bon -- nie Dun -- dee.”
 }
 
 sopWordsIV = \lyricmode {
+  \set ignoreMelismata = ##t
   \set stanza = #"4. "
+  Then a -- wa’ to the hills, to the caves, to the rocks,
+  Ere I own a u -- sur -- per I’ll couch wi’ a fox;
+  And _ trem -- ble, faus Whigs, in the midst o’ your glee,
+  Ye hae no seen the last o’ my bon -- nets and me!
 }
 
 sopWordsV = \lyricmode {
@@ -122,19 +127,31 @@ sopWordsV = \lyricmode {
 }
 
 altoMusic = \relative c' {
-  d4 d d |
-  g4. fis8 g4 |
-  g g g |
-  b4. a8 g4 |
-  g fis g |
+  ees16[ d] |
+  ees8. ees16 ees8 ees ees ees |
+  aes aes ees ees4 ees16[ d] |
   
-  fis2 s4 |
-  d2 d8 d |
-  d4 fis g |
-  g2 g8 g |
-  g4 g g |
-  a g fis |
-  d2 s4 \bar "|."
+  ees8 ees ees ees ees ees |
+  d8. d16 d8 d4
+  
+  ees16[ d] |
+  ees8. ees16 ees8 ees ees ees |
+  aes aes ees ees4 ees16[ d] |
+  
+  ees8 ees bes d16 d8. bes8 |
+  bes16 bes8. c8 bes4 \bar"||"
+  
+  bes8 |
+  bes16 bes8. bes8 bes[ c] bes |
+  d16 bes8. bes8 bes4 bes8 |
+  d16 d8. d8 d ees f |
+  ees ees ees ees4 
+  
+  ees16[ d] |
+  ees8. d16 ees8 c8.[ ees16] d8 |
+  ees8. c16 ees8 ees4 ees16 d |
+  ees8 ees bes d16 d8. bes8 |
+  bes16 bes8. c8 bes4 \bar"|."
 }
 altoWords = \lyricmode {
 }
@@ -157,19 +174,32 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
-  b4 b b |
-  d4. c8 b4 |
-  d d d |
-  d4. d8 d4 |
-  d d d |
+  bes16[ bes] |
+  g8. aes16 g8 g aes g |
+  c bes aes g4 g16[ f] |
   
-  d2 s4 |
-  c2 b8 a |
-  g4 d' d |
-  e2 d8 c |
-  d4 d d |
-  e d c |
-  b2 s4 \bar"|."
+  ees8 g g ees g g |
+  bes8. bes16 bes8 bes4
+  
+  
+  bes16[ bes] |
+  g8.[ aes16] g8 g aes g |
+  c bes aes g4 g16[ f] |
+  
+  ees8 g g bes16 f8. f8 |
+  g16 g8. aes8 g4 \bar"||"
+  
+  bes8 |
+  g16 g8. g8 g[ ees] g |
+  bes16 f8. f8 f4 f8 |
+  bes16 bes8. bes8 bes bes bes |
+  bes bes bes bes4 
+  
+  bes8 |
+  bes8. bes16 bes8 aes8.[ bes16] bes8 |
+  g8. aes16 g8 aes4 bes16 bes |
+  ees,8 g g bes16 f8. f8 |
+  g16 g8. aes8 g4 \bar"|."
 }
 
 tenorWords = \lyricmode {
@@ -182,19 +212,30 @@ tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  g4 g g |
-  g4. g8 g4 |
-  g g g |
-  g4. g8 g4 |
-  b4 a g |
+  g16[ f] |
+  ees8. aes,16 ees'8 ees aes, ees' |
+  ees bes c ees4 ees16[ bes] |
   
-  d2 d4\rest |
-  d2 d8 c |
-  b4 a g |
-  g'2 g8 g |
-  g4 a b |
-  c4 d d, |
-  g2\fermata d4\rest \bar"|."
+  bes8 bes bes bes bes bes |
+  bes8. bes16 bes8 bes4 g'16[ f] |
+  
+  ees8.[ aes,16] ees'8 ees aes, ees' |
+  ees bes c ees4 ees16[ bes] |
+  
+  bes8 bes bes bes16 bes8. d8 |
+  ees16 ees8. aes,8 ees'4 \bar"||"
+  
+  bes'8 |
+  ees,16 ees8. ees8 ees[ aes,] ees' |
+  bes16 d8. d8 d4 d8 |
+  bes16 bes8. bes8 bes ees d |
+  
+  ees ees8 ees8 ees4 g16[ f] |
+  ees8. d16 ees8 ees4 f8 |
+  
+  ees8. ees16 ees8 aes,4\fermata g16 bes |
+  bes8 bes bes bes16 bes8. d8 |
+  ees16 ees8. aes,8 ees'4\fermata \bar"|."
 }
 bassWords = \lyricmode {
 }
@@ -238,7 +279,7 @@ pianoLH = \relative c' {
   \layout {
     \context {
       \Lyrics
-      \override LyricText #'font-size = #1.3
+      \override LyricText #'font-size = #1.0
       \override VerticalAxisGroup #'staff-affinity = #0
       \override LyricText #'X-offset = #center-on-word
     }

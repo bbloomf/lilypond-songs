@@ -31,7 +31,7 @@
 [/Title (Could I a maiden find) /Page 42 /OUT pdfmark
 [/Title (The criminal cried) /Page 138 /OUT pdfmark
 [/Title (Darby and Joan) /Page 85 /OUT pdfmark
-[/Title (De Brevitate VitÃ¦) /Page 48 /OUT pdfmark
+[/Title (De Brevitate Vitæ) /Page 48 /OUT pdfmark
 [/Title (The Distant Shore) /Page 130 /OUT pdfmark
 [/Title (Dixie) /Page 62 /OUT pdfmark
 [/Title (Dreaming of Home and Mother) /Page 54 /OUT pdfmark
@@ -145,11 +145,11 @@
 [/Title (Vive L'Amour) /Page 48 /OUT pdfmark
 [/Title (The Waits) /Page 13 /OUT pdfmark
 [/Title (A Warrior Bold) /Page 112 /OUT pdfmark
-[/Title (We wonâ€™t go home until morning) /Page 115 /OUT pdfmark
+[/Title (We won’t go home until morning) /Page 115 /OUT pdfmark
 [/Title (When I go out of door) /Page 136 /OUT pdfmark
 [/Title (When I in pain and sorrow moan) /Page 143 /OUT pdfmark
 [/Title (When Jesus Wept (Round)) /Page 142 /OUT pdfmark
 [/Title (When You and I Were Young, Maggie) /Page 82 /OUT pdfmark
-[/Title (Where There's a Will Thereâ€™s a Way) /Page 126 /OUT pdfmark
+[/Title (Where There's a Will There’s a Way) /Page 126 /OUT pdfmark
 [/Title (Who Would Not Fight for Freedom?) /Page 36 /OUT pdfmark
 [/Title (With Horse and Hound) /Page 28 /OUT pdfmark

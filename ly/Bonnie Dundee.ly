@@ -93,7 +93,7 @@ sopWordsII = \lyricmode {
   \set ignoreMelismata = ##t
   \set stanza = #"2. "
   Dun -- _ dee he is mount -- ed, he rides up the street,
-  The _ bells are rung back -- ward, the drums they are beat,
+  The __ _ bells are rung back -- ward, the drums they are beat,
   But the pro -- vost, douce man, said, “Just e’en let it be,
   For the town is weel rid o’ that de’il o’ Dun -- dee.”
   
@@ -118,7 +118,7 @@ sopWordsIV = \lyricmode {
   \set stanza = #"4. "
   Then a -- wa’ to the hills, to the caves, to the rocks,
   Ere I own a u -- sur -- per I’ll couch wi’ a fox;
-  And _ trem -- ble, faus Whigs, in the midst o’ your glee,
+  And __ _ trem -- ble, faus Whigs, in the midst o’ your glee,
   Ye hae no seen the last o’ my bon -- nets and me!
 }
 
@@ -148,7 +148,7 @@ altoMusic = \relative c' {
   ees ees ees ees4 
   
   ees16[ d] |
-  ees8. d16 ees8 c8.[ ees16] d8 |
+  ees8. d16 ees8 d8.[ ees16] d8 |
   ees8. c16 ees8 ees4 ees16 c |
   ees8 ees bes d16 d8. bes8 |
   bes16 bes8. c8 bes4 \bar"|."
@@ -196,7 +196,7 @@ tenorMusic = \relative c' {
   bes bes bes bes4 
   
   bes8 |
-  bes8. bes16 bes8 aes8.[ bes16] bes8 |
+  bes8. bes16 bes8 bes4 bes8 |
   g8. aes16 g8 aes4 bes16 aes |
   bes8 g g bes16 f8. f8 |
   g16 g8. aes8 g4 \bar"|."
@@ -231,7 +231,7 @@ bassMusic = \relative c' {
   bes16 bes8. bes8 bes ees d |
   
   ees ees8 ees8 ees4 g16[ f] |
-  ees8. d16 ees8 ees4 f8 |
+  ees8. d16 ees8 d8.[ ees16] f8 |
   
   ees8. ees16 ees8 aes,4\fermata g16 aes |
   ees'8 ees ees bes16 bes8. bes8 |

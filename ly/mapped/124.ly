@@ -12,8 +12,18 @@
   system-system-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)
-       (padding . -3)
+       (padding . 0)
        (stretchability . 100))
+  score-markup-spacing =
+    #'((basic-distance . 0)
+       (minimum-distance . 0)
+       (padding . -14)
+       (stretchability . 60))
+  top-system-spacing =
+    #'((basic-distance . 0)
+       (minimum-distance . 0)
+       (padding . -1.5)
+       (stretchability . 0))
   ragged-last-bottom = ##f
   ragged-bottom = ##f
   two-sided = ##t
@@ -42,8 +52,8 @@
 }
 #(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
 global = {
-  \key aes \major
-  \time 3/4
+  \key bes \major
+  \time 6/8
   \dynamicUp
   %\set crescendoSpanner = #'dashed-line
   %\set midiInstrument = "recorder"
@@ -52,70 +62,110 @@ global = {
 }
 
 sopMusic = \relative c' {
-	\partial 4
-  ees4 |
-  ees aes c |
-  c bes bes |
-  bes c bes |
-  bes aes aes |
-  bes aes f |
-  ees4. aes8 c4 |
-  c bes aes |
-  bes2 ees,4 |
-  ees4 aes c |
+	\partial 8
+  f8 |
+  bes4 bes8 a[ g] a |
+  bes4 f8 f4 f8 |
+  g4 g8 bes[ a] g |
+  f4. b4\rest \bar"" f8 |
+  a4 a8 bes4 bes8 |
   
-  c bes bes |
-  bes c bes |
-  bes aes aes |
-  bes aes f |
-  ees ees aes |
-  bes c bes |
-  aes2 \bar"||"\break \time 4/4 \partial 4 aes8. bes16 |
-  c2. c8. des16 |
-  ees2. c8[ bes] |
+  c4 c8 d4\fermata bes8 |
+  g4 g8 c8[ c] bes |
+  bes4.( a4) f8 |
+  bes4 bes8 a8[ g] a |
+  bes4 f8 f4 f8 |
   
-  aes8 aes aes aes aes4 g8 aes |
-  bes2. aes8. bes16 |
-  c2. bes8. aes16 |
-  des2( f4) f |
-  ees8 ees ees ees ees4 \acciaccatura bes8 des8. c16 |
-  aes2. \bar"|."
+  g4 g8 bes[ a] g |
+  f4. b4\rest f8 |
+  a4 a8 bes4 bes8 |
+  c4 f8 d4\fermata \bar"" bes8 |
+  g[ c] bes a[ g] a |
+  
+  bes4. d |
+  g,8[ c] bes a[ g] a |
+  bes4. d |
+  ees4 c8 f4 a,8 |
+  bes4. bes4\rest f8 |
+  
+  f[ c'] a f4 f8 |
+  f[ d'] bes f4 d'8 |
+  ees4 c8 d4 bes8 |
+  c4. b4\rest \bar"" d8 |
+  d4 d8 d4\fermata c8 |
+  
+  c4 bes8 g4 bes8 |
+  d4 c8 bes4 a8 |
+  g4.\fermata f\fermata |
+  bes4 bes8 a[ g] a |
+  bes4 f8 f4 f8 |
+  
+  g4 g8 bes[ a] g |
+  f4. b4\rest f8 |
+  a4 a8 bes4 bes8 |
+  c4 f8 d4\fermata bes8 |
+  g[ c] bes a[ g] a |
+  
+  bes4. d |
+  g,8[ c] bes a[ g] a |
+  bes4. d |
+  ees4 c8 f4\fermata a,8 |
+  bes4. bes4\rest \bar"|."
 }
 sopWords = \lyricmode {
   \set stanza = #"1. "
-	Though trou -- bles per -- plex you, Dis -- heart -- en and vex you,
-  Re -- tard -- ing your pro -- gress in som -- ber ar -- ray;
-  To shrink from with ter -- ror Is sure -- ly an er -- ror,
-  For where there’s a will there is al -- ways a way.
+	A man whose name was John -- ny Sands,
+  Had mar -- ried Bet -- ty Hague,
+  And though she brought him gold and lands,
+  \set ignoreMelismata = ##t
+  She proved a ter -- ri -- ble plague; _
+  \unset ignoreMelismata
+  For, oh, she was a scold -- ing wife,
+  Full of ca -- price and whim,
+  He said that he was tired of life,
+  And she was tired of him,
+  And she was tired of him,
+  And she was tired of him;
   
-  There’s a way, there’s a way,
-  Wher -- ev -- er there’s a will there’s a way,
-  There’s a way, there’s a way,
-  Wher -- ev -- er there’s a will there’s a way.
+  Says he, “Then I will drown my -- self,
+  The riv -- er runs be -- low;”
+  Says she, “Pray do, you sil -- ly elf,
+  I wished it long a -- go.”
+  Says he, “Up -- on the brink I’ll stand,
+  Do you run down the hill,
+  And push me in with all your might.”
+  Says she, “My love, I will,”
+  Says she, “My love, I will,”
+  Says she, “My love, I will.”
 }
 
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
-  The task may be teas -- ing, The du -- ty un -- pleas -- ing,
-  But he who con -- fronts it will soon win the day;
-  The fight is half o -- ver When once we dis -- cov -- er
-  That where there’s a will there is al -- ways a way.
+  “For fear that I should cour -- age lack,
+  And try to save my life,
+  Pray, tie my hands be -- hind my back,”
+  “I will,” re -- plied his wife, __
+  She tied them fast, as you may think,
+  And when se -- cure -- ly done,
+  “Now stand,” she says, “up -- on the brink,
+  And I’ll pre -- pare to run,
+  And I’ll pre -- pare to run,
+  And I’ll pre -- pare to run.”
+  
+  All down the hill his lov -- ing bride
+  Now ran with all her force,
+  To push him in, he stepped a -- side,
+  And she fell in, of course;
+  Now splash -- ing, dash -- ing, like a fish,
+  “Oh, save me, John -- ny Sands.”
+  “I can’t, my dear, though much I wish,
+  For you have tied my hands,
+  For you have tied my hands,
+  For you have tied my hands.”
 }
 
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
-  Mis -- for -- tunes un -- count -- ed Are of -- ten sur -- mount -- ed,
-  If on -- ly we quit not the field in dis -- may;
-  Then one more en -- deav -- or, Re -- mem -- ber -- ing ev -- er,
-  That where there’s a will there is al -- ways a way.
-  
-  \set associatedVoice = "tenors" ""
-  There’s a way,
-  there’s a way,
-  \repeat unfold 9 \skip1
-  there’s a way,
-  There’s a way,
-  there’s a way,
 }
 
 sopWordsIV = \lyricmode {
@@ -127,33 +177,54 @@ sopWordsV = \lyricmode {
 }
 
 altoMusic = \relative c' {
-  c4 |
-  c c ees |
-  ees des des |
-  des ees des |
-  des c ees |
-  f f des |
-  c4. ees8 ees4 |
-  ees ees d |
-  ees2 des4 |
-  c c ees |
+  f8 |
+  d4 d8 ees4 ees8 |
+  d4 d8 d4 d8 |
+  ees4 ees8 g[ f] ees |
+  d4. s4 d8 |
+  ees4 ees8 d4 d8 |
   
-  ees des des |
-  des ees des |
-  des c ees |
-  f f des |
-  c c ees |
-  g g g |
-  ees2 \bar"||" \time 4/4 \partial 4 c8. des16 |
-  ees2. aes8. bes16 |
-  c2. aes8[ g] |
+  f4 f8 f4 f8 |
+  g4 g8 g4 g8 |
+  f4.~ f4 ees8 |
+  d4 d8 ees4 ees8 |
+  d4 d8 d4 d8 |
   
-  f f f f f4 e8 f |
-  g2. c,8. des16 |
-  ees2. des8. c16 |
-  f2( aes4) aes |
-  aes8 aes aes aes g4 g8. g16 |
-  aes2. \bar"|."
+  ees4 ees8 g[ f] ees |
+  d4. s4 d8 |
+  ees4 ees8 d4 d8 |
+  f4 a8 bes4 f8 |
+  ees4 g8 f4 ees8 |
+  
+  d4. f |
+  ees4 g8 f4 ees8 |
+  d4. f |
+  g4 g8 a4 ees8 |
+  d4. s4 \bar"" f8 |
+  
+  f4 f8 ees4 ees8 |
+  d[ f] d d4 f8 |
+  g4 g8 f4 d8 |
+  f4. s4 f8 |
+  fis4 fis8 fis4 fis8 |
+  
+  g4 d8 d4 g8 |
+  fis4 fis8 fis4 fis8 |
+  d4. ees |
+  d4 d8 ees4 ees8 |
+  d4 d8 d4 d8 |
+  
+  ees4 ees8 g[ f] ees |
+  d4. s4 d8 |
+  ees4 ees8 d4 d8 |
+  f4 a8 bes4 f8 |
+  g4 g8 f4 ees8 |
+  
+  d4. f |
+  ees4 g8 f4 ees8 |
+  d4. f |
+  g4 g8 a4 ees8 |
+  d4. s4 \bar"|."
 }
 altoWords = \lyricmode {
 }
@@ -176,33 +247,54 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
-  aes4 |
-  aes aes aes |
-  aes g g |
-  g aes g |
-  aes aes aes |
-  aes aes aes |
-  aes4. aes8 aes4 |
-  aes bes bes |
-  g2 g4 |
-  aes aes aes |
+  f,8 |
+  bes4 bes8 c4 c8 |
+  bes4 bes8 bes4 bes8 |
+  bes4 bes8 bes4 bes8 |
+  bes4. s4 bes8 |
+  c4 c8 bes4 bes8 |
   
-  aes g g |
-  g aes g |
-  aes aes aes |
-  aes aes aes |
-  aes aes c |
-  des ees des |
-  c2 \bar"||" \time 4/4 \partial 4 s4 |
-  s4 aes8. aes16 aes4 s |
-  s aes8. aes16 aes4 aes8[ bes] |
+  a4 a8 bes4 bes8 |
+  c4 c8 c4 c8 |
+  d4.( c4) a8 |
+  bes4 bes8 c4 c8 |
+  bes4 bes8 bes4 bes8 |
   
-  c c c c c4 c8 c |
-  ees4 ees8. ees16 ees4 s |
-  s aes,8. aes16 aes4 s |
-  s aes8. aes16 des4 des |
-  c8 c c c bes4 ees8. ees16 |
-  c2. \bar"|."
+  bes4 bes8 bes4 bes8 |
+  bes4. s4 bes8 |
+  c4 c8 bes4 bes8 |
+  a4 c8 bes4 bes8 |
+  bes4 c8 c4 c8 |
+  
+  bes4. bes |
+  bes4 c8 c4 c8 |
+  bes4. bes |
+  bes4 c8 c4 c8 |
+  bes4. s4 f8 |
+  
+  a4 c8 a4 a8 |
+  bes4 bes8 bes4 bes8 |
+  bes4 bes8 bes4 bes8 |
+  a4. s4 bes8 |
+  a4 a8 a4 a8 |
+  
+  bes4 bes8 bes4 bes8 |
+  a4 a8 a4 a8 |
+  bes4. c |
+  bes4 bes8 c4 c8 |
+  bes4 bes8 bes4 bes8 |
+  
+  bes4 bes8 bes4 bes8 |
+  bes4. s4 bes8 |
+  c4 c8 bes4 bes8 |
+  a4 c8 bes4 bes8 |
+  bes4 c8 c4 c8 |
+  
+  bes4. bes |
+  bes4 c8 c4 c8 |
+  bes4. bes |
+  bes4 c8 c4 c8 |
+  bes4. s4 \bar"|."
 }
 
 tenorWords = \lyricmode {
@@ -215,33 +307,54 @@ tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  aes,4 |
-  aes aes aes |
-  ees' ees ees |
-  ees ees ees |
-  aes, aes c |
-  des des des |
-  aes4. c8 ees4 |
-  aes g f |
-  ees2 ees4 |
-  aes, aes aes |
+  f,8 |
+  bes,4 bes8 f'4 f8 |
+  bes,4 bes8 bes4 bes8 |
+  ees4 ees8 ees4 ees8 |
+  bes4. d4\rest bes8 |
+  f'4 f8 f4 f8 |
   
-  ees' ees ees |
-  ees ees ees |
-  aes, aes c |
-  des des des |
-  ees ees ees |
-  ees ees ees |
-  aes,2 \bar"||" \time 4/4 \partial 4 d4\rest |
-  d\rest aes'8. aes16 aes4 d,\rest |
-  d\rest aes'8. aes16 aes4 ees |
+  f4 f8 bes,4\fermata d8 |
+  ees4 ees8 e4 e8 |
+  f4.~ f4 f8 |
+  bes,4 bes8 f'4 f8 |
+  bes,4 bes8 bes4 bes8 |
   
-  f8 f f f f4 f8 f |
-  ees4 ees8. ees16 ees4 d\rest |
-  d\rest c8. ees16 aes4 d,\rest |
-  d\rest des8. des16 des4 des |
-  ees8 ees ees ees ees4 ees8. ees16 |
-  aes,2. \bar"|."
+  ees4 ees8 ees4 ees8 |
+  bes4. d4\rest bes8 |
+  f'4 f8 f4 f8 |
+  f4 f8 bes,4 d8 |
+  ees4 ees8 f4 f8 |
+  
+  bes,4. bes' |
+  ees,4 ees8 f4 f8 |
+  bes,4. bes |
+  ees4 ees8 f4 f8 |
+  bes,4. d4\rest f8 |
+  
+  f4 f8 f4 f8 |
+  bes,4 bes8 bes4 bes8 |
+  ees4 ees8 f4 f8 |
+  f4. d4\rest bes8 |
+  d4 d8 d4 d8 |
+  
+  g4 g8 g4 g,8 |
+  d'4 d8 d4 d8 |
+  g4.\fermata f\fermata |
+  bes,4 bes8 f'4 f8 |
+  bes,4 bes8 bes4 bes8 |
+  
+  ees4 ees8 ees4 ees8 |
+  bes4. d4\rest bes8 |
+  f'4 f8 f4 f8 |
+  f4 f8 bes,4 d8 |
+  ees4 ees8 f4 f8 |
+  
+  bes,4. bes' |
+  ees,4 ees8 f4 f8 |
+  bes4. bes, |
+  ees4 ees8 f4\fermata f8 |
+  bes,4. d4\rest \bar"|."
 }
 bassWords = \lyricmode {
 }
@@ -258,9 +371,9 @@ pianoLH = \relative c' {
       \new Voice = "sopranos" { \voiceOne << \global \sopMusic >> }
       \new Voice = "altos" { \voiceTwo << \global \altoMusic >> }
     >>
-    \new Lyrics = "altos"
-    \new Lyrics = "altosII"
-    \new Lyrics = "altosIII"
+    \new Lyrics = "altos"  \lyricsto "sopranos" \sopWords
+    \new Lyrics = "altosII"  \lyricsto "sopranos" \sopWordsII
+    \new Lyrics = "altosIII"  \lyricsto "sopranos" \sopWordsIII
     \new Lyrics = "altosIV"  \lyricsto "sopranos" \sopWordsIV
     \new Lyrics = "altosV"  \lyricsto "sopranos" \sopWordsV
    \new Staff = men <<
@@ -268,9 +381,9 @@ pianoLH = \relative c' {
       \new Voice = "tenors" { \voiceOne << \global \tenorMusic >> }
       \new Voice = "basses" { \voiceTwo << \global \bassMusic >> }
     >>
-    \context Lyrics = "altos"  \lyricsto "sopranos" \sopWords
-    \context Lyrics = "altosII"  \lyricsto "sopranos" \sopWordsII
-    \context Lyrics = "altosIII"  \lyricsto "sopranos" \sopWordsIII
+    \new Lyrics \with { alignAboveContext = #"tenors" } \lyricsto "tenors" \tenorWordsIII
+    \new Lyrics \with { alignAboveContext = #"tenors" } \lyricsto "tenors" \tenorWordsII
+    \new Lyrics \with { alignAboveContext = #"tenors" } \lyricsto "tenors" \tenorWords
   >>
 %    \new PianoStaff << \new Staff { \new Voice { \pianoRH } } \new Staff { \clef "bass" \pianoLH } >>
   >>
@@ -299,8 +412,291 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Where There’s a Will There’s a Way"}}
-  composer = \markup\oldStyleNum"Charles Edward Pollock"
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Johnny Sands"}}
+  composer = \markup\oldStyleNum"John Sinclair, 1842"
+  tagline = ""
+}}
+
+
+global = {
+  \key f \major
+  \time 4/4
+  \dynamicUp
+  %\set crescendoSpanner = #'dashed-line
+  %\set midiInstrument = "recorder"
+  \autoBeamOff
+  \override DynamicTextSpanner #'style = #'none
+}
+
+sopMusic = \relative c' {
+	c4 c c c |
+  f f f f |
+  g a bes c |
+  f,2 b4\rest f4
+}
+sopWords = \lyricmode {
+  He that will an ale -- house keep,
+  Must have three things in store,
+  A
+}
+
+sopWordsII = \lyricmode {
+  cham -- ber and a fea -- ther bed;
+  A chim -- ney and a Hey non -- ny non -- ny
+}
+
+sopWordsIII = \lyricmode {
+  Hey non -- ny non -- ny
+  Hey non -- ny no,
+  Hey non -- ny no,
+  Hey non -- ny no.
+}
+
+sopWordsIV = \lyricmode {
+  \set stanza = #"4. "
+}
+
+sopWordsV = \lyricmode {
+  \set stanza = #"5. "
+}
+
+altoMusic = \relative c' {
+  c' c c c |
+  d c a f |
+  bes c d e |
+  f e8 d c4 a |
+}
+altoWords = \lyricmode {
+}
+altoWordsII = \lyricmode {
+%\markup\italic
+  \set stanza = #"2. "
+}
+altoWordsIII = \lyricmode {
+  \set stanza = #"3. "
+}
+altoWordsIV = \lyricmode {
+  \set stanza = #"4. "
+}
+altoWordsV = \lyricmode {
+  \set stanza = #"5. "
+  \set ignoreMelismata = ##t
+}
+altoWordsVI = \lyricmode {
+  \set stanza = #"6. "
+  \set ignoreMelismata = ##t
+}
+tenorMusic = \relative c' {
+  c'4 bes8 a g4 e |
+  a a8 g f4 f' |
+  e8 d c4 bes8[ d] c bes |
+  a2 b\rest \bar"||"
+}
+
+tenorWords = \lyricmode {
+}
+
+tenorWordsII = \lyricmode {
+}
+
+tenorWordsIII = \lyricmode {
+}
+
+bassMusic = \relative c' {
+  
+}
+bassWords = \lyricmode {
+}
+
+pianoRH = \relative c' {
+}
+pianoLH = \relative c' {
+}
+
+\score {
+<<
+    \new Staff = women <<
+      \new Voice = "sopranos" { << \global \sopMusic >> }
+    >>
+    \new Lyrics = "altos"  \lyricsto "sopranos" \sopWords
+    \new Staff = women <<
+      \new Voice = "altos" { << \global \altoMusic >> }
+    >>
+    \new Lyrics = "altosII"  \lyricsto "altos" \sopWordsII
+    \new Staff = women <<
+      \new Voice = "tenors" { << \global \tenorMusic >> }
+    >>
+    \new Lyrics = "altosIII"  \lyricsto "tenors" \sopWordsIII
+    
+%    \new PianoStaff << \new Staff { \new Voice { \pianoRH } } \new Staff { \clef "bass" \pianoLH } >>
+  >>
+  
+  \layout {
+    \context {
+      \Lyrics
+      \override LyricText #'font-size = #1.3
+      \override VerticalAxisGroup #'staff-affinity = #0
+      \override LyricText #'X-offset = #center-on-word
+    }
+    \context {
+      \Score
+      \override SpacingSpanner #'base-shortest-duration = #(ly:make-moment 1 8)
+      \override SpacingSpanner #'common-shortest-duration = #(ly:make-moment 1 4)
+    }
+    \context {
+      % Remove all empty staves
+      \Staff \RemoveEmptyStaves \override VerticalAxisGroup #'remove-first = ##t
+      
+      \override VerticalAxisGroup #'staff-staff-spacing =
+      #'((basic-distance . 0)
+         (minimum-distance . 0)
+         (padding . -1)
+         (stretchability . 2))
+    }
+  }
+\header {
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"He that will an alehouse keep"}}
+  subtitle = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #12.5 \smallCapsOldStyle"(Round)"}}
+  tagline = ""
+}}
+
+
+global = {
+  \key aes \major
+  \time 4/4
+  \dynamicUp
+  %\set crescendoSpanner = #'dashed-line
+  %\set midiInstrument = "recorder"
+  \autoBeamOff
+  \override DynamicTextSpanner #'style = #'none
+}
+
+sopMusic = \relative c' {
+	aes'2. c4 |
+  bes g ees2 |
+  f2. aes4 |
+  g ees c2 \bar"||"
+}
+sopWords = \lyricmode {
+  Round and round we go
+  While the north winds blow.
+}
+
+sopWordsII = \lyricmode {
+  Swift -- ly as the swal -- lows go,
+  A -- cross the spark -- ling ice we fly.
+}
+
+sopWordsIII = \lyricmode {
+  Round and round and to and fro
+  While loud the cold wind whis -- tles by.
+}
+
+sopWordsIV = \lyricmode {
+  \set stanza = #"4. "
+}
+
+sopWordsV = \lyricmode {
+  \set stanza = #"5. "
+}
+
+altoMusic = \relative c' {
+  aes'4 ees' ees aes, |
+  g ees' ees g, |
+  f des' des f, |
+  ees c' aes2 \bar"||"
+}
+altoWords = \lyricmode {
+}
+altoWordsII = \lyricmode {
+%\markup\italic
+  \set stanza = #"2. "
+}
+altoWordsIII = \lyricmode {
+  \set stanza = #"3. "
+}
+altoWordsIV = \lyricmode {
+  \set stanza = #"4. "
+}
+altoWordsV = \lyricmode {
+  \set stanza = #"5. "
+  \set ignoreMelismata = ##t
+}
+altoWordsVI = \lyricmode {
+  \set stanza = #"6. "
+  \set ignoreMelismata = ##t
+}
+tenorMusic = \relative c' {
+  ees'4 c aes ees' |
+  ees bes g ees' |
+  des aes f des' |
+  c aes ees2 \bar"||"
+}
+
+tenorWords = \lyricmode {
+}
+
+tenorWordsII = \lyricmode {
+}
+
+tenorWordsIII = \lyricmode {
+}
+
+bassMusic = \relative c' {
+  
+}
+bassWords = \lyricmode {
+}
+
+pianoRH = \relative c' {
+}
+pianoLH = \relative c' {
+}
+
+\score {
+<<
+    \new Staff = women <<
+      \new Voice = "sopranos" { << \global \sopMusic >> }
+    >>
+    \new Lyrics = "altos"  \lyricsto "sopranos" \sopWords
+    \new Staff = women <<
+      \new Voice = "altos" { << \global \altoMusic >> }
+    >>
+    \new Lyrics = "altosII"  \lyricsto "altos" \sopWordsII
+    \new Staff = women <<
+      \new Voice = "tenors" { << \global \tenorMusic >> }
+    >>
+    \new Lyrics = "altosIII"  \lyricsto "tenors" \sopWordsIII
+    
+%    \new PianoStaff << \new Staff { \new Voice { \pianoRH } } \new Staff { \clef "bass" \pianoLH } >>
+  >>
+  
+  \layout {
+    \context {
+      \Lyrics
+      \override LyricText #'font-size = #1.3
+      \override VerticalAxisGroup #'staff-affinity = #0
+      \override LyricText #'X-offset = #center-on-word
+    }
+    \context {
+      \Score
+      \override SpacingSpanner #'base-shortest-duration = #(ly:make-moment 1 8)
+      \override SpacingSpanner #'common-shortest-duration = #(ly:make-moment 1 4)
+    }
+    \context {
+      % Remove all empty staves
+      \Staff \RemoveEmptyStaves \override VerticalAxisGroup #'remove-first = ##t
+      
+      \override VerticalAxisGroup #'staff-staff-spacing =
+      #'((basic-distance . 0)
+         (minimum-distance . 0)
+         (padding . -1)
+         (stretchability . 2))
+    }
+  }
+\header {
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Skating"}}
+  subtitle = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #12.5 \smallCapsOldStyle"(Round)"}}
   tagline = ""
 }}
 

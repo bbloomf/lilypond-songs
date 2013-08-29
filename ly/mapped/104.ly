@@ -1,6 +1,5 @@
 ﻿\version "2.14.2"
 \include "util.ly"
-\version "2.14.2"
 \header{ tagline = ""}
 \paper {
   print-all-headers = ##t
@@ -18,7 +17,6 @@
   ragged-last-bottom = ##f
   ragged-bottom = ##f
   two-sided = ##t
-  ragged-right = ##f
   inner-margin = 1\in
   outer-margin = 0.75\in
   top-margin = 0.26\in
@@ -44,91 +42,119 @@
 }
 #(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
 global = {
-  \key d\major
-  \time 3/4
+  \key ees \major
+  \time 4/4
   \dynamicUp
   %\set crescendoSpanner = #'dashed-line
   %\set midiInstrument = "recorder"
   \autoBeamOff
   \override DynamicTextSpanner #'style = #'none
+  \tieDashed
+  
 }
-
 
 sopMusic = \relative c' {
-  \repeat volta 2 {
-    \partial 4. fis8 fis g |
-    a4. fis'8 fis e |
-    d4( fis,8) a b a |
-    a cis, cis e b' a | \break
-    
-    a d, d fis fis g |
-    a4. a8 fis' e |
-    d4( fis,) a8 a | \break
-    a8[ gis b] a g e |
-    
-    d4 b'8\rest a( b a) |
-    a cis, cis e b' a | \break
-    a d, d a' b a |
-    a cis, cis e b' a |
-    
-    a d, d fis fis g | \break
-    a4. a8 fis' e |
-    d4( fis,) a8 a |
-    a8[ gis b] a g e |
-    d4. \break
-  }
-  \pageBreak
+	\partial 4
+  ees8 f |
+  g4 g8 g g bes4 g8 |
+  f ees ees f g4 c8. bes16 |
+  bes4 g8~ g g ees f8. f16 |
+  
+  ees2 b'4\rest ees,8 f |
+  g4 g8 g g bes4 g8 |
+  f ees ees f g4 c\fermata |
+  bes g g8 ees8 f8. f16 |
+  ees2 b'4\rest \bar"||"\break
+  
+  g8 aes |
+  bes4 bes8\rest bes bes4 a8 bes |
+  c2 bes4 bes\rest |
+  ees bes c bes |
+  g8 g f ees f4\fermata ees8 f |
+  
+  g4 g8 g g bes4 g8 |
+  f ees ees f g4 c\fermata |
+  bes g g8 ees f8. f16 |
+  ees2 b'4\rest \bar"|."
 }
 sopWords = \lyricmode {
-  \set stanza = "1. "
-  ’Twere vain to tell thee all I feel, __
-  Or say for thee I’d die, or say for thee I’d die;
-  I find that words will but con -- ceal __
-  What my soul __ would wish to sigh.
-  \dropLyricsXI
-  Ah, __ well -- a -- day! the sweet -- est \raiseLyrics mel -- o -- dy
-  Could nev -- er, nev -- er say one half my love for thee,
-  Then let me si -- lent -- ly re -- veal __
-  What my soul __ would wish to sigh.
+  \set stanza = #"1. "
+	Let us pause in life’s plea -- sures and count its ma -- ny tears
+  While we all sup __ sor -- row with the poor;
+  There’s a song that will lin -- ger for -- ev -- er in our ears;
+  Oh! Hard Times, come a -- gain no more.
+  
+  ’Tis the song, the sigh of the wea -- ry;
+  Hard Times, Hard Times, come a -- gain no more:
+  Ma -- ny days you have lin -- gered a -- round my cab -- in door,
+  Oh! Hard Times, come a -- gain no more.
 }
 
 sopWordsII = \lyricmode {
-  \set stanza = "2. "
-  Thou’st oft -- en called my voice a bird’s, __
-  Whose mu -- sic like a spell, whose mu -- sic like a spell,
-  Could change to rap -- ture e’en the words __
-  Of our slow __ and sad fare -- well.
+  \set stanza = #"2. "
+  While we seek mirth and beau -- ty and mu -- sic light and gay
+  There are frail forms __ faint -- ing at the door:
+  Though their voic -- es are si -- lent, their plead -- ing looks will say:
+  Oh! Hard Times, come a -- gain no more.
+}
+
+sopWordsIII = \lyricmode {
+  \set stanza = #"3. "
+  \set ignoreMelismata = ##t
+  There’s a pale droop -- ing maid -- en who toils her life a -- way,
+  With a worn heart whose bet -- ter days are o’er;
+  Though her voice would be mer -- ry, ’tis sigh -- ing all the day:
+  Oh! Hard Times, come a -- gain no more.
+}
+
+sopWordsIV = \lyricmode {
+  \set stanza = #"4. "
+  \set ignoreMelismata = ##t
+  ’Tis a sigh that is waft -- ed a -- cross the trou -- bled wave,
+  ’Tis a wail that is heard up -- on the shore,
+  ’Tis a dirge that is mur -- mured a -- round the low -- ly grave:
+  Oh! Hard Times, come a -- gain no more.
+}
+
+sopWordsV = \lyricmode {
+  \set stanza = #"5. "
 }
 
 altoMusic = \relative c' {
-  d8 d e |
-  fis4. a8 a g |
-  fis4( d8) fis g fis |
-  e a, a cis e e |
+  ees8 d |
+  ees4 ees8 ees ees ees4 ees8 |
+  bes bes bes d ees4 |
+  ees8. ees16 |
+  ees4 ees8~ ees ees ees d8. d16 |
   
-  d a a d d e |
-  fis4. fis8 a g |
-  fis4( d) fis8 fis |
-  fis8[ e d] cis cis cis |
+  ees2 s4 ees8 d |
+  ees4 ees8 ees ees ees4 ees8 |
+  bes bes bes d ees4 ees |
+  ees ees ees8 bes bes8. bes16 |
+  bes2 s4 |
   
-  d4 s8 fis( g fis) |
-  e a, a cis e e |
-  d d d fis g fis |
-  e a, a cis e e |
+  ees8 f |
+  g4 s8 g g4 fis8 g |
+  aes2 g4 s |
+  g g aes g |
+  ees8 ees c c d4 ees8 d |
   
-  d d d d d e |
-  fis4. fis8 a g |
-  fis4( d) fis8 fis |
-  fis8[ e d] cis cis cis |
-  d4.
+  ees4 ees8 ees ees ees4 ees8 |
+  bes bes bes d ees4 ees |
+  ees ees ees8 bes d8. d16 |
+  ees2 s4 \bar"|."
 }
 altoWords = \lyricmode {
 }
 altoWordsII = \lyricmode {
+%\markup\italic
+  \set stanza = #"2. "
 }
 altoWordsIII = \lyricmode {
+  \set stanza = #"3. "
 }
 altoWordsIV = \lyricmode {
+  \set stanza = #"4. "
 }
 altoWordsV = \lyricmode {
   \set stanza = #"5. "
@@ -139,64 +165,68 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
-  a8 a a |
-  d4. d8 d a |
-  a4. d8 d d |
-  cis e, e a g g |
+  g8 aes |
+  bes4 bes8 bes bes g4 bes8 |
+  aes g g bes bes4 aes8. g16 |
+  g4 bes8~ bes bes g aes8. aes16 |
   
-  fis fis fis a a a |
-  d4. d8 d a |
-  a2 d8 d |
-  d8[ b gis] a a g |
+  g2 s4 g8 aes |
+  bes4 bes8 bes bes g4 bes8 |
+  aes g g bes bes4 aes |
+  g bes bes8 g aes8. aes16 |
+  g2 s4 |
   
-  fis4 s8 d'4. |
-  cis8 e, e a g g |
-  fis fis fis d' d d |
-  cis e, e a g g |
+  bes8 bes |
+  ees4 s8 ees ees4 ees8 ees |
+  ees2 ees4 s |
+  bes ees ees ees |
+  bes8 bes a a bes4 g8 aes |
   
-  fis fis fis a a a |
-  d4. d8 d a |
-  a2 d8 d |
-  d8[ b gis] a a g |
-  fis4.
+  bes4 bes8 bes bes g4 bes8 |
+  aes8 g g bes bes4 aes |
+  g bes bes8 g aes8. aes16 |
+  g2 s4 \bar"|."
 }
+
 tenorWords = \lyricmode {
-
 }
 
-bassMusic = \relative c {
-  d8 d d |
-  d4. d8 d d |
-  d4. d8 d d |
-  a a a a a a |
+tenorWordsII = \lyricmode {
+}
+
+tenorWordsIII = \lyricmode {
+}
+
+bassMusic = \relative c' {
+  ees,8 ees |
+  ees4 ees8 ees ees ees4 ees8 |
+  bes bes bes bes ees4 ees8. ees16 |
+  bes4 bes8~ bes bes bes bes8. bes16 |
   
-  d d d d d d |
-  d4. d8 d d |
-  d2 d8 d |
-  a4. a8 a a |
+  ees2 d4\rest ees8 ees |
+  ees4 ees8 ees ees ees4 ees8 |
+  bes bes bes bes ees4 aes,\fermata |
+  bes bes bes8 bes bes8. bes16 |
+  ees2 d4\rest |
   
-  d4 d8\rest d4. |
-  a8 a a a a a |
-  d d d d d d |
-  a a a a a a |
+  ees8 ees |
+  ees4 d8\rest ees ees4 ees8 ees |
+  aes2 ees4 d\rest |
+  ees ees ees ees |
+  ees8 ees f f bes,4\fermata ees8 ees |
   
-  d d d d d d |
-  d4. d8 d d |
-  d2 d8 d |
-  a4. a8 a a |
-  d4.
+  ees4 ees8 ees ees ees4 ees8 |
+  bes bes bes bes ees4 aes,\fermata |
+  bes bes bes8 bes bes8. bes16 |
+  ees2 d4\rest \bar"|."
 }
 bassWords = \lyricmode {
-
 }
 
 pianoRH = \relative c' {
-  
 }
 pianoLH = \relative c' {
-  
 }
-
 
 \score {
 <<
@@ -207,11 +237,17 @@ pianoLH = \relative c' {
     >>
     \new Lyrics = "altos"  \lyricsto "sopranos" \sopWords
     \new Lyrics = "altosII"  \lyricsto "sopranos" \sopWordsII
+    \new Lyrics = "altosIII"  \lyricsto "sopranos" \sopWordsIII
+    \new Lyrics = "altosIV"  \lyricsto "sopranos" \sopWordsIV
+    \new Lyrics = "altosV"  \lyricsto "sopranos" \sopWordsV
    \new Staff = men <<
       \clef bass
       \new Voice = "tenors" { \voiceOne << \global \tenorMusic >> }
       \new Voice = "basses" { \voiceTwo << \global \bassMusic >> }
     >>
+    \new Lyrics \with { alignAboveContext = #"tenors" } \lyricsto "tenors" \tenorWordsIII
+    \new Lyrics \with { alignAboveContext = #"tenors" } \lyricsto "tenors" \tenorWordsII
+    \new Lyrics \with { alignAboveContext = #"tenors" } \lyricsto "tenors" \tenorWords
   >>
 %    \new PianoStaff << \new Staff { \new Voice { \pianoRH } } \new Staff { \clef "bass" \pianoLH } >>
   >>
@@ -240,9 +276,8 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"’Twere Vain to tell"}}
-  poet = \markup\oldStyleNum"J. A. Wade (1800–1875)"
-  composer = \markup\italic "Swiss Air"
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Hard Times"}}
+  composer = \markup\oldStyleNum"Stephen Foster (1826–1864)"
   tagline = ""
 }}
 

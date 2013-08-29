@@ -1,4 +1,4 @@
-﻿\version "2.14.2"
+\version "2.14.2"
 \include "util.ly"
 \header{ tagline = ""}
 \paper {
@@ -12,7 +12,7 @@
   system-system-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)
-       (padding . 0)
+       (padding . 2)
        (stretchability . 100))
   ragged-last-bottom = ##f
   ragged-bottom = ##f
@@ -42,81 +42,82 @@
 }
 #(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
 global = {
-  \key aes \major
-  \time 4/4
+  \key f \major
+  \time 6/8
   \dynamicUp
   %\set crescendoSpanner = #'dashed-line
   %\set midiInstrument = "recorder"
   \autoBeamOff
   \override DynamicTextSpanner #'style = #'none
-  \tieDashed
   \slurDashed
 }
 
 sopMusic = \relative c' {
-  \partial 4
-  aes'8( bes) |
-  c~ c c8. bes16 aes8~ aes f8. g16 |
-  aes8 aes aes8. g16 f2 |
-  ees4 ees8. des16 c8 ees aes8. bes16 |
-  c2 bes4 \bar""
+	\partial 8
+  c8 |
+  \tieDashed a'4~ a8 a4 a8 |
+  bes bes~ bes bes4 bes8 |
+  \tieSolid c4 c8 a4 f8 |
+  g4.~ g4 \teeny c8 \normalsize |
+  \tieDashed f4~ f8 e4 f8 |
   
-  aes8( bes) |
-  c~ c c8. bes16 aes8~ aes f8.( g16) |
-  aes8~ aes aes8.( g16) f2 |
-  ees4 ees8. des16 c8 ees aes8. c16 |
-  bes2 aes4 \bar"||"\break
+  d4( c8) a4 f8 |
+  a4 g8 f4 e8 |
+  \tieSolid f4.~ f4 c8 |
+  a'4 a8 a4 a8 |
+  \tieDashed bes~ bes8~ bes bes4 bes8 |
+  c4 c8 a4 f8 |
   
-  b8\rest ees |
-  ees4 c8. des16 ees8 f4 ees8 |
-  ees8 ees c8. des16 ees2 |
-  ees4 c8. des16 ees8 f4 f8 |
-  ees4 c8. aes16 bes4 \bar"" aes8 bes 
+  \tieSolid g4.~ g4 c8 |
+  \tieDashed f4~ f8 e4 f8 |
+  \tieSolid d d c a4 f8 |
+  a4 g8 f4 e8 |
+  f4.~ f4 \bar"||" c'8 |
+  f4.~ f4 c8 |
   
-  c8 c c8. bes16 aes8 aes f8. g16 |
-  aes8 aes aes8. g16 f2 |
-  ees4 ees8. des16 c8 ees aes8. c16 |
-  bes2 aes4 \bar"|."
+  e4.~ e4 c8 |
+  d4 d8 d4 d8 |
+  c4.~ c4 c8 |
+  f4. c4 c8 |
+  e e d c4 bes8 |
+  a4 bes8 a4 g8 |
+  f4.~ f4 \bar"|."
 }
 sopWords = \lyricmode {
   \set stanza = #"1. "
   \set ignoreMelismata = ##t
-  Our __ _ flag is proud -- ly float -- ing on the land and on the main,
-  Shout, shout the bat -- tle cry of Free -- dom!
-  Be -- _ neath it oft we’ve con -- quered, and we’ll con -- quer oft a -- gain!
-  Shout, shout the bat -- tle cry of Free -- dom!
-  
-  Our Dix -- ie for -- ev -- er! She’s nev -- er at a loss!
-  Down with the ea -- gle and up with the cross
-  We -- ’ll ral -- ly ’round the bon -- ny flag, we’ll ral -- ly once a -- gain,
-  Shout, shout the bat -- tle cry of Free -- dom!
+  We are a band of broth -- ers, _ "" and na -- tive to the soil, __ _
+  "" Fight -- ing for our Lib -- er -- ty, With trea -- sure, blood, and toil; __ _
+  And when our rights were threat -- ened, _ "" the cry rose near and far, __ _
+  Hur -- rah __ _ for the Bon -- nie Blue Flag that bears a sin -- gle star. __ _
 }
 
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
   \set ignoreMelismata = ##t
-  Our __ _ gal -- lant boys have marched _ to the rol -- ling of the drums.
-  Shout, shout the bat -- tle cry of Free -- dom!
-  And the lead -- _ ers in charge cry out, __ _ “Come, _ boys, __ _ come!”
-  Shout, shout the bat -- tle cry of Free -- dom!
+  As long __ _ as the U -- nion _ "" was faith -- ful to her trust, __ _
+  Like friends _ and like Bro -- _ thers, "" kind were we and just; __ _
+  But now, when North -- ern treach -- e -- ry "" at -- tempts our rights to mar, __ _
+  We hoist on high the Bon -- nie Blue Flag that bears a sin -- gle star! __ _
+  
+  \unset ignoreMelismata
+  Hur -- rah! __
+  Hur -- rah! __
+  For South -- ern rights hur -- rah! __
+  Hur -- rah for the Bon -- nie Blue Flag that bears a sin -- gle star!
 }
 
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
   \set ignoreMelismata = ##t
-  They have laid __ _ down their lives __ _ on the blood -- y bat -- tle field.
-  Shout, shout the bat -- tle cry of Free -- dom!
-  Their _ mot -- to is re -- sis -- tance— “To the ty -- rants nev -- er yield!”
-  Shout, shout the bat -- tle cry of Free -- dom!
+  Then here’s to our Con -- fed -- e -- ra -- cy, so strong we are and brave, _
+  Like pa -- tri -- ots of old we’ll fight, our her -- i -- tage to save: __ _
+  And ra -- ther than sub -- mit __ _ to shame, to die we would pre -- fer, __ _
+  So cheer __ _ for the Bon -- nie Blue Flag that bears a sin -- gle star. __ _
 }
 
 sopWordsIV = \lyricmode {
   \set stanza = #"4. "
-  \set ignoreMelismata = ##t
-  While our boys __ _ have re -- spond -- _ ed and to the fields have gone.
-  Shout, shout the bat -- tle cry of Free -- dom!
-  Our __ _ no -- ble wo -- men al -- _ so have aid -- ed them at home.
-  Shout, shout the bat -- tle cry of Free -- dom!
 }
 
 sopWordsV = \lyricmode {
@@ -124,29 +125,34 @@ sopWordsV = \lyricmode {
 }
 
 altoMusic = \relative c' {
-  ees8( des) |
-  c~ c c8. c16 c8~ c c8. c16 |
-  c8 c c8. bes16 aes2 |
-  c4 c8. bes16 aes8 c ees8. ees16 |
-  ees2 ees4
+  c8 |
+  \tieDashed f4~ f8 f4 f8 |
+  e e~ e e4 e8 |
+  \tieSolid a4 a8 f4 f8 |
+  e4.~ e4 \teeny bes'8 \normalsize |
+  \tieDashed a4~ a8 g4 a8 |
   
-  ees8( des) |
-  c~ c c8. c16 c8~ c c8.~ c16 |
-  c8~ c c8.( bes16) aes2 |
-  c4 c8. bes16 aes8 c ees8. ees16 |
-  des2 c4
+  f4~ f8 f4 f8 |
+  f4 e8 f4 c8 |
+  \tieSolid c4.~ c4 c8 |
+  f4 f8 f4 f8 |
+  \tieDashed e~ e~ e e4 e8 |
+  f4 f8 f4 c8 |
   
+  \slurSolid f4.( e4) bes'8 |
+  \tieDashed a4~ a8 g4 a8 |
+  \tieSolid f f f f4 f8 |
+  f4 c8 c4 c8 |
+  \tieSolid c4.~ c4 \bar"||"
+  f8 a4.~ a4 a8 |
   
-  s8 aes' |
-  aes4 aes8. aes16 aes8 aes4 aes8 |
-  aes8 aes aes8. aes16 aes2 |
-  aes4 aes8. aes16 aes8 aes4 aes8 |
-  ees4 f8. f16 g4 ees8 des |
-  
-  c c c8. c16 c8 c c8. c16 |
-  c8 c c8. bes16 aes2 |
-  c4 c8. bes16 aes8 c ees8. ees16 |
-  des2 c4
+  g4.~ g4 g8 |
+  f4 f8 f4 f8 |
+  f4.~ f4 f8 |
+  a4. f4 f8 |
+  f f f d4 d8 |
+  c4 c8 e4 e8 |
+  f4.~ f4 \bar"|."
 }
 altoWords = \lyricmode {
 }
@@ -169,29 +175,35 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
-  aes8( g) |
-  aes~ aes aes8. aes16 aes8~ aes aes8. g16 |
-  f8 f e8. e16 f2 |
-  aes4 aes8. aes16 aes8 aes aes8. g16 |
-  aes2 g4 
+  a8 |
+  \tieDashed c4~ c8 c4 c8 |
+  c c~ c c4 c8 |
+  \tieSolid c4 c8 c4 a8 |
+  c4.~ c4 \teeny c8 \normalsize |
+  \tieDashed c4~ c8 c4 c8 |
   
-  aes8( g) |
-  aes~ aes aes8. aes16 aes8~ aes aes8.( g16) |
-  f8~ f e8.~ e16 f2 |
-  aes4 aes8. aes16 aes8 aes aes8. aes16 |
-  g2 aes4 
+  bes4( a8) c4 a8 |
+  c4 bes8 a4 g8 |
+  \tieSolid a4.~ a4 a8 |
+  c4 c8 c4 c8 |
+  \tieDashed c~ c~ c c4 c8 |
+  c4 c8 c4 a8 |
   
+  \tieSolid c4.~ c4 c8 |
+  \tieDashed c4~ c8 c4 c8 |
+  \tieSolid bes bes a c4 a8 |
+  c4 bes8 a4 g8 |
+  a4.~ a4 \bar"||"
+  a8 |
+  c4.~ c4 c8 |
   
-  s8 c8 |
-  c4 aes8. bes16 c8 des4 c8 |
-  c8 c aes8. bes16 c2 |
-  c4 aes8. bes16 c8 des4 des8 |
-  c4 aes8. aes16 g4 aes8 g |
-  
-  aes aes aes8. aes16 aes8 aes aes8. g16 |
-  f8 f e8. e16 f2 |
-  aes4 aes8. aes16 aes8 aes aes8. aes16 |
-  g2 aes4 
+  c4.~ c4 c8 |
+  bes4 bes8 bes4 bes8 |
+  a4.~ a4 a8 |
+  c4. a4 a8 |
+  bes bes bes g4 g8 |
+  f4 f8 c'4 bes8 |
+  a4.~ a4 \bar"|."
 }
 
 tenorWords = \lyricmode {
@@ -204,29 +216,35 @@ tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  c,8( bes) |
-  aes~ aes aes8. aes16 f8~ f f8. f16 |
-  c'8 c c8. c16 des2 |
-  aes4 aes8. aes16 aes8 aes c8. ees16 |
-  aes,2 ees'4 
+  f,8 |
+  \tieDashed f4~ f8 f4 f8 |
+  g g~ g g4 g8 |
+  \tieSolid f4 f8 f4 f8 |
+  c4.~ c4 \teeny e8 \normalsize |
+  \tieDashed f4~ f8 c4 f8 |
   
-  c8( bes) |
-  aes~ aes aes8. aes16 f8~ f f8.~ f16 |
-  c'8~ c c8.~ c16 des2 |
-  aes4 aes8. aes16 aes8 aes c8. c16 |
-  ees2 aes,4 
+  f4~ f8 f4 f8 |
+  c4 c8 c4 c8 |
+  \tieSolid f4.~ f4 f8 |
+  f4 f8 f4 f8 |
+  \tieDashed g~ g~ g g4 g8 |
+  a4 a8 f4 f8 |
   
+  \tieSolid c4.~ c4 e8 |
+  \tieDashed f4~ f8 c4 f8 |
+  \tieSolid f f f f4 f8 |
+  c4 c8 c4 c8 |
+  f4.~ f4 \bar"||"
+  f8 |
+  f4.~ f4 f8 |
   
-  d8\rest aes' |
-  aes4 aes8. aes16 aes8 aes4 aes8 |
-  aes8 aes aes8. aes16 aes2 |
-  aes4 aes8. aes16 aes8 aes4 aes8 |
-  aes4 f8. f16 ees8[ des] c8 bes |
-  
-  aes aes aes8. aes16 f8 f f8. f16 |
-  c'8 c c8. c16 des2 |
-  aes4 aes8. aes16 aes8 aes c8. c16 |
-  ees2 aes,4 
+  c4.~ c4 e8 |
+  f4 f8 f4 f8 |
+  f4.~ f4 f8 |
+  f4. f4 f8 |
+  bes, bes bes bes4 bes8 |
+  c4 c8 c4 c8 |
+  f4.~ f4 \bar"|."
 }
 bassWords = \lyricmode {
 }
@@ -284,9 +302,8 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"The Battle Cry of Freedom"}}
-  subtitle = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #12.5 \smallCapsOldStyle"(Confederate Version)"}}
-  composer = \markup\oldStyleNum"George Frederick Root (1825–1895)"
-  poet = \markup\oldStyleNum"W. H. Barnes"
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"The Bonnie Blue Flag"}}
+  composer = \markup\oldStyleNum{"Folk Song," \italic "The Irish Jaunting Car"}
+  poet = \markup\oldStyleNum"Harry McCarthy, 1861"
   tagline = ""
 }}

@@ -9,11 +9,6 @@
   paper-width = 8.5\in
   indent = 0\in
   %system-system-spacing = #'((basic-distance . 10) (padding . 0))
-  top-markup-spacing =
-    #'((basic-distance . 0)
-       (minimum-distance . 0)
-       (padding . -14)
-       (stretchability . 0))
   system-system-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)
@@ -45,92 +40,81 @@
         \fill-line{\headerLine}
   }
 }
-#(set-global-staff-size 17.5) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 17.5 20))) }
+#(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
 global = {
-  \key ees \major
+  \key f \major
   \time 4/4
   \dynamicUp
   %\set crescendoSpanner = #'dashed-line
   %\set midiInstrument = "recorder"
   \autoBeamOff
   \override DynamicTextSpanner #'style = #'none
-  \mergeDifferentlyDottedOn
+  \tieDashed
+  \slurDashed
 }
 
 sopMusic = \relative c' {
-	bes'4 g8 bes ees2 |
-  c4 ees bes2 |
-  bes4 ees,8 f g4 f8 ees |
-  g f4. b2\rest |
-  bes4 g8 bes ees4. d8 |
+	\partial 4
+  c8[ e] |
+  f4 f8 g a4 g8. f16 |
+  g4 g8 f d4 c8 e |
+  f4 f8~ f f4 a8 c |
+  d2 c4 c8~ c |
   
-  c4 ees bes bes8 bes |
-  bes4 f8 g aes4. d,8 |
-  f8 ees4. b'2\rest |
-  c4 ees ees2 |
-  d8 d c d ees2 |
+  \slurDashed d~ d d8( c) a4~ a8 c |
+  bes a g f d4\fermata c8 e |
+  f16~ f8. a16( c8.) d4 c8 a |
+  g2 f4 c\fermata | \break
   
-  c8 d ees c c bes g ees |
-  g f4. b2\rest |
-  bes8 bes g ees ees'4. d8 |
-  c4 ees bes bes8 bes |
+  f4 f8 g a4 a8 g |
+  f4 f8 d c4 c8 e |
+  f4 f8 f f4 a8 c |
+  d2 c4 c |
   
-  bes4 f8 g aes4. d,8 |
-  f ees4. b'2\rest \bar"||"\break
-  bes4 g8 bes ees2 |
-  c4 ees bes2 |
-  bes4 ees,8 f g4 f8 ees |
-  
-  g f4. b2\rest |
-  bes4 g8 bes ees4. d8 |
-  c4 ees bes bes8 bes |
-  bes4 f8 g aes4. d,8 |
-  f ees4. b'2\rest \bar"|."
+  d d8 c a4 a8 c |
+  bes a g f d4\fermata c8 e |
+  f16 f8. a16 c8. d4 c8 a |
+  \tieSolid
+  g2 f~ |
+  f4 \bar"|."
 }
 sopWords = \lyricmode {
+  \set ignoreMelismata = ##t
   \set stanza = #"1. "
-	Dream -- ing of home, dear old home!
-  Home of my child -- hood and mo -- ther;
-  Oft when I wake, ’tis sweet to find
-  I’ve been dream -- ing of home and mo -- ther.
-  
-  Home, dear home, child -- hood’s hap -- py home!
-  When I played with sis -- ter and with bro -- ther;
-  ’Twas the sweet -- est joy when we did roam,
-  O -- ver hill and through dale with mo -- ther.
-  
-  
-
-	Dream -- ing of home, dear old home!
-  Home of my child -- hood and mo -- ther;
-  Oft when I wake, ’tis sweet to find
-  I’ve been dream -- ing of home and mo -- ther.
+	By _ yon bon -- nie banks,
+  And by yon bon -- nie braes,
+  Where the sun shines _ bright on Loch Lo -- mond,
+  Where _ me __ _ and my true love
+  Were ev -- er wont to gae
+  On the bon -- nie, bon -- nie banks of Loch Lo -- mond.
+  Oh!
 }
 
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
-  Sleep, balm -- y sleep, close mine eyes,
-  Keep me still think -- ing of mo -- ther,
-  Hark! ’tis her voice I seem to hear,
-  Yes, I’m dream -- ing of home and mo -- ther.
+  \set ignoreMelismata = ##t
+  ’Twas _ there that we part -- ed
+  In yon shad -- y glen
+  On the steep, steep _ side of Ben Lo -- mond
+  Where in pur -- _ ple __ _ hue __ _
+  The High -- land hills we view
+  And the moon _ com -- in’ out in the gloam -- ing.
   
-  An -- gels come, sooth -- ing me to rest,
-  I can feel their pres -- ence and none oth -- er;
-  For they sweet -- ly say I shall be blest
-  With bright vis -- ions of home and mo -- ther.
+  Oh! ye’ll take the high road and I’ll take the low road,
+  And I’ll be in Scot -- land a -- fore ye,
+  But me and my true love we’ll nev -- er meet a -- gain
+  On the bon -- nie, bon -- nie banks of Loch Lo -- mond. _
 }
 
 sopWordsIII = \lyricmode {
+  \set ignoreMelismata = ##t
   \set stanza = #"3. "
-  Child -- hood has come, come a -- gain,
-  Sleep -- ing, I see my dear mo -- ther;
-  See her loved form be -- side me kneel,
-  While I’m dream -- ing of home and mo -- ther.
-  
-  Mo -- ther dear, whis -- per to me now,
-  Tell me of my sis -- ter and my bro -- ther;
-  Now I feel thy hand up -- on my brow,
-  Yes I’m dream -- ing of home and mo -- ther.
+  The _ wee bird -- ies sang
+  And the wild flow -- ers spring
+  And in sun -- shine the wa -- ters are sleep -- ing,
+  But the brok -- en heart it kens __ _
+  Nae sec -- ond Spring a -- gain
+  Tho’ the wae -- ful may _ cease frae their greet -- ing. Oh!
 }
 
 sopWordsIV = \lyricmode {
@@ -142,34 +126,28 @@ sopWordsV = \lyricmode {
 }
 
 altoMusic = \relative c' {
-  g'4 ees8 g g2 |
-  aes4 aes g2 |
-  ees4 ees8 ees8 ees4 c8 c |
-  ees d4. s2 |
-  ees4 ees8 g g4. g8 |
+  c4 |
+  c c8 e f4 e8. f16 |
+  d4 d8 d bes4 c8 c |
+  c4 e8~ e d4 ees8 ees |
+  \slurSolid d4( f) e e8~ e |
   
-  aes4 aes g ees8 ees |
-  d4 d8 d8 d4. d8 |
-  d ees4. s2 |
-  ees4 ees g2 |
-  aes8 aes aes aes g2 |
+  f~ f f~ f e4~ e8 e |
+  d d c c bes4 bes8 e |
+  d16~ d8. e16~ e8. f4 f8 f |
+  e2 f4 c |
   
-  aes8 aes aes aes aes g ees ees |
-  ees d4. s2 |
-  ees8 ees ees ees g4. g8 |
-  aes4 aes g ees8 ees |
+  c d8 d e4 cis8 cis |
+  d4 d8 bes bes4 c8 c |
+  c4 d8 d d4 f8 f |
+  \slurSolid f4( e) f4 f |
   
-  d4 d8 d d4. d8 |
-  d ees4. s2 \bar"||"
-  g4 ees8 g g2 |
-  aes4 ees g2 |
-  ees4 ees8 d ees4 c8 c |
-  
-  ees8 d4. s2 |
-  ees4 ees8 d ees4. f8 |
-  ees4 ees ees ees8 ees8 |
-  d4 d8 d d4. bes8 |
-  bes bes4. s2 \bar"|."
+  f f8 f e4 e8 e |
+  d d c c bes4 c8 c |
+  c16 c8. f16 f8. f4 f8 f |
+  \tieSolid
+  e2 f2~ |
+  f4 \bar"|."
 }
 altoWords = \lyricmode {
 }
@@ -192,34 +170,28 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
-  bes4 bes8 bes8 bes2 |
-  c4 c ees( bes) |
-  g g8 aes bes4 a8 a |
-  bes bes4. s2 |
-  g4 bes8 bes bes4. bes8 |
+  a4 |
+  a a8 bes c4 bes8. a16 |
+  bes4 bes8 bes f4 e8 g |
+  a4 a8~ a a4 f8 f |
+  \slurSolid f4( g) g a8~ a |
   
-  c4 c bes g8 g |
-  f4 aes8 g f4. aes8 |
-  aes g4. s2 |
-  aes4 c bes2 |
-  bes8 bes bes bes bes2 |
+  a~ a a~ a a4~ a8 a |
+  g g f f f4 e8 bes' |
+  a16~ a8. a16~ a8. bes4 f8 f |
+  bes2 a4 bes |
   
-  aes8 bes c ees ees ees bes g |
-  bes bes4. s2 |
-  g8 g bes g bes4. bes8 |
-  c4 c bes g8 g |
+  a4 a8 a a4 a8 a |
+  f4 g8 g e4 g8 g |
+  f4 a8 a a4 c8 a |
+  bes2 c4 a |
   
-  f4 aes8 g f4. aes8 |
-  aes g4. s2 \bar"||"
-  bes4 bes8 bes bes2 |
-  c4 c bes2 |
-  g4 bes8 bes bes4 a8 a |
-  
-  bes bes4. s2 |
-  g4 bes8 aes g8[ aes bes] b |
-  c4 aes g g8 g |
-  f4 aes8 g f4. aes8 |
-  aes g4. s2 \bar"|."
+  a4 a8 a a4 a8 a |
+  g g f f f4 g8 g |
+  f16 a8. a16 a8. bes4 f8 c' |
+  \tieSolid
+  bes2 a~ |
+  a4 \bar"|."
 }
 
 tenorWords = \lyricmode {
@@ -232,34 +204,28 @@ tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  ees,4 ees8 ees ees2 |
-  ees4 ees ees2 |
-  ees4 ees8 ees ees4 f8 f |
-  bes,8 bes4. d2\rest |
-  ees4 ees8 ees ees4. ees8 |
+  f,4 |
+  f f8 f f4 f8. f16 |
+  bes,4 bes8 bes bes4 c8 c |
+  f4 f8~ f d4 c8 c |
+  \slurSolid bes4( g) c a8~ a |
   
-  ees4 ees ees ees8 ees |
-  bes4 bes8 bes bes4. bes8 |
-  ees ees4. d2\rest |
-  aes'4 aes ees2 |
-  bes8 bes bes bes ees2 |
+  d~ d d~ d c4~ c8 c |
+  g g a a bes4\fermata c8 c |
+  d16~ d8. c16~ c8. bes4 a8 a |
+  c2 f4 e\fermata |
   
-  aes8 aes aes aes ees ees ees ees |
-  bes bes4. d2\rest |
-  ees8 ees ees ees ees4. ees8 |
-  ees4 ees ees ees8 ees |
+  f d8 d cis4 a8 a |
+  bes4 g8 g c4 c8 c |
+  a4 d8 d d4 f8 f |
+  \slurSolid bes,4( g) a f' |
   
-  bes4 bes8 bes bes4. bes8 |
-  ees8 ees4. d2\rest \bar"||"
-  ees4 ees8 ees ees2 |
-  ees4 ees ees2 |
-  ees4 g8 f ees4 f8 f |
-  
-  bes,8 bes4. d2\rest |
-  ees4 ees8 f g4. g,8 |
-  aes4 c ees ees8 ees |
-  bes4 bes8 bes bes4. bes8 |
-  ees ees4. d2\rest \bar"|."
+  d d8 d c4 c8 c |
+  g g a a bes4\fermata bes8 bes |
+  a16 f8. f'16 f8. bes,4 a8 f |
+  \tieSolid
+  c'2 f~ |
+  f4 \bar"|."
 }
 bassWords = \lyricmode {
 }
@@ -317,8 +283,8 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Dreaming of Home and Mother"}}
-  composer = \markup\oldStyleNum"John P. Ordway (1824–1880)"
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Loch Lomond"}}
+  composer = \markup\oldStyleNum"Scottish Folk Song"
   tagline = ""
 }}
 

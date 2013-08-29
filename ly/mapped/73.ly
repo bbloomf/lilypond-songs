@@ -13,6 +13,11 @@
     #'((basic-distance . 0)
        (minimum-distance . 0)
        (padding . -3)
+       (stretchability . 150))
+  score-markup-spacing =
+    #'((basic-distance . 0)
+       (minimum-distance . 0)
+       (padding . 0)
        (stretchability . 100))
   ragged-last-bottom = ##f
   ragged-bottom = ##f
@@ -21,7 +26,7 @@
   outer-margin = 0.75\in
   top-margin = 0.26\in
   bottom-margin = 0.25\in
-  first-page-number = #51
+  first-page-number = #73
   print-first-page-number = ##t
   headerLine = ""
   oddHeaderMarkup = \markup\fill-line{
@@ -49,65 +54,72 @@ global = {
   %\set midiInstrument = "recorder"
   \autoBeamOff
   \override DynamicTextSpanner #'style = #'none
-  \tieDashed
 }
 
 sopMusic = \relative c' {
-	\partial 8 |
-  c8 |
-  f4 f8. g16 a4. f8 |
-  g8 a8 g8 f d4. c16~ c |
-  f4 f8. e16 f4 a16 c8. |
-  d2 c4. c8 |
+	f4 f8 g a4 a8 bes |
+  c4 d8 c a4 b4\rest |
+  c bes8 a g4 b\rest |
+  bes a8 g f4 b\rest |
   
-  d4 d8. c16 a4 a8 c |
-  bes16 a8. g f16 d4.\fermata c16[ d] |
-  f4 a16 c8. d4 c8 a |
-  g2 f2\fermata | \break
+  f4 f8 g a4 a8 bes |
+  c4 d8 c a4 b\rest |
+  c4 bes8 a g4 a8.\fermata g16 |
+  f2 b\rest |
   
+  c4 bes8 a g4 c,8 c |
+  bes'4 a8 g f4 b\rest |
+  c bes8 a g4 c,8 c |
+  bes'4 a8 g f4 b\rest |
   
-  f4 f8. g16 a4. g16 f |
-  g8. a16 g8 f d4. b'8\rest |
-  f4 f8. e16 f16 f8. a8 c |
-  d2 c2 |
-  
-  d4 d8. c16 a4 a8 c |
-  bes16( a8.) g8. f16 d4.\fermata c16[ d] |
-  f4 a16 c8. d4 c8 a |
-  \tieSolid g2 f~ |
-  f4 \bar"|."
+  f4 f8 g a4 a8 bes |
+  c4 d8 c a4 b\rest |
+  c\p bes8 a g4 a8.\fermata g16 |
+  f2 b\rest \bar"|."
 }
 sopWords = \lyricmode {
-  \set ignoreMelismata = ##t
   \set stanza = #"1. "
-	Come o -- ver the hills, my bon -- nie I -- rish lass,
-  Come _ o -- ver the hills to your dar -- ling. ""
-  You choose the rose, love, and I -- ’ll make the vow,
-  And _ I’ll be your true love for -- ev -- er.
+	Tell me the tales that to me were so dear,
+  Long, long a -- go,
+  Long, long a -- go;
   
-  \unset ignoreMelismata
-  Red is the rose that in yon -- der gar -- den grows;
-  Fair is the lil -- y of the val -- ley;
-  Clear is the wa -- ter that flows from the Boyne
-  But my love is fair -- er than an -- y. __
+  Sing me the songs I de -- light -- ed to hear,
+  Long, long a -- go, long a -- go.
+  
+  Now you are come, all my grief is re -- moved,
+  Let me for -- get that so long you have roved,
+  Let me be -- lieve that you love as you loved,
+  Long, long a -- go, long -- a -- go.
 }
 
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
-  \set ignoreMelismata = ##t
-  ’Twas down by Kil -- lar -- ney’s green woods that we strayed
-  When the moon and the stars they were shin -- ing.
-  The moon shone its rays on her locks of gold -- en hair
-  And she swore she’d be my love for -- ev -- er.
+  Do you re -- mem -- ber the path where we met,
+  Long, long a -- go,
+  Long, long a -- go?
+  
+  Ah, yes, you told me you ne’er would for -- get,
+  Long, long a -- go, long -- a -- go.
+  
+  Then, to all oth -- ers my smile you pre -- ferr’d,
+  Love, when you spoke, gave a charm to each word,
+  Still my heart  trea -- sures the prais -- es I heard,
+  Long, long a -- go, long a -- go.
 }
 
 sopWordsIII = \lyricmode {
-  \set ignoreMelismata = ##t
   \set stanza = #"3. "
-  It’s not for the part -- ing that my sis -- ter pains;
-  It’s __ _ not for the grief of my moth -- er.
-  ’Tis all for the loss of my bon -- nie I -- rish lass
-  That _ my heart is break -- ing for -- ev -- er.
+  Though by your kind -- ness my fond hopes were raised,
+  Long, long a -- go,
+  Long, long a -- go;
+  
+  You by more el -- o -- quent lips have been praised,
+  Long, long a -- go, long a -- go.
+  
+  But by long ab -- sence your truth has been tried,
+  Still to your ac -- cents I lis -- ten with pride,
+  Blest as I was when I sat by your side,
+  Long, long a -- go, long a -- go.
 }
 
 sopWordsIV = \lyricmode {
@@ -119,27 +131,25 @@ sopWordsV = \lyricmode {
 }
 
 altoMusic = \relative c' {
-  c8 |
-  c4 c8. e16 f4. f8 |
-  d8 d d8 d bes4. c16~ c |
-  c4 c8. e16 d4 ees16 ees8. |
-  d4( f) e4. e8 |
+  f4 f8 e f4 f8 g |
+  a4 bes8 a f4 s |
+  a g8 f e4 s |
+  f f8 e f4 s |
   
-  f4 f8. f16 e4 e8 e |
-  d16 d8. c c16 bes4. bes16[ d] |
-  d4 e16 e8. f4 f8 f |
-  e2 f2 |
+  c c8 e f4 f8 g |
+  a4 bes8 a f4 s |
+  f f8 f e4 e8. e16 |
+  f2 s |
   
-  c4 d8. d16 e4. c16 c |
-  d8. d16 bes8 bes bes4. s8 |
-  c4 d8. d16 d d8. f8 f |
-  f4( e) f2 |
+  a4 g8 f e4 c8 c |
+  e4 f8 e f4 s |
+  a g8 f e4 c8 c |
+  e4 f8 e f4 s |
   
-  f4 f8. f16 e4 e8 e |
-  d4 c8. c16 bes4. c8 |
-  c4 f16 f8. f4 f8 f |
-  \tieSolid e2 f2~ |
-  f4 \bar"|."
+  c4 c8 e f4 f8 g |
+  a4 bes8 a f4 s |
+  a4 g8 f e4 e8. e16 |
+  f2 s \bar"|."
 }
 altoWords = \lyricmode {
 }
@@ -162,27 +172,25 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
-  a8 |
-  a4 a8. bes16 c4. a8 |
-  bes8 bes bes8 bes f4. e16~ e |
-  a4 a8. a16 a4 f16 f8. |
-  f4( g) g4. a8 |
+  a4 a8 c c4 c8 c |
+  c4 c8 c c4 s |
+  c4 c8 c c4 s |
+  d4 c8 bes a4 s |
   
-  a4 a8. a16 a4 a8 a |
-  g16 g8. f f16 f4. e16[ bes'] |
-  a4 a16 a8. bes4 f8 f |
-  bes2 a |
+  a a8 c c4 c8 c |
+  c4 c8 c c4 s |
+  a d8 c bes4 c8. bes16 |
+  a2 s |
   
-  a4 a8. a16 a4. a16 a |
-  f8. f16 g8 g f4. s8 |
-  f4 a8. a16 a a8. c8 a |
-  bes2 a |
+  c4 c8 c c4 g8 g |
+  c4 c8 bes a4 s |
+  c4 c8 c c4 g8 g |
+  c4 c8 c16[ bes] a4 s |
   
-  a4 a8. a16 a4 a8 a |
-  g4 f8. f16 f4. g8 |
-  f4 c'16 a8. bes4 f8 c' |
-  \tieSolid bes2 a~ |
-  a4 \bar"|."
+  a4 a8 c c4 c8 c |
+  c4 c8 c c4 s |
+  c c8 c c4 c8. bes16 |
+  a2 s \bar"|."
 }
 
 tenorWords = \lyricmode {
@@ -195,27 +203,25 @@ tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  f,8 |
-  f4 f8. f16 f4. f8 |
-  bes,8 bes bes8 bes bes4. c16~ c |
-  f4 f8. f16 d4 c16 c8. |
-  bes4( g) c4. a8 |
+  f,4 f8 c f4 f8 f |
+  f4 f8 f f4 d\rest |
+  c e8 f c4 d\rest |
+  c c8 c f4 d\rest |
   
-  d4 d8. d16 c4 c8 c |
-  g16 g8. a a16 bes4.\fermata c16[ c] |
-  d4 c16 c8. bes4 a8 a |
-  c2 f\fermata |
+  f f8 c c4 f8 f |
+  f4 f8 f f4 d\rest |
+  f f8 f c4 c8.\fermata c16 |
+  f2 d\rest |
   
-  f4 d8. d16 c4. a16 a |
-  bes8. bes16 g8 g bes4. d8\rest |
-  a4 d8. d16 d d8. f8 f |
-  bes,4( g) f2 |
+  c4 e8 f c4 e8 e |
+  g4 f8 c f4 d\rest |
+  f e8 f c4 e8 e |
+  g4 f8 c f4 d\rest |
   
-  d'4 d8. d16 c4 c8 c |
-  g4 a8. a16 bes4.\fermata bes8 |
-  a4 f'16 f8. bes,4 a8 f |
-  \tieSolid c'2 f~ |
-  f4 \bar"|."
+  f f8 c f4 f8 f |
+  f4 f8 f f4 d\rest |
+  f e8 f c4 c8.\fermata c16 |
+  f2 d\rest \bar"|."
 }
 bassWords = \lyricmode {
 }
@@ -273,8 +279,8 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Red is the Rose"}}
-  composer = \markup\oldStyleNum"Irish Folk Song"
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Long, Long Ago"}}
+  composer = \markup\oldStyleNum"Thomas Haynes Bayly (1797–1839)"
   tagline = ""
 }}
 

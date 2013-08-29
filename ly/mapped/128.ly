@@ -42,156 +42,171 @@
 }
 #(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
 global = {
-  \key g \major
-  \time 4/4
+  \key a \major
+  \time 2/4
+  \tempo Andante
   \dynamicUp
   %\set crescendoSpanner = #'dashed-line
   %\set midiInstrument = "recorder"
   \autoBeamOff
   \override DynamicTextSpanner #'style = #'none
-  \slurDashed
-  \tieDashed
 }
 
 sopMusic = \relative c' {
-  \partial 4
-  \repeat volta 2{
-    g'4 |
-    g g a g8( a) |
-    b2 b4\rest b8~ b |
-    b4 a8( g) a4 b8 c |
-    b2 b4\rest g8 g |
-    
-    e4 g c d8 e |
-    d4. b8 g4~ g8 g |
-    g4 bes8 bes cis4 e |
-    d2. d8~ d |
-    a4 c b\cresc d8\! d |
-    
-    a4 c b( e8) e |
-    a,4 a8~ a a4 b8[ cis] |
-    d2 b4\rest a8\p a |
-    a4 gis8( a) cis4 b8( a) |
-    a2. fis4 |
-    
-    g4 fis8 g b4 a8[ g] |
-    fis2 b4\rest a8~ a |
-    d4 d8~\cresc d\! d4 c8 b |
-    c4 c8 c c4 b8 a |
-    
-    b4 a8( g) g4^\markup\italic"rit." fis8[ g] |
-    a2. b4\rest^\markup\italic"a tempo" |
-    b8 ais b4 b d, |
-    a'2 b4\rest d, |
-    a'4 a8 b c4 b8[ a] |
-    
-    b2. g4 |
-    e'4\cresc fis8\~ e d4 g, |
-    c8 c d[ c] b2 |
-    b4\f a8^\markup\italic"rall." g a4. g8 |
-    g2.
+	a'8 a16 b cis8 a |
+  fis b4. |
+  gis8 gis16 gis a8 b |
+  e,4 b'\rest |
+  a8 a16 b cis8 a |
+  fis b4 a8 |
+  
+  a16[ gis] fis16[ e] e8 fis16[ gis] |
+  a4 b8\rest e,^\markup\smallCapsOldStyle"Zerline" |
+  a8. b16 cis8 a |
+  fis b4 a8 |
+  gis8. gis16 a8 b |
+  e,4 b'8\rest e, |
+  
+  a8. b16 cis8 a |
+  fis b4 a8 |
+  a16[ gis] fis[ e] e8 fis16[ gis] |
+  a[ cis]( e4) b8 |
+  d16[ cis] b[ a] a8 cis16[ b] |
+  a4 b\rest |
+  
+  b8^\markup\smallCapsOldStyle"Don G." gis16 e cis'8 e16[ cis] |
+  b8.[ gis16] b8 b^\markup\smallCapsOldStyle"Zer." |
+  ais16[ b] cis[ b] ais[ b] a[ fis] |
+  gis8 gis b4\rest |
+  b8^\markup\smallCapsOldStyle"Don G." gis16 e cis'8 e16[ cis] |
+  
+  b8.[ gis16] b8 b~^\markup\smallCapsOldStyle"Zer." |
+  b b16 b ais[ b] a[ b] |
+  gis[ b] b b ais[ b] a[ b] |
+  gis[ b] b b ais[ b] a[ b] |
+  gis8 e b'^\markup\smallCapsOldStyle"Don G." gis |
+  
+  d'4 b8 b\rest |
+  a a16 b cis8 a |
+  fis b b\rest a^\markup\smallCapsOldStyle"Zer." |
+  gis8. gis16 a8 b |
+  b e, b'4\rest |
+  a8^\markup\smallCapsOldStyle"Don G." a16 b cis8 a |
+  
+  %page2
+  d4 b8\rest d^\markup\smallCapsOldStyle"Zer." |
+  \acciaccatura d16 gis,8. gis16 gis8 a16[ b] |
+  a16 a^\markup\smallCapsOldStyle"Don G." a b cis8 a |
+  d4 fis~^\markup\smallCapsOldStyle"Zer." |
+  fis16[ gis,] gis gis gis32[ a b cis]( d16) b |
+  
+  a4 b8\rest e |
+  dis16[ e] fis[ e] dis[ e] d[ b] |
+  cis8 cis b\rest e~ |
+  e e16 e dis[ e] d[ e] |
+  
+  e[ cis] cis cis bis[ cis] b[ cis] |
+  cis[ a] a a gis[ a] g[ a] |
+  a[ fis] fis8 b\rest d^\markup\smallCapsOldStyle"Don G." |
+  gis,4 b8\rest e |
+  a,4 b8\rest fis'^\markup\smallCapsOldStyle"Zer." |
+  \acciaccatura e16 d4\fermata b8\rest\fermata \break
+  
+  \time 6/8 \tempo Allegro \partial 8
+  \bar"||:"
+  \repeat volta 2 {
+    b8^\markup\smallCapsOldStyle"Both" |
+    cis4 b8 cis4 d8 |
+    b e4~ e b8 |
+    cis4 b8 cis4 d8 |
+    b8 e4~ e b8 |
+    cis4. d8[ fis d] |
+    cis4. b |
   }
-  e4 |
+  \alternative {
+    {
+      \partial 8*5
+      a4. b4\rest
+    }
+    {
+      a4 b8\rest a4.^\markup\smallCapsOldStyle"Don G." |
+    }
+  }
+  d8 b4\rest e4.^\markup\smallCapsOldStyle"Zer." |
+  cis8 b4\rest a4. |
+  fis'8 b,4\rest e,4.^\markup\smallCapsOldStyle"Don G." |
+  a8 b4\rest b\rest e8^\markup\smallCapsOldStyle"Both" |
   
-  e e g\cresc c8\! c |
-  e2. b4\rest |
-  e4 d8 c g'4. d8 |
-  e2. c8\f c |
-  f4. f8 e4 e8 e |
-  
-  dis4. dis8 e4 b8\rest e |
-  e4 dis8 cis dis4. b8 |
-  e2. b8 b |
-  b4\dim b\! b a8 b |
-  c2. c4 |
-  
-  b b b a8[ b] |
-  c2. c8 c |
-  b4^\markup\italic"rit." b b b8 b |
-  b4. b8 b4 b8 b |
-  b4 fis g e |
-  b'1 |
-  
-  b8^\markup{\dynamic"p" \italic"Slower"} ais8 b4 b d, |
-  a'2. d,4 |
-  a' a8 b c4 b8[ a] |
-  b2. g4 |
-  e'4 fis8 e d4 g, |
-  c d8[ c] b2 |
-  
-  b4 a8 g b4 a8[ g] |
-  a2. b4\rest |
-  b8 ais b4 b d |
-  a2. d,4 |
-  a'4 a8 b c4 b8[ a] |
-  
-  b2. g4\cresc |
-  e'8[\! g] fis^\markup\italic"rit." e d4 g, |
-  c8[ e] d[ c] b2 |
-  b2\dim a4\! g |
-  a2. g4 |
-  g1 \bar"|."
+  cis4 cis8 b4 b8 |
+  cis4 b8\rest b4\rest e8 |
+  cis4 cis8 b4 b8 |
+  cis4. e |
+  cis8.[ d16] cis8 b8.[ a16] b8 |
+  a4 b8\rest b4\rest b8\rest \bar"|."
 }
 sopWords = \lyricmode {
-  \set stanza = #"1. "
-  \set ignoreMelismata = ##t
-	A maid -- en sat at her door,
-  And _ sighed as she looked at the sea;
-  “I’ve a dear, dear love, on a dis -- tant shore, _
-  A -- dy -- ing for news of me,
-  I’ve a dear, dear love, on a dis -- tant shore, _
-  A -- dy -- ing for news of _ me.”
-  And the wind was _ lis -- ten -- ing near,
-  And saw that the maid was _ fair,
-  So the kind wind _ whis -- pered a hope in her ear,
-  As he played with her bright brown _ hair:
-  “Be of good cheer, sweet heart,
-  I fly to that dis -- tant _ shore,
-  Thy lov -- er I’ll tell thou lov -- est him _ well,
-  Ev -- er and ev -- er more.”
+  \set stanza = \markup\smallCapsOldStyle"Don G."
+	“Nay, bid me not re -- sign, love,
+  Cold -- ly the hand I press,
+  Oh! say thou wilt be mine, love,
+  Breathe but that one word, ‘Yes.’”
   
-  \set stanza = #" 3."
-  \unset ignoreMelismata
-  The wind tore o -- ver the wave,
-  Scat -- ter -- ing o -- cean spray,
-  But a -- lack! the lov -- er he flew to save,
-  He met on his home -- ward way,
-  And his good ship sank in the gale,
-  And ev -- ’ry soul be -- side,
-  And the wind came sob -- bing to tell the tale,
-  And the maid -- en drooped and died.
-  Be of good cheer, poor heart,
-  At rest on a dis -- tant shore,
-  Where thou and thy love walk hand in hand,
-  Ev -- er and ev -- er more!
-  Be of good cheer, dear heart,
-  At rest on a dis -- tant shore,
-  Where thou and thy love go hand in hand,
-  Ev -- er and ev -- er more!
+  “I would and yet I would not,
+  I feel my heart mis -- give,
+  Shouldst thou prove false, I could not
+  Be -- come thy scorn and live,
+  Be -- come thy scorn and live.”
+  
+  “Come then, oh, come then, dear -- est.”
+  
+  “Yet should thy fond -- ness al -- ter!”
+  
+  “Nay, love, in vain thou fear -- est.”
+  
+  “Still, still this heart will fal -- ter,
+  this heart will fal -- ter,
+  this heart will fal -- ter.”
+  
+  “Come then, come then!
+  Nay bid me not re -- sign, love.”
+  
+  “I would, and yet I would not.”
+  
+  “Oh, say thou wilt be mine.”
+  
+  “I feel my heart mis -- give,”
+  
+  “Nay, love, in vain thou fear’st,”
+  
+  “I feel my heart mis -- give,
+  Yet should thy fond -- ness al -- ter,
+  Still, still this heart will fal -- ter,
+  this heart will fal -- ter,
+  this heart will fal -- ter,”
+  
+  “Oh, come, then come,”
+  
+  “I come.”
+  
+  Yes, hand and heart u -- nit -- ing,
+  Each oth -- er’s vows re -- quit -- ing,
+  Our joy no bounds shall know, know,
+  
+  Oh, come,
+  
+  I come, I come.
+  
+  Oh, come!
+  
+  Our joy no bounds shall know,
+  Our joy no bounds shall know,
+  Our joy no bounds shall know.
 }
 
 sopWordsII = \lyricmode {
-  \set stanza = #"2. "
-  \set ignoreMelismata = ##t
-  The maid -- en dried her _ eyes,
-  And a smile shone _ o -- ver her face,
-  For she saw bright hope in the chang -- ing skies,
-  As the wind flew _ off a -- pace,
-  She _ saw bright hope in the chang -- ing skies,
-  As the wind flew _ off a -- _ pace.
-  And she bade the kind wind good _ speed, ""
-  “Hur -- ry, O wind,” said _ she,
-  “Oh, _ say that I love him in -- deed, and in -- deed.”
-  And the wind cried _ o -- ver the sea,
-  “Be of good cheer, sweet heart,
-  I fly to that dis -- tant _ shore,
-  Thy lov -- er I’ll tell thou % lov -- est him _ well,
-  % Ev -- er and ev -- er more.”
-  
 }
 
 sopWordsIII = \lyricmode {
-  \set stanza = #"3. "
 }
 
 sopWordsIV = \lyricmode {
@@ -203,82 +218,94 @@ sopWordsV = \lyricmode {
 }
 
 altoMusic = \relative c' {
-  d4 |
-  d d fis e8( fis) |
-  g2 s4 g8~ g |
-  g4 fis8( e) d4 d8 d |
-  d2 s4 d8 d |
+  cis8 cis16 e e8 e |
+  d fis4. |
+  e8 e16 e fis8 dis |
+  e4 s |
+  cis8 cis16 e e8 e |
+  d fis4 fis8 |
   
-  c4 e g g8 g |
-  g4. g8 d4~ d8 d |
-  e4 e8 e g4 g |
-  g2. g8~ g |
-  fis4 a g g8 g |
+  e d d d |
+  cis4 s8 cis |
+  cis8. e16 e8 e |
+  d fis4 fis8 |
+  e8. e16 fis8 dis |
+  e4 s8 d |
   
-  fis4 a g~ g8 g |
-  fis4 fis8~ fis e4 g |
-  fis2 s4 fis8 fis |
-  g4 e8~ e g4 g8~ g |
-  fis2. d4 |
+  cis8. e16 e8 e |
+  d fis4 fis8 |
+  e d d d |
+  cis16[( e] a4) e8 |
+  e e e gis |
+  a4 s |
   
-  cis4 cis8 cis cis4 e |
-  d2 s4 fis8~ fis |
-  g4 g8~ g g4 g8 g |
-  e4 g8 g fis4 fis8 fis |
+  e8 e16 e e8 e |
+  e4 e8 e |
+  d d d d |
+  e e s4 |
+  e8 e16 e e8 e |
   
-  g4 d8~ d e4 dis8( e) |
-  fis2. s4 |
-  g8 fis g4 g d |
-  fis2 s4 d |
-  fis fis8 fis fis4 fis |
-  
-  g2. g4 |
-  g g8 g g4 g |
-  g8 g fis4 g2 |
-  g4 e8 e fis4. d8 |
-  d2.
-  
-  
-  c4 |
-  
-  c4 c e e8 e |
-  g2. s4 |
-  g g8 g b4. g8 |
-  g2. e8 e |
-  a4. a8 g4 g8 g |
-  
-  fis4. fis8 g4 s8 g |
-  a4 a8 a a4. a8 |
-  gis2. e8 e |
-  e4 e e e8 e |
-  e2. e4 |
-  
+  e4 e8 e~ |
+  e e16 e fis8 dis |
+  e e16 e fis8 dis |
+  e e16 e fis8 dis |
   e e e e |
-  e2. e8 e |
-  e4 e dis dis8 dis |
-  fis4. fis8 e4 e8 e |
-  dis4 dis e e |
-  dis1 |
   
-  d?8 cis d4 d b |
-  d2. d4 |
-  fis fis8 g a4 g8[ fis] |
-  g2. g4 |
-  g g8 g g4 g |
-  g fis g2 |
+  gis4 gis8 s |
+  e cis16 e e8 e |
+  d fis s dis |
+  e8. e16 fis8 dis |
+  e e s4 |
+  cis8 cis16 e e8 e |
   
-  g4 fis8 e e4 e |
-  fis2. s4 |
-  g8 fis g4 g g |
-  fis2. d4 |
-  fis fis8 g a4 g8[ fis] |
+  %page2
+  a4 s8 fis |
+  e8. e16 e8 e |
+  e16 e cis e e8 e |
+  fis4 a( |
+  gis8) e16 e e8( gis16) gis |
   
-  g2. g4 |
-  g4 g8 g g4 g |
-  g fis g2 |
-  g e4 e |
-  fis2. d4 |
-  g1 \bar"|."
+  a4 s8 a |
+  gis gis gis gis |
+  a a s a( |
+  gis) gis16 gis gis8 gis |
+  
+  a8 e16 e eis8 eis |
+  fis fis16 fis e8 e |
+  d d s fis |
+  e4 s8 e |
+  fis4 s8 a |
+  gis4 s8 |
+  
+  \time 6/8
+  \repeat volta 2 {
+    gis8 |
+    a4 gis8 a4 b8 |
+    gis gis4~ gis gis8 |
+    a4 gis8 a4 b8 |
+    gis gis4~ gis gis8 |
+    a4. a |
+    a gis |
+  }
+  \alternative {
+    {
+      a s4 |
+    }
+    {
+      a4 s8 fis4. |
+    }
+  }
+  fis8 s4 gis4. |
+  a8 s4 g4. |
+  fis8 s4 d4. |
+  cis8 s4 s a'8 |
+  
+  a4 a8 gis4 gis8 |
+  a4 s8 s4 a8 |
+  a4 a8 gis4 gis8 |
+  a4. a |
+  a8.[ b16] a8 gis8.[ fis16] gis8 |
+  a4 s2 \bar"|."
 }
 altoWords = \lyricmode {
 }
@@ -301,81 +328,92 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
-  b4 |
-  b b d d8~ d |
-  d2 s4 d8~ d |
-  e4 b8~ b fis4 g8 a |
-  g2 s4 b8 b |
+  a8 a16 gis a8 a |
+  a b4. |
+  b8 b16 b b8 b |
+  gis4 s |
+  a8 a16 gis a8 a |
+  a a4 b8 |
   
-  c4 c c b8 c |
-  b4. d8 b4~ b8 b |
-  bes4 cis8~ cis bes4 bes |
-  b?2. b8~ b |
-  d4 d d b8 b |
+  b a16[ gis] gis8 a16[ b] |
+  a4 s8 a |
+  a8. gis16 a8 a |
+  a b4 b8 |
+  b8. b16 b8 b |
+  gis4 s8 gis |
   
-  d4 d d( b8) b |
-  d4 d8~ d cis4 d8[ e] |
-  d2 s4 d8 d |
-  cis4 cis8~ cis e4 d8[ cis] |
-  d2. a4 |
+  a8. gis16 a8 a |
+  a b4 b8 |
+  b gis gis a16[ b] |
+  a8( cis4) gis8 |
+  a a a d |
+  cis4 s |
   
-  a4 a8 a a4 a |
-  a2 s4 d8~ d |
-  b4 b8~ b b4 b8 b |
-  a4 e'8 e d4 d8 d |
+  gis8 b16 gis a8 cis16[ a] |
+  gis8.[ b16] gis8 gis |
+  fis a fis b |
+  b b s4 |
+  gis8 b16 gis a8 cis16[ a] |
   
-  d4 c8( b) b4 b8~ b |
-  d2. s4 |
-  d8 cis d4 d b4 |
-  d2 s4 fis, |
-  c' c8 b a4 d |
+  gis8.[ b16] gis8 gis~ |
+  gis gis16 gis b8 b |
+  b16[ gis] gis gis b8 b |
+  b16[ gis] gis gis b8 b |
+  b gis gis b |
   
-  d2. b4 |
-  c d8 c b4 b |
-  a8 a a[ d] d2 |
-  e4 b8 b c4. b8 |
-  b2.
+  b4 d8 s |
+  cis a16 gis a8 a |
+  a b s b |
+  b8. b16 b8 a |
+  gis gis s4 |
+  a8 a16 gis a8 cis |
   
+  %page2 (tenor)
+  d4 s8 d |
+  b8. b16 b8 cis16[ d] |
+  cis cis a gis a8 a |
+  a4 d~ |
+  d8 d16 d b8~ b16 d |
   
-  g4 |
+  cis4 s8 cis |
+  b b b e |
+  e e s cis( b) b16 b b8 b |
   
-  g g c g8 g |
-  c2. s4 |
-  b4 b8 b d4. b8 |
-  c2. g8 g |
-  c4. c8 c4 c8 c |
+  cis a16 a gis8 gis |
+  a cis16 cis a8 a |
+  fis a s d |
+  b4 s8 d |
+  cis4 s8 d |
+  b4 s8 \bar"||:"
   
-  c4. c8 c4 s8 c |
-  fis,4 fis8 fis b4. b8 |
-  b2. gis8 gis 
-  gis4 gis gis gis8 gis |
-  a2. a4 |
+  \time 6/8
+  \repeat volta 2 {
+    e8 |
+    e4 e8 e4 e8 |
+    e b4~ b e8 |
+    e4 e8 e4 e8 |
+    e b4~ b e8 |
+    e4. d |
+    e d |
+  }
+  \alternative {
+    {
+      cis s4 |
+    }
+    {
+      cis4 s8 d4. |
+    }
+  }
+  a8 s4 d4. |
+  cis8 s4 cis4. |
+  d8 s4 gis,4. |
+  a8 s4 s cis8 |
   
-  gis4 gis gis gis |
-  a2. a8 a |
-  g4 g a a8 a |
-  a4. a8 g4 g8 g |
-  a4 b b g |
-  fis1 |
-  
-  g8 g g4 g g |
-  fis2. fis4 |
-  d'4 d8 d d4 d |
-  d2. b4 |
-  c4 c8 c b4 b |
-  a4 a8[ d] d2 |
-  
-  e4 b8 b cis4 cis |
-  d2. s4 |
-  d8 cis d4 d b |
-  d2. fis,4 |
-  d'4 d8 d d4 d |
-  
-  d2. b4 c8[ e] d8 c b4 b |
-  c4 d d2 |
-  e2 b4 b |
-  c2. b4 |
-  b1 \bar"|."
+  e4 e8 e4 e8 |
+  e4 s4. cis8 |
+  e4 e8 e4 e8 e4. cis |
+  e4 e8 d4 d8 |
+  cis4 s2 \bar"|."
 }
 
 tenorWords = \lyricmode {
@@ -388,82 +426,92 @@ tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  g4 |
-  g g d d8~ d |
-  g2 d4\rest g8~ g |
-  e4 e8~ e d4 d8 d |
-  g,2 d'4\rest g8 g |
+  a,8 a16 e' a8 cis, |
+  d dis4. |
+  e8 e16 e dis8 b |
+  e4 d\rest |
+  a8 a16 e' a8 cis, |
+  d d4 d8 |
   
-  c,4 c e d8 c |
-  g'4. g8 g4~ g8 g |
-  g4 g8~ g g4 g |
-  g2. g8~ g |
-  d4 fis g g8 g |
+  e e e e |
+  a,4 d8\rest a |
+  a8. e'16 a8 cis, |
+  d d4 dis8 |
+  e8. e16 dis8 b |
+  e4 d8\rest e |
   
-  d4 fis g~ g8 g |
-  a4 a8~ a a4 a |
-  d,2 d4\rest d8 d |
-  a'4 a8~ a a4 a |
-  d,2. d4 |
+  a,8. e'16 a8 cis, |
+  d dis4 dis8 |
+  e e e e |
+  a,( a'4) e8 |
+  a, cis cis e |
+  a4 d,\rest |
   
-  e4 e8 e a,4 cis |
-  d2 d4\rest d8~ d |
-  g4 g8~ g e4 e8 e |
-  a4 a8 a d,4 d8 d |
+  e8 e16 e e8 e |
+  e4 e8 e |
+  b b b b |
+  e e d4\rest |
+  e8 e16 e e8 e |
   
-  g4 g8~ g e4 e8~ e |
-  d2. d4\rest |
-  g8 g g4 g g |
-  d2 d4\rest d4 |
-  d d8 d d4 d |
+  e4 e8 e~ |
+  e e16 e dis8 b |
+  e e16 e dis8 b |
+  e e16 e dis8 b |
+  e e e e |
+  e4 e8 d\rest |
+  a' a,16 e' a8 cis, |
+  d dis d\rest b |
+  e8. e16 dis8 b |
+  e e d4\rest |
+  a8 a16 e' a8 gis |
   
-  g2. g4 |
-  c, c8 c g'4 g |
-  e8 e d4 g2 |
-  e4 e8 e d4. d8 |
-  g2.
+  %page2 (bass)
+  fis4 d8\rest d |
+  e8. e16 e8 e |
+  a16 a a, e' a8 cis, |
+  d4 d( |
+  e8) e16 e e8~ e16 e |
   
+  a4 d,8\rest a' |
+  e e e e |
+  a a d,\rest a'( e) e16 e e8 e |
   
-  c,4 |
+  a a,16 a cis8 cis |
+  fis fis16 fis cis8 cis |
+  d d d\rest d |
+  e4 d8\rest e |
+  fis4 d8\rest d |
+  e4\fermata d8\rest \fermata \bar"||:"
   
-  c4 c c c8 c |
-  c2. d4\rest |
-  g4 g8 g g4. g8 |
-  c,2. c8 c |
-  c4. c8 c4 c8 c |
+  \time 6/8
+  \repeat volta 2 {
+    e8 |
+    a4 e8 a4 gis8 |
+    e e4~ e e8 |
+    a4 e8 a4 gis8 |
+    e e4~ e e8 |
+    a4. fis8[ d fis] |
+    e4. e |
+  }
+  \alternative {
+    {
+      a d,4\rest |
+    }
+    {
+      a'4 d,8\rest d4. |
+    }
+  }
+  d8 d4\rest e4. |
+  a8 d,4\rest a'4. |
+  d,8 d4\rest e4. |
+  a,8 d4\rest d\rest a'8 |
   
-  c4. c8 c4 d8\rest c |
-  b4 b8 b fis'4. fis8 |
-  e2. e8 e |
-  e4 e e e8 e |
-  a,2. a4 |
-  
-  e' e e e |
-  a,2. a8 a |
-  e'4 e fis fis8 fis |
-  dis4. dis8 e4 e8 e |
-  fis4 b, e e |
-  b1 |
-  
-  g8 g g4 g g |
-  d'2. d4 |
-  d d8 d fis4 d |
-  g2. g4 |
-  c,4 e8 e g4 g |
-  e d g2 |
-  
-  e4 e8 e a4 a |
-  d,2. d4\rest |
-  g8 g g4 g g |
-  d2. d4 |
-  d d8 d d4 d |
-  
-  g2. g4 |
-  c, c8 c g'4 g |
-  a d, g2 |
-  e e4 e |
-  d2. d4 |
-  g1 \bar"|."
+  a4 a8 e4 e8 |
+  a4 d,8\rest d4\rest a'8 |
+  a4 a8 e4 e8 |
+  a4. a |
+  e4 e8 e4 e8 |
+  a4 d,8\rest d4\rest d8\rest \bar"|."
 }
 bassWords = \lyricmode {
 }
@@ -496,11 +544,10 @@ pianoLH = \relative c' {
   >>
 %    \new PianoStaff << \new Staff { \new Voice { \pianoRH } } \new Staff { \clef "bass" \pianoLH } >>
   >>
-  
   \layout {
     \context {
       \Lyrics
-      \override LyricText #'font-size = #1.1
+      \override LyricText #'font-size = #1.3
       \override VerticalAxisGroup #'staff-affinity = #0
       \override LyricText #'X-offset = #center-on-word
     }
@@ -521,10 +568,12 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"The Distant Shore"}}
-  poet = \markup\oldStyleNum"W. S. Gilbert (1836–1911)"
-  composer = \markup\oldStyleNum"Arthur Sullivan (1842–1900)"
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"La ci darem la mano"}}
+  composer = \markup\oldStyleNum"Wolfgang Amadeus Mozart (1756–1791)"
+  arranger = \markup\oldStyleNum{"From" \italic"Don Giovanni"}
   tagline = ""
 }}
+
+
 
 

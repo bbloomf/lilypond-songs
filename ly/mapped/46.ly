@@ -377,7 +377,7 @@ sopWordsV = \lyricmode {
 altoMusic = \relative c' {
   g'8 |
   e8. e16 g8 g g b |
-  g g g g4 \bar""\break
+  g g g b4 \bar""\break
   
   \tieDashed
   g16~ g |
@@ -417,7 +417,7 @@ altoWordsVI = \lyricmode {
 tenorMusic = \relative c' {
   g8 |
   g8. g16 c8 d e f |
-  c e e f4
+  c e c f4
   
   \tieDashed
   f16~ f |
@@ -447,10 +447,10 @@ tenorWordsIII = \lyricmode {
 bassMusic = \relative c' {
   g8 |
   c,8. c16 e8 g g g |
-  c, c c b4
+  c, c e g4
   
   \tieDashed
-  g16~ g |
+  g,16~ g |
   a8. a16 a8 g( d') e |
   d fis d g4
   

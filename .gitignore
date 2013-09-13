@@ -3,3 +3,5 @@ lytemp
 .c9revisions
 *.pdf
 gh-pages
+*.sublime-project
+*.sublime-workspace

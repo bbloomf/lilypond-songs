@@ -1,5 +1,6 @@
 ﻿\version "2.14.2"
 \include "util.ly"
+%http://books.google.com/books?id=37BMAQAAIAAJ&pg=PA82&dq=%22Bride+Bells%22+songs&hl=en&sa=X&ei=OdQ4UsDdCbWs4AOo1YDQCA&ved=0CD4Q6AEwAQ#v=onepage&q=%22Bride%20Bells%22%20songs&f=false
 \header {
   title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Bride Bells"}}
   poet = \markup\oldStyleNum"Frederic Weatherly (1848–1929)"
@@ -188,7 +189,7 @@ sopWordsV = \lyricmode {
 altoMusic = \relative c' {
   s2. ees4 |
   ees c b b |
-  c4. c8 c4 c |
+  c4. c8 c4 ees |
   ees ees ees ees |
   ees2. ees4 |
   e g f f |

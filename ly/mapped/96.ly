@@ -630,9 +630,9 @@ global = {
 
 sopMusic = \relative c' {
 	a'4 e fis e |
-  a,1 \bar"||"
+  a,1 \bar"||" \mark"2"
   a'4 gis a b |
-  cis1 \bar"||"
+  cis1 \bar"||" \mark"3"
   cis4 b a gis |
   a1 \bar"|."
 }

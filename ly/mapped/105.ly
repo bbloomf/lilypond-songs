@@ -239,7 +239,7 @@ bassMusic = \relative c' {
   bes,2. bes8 bes |
   
   bes4 bes bes bes8 bes |
-  ees4 ees ees s8 ees |
+  ees4 ees ees d8\rest ees |
   f f f f f4 f|
   bes,2. bes8 bes |
   

@@ -275,7 +275,7 @@ tenorMusic = \relative c' {
     \tieDashed e cis8~ cis fis4 fis,8~ fis |
     
     %page 3
-    b8 e dis cis b[ a] << {\set midiInstrument = #"flute" \voiceOne \stemUp b'4\fermata | <gis e>} \\ \context Voice = "tenors" {\set midiInstrument = #"flute" \voiceTwo \stemDown gis,8[ fis]^\fermata |
+    b8 e dis cis b[ a] << {\set midiInstrument = #"flute" \voiceOne \stemUp b'4\fermata   <gis e>} \\ \context Voice = "tenors" {\set midiInstrument = #"flute" \voiceTwo \stemDown gis,8[ fis]^\fermata |
     e4}>> \oneVoice \stemNeutral <gis' e>4 q q8 q |
     q4 q q q |
     
@@ -295,8 +295,7 @@ tenorMusic = \relative c' {
     }
   }
   
-  <a cis>2 |
-  <a b,> |
+  <a cis>2 <a b,> |
   
   <gis cis,>2 d4\rest <gis b> |
   <a cis>2 <a b,> |
@@ -433,7 +432,6 @@ pianoLHend = \relative c' {
     \context {
       % Remove all empty staves
       \Staff \RemoveEmptyStaves \override VerticalAxisGroup #'remove-first = ##t
-      
       \override VerticalAxisGroup #'staff-staff-spacing =
       #'((basic-distance . 0)
          (minimum-distance . 0)

@@ -266,7 +266,7 @@ altoWordsVI = \lyricmode {
 tenorMusic = \relative c' {
   s2. ees,4 |
   aes aes des, des |
-  ees4. aes8 aes4 aes |
+  ees4. aes8 aes4 c |
   g g g g |
   aes2. aes4 |
   g c c aes |
@@ -293,7 +293,7 @@ tenorMusic = \relative c' {
   aes2. \bar"||"
   
   aes4 |
-  aes aes bes c |
+  aes aes bes bes |
   des aes bes4. bes8 |
   ges4 bes aes aes |
   

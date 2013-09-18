@@ -1,6 +1,7 @@
 ﻿\version "2.14.2"
 \include "util.ly"
 %http://books.google.com/books?id=37BMAQAAIAAJ&pg=PA82&dq=%22Bride+Bells%22+songs&hl=en&sa=X&ei=OdQ4UsDdCbWs4AOo1YDQCA&ved=0CD4Q6AEwAQ#v=onepage&q=%22Bride%20Bells%22%20songs&f=false
+%http://lcweb2.loc.gov/diglib/ihas/loc.natlib.ihas.100008090/pageturner.html
 \header {
   title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Bride Bells"}}
   poet = \markup\oldStyleNum"Frederic Weatherly (1848–1929)"
@@ -73,13 +74,9 @@ sopMusic = \relative c' {
   c2. c4 |
   c bes aes c |
   
-  \tieDashed
-  bes4. aes8 g4~ g8 g |
-  \tieSolid
+  bes4. aes8 g4 g8 g |
   f4 g aes bes |
-  \slurDashed
-  c2 d4( ees) |
-  \slurSolid
+  c2 d4 ees |
   bes8 g4. \acciaccatura g8 f4. ees8 |
   ees2. ees4 \bar"||"
   
@@ -165,9 +162,11 @@ sopWordsII = \lyricmode {
   \set stanza = #"3. "
   A year by seas, a year by lands,
   A year since then has died.
+  \set ignoreMelismata = ##t
   And El -- sie at the al -- tar stands,
-  Her sai -- lor at her side,
-  Her __ sai -- lor at her side,
+  With her sai -- lor at her side,
+  With her sai -- lor at her side,
+  \unset ignoreMelismata
   While Kling, lang, ling,
   Their bon -- nie bride bells gai -- ly ring,
   Kling, lang, ling,
@@ -194,13 +193,9 @@ altoMusic = \relative c' {
   ees2. ees4 |
   e g f f |
   
-  \tieDashed
-  f4. f8 ees4~ ees8 ees |
-  \tieSolid
+  f4. f8 ees4 ees8 ees |
   c4 e f ees |
-  \slurDashed
-  ees2 ees4( ees) |
-  \slurSolid
+  ees2 ees4 ees |
   g8 ees4. d ees8 |
   ees2. ees4 \bar"||"
   
@@ -225,7 +220,7 @@ altoMusic = \relative c' {
   ees4 ees c c |
   
   des2. c4 |
-  des f ges ges |
+  des f f f |
   des f ges ges |
   
   f f f f |
@@ -276,18 +271,14 @@ tenorMusic = \relative c' {
   aes2. aes4 |
   g c c aes |
   
-  \tieDashed
-  bes4. bes8 bes4~ bes8 bes |
-  \tieSolid
+  bes4. bes8 bes4 bes8 bes |
   aes4 c c g |
-  \slurDashed
-  aes2 fis4( fis) |
-  \slurSolid
+  aes2 fis4 fis |
   g8 bes4. aes g8 |
   g2. g4 \bar"||"
   
   aes2 f |
-  aes2. aes4 |
+  ees2. aes4 |
   aes g aes c |
   bes bes ees2 |
   c des |
@@ -316,7 +307,7 @@ tenorMusic = \relative c' {
   
   e2. g4 |
   aes2 f |
-  aes2. g4 |
+  ees2. g4 |
   aes g aes c |
   bes bes ees2 |
   c des |
@@ -348,13 +339,9 @@ bassMusic = \relative c' {
   aes,2. aes4 |
   c e f f |
   
-  \tieDashed
-  d4. d8 ees4~ ees8 ees |
-  \tieSolid
+  d4. d8 ees4 ees8 ees |
   aes4 g f ees |
-  \slurDashed
-  aes,2 a4( a) |
-  \slurSolid
+  aes,2 a4 a |
   bes8 bes4. bes ees8 |
   ees2. ees4 \bar"||"
   
@@ -379,8 +366,8 @@ bassMusic = \relative c' {
   ees4 ees aes, aes |
   
   des2. f4 |
-  bes, bes bes bes |
-  bes bes bes bes |
+  bes, bes ees ees |
+  bes bes ees ees |
   
   des4 bes bes bes |
   c2. c4 |

@@ -227,7 +227,7 @@ pianoLH = \relative c' {
 }
 
 \score {
-  <<
+  \new ChoirStaff <<
     \new Staff = "sopranos" \new Voice = "sopranos" { << \global \sopMusic >> }
     \new Staff = "altos" \new Voice = "altos" { << \clef "treble_8" \global \altoMusic >> }
     \new Lyrics \with { alignBelowContext = #"sopranos" } \lyricsto "sopranos" \sopWords

@@ -570,7 +570,6 @@ pianoLH = \relative c' {
 <<
    \new ChoirStaff <<
     \new Staff = women <<
-      \set Staff.instrument = "Cantus"
       \new Voice = "sopranos" { << \global \sopMusic >> }
     >>
     \new Lyrics = "sopranos"  \lyricsto "sopranos" \sopWords

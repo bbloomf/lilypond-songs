@@ -1,4 +1,4 @@
-﻿\version "2.14.2"
+\version "2.14.2"
 \include "util.ly"
 \header{ tagline = ""}
 \paper {
@@ -17,8 +17,8 @@
   ragged-last-bottom = ##f
   ragged-bottom = ##f
   two-sided = ##t
-  inner-margin = 0.625\in
-  outer-margin = 0.375\in
+  inner-margin = 0.89\in
+  outer-margin = 0.64\in
   top-margin = 0.26\in
   bottom-margin = 0.25\in
   first-page-number = #18
@@ -58,7 +58,7 @@ sopMusic = \relative c' {
   c b a a8 b |
   c4 c8 d e4 e8 f |
   
-  g2. f8 e |
+  \break g2. f8 e |
   d4 b8 c d2~ |
   d4 c8 b c4 a |
   
@@ -152,7 +152,7 @@ altoMusic = \relative c'' {
   a4 g4. a8( fis4) |
   
   g2. b4 |
-  a8 g g2 fis4 |
+  \break a8 g g2 fis4 |
   g8[ a] b4 c b |
   e4. d8 c b a4~ |
   
@@ -263,15 +263,15 @@ tenorWordsIII = \lyricmode {
 
 altusWordsA = \lyricmode {
   \set stanza = #"1. "
-  It was a lov -- er and his lass,
+  It was a lov -- er __ and his lass,
   
   With a hey, __ ho, non -- ny no, non -- ny non -- ny no,
-  with a hey non -- ny no,
+  with a hey non -- ny __ no,
   
   That o’er the green corn -- fields did pass,
   that o’er the green corn -- fields did pass,
   In spring -- time, the on -- ly pret -- ty ring -- time,
-  When birds do sing
+  When birds do __ sing
   Hey ding -- a -- ding -- a -- ding, hey ding -- a -- ding -- a -- ding, 
   lov -- ers love the spring, sweet lov -- ers love the spring,
   the spring, the on -- ly pret -- ty __ ring -- time, when birds do __ sing
@@ -280,7 +280,7 @@ altusWordsA = \lyricmode {
 
 altusWordsB = \lyricmode {
   \set stanza = #"2. "
-  Be -- tween the a -- cres of the Rye,
+  Be -- tween the a -- cres __ of the Rye,
  
   "" \repeat unfold 17 \skip1
   These pret -- ty Coun -- try folks would lie,
@@ -298,7 +298,7 @@ altusWordsC = \lyricmode {
 
 altusWordsD = \lyricmode {
   \set stanza = #"4. "
-  And there -- fore take the pres -- ent time,
+  And there -- fore take the __ pres -- ent time,
  
   "" \repeat unfold 17 \skip1
   For love is crown -- ed with the prime,
@@ -313,10 +313,10 @@ tenorWordsA = \lyricmode {
   
   That o’er the green fields, the green corn -- fields did pass,
   In spring -- time, in spring -- time, in spring -- time, the on -- ly ring -- time,
-  When birds do sing
+  When birds do __ sing
   Hey ding -- a -- ding -- a -- ding, hey ding -- a -- ding -- a -- ding,
   Sweet lov -- ers love the spring, in spring -- time, in spring -- time, the on -- ly pret -- ty ring -- time,
-  when birds do sing
+  when birds do __ sing
   Hey ding -- a -- ding -- a -- ding, hey ding -- a -- ding,
   Sweet lov -- ers love the spring.
 }
@@ -353,7 +353,6 @@ pianoLH = \relative c' {
 <<
    \new ChoirStaff <<
     \new Staff = women <<
-      \set Staff.instrument = "Cantus"
       \new Voice = "sopranos" { << \global \sopMusic >> }
     >>
     \new Lyrics = "sopranos"  \lyricsto "sopranos" \sopWords

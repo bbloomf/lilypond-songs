@@ -14,8 +14,8 @@ then
   pdftk A=\!full.pdf cat Aodd output odd.pdf
   echo 'Extracting even pages.'
   pdftk A=\!full.pdf cat Aeven output even.pdf
-  gswin64c -o \!odd.pdf -dBATCH -dNOPAUSE -sDEVICE=pdfwrite -c "[/CropBox [45 18 585 774] /PAGES pdfmark" -f odd.pdf
-  gswin64c -o \!even.pdf -dBATCH -dNOPAUSE -sDEVICE=pdfwrite -c "[/CropBox [27 18 567 774] /PAGES pdfmark" -f even.pdf
+  gswin64c -o \!odd.pdf -dBATCH -dNOPAUSE -sDEVICE=pdfwrite -c "[/CropBox [64.8 18 565.2 774] /PAGES pdfmark" -f odd.pdf
+  gswin64c -o \!even.pdf -dBATCH -dNOPAUSE -sDEVICE=pdfwrite -c "[/CropBox [46.8 18 547.2 774] /PAGES pdfmark" -f even.pdf
 
   pdftk A=\!odd.pdf B=\!even.pdf shuffle A B output \!sftpd-playbook.pdf
 

@@ -341,4 +341,4 @@ var dir = 'ly/mapped/',
             }
         }
     };
-callbackA();
+callback();

@@ -39,6 +39,10 @@ var pages = '';
 //TODO: del mapped\* -Recurse;
 var toc = fs.readFileSync('ly/!Contents.ly','utf8');
 var contents = fs.readFileSync('ly/Contents/!contents.ly','utf8');
+var date = new Date();
+var months = ["january","february","march","april","may","june","july","august","september","october","november","december"];
+date = months[date.getMonth()] + ' ' + date.getDate() + ', ' + date.getFullYear();
+toc = toc.replace('%date%',date);
 if(toc.indexOf('%CONTENTS%') >= 0) {
   toc = toc.replace('%CONTENTS%',contents);
 } else {

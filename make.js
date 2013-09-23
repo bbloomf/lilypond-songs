@@ -30,7 +30,7 @@ function getBlock(haystack, index) {
 var allFiles = fs.readdirSync('ly/'),
     temp = [],
     map = fs.readFileSync('ly/!map.txt','utf8').split('\n');
-for(i in allFiles){
+for(var i in allFiles){
   var file = allFiles[i];
   if(file.match(/\.ly$/)) temp.push(file);
 }
@@ -41,8 +41,9 @@ var toc = fs.readFileSync('ly/!Contents.ly','utf8');
 var contents = fs.readFileSync('ly/Contents/!contents.ly','utf8');
 var date = new Date();
 var months = ["january","february","march","april","may","june","july","august","september","october","november","december"];
-date = months[date.getMonth()] + ' ' + date.getDate() + ', ' + date.getFullYear();
-toc = toc.replace('%date%',date);
+toc = toc.replace('%date%',date.getDate());
+toc = toc.replace('%month%',months[date.getMonth()]);
+toc = toc.replace('%year%',date.getFullYear());
 if(toc.indexOf('%CONTENTS%') >= 0) {
   toc = toc.replace('%CONTENTS%',contents);
 } else {

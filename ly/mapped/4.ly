@@ -17,8 +17,8 @@
   ragged-last-bottom = ##f
   ragged-bottom = ##f
   two-sided = ##t
-  inner-margin = 1\in
-  outer-margin = 0.75\in
+  inner-margin = 0.98\in
+  outer-margin = 0.73\in
   top-margin = 0.26\in
   bottom-margin = 0.25\in
   first-page-number = #4
@@ -62,7 +62,7 @@ sopMusic = \relative c' {
   r2 d |
   d c |
   b b |
-  a1 |
+  a1 |\break
   r2 a |
   b g |
   a2. a4 |
@@ -80,8 +80,7 @@ sopMusic = \relative c' {
     r4 d c b |
     a2 r4 b |
     a g g2~ |
-    g4( fis8[ e]) |
-    fis2 |
+    g4( fis8[ e]) fis2 |
     g1
   }
 }
@@ -352,7 +351,7 @@ pianoLH = \relative c' {
   }
 \header {
   title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Come again, sweet love"}}
-  composer = \markup\oldStyleNum"John Dowland (15–16)"
+  composer = \markup\oldStyleNum"John Dowland (1563–1626)"
   tagline = ""
 }}
 

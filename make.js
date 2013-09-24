@@ -206,7 +206,7 @@ function processLy(lyFile,callback,makePdf) {
                 callback(error,stdout,stderr,psName,startedWorker);
             }
         };
-    if(fs.existsSync(psName)) {
+    if(makePdf || fs.existsSync(psName)) {
         //Check if the .ly file was the same.
         if(fs.existsSync(lyName)) {
             var oldLyContent = fs.readFileSync(lyName,'utf8');
@@ -216,7 +216,9 @@ function processLy(lyFile,callback,makePdf) {
                 return false;
             }
         }
-        fs.unlinkSync(psName);
+        if(fs.existsSync(psName)) {
+            fs.unlinkSync(psName);
+        }
     }
     if(fs.existsSync(lyName)) {
         fs.unlinkSync(lyName);
@@ -341,4 +343,4 @@ var dir = 'ly/mapped/',
             }
         }
     };
-callback();
+callbackA();

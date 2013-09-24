@@ -19,8 +19,8 @@
   ragged-last-bottom = ##f
   ragged-bottom = ##f
   two-sided = ##t
-  inner-margin = 1\in
-  outer-margin = 0.75\in
+  inner-margin = 0.98\in
+  outer-margin = 0.73\in
   top-margin = 0.26\in
   bottom-margin = 0.25\in
   first-page-number = #18
@@ -82,8 +82,7 @@ sopMusic = \relative c' {
     r4 d c b |
     a2 r4 b |
     a g g2~ |
-    g4( fis8[ e]) |
-    fis2 |
+    g4( fis8[ e]) fis2 |
     g1
   }
 }

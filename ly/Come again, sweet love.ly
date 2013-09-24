@@ -2,7 +2,7 @@
 \include "util.ly"
 \header {
   title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Come again, sweet love"}}
-  composer = \markup\oldStyleNum"John Dowland (15–16)"
+  composer = \markup\oldStyleNum"John Dowland (1563–1626)"
   tagline = ""
 }
 \paper {
@@ -64,7 +64,7 @@ sopMusic = \relative c' {
   r2 d |
   d c |
   b b |
-  a1 |
+  a1 |\break
   r2 a |
   b g |
   a2. a4 |

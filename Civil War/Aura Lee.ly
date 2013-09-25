@@ -1,7 +1,7 @@
 ﻿\version "2.14.2"
 \include "util.ly"
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Aura Lee"}}
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Aura Lea"}}
   %composer = \markup\oldStyleNum"Folk Song"
   tagline = ""
 }
@@ -57,29 +57,29 @@ sopMusic = \relative c' {
   f4 bes a bes |
   c g c2 |
   bes4 a g a |
-  bes2( f) |
+  bes1 |
   
   f4 bes a bes |
   c g c2 |
   bes4 a g a |
   bes1 |
   
-  a4. a8 a2 |
-  bes4. bes8 bes2 |
-  d4. c8 bes4 c |
-  d1 |
+  d4. d8 d2 |
+  d4. d8 d2 |
+  d4 c bes c |
+  d2 b\rest |
   
   d4 d ees4. d8 |
-  c4. g8 c4\fermata bes |
-  a8 a4. d4 c |
+  c4 g c4.\fermata bes8 |
+  bes4 a g a |
   bes1 \bar"|."
 }
 sopWords = \lyricmode {
   \set stanza = #"1. "
-	As the black -- bird in the spring,
+	When the black -- bird in the Spring,
   ’Neath the wil -- low tree,
-  Sat and pipped, I heard him sing,
-  Sing of Au -- ra Lee.
+  Sat and rocked, I heard him sing,
+  Sing of Au -- ra Lea!
   
   
   Au -- ra Lee! Au -- ra Lee!
@@ -108,7 +108,7 @@ sopWordsV = \lyricmode {
 altoMusic = \relative c' {
   f4 f f f |
   g g g2 |
-  f4 f f ees |
+  f4 f ees ees |
   d1 |
   
   f4 f f f |
@@ -118,12 +118,12 @@ altoMusic = \relative c' {
   
   fis4. fis8 fis2 |
   g4. g8 g2 |
-  a4. a8 g4 a |
-  bes1 |
+  a4 a g a |
+  bes2 s |
   
   f4 f ees4. f8 |
-  g4. f8 e4 e |
-  ees?8 ees4. ees4 ees |
+  g4 f e4. e8 |
+  ees?8 ees4. ees4. ees8 |
   d1 \bar"|."
 }
 altoWords = \lyricmode {
@@ -149,7 +149,7 @@ altoWordsVI = \lyricmode {
 tenorMusic = \relative c' {
   d4 d d d |
   ees ees ees2 |
-  ees4 ees d c |
+  ees4 ees c c |
   bes1 |
   
   d4 d d d |
@@ -157,14 +157,14 @@ tenorMusic = \relative c' {
   g4 a bes c |
   bes1 |
   
-  d4. d8 d2 |
-  d4. d8 d2 |
-  ees4. ees8 ees4 ees |
-  d1 |
+  a4. a8 a2 |
+  bes4. bes8 bes2 |
+  ees4 ees ees ees |
+  d2 s |
   
   bes4 bes bes4. bes8 |
-  c4. b8 bes4 g |
-  f8 c'4. a4 a |
+  c4 b4 bes4. g8 |
+  f8 c'4. a4. a8 |
   f1 \bar"|."
 }
 
@@ -190,12 +190,12 @@ bassMusic = \relative c' {
   
   d4. d8 d2 |
   g4. g8 g2 |
-  f4. f8 f4 f |
-  bes,1 |
+  f4 f f f |
+  bes,2 d\rest |
   
   bes'4 a g4. f8 |
-  ees4. d8 c4\fermata c |
-  f8 f4. f4 f |
+  ees4 d4 c4.\fermata c8 |
+  f8 f4. f4. f8 |
   bes,1 \bar"|."
 }
 bassWords = \lyricmode {

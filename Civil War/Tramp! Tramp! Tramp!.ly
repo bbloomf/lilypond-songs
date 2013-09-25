@@ -24,8 +24,8 @@
   outer-margin = 0.75\in
   top-margin = 0.26\in
   bottom-margin = 0.25\in
-  first-page-number = #196
-  print-first-page-number = ##t
+  %first-page-number = #196
+  %print-first-page-number = ##t
   headerLine = ""
   oddHeaderMarkup = \markup\fill-line{
      \override #'(font-name . "Garamond Premier Pro")\abs-fontsize #12.5
@@ -43,7 +43,7 @@
         \fill-line{\headerLine}
   }
 }
-#(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
+#(set-global-staff-size 18.2) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18.2 20))) }
 global = {
   \key bes \major
   \time 4/4
@@ -236,7 +236,7 @@ pianoLH = \relative c' {
     \new Lyrics = "altosIII"  \lyricsto "sopranos" \sopWordsIII
     \new Lyrics = "altosIV"  \lyricsto "sopranos" \sopWordsIV
     \new Lyrics = "altosV"  \lyricsto "sopranos" \sopWordsV
-    \new Lyrics = "tenors" \with { staff-affinity = #DOWN }
+    \new Lyrics = "tenors" \with { \override VerticalAxisGroup #'staff-affinity = #-1 }
    \new Staff = men <<
       \clef bass
       \new Voice = "tenors" { \voiceOne << \global \tenorMusic >> }

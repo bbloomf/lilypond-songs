@@ -81,38 +81,38 @@ sopMusic = \relative c' {
 sopWords = \lyricmode {
   \set stanza = #"1. "
   Yes, we’ll ral -- ly round the flag, boys, we’ll ral -- ly once a -- gain,
-  Shout -- ing the bat -- tle -- cry of Free -- dom,
+  Shout -- ing the bat -- tle cry of Free -- dom,
   We will ral -- ly from the hill -- side, we’ll gath -- er from the plain,
-  Shout -- ing the bat -- tle -- cry of Free -- dom!
+  Shout -- ing the bat -- tle cry of Free -- dom!
   
   The U -- nion for -- ev -- er, Hur -- rah, boys, Hur -- rah!
   Down with the trai -- tor, Up with the stars;
   While we ral -- ly round the flag, boys, ral -- ly once a -- gain,
-  Shout -- ing the bat -- tle -- cry of Free -- dom.
+  Shout -- ing the bat -- tle cry of Free -- dom.
 }
 
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
   We are spring -- ing to the call of our bro -- thers gone be -- fore,
-  Shout -- ing the bat -- tle cry of free -- dom!
+  Shout -- ing the bat -- tle cry of Free -- dom!
   And we’ll fill our va -- cant ranks with a mil -- lion free -- men more,
-  Shout -- ing the bat -- tle cry of free -- dom!
+  Shout -- ing the bat -- tle cry of Free -- dom!
 }
 
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
   We will wel -- come to our num -- bers the loy -- al, true, and brave,
-  Shout -- ing the bat -- tle cry of free -- dom!
+  Shout -- ing the bat -- tle cry of Free -- dom!
   And al -- though they may be poor, not a man shall be a slave,
-  Shout -- ing the bat -- tle cry of free -- dom!
+  Shout -- ing the bat -- tle cry of Free -- dom!
 }
 
 sopWordsIV = \lyricmode {
   \set stanza = #"4. "
   So we’re spring -- ing to the call from the East and from the West,
-  Shout -- ing the bat -- tle cry of free -- dom;
+  Shout -- ing the bat -- tle cry of Free -- dom;
   And we’ll hurl the reb -- el crew from the land that we love best,
-  Shout -- ing the bat -- tle cry of free -- dom!
+  Shout -- ing the bat -- tle cry of Free -- dom!
 }
 
 sopWordsV = \lyricmode {

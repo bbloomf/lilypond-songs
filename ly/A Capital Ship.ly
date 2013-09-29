@@ -296,9 +296,9 @@ bassMusic = \relative c' {
   aes4 aes a a8~ a |
   bes~ bes bes4 g g8~ g |
   ees8~ ees ees4 f8~ f f4 |
-  bes4( aes g) f8~ f |
+  \slurSolid bes4( aes g) f8~ f |
   
-  ees8~ ees ees~ ees bes4 ees8~ ees |
+  \slurDashed ees8~ ees ees~ ees bes4 ees8~ ees |
   aes8~ aes g4 ees g8~ g |
   aes4 g8 g f~ f ees4 |
   bes-> bes-> bes-> bes8~ bes |

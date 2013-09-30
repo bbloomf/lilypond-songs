@@ -324,7 +324,7 @@ bassMusic = \relative c' {
   g g g2~ |
   g4 d8\rest g g g |
   g2 g4 |
-  g4. g8 g,16 g8. |
+  g4. g8 g,16 g8.\fermata |
   c4 d4\rest \bar"|."
 }
 bassWords = \lyricmode {

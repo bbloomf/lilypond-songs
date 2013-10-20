@@ -141,7 +141,7 @@ altoMusic = \relative c' {
     ees ees ees |
     des des des |
     c c ees8[ des] |
-    c2 |
+    c2
   }
   aes'8[ bes] |
   c4 aes aes |
@@ -232,13 +232,18 @@ bassMusic = \relative c' {
 bassWords = \lyricmode {
   \repeat unfold 23 \skip1
   \repeat unfold 23 \skip1
-  Friends of __
+  Friends of __ ""
+  \set ignoreMelismata = ##t
+  \repeat unfold 22 \skip1
+  With __ _ _ _
 }
 bassWordsII = \lyricmode {
   \repeat unfold 23 \skip1
   \repeat unfold 23 \skip1
   \set ignoreMelismata = ##t
   Out _ of the
+  \repeat unfold 23 \skip1
+  I __ _ _ _
 }
 
 pianoRH = \relative c' {

@@ -282,7 +282,7 @@ tenorMusic = \relative c' {
   c2. b4 |
   \time 3/4
   b4( c d)~ |
-  d c4. c8 |
+  d d4. c8 |
   b2 b4 |
   b8 s d4 b |
   c2 c4 |

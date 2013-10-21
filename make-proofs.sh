@@ -19,33 +19,30 @@ then
 
   pdftk A=\!odd.pdf B=\!even.pdf shuffle A B output \!sftpd-playbook.pdf
   pdftk \!sftpd-playbook.pdf dump_data_utf8 output data.txt
-  # need to put the marksinfo.txt file right before the first "PageMediaBegin" line.
-  pdftk \!sftpd-playbook.pdf update_info_utf8 data.txt cat output test.pdf
+  # put the marksinfo.txt file right after the "NumberOfPages" line.
+  sed -e '0,/NumberOfPages:/{//r ly/Contents/marksinfo.txt
+}' data.txt > newdata.txt
+  pdftk \!sftpd-playbook.pdf update_info_utf8 newdata.txt output gh-pages/PDFs/sftpd-playbook.pdf
 
-  if gswin64c -o gh-pages/PDFs/sftpd-playbook.pdf -dBATCH -dNOPAUSE -sDEVICE=pdfwrite -c "[/CropBox [27 18 585 774] /PAGES pdfmark" -f \!sftpd-playbook.pdf pdfmarks.txt
+  pushd gh-pages
+  if git add PDFs/sftpd-playbook.pdf PDFs/sftpd.pdf
   then
-    pushd gh-pages
-    if git add PDFs/sftpd-playbook.pdf PDFs/sftpd.pdf
+    if git commit -m 'Updated PDFs'
     then
-      if git commit -m 'Updated PDFs'
+      if git push
       then
-        if git push
-        then
-          echo 'Success!'
-        else
-          echo 'Error from git push --^'
-        fi
+        echo 'Success!'
       else
-        echo 'Error from git commit --^'
+        echo 'Error from git push --^'
       fi
     else
-      echo 'Error from git add --^'
+      echo 'Error from git commit --^'
     fi
-    popd
   else
-    echo 'Error from gswin64c --^'
+    echo 'Error from git add --^'
   fi
-  rm even.pdf odd.pdf \!even.pdf \!odd.pdf \!sftpd-playbook.pdf
+  popd
+  rm even.pdf odd.pdf \!even.pdf \!odd.pdf \!sftpd-playbook.pdf data.txt newdata.txt
 else
   echo 'Error from git --^'
 fi

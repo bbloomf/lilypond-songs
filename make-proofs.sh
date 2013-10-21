@@ -18,6 +18,9 @@ then
   gswin64c -o \!even.pdf -dBATCH -dNOPAUSE -sDEVICE=pdfwrite -c "[/CropBox [46.8 18 547.2 774] /PAGES pdfmark" -f even.pdf
 
   pdftk A=\!odd.pdf B=\!even.pdf shuffle A B output \!sftpd-playbook.pdf
+  pdftk \!sftpd-playbook.pdf dump_data_utf8 output data.txt
+  # need to put the marksinfo.txt file right before the first "PageMediaBegin" line.
+  pdftk \!sftpd-playbook.pdf update_info_utf8 data.txt cat output test.pdf
 
   if gswin64c -o gh-pages/PDFs/sftpd-playbook.pdf -dBATCH -dNOPAUSE -sDEVICE=pdfwrite -c "[/CropBox [27 18 585 774] /PAGES pdfmark" -f \!sftpd-playbook.pdf pdfmarks.txt
   then

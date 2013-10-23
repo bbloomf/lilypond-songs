@@ -79,7 +79,7 @@ sopWords = \lyricmode {
 	Ere the twi -- light bat was flit -- ting,
   In the sun -- set, at her knit -- ting,
   Sang a lone -- ly maid -- en, sit -- ting
-  Un -- der -- neath her thes -- hold tree;
+  Un -- der -- neath her thres -- hold tree;
   And, ere day -- light died be -- fore us,
   And the ves -- per stars shone o’er us,
   Fit -- ful rose her ten -- der cho -- rus,

@@ -107,7 +107,7 @@ sopWords = \lyricmode {
   \set ignoreMelismata = ##t
   \set stanza = #"1. "
   I dreamt _ I dwelt _ in mar -- _ ble halls,
-  With vas -- sals and serfs at my side, _ _ _
+  With vas -- sals and serfs at my side, __ _ _ _
   And of all who as -- sem -- bled with -- in __ _ those walls
   That I was the hope and the pride. __ _ _ _
   I had rich -- es too great _ to count; _ could boast
@@ -122,7 +122,7 @@ sopWordsII = \lyricmode {
   \set ignoreMelismata = ##t
   \set stanza = #"2. "
   I dreamt _ that suit -- _ ors sought _ my hand;
-  That knights up -- on bend -- _ ed knee, _ _ _
+  That knights up -- on bend -- _ ed knee, __ _ _ _
   And with vows _ no maid -- _ en heart could with -- stand,
   They pledged _ their faith _ to me, __ _ _ _
   And I dreamt _ that one of that no -- _ ble host
@@ -220,9 +220,9 @@ tenorMusic = \relative c' {
   bes bes bes |
   bes~ bes8. bes16 |
   
-  g4.~ |
+  \tieSolid g4.~ |
   g8 ees' ees |
-  bes~ bes bes |
+  \tieDotted bes~ bes bes |
   bes~ bes bes |
   ees~ ees ees |
   bes4 bes8 |

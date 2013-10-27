@@ -1,4 +1,4 @@
-﻿\version "2.14.2"
+\version "2.14.2"
 \include "util.ly"
 \header {
   title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Vive L’Amour"}}
@@ -96,7 +96,7 @@ sopWords = \lyricmode {
 sopWordsII = \lyricmode {
   \set stanza = #"2."
   Now let ev -- ’ry mar -- ried man drink to his wife.
-    \markup\italic Vi -- ve \markup\italic la \markup\italic com -- \markup\italic pag -- \markup\italic nie,
+    \markup\italic Vi -- \markup\italic ve \markup\italic la \markup\italic com -- \markup\italic pag -- \markup\italic nie,
   The joy of his bo -- som and plague of his life.
     \markup\italic Vi -- \markup\italic ve \markup\italic la \markup\italic com -- \markup\italic pag -- \markup\italic nie.
     

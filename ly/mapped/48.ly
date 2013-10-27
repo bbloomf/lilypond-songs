@@ -329,7 +329,7 @@ sopWords = \lyricmode {
 sopWordsII = \lyricmode {
   \set stanza = #"2."
   Now let ev -- ’ry mar -- ried man drink to his wife.
-    \markup\italic Vi -- ve \markup\italic la \markup\italic com -- \markup\italic pag -- \markup\italic nie,
+    \markup\italic Vi -- \markup\italic ve \markup\italic la \markup\italic com -- \markup\italic pag -- \markup\italic nie,
   The joy of his bo -- som and plague of his life.
     \markup\italic Vi -- \markup\italic ve \markup\italic la \markup\italic com -- \markup\italic pag -- \markup\italic nie.
     

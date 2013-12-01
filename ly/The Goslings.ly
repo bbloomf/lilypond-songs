@@ -362,7 +362,7 @@ tenorMusic = \relative c' {
   g4 e s g8 g |
   a4 a a a |
 
-  g2 s4 g8 g |
+  g2 s4 g8 a |
   bes4 bes8 bes bes4 bes |
   a2 a4 a8 a |
   aes4 aes aes aes |
@@ -389,7 +389,7 @@ tenorMusic = \relative c' {
   g8 g g4 fis4 fis |
   g e s g |
   a a a a |
-  g2 s4 g4 |
+  g2 s4 g8[ a] |
 
   bes4 bes bes bes |
   a2 a4 a |
@@ -416,7 +416,7 @@ tenorMusic = \relative c' {
   g g fis fis8 fis |
   g4 e s2 |
   a4 a8 a a4 a |
-  g2 s4 g8 g |
+  g2 s4 g8 a |
 
   %page5
   bes4. bes8 bes4 bes |

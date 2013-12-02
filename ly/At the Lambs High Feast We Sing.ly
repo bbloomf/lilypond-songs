@@ -177,7 +177,7 @@ tenorMusic = \relative c' {
   fis4 fis g a |
   b a fis2 |
 
-  fis4 fis8[ g] a4 f8[ fis] |
+  fis4 fis8[ g] a4 g8[ fis] |
   e[ d] e4 d2 |
   fis4 fis g a |
   b a fis2 |
@@ -255,7 +255,7 @@ pianoLH = \relative c' {
 %    \new PianoStaff << \new Staff { \new Voice { \pianoRH } } \new Staff { \clef "bass" \pianoLH } >>
   >>
   \midi {
-    \tempo 4 = 90
+    \tempo 4 = 110
     \set Staff.midiInstrument = "flute"
     \context {
       \Voice

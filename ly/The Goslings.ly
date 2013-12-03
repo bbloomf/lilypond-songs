@@ -51,7 +51,7 @@ global = {
   \dynamicUp
   \tempo "Allegro con moto"
   %\set crescendoSpanner = #'dashed-line
-  %\set midiInstrument = "recorder"
+  %\set Staff.midiInstrument = "recorder"
   \autoBeamOff
   \override DynamicTextSpanner #'style = #'none
 }
@@ -115,7 +115,7 @@ dynamics = {
 }
 
 sopMusic = \relative c' {
-	e4^\markup\italic"stac." e8 e dis dis dis dis |
+	e,4^\markup\italic"stac." e8 e dis dis dis dis |
   e4 c b'4\rest g,8 g |
   a4 b8( c) a4 b8( c) |
 
@@ -137,14 +137,14 @@ sopMusic = \relative c' {
   a4( g) f!( d) |
   \times 2/3 {c8([ d c]} b[ c]) e4 d |
 
-  c2. \set midiInstrument = #"acoustic grand" \times2/3{c8[_\markup\smallCapsOldStyle"Accomp." c c ]} |
+  c2. \set Staff.midiInstrument = #"acoustic grand" \times2/3{c8[_\markup\smallCapsOldStyle"Accomp." c c ]} |
     \oneVoice <e' fis c'>2 <dis fis b>4. <fis dis b a>8 |
     << {<a fis dis>4( <g e>) } \\ {b,2} >> <a d f>4 <f a d> |
     << {c'4.\trill b16[ c] s4 d8.[ e16]} \\ {<g, e>2 <g c e>4 <f b>} >> |
     <f b d>2( <e c'>4) \bar"||"\break
 
   %page3
-  \set midiInstrument = #"flute"
+  \set Staff.midiInstrument = #"flute"
   \voiceOne
   g,4^\markup\italic"stac." |
   e'8 e e4 dis dis |
@@ -169,13 +169,13 @@ sopMusic = \relative c' {
   a4 g f! d |
   \times2/3 {c8([ d c]} b8[ c] e-.) b'8\rest b\rest d, |
 
-  c2. \set midiInstrument = #"acoustic grand" \times2/3{c8[_\markup\smallCapsOldStyle"Accomp." c c ]} |
+  c2. \set Staff.midiInstrument = #"acoustic grand" \times2/3{c8[_\markup\smallCapsOldStyle"Accomp." c c ]} |
     \oneVoice <e' fis c'>2 <dis fis b>4. <fis dis b a>8 |
     << {<a fis dis>4( <g e>) } \\ {b,2} >> <a d f>4 <f a d> |
     << {c'4.\trill b16[ c] s4 d8.[ e16]} \\ {<g, e>2 <g c e>4 <f b>} >> |
     <f b d>2( <e c'>4) \bar"||"
 
-  \set midiInstrument = #"flute"
+  \set Staff.midiInstrument = #"flute"
   \voiceOne
   g,4^\markup\italic"stac." |
   e'4 e4 dis dis8 dis |
@@ -259,7 +259,7 @@ sopWordsV = \lyricmode {
 }
 
 altoMusic = \relative c' {
-  c4 c8 c c c c c |
+  c,4 c8 c c c c c |
   c4 g s g8 g |
   a4 b8[ c] a4 b8[ c] |
 
@@ -474,7 +474,7 @@ bassMusic = \relative c' {
   g g,4 g |
   c2. d4\rest |
   \oneVoice
-  \set midiInstrument = #"acoustic grand"
+  \set Staff.midiInstrument = #"acoustic grand"
   <a a'>2 <b b'>4. q8 |
   <e e,>2 <f f,>4 q |
   <g g,>2 q4 <g, g,> |
@@ -482,7 +482,7 @@ bassMusic = \relative c' {
 
   %page 3
   \voiceTwo
-  \set midiInstrument = #"flute"
+  \set Staff.midiInstrument = #"flute"
   g'4 |
   c,8 c c4 c c |
   c c d4\rest e |
@@ -508,13 +508,13 @@ bassMusic = \relative c' {
 
   c2. d4\rest |
   \oneVoice
-  \set midiInstrument = #"acoustic grand"
+  \set Staff.midiInstrument = #"acoustic grand"
   <a a'>2 <b b'>4. q8 |
   <e e,>2 <f f,>4 q |
   <g g,>2 q4 <g, g,> |
   q2( <c c,>4) \bar"||"
   \voiceTwo
-  \set midiInstrument = #"flute"
+  \set Staff.midiInstrument = #"flute"
 
   g'4 |
   c, c c c8 c |
@@ -553,6 +553,7 @@ pianoLH = \relative c' {
 <<
    \new ChoirStaff <<
     \new Staff = women <<
+      \clef "treble_8"
       \new Voice = "sopranos" { \voiceOne << \global \sopMusic >> }
       \new Voice = "altos" { \voiceTwo << \global \altoMusic >> }
       \new Voice = "dynamics" { \dynamics }

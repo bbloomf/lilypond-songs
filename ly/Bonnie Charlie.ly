@@ -54,17 +54,19 @@ global = {
 }
 
 sopMusic = \relative c' {
-	f4. g8 a4 f |
-  d f c2 |
-  c'4. d8 c4 a |
-  \slurDashed a( g) g2 |
+  \partial 8 \teeny c8 | \normalsize
+  f4. g8 a4 f |
+  d f c2*3/4 \teeny c'8 | \normalsize
+  c4. d8 c4 a |
+  \slurDashed a( g) g2*3/4 \teeny c,8 | \normalsize
   
   \slurSolid
-  f8 f4 g8 a4 f |
+  f4. g8 a4 f |
   d f c2 |
   c'4. d8 c4 a |
-  g4. f8 f2\fermata \bar"||"
+  \slurDashed g4.( f8) f2\fermata \bar"||"
 
+  \slurSolid
   a8 c4. c4 c |
   a4. c8 c2 |
   f4. e8 d4 c |
@@ -77,19 +79,19 @@ sopMusic = \relative c' {
 }
 sopWords = \lyricmode {
   \set stanza = #"1. "
-	\set ignoreMelismata = ##t
-  Bon -- nie Char -- lie’s now a -- wa;
-  Safe -- ly owre the friend -- ly main;
-  Mon -- y a heart will break in twa,
-  Sould he ne’er come back a -- gain.
+  \set ignoreMelismata = ##t
+  "" Bon -- nie Char -- lie’s now a -- wa;
+  "" Safe -- ly owre the friend -- ly main;
+  "" Mon -- y~a heart will break in twa,
+  Should he ne’er come back a -- gain.
 }
 
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
-  Ye_trust -- ed in your Hie -- land men,
-  They_trust -- ed you, dear Char -- lie!
+  Ye trust -- ed in your Hie -- land men,
+  They trust -- ed you, dear Char -- lie!
   They kent your hid -- ing in the glen,
-  Death or ex -- ile brav -- _ ing.
+  Death or ex -- ile brav -- ing.
 
   Will ye no come back a -- gain?
   Will ye no come back a -- gain?
@@ -100,9 +102,9 @@ sopWordsII = \lyricmode {
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
   \set ignoreMelismata = ##t
-  Eng -- lish bribes were a’ in vain,
-  Tho’_puir and puir -- er we maun be;
-  Sil -- _ ler can -- na buy the heart
+  "" Eng -- lish bribes were a’ in vain,
+  Tho’ puir and puir -- er we maun be;
+  "" Sil -- ler can -- na buy the heart
   That beats aye for thine and thee.
 }
 
@@ -115,17 +117,19 @@ sopWordsV = \lyricmode {
 }
 
 altoMusic = \relative c' {
+  \partial 8 \teeny c8 | \normalsize
+  c4. c8 f4 c |
+  bes d a2*3/4 \teeny f'8 | \normalsize
+  f4. f8 f4 f |
+  \slurDashed f( e) e2*3/4 \teeny c8 | \normalsize
+
+  \slurSolid
   c4. c8 f4 c |
   bes d a2 |
   f'4. f8 f4 f |
-  \slurDashed f( e) e2 |
+  \slurDashed e4.( c8) c2 |
 
   \slurSolid
-  c8 c4 c8 f4 c |
-  bes d a2 |
-  f'4. f8 f4 f |
-  e4. c8 c2 |
-
   f8 f4. e4 g |
   f4. e8 e2 |
   f4. f8 f4 g |
@@ -157,17 +161,19 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
+  \partial 8 \teeny a8 | \normalsize
+  a4. bes8 c4 a |
+  f f f2*3/4 \teeny a8 | \normalsize
+  a4. bes8 a4 c |
+  \tieDashed c~ c c2*3/4 \teeny a8 | \normalsize
+  
+  \tieSolid
   a4. bes8 c4 a |
   f f f2 |
   a4. bes8 a4 c |
-  \tieDashed c~ c c2 |
-  
-  \tieSolid
-  a8 a4 bes8 c4 a |
-  f f f2 |
-  a4. bes8 a4 c |
-  bes4. bes8 a2 |
+  \tieDashed bes4.~ bes8 a2 |
 
+  \tieSolid
   c8 a4. bes4 bes |
   c4. bes8 bes2 |
   a4. c8 bes4 bes |
@@ -189,17 +195,19 @@ tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  f,4. f8 f4 f |
-  bes, bes f2 |
-  f'4. f8 f4 f |
-  \tieDashed c~ c c2 |
+  \partial 8 \teeny f,8 | \normalsize
+  f4. f8 f4 f |
+  bes, bes f2*3/4 \teeny f'8 | \normalsize
+  f4. f8 f4 f |
+  \tieDashed c~ c c2*3/4 \teeny f8 | \normalsize
 
   \tieSolid
-  f8 f4 f8 f4 f |
+  f4. f8 f4 f |
   bes, bes f2 |
   f'4. f8 f4 f |
-  c4. c8 f,2\fermata |
+  \tieDashed c4.~ c8 f,2\fermata |
 
+  \tieSolid
   f'8 f4. g4 e |
   f4. c8 c2 |
   f4. f8 f4 e |
@@ -242,7 +250,7 @@ pianoLH = \relative c' {
 %    \new PianoStaff << \new Staff { \new Voice { \pianoRH } } \new Staff { \clef "bass" \pianoLH } >>
   >>
   \midi {
-    \tempo 4 = 90
+    \tempo 4 = 105
     \set Staff.midiInstrument = "flute"
     \context {
       \Voice

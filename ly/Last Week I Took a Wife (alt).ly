@@ -58,7 +58,7 @@ sopMusic = \relative c' {
   \tempo "Allegretto"
 	\set Staff.midiInstrument = "acoustic grand"
   \oneVoice
-  c,4 b'8\rest g16[ a32 b] |
+  c4 b'8\rest g16[ a32 b] |
   c8[ c, c' c,] |
   c'4 c, |
   c'8[ c16 d] e8[ c] |
@@ -152,7 +152,7 @@ altoMusic = \relative c' {
   s2*10 |
   s4.
   \set Staff.midiInstrument = "flute"
-  c,8 |
+  c8 |
   c c c c |
   e4 c |
   c8 c b b |
@@ -203,15 +203,15 @@ tenorMusic = \relative c' {
   \set Staff.midiInstrument = "flute"
 
   e,8 |
-  e c c e |
+  g e g e |
   g4 e |
-  c8 a b d |
-  c e s e |
-  e c c e |
+  f8 a g g |
+  g e s e |
+  g e g e |
   g4 e8[ e] |
 
-  c a b d |
-  c e s e |
+  f a g g |
+  g e s e |
   g g g g |
   b g d d |
   e g g g |
@@ -219,13 +219,13 @@ tenorMusic = \relative c' {
   b[ g] d d |
   e g g g |
   b g d d |
-  e e e d |
-  c8[ d] e4 |
+  e e e g |
+  g4 e |
 
   g8 g16 g g8 g |
   b16 g g f d8 d |
-  e e e d |
-  c8[ d] c4 \bar"||"
+  e e e g |
+  g4 e \bar"||"
 }
 
 tenorWords = \lyricmode {
@@ -291,7 +291,6 @@ pianoLH = \relative c' {
 <<
    \new ChoirStaff <<
     \new Staff = women <<
-      \clef "treble_8"
       \new Voice = "sopranos" { \voiceOne << \global \sopMusic >> }
       \new Voice = "altos" { \voiceTwo << \global \altoMusic >> }
     >>

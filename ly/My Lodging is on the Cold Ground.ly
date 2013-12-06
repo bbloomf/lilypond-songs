@@ -55,51 +55,58 @@ global = {
 }
 
 sopMusic = \relative c' {
-	g'4\p\< g g |
-  b4.\! a8\> g4 |
-  b\! b\< b |
-  d4.\! c8\> b4 |
-  d\!\f c\dim b\! |
+	\partial 8 g'16[ f] |
+  ees8. f16 ees8 ees[ g] bes |
+  aes[ c ees] ees4 d16[ c] |
+
+  bes4 aes16 g f8. ees16 f8 |
+  g4.~ g4 g16[ f] |
+  ees8.[ f16] ees8 ees[ g] bes |
+
+  aes[ c ees]~ ees d c |
+  bes[ ees] g, f8.[ ees16] f8 |
+  ees4.~ ees4 bes'8 |
+
+  %page2
+  bes[ g] ees' ees4 bes8 |
+  c[ aes ees'] ees4 d16[ c] |
+  bes8. aes16 g8 f8.[ ees16] f8 |
+
+  g4.~ g4 g16[ f] |
+  ees8. f16 ees8 ees[ g] bes |
+  aes[ c ees] ees4\fermata d16[ c] |
   
-  a2 b4\rest |
-  a2\p g8 fis |
-  g4 a b |
-  c2\cresc b8\! a |
-  b4 c d |
-  \times 2/3 { e8[^\markup{\dynamic f \italic"rit. e dim."} d c] } b4 a |
-  g2\fermata b4\rest \bar "|."
+  bes8[ ees] g, f8.[ ees16] f8 |
+  ees4.~ ees4 \bar"|."
 }
 sopWords = \lyricmode {
   \set stanza = #"1. "
-	If I a bird -- ling were,
-  And with two wings could fly,
-  I’d fly to thee;
-  
-  But, as no wings are mine,
-  But, as no wings are mine,
-  That can -- not be.
+	My lodg -- ing is on the cold ground,
+  And hard, ver -- y hard is my fare,
+  But that which grieves me more is
+  The cold -- ness of my dear.
+  Yet still I cry, oh! turn, love,
+  I pri -- thee, love, turn to me;
+  For thou art the on -- ly one, love,
+  That art a -- dor’d by me.
 }
 
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
-  Though far a -- way from thee,
-  Dream -- ing I’m e’er with thee,
-  Whis -- p’ring to thee;
-  
-  But, when I wake at last,
-  But, when I wake at last,
-  Then I’m a -- lone.
+  \set ignoreMelismata = ##t
+  I’ll _ twine thee a gar -- land of straw, _ _ love,
+  I’ll _ mar -- ry thee with a rush ring; _
+  My _ froz -- _ en hopes _ will thaw, _ _ _ love,
+  And mer -- ri -- ly we _ will sing. _
+  Then turn _ to me, my own _ _ love,
+  \unset ignoreMelismata
+  I pri -- thee, love, turn to me;
+  For thou art the on -- ly one, love,
+  That art a -- dor’d by me.
 }
 
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
-  There is no hour at night
-  When thy dear im -- age bright
-  Strays from my heart.
-  
-  Thou’st said ten thou -- sand times,
-  Thou’st said ten thou -- sand times,
-  That mine thou art.
 }
 
 sopWordsIV = \lyricmode {
@@ -111,19 +118,8 @@ sopWordsV = \lyricmode {
 }
 
 altoMusic = \relative c' {
-  d4 d d |
-  g4. fis8 g4 |
-  g g g |
-  b4. a8 g4 |
-  g fis g |
-  
-  fis2 s4 |
-  d2 d8 d |
-  d4 fis g |
-  g2 g8 g |
-  g4 g g |
-  a g fis |
-  d2 s4 \bar "|."
+  ees8 |
+  bes8. bes16 bes8 bes[ ees] g
 }
 altoWords = \lyricmode {
 }
@@ -146,19 +142,9 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
-  b4 b b |
-  d4. c8 b4 |
-  d d d |
-  d4. d8 d4 |
-  d d d |
-  
-  d2 s4 |
-  c2 b8 a |
-  g4 d' d |
-  e2 d8 c |
-  d4 d d |
-  e d c |
-  b2 s4 \bar"|."
+  bes8 |
+  g8. bes16 g8 g[ g] bes |
+  c8[ ]
 }
 
 tenorWords = \lyricmode {
@@ -171,19 +157,29 @@ tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  g4 g g |
-  g4. g8 g4 |
-  g g g |
-  g4. g8 g4 |
-  b4 a g |
-  
-  d2 d4\rest |
-  d2 d8 c |
-  b4 a g |
-  g'2 g8 g |
-  g4 a b |
-  c4 d d, |
-  g2\fermata d4\rest \bar"|."
+  ees,8 |
+  ees8. d16 ees8 ees8[ bes] ees |
+  c8[ aes c] aes4 bes16[ c] |
+
+  ees4 ees16 ees bes8. c16 d8 |
+  ees4.~ ees4 ees8 |
+  ees8.[ d16] ees8 ees4 ees8 |
+
+  aes,4.( a8) a a |
+  bes8[ bes] bes bes8[ c] d8 |
+  ees4.~ ees4 ees8 |
+
+  %page2
+  ees[ bes] ees g4 g8 |
+  aes[ ees c] aes4 aes8 |
+  bes8. bes16 bes8 bes[ c] d |
+
+  ees4.~ ees4 ees8 |
+  ees8. ees16 ees8 ees4 ees8 |
+  aes,8[ ees' c] aes4 bes16[ c] |
+
+  ees8[ bes] ees bes[ c] d |
+  ees4.~ ees4 \bar"|."
 }
 bassWords = \lyricmode {
 }

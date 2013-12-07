@@ -59,7 +59,7 @@ sopMusic = \relative c' {
   ees8. f16 ees8 ees[ g] bes |
   aes[ c ees] ees4 d16[ c] |
 
-  bes4 aes16 g f8. ees16 f8 |
+  bes8. aes16 g8 f8. ees16 f8 |
   g4.~ g4 g16[ f] |
   ees8.[ f16] ees8 ees[ g] bes |
 
@@ -81,28 +81,28 @@ sopMusic = \relative c' {
 }
 sopWords = \lyricmode {
   \set stanza = #"1. "
-	My lodg -- ing is on the cold ground,
-  And hard, ver -- y hard is my fare,
-  But that which grieves me more is
-  The cold -- ness of my dear.
-  Yet still I cry, oh! turn, love,
-  I pri -- thee, love, turn to me;
-  For thou art the on -- ly one, love,
-  That art a -- dor’d by me.
+	My lodg -- ing is on __ the cold __ ground,
+  And hard, ver -- y hard is my fare, __
+  But that __ which grieves me more __ is
+  The cold -- ness of __ my dear. __
+  Yet still I cry, oh! turn, __ love,
+  I __ pri -- thee, love, turn __ to me; __
+  For thou art the on -- ly one, __ love,
+  That art __ a -- dor’d __ by me. __
 }
 
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
   \set ignoreMelismata = ##t
-  I’ll _ twine thee a gar -- land of straw, _ _ love,
-  I’ll _ mar -- ry thee with a rush ring; _
-  My _ froz -- _ en hopes _ will thaw, _ _ _ love,
-  And mer -- ri -- ly we _ will sing. _
-  Then turn _ to me, my own _ _ love,
+  I’ll _ twine thee a gar -- land of straw, __ _ _ love,
+  I’ll _ mar -- ry thee with a rush ring; __ _
+  My _ froz -- _ en hopes _ will thaw, __ _ _ _ love,
+  And mer -- ri -- ly we __ _ will sing. __ _
+  Then turn _ to me, my own __ _ _ love,
   \unset ignoreMelismata
-  I pri -- thee, love, turn to me;
-  For thou art the on -- ly one, love,
-  That art a -- dor’d by me.
+  I __ pri -- thee, love, turn __ to me; __
+  For thou art the on -- ly one, __ love,
+  That art __ a -- dor’d __ by me. __
 }
 
 sopWordsIII = \lyricmode {
@@ -119,7 +119,25 @@ sopWordsV = \lyricmode {
 
 altoMusic = \relative c' {
   ees8 |
-  bes8. bes16 bes8 bes[ ees] g
+  bes8. bes16 bes8 bes[ ees] g |
+  aes[ ees c'] aes4 f16[ aes] |
+  g8. f16 ees8 d8. c16 d8 |
+  ees4.~ ees4 ees8 |
+
+  bes4 bes8 bes[ ees] des |
+  c[ ees aes]( fis) fis fis |
+  g[ g] ees d8.[ c16] d8 |
+  bes4.~ bes4 g'8 |
+
+  g[ ees] g g4 g8 |
+  ees8[ c aes'] ees4 f16[ aes] |
+  g8. f16 ees8 d8.[ c16] d8 |
+  ees4.~ ees4 ees8 |
+
+  bes8. bes16 bes8 bes[ ees] g |
+  aes[ ees aes] ees4 f16[ aes] |
+  g8[ g] ees d8.[ c16] d8 |
+  bes4.~ bes4 \bar"|."
 }
 altoWords = \lyricmode {
 }
@@ -143,8 +161,25 @@ altoWordsVI = \lyricmode {
 }
 tenorMusic = \relative c' {
   bes8 |
-  g8. bes16 g8 g[ g] bes |
-  c8[ ]
+  g8. aes16 g8 g[ bes] bes |
+  c[ aes aes] c4 bes16[ ees] |
+  bes8. bes16 bes8 aes8. g16 aes8 |
+  bes4.~ bes4 bes8 |
+
+  g8.[ aes16] g8 g[ bes] g8 |
+  aes8[ c aes]( c) c c |
+  ees[ ees] bes aes8.[ g16] aes8 |
+  g4.~ g4 bes8 |
+
+  bes4 bes8 bes4 ees8 |
+  c[ ees aes,] c4 bes16[ ees] |
+  bes8. bes16 bes8 aes8.[ g16] aes8 |
+  bes4.~ bes4 bes8 |
+
+  g8. aes16 g8 g[ bes] bes |
+  aes8[ c aes] c4 bes16[ ees] |
+  bes4 bes8 aes8.[ g16] aes8 |
+  g4.~ g4 \bar"|."
 }
 
 tenorWords = \lyricmode {
@@ -158,27 +193,27 @@ tenorWordsIII = \lyricmode {
 
 bassMusic = \relative c' {
   ees,8 |
-  ees8. d16 ees8 ees8[ bes] ees |
-  c8[ aes c] aes4 bes16[ c] |
+  ees8. d16 ees8 ees8[ ees] ees |
+  ees8[ c aes] aes4 bes16[ c] |
 
-  ees4 ees16 ees bes8. c16 d8 |
+  ees8. ees16 ees8 bes8. c16 bes8 |
   ees4.~ ees4 ees8 |
   ees8.[ d16] ees8 ees4 ees8 |
 
   aes,4.( a8) a a |
-  bes8[ bes] bes bes8[ c] d8 |
+  bes8[ bes] bes bes8.[ c16] bes8 |
   ees4.~ ees4 ees8 |
 
   %page2
-  ees[ bes] ees g4 g8 |
-  aes[ ees c] aes4 aes8 |
-  bes8. bes16 bes8 bes[ c] d |
+  ees4 ees8 ees4 g8 |
+  aes[ ees c] aes4 bes16[ c] |
+  ees8. ees16 ees8 bes8.[ c16] bes8 |
 
   ees4.~ ees4 ees8 |
-  ees8. ees16 ees8 ees4 ees8 |
+  ees8. d16 ees8 ees4 ees8 |
   aes,8[ ees' c] aes4 bes16[ c] |
 
-  ees8[ bes] ees bes[ c] d |
+  ees4 ees8 bes8.[ c16] bes8 |
   ees4.~ ees4 \bar"|."
 }
 bassWords = \lyricmode {

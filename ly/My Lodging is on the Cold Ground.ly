@@ -135,8 +135,8 @@ altoMusic = \relative c' {
   ees4.~ ees4 ees8 |
 
   bes8. bes16 bes8 bes[ ees] g |
-  aes[ ees aes] ees4 f16[ aes] |
-  g8[ g] ees d8.[ c16] d8 |
+  aes[ ees c'] aes4 f16[ aes] |
+  g4 ees8 d8.[ c16] d8 |
   bes4.~ bes4 \bar"|."
 }
 altoWords = \lyricmode {
@@ -177,7 +177,7 @@ tenorMusic = \relative c' {
   bes4.~ bes4 bes8 |
 
   g8. aes16 g8 g[ bes] bes |
-  aes8[ c aes] c4 bes16[ ees] |
+  c[ aes aes] c4 bes16[ ees] |
   bes4 bes8 aes8.[ g16] aes8 |
   g4.~ g4 \bar"|."
 }
@@ -211,7 +211,7 @@ bassMusic = \relative c' {
 
   ees4.~ ees4 ees8 |
   ees8. d16 ees8 ees4 ees8 |
-  aes,8[ ees' c] aes4 bes16[ c] |
+  ees8[ c aes] aes4 bes16[ c] |
 
   ees4 ees8 bes8.[ c16] bes8 |
   ees4.~ ees4 \bar"|."

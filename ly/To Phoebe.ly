@@ -1,9 +1,9 @@
-﻿\version "2.14.2"
+\version "2.14.2"
 \include "util.ly"
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"My Lodging is on the Cold Ground"}}
-  composer = \markup\oldStyleNum"English Folk Song, 17th or 18th Century"
-  poet = \markup\oldStyleNum"John Gay (1685–1732), based on a song from 1665 or earlier"
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"To Phœbe"}}
+  poet = \markup\oldStyleNum"W. S. Gilbert (1836–1911)"
+  composer = \markup\oldStyleNum"John Frederick Bridge (1844-1924)"
   tagline = ""
 }
 \paper {
@@ -17,7 +17,7 @@
        (minimum-distance . 0)
        (padding . 1)
        (stretchability . 100))
-  ragged-last-bottom = ##t
+  ragged-last-bottom = ##f
   ragged-bottom = ##f
   two-sided = ##t
   inner-margin = 1\in
@@ -45,8 +45,8 @@
 }
 #(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
 global = {
-  \key ees \major
-  \time 6/8
+  \key e \major
+  \time 2/4
   \dynamicUp
   %\set crescendoSpanner = #'dashed-line
   %\set midiInstrument = "recorder"
@@ -55,54 +55,85 @@ global = {
 }
 
 sopMusic = \relative c' {
-	\partial 8 g'16[ f] |
-  ees8. f16 ees8 ees[ g] bes |
-  aes[ c ees] ees4 d16[ c] |
+  \repeat unfold 2 {
+  	gis'4. e8 |
+    fis gis fis gis |
+    a4 gis-. |
+    gis4.  fis8 |
+    fis gis fis cis |
+    dis4 b'\rest |
 
-  bes8. aes16 g8 f8. ees16 f8 |
-  g4.~ g4 g16[ f] |
-  ees8.[ f16] ees8 ees[ g] bes |
-
-  aes[ c ees]~ ees d c |
-  bes[ ees] g, f8.[ ees16] f8 |
-  ees4.~ ees4 bes'8 |
-
-  %page2
-  bes[ g] ees' ees4 bes8 |
-  c[ aes ees'] ees4 d16[ c] |
-  bes8. aes16 g8 f8.[ ees16] f8 |
-
-  g4.~ g4 g16[ f] |
-  ees8. f16 ees8 ees[ g] bes |
-  aes[ c ees] ees4\fermata d16[ c] |
+    gis4. fis8 |
+    e a gis fis |
+    \slurDashed fisis4( gis-.) |
+    \slurSolid
+    fis4. gis8 |
+    b16[ a] cis,[ fis] e8-. dis-. |
+    e2 |
+  }
   
-  bes8[ ees] g, f8.[ ees16] f8 |
-  ees4.~ ees4 \bar"|."
+  %page2
+  e4. c8 |
+  c d e f |
+  f4 e-. |
+  d4. cis!8 |
+  d cis d dis |
+  e2 |
+  gis!4. e8 |
+
+  %page3
+  e8 fis gis a |
+  a4-. gis-. |
+  b\rest fis8. c16 |
+  b4 e |
+  e4. fis8 |
+  gis2 |
+  a4. fis8 |
+
+  e4 b-. |
+  b'4\rest\fermata fis8. gis16 |
+  e2\fermata \bar"|."
 }
 sopWords = \lyricmode {
   \set stanza = #"1. "
-	My lodg -- ing is on __ the cold __ ground,
-  And hard, ver -- y hard is my fare, __
-  But that __ which grieves me more __ is
-  The cold -- ness of __ my dear. __
-  Yet still I cry, oh! turn, __ love,
-  I __ pri -- thee, love, turn __ to me; __
-  For thou art the on -- ly one, __ love,
-  That art __ a -- dor’d __ by me. __
+  “Gen -- tle, mod -- est, lit -- tle flow -- er,
+  Sweet e -- pi -- to -- me of May,
+  Love me but for half an hour,
+  Love me, love me lit -- tle fay,
+
+  Gen -- tle, mod -- est, lit -- tle flow -- er,
+  Sweet e -- pi -- to -- me of May,
+  Love me but for half an hour,
+  Love me, love me lit -- tle fay.”
+
+  Sen -- ten -- ces so fierce -- ly flam -- ing
+  In your ti -- ny, shell -- like ear;
+  I should
+
+  al -- ways be ex -- claim -- ing—
+  If I loved you, Phœ -- be dear,
+  if I loved you, Phœ -- be dear!
 }
 
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
-  \set ignoreMelismata = ##t
-  I’ll _ twine thee a gar -- land of straw, __ _ _ love,
-  I’ll _ mar -- ry thee with a rush ring; __ _
-  My _ froz -- _ en hopes _ will thaw, __ _ _ _ love,
-  And mer -- ri -- ly we __ _ will sing. __ _
-  Then turn _ to me, my own __ _ _ love,
+  “Smiles that thrill from a -- ny dis -- tance,
+  Shed up -- on me while I sing!
+  Please ec -- sta -- ti -- cise \set ignoreMelismata = ##t ex -- ist -- ence,
   \unset ignoreMelismata
-  I __ pri -- thee, love, turn __ to me; __
-  For thou art the on -- ly one, __ love,
-  That art __ a -- dor’d __ by me. __
+  Love me, oh thou fai -- ry thing!
+  Smiles that thrill from a -- ny dis -- tance,
+  Shed up -- on me while I sing!
+  Please ec -- sta -- ti -- cise \set ignoreMelismata = ##t ex -- ist -- ence;
+  \unset ignoreMelismata
+  Love me, oh thou fai -- ry thing!”
+
+
+  Words like these out -- pour -- ing sad -- ly,
+  You’d per -- pet -- u -- al -- ly hear,
+  If I loved you, fond -- ly, mad -- ly—
+  But I do not, Phœ -- be dear!
+  but I do not, Phœ -- be dear!
 }
 
 sopWordsIII = \lyricmode {
@@ -118,26 +149,44 @@ sopWordsV = \lyricmode {
 }
 
 altoMusic = \relative c' {
-  ees8 |
-  bes8. bes16 bes8 bes[ ees] g |
-  aes[ ees c'] aes4 f16[ aes] |
-  g8. f16 ees8 d8. c16 d8 |
-  ees4.~ ees4 ees8 |
+  \repeat unfold 2 {
+    e4. b8 |
+    dis e dis e |
+    fis4 e-. |
+    e4. e8 |
+    e e e ais, |
+    b4 s |
 
-  bes4 bes8 bes[ ees] des |
-  c[ ees aes]( fis) fis fis |
-  g[ g] ees d8.[ c16] d8 |
-  bes4.~ bes4 g'8 |
+    bis4. bis8 |
+    cis e dis dis |
+    \tieDashed dis4~ dis |
+    \tieSolid
+    cis4. cis8 |
+    cis cis b-. b-. |
+    b2 |
+  }
 
-  g[ ees] g g4 g8 |
-  ees8[ c aes'] ees4 f16[ aes] |
-  g8. f16 ees8 d8.[ c16] d8 |
-  ees4.~ ees4 ees8 |
+  %page2
+  c4. c8 |
+  c c c c |
+  b4 c-. |
+  b4. b8 |
+  b b b b |
+  c2 |
+  b4. b8 |
 
-  bes8. bes16 bes8 bes[ ees] g |
-  aes[ ees c'] aes4 f16[ aes] |
-  g4 ees8 d8.[ c16] d8 |
-  bes4.~ bes4 \bar"|."
+  %page3
+  b b b e |
+  dis4-. e-. |
+  s c8. c16 |
+  b4 b |
+  cis!4. cis8 |
+  dis2 |
+  fis4. cis8 |
+
+  b4 gis-. |
+  s dis'8. dis16 |
+  e2 |
 }
 altoWords = \lyricmode {
 }
@@ -160,26 +209,44 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
-  bes8 |
-  g8. aes16 g8 g[ bes] bes |
-  c[ aes aes] c4 bes16[ ees] |
-  bes8. bes16 bes8 aes8. g16 aes8 |
-  bes4.~ bes4 bes8 |
+  \repeat unfold 2 {
+    b4. gis8 |
+    c b c b |
+    dis4 e-. |
+    ais,4. ais8 |
+    ais b ais fis |
+    fis4 s |
 
-  g8.[ aes16] g8 g[ bes] g8 |
-  aes8[ c aes]( c) c c |
-  ees[ ees] bes aes8.[ g16] aes8 |
-  g4.~ g4 bes8 |
+    gis4. gis8 |
+    gis cis b cis |
+    \slurDashed cis4( bis-.) |
+    \slurSolid
+    cis4. b8 |
+    a a gis-. fis-. |
+    gis2 |
+  }
 
-  bes4 bes8 bes4 ees8 |
-  c[ ees aes,] c4 bes16[ ees] |
-  bes8. bes16 bes8 aes8.[ g16] aes8 |
-  bes4.~ bes4 bes8 |
+  %page2
+  g4. e8 |
+  e f g aes |
+  aes4 g-. |
+  aes4. aes8 |
+  aes aes aes aes |
+  g2 |
+  gis!4. gis8 |
 
-  g8. aes16 g8 g[ bes] bes |
-  c[ aes aes] c4 bes16[ ees] |
-  bes4 bes8 aes8.[ g16] aes8 |
-  g4.~ g4 \bar"|."
+  %page3
+  gis a b c |
+  c4-. b-. |
+  s a8. a16 |
+  gis4 gis |
+  a4. cis8 |
+  bis2 |
+  cis4. a8 |
+
+  gis4 e-. |
+  s a8. b16 |
+  gis2
 }
 
 tenorWords = \lyricmode {
@@ -192,30 +259,46 @@ tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  ees,8 |
-  ees8. d16 ees8 ees8[ ees] ees |
-  ees8[ c aes] aes4 bes16[ c] |
 
-  ees8. ees16 ees8 bes8. c16 bes8 |
-  ees4.~ ees4 ees8 |
-  ees8.[ d16] ees8 ees4 ees8 |
+  \repeat unfold 2 {
+    e,4. e8 |
+    e e e e |
+    e4 e-. |
+    fis4. fis8 |
+    fis fis fis, fis |
+    b4 d\rest |
 
-  aes,4.( a8) a a |
-  bes8[ bes] bes bes8.[ c16] bes8 |
-  ees4.~ ees4 ees8 |
-
+    gis,4. gis8 |
+    cis a b a |
+    \slurDashed a4( gis-.) |
+    \slurSolid
+    a4. gis8 |
+    fis a b-. b-. |
+    e2 |
+  }
   %page2
-  ees4 ees8 ees4 g8 |
-  aes[ ees c] aes4 bes16[ c] |
-  ees8. ees16 ees8 bes8.[ c16] bes8 |
+  c4. c8 |
+  c c c c |
+  c4 c-. |
+  f4. f8 |
+  f f f f |
+  c2 |
+  e4. e8 |
 
-  ees4.~ ees4 ees8 |
-  ees8. d16 ees8 ees4 ees8 |
-  ees8[ c aes] aes4 bes16[ c] |
+  %page3
+  e e e e |
+  e4-. e-. |
+  d\rest a8. a16 |
+  b4 b |
+  a4. a'8 |
+  gis2 |
+  fis4. a,8 |
 
-  ees4 ees8 bes8.[ c16] bes8 |
-  ees4.~ ees4 \bar"|."
+  b4 b-. |
+  d\rest\fermata b8. b16 |
+  e,2\fermata
 }
+
 bassWords = \lyricmode {
 }
 
@@ -248,7 +331,7 @@ pianoLH = \relative c' {
 %    \new PianoStaff << \new Staff { \new Voice { \pianoRH } } \new Staff { \clef "bass" \pianoLH } >>
   >>
   \midi {
-    \tempo 4 = 75
+    \tempo 4 = 90
     \set Staff.midiInstrument = "flute"
     \context {
       \Voice

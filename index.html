@@ -1,19 +1,43 @@
+---
+title: Songs from the Public Domain
+---
 <!DOCTYPE html>
 <html>
 
   <head>
     <meta charset='utf-8' />
-    <meta name="google-site-verification" content="GVPACo1-b_ySAxPjYVPones11Ry_MNE7E4ABfKdkrl0" />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Songs from the Public Domain : " />
+    <meta name="description" content="A Collection of Christmas Carols : A Book of more than 150 traditional Christmas Carols" />
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../stylesheets/stylesheet.css">
 
-    <title>Songs from the Public Domain</title>
+    <title>{{ page.title }}</title>
+    <!-- midi.js css -->
+    <link href="./css/MIDIPlayer.css" rel="stylesheet" type="text/css" />
+    <!-- midi.js package -->
+    <script src="./js/MIDI/AudioDetect.js" type="text/javascript"></script>
+    <script src="./js/MIDI/LoadPlugin.js" type="text/javascript"></script>
+    <script src="./js/MIDI/Plugin.js" type="text/javascript"></script>
+    <script src="./js/MIDI/Player.js" type="text/javascript"></script>
+    <script src="./js/Widgets/Loader.js" type="text/javascript"></script>
+    <script src="./js/Window/Event.js" type="text/javascript"></script>
+    <script src="./js/Window/DOMLoader.XMLHttp.js" type="text/javascript"></script>
+    <script src="./js/Window/DOMLoader.script.js" type="text/javascript"></script>
+    <!-- jasmid package -->
+    <script src="./inc/jasmid/stream.js"></script>
+    <script src="./inc/jasmid/midifile.js"></script>
+    <script src="./inc/jasmid/replayer.js"></script>
+    <!-- extras -->
+    <script src="./inc/Base64.js" type="text/javascript"></script>
+    <script src="./inc/base64binary.js" type="text/javascript"></script>
+    <!-- code to handle the page -->
+    <script src="./js/jquery.min.js" type="text/javascript"></script>
+    <script src="./js/audioplayer.js" type="text/javascript"></script>
   </head>
 
   <body>
 
+    
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner">
@@ -21,11 +45,6 @@
 
           <h1 id="project_title">Songs from the Public Domain</h1>
           <h2 id="project_tagline"></h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/bbloomf/lilypond-songs/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/bbloomf/lilypond-songs/tarball/master">Download this project as a tar.gz file</a>
-            </section>
         </header>
     </div>
 
@@ -41,306 +60,13 @@
 <a name="midispdfs" class="anchor" href="#midispdfs"><span class="octicon octicon-link"></span></a>MIDIs/PDFs</h3>
 
 <ul>
-<li>Abide with me <a href="downloads/Abide%20with%20me.midi">(midi)</a> <a href="downloads/Abide%20with%20me.pdf">(pdf)</a>
-</li>
-<li>America <a href="downloads/America.midi">(midi)</a> <a href="downloads/America.pdf">(pdf)</a>
-</li>
-<li>America the Beautiful <a href="downloads/America%20the%20Beautiful.midi">(midi)</a> <a href="downloads/America%20the%20Beautiful.pdf">(pdf)</a>
-</li>
-<li>Am I Not Fondly Thine Own <a href="downloads/Am%20I%20Not%20Fondly%20Thine%20Own.midi">(midi)</a> <a href="downloads/Am%20I%20Not%20Fondly%20Thine%20Own.pdf">(pdf)</a>
-</li>
-<li>Annie Laurie <a href="downloads/Annie%20Laurie.midi">(midi)</a> <a href="downloads/Annie%20Laurie.pdf">(pdf)</a>
-</li>
-<li>The Ash Grove <a href="downloads/The%20Ash%20Grove.midi">(midi)</a> <a href="downloads/The%20Ash%20Grove.pdf">(pdf)</a>
-</li>
-<li>The Battle Cry of Freedom (Confederate) <a href="downloads/The%20Battle%20Cry%20of%20Freedom%20(Confederate).midi">(midi)</a> <a href="downloads/The%20Battle%20Cry%20of%20Freedom%20(Confederate).pdf">(pdf)</a>
-</li>
-<li>The Battle Cry of Freedom <a href="downloads/The%20Battle%20Cry%20of%20Freedom.midi">(midi)</a> <a href="downloads/The%20Battle%20Cry%20of%20Freedom.pdf">(pdf)</a>
-</li>
-<li>The Battle Hymn of the Republic <a href="downloads/The%20Battle%20Hymn%20of%20the%20Republic.midi">(midi)</a> <a href="downloads/The%20Battle%20Hymn%20of%20the%20Republic.pdf">(pdf)</a>
-</li>
-<li>The Battle Prayer <a href="downloads/The%20Battle%20Prayer.midi">(midi)</a> <a href="downloads/The%20Battle%20Prayer.pdf">(pdf)</a>
-</li>
-<li>The bell doth toll <a href="downloads/The%20bell%20doth%20toll.midi">(midi)</a> <a href="downloads/The%20bell%20doth%20toll.pdf">(pdf)</a>
-</li>
-<li>Be Still, My Soul <a href="downloads/Be%20Still,%20My%20Soul.midi">(midi)</a> <a href="downloads/Be%20Still,%20My%20Soul.pdf">(pdf)</a>
-</li>
-<li>The Birds’ Ball <a href="downloads/The%20Birds%E2%80%99%20Ball.midi">(midi)</a> <a href="downloads/The%20Birds%E2%80%99%20Ball.pdf">(pdf)</a>
-</li>
-<li>The Blue Bells of Scotland <a href="downloads/The%20Blue%20Bells%20of%20Scotland.midi">(midi)</a> <a href="downloads/The%20Blue%20Bells%20of%20Scotland.pdf">(pdf)</a>
-</li>
-<li>Boating Song <a href="downloads/Boating%20Song.midi">(midi)</a> <a href="downloads/Boating%20Song.pdf">(pdf)</a>
-</li>
-<li>The Bonnie Blue Flag <a href="downloads/The%20Bonnie%20Blue%20Flag.midi">(midi)</a> <a href="downloads/The%20Bonnie%20Blue%20Flag.pdf">(pdf)</a>
-</li>
-<li>Bonnie Doon <a href="downloads/Bonnie%20Doon.midi">(midi)</a> <a href="downloads/Bonnie%20Doon.pdf">(pdf)</a>
-</li>
-<li>Bonnie Dundee <a href="downloads/Bonnie%20Dundee.midi">(midi)</a> <a href="downloads/Bonnie%20Dundee.pdf">(pdf)</a>
-</li>
-<li>Bride Bells <a href="downloads/Bride%20Bells.midi">(midi)</a> <a href="downloads/Bride%20Bells.pdf">(pdf)</a>
-</li>
-<li>Brightly dawns our wedding day <a href="downloads/Brightly%20dawns%20our%20wedding%20day.midi">(midi)</a> <a href="downloads/Brightly%20dawns%20our%20wedding%20day.pdf">(pdf)</a>
-</li>
-<li>A British Tar <a href="downloads/A%20British%20Tar.midi">(midi)</a> <a href="downloads/A%20British%20Tar.pdf">(pdf)</a>
-</li>
-<li>By the Sad Sea Waves <a href="downloads/By%20the%20Sad%20Sea%20Waves.midi">(midi)</a> <a href="downloads/By%20the%20Sad%20Sea%20Waves.pdf">(pdf)</a>
-</li>
-<li>A Capital Ship <a href="downloads/A%20Capital%20Ship.midi">(midi)</a> <a href="downloads/A%20Capital%20Ship.pdf">(pdf)</a>
-</li>
-<li>Catch Round the Table <a href="downloads/Catch%20Round%20the%20Table.midi">(midi)</a> <a href="downloads/Catch%20Round%20the%20Table.pdf">(pdf)</a>
-</li>
-<li>Come, Thou Fount of Every Blessing <a href="downloads/Come,%20Thou%20Fount%20of%20Every%20Blessing.midi">(midi)</a> <a href="downloads/Come,%20Thou%20Fount%20of%20Every%20Blessing.pdf">(pdf)</a>
-</li>
-<li>Come again, sweet love <a href="downloads/Come%20again,%20sweet%20love.midi">(midi)</a> <a href="downloads/Come%20again,%20sweet%20love.pdf">(pdf)</a>
-</li>
-<li>Come Follow <a href="downloads/Come%20Follow.midi">(midi)</a> <a href="downloads/Come%20Follow.pdf">(pdf)</a>
-</li>
-<li>Come Follow Me Merrily <a href="downloads/Come%20Follow%20Me%20Merrily.midi">(midi)</a> <a href="downloads/Come%20Follow%20Me%20Merrily.pdf">(pdf)</a>
-</li>
-<li>Come Let Us All A-Maying Go <a href="downloads/Come%20Let%20Us%20All%20A-Maying%20Go.midi">(midi)</a> <a href="downloads/Come%20Let%20Us%20All%20A-Maying%20Go.pdf">(pdf)</a>
-</li>
-<li>Could I a maiden find <a href="downloads/Could%20I%20a%20maiden%20find.midi">(midi)</a> <a href="downloads/Could%20I%20a%20maiden%20find.pdf">(pdf)</a>
-</li>
-<li>The criminal cried <a href="downloads/The%20criminal%20cried.midi">(midi)</a> <a href="downloads/The%20criminal%20cried.pdf">(pdf)</a>
-</li>
-<li>Darby and Joan <a href="downloads/Darby%20and%20Joan.midi">(midi)</a> <a href="downloads/Darby%20and%20Joan.pdf">(pdf)</a>
-</li>
-<li>De Brevitate Vitæ <a href="downloads/De%20Brevitate%20Vit%C3%A6.midi">(midi)</a> <a href="downloads/De%20Brevitate%20Vit%C3%A6.pdf">(pdf)</a>
-</li>
-<li>The Distant Shore <a href="downloads/The%20Distant%20Shore.midi">(midi)</a> <a href="downloads/The%20Distant%20Shore.pdf">(pdf)</a>
-</li>
-<li>Dixie <a href="downloads/Dixie.midi">(midi)</a> <a href="downloads/Dixie.pdf">(pdf)</a>
-</li>
-<li>Dreaming of Home and Mother <a href="downloads/Dreaming%20of%20Home%20and%20Mother.midi">(midi)</a> <a href="downloads/Dreaming%20of%20Home%20and%20Mother.pdf">(pdf)</a>
-</li>
-<li>Dublin Bay <a href="downloads/Dublin%20Bay.midi">(midi)</a> <a href="downloads/Dublin%20Bay.pdf">(pdf)</a>
-</li>
-<li>Ego sum pauper <a href="downloads/Ego%20sum%20pauper.midi">(midi)</a> <a href="downloads/Ego%20sum%20pauper.pdf">(pdf)</a>
-</li>
-<li>Ein Prosit <a href="downloads/Ein%20Prosit.midi">(midi)</a> <a href="downloads/Ein%20Prosit.pdf">(pdf)</a>
-</li>
-<li>Fairy Belle <a href="downloads/Fairy%20Belle.midi">(midi)</a> <a href="downloads/Fairy%20Belle.pdf">(pdf)</a>
-</li>
-<li>The Flight of Love <a href="downloads/The%20Flight%20of%20Love.midi">(midi)</a> <a href="downloads/The%20Flight%20of%20Love.pdf">(pdf)</a>
-</li>
-<li>The Flowers that Bloom in the Spring <a href="downloads/The%20Flowers%20that%20Bloom%20in%20the%20Spring.midi">(midi)</a> <a href="downloads/The%20Flowers%20that%20Bloom%20in%20the%20Spring.pdf">(pdf)</a>
-</li>
-<li>Flow Gently, Sweet Afton <a href="downloads/Flow%20Gently,%20Sweet%20Afton.midi">(midi)</a> <a href="downloads/Flow%20Gently,%20Sweet%20Afton.pdf">(pdf)</a>
-</li>
-<li>For he’s a jolly good fellow <a href="downloads/For%20he%E2%80%99s%20a%20jolly%20good%20fellow.midi">(midi)</a> <a href="downloads/For%20he%E2%80%99s%20a%20jolly%20good%20fellow.pdf">(pdf)</a>
-</li>
-<li>Gaudeamus Hodie <a href="downloads/Gaudeamus%20Hodie.midi">(midi)</a> <a href="downloads/Gaudeamus%20Hodie.pdf">(pdf)</a>
-</li>
-<li>The Girl I Left Behind Me <a href="downloads/The%20Girl%20I%20Left%20Behind%20Me.midi">(midi)</a> <a href="downloads/The%20Girl%20I%20Left%20Behind%20Me.pdf">(pdf)</a>
-</li>
-<li>Glorious Things of Thee Are Spoken <a href="downloads/Glorious%20Things%20of%20Thee%20Are%20Spoken.midi">(midi)</a> <a href="downloads/Glorious%20Things%20of%20Thee%20Are%20Spoken.pdf">(pdf)</a>
-</li>
-<li>Glory be to Jesus <a href="downloads/Glory%20be%20to%20Jesus.midi">(midi)</a> <a href="downloads/Glory%20be%20to%20Jesus.pdf">(pdf)</a>
-</li>
-<li>God be with you till we meet again <a href="downloads/God%20be%20with%20you%20till%20we%20meet%20again.midi">(midi)</a> <a href="downloads/God%20be%20with%20you%20till%20we%20meet%20again.pdf">(pdf)</a>
-</li>
-<li>God so loved the world <a href="downloads/God%20so%20loved%20the%20world.midi">(midi)</a> <a href="downloads/God%20so%20loved%20the%20world.pdf">(pdf)</a>
-</li>
-<li>Good Night Ladies <a href="downloads/Good%20Night%20Ladies.midi">(midi)</a> <a href="downloads/Good%20Night%20Ladies.pdf">(pdf)</a>
-</li>
-<li>Hail! Smiling Morn <a href="downloads/Hail!%20Smiling%20Morn.midi">(midi)</a> <a href="downloads/Hail!%20Smiling%20Morn.pdf">(pdf)</a>
-</li>
-<li>The Hand that Holds the Bread <a href="downloads/The%20Hand%20that%20Holds%20the%20Bread.midi">(midi)</a> <a href="downloads/The%20Hand%20that%20Holds%20the%20Bread.pdf">(pdf)</a>
-</li>
-<li>Happy Hours at Home <a href="downloads/Happy%20Hours%20at%20Home.midi">(midi)</a> <a href="downloads/Happy%20Hours%20at%20Home.pdf">(pdf)</a>
-</li>
-<li>Hard Times <a href="downloads/Hard%20Times.midi">(midi)</a> <a href="downloads/Hard%20Times.pdf">(pdf)</a>
-</li>
-<li>Hark! the vesper hymn is stealing <a href="downloads/Hark!%20the%20vesper%20hymn%20is%20stealing.midi">(midi)</a> <a href="downloads/Hark!%20the%20vesper%20hymn%20is%20stealing.pdf">(pdf)</a>
-</li>
-<li>The Harp that Once Through Tara’s Halls <a href="downloads/The%20Harp%20that%20Once%20Through%20Tara%E2%80%99s%20Halls.midi">(midi)</a> <a href="downloads/The%20Harp%20that%20Once%20Through%20Tara%E2%80%99s%20Halls.pdf">(pdf)</a>
-</li>
-<li>The Hazel Dell <a href="downloads/The%20Hazel%20Dell.midi">(midi)</a> <a href="downloads/The%20Hazel%20Dell.pdf">(pdf)</a>
-</li>
-<li>The Heart Bowed Down <a href="downloads/The%20Heart%20Bowed%20Down.midi">(midi)</a> <a href="downloads/The%20Heart%20Bowed%20Down.pdf">(pdf)</a>
-</li>
-<li>He that Will an Alehouse Keep <a href="downloads/He%20that%20Will%20an%20Alehouse%20Keep.midi">(midi)</a> <a href="downloads/He%20that%20Will%20an%20Alehouse%20Keep.pdf">(pdf)</a>
-</li>
-<li>Home Sweet Home <a href="downloads/Home%20Sweet%20Home.midi">(midi)</a> <a href="downloads/Home%20Sweet%20Home.pdf">(pdf)</a>
-</li>
-<li>A Hot Time in the Old Town <a href="downloads/A%20Hot%20Time%20in%20the%20Old%20Town.midi">(midi)</a> <a href="downloads/A%20Hot%20Time%20in%20the%20Old%20Town.pdf">(pdf)</a>
-</li>
-<li>How can I leave thee <a href="downloads/How%20can%20I%20leave%20thee.midi">(midi)</a> <a href="downloads/How%20can%20I%20leave%20thee.pdf">(pdf)</a>
-</li>
-<li>How Lovely Is the Evening <a href="downloads/How%20Lovely%20Is%20the%20Evening.midi">(midi)</a> <a href="downloads/How%20Lovely%20Is%20the%20Evening.pdf">(pdf)</a>
-</li>
-<li>I dreamt I dwelt in marble halls <a href="downloads/I%20dreamt%20I%20dwelt%20in%20marble%20halls.midi">(midi)</a> <a href="downloads/I%20dreamt%20I%20dwelt%20in%20marble%20halls.pdf">(pdf)</a>
-</li>
-<li>Integer Vitae <a href="downloads/Integer%20Vitae.midi">(midi)</a> <a href="downloads/Integer%20Vitae.pdf">(pdf)</a>
-</li>
-<li>In the Spring <a href="downloads/In%20the%20Spring.midi">(midi)</a> <a href="downloads/In%20the%20Spring.pdf">(pdf)</a>
-</li>
-<li>It was a lover and his lass <a href="downloads/It%20was%20a%20lover%20and%20his%20lass.midi">(midi)</a> <a href="downloads/It%20was%20a%20lover%20and%20his%20lass.pdf">(pdf)</a>
-</li>
-<li>It’s Delightful to be Married! <a href="downloads/It%E2%80%99s%20Delightful%20to%20be%20Married!.midi">(midi)</a> <a href="downloads/It%E2%80%99s%20Delightful%20to%20be%20Married!.pdf">(pdf)</a>
-</li>
-<li>Jamie’s on the Stormy Sea <a href="downloads/Jamie%E2%80%99s%20on%20the%20Stormy%20Sea.midi">(midi)</a> <a href="downloads/Jamie%E2%80%99s%20on%20the%20Stormy%20Sea.pdf">(pdf)</a>
-</li>
-<li>Jenny the Flower of Kildare <a href="downloads/Jenny%20the%20Flower%20of%20Kildare.midi">(midi)</a> <a href="downloads/Jenny%20the%20Flower%20of%20Kildare.pdf">(pdf)</a>
-</li>
-<li>Jesus, Lover of my soul <a href="downloads/Jesus,%20Lover%20of%20my%20soul.midi">(midi)</a> <a href="downloads/Jesus,%20Lover%20of%20my%20soul.pdf">(pdf)</a>
-</li>
-<li>Jesus! the very thought of Thee <a href="downloads/Jesus!%20the%20very%20thought%20of%20Thee.midi">(midi)</a> <a href="downloads/Jesus!%20the%20very%20thought%20of%20Thee.pdf">(pdf)</a>
-</li>
-<li>John Anderson, my jo <a href="downloads/John%20Anderson,%20my%20jo.midi">(midi)</a> <a href="downloads/John%20Anderson,%20my%20jo.pdf">(pdf)</a>
-</li>
-<li>Johnny Sands <a href="downloads/Johnny%20Sands.midi">(midi)</a> <a href="downloads/Johnny%20Sands.pdf">(pdf)</a>
-</li>
-<li>Killarney <a href="downloads/Killarney.midi">(midi)</a> <a href="downloads/Killarney.pdf">(pdf)</a>
-</li>
-<li>La ci darem la mano <a href="downloads/La%20ci%20darem%20la%20mano.midi">(midi)</a> <a href="downloads/La%20ci%20darem%20la%20mano.pdf">(pdf)</a>
-</li>
-<li>Lead Kindly Light <a href="downloads/Lead%20Kindly%20Light.midi">(midi)</a> <a href="downloads/Lead%20Kindly%20Light.pdf">(pdf)</a>
-</li>
-<li>A Life on the Ocean Wave <a href="downloads/A%20Life%20on%20the%20Ocean%20Wave.midi">(midi)</a> <a href="downloads/A%20Life%20on%20the%20Ocean%20Wave.pdf">(pdf)</a>
-</li>
-<li>Listen to the Mocking Bird <a href="downloads/Listen%20to%20the%20Mocking%20Bird.midi">(midi)</a> <a href="downloads/Listen%20to%20the%20Mocking%20Bird.pdf">(pdf)</a>
-</li>
-<li>The Little Tin Soldier <a href="downloads/The%20Little%20Tin%20Soldier.midi">(midi)</a> <a href="downloads/The%20Little%20Tin%20Soldier.pdf">(pdf)</a>
-</li>
-<li>Live we singing <a href="downloads/Live%20we%20singing.midi">(midi)</a> <a href="downloads/Live%20we%20singing.pdf">(pdf)</a>
-</li>
-<li>Loch Lomond <a href="downloads/Loch%20Lomond.midi">(midi)</a> <a href="downloads/Loch%20Lomond.pdf">(pdf)</a>
-</li>
-<li>Long, Long Ago <a href="downloads/Long,%20Long%20Ago.midi">(midi)</a> <a href="downloads/Long,%20Long%20Ago.pdf">(pdf)</a>
-</li>
-<li>The Lorelei <a href="downloads/The%20Lorelei.midi">(midi)</a> <a href="downloads/The%20Lorelei.pdf">(pdf)</a>
-</li>
-<li>Love’s Chidings <a href="downloads/Love%E2%80%99s%20Chidings.midi">(midi)</a> <a href="downloads/Love%E2%80%99s%20Chidings.pdf">(pdf)</a>
-</li>
-<li>Love’s Young Dream <a href="downloads/Love%E2%80%99s%20Young%20Dream.midi">(midi)</a> <a href="downloads/Love%E2%80%99s%20Young%20Dream.pdf">(pdf)</a>
-</li>
-<li>Maid of Athens <a href="downloads/Maid%20of%20Athens.midi">(midi)</a> <a href="downloads/Maid%20of%20Athens.pdf">(pdf)</a>
-</li>
-<li>The March of Prohibition <a href="downloads/The%20March%20of%20Prohibition.midi">(midi)</a> <a href="downloads/The%20March%20of%20Prohibition.pdf">(pdf)</a>
-</li>
-<li>Merrily Greet the Morn <a href="downloads/Merrily%20Greet%20the%20Morn.midi">(midi)</a> <a href="downloads/Merrily%20Greet%20the%20Morn.pdf">(pdf)</a>
-</li>
-<li>Merrily Sing <a href="downloads/Merrily%20Sing.midi">(midi)</a> <a href="downloads/Merrily%20Sing.pdf">(pdf)</a>
-</li>
-<li>The Midshipmite <a href="downloads/The%20Midshipmite.midi">(midi)</a> <a href="downloads/The%20Midshipmite.pdf">(pdf)</a>
-</li>
-<li>The Minstrel Boy <a href="downloads/The%20Minstrel%20Boy.midi">(midi)</a> <a href="downloads/The%20Minstrel%20Boy.pdf">(pdf)</a>
-</li>
-<li>Mister Speaker, though ’tis late <a href="downloads/Mister%20Speaker,%20though%20%E2%80%99tis%20late.midi">(midi)</a> <a href="downloads/Mister%20Speaker,%20though%20%E2%80%99tis%20late.pdf">(pdf)</a>
-</li>
-<li>My bonny lass she smileth <a href="downloads/My%20bonny%20lass%20she%20smileth.midi">(midi)</a> <a href="downloads/My%20bonny%20lass%20she%20smileth.pdf">(pdf)</a>
-</li>
-<li>My Old Kentucky Home <a href="downloads/My%20Old%20Kentucky%20Home.midi">(midi)</a> <a href="downloads/My%20Old%20Kentucky%20Home.pdf">(pdf)</a>
-</li>
-<li>Nancy Lee <a href="downloads/Nancy%20Lee.midi">(midi)</a> <a href="downloads/Nancy%20Lee.pdf">(pdf)</a>
-</li>
-<li>Night Song <a href="downloads/Night%20Song.midi">(midi)</a> <a href="downloads/Night%20Song.pdf">(pdf)</a>
-</li>
-<li>Now is the month of maying <a href="downloads/Now%20is%20the%20month%20of%20maying.midi">(midi)</a> <a href="downloads/Now%20is%20the%20month%20of%20maying.pdf">(pdf)</a>
-</li>
-<li>O Calm of Night <a href="downloads/O%20Calm%20of%20Night.midi">(midi)</a> <a href="downloads/O%20Calm%20of%20Night.pdf">(pdf)</a>
-</li>
-<li>Ode to Joy <a href="downloads/Ode%20to%20Joy.midi">(midi)</a> <a href="downloads/Ode%20to%20Joy.pdf">(pdf)</a>
-</li>
-<li>O Fair Dove, O Fond Dove <a href="downloads/O%20Fair%20Dove,%20O%20Fond%20Dove.midi">(midi)</a> <a href="downloads/O%20Fair%20Dove,%20O%20Fond%20Dove.pdf">(pdf)</a>
-</li>
-<li>Oft in the stilly night <a href="downloads/Oft%20in%20the%20stilly%20night.midi">(midi)</a> <a href="downloads/Oft%20in%20the%20stilly%20night.pdf">(pdf)</a>
-</li>
-<li>Oh, happy is the man that hears <a href="downloads/Oh,%20happy%20is%20the%20man%20that%20hears.midi">(midi)</a> <a href="downloads/Oh,%20happy%20is%20the%20man%20that%20hears.pdf">(pdf)</a>
-</li>
-<li>Oh My Love <a href="downloads/Oh%20My%20Love.midi">(midi)</a> <a href="downloads/Oh%20My%20Love.pdf">(pdf)</a>
-</li>
-<li>Old Dog Tray <a href="downloads/Old%20Dog%20Tray.midi">(midi)</a> <a href="downloads/Old%20Dog%20Tray.pdf">(pdf)</a>
-</li>
-<li>The Old Folks at Home <a href="downloads/The%20Old%20Folks%20at%20Home.midi">(midi)</a> <a href="downloads/The%20Old%20Folks%20at%20Home.pdf">(pdf)</a>
-</li>
-<li>The Old Musician and His Harp <a href="downloads/The%20Old%20Musician%20and%20His%20Harp.midi">(midi)</a> <a href="downloads/The%20Old%20Musician%20and%20His%20Harp.pdf">(pdf)</a>
-</li>
-<li>The Old Time <a href="downloads/The%20Old%20Time.midi">(midi)</a> <a href="downloads/The%20Old%20Time.pdf">(pdf)</a>
-</li>
-<li>Once to Every Man and Nation <a href="downloads/Once%20to%20Every%20Man%20and%20Nation.midi">(midi)</a> <a href="downloads/Once%20to%20Every%20Man%20and%20Nation.pdf">(pdf)</a>
-</li>
-<li>On the Banks of the Wabash, Far Away <a href="downloads/On%20the%20Banks%20of%20the%20Wabash,%20Far%20Away.midi">(midi)</a> <a href="downloads/On%20the%20Banks%20of%20the%20Wabash,%20Far%20Away.pdf">(pdf)</a>
-</li>
-<li>O Sole Mio <a href="downloads/O%20Sole%20Mio.midi">(midi)</a> <a href="downloads/O%20Sole%20Mio.pdf">(pdf)</a>
-</li>
-<li>Praise of Spring <a href="downloads/Praise%20of%20Spring.midi">(midi)</a> <a href="downloads/Praise%20of%20Spring.pdf">(pdf)</a>
-</li>
-<li>The Pretty Girl Milking Her Cow <a href="downloads/The%20Pretty%20Girl%20Milking%20Her%20Cow.midi">(midi)</a> <a href="downloads/The%20Pretty%20Girl%20Milking%20Her%20Cow.pdf">(pdf)</a>
-</li>
-<li>Punchinello <a href="downloads/Punchinello.midi">(midi)</a> <a href="downloads/Punchinello.pdf">(pdf)</a>
-</li>
-<li>Red is the Rose <a href="downloads/Red%20is%20the%20Rose.midi">(midi)</a> <a href="downloads/Red%20is%20the%20Rose.pdf">(pdf)</a>
-</li>
-<li>Red River Valley <a href="downloads/Red%20River%20Valley.midi">(midi)</a> <a href="downloads/Red%20River%20Valley.pdf">(pdf)</a>
-</li>
-<li>Red Wing <a href="downloads/Red%20Wing.midi">(midi)</a> <a href="downloads/Red%20Wing.pdf">(pdf)</a>
-</li>
-<li>The Roast Beef of Old England <a href="downloads/The%20Roast%20Beef%20of%20Old%20England.midi">(midi)</a> <a href="downloads/The%20Roast%20Beef%20of%20Old%20England.pdf">(pdf)</a>
-</li>
-<li>Robin Adair <a href="downloads/Robin%20Adair.midi">(midi)</a> <a href="downloads/Robin%20Adair.pdf">(pdf)</a>
-</li>
-<li>Rule Britannia <a href="downloads/Rule%20Britannia.midi">(midi)</a> <a href="downloads/Rule%20Britannia.pdf">(pdf)</a>
-</li>
-<li>Sailing <a href="downloads/Sailing.midi">(midi)</a> <a href="downloads/Sailing.pdf">(pdf)</a>
-</li>
-<li>Saint Patrick’s Day <a href="downloads/Saint%20Patrick%E2%80%99s%20Day.midi">(midi)</a> <a href="downloads/Saint%20Patrick%E2%80%99s%20Day.pdf">(pdf)</a>
-</li>
-<li>Santa Lucia <a href="downloads/Santa%20Lucia.midi">(midi)</a> <a href="downloads/Santa%20Lucia.pdf">(pdf)</a>
-</li>
-<li>Saved From the Storm <a href="downloads/Saved%20From%20the%20Storm.midi">(midi)</a> <a href="downloads/Saved%20From%20the%20Storm.pdf">(pdf)</a>
-</li>
-<li>Scotch Lassie Jean <a href="downloads/Scotch%20Lassie%20Jean.midi">(midi)</a> <a href="downloads/Scotch%20Lassie%20Jean.pdf">(pdf)</a>
-</li>
-<li>Shoot false love I care not <a href="downloads/Shoot%20false%20love%20I%20care%20not.midi">(midi)</a> <a href="downloads/Shoot%20false%20love%20I%20care%20not.pdf">(pdf)</a>
-</li>
-<li>The Sidewalks of New York <a href="downloads/The%20Sidewalks%20of%20New%20York.midi">(midi)</a> <a href="downloads/The%20Sidewalks%20of%20New%20York.pdf">(pdf)</a>
-</li>
-<li>Since first I saw your face <a href="downloads/Since%20first%20I%20saw%20your%20face.midi">(midi)</a> <a href="downloads/Since%20first%20I%20saw%20your%20face.pdf">(pdf)</a>
-</li>
-<li>Skating <a href="downloads/Skating.midi">(midi)</a> <a href="downloads/Skating.pdf">(pdf)</a>
-</li>
-<li>Soldier’s Hymn <a href="downloads/Soldier%E2%80%99s%20Hymn.midi">(midi)</a> <a href="downloads/Soldier%E2%80%99s%20Hymn.pdf">(pdf)</a>
-</li>
-<li>Song of Spring <a href="downloads/Song%20of%20Spring.midi">(midi)</a> <a href="downloads/Song%20of%20Spring.pdf">(pdf)</a>
-</li>
-<li>The Spacious Firmament on High <a href="downloads/The%20Spacious%20Firmament%20on%20High.midi">(midi)</a> <a href="downloads/The%20Spacious%20Firmament%20on%20High.pdf">(pdf)</a>
-</li>
-<li>Sweet Genevieve <a href="downloads/Sweet%20Genevieve.midi">(midi)</a> <a href="downloads/Sweet%20Genevieve.pdf">(pdf)</a>
-</li>
-<li>The Tailor and the Mouse <a href="downloads/The%20Tailor%20and%20the%20Mouse.midi">(midi)</a> <a href="downloads/The%20Tailor%20and%20the%20Mouse.pdf">(pdf)</a>
-</li>
-<li>There’s Music in the Air <a href="downloads/There%E2%80%99s%20Music%20in%20the%20Air.midi">(midi)</a> <a href="downloads/There%E2%80%99s%20Music%20in%20the%20Air.pdf">(pdf)</a>
-</li>
-<li>Tit-Willow <a href="downloads/Tit-Willow.midi">(midi)</a> <a href="downloads/Tit-Willow.pdf">(pdf)</a>
-</li>
-<li>Tramp! Tramp! Tramp! <a href="downloads/Tramp!%20Tramp!%20Tramp!.midi">(midi)</a> <a href="downloads/Tramp!%20Tramp!%20Tramp!.pdf">(pdf)</a>
-</li>
-<li>Trust <a href="downloads/Trust.midi">(midi)</a> <a href="downloads/Trust.pdf">(pdf)</a>
-</li>
-<li>’Twere vain to tell <a href="downloads/%E2%80%99Twere%20vain%20to%20tell.midi">(midi)</a> <a href="downloads/%E2%80%99Twere%20vain%20to%20tell.pdf">(pdf)</a>
-</li>
-<li>Vive L’Amour <a href="downloads/Vive%20L%E2%80%99Amour.midi">(midi)</a> <a href="downloads/Vive%20L%E2%80%99Amour.pdf">(pdf)</a>
-</li>
-<li>The Waits <a href="downloads/The%20Waits.midi">(midi)</a> <a href="downloads/The%20Waits.pdf">(pdf)</a>
-</li>
-<li>A Warrior Bold <a href="downloads/A%20Warrior%20Bold.midi">(midi)</a> <a href="downloads/A%20Warrior%20Bold.pdf">(pdf)</a>
-</li>
-<li>When I go out of door <a href="downloads/When%20I%20go%20out%20of%20door.midi">(midi)</a> <a href="downloads/When%20I%20go%20out%20of%20door.pdf">(pdf)</a>
-</li>
-<li>When I in pain and sorrow moan <a href="downloads/When%20I%20in%20pain%20and%20sorrow%20moan.midi">(midi)</a> <a href="downloads/When%20I%20in%20pain%20and%20sorrow%20moan.pdf">(pdf)</a>
-</li>
-<li>When Jesus Wept <a href="downloads/When%20Jesus%20Wept.midi">(midi)</a> <a href="downloads/When%20Jesus%20Wept.pdf">(pdf)</a>
-</li>
-<li>When You and I Were Young, Maggie <a href="downloads/When%20You%20and%20I%20Were%20Young,%20Maggie.midi">(midi)</a> <a href="downloads/When%20You%20and%20I%20Were%20Young,%20Maggie.pdf">(pdf)</a>
-</li>
-<li>Where There’s a Will There’s a Way <a href="downloads/Where%20There%E2%80%99s%20a%20Will%20There%E2%80%99s%20a%20Way.midi">(midi)</a> <a href="downloads/Where%20There%E2%80%99s%20a%20Will%20There%E2%80%99s%20a%20Way.pdf">(pdf)</a>
-</li>
-<li>Who Would Not Fight for Freedom? <a href="downloads/Who%20Would%20Not%20Fight%20for%20Freedom.midi">(midi)</a> <a href="downloads/Who%20Would%20Not%20Fight%20for%20Freedom.pdf">(pdf)</a>
-</li>
-<li>With Horse and Hound <a href="downloads/With%20Horse%20and%20Hound.midi">(midi)</a> <a href="downloads/With%20Horse%20and%20Hound.pdf">(pdf)</a>
-</li>
+{% for song in site.data.songs %}
+<li>{{ song.title }}
+  <a href="downloads/{{ song.url }}.midi">(midi)</a>
+  <a href="downloads/{{ song.url }}.midi" class="play">(play)</a>
+  <a href="downloads/{{ song.url }}.pdf">(pdf)</a>
+</li>
+{% endfor %}
 </ul>
       </section>
     </div>
@@ -351,6 +77,22 @@
         <p class="copyright">Songs from the Public Domain maintained by <a href="https://github.com/bbloomf">bbloomf</a></p>
         <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
+    </div>
+    
+    <div class="player" style="display:none">
+      <div style="margin: 5px auto; width: 160px; float: right;">
+        <input type="image" src="./images/pause.png" align="absmiddle" value="pause" onclick="pausePlayStop()" id="pausePlayStop">
+        <input type="image" src="./images/stop.png" align="absmiddle" value="stop" onclick="pausePlayStop(true)">
+        <input type="image" src="./images/backward.png" align="absmiddle" value="stop" onclick="MIDI.Player.getNextSong(-1);">
+        <input type="image" src="./images/forward.png" align="absmiddle" value="stop" onclick="MIDI.Player.getNextSong(+1);">
+      </div>
+      <div class="time-controls" style="float: left; margin: 0; position: relative; top: 5px;">
+        <span id="time1" class="time">0:00</span>
+        <span id="capsule">
+          <span id="cursor"></span>
+        </span>
+        <span id="time2" class="time" style="text-align: left;">-0:00</span>
+      </div>
     </div>
 
     

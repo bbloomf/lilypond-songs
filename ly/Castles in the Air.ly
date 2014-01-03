@@ -132,7 +132,29 @@ sopWordsV = \lyricmode {
 }
 
 altoMusic = \relative c' {
+  bes8 |
+  bes8.[ bes16] bes ees8. bes4 bes8[ aes] |
+  bes8.[ bes16] bes8 d ees4. \teeny ees8 \normalsize |
+  ees8.[ ees16] ees8 ees ees8.[ ees16] bes8 ees |
 
+  c[ ees] c c aes4. \teeny bes8 \normalsize |
+  bes8.[ bes16] bes8 ees bes16[ bes8.] bes[ aes16] |
+  bes8.[ bes16] bes8. d16 ees4. \teeny ees8 \normalsize |
+
+  c8.[ ees16] ees8[ aes] g16[ ees8.] c8 ees |
+  ees8. ees16 ees8. d16 ees4. \bar"||"
+  ees8 |
+  ees8.[ ees16] ees8 aes g4~ g8 ees |
+
+  d8.[ d16] d8 f ees4. ees8 |
+  c8.[ c16] c8 ees g( ees4.*2/3) \teeny ees8 \normalsize |
+  c8. ees16 c8 c aes4 d |
+
+  ees8. ees16 ees ees8. bes4 bes8.[ aes16] |
+  bes8 bes bes8. bes16 ees4. \teeny ees16 ees \normalsize |
+
+  c8.[ ees16] ees8 aes g4*1/2 \teeny ees8 \normalsize c8. ees16 |
+  ees8. ees16 ees8. d16 ees4 \bar"|."
 }
 altoWords = \lyricmode {
 }
@@ -155,7 +177,28 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
+  g8 |
+  g8.[ g16] g bes8. g4 g8[ aes] |
+  g8.[ bes16] g8 aes bes4. \teeny bes8 \normalsize |
+  c8.[ bes16] c8 aes g8.[ bes16] aes8[ g] |
 
+  aes[ bes] aes[ aes] ees4. \teeny g8 \normalsize |
+  g8.[ g16] g8 bes g16[ g8.] g[ aes16] |
+  g8.[ g16] g8. aes16 bes4. \teeny bes8 \normalsize |
+
+  aes8.[ g16] aes8[ aes] bes16[ bes8.] a8 a |
+  bes8. bes16 bes8. aes!16 g4. \bar"||"
+  bes16[ g] |
+  aes8.[ aes16] aes8 aes bes4~ bes8 bes |
+
+  bes8.[ bes16] bes8 aes bes4. bes8 |
+  aes8.[ aes16] aes8 aes bes8~ bes4.*2/3 \teeny g8 \normalsize |
+  aes8. bes16 aes8 aes ees4 aes4 |
+
+  g8. g16 g bes8. g4 g8.[ aes16] |
+  g8 bes g8. aes16 bes4. \teeny bes16 bes \normalsize |
+  aes8.[ g16] aes8 aes bes4*1/2 \teeny bes8 \normalsize a8. a16 |
+  bes8. bes16 bes8. aes!16 g4 \bar"|."
 }
 
 tenorWords = \lyricmode {
@@ -168,7 +211,29 @@ tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
+  ees,8 |
+  ees8.[ ees16] ees ees8. ees4 ees8[ ees] |
+  ees8.[ f16] ees8 bes ees4. \teeny ees8 \normalsize |
+  aes,8.[ bes16] aes8 c ees8.[ ees16] d8 ees |
 
+  aes,8[ g] aes[ aes] aes4. \teeny ees'8 \normalsize |
+  ees8.[ ees16] ees8 ees ees16[ ees8.] ees8.[ ees16] |
+  ees8.[ ees16] ees8. bes16 ees4. \teeny ees8 \normalsize |
+
+  aes,8.[ ees'16] aes,8[ c] ees16[ ees8.] c8 c |
+  bes8. bes16 bes8. bes16 ees4.
+  ees8 |
+  aes,8.[ aes16] aes8 c ees4~ ees8 ees |
+  
+  bes8.[ bes16] c8 d ees4. ees8 |
+  aes,8.[ aes16] aes8 c ees8~ ees4.*2/3 \teeny ees8 \normalsize|
+  aes,8. g16 aes8 aes aes4 bes |
+
+  ees8. ees16 ees ees8. ees4 ees4 |
+  ees8 f ees8. d16 ees4. \teeny ees16 ees \normalsize |
+  aes,8.[ ees'16] aes,8 c ees4*1/2 \teeny ees8 \normalsize c8. c16 |
+
+  bes8. bes16 bes8. bes16 ees4
 }
 bassWords = \lyricmode {
 }

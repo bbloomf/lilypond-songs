@@ -14,7 +14,7 @@
   system-system-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)
-       (padding . 1)
+       (padding . -2)
        (stretchability . 100))
   ragged-last-bottom = ##t
   ragged-bottom = ##f
@@ -146,7 +146,41 @@ sopWordsV = \lyricmode {
 }
 
 altoMusic = \relative c' {
-  
+  a'4 |
+  fis g fis fis |
+  e e d d |
+  d8[ cis] b4 b8[ cis] d4 |
+  d( cis) d
+
+  e |
+  fis g a8[ g] fis4 |
+  e e d cis8[ d] |
+  d4 b8[ a] b[ cis] d4 |
+  d( cis) d
+
+  e |
+  fis gis a e |
+  fis gis a e |
+  a a a fis |
+  a( gis) a
+
+  e4 |
+  d8[ a'] g4  a8[ g] fis4 |
+  e e d d |
+  d8[ cis] b4 b8[ cis] d4 |
+  d( cis) d \bar"||"
+
+  e |
+  fis gis a e |
+  fis gis a e |
+  a a a a |
+  a( gis) a
+
+  e |
+  a g a8[ g] fis4 |
+  e e d d |
+  d d8 d b cis d4 |
+  d( cis) d \bar"|."
 }
 altoWords = \lyricmode {
 }
@@ -169,7 +203,41 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
-  
+  a4 |
+  a a d b |
+  b a a g |
+  d'8[ cis] b4 b8[ a] fis[ g] |
+  a4.( g8) fis4
+
+  a |
+  b b d d8[ cis] |
+  b4 a b cis8[ b] |
+  a4 g8[ a] b[ a] a4 |
+  a4.( g8) fis4
+
+  a4 |
+  d e e a, |
+  d e e e8[ cis] |
+  d4 e8[ d] e4 a, |
+  e'4.( d8) cis4
+
+  cis4 |
+  a a a d8[ cis] |
+  b4 a a g8[ b] |
+  a4 b g a |
+  a4.( g8) fis4 \bar"||"
+
+  a4 |
+  d e e a, |
+  d e e e8[ cis] |
+  d4 e8[ d] e4 e |
+  e4.( d8) cis4
+
+  cis4 |
+  a a a d8[ cis] |
+  b4 a a g8[ b] |
+  a4 b8 b g g a4 |
+  a4.( g8) fis4 \bar"|."
 }
 
 tenorWords = \lyricmode {
@@ -210,7 +278,7 @@ bassMusic = \relative c' {
   fis e fis8[ e] d4 |
 
   e8[ d] cis4 d8[ cis] b[ g] |
-  fis4 g8[ fis] e4 fis8[ g] |
+  fis4 g8 fis e e fis8[ g] |
   a2 d4 \bar"|."
 }
 bassWords = \lyricmode {

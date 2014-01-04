@@ -169,12 +169,12 @@ altoWordsVI = \lyricmode {
 }
 tenorMusic = \relative c' {
   c8 |
-  c8. g16 g8 g a a |
+  c8. g16 g8 g a b |
   c4( b) c |
   c4. c8 \times2/3{b8[ g] f} |
   e g4 s8 c4 |
 
-  c8. g16 g8 g a a |
+  c8. g16 g8 g a b |
   c4( b) c |
   c4. c8 \times2/3{b8[ g f]} |
   e g4 s8 c4 |

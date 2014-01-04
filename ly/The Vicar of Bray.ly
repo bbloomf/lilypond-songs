@@ -125,7 +125,7 @@ sopWordsIII = \lyricmode {
   And I be -- came a To -- ry;
   Oc -- ca -- sion -- al Con -- for -- mist’s base,
   I curs’d their mod -- e -- ra -- tion,
-  And thought the curch in dan -- ger was
+  And thought the church in dan -- ger was
   By such pre -- va -- ri -- ca -- tion.
 }
 

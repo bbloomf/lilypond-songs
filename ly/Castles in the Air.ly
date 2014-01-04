@@ -120,7 +120,7 @@ sopWordsIII = \lyricmode {
   He’ll _ glow -- er at the fire, an’ he’ll keek _ at the light;
   But mon -- y spark -- ling stars _ are swal -- lowed up by night;
   "" _ Auld -- er een than his are _ glam -- our’d by a glare,
-  "" "" Hearts are bro -- ken, heads are turn’ dwi’ cas -- tles in the air!
+  "" "" Hearts are bro -- ken, heads are turn’d wi’ cas -- tles in the air!
 }
 
 sopWordsIV = \lyricmode {
@@ -137,7 +137,7 @@ altoMusic = \relative c' {
   bes8.[ bes16] bes8 d ees4. \teeny ees8 \normalsize |
   ees8.[ ees16] ees8 ees ees8.[ ees16] bes8 ees |
 
-  c[ ees] c c aes4. \teeny bes8 \normalsize |
+  c[ ees] c[ c] aes4. \teeny bes8 \normalsize |
   bes8.[ bes16] bes8 ees bes16[ bes8.] bes[ aes16] |
   bes8.[ bes16] bes8. d16 ees4. \teeny ees8 \normalsize |
 

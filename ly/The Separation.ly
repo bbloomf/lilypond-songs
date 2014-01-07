@@ -135,7 +135,7 @@ altoMusic = \relative c' {
   \tieDashed des4.~ des8~ des des des des \tieSolid |
   c2 s4 ees4 |
 
-  aes4. aes8 bes aes g f |
+  aes4. aes8 aes aes f ees |
   des4.( bes8 g'[ f ees]) des |
   c4. c8 des des des des |
   c2 s4 \bar"|."
@@ -162,19 +162,19 @@ altoWordsVI = \lyricmode {
 }
 tenorMusic = \relative c' {
   ees4 |
-  des4. des8 des bes bes g |
+  des4. des8 des bes aes g |
   aes2*1/16 \teeny aes8*3/4 aes4. \normalsize s4 aes |
-  aes4. aes8 aes aes aes c |
+  aes4. aes8 aes aes bes c |
   g2 s4 g |
 
   aes4. aes8 aes8. aes16 aes8. aes16 |
-  aes2*1/16 \teeny aes8*3/4 ees4. \normalsize s4 ees8[ ees] |
-  \tieDashed bes'4.~ bes8~ bes bes bes bes \tieSolid |
-  ees,2 s4 aes |
+  aes2*1/16 \teeny aes8*3/4 aes4. \normalsize s4 aes8[ aes] |
+  \tieDashed bes4.~ bes8~ bes bes aes bes \tieSolid |
+  aes2 s4 aes |
 
-  c4. c8 aes aes aes aes |
-  aes4.( des8)~ des4. aes8 |
-  aes4. aes8 bes bes g bes |
+  c4. c8 f ees des aes |
+  aes4.( des8)~ des8[ aes g] aes8 |
+  aes4. aes8 bes bes aes bes |
   aes2 s4 \bar"|."
 }
 
@@ -191,7 +191,7 @@ bassMusic = \relative c' {
   ees,4 |
   ees4. ees8 ees ees ees ees |
   aes,2*1/16 \teeny aes8*3/4 aes4. \normalsize d4\rest aes4 |
-  aes4. aes8 aes aes aes aes |
+  aes4. aes8 aes aes g aes |
   ees'2 d4\rest ees |
 
   des4. des8 des8. des16 des8. des16 |
@@ -200,8 +200,8 @@ bassMusic = \relative c' {
   \tieSolid
   aes,2 d4\rest aes |
 
-  aes4. aes8 aes aes aes aes |
-  des2~ des4. des8 |
+  aes4. aes8 aes aes bes c |
+  des4.( ees8 des4.) des8 |
   ees4. ees8 ees ees ees ees |
   aes,2 d4\rest \bar"|."
 }

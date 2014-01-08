@@ -227,8 +227,11 @@ function processLy(lyFile,callback,makePdf) {
     console.info('Processing ' + lyFile);
     child_process.execFile('lilypond',args,undefined,function(error,stdout,stderr){
         if(error) {
+            console.info('Error: ');
             console.error(error);
+            console.info('stderr: ');
             console.error(stderr);
+            console.info('stdout: ');
             console.info(stdout);
         } else {
             fs.writeFileSync(lyName,lyContent);
@@ -273,7 +276,7 @@ function ps2pdf(psFiles,width,height,outputName,callback) {
 //ps2pdf('lytemp/001.ps',8.5,11,'test.pdf');
 var dir = 'ly/mapped/',
     files = fs.readdirSync(dir).sort(),
-    maxConcurrent = 6,
+    maxConcurrent = 1,
     currentlyActive = 0,
     i = 0,
     psFiles = [],

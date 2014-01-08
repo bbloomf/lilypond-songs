@@ -558,7 +558,7 @@ tenorMusic = \relative c' {
 
 tenorWordsFirst = \lyricmode {
   \repeat unfold 44 \skip1
-  O’er
+  O’er the
 }
 tenorWords = \lyricmode {
 %  Come ye where gold of May is shin -- ing,

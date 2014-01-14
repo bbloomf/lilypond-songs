@@ -109,11 +109,32 @@ sopWordsII = \lyricmode {
 
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
-  \set ignoreMelismata = ##t
+  %\set ignoreMelismata = ##t
+  In smil -- ing Bac -- chus’ joys I’ll roll,
+  De -- ny no plea -- sure to my soul;
+  Let Bac -- chus’ health round brisk -- ly move,
+  For Bac -- chus is a friend to love,
+  
+  And he that will this health de -- ny,
+  Down a -- mong the dead men,
+  down a -- mong the dead men,
+  Down, down, down, down,
+  Down a -- mong the dead men let him lie!
 }
 
 sopWordsIV = \lyricmode {
   \set stanza = #"4. "
+  %\set ignoreMelismata = ##t
+  May love and wine their rites main -- tain,
+  And their u -- nit -- ed plea -- sure reign;
+  While Bac -- chus’ trea -- sure crowns the board,
+  We’ll sing the joys that both af -- ford;
+  And they that won’t with us com -- ply,
+
+  Down a -- mong the dead men,
+  down a -- mong the dead men,
+  Down, down, down, down,
+  Down a -- mong the dead men let them lie!
 }
 
 sopWordsV = \lyricmode {

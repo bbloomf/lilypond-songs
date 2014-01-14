@@ -95,7 +95,7 @@ sopWords = \lyricmode {
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
   \set ignoreMelismata = ##t
-  Let _ charm -- _ ing bea -- _ ty’s health go round,
+  Let __ _ charm -- _ ing bea -- _ ty’s health go round,
   In whom _ ce -- les -- tial joys are found,
   And may con -- fu -- sion still pur -- _ sue
   The self -- ish wo -- man hat -- ing crew;
@@ -110,9 +110,9 @@ sopWordsII = \lyricmode {
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
   %\set ignoreMelismata = ##t
-  In smil -- ing Bac -- chus’ joys I’ll roll,
-  De -- ny no plea -- sure to my soul;
-  Let Bac -- chus’ health round brisk -- ly move,
+  In __ smil -- ing Bac -- chus’ joys I’ll roll,
+  De -- ny __ no plea -- sure to my soul;
+  Let Bac -- chus’ health round brisk -- ly __ move,
   For Bac -- chus is a friend to love,
   
   And he that will this health de -- ny,
@@ -127,7 +127,7 @@ sopWordsIV = \lyricmode {
   %\set ignoreMelismata = ##t
   May love and wine their rites main -- tain,
   And their u -- nit -- ed plea -- sure reign;
-  While Bac -- chus’ trea -- sure crowns the board,
+  While Bac -- chus’ trea -- sure crowns the __ board,
   We’ll sing the joys that both af -- ford;
   And they that won’t with us com -- ply,
 
@@ -203,7 +203,7 @@ tenorMusic = \relative c' {
   c2 c |
   c b |
   c8 b g g g4 aes |
-  c b g4 \bar"|."
+  c b c4 \bar"|."
 }
 
 tenorWords = \lyricmode {

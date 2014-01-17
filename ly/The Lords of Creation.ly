@@ -92,19 +92,19 @@ sopWords = \lyricmode {
   For they’re un -- _ der wom -- an’s con -- trol.
 
   As ev -- er since the world be -- gan,
-  It has al -- ways _ been the way,
-  For _ did _ not A -- dam, the ver -- y first man,
-  The _ ver -- y first wo -- man o -- bey, o -- bey, o -- bey, o -- bey?
-  The _ ver -- y first wo -- man o -- bey!
+  It has al -- ways __ _ been the way,
+  For __ _ did __ _ not A -- dam, the ver -- y first man,
+  The __ _ ver -- y first wo -- man o -- bey, o -- bey, o -- bey, o -- bey?
+  The __ _ ver -- y first wo -- man o -- bey!
 }
 
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
   \set ignoreMelismata = ##t
-  Ye Lords, who at pres -- ent hear my song, _
+  Ye Lords, who at pres -- ent hear my song, __ _
   I know _ you’ll quick -- _ ly say:
-  “Our _ size more large, our nerves more strong;
-  Shal the strong -- er the weak -- er o -- bey?”
+  “Our __ _ size more large, our nerves more strong;
+  Shall the strong -- er the weak -- er o -- bey?”
 
   But think not though these words we hear
   We shall e’er mind the thing you say;
@@ -122,7 +122,7 @@ sopWordsIII = \lyricmode {
   We shall still have no cause _ for fear.
 
   Then let them please them -- selves a -- while
-  Up -- _ on their _ fan -- cied sway,
+  Up -- _ on their __ _ fan -- cied sway,
   For as long as a wo -- man’s pos -- sessed of a smile
   She will cer -- tain -- ly have her own way, her way, her way, ah! yes,
   She’ll _ cer -- tain -- ly have her own way.
@@ -133,11 +133,11 @@ sopWordsIV = \lyricmode {
   \set ignoreMelismata = ##t
   Now, La -- _ dies since I’ve made it plain
   That the thing _ is real -- _ ly so,
-  We’ll _ e -- ven let them hold the rein,
-  But we’ll show them the way _ to go;
+  We’ll __ _ e -- ven let them hold the rein,
+  But we’ll show them the way __ _ to go;
 
   As ev -- er since the world be -- gan
-  It has al -- ways _ been the way,
+  It has al -- ways __ _ been the way,
   And we’ll man -- age it so that the ver -- y last man
   Shall the ver -- y last wo -- man o -- bey, o -- bey, o -- bey, o -- bey;
   Shall the ver -- y last wo -- man o -- bey.
@@ -157,7 +157,7 @@ altoMusic = \relative c' {
   d16[ d] |
   d4 d8 g4 fis8 |
   g4 d8 d d d |
-  fis[ fis] fis d[ d] c |
+  fis[ fis] fis d[ e] c |
   b4 s4. \bar"||"
 
   d8 |
@@ -170,8 +170,8 @@ altoMusic = \relative c' {
   fis fis fis g4 e16[ e] |
   d8 c d d c d |
   d4 d8 fis4 fis8 |
-  g4 g8 e4 d16[ d] |
-  d8 c d d d c |
+  g4 g8 e4 e16[ e] |
+  d8 c d d e c |
   b4 s4. \bar"|."
 }
 altoWords = \lyricmode {
@@ -198,18 +198,18 @@ tenorMusic = \relative c' {
   d,8 |
   b'8.[ b16] g8 b4 a8 |
   g4  b8 b[ a] b |
-  c[ c] c a[ a] a |
+  c[ c] c c[ b] a |
   g4 s4.
 
-  d'16[ d] |
-  b4 g8 b4 a8 |
+  d16[ d] |
+  b'4 g8 b4 a8 |
   g4 b8 b a b |
   c[ c] c fis,[ g] a |
   g4 s4. \bar"||"
 
   g8 |
-  g4 g8 a4 b8 |
-  a4 a8 fis4 g16[ g] |
+  g4 g8 c4 b8 |
+  a4 g8 fis4 g16[ g] |
   g4 g16[ g] b4 g8 |
   a4 s4. a16[ a] |
 
@@ -217,7 +217,7 @@ tenorMusic = \relative c' {
   c b a d4 b16[ b] |
   a8 a a fis g a |
   b4 b8 c4 c8 |
-  d4 d8 g,4 b16[ b] |
+  d4 d8 g,4 g16[ g] |
   a8 a a fis g a |
   g4 s4. \bar"|."
 }
@@ -253,8 +253,8 @@ bassMusic = \relative c' {
   d d d g,4 e'16[ e] |
   d8 d d d d d |
   g,4 g8 d'4 d8 |
-  g,4 g8 c4\fermata g16[ g] |
-  d'8 d d d d d |
+  g,4 g8 c4\fermata c16[ c] |
+  d8 d d d d d |
   g,4 d'8\rest d4\rest \bar"|."
 }
 bassWords = \lyricmode {

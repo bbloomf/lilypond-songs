@@ -77,7 +77,7 @@ sopMusic = \relative c' {
 
   ees8. ees16 ees g8. bes,4 bes8.[ c16] |
   ees8 d ees8. f16 g4. \teeny g16 g \normalsize |
-  aes8.[ bes16] c8 ees bes4*1/2 \teeny g8 \normalsize ees8. f16 |
+  aes8.[ bes16] c8 ees bes4*1/2 \teeny g8 \normalsize ees8 f |
 
   g8 aes g8. f16 ees4 \bar"|."
 }
@@ -153,7 +153,7 @@ altoMusic = \relative c' {
   ees8. ees16 ees ees8. bes4 bes8.[ aes16] |
   bes8 bes bes8. bes16 ees4. \teeny ees16 ees \normalsize |
 
-  c8.[ ees16] ees8 aes g4*1/2 \teeny ees8 \normalsize c8. ees16 |
+  c8.[ ees16] ees8 aes g4*1/2 \teeny ees8 \normalsize c8 ees |
   ees8 ees ees8. d16 ees4 \bar"|."
 }
 altoWords = \lyricmode {
@@ -197,7 +197,7 @@ tenorMusic = \relative c' {
 
   g8. g16 g bes8. g4 g8.[ aes16] |
   g8 bes g8. aes16 bes4. \teeny bes16 bes \normalsize |
-  aes8.[ g16] aes8 aes bes4*1/2 \teeny bes8 \normalsize a8. a16 |
+  aes8.[ g16] aes8 aes bes4*1/2 \teeny bes8 \normalsize a8 a |
   bes8 bes bes8. aes!16 g4 \bar"|."
 }
 
@@ -231,7 +231,7 @@ bassMusic = \relative c' {
 
   ees8. ees16 ees ees8. ees4 ees4 |
   ees8 f ees8. d16 ees4. \teeny ees16 ees \normalsize |
-  aes,8.[ ees'16] aes,8 c ees4*1/2 \teeny ees8 \normalsize c8. c16 |
+  aes,8.[ ees'16] aes,8 c ees4*1/2 \teeny ees8 \normalsize c8 c |
 
   bes8 bes bes8. bes16 ees4
 }

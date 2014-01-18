@@ -56,46 +56,53 @@
 88:Nancy Lee;The Blue Bells of Scotland
 90:Punchinello;Old Dog Tray
 92:Saved From the Storm
-94:The Little Tin Soldier
-95:Sweet Genevieve
-96:Bride Bells;Gaudeamus Hodie;Ego sum pauper
-98:Jamie’s on the Stormy Sea
-99:The Birds’ Ball
-100:Listen to the Mocking Bird;The Old Folks at Home
-102:Fairy Belle
-103:My Old Kentucky Home
-104:Hard Times
-105:Happy Hours at Home
-106:’Twere vain to tell
-107:The Pretty Girl Milking Her Cow
-108:Merrily Sing;Good Night Ladies;Oh My Love
-110:The March of Prohibition;God be with you till we meet again
-112:A Warrior Bold;Rule Britannia
-114:The Sidewalks of New York;For he’s a jolly good fellow
-116:It’s Delightful to be Married!
-118:A Capital Ship;America
-120:The Tailor and the Mouse;Maid of Athens;Come Let Us All A-Maying Go
-122:Saint Patrick’s Day;The bell doth toll
-124:Johnny Sands;He that Will an Alehouse Keep;Skating
-126:Where There’s a Will There’s a Way
-127:The Flowers that Bloom in the Spring
-128:La ci darem la mano
-130:The Distant Shore
-132:A British Tar
-134:Brightly dawns our wedding day
-136:When I go out of door;Merrily Greet the Morn;Catch Round the Table
-138:The criminal cried
-140:Tit-Willow
-141:Mister Speaker, though ’tis late
-142:Soldier’s Hymn;When Jesus Wept
-143:When I in pain and sorrow moan;Jesus! the very thought of Thee
-144:The Spacious Firmament on High
-145:Ode to Joy
-146:Glorious Things of Thee Are Spoken
-147:Come, Thou Fount of Every Blessing
-148:Jesus, Lover of my soul
-149:The Battle Prayer
-150:Lead Kindly Light;Glory be to Jesus;Oh, happy is the man that hears
-152:God so loved the world;Abide with me
-154:Once to Every Man and Nation
-155:Be Still, My Soul
+94:The Goslings
+96:The Little Tin Soldier
+97:Sweet Genevieve
+98:Bride Bells;Gaudeamus Hodie;Ego sum pauper
+100:Jamie’s on the Stormy Sea
+101:The Birds’ Ball
+102:Listen to the Mocking Bird;The Old Folks at Home
+104:Fairy Belle
+105:My Old Kentucky Home
+106:Hard Times
+107:Happy Hours at Home
+108:’Twere vain to tell
+109:The Pretty Girl Milking Her Cow
+110:Merrily Sing;Good Night Ladies;Oh My Love
+112:The March of Prohibition;God be with you till we meet again
+114:A Warrior Bold;Rule Britannia
+116:The Sidewalks of New York;For he’s a jolly good fellow
+118:It’s Delightful to be Married!
+120:A Capital Ship;America
+122:The Tailor and the Mouse;Maid of Athens;Come Let Us All A-Maying Go
+124:Saint Patrick’s Day;The bell doth toll
+126:Johnny Sands;He that Will an Alehouse Keep;Skating
+128:Sally in our Alley
+129:The Lords of Creation
+130:Last Week I Took a Wife
+131:Where There’s a Will There’s a Way
+132:To Phœbe
+133:The Flowers that Bloom in the Spring
+134:The Distant Shore
+136:A British Tar
+138:Brightly dawns our wedding day
+140:When I go out of door;Merrily Greet the Morn;Catch Round the Table
+142:The criminal cried
+144:Tit-Willow
+145:Mister Speaker, though ’tis late
+146:La ci darem la mano
+148:Soldier’s Hymn;When Jesus Wept
+149:When I in pain and sorrow moan;Jesus! the very thought of Thee
+150:The Spacious Firmament on High
+151:Ode to Joy
+152:Glorious Things of Thee Are Spoken
+153:Come, Thou Fount of Every Blessing
+154:Jesus, Lover of my soul
+155:The Battle Prayer
+156:Lead Kindly Light;Glory be to Jesus;Oh, happy is the man that hears
+158:God so loved the world;Abide with me
+160:Once to Every Man and Nation
+161:Be Still, My Soul
+162:At the Lamb’s High Feast We Sing
+163:Go to Dark Gethsemane

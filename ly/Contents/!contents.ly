@@ -136,7 +136,7 @@
 {\page-link #115 {\fill-with-pattern #0.1 #CENTER . "Rule Britannia" \smallCapsOldStyle 115}}
 {\page-link #56 {\fill-with-pattern #0.1 #CENTER . "Sailing" \smallCapsOldStyle 56}}
 {\page-link #124 {\fill-with-pattern #0.1 #CENTER . "Saint Patrick’s Day" \smallCapsOldStyle 124}}
-{\page-link #128 {\fill-with-pattern #0.1 #CENTER . "Sally in Our Alley" \smallCapsOldStyle 128}}
+{\page-link #128 {\fill-with-pattern #0.1 #CENTER . "Sally in our Alley" \smallCapsOldStyle 128}}
 {\page-link #68 {\fill-with-pattern #0.1 #CENTER . "Santa Lucia" \smallCapsOldStyle 68}}
 {\page-link #92 {\fill-with-pattern #0.1 #CENTER . "Saved From the Storm" \smallCapsOldStyle 92}}
 {\page-link #76 {\fill-with-pattern #0.1 #CENTER . "Scotch Lassie Jean" \smallCapsOldStyle 76}}

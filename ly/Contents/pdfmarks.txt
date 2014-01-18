@@ -130,7 +130,7 @@
 [/Title (Rule Britannia) /Page 115 /OUT pdfmark
 [/Title (Sailing) /Page 56 /OUT pdfmark
 [/Title (Saint Patrick's Day) /Page 124 /OUT pdfmark
-[/Title (Sally in Our Alley) /Page 128 /OUT pdfmark
+[/Title (Sally in our Alley) /Page 128 /OUT pdfmark
 [/Title (Santa Lucia) /Page 68 /OUT pdfmark
 [/Title (Saved From the Storm) /Page 92 /OUT pdfmark
 [/Title (Scotch Lassie Jean) /Page 76 /OUT pdfmark

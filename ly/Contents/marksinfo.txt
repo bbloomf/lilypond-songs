@@ -5,11 +5,11 @@ BookmarkPageNumber: 2
 BookmarkBegin
 BookmarkTitle: Abide with me
 BookmarkLevel: 1
-BookmarkPageNumber: 153
+BookmarkPageNumber: 159
 BookmarkBegin
 BookmarkTitle: America
 BookmarkLevel: 1
-BookmarkPageNumber: 119
+BookmarkPageNumber: 121
 BookmarkBegin
 BookmarkTitle: America the Beautiful
 BookmarkLevel: 1
@@ -27,6 +27,10 @@ BookmarkTitle: The Ash Grove
 BookmarkLevel: 1
 BookmarkPageNumber: 45
 BookmarkBegin
+BookmarkTitle: At the Lamb's High Feast We Sing
+BookmarkLevel: 1
+BookmarkPageNumber: 162
+BookmarkBegin
 BookmarkTitle: The Battle Cry of Freedom
 BookmarkLevel: 1
 BookmarkPageNumber: 64
@@ -41,19 +45,19 @@ BookmarkPageNumber: 46
 BookmarkBegin
 BookmarkTitle: The Battle Prayer
 BookmarkLevel: 1
-BookmarkPageNumber: 149
+BookmarkPageNumber: 155
 BookmarkBegin
 BookmarkTitle: The bell doth toll (Round)
 BookmarkLevel: 1
-BookmarkPageNumber: 123
+BookmarkPageNumber: 125
 BookmarkBegin
 BookmarkTitle: Be Still, My Soul
 BookmarkLevel: 1
-BookmarkPageNumber: 155
+BookmarkPageNumber: 161
 BookmarkBegin
 BookmarkTitle: The Birds' Ball
 BookmarkLevel: 1
-BookmarkPageNumber: 99
+BookmarkPageNumber: 101
 BookmarkBegin
 BookmarkTitle: The Blue Bells of Scotland
 BookmarkLevel: 1
@@ -77,15 +81,15 @@ BookmarkPageNumber: 39
 BookmarkBegin
 BookmarkTitle: Bride Bells
 BookmarkLevel: 1
-BookmarkPageNumber: 96
+BookmarkPageNumber: 98
 BookmarkBegin
 BookmarkTitle: Brightly dawns our wedding day
 BookmarkLevel: 1
-BookmarkPageNumber: 134
+BookmarkPageNumber: 138
 BookmarkBegin
 BookmarkTitle: A British Tar
 BookmarkLevel: 1
-BookmarkPageNumber: 132
+BookmarkPageNumber: 136
 BookmarkBegin
 BookmarkTitle: By the Sad Sea Waves
 BookmarkLevel: 1
@@ -93,15 +97,15 @@ BookmarkPageNumber: 55
 BookmarkBegin
 BookmarkTitle: A Capital Ship
 BookmarkLevel: 1
-BookmarkPageNumber: 118
+BookmarkPageNumber: 120
 BookmarkBegin
 BookmarkTitle: Catch Round the Table
 BookmarkLevel: 1
-BookmarkPageNumber: 137
+BookmarkPageNumber: 141
 BookmarkBegin
 BookmarkTitle: Come, Thou Fount of Every Blessing
 BookmarkLevel: 1
-BookmarkPageNumber: 147
+BookmarkPageNumber: 153
 BookmarkBegin
 BookmarkTitle: Come again, sweet love
 BookmarkLevel: 1
@@ -117,7 +121,7 @@ BookmarkPageNumber: 81
 BookmarkBegin
 BookmarkTitle: Come Let Us All A-Maying Go (Round)
 BookmarkLevel: 1
-BookmarkPageNumber: 121
+BookmarkPageNumber: 123
 BookmarkBegin
 BookmarkTitle: Could I a maiden find
 BookmarkLevel: 1
@@ -125,7 +129,7 @@ BookmarkPageNumber: 42
 BookmarkBegin
 BookmarkTitle: The criminal cried
 BookmarkLevel: 1
-BookmarkPageNumber: 138
+BookmarkPageNumber: 142
 BookmarkBegin
 BookmarkTitle: Darby and Joan
 BookmarkLevel: 1
@@ -137,7 +141,7 @@ BookmarkPageNumber: 48
 BookmarkBegin
 BookmarkTitle: The Distant Shore
 BookmarkLevel: 1
-BookmarkPageNumber: 130
+BookmarkPageNumber: 134
 BookmarkBegin
 BookmarkTitle: Dixie
 BookmarkLevel: 1
@@ -153,7 +157,7 @@ BookmarkPageNumber: 84
 BookmarkBegin
 BookmarkTitle: Ego sum pauper (Round)
 BookmarkLevel: 1
-BookmarkPageNumber: 97
+BookmarkPageNumber: 99
 BookmarkBegin
 BookmarkTitle: Ein Prosit
 BookmarkLevel: 1
@@ -161,7 +165,7 @@ BookmarkPageNumber: 44
 BookmarkBegin
 BookmarkTitle: Fairy Belle
 BookmarkLevel: 1
-BookmarkPageNumber: 102
+BookmarkPageNumber: 104
 BookmarkBegin
 BookmarkTitle: The Flight of Love
 BookmarkLevel: 1
@@ -169,7 +173,7 @@ BookmarkPageNumber: 29
 BookmarkBegin
 BookmarkTitle: The Flowers that Bloom in the Spring
 BookmarkLevel: 1
-BookmarkPageNumber: 127
+BookmarkPageNumber: 133
 BookmarkBegin
 BookmarkTitle: Flow Gently, Sweet Afton
 BookmarkLevel: 1
@@ -177,11 +181,11 @@ BookmarkPageNumber: 38
 BookmarkBegin
 BookmarkTitle: For he's a jolly good fellow
 BookmarkLevel: 1
-BookmarkPageNumber: 115
+BookmarkPageNumber: 117
 BookmarkBegin
 BookmarkTitle: Gaudeamus Hodie (Round)
 BookmarkLevel: 1
-BookmarkPageNumber: 97
+BookmarkPageNumber: 99
 BookmarkBegin
 BookmarkTitle: Gaudeamus Igitur
 BookmarkLevel: 1
@@ -193,23 +197,31 @@ BookmarkPageNumber: 83
 BookmarkBegin
 BookmarkTitle: Glorious Things of Thee Are Spoken
 BookmarkLevel: 1
-BookmarkPageNumber: 146
+BookmarkPageNumber: 152
 BookmarkBegin
 BookmarkTitle: Glory be to Jesus
 BookmarkLevel: 1
-BookmarkPageNumber: 150
+BookmarkPageNumber: 156
 BookmarkBegin
 BookmarkTitle: God be with you till we meet again
 BookmarkLevel: 1
-BookmarkPageNumber: 111
+BookmarkPageNumber: 113
 BookmarkBegin
 BookmarkTitle: God so loved the world
 BookmarkLevel: 1
-BookmarkPageNumber: 152
+BookmarkPageNumber: 158
 BookmarkBegin
 BookmarkTitle: Good Night Ladies
 BookmarkLevel: 1
-BookmarkPageNumber: 109
+BookmarkPageNumber: 111
+BookmarkBegin
+BookmarkTitle: The Goslings
+BookmarkLevel: 1
+BookmarkPageNumber: 94
+BookmarkBegin
+BookmarkTitle: Go to Dark Gethsemane
+BookmarkLevel: 1
+BookmarkPageNumber: 162
 BookmarkBegin
 BookmarkTitle: Hail! Smiling Morn
 BookmarkLevel: 1
@@ -221,11 +233,11 @@ BookmarkPageNumber: 23
 BookmarkBegin
 BookmarkTitle: Happy Hours at Home
 BookmarkLevel: 1
-BookmarkPageNumber: 105
+BookmarkPageNumber: 107
 BookmarkBegin
 BookmarkTitle: Hard Times
 BookmarkLevel: 1
-BookmarkPageNumber: 104
+BookmarkPageNumber: 106
 BookmarkBegin
 BookmarkTitle: Hark! the vesper hymn is stealing
 BookmarkLevel: 1
@@ -245,7 +257,7 @@ BookmarkPageNumber: 35
 BookmarkBegin
 BookmarkTitle: He that Will an Alehouse Keep (Round)
 BookmarkLevel: 1
-BookmarkPageNumber: 125
+BookmarkPageNumber: 127
 BookmarkBegin
 BookmarkTitle: Home Sweet Home
 BookmarkLevel: 1
@@ -277,7 +289,7 @@ BookmarkPageNumber: 49
 BookmarkBegin
 BookmarkTitle: It's Delightful to be Married!
 BookmarkLevel: 1
-BookmarkPageNumber: 116
+BookmarkPageNumber: 118
 BookmarkBegin
 BookmarkTitle: It was a lover and his lass
 BookmarkLevel: 1
@@ -285,7 +297,7 @@ BookmarkPageNumber: 18
 BookmarkBegin
 BookmarkTitle: Jamie's on the Stormy Sea
 BookmarkLevel: 1
-BookmarkPageNumber: 98
+BookmarkPageNumber: 100
 BookmarkBegin
 BookmarkTitle: Jenny the Flower of Kildare
 BookmarkLevel: 1
@@ -293,11 +305,11 @@ BookmarkPageNumber: 80
 BookmarkBegin
 BookmarkTitle: Jesus, Lover of my soul
 BookmarkLevel: 1
-BookmarkPageNumber: 148
+BookmarkPageNumber: 154
 BookmarkBegin
 BookmarkTitle: Jesus! the very thought of Thee
 BookmarkLevel: 1
-BookmarkPageNumber: 143
+BookmarkPageNumber: 149
 BookmarkBegin
 BookmarkTitle: John Anderson, my jo
 BookmarkLevel: 1
@@ -305,19 +317,23 @@ BookmarkPageNumber: 37
 BookmarkBegin
 BookmarkTitle: Johnny Sands
 BookmarkLevel: 1
-BookmarkPageNumber: 124
+BookmarkPageNumber: 126
 BookmarkBegin
 BookmarkTitle: Killarney
 BookmarkLevel: 1
 BookmarkPageNumber: 32
 BookmarkBegin
+BookmarkTitle: Last Week I Took a Wife
+BookmarkLevel: 1
+BookmarkPageNumber: 130
+BookmarkBegin
 BookmarkTitle: La ci darem la mano
 BookmarkLevel: 1
-BookmarkPageNumber: 128
+BookmarkPageNumber: 146
 BookmarkBegin
 BookmarkTitle: Lead Kindly Light
 BookmarkLevel: 1
-BookmarkPageNumber: 150
+BookmarkPageNumber: 156
 BookmarkBegin
 BookmarkTitle: Let Us Sing
 BookmarkLevel: 1
@@ -329,11 +345,11 @@ BookmarkPageNumber: 79
 BookmarkBegin
 BookmarkTitle: Listen to the Mocking Bird
 BookmarkLevel: 1
-BookmarkPageNumber: 100
+BookmarkPageNumber: 102
 BookmarkBegin
 BookmarkTitle: The Little Tin Soldier
 BookmarkLevel: 1
-BookmarkPageNumber: 94
+BookmarkPageNumber: 96
 BookmarkBegin
 BookmarkTitle: Live we singing
 BookmarkLevel: 1
@@ -346,6 +362,10 @@ BookmarkBegin
 BookmarkTitle: Long, Long Ago
 BookmarkLevel: 1
 BookmarkPageNumber: 73
+BookmarkBegin
+BookmarkTitle: The Lords of Creation
+BookmarkLevel: 1
+BookmarkPageNumber: 129
 BookmarkBegin
 BookmarkTitle: The Lorelei
 BookmarkLevel: 1
@@ -361,19 +381,19 @@ BookmarkPageNumber: 33
 BookmarkBegin
 BookmarkTitle: Maid of Athens
 BookmarkLevel: 1
-BookmarkPageNumber: 120
+BookmarkPageNumber: 122
 BookmarkBegin
 BookmarkTitle: The March of Prohibition
 BookmarkLevel: 1
-BookmarkPageNumber: 110
+BookmarkPageNumber: 112
 BookmarkBegin
 BookmarkTitle: Merrily Greet the Morn (Round)
 BookmarkLevel: 1
-BookmarkPageNumber: 137
+BookmarkPageNumber: 141
 BookmarkBegin
 BookmarkTitle: Merrily Sing
 BookmarkLevel: 1
-BookmarkPageNumber: 108
+BookmarkPageNumber: 110
 BookmarkBegin
 BookmarkTitle: The Midshipmite
 BookmarkLevel: 1
@@ -385,7 +405,7 @@ BookmarkPageNumber: 31
 BookmarkBegin
 BookmarkTitle: Mister Speaker, though 'tis late (Round)
 BookmarkLevel: 1
-BookmarkPageNumber: 141
+BookmarkPageNumber: 145
 BookmarkBegin
 BookmarkTitle: My bonny lass she smileth
 BookmarkLevel: 1
@@ -393,7 +413,7 @@ BookmarkPageNumber: 16
 BookmarkBegin
 BookmarkTitle: My Old Kentucky Home
 BookmarkLevel: 1
-BookmarkPageNumber: 103
+BookmarkPageNumber: 105
 BookmarkBegin
 BookmarkTitle: Nancy Lee
 BookmarkLevel: 1
@@ -409,7 +429,7 @@ BookmarkPageNumber: 14
 BookmarkBegin
 BookmarkTitle: Now we are met
 BookmarkLevel: 1
-BookmarkPageNumber: 137
+BookmarkPageNumber: 141
 BookmarkBegin
 BookmarkTitle: O Calm of Night
 BookmarkLevel: 1
@@ -417,7 +437,7 @@ BookmarkPageNumber: 44
 BookmarkBegin
 BookmarkTitle: Ode to Joy
 BookmarkLevel: 1
-BookmarkPageNumber: 145
+BookmarkPageNumber: 151
 BookmarkBegin
 BookmarkTitle: O Fair Dove, O Fond Dove
 BookmarkLevel: 1
@@ -429,11 +449,11 @@ BookmarkPageNumber: 30
 BookmarkBegin
 BookmarkTitle: Oh, happy is the man that hears
 BookmarkLevel: 1
-BookmarkPageNumber: 151
+BookmarkPageNumber: 157
 BookmarkBegin
 BookmarkTitle: Oh My Love (Round)
 BookmarkLevel: 1
-BookmarkPageNumber: 109
+BookmarkPageNumber: 111
 BookmarkBegin
 BookmarkTitle: Old Dog Tray
 BookmarkLevel: 1
@@ -441,7 +461,7 @@ BookmarkPageNumber: 91
 BookmarkBegin
 BookmarkTitle: The Old Folks at Home
 BookmarkLevel: 1
-BookmarkPageNumber: 101
+BookmarkPageNumber: 103
 BookmarkBegin
 BookmarkTitle: The Old Musician and His Harp
 BookmarkLevel: 1
@@ -457,7 +477,7 @@ BookmarkPageNumber: 70
 BookmarkBegin
 BookmarkTitle: Once to Every Man and Nation
 BookmarkLevel: 1
-BookmarkPageNumber: 154
+BookmarkPageNumber: 160
 BookmarkBegin
 BookmarkTitle: O Sole Mio
 BookmarkLevel: 1
@@ -469,7 +489,7 @@ BookmarkPageNumber: 10
 BookmarkBegin
 BookmarkTitle: The Pretty Girl Milking Her Cow
 BookmarkLevel: 1
-BookmarkPageNumber: 107
+BookmarkPageNumber: 109
 BookmarkBegin
 BookmarkTitle: Punchinello
 BookmarkLevel: 1
@@ -497,7 +517,7 @@ BookmarkPageNumber: 50
 BookmarkBegin
 BookmarkTitle: Rule Britannia
 BookmarkLevel: 1
-BookmarkPageNumber: 113
+BookmarkPageNumber: 115
 BookmarkBegin
 BookmarkTitle: Sailing
 BookmarkLevel: 1
@@ -505,7 +525,11 @@ BookmarkPageNumber: 56
 BookmarkBegin
 BookmarkTitle: Saint Patrick's Day
 BookmarkLevel: 1
-BookmarkPageNumber: 122
+BookmarkPageNumber: 124
+BookmarkBegin
+BookmarkTitle: Sally in Our Alley
+BookmarkLevel: 1
+BookmarkPageNumber: 128
 BookmarkBegin
 BookmarkTitle: Santa Lucia
 BookmarkLevel: 1
@@ -525,7 +549,7 @@ BookmarkPageNumber: 20
 BookmarkBegin
 BookmarkTitle: The Sidewalks of New York
 BookmarkLevel: 1
-BookmarkPageNumber: 114
+BookmarkPageNumber: 116
 BookmarkBegin
 BookmarkTitle: Since first I saw your face
 BookmarkLevel: 1
@@ -533,11 +557,11 @@ BookmarkPageNumber: 5
 BookmarkBegin
 BookmarkTitle: Skating (Round)
 BookmarkLevel: 1
-BookmarkPageNumber: 125
+BookmarkPageNumber: 127
 BookmarkBegin
 BookmarkTitle: Soldier's Hymn
 BookmarkLevel: 1
-BookmarkPageNumber: 142
+BookmarkPageNumber: 148
 BookmarkBegin
 BookmarkTitle: Song of Spring
 BookmarkLevel: 1
@@ -545,15 +569,15 @@ BookmarkPageNumber: 24
 BookmarkBegin
 BookmarkTitle: The Spacious Firmament on High
 BookmarkLevel: 1
-BookmarkPageNumber: 144
+BookmarkPageNumber: 150
 BookmarkBegin
 BookmarkTitle: Sweet Genevieve
 BookmarkLevel: 1
-BookmarkPageNumber: 95
+BookmarkPageNumber: 97
 BookmarkBegin
 BookmarkTitle: The Tailor and the Mouse
 BookmarkLevel: 1
-BookmarkPageNumber: 120
+BookmarkPageNumber: 122
 BookmarkBegin
 BookmarkTitle: There's Music in the Air
 BookmarkLevel: 1
@@ -561,7 +585,11 @@ BookmarkPageNumber: 60
 BookmarkBegin
 BookmarkTitle: Tit-Willow
 BookmarkLevel: 1
-BookmarkPageNumber: 140
+BookmarkPageNumber: 144
+BookmarkBegin
+BookmarkTitle: To Phœbe
+BookmarkLevel: 1
+BookmarkPageNumber: 132
 BookmarkBegin
 BookmarkTitle: Tramp! Tramp! Tramp!
 BookmarkLevel: 1
@@ -573,7 +601,7 @@ BookmarkPageNumber: 6
 BookmarkBegin
 BookmarkTitle: 'Twere vain to tell
 BookmarkLevel: 1
-BookmarkPageNumber: 106
+BookmarkPageNumber: 108
 BookmarkBegin
 BookmarkTitle: Vive L'Amour
 BookmarkLevel: 1
@@ -585,23 +613,23 @@ BookmarkPageNumber: 13
 BookmarkBegin
 BookmarkTitle: A Warrior Bold
 BookmarkLevel: 1
-BookmarkPageNumber: 112
+BookmarkPageNumber: 114
 BookmarkBegin
 BookmarkTitle: We won’t go home until morning
 BookmarkLevel: 1
-BookmarkPageNumber: 115
+BookmarkPageNumber: 117
 BookmarkBegin
 BookmarkTitle: When I go out of door
 BookmarkLevel: 1
-BookmarkPageNumber: 136
+BookmarkPageNumber: 140
 BookmarkBegin
 BookmarkTitle: When I in pain and sorrow moan
 BookmarkLevel: 1
-BookmarkPageNumber: 143
+BookmarkPageNumber: 149
 BookmarkBegin
 BookmarkTitle: When Jesus Wept (Round)
 BookmarkLevel: 1
-BookmarkPageNumber: 142
+BookmarkPageNumber: 148
 BookmarkBegin
 BookmarkTitle: When You and I Were Young, Maggie
 BookmarkLevel: 1
@@ -609,7 +637,7 @@ BookmarkPageNumber: 82
 BookmarkBegin
 BookmarkTitle: Where There's a Will There’s a Way
 BookmarkLevel: 1
-BookmarkPageNumber: 126
+BookmarkPageNumber: 131
 BookmarkBegin
 BookmarkTitle: Who Would Not Fight for Freedom?
 BookmarkLevel: 1

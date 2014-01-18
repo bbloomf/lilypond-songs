@@ -16,11 +16,17 @@
 - title: "The Ash Grove"
   url: "The%20Ash%20Grove"
 
-- title: "The Battle Cry of Freedom (Confederate)"
-  url: "The%20Battle%20Cry%20of%20Freedom%20(Confederate)"
+- title: "At the Lamb’s High Feast We Sing"
+  url: "At%20the%20Lamb%E2%80%99s%20High%20Feast%20We%20Sing"
+
+- title: "Auld Lang Syne"
+  url: "Auld%20Lang%20Syne"
 
 - title: "The Battle Cry of Freedom"
   url: "The%20Battle%20Cry%20of%20Freedom"
+
+- title: "The Battle Cry of Freedom (Confederate)"
+  url: "The%20Battle%20Cry%20of%20Freedom%20(Confederate)"
 
 - title: "The Battle Hymn of the Republic"
   url: "The%20Battle%20Hymn%20of%20the%20Republic"
@@ -46,6 +52,9 @@
 - title: "The Bonnie Blue Flag"
   url: "The%20Bonnie%20Blue%20Flag"
 
+- title: "Bonnie Charlie"
+  url: "Bonnie%20Charlie"
+
 - title: "Bonnie Doon"
   url: "Bonnie%20Doon"
 
@@ -66,6 +75,9 @@
 
 - title: "A Capital Ship"
   url: "A%20Capital%20Ship"
+
+- title: "Castles in the Air"
+  url: "Castles%20in%20the%20Air"
 
 - title: "Catch Round the Table"
   url: "Catch%20Round%20the%20Table"
@@ -103,8 +115,14 @@
 - title: "Dixie"
   url: "Dixie"
 
+- title: "Down Among the Dead Men"
+  url: "Down%20Among%20the%20Dead%20Men"
+
 - title: "Dreaming of Home and Mother"
   url: "Dreaming%20of%20Home%20and%20Mother"
+
+- title: "Drink to Me Only With Thine Eyes"
+  url: "Drink%20to%20Me%20Only%20With%20Thine%20Eyes"
 
 - title: "Dublin Bay"
   url: "Dublin%20Bay"
@@ -130,6 +148,9 @@
 - title: "For he’s a jolly good fellow"
   url: "For%20he%E2%80%99s%20a%20jolly%20good%20fellow"
 
+- title: "Gaily the Troubador"
+  url: "Gaily%20the%20Troubador"
+
 - title: "Gaudeamus Hodie"
   url: "Gaudeamus%20Hodie"
 
@@ -150,6 +171,12 @@
 
 - title: "Good Night Ladies"
   url: "Good%20Night%20Ladies"
+
+- title: "The Goslings"
+  url: "The%20Goslings"
+
+- title: "Go to Dark Gethsemane"
+  url: "Go%20to%20Dark%20Gethsemane"
 
 - title: "Hail! Smiling Morn"
   url: "Hail!%20Smiling%20Morn"
@@ -174,6 +201,9 @@
 
 - title: "The Heart Bowed Down"
   url: "The%20Heart%20Bowed%20Down"
+
+- title: "Here’s to the Maiden of Bashful Fifteen"
+  url: "Here%E2%80%99s%20to%20the%20Maiden%20of%20Bashful%20Fifteen"
 
 - title: "He that Will an Alehouse Keep"
   url: "He%20that%20Will%20an%20Alehouse%20Keep"
@@ -229,6 +259,9 @@
 - title: "La ci darem la mano"
   url: "La%20ci%20darem%20la%20mano"
 
+- title: "Last Week I Took a Wife"
+  url: "Last%20Week%20I%20Took%20a%20Wife"
+
 - title: "Lead Kindly Light"
   url: "Lead%20Kindly%20Light"
 
@@ -249,6 +282,9 @@
 
 - title: "Long, Long Ago"
   url: "Long,%20Long%20Ago"
+
+- title: "The Lords of Creation"
+  url: "The%20Lords%20of%20Creation"
 
 - title: "The Lorelei"
   url: "The%20Lorelei"
@@ -282,6 +318,9 @@
 
 - title: "My bonny lass she smileth"
   url: "My%20bonny%20lass%20she%20smileth"
+
+- title: "My Lodging is on the Cold Ground"
+  url: "My%20Lodging%20is%20on%20the%20Cold%20Ground"
 
 - title: "My Old Kentucky Home"
   url: "My%20Old%20Kentucky%20Home"
@@ -367,6 +406,9 @@
 - title: "Saint Patrick’s Day"
   url: "Saint%20Patrick%E2%80%99s%20Day"
 
+- title: "Sally in Our Alley"
+  url: "Sally%20in%20Our%20Alley"
+
 - title: "Santa Lucia"
   url: "Santa%20Lucia"
 
@@ -375,6 +417,12 @@
 
 - title: "Scotch Lassie Jean"
   url: "Scotch%20Lassie%20Jean"
+
+- title: "Scots Wha Hae"
+  url: "Scots%20Wha%20Hae"
+
+- title: "The Separation"
+  url: "The%20Separation"
 
 - title: "Shoot false love I care not"
   url: "Shoot%20false%20love%20I%20care%20not"
@@ -409,6 +457,9 @@
 - title: "Tit-Willow"
   url: "Tit-Willow"
 
+- title: "To Phœbe"
+  url: "To%20Ph%C5%93be"
+
 - title: "Tramp! Tramp! Tramp!"
   url: "Tramp!%20Tramp!%20Tramp!"
 
@@ -417,6 +468,9 @@
 
 - title: "’Twere vain to tell"
   url: "%E2%80%99Twere%20vain%20to%20tell"
+
+- title: "The Vicar of Bray"
+  url: "The%20Vicar%20of%20Bray"
 
 - title: "Vive L’Amour"
   url: "Vive%20L%E2%80%99Amour"

@@ -67,7 +67,7 @@ sopMusic = \relative c' {
     
     e4 g c d8 e |
     d4. b8 g4~ g8 g |
-    g4 bes8 bes cis4 e |
+    g4 bes8~ bes cis4 e |
     d2. d8~ d |
     a4 c b\cresc d8\! d |
     
@@ -214,7 +214,7 @@ altoMusic = \relative c' {
   
   c4 e g g8 g |
   g4. g8 d4~ d8 d |
-  e4 e8 e g4 g |
+  e4 e8~ e g4 g |
   g2. g8~ g |
   fis4 a g g8 g |
   

@@ -1,8 +1,9 @@
-﻿\version "2.14.2"
+\version "2.14.2"
 \include "util.ly"
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"The Vicar of Bray"}}
-  composer = \markup\oldStyleNum"17th Century English Folk Song"
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"All Hail the Power of Jesus’ Name"}}
+  composer = \markup\oldStyleNum"Edward Perronet (1721–1792)"
+  poet = \markup\oldStyleNum"Oliver Holden (1765–1844)"
   tagline = ""
 }
 \paper {
@@ -14,13 +15,8 @@
   system-system-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)
-       (padding . -2)
+       (padding . 1)
        (stretchability . 100))
-  score-markup-spacing =
-    #'((basic-distance . 0)
-       (minimum-distance . 0)
-       (padding . 0)
-       (stretchability . 20))
   ragged-last-bottom = ##t
   ragged-bottom = ##f
   two-sided = ##t
@@ -49,7 +45,7 @@
 }
 #(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
 global = {
-  \key d \major
+  \key g \major
   \time 4/4
   \dynamicUp
   %\set crescendoSpanner = #'dashed-line
@@ -59,91 +55,66 @@ global = {
 }
 
 sopMusic = \relative c' {
-	\partial 4 a'4 |
-  d cis8[ b] a4 b |
-  g a fis g |
-  a d, g fis |
-  e2 d4 \bar""\break a' |
-
-  d cis8[ b] a4 b |
-  g a fis g |
-  a d, g fis |
-  e2 d4 \bar""\break a' |
-
-  d b cis a |
-  d cis8[ b] cis4 a |
-  d4 cis8[ d] e4 d8[ cis] |
-  b2 a4 \bar""\break a |
-
-  d cis8[ b] a4 b |
-  g a fis g |
-  a d, g fis |
-  e2 d4 \bar"||"\break a' |
-
-  d4 cis8[ b] cis4 a |
-  d cis8[ b] cis4 a |
-  d cis8[ d] e4 d8[ cis] |
-  b2 a4 \bar""\break a |
-
-  d cis8[ b] a4 b |
-  g a fis g |
-  a d,8 d g g fis4 |
-  e2 d4 \bar"|."
-
+  \partial 2 d2 |
+  g4 g b b |
+  a g a \bar"" b |
+  a g b a |
+  g2. \bar""\break
   
+  a4 |
+  b a g b |
+  d8[ c] b[ a] b4 \bar""
+
+  d4 |
+  d2 d |
+  e d4( cis) |
+  d2. \bar""
+  b4 |
+  d b g b |
+  a8[ g] a[ b] a4 \bar""
+  g4 |
+  d'2 c |
+  b4.( c8 a4) a |
+  g2 \bar"|."
 }
 sopWords = \lyricmode {
   \set stanza = #"1. "
-	In good King Char -- les’s gold -- en days,
-  When loy -- al -- ty no harm meant,
-  A zeal -- ous High Church -- man was I,
-  And so I got pre -- fer -- ment;
-  To teach my flock I nev -- er miss’d,
-  Kings were by God ap -- point -- ed,
-  And curs’d are those that dare re -- sist,
-  Or touch the Lord’s an -- oint -- ed.
+  All hail the pow’r of Je -- sus’ name!
+  Let an -- gels pros -- trate fall.
+  Bring forth the roy -- al di -- a -- dem,
+  and crown Him Lord of __ all.
+  Bring forth the roy -- al di -- a -- dem,
+  and crown Him Lord __ of all!
 }
 
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
-  When roy -- al James ob -- tain’d the crown,
-  And Pop -- ’ry came in fash -- ion,
-  The pe -- nal laws I hoot -- ed down,
-  And read the de -- clar -- a -- tion;
-
-  The Church of Rome I found would fit
-  Full well my con -- sti -- tu -- tion;
-  And had be -- come a Jes -- u -- it,
-  But for the Rev -- o -- lu -- tion.
-
-  And this is law, I will main -- tain,
-  Un -- til my dy -- ing day, Sir,
-  That what -- so -- ev -- er King may reign,
-  Still I’ll be the Vi -- car of Bray, Sir.
+  O seed of Is -- rael’s cho -- sen race
+  now ran -- somed from the fall,
+  hail Him who saves you by his grace,
+  and crown Him Lord of __ all.
+  Hail Him who saves you by his grace,
+  and crown Him Lord __ of all!
 }
 
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
-  When gra -- cious Anne be -- came our Queen,
-  The Church of Eng -- land’s glo -- ry,
-  An -- oth -- er face of things was seen,
-  And I be -- came a To -- ry;
-  Oc -- ca -- sion -- al Con -- for -- mist’s base,
-  I curs’d their mod -- e -- ra -- tion,
-  And thought the church in dan -- ger was
-  By such pre -- va -- ri -- ca -- tion.
+  Let ev -- ’ry tongue and ev -- ’ry tribe
+  re -- spon -- sive to his call,
+  to Him all maj -- es -- ty a -- scribe,
+  and crown Him Lord of __ all.
+  To Him all maj -- es -- ty a -- scribe,
+  and crown Him Lord __ of all!
 }
 
 sopWordsIV = \lyricmode {
   \set stanza = #"4. "
-  When George in pud -- ding time came o’er,
-  And mod -- ’rate men looked big, Sir,
-  I turned a cat in pan once more,
-  And so be -- came a Whig, Sir;
-  And thus pre -- fer -- ment I pro -- cured
-  From our new Faith’s de -- fend -- er,
-  And al -- most ev -- ’ry day ab -- jured
-  The Pope and the Pre -- tend -- er.
+  Oh, that with all the sa -- cred throng
+  we at his feet may fall!
+  We’ll join the ev -- er -- last -- ing song
+  and crown Him Lord of __ all.
+  We’ll join the ev -- er -- last -- ing song
+  and crown Him Lord __ of all!
 }
 
 sopWordsV = \lyricmode {
@@ -151,41 +122,25 @@ sopWordsV = \lyricmode {
 }
 
 altoMusic = \relative c' {
-  a'4 |
-  fis g fis fis |
-  e e d d |
-  d8[ cis] b4 b8[ cis] d4 |
-  d( cis) d
+  b2 |
+  d4 d g g |
+  fis e fis g |
+  fis g d c |
+  b2. d4 |
+  g d b g' |
+  b8[ a] g[ fis] g4
 
-  e |
-  fis g a8[ g] fis4 |
-  e e d cis8[ d] |
-  d4 b8[ a] b[ cis] d4 |
-  d( cis) d
+  fis4 |
+  g2 a |
+  g fis4( e) |
+  fis2.
 
-  e |
-  fis gis a e |
-  fis gis a e |
-  a a a fis |
-  a( gis) a
-
-  e4 |
-  d8[ a'] g4  a8[ g] fis4 |
-  e e d d |
-  d8[ cis] b4 b8[ cis] d4 |
-  d( cis) d \bar"||"
-
-  e |
-  fis gis a e |
-  fis gis a e |
-  a a a a |
-  a( gis) a
-
-  e |
-  a g a8[ g] fis4 |
-  e e d d |
-  d d8 d b cis d4 |
-  d( cis) d \bar"|."
+  g4 |
+  g g g d |
+  d d fis g |
+  g2 e |
+  d2. c4 |
+  b2 \bar"|."
 }
 altoWords = \lyricmode {
 }
@@ -208,41 +163,25 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
-  a4 |
-  a a d b |
-  b a a g |
-  d'8[ cis] b4 b8[ a] fis[ g] |
-  a4.( g8) fis4
+  g2 |
+  b4 b d d |
+  c b c d |
+  c b g fis |
+  g2. a4 |
+  b a g b |
+  d8[ c] b[ a] b4 
 
   a |
-  b b d d8[ cis] |
-  b4 a b cis8[ b] |
-  a4 g8[ a] b[ a] a4 |
-  a4.( g8) fis4
+  b2 a |
+  b a |
+  a2. g4 |
+  b d d d |
+  c8[ b] c[ d] c4
 
-  a4 |
-  d e e a, |
-  d e e e8[ cis] |
-  d4 e8[ d] e4 a, |
-  e'4.( d8) cis4
-
-  cis4 |
-  a a a d8[ cis] |
-  b4 a a g8[ b] |
-  a4 b g a |
-  a4.( g8) fis4 \bar"||"
-
-  a4 |
-  d e e a, |
-  d e e e8[ cis] |
-  d4 e8[ d] e4 e |
-  e4.( d8) cis4
-
-  cis4 |
-  a a a d8[ cis] |
-  b4 a a g8[ b] |
-  a4 b8 b g g a4 |
-  a4.( g8) fis4 \bar"|."
+  b4 |
+  g2 g |
+  g2. fis4 |
+  g2 \bar"|."
 }
 
 tenorWords = \lyricmode {
@@ -255,36 +194,23 @@ tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  a4 |
-  d, e fis d |
-  e cis d b |
-  fis' g8[ fis] e4 fis8[ g] |
-  a4( a,) d4 cis |
+  g,2 |
+  g4 g g' g |
+  d e d g |
+  d e d d |
+  g,2. d'4 |
+  g d b g' |
+  b8[ a] g[ fis] g4
 
-  b e fis d |
-  e cis b a8[ g] |
-  fis4 g8[ fis] e4 fis8[ g] |
-  a2 d4 cis |
-
-  b e a, cis |
-  b e a,8[ b] cis[ e] |
-  fis4 e8[ d] cis4 d |
-  e2 a,4 a'8[ g] |
-  
-  fis4 e fis8[ e] d4 |
-  e8[ d] cis4 d8[ cis] b[ g] |
-  fis4 g8[ fis] e4 fis8[ g] |
-  a2 d4 cis |
-
-  b e a, cis |
-  b e a,8[ b] cis[ e] |
-  fis4 e8[ d] cis4 a |
-  e'2 a,4 g' |
-  fis e fis8[ e] d4 |
-
-  e8[ d] cis4 d8[ cis] b[ g] |
-  fis4 g8 fis e e fis8[ g] |
-  a2 d4 \bar"|."
+  d |
+  g2 fis |
+  e a |
+  d,2. g4 |
+  g g b g |
+  d d d e |
+  b2 c |
+  d2. d4 |
+  g,2 \bar"|."
 }
 bassWords = \lyricmode {
 }

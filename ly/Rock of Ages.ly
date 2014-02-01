@@ -1,9 +1,9 @@
 ﻿\version "2.14.2"
 \include "util.ly"
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Go to Dark Gethsemane"}}
-  composer = \markup\oldStyleNum"Johann Sebastian Bach (1685–1750)"
-  poet = \markup\oldStyleNum"James Montgomery (1771–1854)"
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Rock of Ages"}}
+  composer = \markup\oldStyleNum"Thomas Hastings (1784–1872)"
+  poet = \markup\oldStyleNum"Augustus Toplady (1740–1778)"
   tagline = ""
 }
 \paper {
@@ -15,13 +15,13 @@
   system-system-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)
-       (padding . -3)
+       (padding . 0)
        (stretchability . 50))
   score-markup-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)
-       (padding . -3)
-       (stretchability . 35))
+       (padding . 0)
+       (stretchability . 50))
   ragged-last-bottom = ##t
   ragged-bottom = ##f
   two-sided = ##t
@@ -51,7 +51,7 @@
 #(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
 global = {
   \key bes \major
-  \time 4/4
+  \time 3/4
   \dynamicUp
   %\set crescendoSpanner = #'dashed-line
   %\set midiInstrument = "recorder"
@@ -60,62 +60,65 @@ global = {
 }
 
 sopMusic = \relative c' {
-	bes'4  a8[ g] d'4 c8[ bes] |
-  a4 bes8[ c] fis,2 |
-  g8[ a] bes4 ees, d |
+  \partial 4 f8. g16 |
+  f4 d bes'8. g16 |
+  f2 \bar""
+  bes8. c16 |
+  d4. c8 bes a |
+  bes2 \bar""\break
 
-  c f d2 |
-  bes'4 a8[ g] d'4 c8[ bes] |
-  a4 bes8[ c] fis,2 |
+  a8. bes16 |
+  c4. c8 a f |
+  bes2 \bar""
+  a8. bes16 |
+  c4. c8 a f |
+  bes2 \bar""\break
 
-  g8[ a] bes4 ees, d |
-  c f d2 |
-  d'4 f, e f |
-
-  bes a8[ g] a2 |
-  a4 bes8[ c] fis,4 d' |
-  bes a8[ g] g2 \bar"|."
+  f8. g16 |
+  f4 d bes'8. g16 |
+  f2 \bar""
+  bes8. c16 |
+  d4. c8 bes a |
+  bes2 \bar"|."
 }
 sopWords = \lyricmode {
   \set stanza = #"1. "
-  Go to dark Geth -- sem -- a -- ne,
-  Ye that feel the tempt -- er’s pow’r;
-  Your Re -- deem -- er’s con -- flict see;
-  Watch with Him one bit -- ter hour:
-  Turn not from His griefs a -- way;
-  Learn from Him to watch and pray.
-
+  Rock of A -- ges, cleft for me,
+  Let me hide my -- self in thee!
+  Let the Wa -- ter, and the Blood,
+  From thy wound -- ed Side which flow’d,
+  Be of Sin the dou -- ble Cure,
+  Cleanse me from its Guilt and Pow’r.
 }
 
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
-  See Him at the judg -- ment -- hall,
-  Beat -- en, bound, re -- viled, ar -- raign’d:
-  See Him meek -- ly bear -- ing all!
-  Love to man His soul sus -- tain’d!
-  Shun not suf -- f’ring, shame or loss;
-  Learn of Christ to bear the cross.
-  
+  Not the La -- bor of my Hands
+  Can ful -- fil thy Law’s De -- mands;
+  Could my Zeal no Res -- pite know,
+  Could my Tears for -- ev -- er flow,
+  All for Sin could not a -- tone,
+  Thou must save, and thou a -- lone.
 }
 
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
-  Cal -- v’ry’s mourn -- ful moun -- tain view;
-  There the Lord of Glo -- ry see,
-  Made a sac -- ri -- fice for you,
-  Dy -- ing on th’ac -- curs -- ed tree:
-  ‘It is fin -- ish’d,’ hear Him cry:
-  Trust in Christ, and learn to die.
+  No -- thing in my Hand I bring,
+  Simp -- ly to thy Cross I cling;
+  Nak -- ed come to thee for Dress,
+  Help -- less look to thee for Grace;
+  Foul, I to the Foun -- tain fly;
+  Wash me, Sav -- iour or I die!
 }
 
 sopWordsIV = \lyricmode {
   \set stanza = #"4. "
-  Ear -- ly to the tomb re -- pair,
-  Where they laid his breath -- less clay;
-  An -- gels kept their vig -- ils there:
-  Who hath tak -- en Him a -- way?
-  ‘Christ is ris’n!’ He seeks the skies;
-  Sav -- iour! teach us so to rise.
+  While I draw this fleet -- ing Breath,
+  When my Eye -- lids close in Death,
+  When I soar to Worlds un -- known,
+  See thee on thy Judg -- ment Throne,
+  Rock of A -- ges, cleft for me,
+  Let me hide my -- self in thee.
 }
 
 sopWordsV = \lyricmode {
@@ -123,21 +126,26 @@ sopWordsV = \lyricmode {
 }
 
 altoMusic = \relative c' {
-  d4 c bes8[ c] d4 |
-  ees d8[ c] d2 |
-  d4 d c8[ a] bes4 |
+  d8. ees16 |
+  d4 bes d8. ees16 |
+  d2
+  f8. g16 |
+  f4. ees8 d c |
+  d2
 
-  bes a bes2 |
-  d4 c bes8[ c] d4 |
-  ees d8[ c] d2 |
+  c8. d16 |
+  ees4. ees8 ees ees |
+  d2
+  c8. d16 |
+  ees4. ees8 ees ees |
+  d2
 
-  d4 d c8[ a] bes4 |
-  bes a bes2 |
-  bes4 bes c c |
-
-  d c c2 |
-  c4 c d d |
-  d c8[ bes] bes2 \bar"|."
+  d8. ees16 |
+  d4 bes d8. ees16 |
+  d2
+  f8. g16 |
+  f4. ees8 d c |
+  d2 \bar"|."
 }
 altoWords = \lyricmode {
 }
@@ -160,21 +168,25 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
-  g4 fis g g |
-  g fis8[ g] a2 |
-  g4 g g f |
+  bes8. bes16 |
+  bes4 f f8. bes16 |
+  bes2
+  bes8. bes16 |
+  bes4. f8 f f |
+  f2 \bar""
 
-  f f f2 |
-  g4 fis g g |
-  g fis8[ g] a2 |
+  f8. f16 |
+  f4. f8 f f |
+  f2
+  f8. f16 |
+  f4. f8 f <f \tweak #'font-size #-2 c'> <f \tweak #'font-size #-2 bes>2
 
-  g4 g g f |
-  f f f2 |
-  f4 f g f |
-
-  f e f2 |
-  f4 g a g |
-  g fis g2 \bar"|."
+  bes8. bes16 |
+  bes4 f f8. bes16 |
+  bes2
+  bes8. bes16 |
+  bes4. f8 f f |
+  f2 \bar"|."
 }
 
 tenorWords = \lyricmode {
@@ -187,21 +199,26 @@ tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  g,4 a bes g |
-  c d8[ ees] d2 |
-  bes8[ a] g4 c d8[ ees] |
+  bes,8. bes16 |
+  bes4 bes bes8. bes16 |
+  bes2
+  d8. ees16 |
+  f4. f8 f, f |
+  bes2 \bar""
 
-  f4 f, bes2 |
-  g4 a bes g |
-  c d8[ ees] d2 |
+  f'8. f16 |
+  f4. f8 f, f |
+  bes2
+  f'8. f16 |
+  f4. f8 f, f |
+  bes2
 
-  bes8[ a] g4 c d8[ ees] |
-  f4 f, bes2 |
-  bes4 d c8[ bes] a4 |
-
-  g4 c f,2 |
-  f'4 ees? d8[ c] bes[ c] |
-  d4 d g,2 \bar"|."
+  bes8. bes16 |
+  bes4 bes bes8. bes16 |
+  bes2
+  d8. ees16 |
+  f4. f8 f, f |
+  bes2 \bar"|."
 }
 bassWords = \lyricmode {
 }
@@ -235,7 +252,7 @@ pianoLH = \relative c' {
 %    \new PianoStaff << \new Staff { \new Voice { \pianoRH } } \new Staff { \clef "bass" \pianoLH } >>
   >>
   \midi {
-    \tempo 4 = 85
+    \tempo 4 = 90
     \set Staff.midiInstrument = "flute"
     \context {
       \Voice

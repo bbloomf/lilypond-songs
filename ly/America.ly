@@ -107,7 +107,7 @@ sopWordsII = \lyricmode {
   
   I love thy rocks and rills,
   Thy woods and tem -- pled hills;
-  My hearts with rap -- ture thrills,
+  My heart with rap -- ture thrills,
   Like that a -- bove.
 }
 

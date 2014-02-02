@@ -1,7 +1,7 @@
 ﻿\version "2.14.2"
 \include "util.ly"
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"O cease, my wandering soul"}}
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Oh cease, my wandering soul"}}
   composer = \markup\oldStyleNum"John E. Gould (1820–1875)"
   poet = \markup\oldStyleNum"William Augustus Mühlenberg (1796–1877)"
   tagline = ""

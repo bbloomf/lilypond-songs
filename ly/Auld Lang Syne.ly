@@ -59,18 +59,18 @@ sopMusic = \relative c' {
   g8. g16 g8 b |
   a8. g16 a8 b |
   g8. g16 b8 d |
-  e4. \bar""\break e8 |
+  e4. \bar"" e8 |
   d8. b16 b8 g |
   
   a8. g16 a8 b |
   \slurDashed g8.( e16) e8( d) |
-  g4 b8\rest \bar "|:" \break
+  g4 b8\rest \bar "|:" 
   e8 |
   d8.[ b16] b8[ g] |
   a8. g16 a8 b16\rest b |
   
   b8.[ g16] b8.[ d16] |
-  e4. \bar""\break e8 |
+  e4. \bar"" e8 |
   d8. b16 b8 g |
   a8. g16 a8 b |
   g8.[ e16] e8[ d] |
@@ -83,13 +83,6 @@ sopWords = \lyricmode {
   And nev -- er brought to mind?
   Should auld ac -- quain -- tance be for -- got,
   And days of auld lang syne?
-
-  \unset ignoreMelismata
-  \set associatedVoice = "sopranos"
-  For auld lang syne, my dear,
-  For auld lang syne;
-  We’ll tak’ a cup o’ kind -- ness yet
-  For auld lang syne.
 }
 
 sopWordsII = \lyricmode {
@@ -98,6 +91,13 @@ sopWordsII = \lyricmode {
   And pu’d the gow -- ans fine;
   But_we’ve wan -- der’d mon -- y~a wea -- ry foot,
   Sin’ auld __ lang __ syne.
+  \unset ignoreMelismata
+  \set associatedVoice = "sopranos"
+  \dropLyricsXI
+  For auld lang \raiseLyrics syne, my dear,
+  For auld lang syne;
+  We’ll tak’ a cup o’ kind -- ness yet
+  For auld lang syne.
 }
 
 sopWordsIII = \lyricmode {

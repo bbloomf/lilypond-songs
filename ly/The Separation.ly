@@ -15,8 +15,13 @@
   system-system-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)
-       (padding . 5)
-       (stretchability . 100))
+       (padding . -3)
+       (stretchability . 50))
+  score-markup-spacing =
+    #'((basic-distance . 0)
+       (minimum-distance . 0)
+       (padding . -3)
+       (stretchability . 50))
   ragged-last-bottom = ##t
   ragged-bottom = ##f
   two-sided = ##t

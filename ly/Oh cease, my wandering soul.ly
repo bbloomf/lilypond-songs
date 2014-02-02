@@ -116,9 +116,9 @@ altoMusic = \relative c' {
   e4 |
   e2 e4 |
   dis2 dis4 |
-  b2
+  e2
 
-  gis'4 |
+  gis4 |
   a4.( dis,8) fis[ a] |
   gis4.( b,8) b[ e] |
   dis2

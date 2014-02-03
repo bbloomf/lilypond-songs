@@ -168,7 +168,7 @@ tenorMusic = \relative c' {
 
   a4 |
   bes2 f4 |
-  f4.( g8) g[ a] |
+  f4.( g8) a4 |
   bes2 bes4 |
   bes( ees) c |
   c2 c4 |

@@ -15,8 +15,8 @@
   ragged-right = ##f
   inner-margin = 1\in
   outer-margin = 0.75\in
-  top-margin = 0.5\in
-  bottom-margin = 0.75\in
+  top-margin = 0.25\in
+  bottom-margin = 0.25\in
   first-page-number = #1
   print-first-page-number = ##t
   headerLine = ""
@@ -36,13 +36,13 @@
 \markup\fill-line \center-align {\abs-fontsize #24 \italic"by"}
 \markup\vspace #0.25
 \markup\fill-line \center-align {\abs-fontsize #28 \smallCapsOldStyle"benjamin bloomfield"}
-\markup\vspace #9
+\markup\vspace #11
 \markup{\abs-fontsize #12 {First edition, \smallCapsOldStyle"%date% %month% %year%"}}
 \markup\vspace #0.1
 \markup{\abs-fontsize #12 "This work is free of known copyright restrictions."}
 \pageBreak
 \markup\fill-line \center-align {\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #32 \smallCapsOldStyle"Contents"}}
-\markup\vspace #2
+\markup\vspace #0.9
 
 %CONTENTS%
 %\pageBreak

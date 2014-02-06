@@ -17,6 +17,11 @@
        (minimum-distance . 0)
        (padding . 1)
        (stretchability . 100))
+  score-markup-spacing =
+    #'((basic-distance . 0)
+       (minimum-distance . 0)
+       (padding . -1)
+       (stretchability . 80))
   ragged-last-bottom = ##t
   ragged-bottom = ##f
   two-sided = ##t

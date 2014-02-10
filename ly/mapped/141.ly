@@ -42,9 +42,9 @@
 }
 #(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
 global = {
-  \key c \major
-  \time 6/8
-  %\dynamicUp
+  \key aes \major
+  \time 3/4
+  \dynamicUp
   %\set crescendoSpanner = #'dashed-line
   %\set midiInstrument = "recorder"
   \autoBeamOff
@@ -52,73 +52,114 @@ global = {
 }
 
 sopMusic = \relative c' {
-	\partial 4.
-  c'4 g8 |
-  e4 c8 c4 e8 |
-  g4. e'4 c8 |
-  b4 g8 g[ a] b |
+	\partial 4
+  ees4 |
+  ees aes c |
+  c bes bes |
+  bes c bes |
+  bes aes aes |
+  bes aes f |
+  ees4. aes8 c4 |
+  c bes aes |
+  bes2 ees,4 |
+  ees4 aes c |
   
-  c4. e,8[ d] c |
-  g'4.\fermata c4 d8 |
-  e4.~ e~ |
-  e4 e8 \acciaccatura e d4 cis8 |
+  c bes bes |
+  bes c bes |
+  bes aes aes |
+  bes aes f |
+  ees ees aes |
+  bes c bes |
+  aes2 \bar"||"\break \time 4/4 \partial 4 aes8. bes16 |
+  c2. c8. des16 |
+  ees2. c8[ bes] |
   
-  d4. b4 cis8 |
-  d4.~ d~ |
-  d4 d8 c4 b8 |
-  c4. c4 c8 |
-  
-  a4 a8 d4 d8 |
-  b4. e4 d8 |
-  c[ d] e d[ c] b |
-  c4. \bar"|."
+  aes8 aes aes aes aes4 g8 aes |
+  bes2. aes8. bes16 |
+  c2. bes8. aes16 |
+  des2( f4) f |
+  ees8 ees ees ees ees4 \acciaccatura bes8 des8. c16 |
+  aes2. \bar"|."
 }
 sopWords = \lyricmode {
   \set stanza = #"1. "
-	Mis -- ter Speak -- er, though ’tis late,
-  Mis -- ter Speak -- er, though ’tis late,
-  though ’tis late,
-  I must length -- en the de -- bate,
-  I must length -- en the de -- bate,
-  Mis -- ter Speak -- er, though ’tis late,
-  I must length -- en the de -- bate.
+	Though trou -- bles per -- plex you, Dis -- heart -- en and vex you,
+  Re -- tard -- ing your pro -- gress in som -- ber ar -- ray;
+  To shrink from with ter -- ror Is sure -- ly an er -- ror,
+  For where there’s a will there is al -- ways a way.
+  
+  There’s a way, there’s a way,
+  Wher -- ev -- er there’s a will there’s a way,
+  There’s a way, there’s a way,
+  Wher -- ev -- er there’s a will there’s a way.
+}
+
+sopWordsII = \lyricmode {
+  \set stanza = #"2. "
+  The task may be teas -- ing, The du -- ty un -- pleas -- ing,
+  But he who con -- fronts it will soon win the day;
+  The fight is half o -- ver When once we dis -- cov -- er
+  That where there’s a will there is al -- ways a way.
+}
+
+sopWordsIII = \lyricmode {
+  \set stanza = #"3. "
+  Mis -- for -- tunes un -- count -- ed Are of -- ten sur -- mount -- ed,
+  If on -- ly we quit not the field in dis -- may;
+  Then one more en -- deav -- or, Re -- mem -- ber -- ing ev -- er,
+  That where there’s a will there is al -- ways a way.
+  
+  \set associatedVoice = "tenors" ""
+  There’s a way,
+  there’s a way,
+  \repeat unfold 9 \skip1
+  there’s a way,
+  There’s a way,
+  there’s a way,
+}
+
+sopWordsIV = \lyricmode {
+  \set stanza = #"4. "
+}
+
+sopWordsV = \lyricmode {
+  \set stanza = #"5. "
 }
 
 altoMusic = \relative c' {
-  \partial 4.
-  r4 r8 |
-  c'4 g8 c4 g8 |
-  d'4 b8 r4 r8 |
-  d4 b8 d4 g,8 |
+  c4 |
+  c c ees |
+  ees des des |
+  des ees des |
+  des c ees |
+  f f des |
+  c4. ees8 ees4 |
+  ees ees d |
+  ees2 des4 |
+  c c ees |
   
-  e'4 c8 g4 c8 |
-  b4.\fermata r4 r8 |
-  r4 r8 e, f g |
-  a[ b] cis] d4 a8 |
+  ees des des |
+  des ees des |
+  des c ees |
+  f f des |
+  c c ees |
+  g g g |
+  ees2 \bar"||" \time 4/4 \partial 4 c8. des16 |
+  ees2. aes8. bes16 |
+  c2. aes8[ g] |
   
-  d,4. r8 f e |
-  d4. d8 e f |
-  g[ a] b c4 g8 |
-  c,4. c8 d e |
-  
-  f4 f8 d e f |
-  g4 g8 e f g |
-  a4 e8 f4 g8 |
-  c,4. \bar"|."
+  f f f f f4 e8 f |
+  g2. c,8. des16 |
+  ees2. des8. c16 |
+  f2( aes4) aes |
+  aes8 aes aes aes g4 g8. g16 |
+  aes2. \bar"|."
 }
 altoWords = \lyricmode {
-  \set stanza = \markup{\dynamic"f " "2. "}
-  Ques -- tion, ques -- tion, ques -- tion,
-  ques -- tion, ques -- tion, hear him! hear him! hear!
-  \set stanza = \markup\dynamic"mp"
-  Sir, I shall name you if you stir, if you stir,
-  Sir, I shall name you if you stir,
-  Sir, I shall name you,
-  Sir, I shall name you,
-  Sir, I shall name you if you stir.
 }
 altoWordsII = \lyricmode {
 %\markup\italic
+  \set stanza = #"2. "
 }
 altoWordsIII = \lyricmode {
   \set stanza = #"3. "
@@ -135,56 +176,101 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
-  \partial 4.
-  r4 r8 |
-  r4 r8 e'4\ff c8 |
-  g'4 d8 g4 e8 |
-  g4\fff d8 g4 d8 |
+  aes4 |
+  aes aes aes |
+  aes g g |
+  g aes g |
+  aes aes aes |
+  aes aes aes |
+  aes4. aes8 aes4 |
+  aes bes bes |
+  g2 g4 |
+  aes aes aes |
   
-  g4 e8 g[ f] e |
-  d4.\fermata e4\mp f8 |
-  g4 g8 g4. |
-  g4 g8 \acciaccatura g f4 e8 |
+  aes g g |
+  g aes g |
+  aes aes aes |
+  aes aes aes |
+  aes aes c |
+  des ees des |
+  c2 \bar"||" \time 4/4 \partial 4 s4 |
+  s4 aes8. aes16 aes4 s |
+  s aes8. aes16 aes4 aes8[ bes] |
   
-  f4. d4 e8 |
-  f4 f8 f4. |
-  f4 f8 e4 d8 |
-  e4. e4 e8 |
-  
-  c4 c8 f4 f8 |
-  d4. g4 f8 |
-  e[ f] g f[ e] d |
-  e4. \bar"|."
+  c c c c c4 c8 c |
+  ees4 ees8. ees16 ees4 s |
+  s aes,8. aes16 aes4 s |
+  s aes8. aes16 des4 des |
+  c8 c c c bes4 ees8. ees16 |
+  c2. \bar"|."
 }
 
 tenorWords = \lyricmode {
-  \set stanza = #"3. "
-  Or -- der, or -- der, or -- der,
-  hear him! hear him! hear him! hear him! hear!
-  pray sup -- port the chair,
-  pray sup -- port the chair,
-  pray sup -- port the chair,
-  pray sup -- port the chair,
-  Ques -- tion,
-  Or -- der, hear him! hear!
-  pray sup -- port, sup -- port the chair.
+}
+
+tenorWordsII = \lyricmode {
+}
+
+tenorWordsIII = \lyricmode {
+}
+
+bassMusic = \relative c' {
+  aes,4 |
+  aes aes aes |
+  ees' ees ees |
+  ees ees ees |
+  aes, aes c |
+  des des des |
+  aes4. c8 ees4 |
+  aes g f |
+  ees2 ees4 |
+  aes, aes aes |
+  
+  ees' ees ees |
+  ees ees ees |
+  aes, aes c |
+  des des des |
+  ees ees ees |
+  ees ees ees |
+  aes,2 \bar"||" \time 4/4 \partial 4 d4\rest |
+  d\rest aes'8. aes16 aes4 d,\rest |
+  d\rest aes'8. aes16 aes4 ees |
+  
+  f8 f f f f4 f8 f |
+  ees4 ees8. ees16 ees4 d\rest |
+  d\rest c8. ees16 aes4 d,\rest |
+  d\rest des8. des16 des4 des |
+  ees8 ees ees ees ees4 ees8. ees16 |
+  aes,2. \bar"|."
+}
+bassWords = \lyricmode {
+}
+
+pianoRH = \relative c' {
+}
+pianoLH = \relative c' {
 }
 
 \score {
 <<
    \new ChoirStaff <<
-    \new Staff = first <<
-      \new Voice = "sopranos" { << \global \sopMusic >> }
+    \new Staff = women <<
+      \new Voice = "sopranos" { \voiceOne << \global \sopMusic >> }
+      \new Voice = "altos" { \voiceTwo << \global \altoMusic >> }
     >>
-    \new Lyrics \lyricsto "sopranos" \sopWords
-    \new Staff = second <<
-      \new Voice = "altos" { << \global \altoMusic >> }
+    \new Lyrics = "altos"
+    \new Lyrics = "altosII"
+    \new Lyrics = "altosIII"
+    \new Lyrics = "altosIV"  \lyricsto "sopranos" \sopWordsIV
+    \new Lyrics = "altosV"  \lyricsto "sopranos" \sopWordsV
+   \new Staff = men <<
+      \clef bass
+      \new Voice = "tenors" { \voiceOne << \global \tenorMusic >> }
+      \new Voice = "basses" { \voiceTwo << \global \bassMusic >> }
     >>
-    \new Lyrics \lyricsto "altos" \altoWords
-    \new Staff = third <<
-      \new Voice = "tenors" { << \global \tenorMusic >> }
-    >>
-    \new Lyrics \lyricsto "tenors" \tenorWords
+    \context Lyrics = "altos"  \lyricsto "sopranos" \sopWords
+    \context Lyrics = "altosII"  \lyricsto "sopranos" \sopWordsII
+    \context Lyrics = "altosIII"  \lyricsto "sopranos" \sopWordsIII
   >>
 %    \new PianoStaff << \new Staff { \new Voice { \pianoRH } } \new Staff { \clef "bass" \pianoLH } >>
   >>
@@ -193,7 +279,7 @@ tenorWords = \lyricmode {
     \context {
       \Lyrics
       \override LyricText #'font-size = #1.3
-      %\override VerticalAxisGroup #'staff-affinity = #0
+      \override VerticalAxisGroup #'staff-affinity = #0
       \override LyricText #'X-offset = #center-on-word
     }
     \context {
@@ -213,9 +299,8 @@ tenorWords = \lyricmode {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Mister Speaker, though ’tis late"}}
-  subtitle = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #12.5 \smallCapsOldStyle"(Round)"}}
-  composer = \markup\oldStyleNum"Joseph Baildon (d. 1774)"
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Where There’s a Will There’s a Way"}}
+  composer = \markup\oldStyleNum"Charles Edward Pollock"
   tagline = ""
 }}
 

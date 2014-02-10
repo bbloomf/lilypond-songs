@@ -12,7 +12,7 @@
   system-system-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)
-       (padding . 1)
+       (padding . -3)
        (stretchability . 100))
   ragged-last-bottom = ##f
   ragged-bottom = ##f
@@ -42,143 +42,78 @@
 }
 #(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
 global = {
-  \key d \major
+  \key ees \major
   \time 4/4
   \dynamicUp
   %\set crescendoSpanner = #'dashed-line
   %\set midiInstrument = "recorder"
   \autoBeamOff
   \override DynamicTextSpanner #'style = #'none
-  \slurDashed
   \tieDashed
+  
 }
 
 sopMusic = \relative c' {
 	\partial 4
-  d8 e |
-  fis4 d4. b'8\rest e,8 fis |
-  g4 e4. b'8\rest cis8 b |
-  a4 g fis e |
-  d'2. \bar"" cis8 d |
-  e4 d a fis |
-  cis' cis2 b8 cis |
+  ees8 f |
+  g4 g8 g g bes4 g8 |
+  f ees ees f g4 c8. bes16 |
+  bes4 g8~ g g ees f8. f16 |
   
-  %page2
-  d4 cis b fis |
-  a2. \bar"" d,8 e |
-  fis4 d4. b'8\rest e,8 fis |
+  ees2 b'4\rest ees,8 f |
+  g4 g8 g g bes4 g8 |
+  f ees ees f g4 c\fermata |
+  bes g g8 ees8 f8. f16 |
+  ees2 b'4\rest \bar"||"\break
   
-  g4 e4. b'8\rest cis8 b |
-  a4 g fis e |
-  d'2. \bar"" cis8 d |
+  g8 aes |
+  bes4 bes8\rest bes bes4 a8 bes |
+  c2 bes4 bes\rest |
+  ees bes c bes |
+  g8 g f ees f4\fermata ees8 f |
   
-  e4 d a fis |
-  cis' cis2 cis8 b |
-  a4 ais b cis |
-  d2. \bar"||" \break
-  
-  
-  %Chorus
-  fis,8 a |
-  d4 cis b a |
-  fis d4. b'8\rest gis8 a |
-  
-  b a gis a b a g fis |
-  a4 e2 a8 b |
-  cis4. b8 cis4. b8 |
-  
-  a4 a cis4. b8 |
-  a4 g fis e |
-  fis8[ e]( d4) b'\rest fis8 a |
-  
-  %page4
-  d4 cis b a |
-  fis d4. b'8\rest gis8( a) |
-  
-  b a gis a b a g fis |
-  a4 e2 a8 b |
-  
-  cis4. b8 cis4. b8 |
-  a4 a cis4. b8 |
-  a4 g fis e |
-  d'2. \bar"|."
-  
+  g4 g8 g g bes4 g8 |
+  f ees ees f g4 c\fermata |
+  bes g g8 ees f8. f16 |
+  ees2 b'4\rest \bar"|."
 }
 sopWords = \lyricmode {
   \set stanza = #"1. "
-  \set ignoreMelismata = ##t
-	In our school -- days, mer -- ry school -- days,
-  We were hap -- py girls and boys;
-  We would al -- ways play to -- geth -- er,
-  And our life was full of joys;
+	Let us pause in life’s plea -- sures and count its ma -- ny tears
+  While we all sup __ sor -- row with the poor;
+  There’s a song that will lin -- ger for -- ev -- er in our ears;
+  Oh! Hard Times, come a -- gain no more.
   
-  And at \once \override LyricHyphen #'minimum-distance = #0.7 play -- time, in the \once \override LyricHyphen #'minimum-distance = #0.7 May -- time,
-  You and I were not a -- part;
-  I was then your \once \override LyricHyphen #'minimum-distance = #0.7 school -- boy lov -- er,
-  You, my lit -- tle girl sweet -- heart.
-  
-  %Chorus
-  We were go -- ing to be mar -- ried,
-  To be, to be, to be, to be, to be mar -- ried,
-  When we old -- er grew and bold -- er,
-  Then a lit -- tle while we tar -- _ ried,
-  
-  When I missed you I was lone -- ly,
-  For I loved you, Oh! I loved you on -- ly, on -- ly,
-  I was then your \once \override LyricHyphen #'minimum-distance = #0.7 school -- boy hus -- band,
-  And you were my \once \override LyricHyphen #'minimum-distance = #0.7 school -- girl wife.
+  ’Tis the song, the sigh of the wea -- ry;
+  Hard Times, Hard Times, come a -- gain no more:
+  Ma -- ny days you have lin -- gered a -- round my cab -- in door,
+  Oh! Hard Times, come a -- gain no more.
 }
 
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
-  \set ignoreMelismata = ##t
-  Soon we mar -- ried, you and I, dear,
-  You to me and I to you,
-  And we had a lit -- tle home, dear,
-  With just room e -- nough for two;
-  
-  And a lit -- tle, lat -- er on, dear,
-  Still more hap -- py we would be,
-  For we found our ti -- ny cot -- tage,
-  Was a -- bout the size for three.
-  
-  %chorus
-  It’s de -- light -- ful to be mar -- ried!
-  To be, to be, to be, to be, to be mar -- ried!
-  There is noth -- ing half so jol -- ly, As a hap -- py wed -- ded life; __ _ _
-  And I loved to play with ba -- by,
-  Our __ _ ti -- ny lit -- tle, pret -- ty lit -- tle ba -- by,
-  I was Pa -- pa, you were Ma -- ma,
-  Such a charm -- ing fam -- i -- ly.
+  While we seek mirth and beau -- ty and mu -- sic light and gay
+  There are frail forms __ faint -- ing at the door:
+  Though their voic -- es are si -- lent, their plead -- ing looks will say:
+  Oh! Hard Times, come a -- gain no more.
 }
 
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
   \set ignoreMelismata = ##t
-  When old age comes, to us both dear,
-  We will still be in the game;
-  I will be a gay old par -- ty,
-  You will be a grand old dame;
-  
-  And then arm in arm, to -- geth -- er,
-  We will go to church right near,
-  You will call me your old dar -- ling,
-  I will call you my old dear.
-  
-  %Chorus
-  It’s de -- light -- ful to be mar -- ried!
-  To be, to be, to be, to be, to be mar -- ried!
-  For the heart won’t be un -- ru -- ly,
-  If it real -- ly loves one tru -- _ ly;
-  
-  And your life will not be lone -- ly,
-  For I’ll love you, I will love you on -- ly, on -- ly,
-  I will be your lov -- ing hus -- band,
-  You will be my lov -- ing wife.
+  There’s a pale droop -- ing maid -- en who toils her life a -- way,
+  With a worn heart whose bet -- ter days are o’er;
+  Though her voice would be mer -- ry, ’tis sigh -- ing all the day:
+  Oh! Hard Times, come a -- gain no more.
 }
 
 sopWordsIV = \lyricmode {
   \set stanza = #"4. "
+  \set ignoreMelismata = ##t
+  ’Tis a sigh that is waft -- ed a -- cross the trou -- bled wave,
+  ’Tis a wail that is heard up -- on the shore,
+  ’Tis a dirge that is mur -- mured a -- round the low -- ly grave:
+  Oh! Hard Times, come a -- gain no more.
 }
 
 sopWordsV = \lyricmode {
@@ -186,53 +121,28 @@ sopWordsV = \lyricmode {
 }
 
 altoMusic = \relative c' {
-  \repeat unfold 2 {
-    d8 a |
-    d4 d4. s8 cis8 d |
-    cis4 cis4. s8 e8 e |
-    e4 cis cis cis |
-    d2. a8 fis' |
-    d4 d fis d |
-  }
-  \alternative {
-    {
-      e e2 cis8 e |
-      fis4 e dis bis |
-      cis2.
-    }
-    {
-      e4 e2 e8 cis |
-      cis4 cis g' g |
-      fis2. \bar"||"
-    }
-  }
-  \repeat unfold 1 {
-    d8 d |
-    fis4 fis fis fis |
-    d d4. s8 f fis |
-    f fis f fis f fis g d |
-    e4 cis2 e8 g |
-    g4. g8 e4. g8 |
-    g4 g e4. d8 |
-    e4 e cis a |
-  }
-  \alternative {
-    {
-      d4( a) s4
-    }
-    {
-      d2. \bar"|."
-    }
-  }
-    d8 d |
-    fis4 fis fis fis |
-    d d4. s8 f( fis) |
-    f fis f fis f fis g d |
-    e4 cis2 e8 g |
-    g4. g8 e4. g8 |
-    g4 g e4. d8 |
-    e4 e cis a |
-    d2. \bar"|."
+  ees8 d |
+  ees4 ees8 ees ees ees4 ees8 |
+  bes bes bes d ees4 |
+  ees8. ees16 |
+  ees4 ees8~ ees ees ees d8. d16 |
+  
+  ees2 s4 ees8 d |
+  ees4 ees8 ees ees ees4 ees8 |
+  bes bes bes d ees4 ees |
+  ees ees ees8 bes bes8. bes16 |
+  bes2 s4 |
+  
+  ees8 f |
+  g4 s8 g g4 fis8 g |
+  aes2 g4 s |
+  g g aes g |
+  ees8 ees c c d4 ees8 d |
+  
+  ees4 ees8 ees ees ees4 ees8 |
+  bes bes bes d ees4 ees |
+  ees ees ees8 bes d8. d16 |
+  ees2 s4 \bar"|."
 }
 altoWords = \lyricmode {
 }
@@ -255,55 +165,27 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
-  %%
-  \repeat unfold 2 {
-    fis,8 g |
-    a4 a4. s8 a8 a |
-    a4 a4. s8 a8 g |
-    g4 a fis g |
-    fis2. g8 a |
-    a4 a d a |
-  }
-  \alternative {
-    {
-      a g2 g8 g |
-      a4 a fis a |
-      a2.
-    }
-    {
-      a4 g2 g8 g |
-      a4 g g g |
-      a2. \bar"||"
-    }
-  }
+  g8 aes |
+  bes4 bes8 bes bes g4 bes8 |
+  aes g g bes bes4 aes8. g16 |
+  g4 bes8~ bes bes g aes8. aes16 |
   
-  \repeat unfold 1 {
-    a8 fis |
-    a4 a a a |
-    a a4. s8 b8 a |
-    gis a b a gis a b a |
-    cis4 a2 cis8 cis |
-    cis4 a a a |
-    cis cis a4. b8 |
-    cis4 a a g |
-  }
-  \alternative {
-    {
-      a8[ g]( fis4) s
-    }
-    {
-      fis2.
-    }
-  }
-    a8 fis |
-    a4 a a a |
-    a a4. s8 b8( a) |
-    gis a b a gis a b a |
-    cis4 a2 cis8 cis |
-    cis4 a a a |
-    cis cis a4. b8 |
-    cis4 a a g |
-    fis2.
+  g2 s4 g8 aes |
+  bes4 bes8 bes bes g4 bes8 |
+  aes g g bes bes4 aes |
+  g bes bes8 g aes8. aes16 |
+  g2 s4 |
+  
+  bes8 bes |
+  ees4 s8 ees ees4 ees8 ees |
+  ees2 ees4 s |
+  bes ees ees ees |
+  bes8 bes a a bes4 g8 aes |
+  
+  bes4 bes8 bes bes g4 bes8 |
+  aes8 g g bes bes4 aes |
+  g bes bes8 g aes8. aes16 |
+  g2 s4 \bar"|."
 }
 
 tenorWords = \lyricmode {
@@ -316,54 +198,27 @@ tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  \repeat unfold 2 {
-    d,8 cis |
-    d4 fis4. d8\rest g fis |
-    e4 a,4. d8\rest a e' |
-    cis[ b] a4 a a 
-    d2. e8 d |
-    fis4 fis d d |
-  }
-  \alternative {
-    {
-      a a2 a8 a |
-      d4 d b dis |
-      e2.
-    }
-    {
-      a,4 a2 a8 a |
-      e'4 e a, a |
-      d2. \bar "||"
-    }
-  }
+  ees,8 ees |
+  ees4 ees8 ees ees ees4 ees8 |
+  bes bes bes bes ees4 ees8. ees16 |
+  bes4 bes8~ bes bes bes bes8. bes16 |
   
-  \repeat unfold 1 {
-    d8 d |
-    d4 fis d d |
-    d fis4. d8\rest d8 d |
-    d d d d d d d d |
-    a'4 g2 a8 a |
-    a4 a g4. g8 |
-    a4 a a, a |
-    a cis a cis |
-  }
-  \alternative {
-    {
-      d4~ d d4\rest 
-    }
-    {
-      d2. \bar"|."
-    }
-  }
-    d8 d |
-    d4 fis d d |
-    d fis4. d8\rest d8~ d |
-    d d d d d d d d |
-    a'4 g2 a8 a |
-    a4 a g4. g8 |
-    a4 a a, a |
-    a cis a cis |
-      d2. \bar"|."
+  ees2 d4\rest ees8 ees |
+  ees4 ees8 ees ees ees4 ees8 |
+  bes bes bes bes ees4 aes,\fermata |
+  bes bes bes8 bes bes8. bes16 |
+  ees2 d4\rest |
+  
+  ees8 ees |
+  ees4 d8\rest ees ees4 ees8 ees |
+  aes2 ees4 d\rest |
+  ees ees ees ees |
+  ees8 ees f f bes,4\fermata ees8 ees |
+  
+  ees4 ees8 ees ees ees4 ees8 |
+  bes bes bes bes ees4 aes,\fermata |
+  bes bes bes8 bes bes8. bes16 |
+  ees2 d4\rest \bar"|."
 }
 bassWords = \lyricmode {
 }
@@ -421,8 +276,9 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"It’s Delightful to be Married!"}}
-  poet = \markup\oldStyleNum"Anna Held (1872–1918)"
-  composer = \markup\oldStyleNum"Vincent Scotto (1874–1952)"
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Hard Times"}}
+  composer = \markup\oldStyleNum"Stephen Foster (1826–1864)"
   tagline = ""
 }}
+
+

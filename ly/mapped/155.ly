@@ -42,9 +42,9 @@
 }
 #(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
 global = {
-  \key f \major
-  \time 4/4
-  \dynamicUp
+  \key c \major
+  \time 6/8
+  %\dynamicUp
   %\set crescendoSpanner = #'dashed-line
   %\set midiInstrument = "recorder"
   \autoBeamOff
@@ -52,114 +52,73 @@ global = {
 }
 
 sopMusic = \relative c' {
-	\partial 2.
-  a'4 g a |
-  bes2. a4 |
-  g a f4. g8 |
-  g4( a2.)~ |
-  a4 a g a |
-  bes2. a4 |
-  g a f4. g8 |
-  a1~ |
+	\partial 4.
+  c'4 g8 |
+  e4 c8 c4 e8 |
+  g4. e'4 c8 |
+  b4 g8 g[ a] b |
   
-  a4 c c c |
-  d2. a4 |
-  a c c4. g8 |
-  g4( bes2.)~ |
-  bes4 bes a g |
-  a2. f4 |
-  f g g4. a8 |
-  a1~ |
+  c4. e,8[ d] c |
+  g'4.\fermata c4 d8 |
+  e4.~ e~ |
+  e4 e8 \acciaccatura e d4 cis8 |
   
-  a4 c c c |
-  d2. a4 |
-  a c c4. g8 |
-  g4( bes2.)~ |
-  bes4 bes a g |
-  a2. f4 |
-  f g g4. f8 |
-  f1~ |
-  f4 \bar"|."
+  d4. b4 cis8 |
+  d4.~ d~ |
+  d4 d8 c4 b8 |
+  c4. c4 c8 |
+  
+  a4 a8 d4 d8 |
+  b4. e4 d8 |
+  c[ d] e d[ c] b |
+  c4. \bar"|."
 }
 sopWords = \lyricmode {
   \set stanza = #"1. "
-	Be still, my soul; the Lord is on thy side; __
-  Bear pa -- tient -- ly the cross of grief or pain; __
-  Leave to thy God to or -- der and pro -- vide; __
-  In eve -- ry change He faith -- ful will re -- main. __
-  Be still, my soul; thy best, thy heav’n -- ly Friend __
-  Through thorn -- y ways leads to a joy -- ful end. __
-}
-
-sopWordsII = \lyricmode {
-  \set stanza = #"2. "
-  Be still, my soul; thy God doth un -- der -- take __
-  To guide the fu -- ture as He has the past. __
-  Thy hope, thy con -- fid -- ence, let no -- thing shake; __
-  All now mys -- te -- rious shall be bright at last. __
-  Be still, my soul; the waves and winds still know __
-  His voice who ruled them while He dwelt be -- low. __
-}
-
-sopWordsIII = \lyricmode {
-  \set stanza = #"3. "
-  Be still, my soul, when dear -- est friends de -- part __
-  And all is dark -- ened in the vale of tears; __
-  Then shalt thou bet -- ter know His love, His heart, __
-  Who comes to soothe thy sor -- rows and thy fears. __
-  Be still, my soul; thy Je -- sus can re -- pay __
-  From His own full -- ness all He takes a -- way. __
-}
-
-sopWordsIV = \lyricmode {
-  \set stanza = #"4. "
-  Be still, my soul; the hour is hast -- ’ning on __
-  When we shall be for -- ev -- er with the Lord, __
-  When dis -- ap -- point -- ment, grief, and fear are gone, __
-  Sor -- row for -- got, love’s pur -- est joys re -- stored. __
-  Be still, my soul; when change and tears are past, __
-  All safe and bless -- ed we shall meet at last. __
-}
-
-sopWordsV = \lyricmode {
-  \set stanza = #"5. "
+	Mis -- ter Speak -- er, though ’tis late,
+  Mis -- ter Speak -- er, though ’tis late,
+  though ’tis late,
+  I must length -- en the de -- bate,
+  I must length -- en the de -- bate,
+  Mis -- ter Speak -- er, though ’tis late,
+  I must length -- en the de -- bate.
 }
 
 altoMusic = \relative c' {
-  \partial 2.
-  f4 e f |
-  e2. f4 |
-  e f d4. e8 |
-  e4( f2.)~ |
-  f4 f e f |
-  e2. f4 |
-  e f d4. e8 |
-  f1~ |
+  \partial 4.
+  r4 r8 |
+  c'4 g8 c4 g8 |
+  d'4 b8 r4 r8 |
+  d4 b8 d4 g,8 |
   
-  f4 f f f |
-  f2. f4 |
-  f f f4. e8 |
-  e4( g2.)~ |
-  g4 g fis g |
-  f?2. f4 |
-  f f e4. e8 |
-  e1~ |
+  e'4 c8 g4 c8 |
+  b4.\fermata r4 r8 |
+  r4 r8 e, f g |
+  a[ b] cis] d4 a8 |
   
-  e4 a f f |
-  f2. f4 |
-  f f f4. e8 |
-  e4( g2.)~ |
-  g4 g fis g |
-  f?2. c4 |
-  f f e4. f8 |
-  f1~ |
-  f4 \bar"|."
+  d,4. r8 f e |
+  d4. d8 e f |
+  g[ a] b c4 g8 |
+  c,4. c8 d e |
+  
+  f4 f8 d e f |
+  g4 g8 e f g |
+  a4 e8 f4 g8 |
+  c,4. \bar"|."
 }
 altoWords = \lyricmode {
+  \set stanza = \markup{\dynamic"f " "2. "}
+  Ques -- tion, ques -- tion, ques -- tion,
+  ques -- tion, ques -- tion, hear him! hear him! hear!
+  \set stanza = \markup\dynamic"mp"
+  Sir, I shall name you if you stir, if you stir,
+  Sir, I shall name you if you stir,
+  Sir, I shall name you,
+  Sir, I shall name you,
+  Sir, I shall name you if you stir.
 }
 altoWordsII = \lyricmode {
 %\markup\italic
-  \set stanza = #"2. "
 }
 altoWordsIII = \lyricmode {
   \set stanza = #"3. "
@@ -176,103 +135,56 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
-  \partial 2.
-  c4 c c |
-  c2. c4 |
-  c c bes4. bes8 |
-  c1~ |
-  c4 c c c |
-  c2. c4 |
-  c c bes4. bes8 |
-  c1~ |
+  \partial 4.
+  r4 r8 |
+  r4 r8 e'4\ff c8 |
+  g'4 d8 g4 e8 |
+  g4\fff d8 g4 d8 |
   
-  c4 a a a |
-  a2. d4 |
-  d c c4. c8 |
-  c4( d2.)~ |
-  d4 d c d |
-  c2. c4 |
-  d d d4. cis8 |
-  cis1~ |
+  g4 e8 g[ f] e |
+  d4.\fermata e4\mp f8 |
+  g4 g8 g4. |
+  g4 g8 \acciaccatura g f4 e8 |
   
-  cis!4 c a a |
-  a2. d4 |
-  d c c4. c8 |
-  c4( d2.)~ |
-  d4 d c d |
-  c2. a4 |
-  a4 bes bes4. a8 |
-  a1~ |
-  a4 \bar"|."
+  f4. d4 e8 |
+  f4 f8 f4. |
+  f4 f8 e4 d8 |
+  e4. e4 e8 |
+  
+  c4 c8 f4 f8 |
+  d4. g4 f8 |
+  e[ f] g f[ e] d |
+  e4. \bar"|."
 }
 
 tenorWords = \lyricmode {
-}
-
-tenorWordsII = \lyricmode {
-}
-
-tenorWordsIII = \lyricmode {
-}
-
-bassMusic = \relative c' {
-  \partial 2.
-  f,4 bes a |
-  g2. f4 |
-  bes a bes4. g8 |
-  g4( f2.)~ |
-  f4 f bes a |
-  g2. f4 |
-  bes a bes4. g8 |
-  f1~ |
-  
-  f4 f f e |
-  d2. d4 |
-  d a a4. c8 |
-  c4( g2.)~ |
-  g4 g a bes |
-  a2. c'4 |
-  bes bes bes4. cis8 |
-  a1~ |
-  
-  a4 f f e |
-  d2. c4 |
-  d a' a4. c8 |
-  c4( g2.)~ |
-  g4 g, a bes |
-  c2. c4 |
-  c c c4. f8 |
-  f1~ |
-  f4 \bar"|."
-}
-bassWords = \lyricmode {
-}
-
-pianoRH = \relative c' {
-}
-pianoLH = \relative c' {
+  \set stanza = #"3. "
+  Or -- der, or -- der, or -- der,
+  hear him! hear him! hear him! hear him! hear!
+  pray sup -- port the chair,
+  pray sup -- port the chair,
+  pray sup -- port the chair,
+  pray sup -- port the chair,
+  Ques -- tion,
+  Or -- der, hear him! hear!
+  pray sup -- port, sup -- port the chair.
 }
 
 \score {
 <<
    \new ChoirStaff <<
-    \new Staff = women <<
-      \new Voice = "sopranos" { \voiceOne << \global \sopMusic >> }
-      \new Voice = "altos" { \voiceTwo << \global \altoMusic >> }
+    \new Staff = first <<
+      \new Voice = "sopranos" { << \global \sopMusic >> }
     >>
-    \new Lyrics = "altos"  \lyricsto "sopranos" \sopWords
-    \new Lyrics = "altosII"  \lyricsto "sopranos" \sopWordsII
-    \new Lyrics = "altosIII"  \lyricsto "sopranos" \sopWordsIII
-    \new Lyrics = "altosIV"  \lyricsto "sopranos" \sopWordsIV
-    \new Lyrics = "altosV"  \lyricsto "sopranos" \sopWordsV
-   \new Staff = men <<
-      \clef bass
-      \new Voice = "tenors" { \voiceOne << \global \tenorMusic >> }
-      \new Voice = "basses" { \voiceTwo << \global \bassMusic >> }
+    \new Lyrics \lyricsto "sopranos" \sopWords
+    \new Staff = second <<
+      \new Voice = "altos" { << \global \altoMusic >> }
     >>
-    \new Lyrics \with { alignAboveContext = #"tenors" } \lyricsto "tenors" \tenorWordsIII
-    \new Lyrics \with { alignAboveContext = #"tenors" } \lyricsto "tenors" \tenorWordsII
-    \new Lyrics \with { alignAboveContext = #"tenors" } \lyricsto "tenors" \tenorWords
+    \new Lyrics \lyricsto "altos" \altoWords
+    \new Staff = third <<
+      \new Voice = "tenors" { << \global \tenorMusic >> }
+    >>
+    \new Lyrics \lyricsto "tenors" \tenorWords
   >>
 %    \new PianoStaff << \new Staff { \new Voice { \pianoRH } } \new Staff { \clef "bass" \pianoLH } >>
   >>
@@ -281,7 +193,7 @@ pianoLH = \relative c' {
     \context {
       \Lyrics
       \override LyricText #'font-size = #1.3
-      \override VerticalAxisGroup #'staff-affinity = #0
+      %\override VerticalAxisGroup #'staff-affinity = #0
       \override LyricText #'X-offset = #center-on-word
     }
     \context {
@@ -301,10 +213,9 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Be Still, My Soul"}}
-  composer = \markup\oldStyleNum{\concat{\italic"Finlandia" ", Jean Sibelius (1865–1957)"}}
-  poet = \markup\oldStyleNum"Katharina von Schlegel (1697–1768)"
-  meter = \markup\oldStyleNum"Translated by Jane L. Borthwick (1813–1897)"
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Mister Speaker, though ’tis late"}}
+  subtitle = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #12.5 \smallCapsOldStyle"(Round)"}}
+  composer = \markup\oldStyleNum"Joseph Baildon (d. 1774)"
   tagline = ""
 }}
 

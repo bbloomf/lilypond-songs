@@ -12,7 +12,7 @@
   system-system-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)
-       (padding . 1)
+       (padding . -3)
        (stretchability . 100))
   ragged-last-bottom = ##f
   ragged-bottom = ##f
@@ -42,83 +42,91 @@
 }
 #(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
 global = {
-  \key g \major
-  \time 6/8
+  \key bes \major
+  \time 3/4
   \dynamicUp
   %\set crescendoSpanner = #'dashed-line
   %\set midiInstrument = "recorder"
   \autoBeamOff
   \override DynamicTextSpanner #'style = #'none
-  \slurDashed
 }
 
 sopMusic = \relative c' {
-	\partial 8
-  e16[ fis] |
-  g8 b g fis a fis |
-  e8 d4 b'4\rest \bar"" e,16[ fis] |
-  g8 b g fis a g16[ fis] |
+	\partial 4
+  f4 |
+  d'8. cis16 d4 ees |
+  d8. cis16 c4 f, |
+  c'8. b16 c4 d |
   
-  e4. b'4\rest \bar""\break e,16[ fis] |
-  g8 b g fis a fis |
-  e8 d4 b'4\rest \bar"" b,8 % d8 |
+  \times 2/3 {c8[ bes] g} f4 \bar"" f |
+  d'8. cis16 d4 f |
+  f8. e16 ees4 ees |
+  d8. cis16 d4 f,4 |
   
-  %c16[ b] a[ g] fis[ e] b8 e dis |
-  g'8. fis16 e8 b e dis |
-  e4. b'4\rest \bar""\break fis8 |
-  g g16[ a] b[ c] d8 b g |
-  fis d4 b'\rest \bar"" e,16[ fis] |
+  c'8. bes16 bes4 \bar""\break b8\rest bes |
+  c d ees4 g, |
+  f8 bes d4 bes |
+  c8 d f4 ees |
   
-  g8 g16[ a] b[ c] d8 b d |
-  e4. b4\rest \bar""\break e16[ e] |
-  \slurDashed d8. b16 b8 c8.( b16) a[ g] |
-  a fis8. b8\rest b4\rest \bar"" e,16[ fis] |
+  bes8 c d4 bes8\rest \bar""\break d |
+  d d ees4 d |
+  c8 d g,4 a |
+  bes8 bes c4 bes |
   
-  g8 fis e b'8. a16 g[ fis] |
-  e4.~ e4 \bar"|."
+  %page 2
+  a8 g d'8[\fermata ees]\fermata \bar"||"
+  ees4\fermata |
+  d8. cis16 d4 ees |
+  d8. cis16 c4 f, |
+  
+  c'8. b16 c4 d |
+  \times 2/3 {c8[ bes] g} f4 f |
+  d'8. cis16 d4 f |
+  
+  f8 e ees4\fermata ees |
+  d8. cis16 d4 f, |
+  c'8. bes16 bes4 \bar"||"
+  \once \override Score.RehearsalMark #'self-alignment-X = #RIGHT
+  \mark \markup\italic"CODA ad lib." 
+  
+  ees4\fermata|
+  d8. cis16 d4->\fermata \bar"|."
 }
 sopWords = \lyricmode {
   \set stanza = #"1. "
-	It was on a fine sum -- mer’s morn -- ing,
-  The birds sweet -- ly tuned on each bough.
-  And as I walk’d out for my plea -- sure,
-  I saw a maid milk -- ing her cow.
-  Her voice so __ en -- chant -- ing mel -- o -- dious,
-  Left me quite un -- a -- ble to go,
-  \set ignoreMelismata = ##t My __ _ heart it was load -- ed with _ sor -- row,
-  \unset ignoreMelismata
-  For Col -- leen dhas cru -- then na moe.
+	O Gen -- e -- vieve, I’d give the world
+  To live a -- gain the love -- ly past!
+  The rose of youth was dew -- im -- pearled,
+  But now it with -- ers in the blast.
   
+  I see thy face in ev -- ’ry dream,
+  My wak -- ing thoughts are full of thee;
+  Thy glance is in the star -- ry beam
+  That falls a -- long the sum -- mer sea.
   
-  Col -- leen, Col -- leen, Col -- leen,
-  Col -- leen dhas cru -- then na moe.
+  O Gen -- e -- vieve, Sweet Gen -- e -- vieve,
+  The days may come, the days may go,
+  But still the hands of mem -- ’ry weave
+  The bliss -- ful dreams of long a -- go.
+  
+  O Gen -- e -- vieve!
 }
 
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
-  Then to her I made my ad -- van -- ces;
-  “Good mor -- row, most beau -- ti -- ful maid!
-  Your beau -- ty my heart so en -- tran -- ces,”
-  “Pray Sir, do not ban -- ter,” she said,
-  “I’m not such a rare pre -- cious Jew -- el,
-  That I should en -- am -- our you so.
-  I __ am but a poor \set ignoreMelismata = ##t lit -- tle milk girl.”
-  \unset ignoreMelismata
-  Says Col -- leen dhas cru -- then na moe.
+  Fair Gen -- e -- vieve, my ear -- ly love,
+  The years but make thee dear -- er far!
+  My heart shall nev -- er, nev -- er rove:
+  Thou art my on -- ly guid -- ing star.
+  
+  For me the past has no re -- gret,
+  What -- e’er the years may bring to me;
+  I bless the hour when first we met,
+  The hour that gave me love and thee!
 }
 
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
-  The In -- dies af -- ford no such Jew -- el
-  So bright and trans -- par -- ent -- ly clear,
-  Ah! do not add flame to my fu -- el!
-  Con -- sent but to love me, my dear.
-  Ah! had I __ the lamp of A -- lad -- din,
-  \set ignoreMelismata = ##t
-  Or the wealth of __ _ the _ Af -- ri -- can shore,
-  I would rath -- er be poor _ in a Cot -- tage,
-  \unset ignoreMelismata
-  With Col -- leen dhas cru -- then na moe.
 }
 
 sopWordsIV = \lyricmode {
@@ -130,23 +138,45 @@ sopWordsV = \lyricmode {
 }
 
 altoMusic = \relative c' {
-  e8 |
-  e e e dis dis dis |
-  c8 b4 s e8 |
-  e e e dis dis dis |
-  e4. s4 e8 |
-  e e e dis dis dis |
-  c8 b4 s b8 |
-  e8. e16 b8 b b a |
-  b4. s4 d8 |
-  d8 d8 d16[ c] b8 d d |
-  d d4 s4 e16[ d] |
-  d8 d8 d16[ c] b8 d g |
-  g4. s4 g16[ g] |
-  \tieDashed g8. d16 e8 e8.~ e16 e[ e] |
-  dis16 dis8. s8 s4 e8
-  \tieSolid e8 e b dis8. dis16 dis8 |
-  e4.~ e4 \bar"|."
+  f4 |
+  f8. e16 f4 g |
+  f8. e16 ees4 ees |
+  
+  ees8. d16 ees4 f |
+  \times 2/3 {d8[ ees] ees} d4 d |
+  f8. e16 f4 aes |
+  
+  g8. g16 g4 ges |
+  f8. e16 f4 d |
+  ees8. d16 d4
+  
+  %interpellated
+  s8 bes'8 |
+  a aes g4 ees |
+  d8 d f4 d |
+  ees8 f g4 fis |
+  
+  fis8 fis f4 s8 fis |
+  fis8 fis fis4 fis |
+  g8 g g4 g |
+  g8 g g4 g |
+  
+  a8 g fis8[ f] \break
+  
+%chorus
+  f4 |
+  f8. e16 f4 g |
+  f8. e16 ees4 ees |
+  
+  ees8. d16 ees4 f |
+  \times 2/3 {d8[ ees] ees} d4 d |
+  f8. e16 f4 aes |
+  
+  g8 g g4 ges |
+  f8. e16 f4 d |
+  ees8. d16 d4 %\bar"||"
+  f4 |
+  f8. e16 f4
 }
 altoWords = \lyricmode {
 }
@@ -169,24 +199,43 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
-  e,8 |
-  b' g b a fis a |
-  g8 g4 s4 e8 |
-  b' g b a fis a |
-  g4. s4 e8 |
-  b' g b a fis a |
-  g8 g4 s4 g8 |
-  b8. a16 g8 g g fis |
-  g4. s4 a8 |
-  b8 b16[ a] g8 g g b |
-  a8 fis4 s4 e16[ a]
-  b8 b16[ a] g8 g g b |
-  c4. s4 c16[ c] |
-  b8. g16 e8 a8.( b16) c[ a] |
-  fis16 a8. s8 s4 g8 |
-  b a g fis8. fis16 a8 |
-  g4.~ g4
+  f,4 |
+  bes8. bes16 bes4 bes |
+  bes8. bes16 a4 a |
+  a8. a16 a4 a |
+  bes8 bes bes4 bes |
+  bes8. bes16 bes4 bes |
   
+  bes8. bes16 bes4 bes |
+  bes8. bes16 bes4 bes |
+  a8. f16 f4
+  %%Interpellated
+  
+  s4 |
+  s4 bes bes |
+  bes8 bes bes4 f |
+  bes8 bes bes4 bes |
+  
+  bes8 bes bes4 s8 c8 |
+  c c c4 c |
+  bes8 bes bes4 bes |
+  bes8 bes bes4 bes |
+  
+  c8 cis c[ a]
+  
+  %%Chorus
+  c4 |
+  bes8. bes16 bes4 bes |
+  bes8. bes16 a4 a |
+  a8. a16 a4 a |
+  bes8 bes bes4 bes |
+  bes8. bes16 bes4 bes |
+  
+  bes8 bes bes4 bes |
+  bes8. bes16 bes4 bes |
+  a8. f16 f4 \bar"||"
+  a4 |
+  bes8. bes16 bes4 \bar"|."
 }
 
 tenorWords = \lyricmode {
@@ -199,25 +248,46 @@ tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  e,8 |
-  e8 e e b b b |
-  c g4 d'\rest e8 |
-  e e e b b b |
-  e4. d4\rest e8 |
+  f,4 |
+  bes,8. bes16 bes4 bes |
+  f'8. f16 f4 f |
   
-  e e e b b b |
-  c g4 d'\rest g8 |
-  e8. e16 e8 e e b |
-  e4. d4\rest d8 |
+  f8. f16 f4 f |
+  bes,8 bes bes4 bes' |
+  bes8. bes16 bes,4 d |
   
-  g, g g g g g |
-  d' d4 d\rest e16[ d] |
-  g,8 g g g g g |
-  c4. d4\rest c16[ c] |
-  \tieDashed g8. g16 gis8 a8.~ a16 a16[ a]|
-  b16 b8. d8\rest d4\rest e8 |
-  e e e b8. b16 b8 |
-  \tieSolid e4.~ e4 \bar"|."
+  ees8. ees16 ees4 ees |
+  f8. f16 f4 f |
+  f8. bes,16 bes4 
+  
+  %%Interpolated
+  d4\rest |
+  d4\rest ees4 ees |
+  bes8 bes bes4 f' |
+  g8 f ees4 ees |
+  
+  ees8 ees bes4 d8\rest d |
+  d d d4 d |
+  <g g,>8 q q4 q |
+  q8 q q4 q |
+  
+  ees8 ees
+  d8\fermata[ c\fermata]
+  
+  %%Chorus
+  f4\fermata |
+  bes,8. bes16 bes4 bes |
+  f'8. f16 f4 f |
+  
+  f8. f16 f4 f |
+  bes,8 bes bes4 bes' |
+  bes8. bes16 bes,4 d |
+  
+  ees8 ees ees4\fermata ees |
+  f8. f16 f4 f |
+  f8. bes,16 bes4 \bar"||"
+  f'4\fermata |
+  bes,8. bes16 bes4\fermata \bar"|."
 }
 bassWords = \lyricmode {
 }
@@ -275,8 +345,10 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"The Pretty Girl Milking Her Cow"}}
-  subtitle = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #12.5 \smallCapsOldStyle"Colleen dhas Cruthen na Moe"}}
-  composer = \markup\oldStyleNum"Folk Song"
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Sweet Genevieve"}}
+  poet = \markup\oldStyleNum"George Cooper (1840–1927)"
+  composer = \markup\oldStyleNum"Henry Tucker (1826–1882)"
   tagline = ""
 }}
+
+

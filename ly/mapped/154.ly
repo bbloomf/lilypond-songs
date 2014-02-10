@@ -12,7 +12,7 @@
   system-system-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)
-       (padding . 1)
+       (padding . -3)
        (stretchability . 100))
   ragged-last-bottom = ##f
   ragged-bottom = ##f
@@ -43,82 +43,78 @@
 #(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
 global = {
   \key aes \major
-  \time 4/2
+  \time 6/8
   \dynamicUp
   %\set crescendoSpanner = #'dashed-line
   %\set midiInstrument = "recorder"
   \autoBeamOff
   \override DynamicTextSpanner #'style = #'none
-  %\override TupletBracket #'bracket-visibility = ##f
 }
 
 sopMusic = \relative c' {
-	f2 \times 2/3 {f4 g aes} g2 f |
-  g \times 2/3 {g4 aes bes} aes4.( g8) f2 |
-  c' \times 2/3 {bes4 c des} c4.( bes8) aes2 |
-  bes4.( aes8) g2 f1 |
+	\partial 8
+  ees16[ ees] |
+  c'8 bes aes aes g aes |
+  bes aes f ees b'\rest c,16[ des] |
+  ees aes b8\rest ees, ees16 bes' b8\rest ees, |
   
-  f2 \times 2/3 {f4 g aes} g2 f |
-  g \times 2/3 {g4 aes bes} aes4.( g8) f2 |
-  c' \times 2/3 {bes4 c des} c4.( bes8) aes2 |
-  bes4.( aes8) g2 f1 |
+  ees16 aes~ aes4 b4\rest ees,16 ees |
+  c'8 bes aes aes g aes |
+  bes aes f ees b'\rest aes16[ aes] |
+  g bes b8\rest g f16 bes b8\rest f |
   
-  c'2 \times 2/3 {aes4 bes c} bes2 bes |
-  aes \times 2/3 {f4 g aes} g2 g |
-  f2 \times 2/3 {f4 g aes} bes2 bes |
-  aes \times 2/3 {bes4 aes bes} c1 |
+  g16 ees~ ees4 b'\rest ees,16[ f] |
+  ges8. aes16 ges8 f8. e16 f8 |
+  c' bes a bes b\rest ees,16[ f] |
+  ges8. aes16 ges8 f8. e16 f8 |
   
-  f,2 \times 2/3 {f4 g aes} g2 f |
-  g \times 2/3 {g4 aes bes} aes4.( g8) f2 |
-  c' \times 2/3 {bes4 c des} c4.( bes8) aes2 |
-  bes4.( aes8) g2 f1 \bar"|."
+  c' bes a bes b\rest bes16 c |
+  des8. c16 bes8 aes f aes |
+  c8. bes16 aes8 bes\fermata b8\rest ees, |
+  ees16 aes b8\rest ees, f16 aes b8\rest f |
+  ees16 aes~ aes4 b4\rest \bar"|."
 }
 sopWords = \lyricmode {
   \set stanza = #"1. "
-  Once to _ _ ev -- ’ry man and _ _ na -- tion
-  Comes the _ _ mo -- ment to de -- cide,
-  In the _ _ strife of truth with _ _ false -- hood,
-  For the _ _ good or e -- vil side;
-  Some great _ _ cause, some great de -- _ _ ci -- sion,
-  Of -- f’ring _ _ each the bloom or _ _ blight,
-  And the _ _ choice goes by for -- _ _ ev -- er
-  ’Twixt that _ _ dark -- ness and that light.
+  \set ignoreMelismata = ##t
+	On a tree by a riv -- er a lit -- tle tom -- tit
+  Sang, _ “Wil -- low, tit -- wil -- low, tit -- wil -- low!” _
+  And I said to him, “Dick -- y -- bird, why do you sit
+  Sing -- ing, ‘Wil -- low, tit -- wil -- low, tit -- wil -- low’?” _
+  “Is it weak -- ness of in -- tel -- lect, bird -- ie?” I cried,
+  “Or a ra -- ther tough worm in your lit -- tle in -- side?”
+  With a shake of his poor lit -- tle head, he re -- plied,
+  “Oh, wil -- low, tit -- wil -- low, tit -- wil -- low!” _
 }
 
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
-  Then to _ _ side with truth is _ _ no -- ble,
-  When we _ _ share her wretch -- ed crust,
-  Ere her _ _ cause bring fame and _ _ prof -- it,
-  And ’tis _ _ prosp -- ’rous to be just;
-  Then it _ _ is the brave man _ _ choos -- es,
-  While the _ _ cow -- ard stands a -- _ _ side
-  Till the _ _ mul -- ti -- tude make _ _ vir -- tue
-  Of the _ _ faith they had de -- nied.
+  \set ignoreMelismata = ##t
+  He _ slapped at his chest, as he sat on that bough,
+  Sing -- ing, “Wil -- low, tit -- wil -- low, tit -- wil -- low!” _
+  And a cold per -- spi -- ra -- tion be -- span -- gled his brow,
+  Oh, _ wil -- low, tit -- wil -- low, tit -- wil -- low! _
+  He __ _ sobbed and he sighed, and a gur -- gle he gave,
+  Then he plunged him -- self in -- to the bil -- low -- y wave,
+  And an ech -- o a -- rose from the su -- i -- cide’s grave:
+  “Oh, wil -- low, tit -- wil -- low, tit -- wil -- low!” _
 }
 
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
-  By the _ _ light of burn -- ing _ _ mar -- tyrs
-  Je -- sus’ _ _ bleed -- ing feet I track,
-  Toil -- ing _ _ up new Cal -- v’ries _ _ ev -- er
-  With the _ _ cross that turns not back;
-  New oc -- _ _ ca -- sions teach new _ _ du -- ties,
-  Time makes _ _ an -- cient good un -- _ _ couth;
-  They must _ _ up -- ward still and _ _ on -- ward
-  Who would _ _ keep a -- breast of truth.
+  \set ignoreMelismata = ##t
+  Now I feel just as sure as I’m sure that my name
+  Is -- n’t Wil -- low, tit -- wil -- low, tit -- wil -- low, _
+  That ’twas blight -- ed af -- fec -- tion that made him ex -- claim,
+  “Oh, _ wil -- low, tit -- wil -- low, tit -- wil -- low!” _
+  And if you re -- main cal -- lous and ob -- du -- rate, I
+  Shall _ per -- ish as he did, and you will know why,
+  Though I prob -- ab -- ly shall not ex -- claim as I die,
+  “Oh, wil -- low, tit -- wil -- low, tit -- wil -- low!” _
 }
 
 sopWordsIV = \lyricmode {
   \set stanza = #"4. "
-  Though the _ _ cause of e -- vil _ _ pros -- per,
-  Yet ’tis _ _ truth a -- lone is strong;
-  Though her _ _ por -- tion be the _ _ scaf -- fold,
-  And up -- _ _ on the throne be wrong,
-  Yet that _ _ scaf -- fold sways the _ _ fu -- ture,
-  And, be -- _ _ hind the dim un -- _ _ known,
-  Stand -- eth _ _ God with -- in the _ _ shad -- ow
-  Keep -- ing _ _ watch a -- bove his own.
 }
 
 sopWordsV = \lyricmode {
@@ -126,25 +122,26 @@ sopWordsV = \lyricmode {
 }
 
 altoMusic = \relative c' {
-  c2 c e f |
-  f e f c |
-  c \times 2/3 {ees?2 f4} g2 f |
-  f e f1 |
+  c16[ c] |
+  ees8 des c ees ees ees |
+  f f des c s aes16[ bes] |
+  c c s s c8 des16 des s8 des |
   
-  c2 c e f |
-  f e f c |
-  c \times 2/3 {ees?2 f4} g2 f |
-  f e f1 |
+  c16 c~ c4 s c16 c |
+  ees8 des c ees ees ees |
+  f f des c s ees16[ ees] |
+  ees ees s8 ees d16 d s8 d |
   
-  ees2 ees ees ees |
-  c f f e |
-  f c f ees |
-  c f e1 |
+  ees16 ees~ ees4 s ees16[ bes] |
+  ees8. ees16 ees8 d8. cis16 d8 |
+  ees des ees des s ees16[ bes] |
+  ees8. ees16 ees8 d8. cis16 d8 |
   
-  aes,2 f' e f |
-  f e f f |
-  ees? ees ees f |
-  f e f1 \bar"|."
+  ees des ees f s des16 ees |
+  f8. ees16 des8 des des des |
+  d8. d16 d8 ees s des |
+  c16 c s8 c des16 des s8 des |
+  c16 c~ c4 s \bar"|."
 }
 altoWords = \lyricmode {
 }
@@ -167,25 +164,26 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
-  aes2 c c aes |
-  des c c4.( bes8) aes2 |
-  ees' \times 2/3 {bes2 aes4} c2 c |
-  des4.( c8) bes2 aes1 |
+  aes16[ aes] |
+  aes8 aes aes c c c |
+  des des aes aes s ees16[ ees] |
+  ees ees s8 aes g16 g s8 g |
   
-  aes2 c c aes |
-  des c c4.( bes8) aes2 |
-  ees' \times 2/3 {bes2 aes4} c2 c |
-  des4.( c8) bes2 aes1 |
+  aes16 aes~ aes4 s aes16 aes |
+  aes8 aes aes c c c |
+  des des aes aes s c16[ c] |
+  bes g s8 bes aes16 aes s8 bes |
   
-  aes2 aes aes g |
-  aes c c c |
-  f, aes aes g |
-  aes f g1 |
+  bes16 g~ g4 s g16[ aes] |
+  bes8. bes16 bes8 bes8. bes16 bes8 |
+  a bes c bes s g16[ aes] |
+  bes8. bes16 bes8 bes8. bes16 bes8 |
   
-  f2 c' c aes |
-  des c c4.( bes8) aes2 |
-  aes \times 2/3 {g4 aes bes} aes4.( g8) f2 |
-  des'4.( c8) bes2 aes1 \bar"|."
+  a bes c des s bes16 a? |
+  bes8. a16 bes8 f aes f |
+  aes8. aes16 bes8 g s g |
+  aes16 aes s8 aes aes16 f s8 aes |
+  aes16 ees~ ees4 s \bar"|."
 }
 
 tenorWords = \lyricmode {
@@ -198,25 +196,26 @@ tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  f,2 aes, c des |
-  bes c f f |
-  aes \times 2/3 {g2 f4} e2 f |
-  bes, c f1 |
+  aes,16[ aes] |
+  aes8 aes aes aes' aes aes |
+  des, des des aes d\rest ees16[ ees] |
+  aes, aes d8\rest aes ees'16 ees d8\rest ees |
   
-  f,2 aes c des |
-  bes c f f |
-  aes \times 2/3 {g2 f4} e2 f |
-  bes, c f1 |
+  aes,16 aes~ aes4 d\rest aes16 aes |
+  aes8 aes aes aes' aes aes |
+  des, des des aes d\rest aes16[ aes] |
+  bes bes d8\rest bes bes16 bes d8\rest bes |
   
-  aes,2 c ees ees |
-  f aes, c c |
-  f ees des ees |
-  f4( ees) des2 c1 |
+  ees16 ees~ ees4 d\rest ees16[ d] |
+  ees8. ees16 ees8 bes8. bes16 bes8 |
+  f' f f bes, d\rest ees16[ d] |
+  ees8. ees16 ees8 bes8. bes16 bes8 |
   
-  des2 aes c des |
-  bes c f f |
-  aes ees aes, des |
-  bes c f1 \bar"|."
+  f' f f bes, d\rest bes16 f' |
+  bes8. f16 ges8 des des des |
+  bes8. bes16 bes8 ees\fermata d\rest ees |
+  aes,16 aes d8\rest aes des16 des d8\rest des |
+  aes16 aes~ aes4 d4\rest \bar"|."
 }
 bassWords = \lyricmode {
 }
@@ -274,8 +273,10 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Once to Every Man and Nation"}}
-  poet = \markup\oldStyleNum"James Russell Lowell (1819–1891)"
-  composer = \markup\oldStyleNum"Thomas John Williams (1869–1944)"
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Tit-Willow"}}
+  poet = \markup\oldStyleNum"W. S. Gilbert (1836–1911)"
+  composer = \markup\oldStyleNum"Arthur Sullivan (1842–1900)"
   tagline = ""
 }}
+
+

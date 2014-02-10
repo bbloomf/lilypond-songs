@@ -22,8 +22,8 @@
   ragged-last-bottom = ##f
   ragged-bottom = ##f
   two-sided = ##t
-  inner-margin = 0.75\in
-  outer-margin = 0.5\in
+  inner-margin = 0.875\in
+  outer-margin = 0.375\in
   top-margin = 0.26\in
   bottom-margin = 0.25\in
   first-page-number = #55

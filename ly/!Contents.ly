@@ -24,7 +24,7 @@
   evenHeaderMarkup = ""
 }
 #(set-global-staff-size 23) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 23 20))) }
-\markup\vspace #4
+\markup\vspace #5
 \markup\fill-line \center-align {\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #70 \smallCapsOldStyle"Songs"}}
 \markup\vspace #0.75
 \markup\fill-line \center-align {\abs-fontsize #35 \italic"from the"}
@@ -36,7 +36,7 @@
 \markup\fill-line \center-align {\abs-fontsize #24 \italic"by"}
 \markup\vspace #0.25
 \markup\fill-line \center-align {\abs-fontsize #28 \smallCapsOldStyle"benjamin bloomfield"}
-\markup\vspace #11
+\markup\vspace #10
 \markup{\abs-fontsize #12 {First edition, \smallCapsOldStyle"%date% %month% %year%"}}
 \markup\vspace #0.1
 \markup{\abs-fontsize #12 "This work is free of known copyright restrictions."}

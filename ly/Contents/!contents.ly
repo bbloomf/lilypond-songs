@@ -122,7 +122,6 @@
 {\page-link #176 {\fill-with-pattern #0.1 #CENTER . "Nearer, My God, to Thee" \smallCapsOldStyle 176}}
 {\page-link #56 {\fill-with-pattern #0.1 #CENTER . "Night Song" \smallCapsOldStyle 56}}
 {\page-link #14 {\fill-with-pattern #0.1 #CENTER . "Now is the month of maying" \smallCapsOldStyle 14}}
-{\page-link #151 {\fill-with-pattern #0.1 #CENTER . "Now we are met (Catch Round the Table)" \smallCapsOldStyle 151}}
 {\page-link #50 {\fill-with-pattern #0.1 #CENTER . "O Calm of Night" \smallCapsOldStyle 50}}
 {\page-link #161 {\fill-with-pattern #0.1 #CENTER . "Ode to Joy" \smallCapsOldStyle 161}}
 {\page-link #64 {\fill-with-pattern #0.1 #CENTER . "O Fair Dove, O Fond Dove" \smallCapsOldStyle 64}}
@@ -140,7 +139,7 @@
 {\page-link #10 {\fill-with-pattern #0.1 #CENTER . "Praise of Spring" \smallCapsOldStyle 10}}
 {\page-link #119 {\fill-with-pattern #0.1 #CENTER . "The Pretty Girl Milking Her Cow" \smallCapsOldStyle 119}}
 }
-\hspace #0.01 \path #0.1 #'((moveto 0 1.4) (lineto 0 -130.06)) \hspace #0.01 \fontsize #-0.75 \override #'(line-width . 41.3) \override #'(word-space . 0) \column {
+\hspace #0.01 \path #0.1 #'((moveto 0 1.4) (lineto 0 -127.29)) \hspace #0.01 \fontsize #-0.75 \override #'(line-width . 41.3) \override #'(word-space . 0) \column {
 {\page-link #100 {\fill-with-pattern #0.1 #CENTER . "Punchinello" \smallCapsOldStyle 100}}
 {\page-link #59 {\fill-with-pattern #0.1 #CENTER . "Red is the Rose" \smallCapsOldStyle 59}}
 {\page-link #81 {\fill-with-pattern #0.1 #CENTER . "Red River Valley" \smallCapsOldStyle 81}}

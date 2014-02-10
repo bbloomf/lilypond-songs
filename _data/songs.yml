@@ -1,6 +1,12 @@
 - title: "Abide with me"
   url: "Abide%20with%20me"
 
+- title: "All Hail the Power of Jesus’ Name"
+  url: "All%20Hail%20the%20Power%20of%20Jesus%E2%80%99%20Name"
+
+- title: "All People That on Earth Do Dwell"
+  url: "All%20People%20That%20on%20Earth%20Do%20Dwell"
+
 - title: "America"
   url: "America"
 
@@ -121,8 +127,8 @@
 - title: "Dreaming of Home and Mother"
   url: "Dreaming%20of%20Home%20and%20Mother"
 
-- title: "Drink to Me Only With Thine Eyes"
-  url: "Drink%20to%20Me%20Only%20With%20Thine%20Eyes"
+- title: "Drink to me only with Thine Eyes"
+  url: "Drink%20to%20me%20only%20with%20Thine%20Eyes"
 
 - title: "Dublin Bay"
   url: "Dublin%20Bay"
@@ -148,8 +154,8 @@
 - title: "For he’s a jolly good fellow"
   url: "For%20he%E2%80%99s%20a%20jolly%20good%20fellow"
 
-- title: "Gaily the Troubador"
-  url: "Gaily%20the%20Troubador"
+- title: "Gaily the Troubadour"
+  url: "Gaily%20the%20Troubadour"
 
 - title: "Gaudeamus Hodie"
   url: "Gaudeamus%20Hodie"
@@ -163,11 +169,17 @@
 - title: "Glory be to Jesus"
   url: "Glory%20be%20to%20Jesus"
 
+- title: "God Be Merciful to Me"
+  url: "God%20Be%20Merciful%20to%20Me"
+
 - title: "God be with you till we meet again"
   url: "God%20be%20with%20you%20till%20we%20meet%20again"
 
 - title: "God so loved the world"
   url: "God%20so%20loved%20the%20world"
+
+- title: "Good Bye, My Lady Love"
+  url: "Good%20Bye,%20My%20Lady%20Love"
 
 - title: "Good Night Ladies"
   url: "Good%20Night%20Ladies"
@@ -328,6 +340,9 @@
 - title: "Nancy Lee"
   url: "Nancy%20Lee"
 
+- title: "Nearer, My God, to Thee"
+  url: "Nearer,%20My%20God,%20to%20Thee"
+
 - title: "Night Song"
   url: "Night%20Song"
 
@@ -348,6 +363,9 @@
 
 - title: "Oh, happy is the man that hears"
   url: "Oh,%20happy%20is%20the%20man%20that%20hears"
+
+- title: "Oh cease, my wandering soul"
+  url: "Oh%20cease,%20my%20wandering%20soul"
 
 - title: "Oh My Love"
   url: "Oh%20My%20Love"
@@ -391,11 +409,17 @@
 - title: "Red Wing"
   url: "Red%20Wing"
 
+- title: "Rise, my soul, and stretch thy wings"
+  url: "Rise,%20my%20soul,%20and%20stretch%20thy%20wings"
+
 - title: "The Roast Beef of Old England"
   url: "The%20Roast%20Beef%20of%20Old%20England"
 
 - title: "Robin Adair"
   url: "Robin%20Adair"
+
+- title: "Rock of Ages"
+  url: "Rock%20of%20Ages"
 
 - title: "Rule Britannia"
   url: "Rule%20Britannia"
@@ -415,11 +439,14 @@
 - title: "Saved From the Storm"
   url: "Saved%20From%20the%20Storm"
 
+- title: "Savior, when in dust to Thee"
+  url: "Savior,%20when%20in%20dust%20to%20Thee"
+
 - title: "Scotch Lassie Jean"
   url: "Scotch%20Lassie%20Jean"
 
-- title: "Scots Wha Hae"
-  url: "Scots%20Wha%20Hae"
+- title: "Scots wha hae"
+  url: "Scots%20wha%20hae"
 
 - title: "The Separation"
   url: "The%20Separation"
@@ -480,6 +507,9 @@
 
 - title: "A Warrior Bold"
   url: "A%20Warrior%20Bold"
+
+- title: "We Sing the Praise of Him who Died"
+  url: "We%20Sing%20the%20Praise%20of%20Him%20who%20Died"
 
 - title: "When I go out of door"
   url: "When%20I%20go%20out%20of%20door"

@@ -163,12 +163,12 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
-  g8. g16 g8 bes8. bes16 bes8 |
+  g8. aes16 g8 bes8. bes16 bes8 |
   aes8. g16 aes8 bes4 \teeny bes16 bes \normalsize |
-  g8. g16 g8 g8 g g |
+  g8. aes16 g8 g8 g g |
   aes4. g |
 
-  g8. g16 g8 bes8. bes16 bes8 |
+  g8. aes16 g8 bes8. bes16 bes8 |
   aes8. g16 aes8 bes4 d8 |
   ees8. ees16 bes8 bes bes bes |
   aes4. g4 s8 |

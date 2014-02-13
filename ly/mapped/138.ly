@@ -52,7 +52,7 @@ global = {
 }
 
 sopMusic = \relative c' {
-	\partial 8 a'8 |
+	\partial 8 g'8 |
   g8. c16 c8 b16[ c] f8 d |
   c4( b) c |
   a4. g8 \times2/3{f[ e] d} |
@@ -123,7 +123,7 @@ sopWordsV = \lyricmode {
 }
 
 altoMusic = \relative c' {
-  f8 |
+  e8 |
   e8. e16 c8 d16[ e] d8 f |
   e4( d) g |
   f4. e8 \times2/3{d[ c] b} |
@@ -197,7 +197,7 @@ tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  f,8 |
+  c,8 |
   c8. c16 e8 d16[ c] d8 d |
   g4( g8[) f] e[ c] |
   f4. g8 \times2/3{g,4 g8} |

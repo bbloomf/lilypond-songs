@@ -18,7 +18,7 @@
     #'((basic-distance . 0)
        (minimum-distance . 0)
        (padding . -14)
-       (stretchability . 80))
+       (stretchability . 60))
   top-markup-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)
@@ -27,7 +27,7 @@
   markup-system-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)
-       (padding . -3)
+       (padding . -1)
        (stretchability . 0))
   ragged-last-bottom = ##f
   ragged-bottom = ##f

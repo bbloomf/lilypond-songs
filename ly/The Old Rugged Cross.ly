@@ -90,9 +90,9 @@ sopWords = \lyricmode {
   For a world of lost sin -- ners was slain. __ _
 
   \unset ignoreMelismata
-  So I’ll cher -- ish the old rug -- ged cross,
+  So I’ll cher -- ish the old rug -- ged cross, __
   Till my tro -- phies at last I lay down;
-  I will cling to the old rug -- ged cross,
+  I will cling to the old rug -- ged cross, __
   And ex -- change it some day for a crown.
 }
 

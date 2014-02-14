@@ -116,3 +116,4 @@
 176:Rock of Ages;Nearer, My God, to Thee;All Hail the Power of Jesus’ Name
 178:Rise, my soul, and stretch thy wings
 179:All People That on Earth Do Dwell;Oh cease, my wandering soul
+180:The Old Rugged Cross

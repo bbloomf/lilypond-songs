@@ -314,7 +314,7 @@ sopWords = \lyricmode {
   Near -- er, my God, to Thee,
   Near -- er to Thee!
   E’en though it be a cross
-  That rais -- eth me,
+  That __ rais -- eth me, __
 
   Still all my song shall be,
   Near -- er, my 
@@ -325,13 +325,13 @@ sopWordsII = \lyricmode {
   Though, like the wand -- er -- er,
   The sun gone down,
   Dark -- ness be o -- ver me,
-  My rest a stone;
+  My __ rest a stone; __
 
   Yet in my dreams I’d be
   Near -- er, my God, to Thee,
 
   Near -- er, my God, to Thee,
-  Near -- er to Thee!
+  Near -- er to Thee! __
 }
 
 sopWordsIII = \lyricmode {
@@ -339,7 +339,7 @@ sopWordsIII = \lyricmode {
   There let the way ap -- pear,
   Steps un -- to heav’n;
   All that Thou send -- est me,
-  In mer -- cy giv’n;
+  In __ mer -- cy giv’n; __
 
   An -- gels to beck -- on me
   Near -- er, my 
@@ -549,17 +549,17 @@ sopWordsII = \lyricmode {
   \set stanza = #"2. "
   O seed of Is -- rael’s cho -- sen race
   now ran -- somed from the fall,
-  hail Him who saves you by his grace,
+  Hail Him who saves you by His grace,
   and crown Him Lord of __ all.
-  Hail Him who saves you by his grace,
+  Hail Him who saves you by His grace,
   and crown Him Lord __ of all!
 }
 
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
   Let ev -- ’ry tongue and ev -- ’ry tribe
-  re -- spon -- sive to his call,
-  to Him all maj -- es -- ty a -- scribe,
+  re -- spon -- sive to His call,
+  To Him all maj -- es -- ty a -- scribe,
   and crown Him Lord of __ all.
   To Him all maj -- es -- ty a -- scribe,
   and crown Him Lord __ of all!
@@ -568,7 +568,7 @@ sopWordsIII = \lyricmode {
 sopWordsIV = \lyricmode {
   \set stanza = #"4. "
   Oh, that with all the sa -- cred throng
-  we at his feet may fall!
+  we at His feet may fall!
   We’ll join the ev -- er -- last -- ing song
   and crown Him Lord of __ all.
   We’ll join the ev -- er -- last -- ing song

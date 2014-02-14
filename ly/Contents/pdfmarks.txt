@@ -129,6 +129,7 @@
 [/Title (Old Dog Tray) /Page 101 /OUT pdfmark
 [/Title (The Old Folks at Home) /Page 113 /OUT pdfmark
 [/Title (The Old Musician and His Harp) /Page 84 /OUT pdfmark
+[/Title (The Old Rugged Cross) /Page 180 /OUT pdfmark
 [/Title (The Old Time) /Page 67 /OUT pdfmark
 [/Title (Once to Every Man and Nation) /Page 170 /OUT pdfmark
 [/Title (On the Banks of the Wabash, Far Away) /Page 76 /OUT pdfmark

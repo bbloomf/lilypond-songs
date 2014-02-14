@@ -21,7 +21,7 @@
   outer-margin = 0.75\in
   top-margin = 0.26\in
   bottom-margin = 0.25\in
-  first-page-number = #178
+  first-page-number = #180
   print-first-page-number = ##t
   headerLine = ""
   oddHeaderMarkup = \markup\fill-line{
@@ -42,82 +42,90 @@
 }
 #(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
 global = {
-  \key g \major
-  \time 4/4
+  \key bes \major
+  \time 6/8
   \dynamicUp
   %\set crescendoSpanner = #'dashed-line
   %\set midiInstrument = "recorder"
   \autoBeamOff
   \override DynamicTextSpanner #'style = #'none
+  \slurDashed
 }
 
 sopMusic = \relative c' {
-  g'4 d g a |
-  b a b8[ c] \bar"" d4 |
-  e d c b |
-  a2. b4\rest \bar"||"
-  
-  g4 d g a |
-  b a b8[ c] \bar"" d4 |
-  e d c b |
-  a2. b4\rest \bar"||"
-  
-  d4 e d e |
-  d c8[ b] a2 |
-  b4 a8[ b] c4 b |
-  a8[ g] a[ b] a2 |
+	\partial 8 d16 ees |
+  f8. e16 g8 f4 f16 f |
+  g8. fis16 a8 g4 g16[ g] |
+  a8.( g16) f8
 
-  g4 d g a |
-  b a b8[ c] \bar"" d4 |
-  e d8[ c] b4 a |
-  g2. b4\rest \bar"|."
+  ees f ees |
+  d4.~ d4 d16 ees |
+  f8. e16 g8 f4 f16 f |
+  g8. fis16 a8 g4 g16[ g] |
+  
+  a8. g16 f8 ees' d c |
+  bes4.~ bes4 \bar"||"\break
+
+  a16 bes |
+  c8. c16 c8 c bes a |
+
+  bes4.~ bes4 bes16 a |
+  g8. g16 g8 bes a g |
+  f4.~ f4 \bar""\break f16 bes |
+  d8. d16 d8
+
+  d ees d |
+  g,4.~ g4 ees'16 ees |
+  d8. c16 bes8 f a c |
+  bes4.~ bes4 \bar"|."
 }
 sopWords = \lyricmode {
   \set stanza = #"1. "
-  Rise, my soul, and stretch thy wings,
-  Thy bet -- ter por -- tion trace;
-  Rise from tran -- si -- to -- ry things,
-  Towards heav’n, thy na -- tive place;
-  Sun, and moon, and stars de -- cay,
-  Time shall soon this earth re -- move;
-  Rise, my soul, and haste a -- way
-  To seats pre -- pared a -- bove.
+  \set ignoreMelismata = ##t
+  On a hill far a -- way stood an old rug -- ged cross,
+  The _ em -- blem of suff -- ’ring and shame; __ _
+  And I love that old cross where the dear -- est and best
+  For a world of lost sin -- ners was slain. __ _
+
+  \unset ignoreMelismata
+  So I’ll cher -- ish the old rug -- ged cross, __
+  Till my tro -- phies at last I lay down;
+  I will cling to the old rug -- ged cross, __
+  And ex -- change it some day for a crown.
 }
 
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
-  Riv -- ers to the o -- cean run,
-  Nor stay in all their course;
-  Fire as -- cend -- ing seeks the sun,
-  Both speed them to their source;
-  To a soul that's born of God,
-  Pants to view his glo -- rious face;
-  Up -- ward tends to his a -- bode,
-  To rest in his em -- brace.
+  \set ignoreMelismata = ##t
+  Oh, that old rug -- ged cross, so de -- spised by the world,
+  Has a won -- drous at -- trac -- tion for me; __ _
+  For the dear Lamb of God left His glo -- ry a -- bove
+  To __ _ bear it to dark Cal -- va -- ry. __ _
 }
 
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
-  Fly me rich -- es, fly me cares;
-  While I that coast ex -- plore;
-  Flat -- t’ring world, with all thy snares,
-  So -- li -- cit me no more.
-  Pil -- grims fix not here their home;
-  Stran -- gers tar -- ry but a night,
-  When the last dear morn is come,
-  They’ll rise to joy -- ful light.
+  \set ignoreMelismata = ##t
+  In that old rug -- ged cross, stained with blood so di -- vine,
+  A __ _ won -- _ drous beau -- ty I see, __ _
+  For ’twas on that old cross Je -- sus suf -- fered and died,
+  To __ _ par -- don and sanc -- ti -- fy me. __ _
 }
 
 sopWordsIV = \lyricmode {
   \set stanza = #"4. "
-  Cease, ye pil -- grims, cease to mourn,
-  Press on -- ward to the prize;
-  Soon our Sav -- ior will re -- turn,
-  Tri -- um -- phant in the skies:
-  Yet a sea -- son, and you know
-  Hap -- py en -- trance will be giv’n,
-  All our sor -- rows left be -- low,
-  And earth ex -- changed for heav’n.
+  \set ignoreMelismata = ##t
+  To the old rug -- ged cross I will ev -- er be true;
+  Its __ _ shame and re -- proach glad -- ly bear; __ _
+  Then He’ll call me some day to my home far a -- way,
+  Where His glo -- ry for -- ev -- er I’ll share. __ _
+
+  \unset ignoreMelismata
+  \set associatedVoice = "basses"
+  So I’ll cher -- ish the cross, the old rug -- ged cross,
+
+  \repeat unfold 9 ""
+  I will cling to the cross, the old rug -- ged cross,
 }
 
 sopWordsV = \lyricmode {
@@ -125,24 +133,34 @@ sopWordsV = \lyricmode {
 }
 
 altoMusic = \relative c' {
-  d4 d e fis |
-  g fis g g |
-  g g g8[ fis] g4 |
-  fis2. s4 |
-  d d e fis |
-  g fis g g |
-  g g g8[ fis] g4 |
-  fis2. s4 |
+  \tieDashed
+  bes16 c |
+  d8. cis16 cis8 d4 d16 d |
+  ees8. ees16 ees8 ees4 e16[ e] |
+  ees!8.~ ees16 d8
 
-  g g g g |
-  g a8[ g] fis2 |
-  g4 fis8[ g] a4 g |
-  fis8[ e] fis[ g] fis2 |
+  c c c |
+  \tieSolid
+  bes4.~ bes4 bes16 c |
+  d8. cis16 cis8 d4 d16 d |
+  ees8. ees16 ees8 ees4
 
-  d4 d e fis |
-  g fis g g |
-  g g8[ a] g4 fis |
-  g2. s4 \bar"|."
+  e16[ e] |
+  ees!8. ees16 ees8 g f ees |
+  d4.~ d4 \bar"||"
+
+  c16 d |
+  ees8. ees16 ees8 ees4 ees8 |
+
+  d cis ees d4 f16 f |
+  ees8. ees16 ees8 g f ees |
+  d4.~ d4 d16 d |
+  f8. f16 f8
+
+  f[ g] f |
+  ees ees ees ees4 g16 g |
+  f8. ees16 d8 ees ees ees |
+  d4.~ d4 \bar"|."
 }
 altoWords = \lyricmode {
 }
@@ -165,23 +183,32 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
-  b4 a b8[ cis] d4 |
-  d d d d |
-  c d e8[ d] d4 |
-  d2. s4 |
-  b4 a b8[ cis] d4 |
-  d d d d |
-  c d e8[ d] d4 |
-  d2. s4 |
+  f,16 f |
+  bes8. bes16 g8 bes4 bes16 bes |
+  bes8. a16 c8 bes4 c16[ c] |
+  c8.( a16) bes8
 
-  b c b c |
-  b d d2 |
-  d4 d d d |
-  d d d2 |
-  b4 a b8[ cis] d4 |
-  d d d d |
-  c d8[ e] d4 c |
-  b2. s4 \bar"|."
+  a8 a f |
+  f4.~ f4 f16 f |
+  bes8. bes16 g8 bes4 bes16 bes |
+  bes8. a16 c8 bes4
+
+  c16[ c] |
+  c8. bes16 a8 a bes a |
+  bes4.~ bes4 \bar"||"
+
+  f16 f |
+  a8. a16 a8 a4 f8 |
+
+  f8 e g f4 bes16 bes |
+  bes8. bes16 bes8 bes bes bes |
+  bes4.~ bes4 bes16 bes |
+  bes8. bes16 bes8
+
+  bes4 bes8 |
+  bes bes bes bes4 bes16 bes |
+  bes8. a16 bes8 a c f, |
+  f4.~ f4 \bar"|."
 }
 
 tenorWords = \lyricmode {
@@ -194,23 +221,34 @@ tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  g4 fis e d |
-  g d g8[ a] b4 |
-  c b a g |
-  d2. d4\rest |
-  g fis e d |
-  g d g8[ a] b4 |
-  c b a g |
-  d2. d4\rest |
+  \tieDashed
+  bes,16 bes |
+  bes8. bes16 bes8 bes4 bes16 bes |
+  ees8. ees16 ees8 ees4 c16[ c] |
+  f8.~ f16 f8
 
-  g g g g |
-  g fis8[ g] d2 |
-  d4 d d d |
-  d d d2 |
-  g4 fis e d |
-  g d g,8[ a] b4 |
-  c b8[ c] d4 d |
-  g,2. d'4\rest \bar"|."
+  f f f |
+  \tieSolid
+  bes,4.~ bes4 bes16 bes |
+  bes8. bes16 bes8 bes4 bes16 bes |
+  ees8. ees16 ees8 ees4
+
+  c16[ c] |
+  f8. f16 f8 f f f |
+  bes,4.~ bes4 \bar"||"
+
+  f'16 f |
+  f8. f16 f8 f4 f8 |
+
+  bes,8 bes bes bes4 d16 d |
+  ees8. ees16 ees8 ees ees ees |
+  bes4.~ bes4 bes16 bes |
+  bes8. bes16 bes8
+
+  bes4 bes8 |
+  ees8 ees ees ees4 ees16 ees |
+  f8. f16 f8 f f f |
+  bes,4.~ bes4 \bar"|."
 }
 bassWords = \lyricmode {
 }
@@ -230,13 +268,14 @@ pianoLH = \relative c' {
     \new Lyrics = "altos"  \lyricsto "sopranos" \sopWords
     \new Lyrics = "altosII"  \lyricsto "sopranos" \sopWordsII
     \new Lyrics = "altosIII"  \lyricsto "sopranos" \sopWordsIII
-    \new Lyrics = "altosIV"  \lyricsto "sopranos" \sopWordsIV
+    \new Lyrics = "altosIV"
     \new Lyrics = "altosV"  \lyricsto "sopranos" \sopWordsV
    \new Staff = men <<
       \clef bass
       \new Voice = "tenors" { \voiceOne << \global \tenorMusic >> }
       \new Voice = "basses" { \voiceTwo << \global \bassMusic >> }
     >>
+    \context Lyrics = "altosIV" \lyricsto "sopranos" \sopWordsIV
     \new Lyrics \with { alignAboveContext = #"tenors" } \lyricsto "tenors" \tenorWordsIII
     \new Lyrics \with { alignAboveContext = #"tenors" } \lyricsto "tenors" \tenorWordsII
     \new Lyrics \with { alignAboveContext = #"tenors" } \lyricsto "tenors" \tenorWords
@@ -268,8 +307,7 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Rise, my soul, and stretch thy wings"}}
-  composer = \markup\oldStyleNum"James Nares (1715–1783)"
-  poet = \markup\oldStyleNum"Robert Seagrave (1693–1764)"
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"The Old Rugged Cross"}}
+  composer = \markup\oldStyleNum"George Bennard (1873–1958)"
   tagline = ""
 }}

@@ -118,7 +118,7 @@ sopWordsIV = \lyricmode {
   Soon our Sav -- ior will re -- turn,
   Tri -- um -- phant in the skies:
   Yet a sea -- son, and you know
-  Hap -- py en -- trance will be giv’en,
+  Hap -- py en -- trance will be giv’n,
   All our sor -- rows left be -- low,
   And earth ex -- changed for heav’n.
 }

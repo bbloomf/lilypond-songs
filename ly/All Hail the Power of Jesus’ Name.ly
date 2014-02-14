@@ -91,17 +91,17 @@ sopWordsII = \lyricmode {
   \set stanza = #"2. "
   O seed of Is -- rael’s cho -- sen race
   now ran -- somed from the fall,
-  hail Him who saves you by his grace,
+  Hail Him who saves you by His grace,
   and crown Him Lord of __ all.
-  Hail Him who saves you by his grace,
+  Hail Him who saves you by His grace,
   and crown Him Lord __ of all!
 }
 
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
   Let ev -- ’ry tongue and ev -- ’ry tribe
-  re -- spon -- sive to his call,
-  to Him all maj -- es -- ty a -- scribe,
+  re -- spon -- sive to His call,
+  To Him all maj -- es -- ty a -- scribe,
   and crown Him Lord of __ all.
   To Him all maj -- es -- ty a -- scribe,
   and crown Him Lord __ of all!
@@ -110,7 +110,7 @@ sopWordsIII = \lyricmode {
 sopWordsIV = \lyricmode {
   \set stanza = #"4. "
   Oh, that with all the sa -- cred throng
-  we at his feet may fall!
+  we at His feet may fall!
   We’ll join the ev -- er -- last -- ing song
   and crown Him Lord of __ all.
   We’ll join the ev -- er -- last -- ing song

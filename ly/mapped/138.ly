@@ -56,17 +56,17 @@ sopMusic = \relative c' {
   g8. c16 c8 b16[ c] f8 d |
   c4( b) c |
   a4. g8 \times2/3{f[ e] d} |
-  c8 c'4 b8\rest g4 |
+  c8 c'4 b8\rest \bar""\break g4 |
   g8. c16 c8 b16[ c] f8 d |
   c4( b) c |
   
   a4. g8 \times2/3{f[ e d]} |
-  c8 c'4 b8\rest g4 |
+  c8 c'4 b8\rest \bar""\break g4 |
   g8 e g4 bes |
   a8 f a4. e'8 |
   
   f4. e8 d c |
-  b d b\rest g f e |
+  b d b\rest \bar""\break g f e |
   d4 c f'8 d |
 
   c4( b) c8[ b] |
@@ -82,7 +82,7 @@ sopWords = \lyricmode {
   And lives in our __ al -- ley:
   There is no la -- dy in the land
   That’s half so sweet as Sal -- ly;
-  She is the dar -- ling of my heart, __
+  She is the dar -- ling of my heart,
   And lives in our __ al -- ley.
 }
 
@@ -96,7 +96,7 @@ sopWordsII = \lyricmode {
   Oh, then I’m dress’d all in my best,
   To walk a -- broad with Sal -- ly;
   \unset ignoreMelismata
-  She is the dar -- ling of my heart, __
+  She is the dar -- ling of my heart,
   And lives in our __ al -- ley.
 }
 

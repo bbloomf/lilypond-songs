@@ -250,7 +250,7 @@ pianoLH = \relative c' {
   }
 \header {
   title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Jesus, Lover of my soul"}}
-  poet = \markup\oldStyleNum"Charles Wesly (1708–1788)"
+  poet = \markup\oldStyleNum"Charles Wesley (1707–1788)"
   composer = \markup\concat{\italic "Aberystwyth" \oldStyleNum", Joseph Parry (1841–1903)"}
   tagline = ""
 }}

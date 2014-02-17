@@ -175,7 +175,7 @@ altoMusic = \relative c' {
   e8 e16 d c8 e |
   g16 e d c b8 b |
   e c c b |
-  c4 c \bar"||"
+  c8.[ b16] c4 \bar"||"
 }
 altoWords = \lyricmode {
 }
@@ -277,7 +277,7 @@ bassMusic = \relative c' {
   c8 c16 c c8 c |
   g16 c g a g8 g |
   c c c g |
-  c4 c \bar"||"
+  c[ g] c4 \bar"||"
 }
 bassWords = \lyricmode {
 }

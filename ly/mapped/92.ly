@@ -51,7 +51,20 @@ global = {
 }
 
 sopMusic = \relative c' {
-	ees8. f16 ees8 ees'8. d16 ees8 |
+  \partial 8
+  \oneVoice\set Staff.midiInstrument = #"acoustic grand"
+  bes'8_~ |
+
+  <bes ees g>8.[ f'16 ees8] <f bes,>16[( bes8.) g,8]_~ |
+  <g c ees>8.[ d'16 c8] <d g,>16[( g8.) ees,8]_~ |
+  <ees aes c>8.[ bes'16 aes8] <bes ees,>16[ ees8.] <g, ees>8 |
+  <f d>4.( ees4) bes'8\rest \bar"||"\break
+  \once \override Score.RehearsalMark #'break-visibility = #end-of-line-visible
+  \once \override Score.RehearsalMark #'self-alignment-X = #RIGHT
+  \mark"Fine"
+
+  \voiceOne\set Staff.midiInstrument = #"flute"
+	ees,8. f16 ees8 ees'8. d16 ees8 |
   c8. bes16 c8 bes4 \teeny bes16 bes \normalsize |
   ees,8. f16 ees8 ees'8. d16 ees8 |
   
@@ -70,14 +83,10 @@ sopMusic = \relative c' {
   bes8. aes16 g8 f4 ees8 |
   g8. aes16 bes8 c8. d16 ees8 |
   
-  g,8. aes16 f8 ees4 \bar"" \break \oneVoice\set Staff.midiInstrument = #"acoustic grand" bes'8_~_\markup\smallCapsOldStyle"Accomp." |
-
-  <bes ees g>8.[ f'16 ees8] <f bes,>16[( bes8.) g,8]_~ |
-  <g c ees>8.[ d'16 c8] <d g,>16[( g8.) ees,8]_~ |
-  <ees aes c>8.[ bes'16 aes8] <bes ees,>16[ ees8.] <g, ees>8 |
-  <f d>4.( ees4) bes'8\rest \bar"|."
+  g,8. aes16 f8 ees4 \bar"|."
 }
 sopWords = \lyricmode {
+  \repeat unfold 6 \skip1
   \set stanza = #"1. "
   \set ignoreMelismata = ##t
 	Here’s to the maid -- en of bash -- ful fif -- teen, "" ""
@@ -87,6 +96,7 @@ sopWords = \lyricmode {
 }
 
 sopWordsII = \lyricmode {
+  \repeat unfold 6 \skip1
   \set stanza = #"2. "
   \set ignoreMelismata = ##t
   Here’s to the charm -- er whose dim -- ples we prize, "" ""
@@ -101,6 +111,7 @@ sopWordsII = \lyricmode {
 }
 
 sopWordsIII = \lyricmode {
+  \repeat unfold 6 \skip1
   \set stanza = #"3. "
   \set ignoreMelismata = ##t
   Here’s to the maid with a bo -- som of snow,
@@ -110,6 +121,7 @@ sopWordsIII = \lyricmode {
 }
 
 sopWordsIV = \lyricmode {
+  \repeat unfold 6 \skip1
   \set stanza = #"4. "
   Let her be clum -- sy or let her be slim,
   Young or an -- cient I care not a fea -- ther.
@@ -122,6 +134,8 @@ sopWordsV = \lyricmode {
 }
 
 altoMusic = \relative c' {
+  s8 s1.*2 |
+
   bes8. bes16 ees8 g8. g16 g8 |
   ees8. ees16 ees8 g4 \teeny g16 g \normalsize |
   ees8. bes16 bes8 c8 ees c |
@@ -140,7 +154,7 @@ altoMusic = \relative c' {
   ees8. f16 g8 g4. |
   g8. f16 ees8 d4 ees8 |
   ees8. f16 g8 aes8. bes16 c8 |
-  ees,8. d16 d8 ees4 s8
+  ees,8. d16 d8 ees4
 }
 altoWords = \lyricmode {
 }
@@ -163,6 +177,7 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
+  s8 s1.*2 |
   g8. aes16 g8 bes8. bes16 bes8 |
   aes8. g16 aes8 bes4 \teeny bes16 bes \normalsize |
   g8. aes16 g8 g8 g g |
@@ -181,7 +196,7 @@ tenorMusic = \relative c' {
   g8. aes16 bes8 bes4. |
   bes8. aes16 g8 bes4 ees,8 |
   bes'8. bes16 bes8 aes8. aes16 aes8 |
-  bes8. bes16 aes8 g4 s8
+  bes8. bes16 aes8 g4
 }
 
 tenorWords = \lyricmode {
@@ -194,7 +209,16 @@ tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  ees,8. ees16 ees8 ees8. ees16 ees8 |
+  %accompaniment
+  \oneVoice\set Staff.midiInstrument = #"acoustic grand"
+  d,8 |
+  <ees ees'>4-> d8\rest <d d'>4-> d8\rest |
+  <c c'>4-> d8\rest <bes bes'>4-> d8\rest |
+  <aes aes'>4 d8\rest <g g,>8 d\rest bes8~ |
+  <bes aes'>4.( <ees g>4) d8\rest \bar"||"
+
+  \voiceTwo\set Staff.midiInstrument = #"flute"
+  ees8. ees16 ees8 ees8. ees16 ees8 |
   aes,8 ees' aes, ees'4 \teeny ees16 ees \normalsize |
   ees8. ees16 ees8 c8 c c |
   
@@ -214,14 +238,7 @@ bassMusic = \relative c' {
   g8. f16 ees8 bes4 ees8 |
   ees8. ees16 ees8 aes,8. aes16 aes8 |
 
-  bes8. bes16 d8 ees4 d8\rest |
-
-  %accompaniment
-  \oneVoice\set Staff.midiInstrument = #"acoustic grand"
-  <ees ees'>4-> d8\rest <d d'>4-> d8\rest |
-  <c c'>4-> d8\rest <bes bes'>4-> d8\rest |
-  <aes aes'>4 d8\rest <g g,>8 d\rest bes8~ |
-  <bes aes'>4.( <ees g>4) d8\rest \bar"|."
+  bes8. bes16 bes8 ees4 \bar"|."
 }
 bassWords = \lyricmode {
 }
@@ -274,8 +291,8 @@ pianoLH = \relative c' {
       
       \override VerticalAxisGroup #'staff-staff-spacing =
       #'((basic-distance . 0)
-         (minimum-distance . 0)
-         (padding . 0.5)
+         (minimum-distance . 10)
+         (padding . 3)
          (stretchability . 2))
     }
   }

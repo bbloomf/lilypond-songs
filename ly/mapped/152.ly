@@ -251,7 +251,7 @@ altoMusic = \relative c' {
     dis4.~ dis8 s dis |
     e4 fis8 gis4 gis8 |
     cis,4 dis8 e4 b8 |
-    e[ cis] e e4 dis8
+    cis4 e8 e4 dis8
   }
   \alternative {
     {
@@ -325,8 +325,8 @@ tenorMusic = \relative c' {
     
     ais8[ ais] ais ais4 ais8 |
     b4.~ b8 s b |
-    b4 a8 gis4 gis8 |
-    gis4 fis8 e4 e8 |
+    b4 b16[ a] gis4 gis8 |
+    gis4 gis16[ fis] e4 e8 |
     e4 e8 a4 a8
   }
   \alternative {

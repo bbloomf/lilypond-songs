@@ -252,7 +252,7 @@ altoWordsVI = \lyricmode {
 }
 tenorMusic = \relative c' {
   \repeat volta 2 {
-    s8 b8 |
+    r8 b8 |
     e,4 e e e8 e |
     dis4 b e d8\rest cis |
     gis4 gis8~ gis a4 a |

@@ -1,4 +1,4 @@
-﻿\version "2.14.2"
+﻿habet \version "2.14.2"
 \include "util.ly"
 \header {
   title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Red is the Rose"}}
@@ -58,7 +58,7 @@ sopMusic = \relative c' {
 	\partial 8 |
   c8 |
   f4 f8. g16 a4. f8 |
-  g8 a8 g8 f d4. c16~ c |
+  g8 a8 g8 f d4. c16[ c] |
   f4 f8. e16 f4 a16 c8. |
   d2 c4. c8 |
   
@@ -74,7 +74,7 @@ sopMusic = \relative c' {
   d2 c2 |
   
   d4 d8. c16 a4 a8 c |
-  bes16( a8.) g8. f16 d4.\fermata c16[ d] |
+  bes16[ a8.] g8. f16 d4.\fermata c16[ d] |
   f4 a16 c8. d4 c8 a |
   \tieSolid g2 f~ |
   f4 \bar"|."
@@ -123,7 +123,7 @@ sopWordsV = \lyricmode {
 altoMusic = \relative c' {
   c8 |
   c4 c8. e16 f4. f8 |
-  d8 d d8 d bes4. c16~ c |
+  d8 d d8 d bes4. c16[ c] |
   c4 c8. e16 d4 ees16 ees8. |
   d4( f) e4. e8 |
   
@@ -166,7 +166,7 @@ altoWordsVI = \lyricmode {
 tenorMusic = \relative c' {
   a8 |
   a4 a8. bes16 c4. a8 |
-  bes8 bes bes8 bes f4. e16~ e |
+  bes8 bes bes8 bes f4. e16[ e] |
   a4 a8. a16 a4 f16 f8. |
   f4( g) g4. a8 |
   
@@ -199,7 +199,7 @@ tenorWordsIII = \lyricmode {
 bassMusic = \relative c' {
   f,8 |
   f4 f8. f16 f4. f8 |
-  bes,8 bes bes8 bes bes4. c16~ c |
+  bes,8 bes bes8 bes bes4. c16[ c] |
   f4 f8. f16 d4 c16 c8. |
   bes4( g) c4. a8 |
   

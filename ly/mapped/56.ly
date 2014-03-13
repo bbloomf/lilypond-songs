@@ -349,7 +349,7 @@ altoMusic = \relative c' {
   
   ees ees ees |
   ees4. ees8 ees4 |
-  ees ees8[ ges] \times 2/3 {f4( ees8)} |
+  ees ees8[ ges] \times 2/3 {f4 ees8} |
   ees4. des8 c4 |
   ees ees ees |
   c4. ees8 ees4 |
@@ -388,7 +388,7 @@ tenorMusic = \relative c' {
   
   aes aes aes |
   g4. g8 g4 |
-  aes4 aes8[ aes] \times 2/3 {aes4( bes8)} |
+  aes4 aes8[ aes] \times 2/3 {aes4 bes8} |
   aes4. aes8 aes4 |
   c4 bes8[ aes] g[ aes] |
   aes4. g8 aes4 |
@@ -417,7 +417,7 @@ bassMusic = \relative c' {
   
   aes aes aes |
   ees'4. ees8 ees4 |
-  aes4 aes8[ c,] \times 2/3 {des4( des8)} |
+  aes4 aes8[ c,] \times 2/3 {des4 des8} |
   c4. des8 aes4 |
   aes aes des8[ c] |
   f4. ees8 aes,4 |

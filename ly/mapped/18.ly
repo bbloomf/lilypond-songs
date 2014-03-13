@@ -17,8 +17,8 @@
   ragged-last-bottom = ##f
   ragged-bottom = ##f
   two-sided = ##t
-  inner-margin = 0.89\in
-  outer-margin = 0.64\in
+  inner-margin = 1\in
+  outer-margin = 0.75\in
   top-margin = 0.26\in
   bottom-margin = 0.25\in
   first-page-number = #18
@@ -62,7 +62,7 @@ sopMusic = \relative c' {
   d4 b8 c d2~ |
   d4 c8 b c4 a |
   
-  g1 |
+  g1*3/4 \bar""\break \parenthesize g4 |
   r2 r4 d' |
   d d e d |
   c b a a |
@@ -102,7 +102,7 @@ sopWords = \lyricmode {
   \set stanza = #"1. "
   It was a lov -- er and his lass,
   
-  With a hey, with a ho, and a hey non -- ny no, and a hey __ non -- ny non -- ny no,
+  With a hey, with a ho, and a hey non -- ny no, and a hey __ non -- ny non -- ny no, __ _
   
   That o’er the green corn -- fields did pass,
   In spring -- time, in spring -- time, in spring -- time, the on -- ly pret -- ty ring -- time,
@@ -117,7 +117,7 @@ sopWordsII = \lyricmode {
   \set stanza = #"2. "
   Be -- tween the a -- cres of the Rye,
  
-  "" \repeat unfold 19 \skip1
+  "" \repeat unfold 20 \skip1
   These pret -- ty Coun -- try folks would lie,
 }
 
@@ -125,7 +125,7 @@ sopWordsIII = \lyricmode {
   \set stanza = #"3. "
   This Ca -- rol they be -- gan that hour,
  
-  "" \repeat unfold 19 \skip1
+  "" \repeat unfold 20 \skip1
   How that a life was but a Flow’r,
 }
 
@@ -133,7 +133,7 @@ sopWordsIV = \lyricmode {
   \set stanza = #"4. "
   And there -- fore take the pres -- ent time,
  
-  "" \repeat unfold 19 \skip1
+  "" \repeat unfold 20 \skip1
   For love is crown -- ed with the prime,
 }
 
@@ -152,7 +152,7 @@ altoMusic = \relative c'' {
   a4 g4. a8( fis4) |
   
   g2. b4 |
-  \break a8 g g2 fis4 |
+  a8 g g2 fis4 |
   g8[ a] b4 c b |
   e4. d8 c b a4~ |
   
@@ -389,8 +389,8 @@ pianoLH = \relative c' {
     }
     \context {
       \Score
-      \override SpacingSpanner #'base-shortest-duration = #(ly:make-moment 1 8)
-      \override SpacingSpanner #'common-shortest-duration = #(ly:make-moment 1 4)
+      \override SpacingSpanner #'base-shortest-duration = #(ly:make-moment 1 32)
+      \override SpacingSpanner #'common-shortest-duration = #(ly:make-moment 1 32)
     }
     \context {
       % Remove all empty staves

@@ -85,7 +85,7 @@ sopWords = \lyricmode {
 	Since first I saw your face I re -- solv’d
   To hon -- or and re -- nown __ ye;
   If now I be dis -- dain’d,
-  I wish my heart had nev -- er known __ ye.
+  I __ wish my heart had nev -- er known __ ye.
   
   What I that lov’d, and \set associatedVoice = "altos" you that \unset associatedVoice lik’d,
   \set associatedVoice = "tenors"
@@ -141,7 +141,7 @@ altoMusic = \relative c' {
   
   d( cis) d d |
   d4. d8 d4 d |
-  e e e e |
+  e e8[ e] e4 e |
   fis4. d8 cis4 d |
   d( cis) d
   
@@ -188,7 +188,7 @@ tenorMusic = \relative c' {
   
   a2 fis4 fis |
   fis4. g8 a4 b |
-  cis4 cis cis b8[ cis] |
+  cis4 cis8[ cis] cis4 b8[ cis] |
   
   d4 a a4 a |
   a2 fis4
@@ -226,7 +226,7 @@ bassMusic = \relative c' {
   
   a2 d4 d |
   d4. d8 d4 b |
-  a a a' g |
+  a a8[ a] a'4 g |
   fis4. fis8 e4 d |
   a2 d4
   

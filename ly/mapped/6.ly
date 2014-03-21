@@ -76,9 +76,11 @@ sopMusic = \relative c'' {
   f4 f b\rest |
   d d8[ c] bes[ a] |
   g8.[(\< a32 g] fis8[ g a bes] |
-  c4)\! c8.[\mf\> d16] c4 |
+  c4)\! c8.[\mf\> \slurDashed d16]( c4) |
   
-  b4\rest\! c8.[\> d16] c4 |
+  
+  b4\rest\! c8.[\> d16]( c4) |
+  \slurSolid
   d2.~\f |
   d4 a g\p |
   bes2.~\< |
@@ -101,8 +103,10 @@ sopWords = \lyricmode {
   End -- ed is sor -- row,
   Joy may be -- gin! __
   
+  \set ignoreMelismata = ##t
   Joy may,
   joy may,
+  \unset ignoreMelismata
   joy __ may be -- gin! __
   Joy may be -- gin! __
 }
@@ -121,8 +125,8 @@ sopWordsII = \lyricmode {
   Earth -- ward ’tis spread -- ing,
   Peace in my breast, __
   
-  Peace, _
-  peace, _
+  Peace,
+  peace,
   peace __ in my breast, __
   Peace in my breast. __
 }
@@ -141,8 +145,10 @@ sopWordsIII = \lyricmode {
   Faint -- heart -- ed nev -- er,
   Up -- ward my gaze! __
   
+  \set ignoreMelismata = ##t
   Up -- ward,
   up -- ward,
+  \unset ignoreMelismata
   up -- ward my gaze! __
   Up -- ward my gaze! __
 }
@@ -172,9 +178,10 @@ altoMusic = \relative c' {
   d4 d s |
   bes'4 bes8[ a] g[ f] |
   e8.([ f32 e] dis8[ e f g] |
-  a4) g a | \break
+  a4) \slurDashed g( a) | \break
   
-  s g a |
+  s g( a) |
+  \slurSolid
   f2.~ |
   f4 f e |
   f2.~ |
@@ -230,9 +237,10 @@ tenorMusic = \relative c' {
   f'4\p f8[ e] d[ c] |
   bes4 bes s4 |
   c c4. c8 |
-  c4 e f |
+  c4 \slurDashed e( f) |
   
-  s e f |
+  s e( f) |
+  \slurSolid
   d2.~ |
   d4 c c |
   bes2.~ |
@@ -249,6 +257,9 @@ tenorWords = \lyricmode {
   Joy may be -- gin!
   End -- ed is sor -- row,
   Joy may be -- gin!
+
+  \set ignoreMelismata = ##t
+  Joy may,
 }
 
 tenorWordsII = \lyricmode {
@@ -258,6 +269,8 @@ tenorWordsII = \lyricmode {
   Peace in my breast,
   Earth -- ward ’tis spread -- ing,
   Peace in my breast,
+
+  Peace,
 }
 
 tenorWordsIII = \lyricmode {
@@ -267,6 +280,9 @@ tenorWordsIII = \lyricmode {
   Up -- ward my gaze!
   Faint -- heart -- ed nev -- er,
   Up -- ward my gaze!
+
+  \set ignoreMelismata = ##t
+  Up -- ward,
 }
 
 bassMusic = \relative c' {
@@ -294,9 +310,10 @@ bassMusic = \relative c' {
   d'4 d8[ c] bes[ a] |
   g4 g d\rest |
   c'4 c8[ bes] a[ g] |
-  f4 bes a |
+  f4 \slurDashed bes( a) |
   
-  d,\rest bes' a |
+  d,\rest bes'( a) |
+  \slurSolid
   bes8([ f d' bes f d] |
   bes4) c c |
   d2.~ |

@@ -40,7 +40,7 @@
         \fill-line{\headerLine}
   }
 }
-#(set-global-staff-size 17.5) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 17.5 20))) }
+#(set-global-staff-size 17.6) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 17.6 20))) }
 global = {
   \key g \major
   \time 2/2
@@ -53,7 +53,7 @@ global = {
 
 sopMusic = \relative c' {
   \partial 4
-  g'4 |
+  g4 |
   b4. c8 d4 d |
   c b a a8 b |
   c4 c8 d e4 e8 f |
@@ -141,7 +141,7 @@ sopWordsV = \lyricmode {
   \set stanza = #"5. "
 }
 
-altoMusic = \relative c'' {
+altoMusic = \relative c' {
   g4 |
   g4. a8 b4 a~ |
   a g2 f4 |
@@ -206,7 +206,7 @@ altoWordsVI = \lyricmode {
   \set stanza = #"6. "
 }
 tenorMusic = \relative c' {
-  g'4 |
+  g4 |
   g2. d8[ e] fis4 g d d |
   a a8 b c4 c8 d |
   
@@ -353,6 +353,7 @@ pianoLH = \relative c' {
 <<
    \new ChoirStaff <<
     \new Staff = women <<
+      \clef "treble_8"
       \new Voice = "sopranos" { << \global \sopMusic >> }
     >>
     \new Lyrics = "sopranos"  \lyricsto "sopranos" \sopWords
@@ -361,6 +362,7 @@ pianoLH = \relative c' {
     \new Lyrics = "sopranosIV"  \lyricsto "sopranos" \sopWordsIV
     
     \new Staff = women <<
+      \clef "treble_8"
       \new Voice = "altos" { << \global \altoMusic >> }
     >>
     \new Lyrics = "altusA"  \lyricsto "altos" \altusWordsA
@@ -369,7 +371,7 @@ pianoLH = \relative c' {
     \new Lyrics = "altusD"  \lyricsto "altos" \altusWordsD
     
     \new Staff = tenors <<
-      \clef "treble_8"
+      \clef bass
       \new Voice = "tenors" { << \global \tenorMusic >> }
     >>
     \new Lyrics = "tenorA"  \lyricsto "tenors" \tenorWordsA

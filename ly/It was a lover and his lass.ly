@@ -43,7 +43,7 @@
         \fill-line{\headerLine}
   }
 }
-#(set-global-staff-size 17.7) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 17.7 20))) }
+#(set-global-staff-size 17.6) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 17.6 20))) }
 global = {
   \key g \major
   \time 2/2

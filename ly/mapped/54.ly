@@ -29,6 +29,11 @@
        (minimum-distance . 0)
        (padding . -1)
        (stretchability . 0))
+  markup-system-spacing =
+    #'((basic-distance . 0)
+       (minimum-distance . 0)
+       (padding . 0)
+       (stretchability . 0))
   ragged-last-bottom = ##f
   ragged-bottom = ##f
   two-sided = ##t
@@ -276,7 +281,7 @@ pianoLH = \relative c' {
   }
 \header {
   title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"De Brevitate Vitæ"}}
-  subtitle = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #12.5 \smallCapsOldStyle"(Gaudeamus igitur)"}}
+  instrument = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #12.5 \smallCapsOldStyle"(Gaudeamus igitur)"}}
   poet = \markup\oldStyleNum"Anonymous, c. 1710, some verses, c. 1287"
   composer = \markup\oldStyleNum"German Melody"
   tagline = ""
@@ -498,7 +503,7 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Vive L’Amour"}}
+  instrument = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Vive L’Amour"}}
   tagline = ""
 }}
 

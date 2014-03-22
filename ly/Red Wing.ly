@@ -1,7 +1,7 @@
 \version "2.14.2"
 \include "util.ly"
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Red Wing"}}
+  instrument = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Red Wing"}}
   composer = \markup\oldStyleNum"Kerry Mills (1869–1948)"
   poet = \markup\oldStyleNum"Thurland Chattaway"
   tagline = ""
@@ -22,7 +22,7 @@
        (minimum-distance . 0)
        (padding . -1)
        (stretchability . 100))
-  ragged-last-bottom = ##t
+  ragged-last-bottom = ##f
   ragged-bottom = ##f
   two-sided = ##t
   inner-margin = 1\in

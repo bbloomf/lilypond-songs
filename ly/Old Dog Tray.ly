@@ -1,7 +1,7 @@
 ﻿\version "2.14.2"
 \include "util.ly"
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Old Dog Tray"}}
+  instrument = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Old Dog Tray"}}
   composer = \markup\oldStyleNum"Stephen Foster (1826–1864)"
   tagline = ""
 }

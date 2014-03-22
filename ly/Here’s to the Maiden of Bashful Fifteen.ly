@@ -1,7 +1,7 @@
 ﻿\version "2.14.2"
 \include "util.ly"
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Here’s to the Maiden of Bashful Fifteen"}}
+  instrument = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Here’s to the Maiden of Bashful Fifteen"}}
   poet = \markup\oldStyleNum\concat{"from " \italic"The School for Scandal" ", by Richard Sheridan (1751–1816)"}
   composer = \markup\oldStyleNum"Thomas Linley (1725–1795)"
   tagline = ""

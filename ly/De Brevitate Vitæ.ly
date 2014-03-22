@@ -2,7 +2,7 @@
 \include "util.ly"
 \header {
   title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"De Brevitate Vitæ"}}
-  subtitle = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #12.5 \smallCapsOldStyle"(Gaudeamus igitur)"}}
+  instrument = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #12.5 \smallCapsOldStyle"(Gaudeamus igitur)"}}
   poet = \markup\oldStyleNum"Anonymous, c. 1710, some verses, c. 1287"
   composer = \markup\oldStyleNum"German Melody"
   tagline = ""
@@ -215,14 +215,15 @@ bassMusic = \relative c' {
   
   \tieDashed
   <f \tweak #'font-size #-2 f'>8. <f \tweak #'font-size #-2 f'>16 <f \tweak #'font-size #-2 f'>4 <f \tweak #'font-size #-2 f'> |
-  bes8 d <f, \tweak #'font-size #-2 f'>4~ q4 |
-  <f \tweak #'font-size #-2 f'>8. <f \tweak #'font-size #-2 f'>16 <f \tweak #'font-size #-2 f'>4 <f \tweak #'font-size #-2 f'> |
-  bes8 d <f, \tweak #'font-size #-2 f'>4~ q4 |
+  bes8 d f4~ f4 |
+  <f, \tweak #'font-size #-2 f'>8. <f \tweak #'font-size #-2 f'>16 <f \tweak #'font-size #-2 f'>4 <f \tweak #'font-size #-2 f'> |
+  bes8 d f4~ f4 |
   
-  d'8. d16 ees8[ c] d[ ees] |
+  \tieSolid
+  d8. d16 ees8[ c] d[ ees] |
   f4( fis) g\fermata |
   d8. d16 ees8[ c] d[ ees] |
-  f4( <f, \tweak #'font-size #-2 f'>) bes\fermata \bar"|."
+  f4(^~ <f, \tweak #'font-size #-2 f'>) bes\fermata \bar"|."
 }
 bassWords = \lyricmode {
 }

@@ -53,7 +53,7 @@ global = {
 sopMusic = \relative c' {
   \partial 4
   \repeat volta 2 {
-    b8\rest b8 |
+    b8\rest b8
     e4 e e b8 cis |
     b4. a8 gis4 b8\rest a8 |
     b4 b8~ b cis4 b8[ a] |
@@ -77,6 +77,7 @@ sopMusic = \relative c' {
     
     %page3
     b4^\markup\italic"rall." b, b \oneVoice b'\fermata \bar"||"
+    \tempo "Più vivace"
     b b b cis8 dis |
     e4 dis cis b\cresc |
     
@@ -89,10 +90,22 @@ sopMusic = \relative c' {
   }
   \alternative {
     {
-      gis4 e e b'4\rest\fermata
+      gis4 e e %b'4\rest\fermata
+      %accompaniment:
+      \oneVoice
+      \set midiInstrument = #"acoustic grand"
+      \repeat volta 2 {
+          gis'8[ a] |
+        b[ gis e' cis] b[ gis e gis] |
+        \acciaccatura gis fis[ eis fis gis] fis4 gis8[ a] |
+        b[ gis e' cis] b[ gis e gis] |
+        fis[ dis b dis] e4
+      }
+      \voiceOne
+      \set midiInstrument = #"flute"
     }
     {
-      gis e e e' |
+      \partial 1 gis, e e e' |
     }
   }
   
@@ -172,6 +185,7 @@ sopWordsII = \lyricmode {
   His eyes _ should flash
   And his breast pro -- trude.
   And _ this should be his cus -- tom -- a -- ry "" "" ""
+  \repeat unfold 30 \skip1
   at -- ti -- tude,
   his at -- ti -- tude, his at -- ti -- tude, his at -- ti -- tude.
 }
@@ -190,7 +204,7 @@ sopWordsV = \lyricmode {
 
 altoMusic = \relative c' {
   \repeat volta 2 {
-    s8 b8 |
+    s8 b8
     gis4 gis gis gis8 gis |
     fis4 dis e s8 e |
     e4 e8~ e a4 gis8[ fis] |
@@ -222,7 +236,7 @@ altoMusic = \relative c' {
   }
   \alternative {
     {
-      s1
+      s1*4 s4*3
     }
     {
       s1
@@ -252,7 +266,7 @@ altoWordsVI = \lyricmode {
 }
 tenorMusic = \relative c' {
   \repeat volta 2 {
-    r8 b8 |
+    r8 b8
     e,4 e e e8 e |
     dis4 b e d8\rest cis |
     gis4 gis8~ gis a4 a |
@@ -288,7 +302,20 @@ tenorMusic = \relative c' {
   }
   \alternative {
     {
-      gis4 e e d4\rest\fermata |
+      gis4 e e %d4\rest\fermata |
+
+      %accompaniment:
+      \oneVoice
+      \set midiInstrument = #"acoustic grand"
+      \repeat volta 2 {
+          r4 |
+        <e gis b e>4 r q r |
+        <e a  b dis> q q r |
+        <e gis b e> r q r |
+        <b dis a' b> q <e gis b>
+      }
+      \voiceTwo
+      \set midiInstrument = #"flute"
     }
     {
       gis4 e e <gis b> |
@@ -341,12 +368,13 @@ bassWords = \lyricmode {
 }
 
 pianoRH = \relative c' {
+  \tempo"Moderato"
   \partial 4
   b'4 |
   <gis e'>4.( <a fis'>8) <b dis gis>4.( <a fis'>8) |
   <gis e'>4( <cis e cis'> <b e b'>) gis'8[( e]) |
   dis([ cis <a e'> cis]) <b gis>[( gis b e]) |
-  << {gis4.( fis8 s4)} \\ {<dis a>2 <e gis,>4} >> \bar"||:" \break
+  << {gis4.( fis8 s4)} \\ {<dis a>2 <e gis,>4} >> \break
 }
 pianoLH = \relative c' {
   \partial 4
@@ -354,7 +382,7 @@ pianoLH = \relative c' {
   <e e,>2( <b b,>) |
   <cis cis,>4( <a a,> <gis gis,>) r |
   r <a cis e>( <b e>8) r r4 |
-  <b b,>2_(~ <b e,>4) \bar"||:"
+  <b b,>2_(~ <b e,>4) 
 }
 pianoRHend = \relative c' {
   \clef "treble"
@@ -368,7 +396,8 @@ pianoRHend = \relative c' {
   <e e,>4 <dis dis,> <cis cis,> <b b,> |
   cis8[ e dis cis] b[ a gis fis] |
   e4 r <e gis e'> r |
-  <e gis, e>\fermata r r2 \bar"|."
+  <e gis, e>\fermata %r r2
+  \bar"|."
 }
 pianoLHend = \relative c' {
   <b gis e>4 |
@@ -379,8 +408,9 @@ pianoLHend = \relative c' {
   <e b gis e> q <dis b a fis> q |
   <e b gis> q q q |
   <e cis a> q <dis b> q |
-  <e e,> r <e, e,> r |
-  q\fermata r r2 \bar"|."
+  <e e,> r <e, e,> r
+  q\fermata %r r2
+  \bar"|."
 }
 
 \score {

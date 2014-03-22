@@ -18,7 +18,7 @@
     #'((basic-distance . 0)
        (minimum-distance . 0)
        (padding . -14)
-       (stretchability . 40))
+       (stretchability . 70))
   top-system-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)
@@ -627,7 +627,8 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Old Dog Tray"}}
+  title = " "
+  instrument = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Old Dog Tray"}}
   composer = \markup\oldStyleNum"Stephen Foster (1826–1864)"
   tagline = ""
 }}

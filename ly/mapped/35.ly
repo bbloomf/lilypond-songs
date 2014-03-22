@@ -76,7 +76,7 @@ sopMusic = \relative c' {
   d b d( c8) a |
   
   bes2 \bar"" g4( a) |
-  b4. b8 c4. a8 |
+  b?4. b8 c4. a8 |
   dis2( e4)\fermata g,8[ a] |
   b4.. a16 c4.. b16\fermata |
   g2. \bar"|."

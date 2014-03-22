@@ -19,7 +19,7 @@
     #'((basic-distance . 0)
        (minimum-distance . 0)
        (padding . 0.5)
-       (stretchability . 0))
+       (stretchability . 100))
   top-system-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)

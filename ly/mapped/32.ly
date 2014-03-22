@@ -17,7 +17,7 @@
     #'((basic-distance . 0)
        (minimum-distance . 0)
        (padding . 0.5)
-       (stretchability . 0))
+       (stretchability . 100))
   top-system-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)
@@ -598,7 +598,8 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Love’s Young Dream"}}
+  title = " "
+  instrument = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Love’s Young Dream"}}
   poet = \markup\oldStyleNum"Thomas Moore (1779–1852)"
   composer = \markup\oldStyleNum"Irish Air"
   tagline = ""

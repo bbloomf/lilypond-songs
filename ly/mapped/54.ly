@@ -29,11 +29,6 @@
        (minimum-distance . 0)
        (padding . -1)
        (stretchability . 0))
-  markup-system-spacing =
-    #'((basic-distance . 0)
-       (minimum-distance . 0)
-       (padding . 0)
-       (stretchability . 0))
   ragged-last-bottom = ##f
   ragged-bottom = ##f
   two-sided = ##t
@@ -216,14 +211,15 @@ bassMusic = \relative c' {
   
   \tieDashed
   <f \tweak #'font-size #-2 f'>8. <f \tweak #'font-size #-2 f'>16 <f \tweak #'font-size #-2 f'>4 <f \tweak #'font-size #-2 f'> |
-  bes8 d <f, \tweak #'font-size #-2 f'>4~ q4 |
-  <f \tweak #'font-size #-2 f'>8. <f \tweak #'font-size #-2 f'>16 <f \tweak #'font-size #-2 f'>4 <f \tweak #'font-size #-2 f'> |
-  bes8 d <f, \tweak #'font-size #-2 f'>4~ q4 |
+  bes8 d f4~ f4 |
+  <f, \tweak #'font-size #-2 f'>8. <f \tweak #'font-size #-2 f'>16 <f \tweak #'font-size #-2 f'>4 <f \tweak #'font-size #-2 f'> |
+  bes8 d f4~ f4 |
   
-  d'8. d16 ees8[ c] d[ ees] |
+  \tieSolid
+  d8. d16 ees8[ c] d[ ees] |
   f4( fis) g\fermata |
   d8. d16 ees8[ c] d[ ees] |
-  f4( <f, \tweak #'font-size #-2 f'>) bes\fermata \bar"|."
+  f4(^~ <f, \tweak #'font-size #-2 f'>) bes\fermata \bar"|."
 }
 bassWords = \lyricmode {
 }
@@ -503,7 +499,7 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  instrument = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Vive L’Amour"}}
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Vive L’Amour"}}
   tagline = ""
 }}
 

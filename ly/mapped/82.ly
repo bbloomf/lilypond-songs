@@ -621,7 +621,8 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Love’s Chidings"}}
+  title = " "
+  instrument = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Love’s Chidings"}}
   composer = \markup\oldStyleNum"Nannie, 1862"
   tagline = ""
 }}

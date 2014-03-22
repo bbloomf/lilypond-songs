@@ -37,7 +37,7 @@
 \markup\vspace #0.25
 \markup\fill-line \center-align {\abs-fontsize #28 \smallCapsOldStyle"benjamin bloomfield"}
 \markup\vspace #10
-\markup{\abs-fontsize #12 {First edition, \smallCapsOldStyle"20 march 2014"}}
+\markup{\abs-fontsize #12 {First edition, \smallCapsOldStyle"22 march 2014"}}
 \markup\vspace #0.1
 \markup{\abs-fontsize #12 "This work is free of known copyright restrictions."}
 \pageBreak

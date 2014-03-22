@@ -573,7 +573,8 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"The Waits"}}
+  title = " "
+  instrument = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"The Waits"}}
   composer = \markup\oldStyleNum"Jeremiah Savile, 1667"
   tagline = ""
 }}

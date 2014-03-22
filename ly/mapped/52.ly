@@ -387,7 +387,7 @@ altoMusic = \relative c' {
   d16~ d |
   \tieSolid
   f8 f f f4 f16 f |
-  e8 c c cis4. \bar"||"\break
+  c8 c c e4. \bar"||"\break
   
   f8. g16 a8 f8. f16 f8 |
   e4. c4 c8 |
@@ -427,7 +427,7 @@ tenorMusic = \relative c' {
   b16~ b |
   \tieSolid
   c8 a c a4 g16 f |
-  g8 g e e4. |
+  e8 g c cis4. |
   
   a8. d16 d8 d8. d16 d8 |
   c4. c4 c8 |
@@ -457,7 +457,7 @@ bassMusic = \relative c' {
   g16~ g |
   \tieSolid
   f8 f f f4 f16 f |
-  c8 c c a4. |
+  c8 c e a,4. |
   
   d8. d16 d8 g8. g16 g8 |
   a4. e4 c8 |

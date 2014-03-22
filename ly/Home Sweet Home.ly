@@ -1,6 +1,7 @@
 ﻿\version "2.14.2"
 \include "util.ly"
 \header {
+  title = " "
   instrument = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Home Sweet Home"}}
   poet = \markup\oldStyleNum"John Howard Payne (1791–1852)"
   composer = \markup\oldStyleNum"Sir Henry Rowley Bishop (1786–1855)"

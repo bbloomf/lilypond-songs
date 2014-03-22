@@ -1,7 +1,7 @@
 \version "2.14.2"
 \include "util.ly"
 \header {
-  instrument = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Red Wing"}}
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Red Wing"}}
   composer = \markup\oldStyleNum"Kerry Mills (1869–1948)"
   poet = \markup\oldStyleNum"Thurland Chattaway"
   tagline = ""

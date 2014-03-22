@@ -1,6 +1,7 @@
 ﻿\version "2.14.2"
 \include "util.ly"
 \header {
+  title = " "
   instrument = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"The Waits"}}
   composer = \markup\oldStyleNum"Jeremiah Savile, 1667"
   tagline = ""

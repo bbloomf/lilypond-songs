@@ -144,16 +144,16 @@ altoMusic = \relative c' {
     d8[ f] d2 |
   }
   \slurDashed
-  f8. g16 a4 a |
+  f8. g16 a4 f |
   f8 f f4~ f |
-  f8. g16 a4 a |
+  f8. g16 a4 f |
   f8 f f4~ f |
   \slurSolid
   
   d8. f16 ees8[ g] f[ ees] |
   f4( ees) d |
-  d8. f16 ees8[ g] f[ ees] |
-  d4( ees) f \bar"|."
+  g8. f16 ees8[ g] f[ ees] |
+  d4( ees) d \bar"|."
 }
 altoWords = \lyricmode {
 }
@@ -184,16 +184,16 @@ tenorMusic = \relative c' {
   }
   \slurDashed
   
-  c8. bes16 a4 f |
+  c8. bes16 a4 a |
   bes8 bes a4~ a |
-  c8. bes16 a4 f |
+  c8. bes16 a4 a |
   bes8 bes a4~ a |
   
   \slurSolid
-  bes8. bes16 bes8[ c] bes8[ a] |
+  f8. bes16 bes8[ c] bes8[ a] |
   bes4( a) bes |
-  bes8. bes16 bes8[ c] bes8[ a] |
-  bes4( c) d \bar"|."
+  d8. bes16 bes8[ c] bes8[ a] |
+  bes4( c) bes \bar"|."
 }
 
 tenorWords = \lyricmode {
@@ -220,9 +220,9 @@ bassMusic = \relative c' {
   bes8 d f4~ f4 |
   
   \tieSolid
-  d8. d16 ees8[ c] d[ ees] |
+  bes,8. d16 ees8[ c] d[ ees] |
   f4( fis) g\fermata |
-  d8. d16 ees8[ c] d[ ees] |
+  g8. d16 ees8[ c] d[ ees] |
   f4(^~ <f, \tweak #'font-size #-2 f'>) bes\fermata \bar"|."
 }
 bassWords = \lyricmode {

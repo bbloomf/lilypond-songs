@@ -204,16 +204,16 @@ tenorWordsIII = \lyricmode {
 bassMusic = \relative c' {
   \repeat volta 2 {
     bes,8. bes16 bes4 bes |
-    <ees, \tweak #'font-size #-2 ees'>8. <ees \tweak #'font-size #-2 ees'>16 <ees \tweak #'font-size #-2 ees'>2
-    <f \tweak #'font-size #-2 f'>8. bes16 <f \tweak #'font-size #-2 f'>4 <f \tweak #'font-size #-2 f'> |
-    bes bes2
+    ees8. ees16 ees2
+    f8. bes,16 f'4 f |
+    bes, bes2
   }
   
   \tieDashed
-  <f \tweak #'font-size #-2 f'>8. <f \tweak #'font-size #-2 f'>16 <f \tweak #'font-size #-2 f'>4 <f \tweak #'font-size #-2 f'> |
-  bes8 d f4~ f4 |
-  <f, \tweak #'font-size #-2 f'>8. <f \tweak #'font-size #-2 f'>16 <f \tweak #'font-size #-2 f'>4 <f \tweak #'font-size #-2 f'> |
-  bes8 d f4~ f4 |
+  f'8. f16 f4 f |
+  bes,8 d f4~ f4 |
+  f8. f16 f4 f |
+  bes,8 d f4~ f4 |
   
   \tieSolid
   bes,8. d16 ees8[ c] d[ ees] |

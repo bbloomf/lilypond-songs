@@ -213,7 +213,7 @@ tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  bes,8.[ bes16] |
+  ees,8.[ ees16] |
   ees8[ ees] ees[ ees] ees ees ees ees |
   aes, aes aes aes aes4 aes8[ aes] |
   ees'4 ees8[ ees] ees ees ees ees |

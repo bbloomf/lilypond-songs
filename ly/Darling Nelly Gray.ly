@@ -144,7 +144,7 @@ altoMusic = \relative c' {
 
   g8[ g] g aes g ees d ees |
   ees ees ees ees ees4 ees8[ ees] |
-  ees4 ees8[ g] g f d bes |
+  ees4 ees8[ g] f f d bes |
   bes2 s4 \bar"||"
 
   %chorus
@@ -156,7 +156,7 @@ altoMusic = \relative c' {
 
   g8 g g aes g ees d ees |
   ees ees ees ees ees4 ees8[ ees] |
-  ees4 ees8 g g f d bes |
+  ees4 ees8 g f f d bes |
   bes2. \bar"|."
 }
 altoWords = \lyricmode {

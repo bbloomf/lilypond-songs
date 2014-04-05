@@ -100,7 +100,7 @@ sopWordsIV = \lyricmode {
 sopWordsV = \lyricmode {
   \set stanza = #"5. "
   Keep, O keep us, Sav -- iour dear,
-  Ever con -- stant by Thy side;
+  Ev -- er con -- stant by Thy side;
   That with Thee we may ap -- pear
   At th’e -- ter -- nal Ea -- ster -- tide.
 }

@@ -1,9 +1,10 @@
 ﻿\version "2.14.2"
 \include "util.ly"
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Our Blest Redeemer"}}
+  title = " "
+  instrument = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Our Blest Redeemer"}}
   composer = \markup\oldStyleNum"John Bacchus Dykes (1823–1876)"
-  composer = \markup\oldStyleNum"Harriet Auber (1773–1862)"
+  poet = \markup\oldStyleNum"Harriet Auber (1773–1862)"
   tagline = ""
 }
 \paper {
@@ -15,8 +16,18 @@
   system-system-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)
-       (padding . 1)
+       (padding . -3)
        (stretchability . 100))
+  top-markup-spacing =
+    #'((basic-distance . 0)
+       (minimum-distance . 0)
+       (padding . 0)
+       (stretchability . 0))
+  score-markup-spacing =
+    #'((basic-distance . 0)
+       (minimum-distance . 0)
+       (padding . -1)
+       (stretchability . 75))
   ragged-last-bottom = ##t
   ragged-bottom = ##f
   two-sided = ##t

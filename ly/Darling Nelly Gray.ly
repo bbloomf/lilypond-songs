@@ -17,6 +17,11 @@
        (minimum-distance . 0)
        (padding . -1)
        (stretchability . 100))
+  score-markup-spacing =
+    #'((basic-distance . 0)
+       (minimum-distance . 0)
+       (padding . 0)
+       (stretchability . 75))
   top-markup-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)

@@ -1,8 +1,8 @@
 ﻿\version "2.14.2"
 \include "util.ly"
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Farewell to Fiunary"}}
-  composer = \markup\oldStyleNum"Norman MacLeod (1812–1872)"
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Westering Home"}}
+  composer = \markup\oldStyleNum"Hugh S. Roberton"
   tagline = ""
 }
 \paper {
@@ -44,7 +44,7 @@
 }
 #(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
 global = {
-  \key g \major
+  \key a \major
   \time 6/8
   \dynamicUp
   %\set crescendoSpanner = #'dashed-line
@@ -54,86 +54,89 @@ global = {
 }
 
 sopMusic = \relative c' {
-	\partial 8 g'8 |
-  g4 g8 d'4 b8 |
-  a4 g8 fis4 a8 |
-  
-  b4 e,8 e4 fis8 |
-  e4 d8 d4 d8 |
-  e4 e8 g4 g8 |
-  a4 b8 d4 d8 |
+  e8.^\markup\italic"Chorus" fis16 e8 e cis e |
+  a a b cis4. |
+  d8. cis16 b8 cis8. b16 a8 |
+  fis fis e e4. |
 
-  e4 e8 d4 b8 |
-  a4 g8 g4. \bar"||"\break
-  g4 g8 d'4 b8 |
+  e8. fis16 e8 e cis e |
+  a a b cis4. |
+  e8. cis16 a8 cis4 b8 |
+  a4. a \bar"||"
+  \once \override Score.RehearsalMark #'break-visibility = #end-of-line-visible
+  \once \override Score.RehearsalMark #'self-alignment-X = #RIGHT
+  \mark\markup\italic"Fine"
 
-  a4 g8 fis4. |
-  b4 e,8 e4 fis8 |
-  e4 d8 d4. |
-  e4 e8 g4 g8 |
+  e'8 cis a a b cis |
+  b8. a16 b8 e,4. |
+  e8 a a a b cis |
+  d8. cis16 d8 b4. |
+  e8 cis a a b cis |
+  b8. a16 b8 e,4 \bar"" d'8 |
 
-  a4 b8 d4 d8 |
-  e4 e8 d4 b8 |
-  a4 g8 g4. \bar"|."
+  cis8. b16 a8 cis cis b |
+  a4. a4. \bar"||"
+  \once \override Score.RehearsalMark #'break-visibility = #end-of-line-visible
+  \once \override Score.RehearsalMark #'self-alignment-X = #RIGHT
+  \mark"D.C."
 }
 sopWords = \lyricmode {
+  West -- er -- ing home, and a song in the air,
+  Light in the eye and it’s good -- bye to care.
+  Laugh -- ter o’ love, and a wel -- com -- ing there,
+  Isle of my heart, my own one.
   \set stanza = #"1. "
-	The wind is fair, the day is fine,
-  And swift -- ly, swift -- ly runs the time;
-  The boat is float -- ing on the tide
-  That wafts me off from Fiu -- na -- ry.
+  Tell me o’ lands o’ the O -- ri -- ent gay;
+  Speak o’ the rich -- es and joys o’ Ca -- thay.
+  Eh, but it’s grand to be wak -- in’ ilk day
+  To find your -- self near -- er to Is -- la.
 }
 
 sopWordsII = \lyricmode {
+  \repeat unfold 37 ""
   \set stanza = #"2. "
-  A thou -- sand, thou -- sand ten -- der ties
-  A -- wake this day my plain -- tive sighs,
-  My heart with -- in me al -- most dies
-  At thought of leav -- ing Fiu -- na -- ry.
-
-  We must up and haste a -- way,
-  We must up and haste a -- way,
-  We must up and haste a -- way,
-  Fare -- well, fare -- well to Fiu -- na -- ry.
+  Where are the folk like the folk o’ the west?
+  Can -- ty and cou -- thy and kind -- ly, the best;
+  There I would hie me and there I would rest
+  At hame wi’ my ain folk in Is -- la.
 }
 
 sopWordsIII = \lyricmode {
+  %{\repeat unfold 37 ""
   \set stanza = #"3. "
-  But I must leave those hap -- py vales, ""
-  See, they spread the flap -- ping sails!
-  A -- dieu, a -- dieu my na -- tive dales!
-  Fare -- well, fare -- well to Fiu -- na -- ry.
+  Now I’m at home and at home I do lay
+  Dream -- ing of rich -- es that come from Ca -- thay;
+  I’ll hop a good ship and be on my way,
+  And bring back my for -- tune to Is -- la.%}
 }
 
 sopWordsIV = \lyricmode {
-  \set stanza = #"4. "
 }
 
 sopWordsV = \lyricmode {
-  \set stanza = #"5. "
 }
 
 altoMusic = \relative c' {
-  g'8 |
-  d4 d8 g4 d8 |
-  e4 e8 d4 fis8 |
-  g4 e8 e4 d8 |
-  c4 d8 d4 d8 |
+  cis8. cis16 cis8 cis a cis |
+  e8 e gis a4. |
+  fis8. fis16 gis8 a8. gis16 e8 |
+  d d d cis4. |
 
-  b4 b8 e4 e8 |
-  e4 e8 fis4 fis8 |
-  g4 g8 g4 g8 |
-  e[ c] e d4. \bar"||"
+  cis8. cis16 cis8 cis a cis |
+  e8 e gis a4. |
+  a8. e16 fis8 e4 d8 |
+  cis4. cis \bar"||"
 
-  b8[ d] g fis4 fis8 |
-  e[ c] e d4.
-  g8[ e] e c4 d8 |
-  c[ a] d d4. |
 
-  e4 e8 e4 e8 |
-  e[ c] e fis4 fis8 |
-  g[ e] g g4 g8 |
-  e[ c] c b4.
+  cis8 e cis cis fis fis |
+  fis8. fis16 fis8 d4. |
+  cis8 cis cis cis fis fis |
+  fis8. fis16 fis8 gis4. |
+
+  cis,8 e cis cis fis fis |
+  fis8. fis16 fis8 d4 fis8 |
+  e8. d16 fis8 e e d |
+  cis4. cis \bar"||"
 }
 altoWords = \lyricmode {
 }
@@ -156,26 +159,26 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
-  g8 |
-  b4 b8 g4 g8 |
-  c4 c8 a4 a8 |
-  b4 g8 g4 a8 |
-  g4 fis8 fis4 fis8 |
+  e,8. a16 e8 e e e |
+  a a e e4. |
+  a8. a16 b8 e,8. e16 a8 |
+  a a a a4. |
 
-  g4 g8 g4 g8 |
-  c4 b8 b4 b8 |
-  c[ e] c b[ g] b |
-  c4 c8 b4. \bar"||"
+  e8. a16 e8 e e e |
+  a a e e4. |
+  a8. a16 cis8 a4 gis8 |
+  a4. a \bar"||"
 
-  g4 b8 d[ b] d |
-  c4 c8 a[ fis a] |
-  b4 g8 g[ a] a |
-  a4 fis8 fis[ d fis] |
 
-  g[ b] g g[ e] g |
-  c4 b8 b[ d] b |
-  c4 c8 b[ d] d |
-  c4 g8 g4. \bar"|."
+  a8 a e fis a a |
+  d8. d16 d8 b4. |
+  a8 e e fis a a |
+  b8. a16 b8 d4. |
+
+  a8 a e fis a a |
+  d8. d16 d8 b4 a8 |
+  a8. gis16 cis8 a a gis |
+  a4. a \bar"||"
 }
 
 tenorWords = \lyricmode {
@@ -188,27 +191,25 @@ tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  g8 |
-  g,4 g8 b4 b8 |
-  c4 c8 d4 d8 |
+  a,8. a16 a8 a a a |
+  cis cis e a,4. |
+  d8. fis16 e8 a,8. a16 cis8 |
+  d d d a4. |
 
-  e4 e8 e4 d8 |
-  c4 d8 d4 d8 |
-  e4 e8 c4 c8 |
-  a4 g8 b4 b8 |
-  
-  c4 c8 g4 g8 |
-  c4 e8 g4. \bar"||"
-  g,4 g8 b4 b8 |
+  a8. a16 a8 a a a |
+  cis cis e a,4. |
+  cis8. cis16 fis8 e4 e8 
+  a,4. a \bar"||"
 
-  c4 c8 d4. |
-  e4 e8 c4 d8 |
-  a4 d8 d4. |
-  e4 e8 c4 c8 |
+  a8 a a fis fis fis |
+  b8. d16 b8 a4. |
+  a8 a a fis fis fis |
+  b8. cis16 b8 e4. |
 
-  a4 g8 b4 b8 |
-  c4 c8 g4 b8 |
-  c4 d8 g,4. \bar"|."
+  a,8 a a fis fis fis |
+  b8. d16 b8 a4 d8 |
+  a8. e'16 fis8 e e e 
+  a,4. a \bar"||"
 }
 bassWords = \lyricmode {
 }
@@ -242,7 +243,7 @@ pianoLH = \relative c' {
 %    \new PianoStaff << \new Staff { \new Voice { \pianoRH } } \new Staff { \clef "bass" \pianoLH } >>
   >>
   \midi {
-    \tempo 4 = 100
+    \tempo 4 = 90
     \set Staff.midiInstrument = "flute"
     \context {
       \Voice

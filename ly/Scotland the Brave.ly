@@ -1,8 +1,10 @@
 ﻿\version "2.14.2"
 \include "util.ly"
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Farewell to Fiunary"}}
-  composer = \markup\oldStyleNum"Norman MacLeod (1812–1872)"
+  title = " "
+  instrument = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Scotland the Brave"}}
+  composer = \markup\oldStyleNum"19th Century Scottish Folk Song"
+  poet = \markup\oldStyleNum"Cliff Hanley"
   tagline = ""
 }
 \paper {
@@ -14,9 +16,14 @@
   system-system-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)
-       (padding . 3)
+       (padding . -3)
        (stretchability . 100))
-  ragged-last-bottom = ##t
+  top-markup-spacing =
+    #'((basic-distance . 0)
+       (minimum-distance . 0)
+       (padding . -1)
+       (stretchability . 0))
+  ragged-last-bottom = ##f
   ragged-bottom = ##f
   two-sided = ##t
   inner-margin = 1\in
@@ -44,65 +51,85 @@
 }
 #(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
 global = {
-  \key g \major
-  \time 6/8
+  \key d\major
+  \time 2/2
   \dynamicUp
   %\set crescendoSpanner = #'dashed-line
   %\set midiInstrument = "recorder"
   \autoBeamOff
   \override DynamicTextSpanner #'style = #'none
+  \mergeDifferentlyDottedOn
 }
 
 sopMusic = \relative c' {
-	\partial 8 g'8 |
-  g4 g8 d'4 b8 |
-  a4 g8 fis4 a8 |
-  
-  b4 e,8 e4 fis8 |
-  e4 d8 d4 d8 |
-  e4 e8 g4 g8 |
-  a4 b8 d4 d8 |
+  \repeat unfold 3 {
+    d2 d4. e8 |
+    fis4 d fis a |
+    d2 d4. cis8 |
+    d4 a fis d |
+    g2 b4. g8 |
+    fis4 a fis d |
+    e2
+  }
+  \alternative {
+    {
+      a4. a8 |
+      a1 |
+    }
+    {
+      d,4. d8 d2. b'4\rest \bar"||"\break
 
-  e4 e8 d4 b8 |
-  a4 g8 g4. \bar"||"\break
-  g4 g8 d'4 b8 |
+      e2 e4. dis8 |
+      e4 cis a2 |
+      d fis4. e8 |
+      d4 b a2 |
+      d d4. d8 |
+      cis2 d4 cis |
+      b d cis b |
+      a1
+    }
+    {
+      d,4. d8 d2. b'4\rest \bar"|."
+    }
+  }
 
-  a4 g8 fis4. |
-  b4 e,8 e4 fis8 |
-  e4 d8 d4. |
-  e4 e8 g4 g8 |
-
-  a4 b8 d4 d8 |
-  e4 e8 d4 b8 |
-  a4 g8 g4. \bar"|."
 }
 sopWords = \lyricmode {
   \set stanza = #"1. "
-	The wind is fair, the day is fine,
-  And swift -- ly, swift -- ly runs the time;
-  The boat is float -- ing on the tide
-  That wafts me off from Fiu -- na -- ry.
+  Hark! When the night is fall -- ing,
+  Hear! Hear, the pipes are call -- ing,
+  Loud -- ly and proud -- ly call -- ing, down through the glen.
+  There where the hills are sleep -- ing,
+  Now feel the blood a -- leap -- ing,
+  High as the spi -- rits of the old High -- land men.
 }
 
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
-  A thou -- sand, thou -- sand ten -- der ties
-  A -- wake this day my plain -- tive sighs,
-  My heart with -- in me al -- most dies
-  At thought of leav -- ing Fiu -- na -- ry.
+  High in the mist -- y High -- lands,
+  Out by the pur -- ple is -- lands,
+  Brave are the hearts that beat be -- neath Scot -- tish skies.
+  Wild are the winds to meet you,
+  Staunch are the friends that greet you,
+  Kind as the love that shines from fair maid -- ens’ eyes.
 
-  We must up and haste a -- way,
-  We must up and haste a -- way,
-  We must up and haste a -- way,
-  Fare -- well, fare -- well to Fiu -- na -- ry.
+  Tow -- ’ring in gal -- lant fame,
+  Scot -- land my moun -- tain hame,
+  High may your proud stan -- dards glo -- ri -- ous -- ly wave,
+  Land of my high en -- deav -- our,
+  Land of the shin -- ing riv -- er,
+  Land of my heart for -- ev -- er, Scot -- land the brave.
+
 }
 
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
-  But I must leave those hap -- py vales, ""
-  See, they spread the flap -- ping sails!
-  A -- dieu, a -- dieu my na -- tive dales!
-  Fare -- well, fare -- well to Fiu -- na -- ry.
+  Far off in sun -- lit plac -- es,
+  Sad are the Scot -- tish fac -- es,
+  Yearn -- ing to feel the kiss of sweet Scot -- tish rain.
+  Where trop -- ic skies are beam -- ing,
+  Love sets the heart a -- dream -- ing,
+  Long -- ing and dream -- ing for the home -- land a -- gain.
 }
 
 sopWordsIV = \lyricmode {
@@ -114,68 +141,88 @@ sopWordsV = \lyricmode {
 }
 
 altoMusic = \relative c' {
-  g'8 |
-  d4 d8 g4 d8 |
-  e4 e8 d4 fis8 |
-  g4 e8 e4 d8 |
-  c4 d8 d4 d8 |
+  \repeat unfold 2 {
+    a2 b4. b8 |
+    d4 d d fis |
+    fis2 g4. g8 |
+    a4 fis d d |
 
-  b4 b8 e4 e8 |
-  e4 e8 fis4 fis8 |
-  g4 g8 g4 g8 |
-  e[ c] e d4. \bar"||"
+    b2 d4. b8 |
+    d4 d d d |
+    b2 
+  }
+  \alternative {
+    {
+      e4. e8 |
+      d2( cis2) |
+    }
+    {
+      b4. b8 |
+      a2. s4 \bar"||"
+    }
+  }
 
-  b8[ d] g fis4 fis8 |
-  e[ c] e d4.
-  g8[ e] e c4 d8 |
-  c[ a] d d4. |
+  a'2 b4. b8 |
+  cis4 a e2 |
+  fis2 a4. g8 |
+  fis4 g e2 |
 
-  e4 e8 e4 e8 |
-  e[ c] e fis4 fis8 |
-  g[ e] g g4 g8 |
-  e[ c] c b4.
-}
-altoWords = \lyricmode {
-}
-altoWordsII = \lyricmode {
-%\markup\italic
-  \set stanza = #"2. "
-}
-altoWordsIII = \lyricmode {
-  \set stanza = #"3. "
-}
-altoWordsIV = \lyricmode {
-  \set stanza = #"4. "
-}
-altoWordsV = \lyricmode {
-  \set stanza = #"5. "
-  \set ignoreMelismata = ##t
-}
-altoWordsVI = \lyricmode {
-  \set stanza = #"6. "
-  \set ignoreMelismata = ##t
+  fis2 fis4. fis8 |
+  fis2 fis4 fis |
+  g4 g gis gis |
+  a1 |
+
+  d,2 b4. b8 |
+  d4 d d fis |
+  fis2 fis4. e8 |
+  a4 e d d |
+
+  b2 d4. b8 |
+  d4 d d d |
+  b2 b4. b8 |
+  a2. s4 \bar"|."
 }
 tenorMusic = \relative c' {
-  g8 |
-  b4 b8 g4 g8 |
-  c4 c8 a4 a8 |
-  b4 g8 g4 a8 |
-  g4 fis8 fis4 fis8 |
+  \repeat unfold 2 {
+    fis,2 g4. g8 |
+    a4 fis a a |
+    a2 a4. a8 |
+    d4 d a fis |
 
-  g4 g8 g4 g8 |
-  c4 b8 b4 b8 |
-  c[ e] c b[ g] b |
-  c4 c8 b4. \bar"||"
+    d2 g4. d8 |
+    a'4 fis a fis |
+    d2
+  }
+  \alternative {
+    {
+      a'4. a8 |
+      a1 |
+    }
+    {
+      g4. g8 |
+      fis2. s4 \bar"||"
+    }
+  }
 
-  g4 b8 d[ b] d |
-  c4 c8 a[ fis a] |
-  b4 g8 g[ a] a |
-  a4 fis8 fis[ d fis] |
+  cis'2 d4. fis8 |
+  e4 e cis2 |
+  a2 d4. cis8 |
+  d4 d cis2 |
 
-  g[ b] g g[ e] g |
-  c4 b8 b[ d] b |
-  c4 c8 b[ d] d |
-  c4 g8 g4. \bar"|."
+  b2 b4. b8 |
+  cis2 a4 a |
+  d b b d |
+  cis1 |
+
+  a2 g4. g8 |
+  a4 fis a a |
+  b2 a4. a8 |
+  d4 cis a fis |
+
+  d2 g4. d8 |
+  a'4 fis a fis |
+  d2 g4. g8 |
+  fis2. s4 \bar"|."
 }
 
 tenorWords = \lyricmode {
@@ -188,27 +235,46 @@ tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  g8 |
-  g,4 g8 b4 b8 |
-  c4 c8 d4 d8 |
+  \repeat unfold 2 {
+    d,2 d4. d8 |
+    d4 d d d |
+    d2 e4. e8 |
+    fis4 d d d |
+    
+    g,2 g4. g8 |
+    d'4 d d d |
+    g,2
+  }
+  \alternative {
+    {
+      a4. a8 |
+      a1 |
+    }
+    {
+      d4. d8 |
+      d2. d4\rest \bar"||"
+    }
+  }
 
-  e4 e8 e4 d8 |
-  c4 d8 d4 d8 |
-  e4 e8 c4 c8 |
-  a4 g8 b4 b8 |
+  a'2 a4. a8 |
+  a4 a g2 |
+  d2 d4. a8 |
+  b4 g a2 |
   
-  c4 c8 g4 g8 |
-  c4 e8 g4. \bar"||"
-  g,4 g8 b4 b8 |
+  b2 b4. b'8 |
+  a2 a4 fis |
+  g g e4 e |
+  a2( g2) |
 
-  c4 c8 d4. |
-  e4 e8 c4 d8 |
-  a4 d8 d4. |
-  e4 e8 c4 c8 |
+  fis2 e4. e8 |
+  d4 d d cis |
+  b( b') a g |
+  fis e d d |
 
-  a4 g8 b4 b8 |
-  c4 c8 g4 b8 |
-  c4 d8 g,4. \bar"|."
+  g,2 g4. g8 |
+  d'4 d d d |
+  g,2 d'4. d8 |
+  d2. d4\rest \bar"|."
 }
 bassWords = \lyricmode {
 }
@@ -242,7 +308,7 @@ pianoLH = \relative c' {
 %    \new PianoStaff << \new Staff { \new Voice { \pianoRH } } \new Staff { \clef "bass" \pianoLH } >>
   >>
   \midi {
-    \tempo 4 = 100
+    \tempo 4 = 195
     \set Staff.midiInstrument = "flute"
     \context {
       \Voice

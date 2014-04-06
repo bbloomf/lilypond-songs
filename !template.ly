@@ -54,51 +54,21 @@ global = {
 }
 
 sopMusic = \relative c' {
-	g'4\p\< g g |
-  b4.\! a8\> g4 |
-  b\! b\< b |
-  d4.\! c8\> b4 |
-  d\!\f c\dim b\! |
   
-  a2 b4\rest |
-  a2\p g8 fis |
-  g4 a b |
-  c2\cresc b8\! a |
-  b4 c d |
-  \times 2/3 { e8[^\markup{\dynamic f \italic"rit. e dim."} d c] } b4 a |
-  g2\fermata b4\rest \bar "|."
 }
 sopWords = \lyricmode {
   \set stanza = #"1. "
-	If I a bird -- ling were,
-  And with two wings could fly,
-  I’d fly to thee;
-  
-  But, as no wings are mine,
-  But, as no wings are mine,
-  That can -- not be.
+
 }
 
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
-  Though far a -- way from thee,
-  Dream -- ing I’m e’er with thee,
-  Whis -- p’ring to thee;
-  
-  But, when I wake at last,
-  But, when I wake at last,
-  Then I’m a -- lone.
+
 }
 
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
-  There is no hour at night
-  When thy dear im -- age bright
-  Strays from my heart.
-  
-  Thou’st said ten thou -- sand times,
-  Thou’st said ten thou -- sand times,
-  That mine thou art.
+
 }
 
 sopWordsIV = \lyricmode {
@@ -110,19 +80,7 @@ sopWordsV = \lyricmode {
 }
 
 altoMusic = \relative c' {
-  d4 d d |
-  g4. fis8 g4 |
-  g g g |
-  b4. a8 g4 |
-  g fis g |
-  
-  fis2 s4 |
-  d2 d8 d |
-  d4 fis g |
-  g2 g8 g |
-  g4 g g |
-  a g fis |
-  d2 s4 \bar "|."
+
 }
 altoWords = \lyricmode {
 }
@@ -145,19 +103,7 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
-  b4 b b |
-  d4. c8 b4 |
-  d d d |
-  d4. d8 d4 |
-  d d d |
-  
-  d2 s4 |
-  c2 b8 a |
-  g4 d' d |
-  e2 d8 c |
-  d4 d d |
-  e d c |
-  b2 s4 \bar"|."
+
 }
 
 tenorWords = \lyricmode {
@@ -170,19 +116,7 @@ tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  g4 g g |
-  g4. g8 g4 |
-  g g g |
-  g4. g8 g4 |
-  b4 a g |
   
-  d2 d4\rest |
-  d2 d8 c |
-  b4 a g |
-  g'2 g8 g |
-  g4 a b |
-  c4 d d, |
-  g2\fermata d4\rest \bar"|."
 }
 bassWords = \lyricmode {
 }

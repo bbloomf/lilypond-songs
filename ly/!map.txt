@@ -22,98 +22,105 @@
 40:Bonnie Doon;Hark! the vesper hymn is stealing;In the Spring
 42:The Separation;Bonnie Charlie;Auld Lang Syne
 44:Castles in the Air;My Lodging is on the Cold Ground
-46:Scots wha hae;Drink to me only with Thine Eyes;Gaily the Troubadour
-48:The Harp that Once Through Tara’s Halls;Could I a maiden find;O Sole Mio
-50:O Calm of Night;Ein Prosit
-51:The Ash Grove
-52:The Battle Hymn of the Republic;The Roast Beef of Old England
-54:De Brevitate Vitæ;Vive L’Amour
-55:Am I Not Fondly Thine Own;Integer Vitae
-56:Night Song;Robin Adair;Annie Laurie
-58:Loch Lomond
-59:Red is the Rose
-60:Dreaming of Home and Mother
-61:By the Sad Sea Waves
-62:Sailing;How can I leave thee
-64:O Fair Dove, O Fond Dove
-66:America the Beautiful;There’s Music in the Air;The Old Time
-68:Dixie
-69:The Bonnie Blue Flag
-70:The Battle Cry of Freedom
-71:The Battle Cry of Freedom (Confederate)
-72:Tramp! Tramp! Tramp!
-73:The Lorelei
-74:Santa Lucia
-75:The Hazel Dell
-76:On the Banks of the Wabash, Far Away;A Hot Time in the Old Town
-78:Boating Song
-79:Long, Long Ago
-80:Red Wing;Red River Valley
-82:Scotch Lassie Jean;Love’s Chidings
-84:The Old Musician and His Harp;A Life on the Ocean Wave
-86:Jenny the Flower of Kildare;Come Follow;Come Follow Me Merrily
-88:When You and I Were Young, Maggie;The Girl I Left Behind Me
-90:The Vicar of Bray;Down Among the Dead Men
-92:Here’s to the Maiden of Bashful Fifteen
-93:Good Bye, My Lady Love
-94:Dublin Bay
-95:Darby and Joan
-96:The Midshipmite;Home Sweet Home
-98:Nancy Lee;The Blue Bells of Scotland
-100:Punchinello;Old Dog Tray
-102:Saved From the Storm
-104:The Goslings
-106:The Little Tin Soldier
-107:Sweet Genevieve
-108:Bride Bells;Gaudeamus Hodie;Ego sum pauper
-110:Jamie’s on the Stormy Sea
-111:The Birds’ Ball
-112:Listen to the Mocking Bird;The Old Folks at Home
-114:Fairy Belle
-115:My Old Kentucky Home
-116:Hard Times
-117:Happy Hours at Home
-118:’Twere vain to tell
-119:The Pretty Girl Milking Her Cow
-120:Merrily Sing;Good Night Ladies;Oh My Love
-122:The March of Prohibition;God be with you till we meet again
-124:A Warrior Bold;Rule Britannia
-126:The Sidewalks of New York;For he’s a jolly good fellow
-128:It’s Delightful to be Married!
-130:A Capital Ship;America
-132:The Tailor and the Mouse;Maid of Athens;Come Let Us All A-Maying Go
-134:Saint Patrick’s Day;The bell doth toll
-136:Johnny Sands;He that Will an Alehouse Keep;Skating
-138:Sally in our Alley
-139:The Lords of Creation
-140:Last Week I Took a Wife
-141:Where There’s a Will There’s a Way
-142:To Phœbe
-143:The Flowers that Bloom in the Spring
-144:The Distant Shore
-146:A British Tar
-148:Brightly dawns our wedding day
-150:When I go out of door;Merrily Greet the Morn;Catch Round the Table
-152:The criminal cried
-154:Tit-Willow
-155:Mister Speaker, though ’tis late
-156:La ci darem la mano
-158:Soldier’s Hymn;When Jesus Wept
-159:When I in pain and sorrow moan;Jesus! the very thought of Thee
-160:The Spacious Firmament on High
-161:Ode to Joy
-162:Glorious Things of Thee Are Spoken
-163:Come, Thou Fount of Every Blessing
-164:Jesus, Lover of my soul
-165:The Battle Prayer
-166:Lead Kindly Light;Glory be to Jesus;Oh, happy is the man that hears
-168:God so loved the world;Abide with me
-170:Once to Every Man and Nation
-171:Be Still, My Soul
-172:At the Lamb’s High Feast We Sing
-173:God Be Merciful to Me
-174:Go to Dark Gethsemane;We Sing the Praise of Him who Died;Savior, when in dust to Thee
-176:Rock of Ages;Nearer, My God, to Thee;All Hail the Power of Jesus’ Name
-178:Rise, my soul, and stretch thy wings
-179:All People That on Earth Do Dwell;Oh cease, my wandering soul
-180:The Old Rugged Cross
+46:Darling Nelly Gray;MacPherson’s Farewell
+48:Farewell to Fiunary;Westering Home;Glenlogie
+50:Scotland the Brave
+51:Uist Tramping Song
+52:Scots wha hae;Drink to me only with Thine Eyes;Gaily the Troubadour
+54:The Harp that Once Through Tara’s Halls;Could I a maiden find;O Sole Mio
+56:O Calm of Night;Ein Prosit
+57:The Ash Grove
+58:The Battle Hymn of the Republic;The Roast Beef of Old England
+60:De Brevitate Vitæ;Vive L’Amour
+61:Am I Not Fondly Thine Own;Integer Vitae
+62:Night Song;Robin Adair;Annie Laurie
+64:Loch Lomond
+65:Red is the Rose
+66:Dreaming of Home and Mother
+67:By the Sad Sea Waves
+68:Sailing;How can I leave thee
+70:O Fair Dove, O Fond Dove
+72:America the Beautiful;There’s Music in the Air;The Old Time
+74:Dixie
+75:The Bonnie Blue Flag
+76:The Battle Cry of Freedom
+77:The Battle Cry of Freedom (Confederate)
+78:Tramp! Tramp! Tramp!
+79:The Lorelei
+80:Santa Lucia
+81:The Hazel Dell
+82:On the Banks of the Wabash, Far Away;A Hot Time in the Old Town
+84:Boating Song
+85:Long, Long Ago
+86:Red Wing;Red River Valley
+88:Scotch Lassie Jean;Love’s Chidings
+90:The Old Musician and His Harp;A Life on the Ocean Wave
+92:Jenny the Flower of Kildare;Come Follow;Come Follow Me Merrily
+94:When You and I Were Young, Maggie;The Girl I Left Behind Me
+96:The Vicar of Bray;Down Among the Dead Men
+98:Here’s to the Maiden of Bashful Fifteen
+99:Good Bye, My Lady Love
+100:Dublin Bay
+101:Darby and Joan
+102:The Midshipmite;Home Sweet Home
+104:Nancy Lee;The Blue Bells of Scotland
+106:Punchinello;Old Dog Tray
+108:Saved From the Storm
+110:The Goslings
+112:The Little Tin Soldier
+113:Sweet Genevieve
+114:Bride Bells;Gaudeamus Hodie;Ego sum pauper
+116:Jamie’s on the Stormy Sea
+117:The Birds’ Ball
+118:Listen to the Mocking Bird;The Old Folks at Home
+120:Fairy Belle
+121:My Old Kentucky Home
+122:Hard Times
+123:Happy Hours at Home
+124:’Twere vain to tell
+125:The Pretty Girl Milking Her Cow
+126:Merrily Sing;Good Night Ladies;Oh My Love
+128:The March of Prohibition;God be with you till we meet again
+130:A Warrior Bold;Rule Britannia
+132:The Sidewalks of New York;For he’s a jolly good fellow
+134:It’s Delightful to be Married!
+136:A Capital Ship;America
+138:The Tailor and the Mouse;Maid of Athens;Come Let Us All A-Maying Go
+140:Saint Patrick’s Day;The bell doth toll
+142:Johnny Sands;He that Will an Alehouse Keep;Skating
+144:Sally in our Alley
+145:The Lords of Creation
+146:Last Week I Took a Wife
+147:Where There’s a Will There’s a Way
+148:To Phœbe
+149:The Flowers that Bloom in the Spring
+150:The Distant Shore
+152:A British Tar
+154:Brightly dawns our wedding day
+156:When I go out of door;Merrily Greet the Morn;Catch Round the Table
+158:The criminal cried
+160:Tit-Willow
+161:Mister Speaker, though ’tis late
+162:La ci darem la mano
+164:Soldier’s Hymn;When Jesus Wept
+165:When I in pain and sorrow moan;Jesus! the very thought of Thee
+166:The Spacious Firmament on High
+167:Ode to Joy
+168:Glorious Things of Thee Are Spoken
+169:Come, Thou Fount of Every Blessing
+170:Jesus, Lover of my soul
+171:The Battle Prayer
+172:Lead Kindly Light;Glory be to Jesus;Oh, happy is the man that hears
+174:God so loved the world;Abide with me
+176:Once to Every Man and Nation
+177:Be Still, My Soul
+178:At the Lamb’s High Feast We Sing
+179:God Be Merciful to Me
+180:Go to Dark Gethsemane;We Sing the Praise of Him who Died;Savior, when in dust to Thee
+182:Rock of Ages;Nearer, My God, to Thee;All Hail the Power of Jesus’ Name
+184:Rise, my soul, and stretch thy wings
+185:All People That on Earth Do Dwell;Oh cease, my wandering soul
+186:The Old Rugged Cross
+187:Look, Ye Saints, the Sight is Glorious
+188:Forty Days and Forty Nights;Sweet the moments rich in blessing
+189:Our Blest Redeemer;God My King Thy Might Confessing

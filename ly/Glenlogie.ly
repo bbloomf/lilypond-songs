@@ -2,8 +2,8 @@
 \include "util.ly"
 \header {
   title = " "
-  instrument = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Farewell to Fiunary"}}
-  composer = \markup\oldStyleNum"Norman MacLeod (1812–1872)"
+  instrument = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Glenlogie"}}
+  composer = \markup\oldStyleNum"Scottish Folk Song"
   tagline = ""
 }
 \paper {
@@ -15,23 +15,8 @@
   system-system-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)
-       (padding . -5)
+       (padding . 1)
        (stretchability . 100))
-  top-markup-spacing =
-    #'((basic-distance . 0)
-       (minimum-distance . 0)
-       (padding . -2)
-       (stretchability . 0))
-  score-markup-spacing =
-    #'((basic-distance . 0)
-       (minimum-distance . 0)
-       (padding . -0.5)
-       (stretchability . 0))
-  markup-system-spacing =
-    #'((basic-distance . 0)
-       (minimum-distance . 0)
-       (padding . -0.5)
-       (stretchability . 0))
   ragged-last-bottom = ##t
   ragged-bottom = ##f
   two-sided = ##t
@@ -60,7 +45,7 @@
 }
 #(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
 global = {
-  \key g \major
+  \key c \major
   \time 6/8
   \dynamicUp
   %\set crescendoSpanner = #'dashed-line
@@ -70,128 +55,77 @@ global = {
 }
 
 sopMusic = \relative c' {
-	\partial 8 g'8 |
-  g4 g8 d'4 b8 |
-  a4 g8 fis4 a8 |
-  
-  b4 e,8 e4 fis8 |
-  e4 d8 d4 d8 |
-  e4 e8 g4 g8 |
-  a4 b8 d4 d8 |
+  a'8 a g a a g |
+  a a g e4 \bar"" c'16[ d] |
+  e8 e d16[ c] c8 a c16[ a] |
+  g8 e g a4 \bar"" c16[ d] |
 
-  e4 e8 d4 b8 |
-  a4 g8 g4. \bar"||"\break
-  g4 g8 d'4 b8 |
-
-  a4 g8 fis4. |
-  b4 e,8 e4 fis8 |
-  e4 d8 d4. |
-  e4 e8 g4 g8 |
-
-  a4 b8 d4 d8 |
-  e4 e8 d4 b8 |
-  a4 g8 g4. \bar"|."
+  e8 e d16[ c] d8 d e16[ d] |
+  c8 a g16[ e] d4 \bar"" c'16[ a] |
+  g8 e c d c d |
+  e c' g a4. \bar"|."
 }
 sopWords = \lyricmode {
   \set stanza = #"1. "
-	The wind is fair, the day is fine,
-  And swift -- ly, swift -- ly runs the time;
-  The boat is float -- ing on the tide
-  That wafts me off from Fiu -- na -- ry.
+  Three score o’ no -- bles rade up the King’s ha’
+  But bon -- nie Glen -- lo -- gie’s the flow’r o’ them a’
+  Wi’ his milk -- white steed and his bon -- nie black e’e,
+  “Glen -- lo -- gie, dear mo -- ther, Glen -- lo -- gie for me!”
 }
 
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
-  A thou -- sand, thou -- sand ten -- der ties
-  A -- wake this day my plain -- tive sighs,
-  My heart with -- in me al -- most dies
-  At thought of leav -- ing Fiu -- na -- ry.
-
-  We must up and haste a -- way,
-  We must up and haste a -- way,
-  We must up and haste a -- way,
-  Fare -- well, fare -- well to Fiu -- na -- ry.
+  “Haund your tongue, doch -- ter, there’s bet -- ter than he,”
+  “O say na sae, mo -- ther, for that can -- na be;
+  Tho’ Doum -- lie is great -- er and rich -- er than he,
+  Yet if I maun tak’ him, I’ll cer -- tain -- ly dee.”
 }
 
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
-  But I must leave those hap -- py vales, ""
-  See, they spread the flap -- ping sails!
-  A -- dieu, a -- dieu my na -- tive dales!
-  Fare -- well, fare -- well to Fiu -- na -- ry.
+  “There is, Glen -- lo -- gie, a let -- ter for thee,
+  O there is, Glen -- lo -- gie, a let -- ter for thee!”
+  The first line he look’d at, a licht lauch lauched he,
+  But ere he had read thro’t tears blind -- ed his e’e.
 }
 
 sopWordsIV = \lyricmode {
   \set stanza = #"4. "
+  Then to Glen -- fel -- dy’s but sma’ mirth was there,
+  An bon -- nie Jean’s mo -- ther was tear -- in’ her hair,
+  “Ye’re wel -- come, Glen -- lo -- gie, ye’re wel -- come,” quo’ she,
+  “Ye’re wel -- come, Glen -- lo -- gie, your Jea -- nie to see.”
 }
 
 sopWordsV = \lyricmode {
   \set stanza = #"5. "
+  Pale and wan was she when_Glen -- lo -- gie gae’d ben,
+  But ro -- sy red grew she when e’er he sat down;
+  She turned _ a -- wa’ wi’ a smile in her e’e.
+  “O din -- na fear, mo -- ther, I’ll may -- be no dee!”
 }
 
 altoMusic = \relative c' {
-  g'8 |
-  d4 d8 g4 d8 |
-  e4 e8 d4 fis8 |
-  g4 e8 e4 d8 |
-  c4 d8 d4 d8 |
+  e8 e e e e e |
+  e e e c4 e16[ g] |
+  g8 g g16[ e] e8 e f |
+  e c e e4 e16[ g] |
 
-  b4 b8 e4 e8 |
-  e4 e8 fis4 fis8 |
-  g4 g8 g4 g8 |
-  e[ c] e d4. \bar"||"
-
-  b8[ d] g fis4 fis8 |
-  e[ c] e d4.
-  g8[ e] e c4 d8 |
-  c[ a] d d4. |
-
-  e4 e8 e4 e8 |
-  e[ c] e fis4 fis8 |
-  g[ e] g g4 g8 |
-  e[ c] c b4.
-}
-altoWords = \lyricmode {
-}
-altoWordsII = \lyricmode {
-%\markup\italic
-  \set stanza = #"2. "
-}
-altoWordsIII = \lyricmode {
-  \set stanza = #"3. "
-}
-altoWordsIV = \lyricmode {
-  \set stanza = #"4. "
-}
-altoWordsV = \lyricmode {
-  \set stanza = #"5. "
-  \set ignoreMelismata = ##t
-}
-altoWordsVI = \lyricmode {
-  \set stanza = #"6. "
-  \set ignoreMelismata = ##t
+  g8 g g16[ e] g8 g c,16[ g'] |
+  e8 f e16[ c] a4 c8 |
+  c c c a a a |
+  c c b c4. \bar"|."
 }
 tenorMusic = \relative c' {
-  g8 |
-  b4 b8 g4 g8 |
-  c4 c8 a4 a8 |
-  b4 g8 g4 a8 |
-  g4 fis8 fis4 fis8 |
-
-  g4 g8 g4 g8 |
-  c4 b8 b4 b8 |
-  c[ e] c b[ g] b |
-  c4 c8 b4. \bar"||"
-
-  g4 b8 d[ b] d |
-  c4 c8 a[ fis a] |
-  b4 g8 g[ a] a |
-  a4 fis8 fis[ d fis] |
-
-  g[ b] g g[ e] g |
-  c4 b8 b[ d] b |
-  c4 c8 b[ d] d |
-  c4 g8 g4. \bar"|."
+  c8 c b c c b |
+  c c b g4 a16[ d] |
+  c8 c g16[ a] a8 c a |
+  g g g c4 a16[ d] |
+  
+  c8 c g16[ a] b8 b g |
+  a c c f,4 a8 |
+  g g g f a f |
+  a a g e4. \bar"|."
 }
 
 tenorWords = \lyricmode {
@@ -204,27 +138,15 @@ tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  g8 |
-  g,4 g8 b4 b8 |
-  c4 c8 d4 d8 |
-
-  e4 e8 e4 d8 |
-  c4 d8 d4 d8 |
-  e4 e8 c4 c8 |
-  a4 g8 b4 b8 |
+  a8 a e a a e |
+  a, a b c4 a16[ b] |
+  c8 c b16[ a] a8 a f |
+  c' c c a4 a16[ b] |
   
-  c4 c8 g4 g8 |
-  c4 e8 g4. \bar"||"
-  g,4 g8 b4 b8 |
-
-  c4 c8 d4. |
-  e4 e8 c4 d8 |
-  a4 d8 d4. |
-  e4 e8 c4 c8 |
-
-  a4 g8 b4 b8 |
-  c4 c8 g4 b8 |
-  c4 d8 g,4. \bar"|."
+  c8 c b16[ a] g8 g c16[ b] |
+  a8 f c' d4 f8 |
+  e c e d e d |
+  e e e a,4. \bar"|."
 }
 bassWords = \lyricmode {
 }
@@ -258,7 +180,7 @@ pianoLH = \relative c' {
 %    \new PianoStaff << \new Staff { \new Voice { \pianoRH } } \new Staff { \clef "bass" \pianoLH } >>
   >>
   \midi {
-    \tempo 4 = 100
+    \tempo 4 = 90
     \set Staff.midiInstrument = "flute"
     \context {
       \Voice

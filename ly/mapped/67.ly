@@ -12,7 +12,7 @@
   system-system-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)
-       (padding . 1)
+       (padding . -3)
        (stretchability . 100))
   ragged-last-bottom = ##f
   ragged-bottom = ##f
@@ -21,7 +21,7 @@
   outer-margin = 0.75\in
   top-margin = 0.26\in
   bottom-margin = 0.25\in
-  first-page-number = #93
+  first-page-number = #67
   print-first-page-number = ##t
   headerLine = ""
   oddHeaderMarkup = \markup\fill-line{
@@ -52,84 +52,57 @@ global = {
 }
 
 sopMusic = \relative c' {
-  \repeat volta 2 {
-  	a'2~ |
-    a8 d c bes |
-
-    a2~ |
-    a8 a g f |
-    e2~ |
-    e8 g f e |
-    d2 |
-    
-    b'2\rest |
-    a2~ |
-    a8 d c bes |
-    a2~ |
-    a8 a b c |
-
-    c4. g8 |
-    d'4. g,8 |
-    c2~ |
-    c4 b\rest |
-  } \break 
-
-  c8 c4 d8 |
-  c16 d8 c16~ c4 |
-  a8 a4 bes8 |
-  a16 bes8 a16~ a4 |
-  a8 g4 fis8 |
-
-  a8 g4 c,8 |
-  f a e' d |
-  c a bes b |
-  c c4 d8 |
-
-  c16 d8 c16~ c4 |
-  a8 a4 bes8 |
-  a16 bes8 a16~ a8 a |
-  a8 g4 a8 |
-
-  c bes g a |
-  f2~ |
-  f4 b\rest \bar"|."
+	\partial 8
+  d'16. d32 |
+  c8 a f b16.\rest g32 |
+  f16. e32 d16. e32 f8 d'16. d32
+  c8 a f b16.\rest g32 |
+  
+  f16. e32 d16. e32 f8 a16. a32 |
+  g8 bes16. bes32 a8 c16. c32 |
+  bes8 d16. d32 c8 f16. e32 |
+  
+  e16 d c bes a8 d16 c |
+  c b a b c8\fermata c16. c32 |
+  c8 aes16. f32 e8 c16. c32 |
+  f8 aes c\fermata d16. d32 |
+  
+  c8 a? f f16[ g] |
+  f16. e32 d16. e32 f8 d'16. d32 |
+  c8 a f'\fermata f,16. g32 |
+  a4\fermata a16[ g8] f16 |
+  f4 bes8\rest \bar"|."
 }
 sopWords = \lyricmode {
   \set stanza = #"1. "
-	So __ you’re going a -- way __
-  Be -- cause your heart __ has gone a -- stray,
-  And __ you prom -- ised me __
-  That you would al -- ways faith -- ful be. __
-  
-
-  Good bye, my la -- dy love,
-  Fare -- well, my tur -- tle -- dove,
-  You are the i -- dol and dar -- ling of my heart,
-  But some day you will come back to me,
-  And love me ten -- der -- ly,
-  So good bye, my la -- dy love, good bye.
+	By the sad sea waves, I lis -- ten while they moan
+  A la -- ment o’er graves of hope and plea -- sure gone.
+  I was young, I was fair,
+  I had once not a care,
+  From the ris -- ing of the morn to the set -- ting of the sun;
+  Yet I pine like a slave by the sad sea wave.
+  Come a -- gain, bright days of hope and plea -- sure gone,
+  Come a -- gain, bright days, Come a -- gain, come a -- gain.
 }
 
 sopWordsII = \lyricmode {
-  Go __ to him you love, __
-  And be as true __ as stars a -- bove;
-  But __ your heart will yearn, __
-  And then some day you will re -- turn. __
+  \set stanza = #"2. "
+  From my care last night by ho -- ly sleep be -- guiled,
+  In the fair dream -- light my home up -- on me smiled.
+  Oh, how sweet ’mid the dew,
+  Ev -- ’ry flow’r that I knew,
+  Breathed a gen -- tle wel -- come back to the worn and wear -- y child.
+  I a -- wake in my grave by the sad sea wave.
+  Come a -- gain, dear dream so peace -- ful -- ly that smiled,
+  Come a -- gain, dear dream, Come a -- gain, come a -- gain.
 }
 
 sopWordsIII = \lyricmode {
-  \set stanza = #"2. "
-  When __ the dew -- drops fall, __
-  ’Tis then your heart, __ I know, will call.
-  So __ be -- ware, my dove, __
-  Don’t trust your life to some false love. __
+  \set stanza = #"3. "
 }
 
 sopWordsIV = \lyricmode {
-  But __ if you must go, __
-  Re -- mem -- ber, dear, __ I love you so,
-  Sure __ as stars do shine, __
-  You’ll think of when I called you mine. __
+  \set stanza = #"4. "
 }
 
 sopWordsV = \lyricmode {
@@ -137,45 +110,25 @@ sopWordsV = \lyricmode {
 }
 
 altoMusic = \relative c' {
-  \repeat volta 2 {
-    f2~ |
-    f8 f g g |
-    f2~ |
-    f8 f e d |
-    cis2~ |
-    cis8 cis cis cis |
-    d2 |
-    s2 |
-
-    f2~ |
-    f8 f g g |
-    f2~ |
-    f8 f dis dis |
-    e4. e8 |
-    f4. f8 |
-    c\rest e[ f fis]( |
-    g4) s |
-  }
-
-  f8 f4 f8 |
-  f16 f8 f16~ f4 |
-  f8 f4 f8 |
-  f16 f8 f16~ f4 |
+  f16. f32 |
+  f8 f c s16. c32 |
+  bes16. bes32 bes16. bes32 a8 f'16. f32 |
+  f8 f c s16. c32 |
   
-  f8 f4 dis8 |
-  e8 e4 c8 |
-  f8 a gis gis |
-  a a g! f |
-
-  f8 f4 f8 |
-  f16 f8 f16~ f4 |
-  f8 f4 f8 |
-  f16 f8 f16~ f8 f |
+  bes16. bes32 bes16. bes32 a8 f'16. f32 |
+  e8 g16. g32 f8 a16. a32 |
+  g8 bes16. bes32 a8 a16. a32 |
   
-  f8 f4 f8 |
-  e8 e e e |
-  c2~ |
-  c4 s \bar"\."
+  bes16 bes g g f8 f16 f |
+  f f f f e8 e16. e32 |
+  f8 f16. c32 c8 c16. c32 |
+  c8 f f f16. f32 |
+  
+  f8 f c c |
+  bes16. bes32 bes16. bes32 a8 f'16. f32 |
+  f8 f a c,16. e32 |
+  f4 e8. f16 |
+  f4 s8 \bar"|."
 }
 altoWords = \lyricmode {
 }
@@ -198,45 +151,25 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
-  \repeat volta 2 {
-    a2~ |
-    a 8 d d d |
-    a2~ |
-    a8 f g gis |
-    a2~ |
-    a8 bes a g |
-    f2 |
-    s |
-
-    a2~ |
-    a8 d d d |
-    a2~ |
-    a8 d a a |
-    c4. c8 |
-    b4. b8 |
-    a8\rest g[ aes a]( |
-    bes4) s |
-  }
-
-   a8 a4 bes8 |
-   a16 bes8 a16~ a4 |
-   c8 c4 d8 |
-   c16 d8 c16~ c4 |
-   
-   b8 b4 c8 |
-   c c4 bes!8 |
-   a a b b |
-   c f, g gis |
-
-   a8 a4 bes8 |
-   a16 bes8 a16~ a4 |
-   c8 c4 d8 |
-   c16 d8 c16~ c8 c |
-   
-   b b4 b8 |
-   c c bes! bes |
-   a2~ |
-   a4 s \bar"|."
+  bes16. bes32 |
+  a8 c a s16. a32 |
+  g16. g32 g16. g32 f8 bes16. bes32 |
+  a8 c a s16. a32 |
+  
+  g16. g32 g16. g32 f8 c'16. c32 |
+  c8 c16. c32 c8 c16. c32 |
+  c8 c16. c32 c8 c16. c32 |
+  
+  bes16 bes c c c8 d16 d |
+  d d d d c8 bes16. bes32 |
+  aes8 c16. aes32 g8 bes16. bes32 |
+  aes8 c aes bes16. bes32 |
+  
+  a?8 c a a |
+  g16. g32 g16. g32 f8 bes16. bes32 |
+  a8 c c a16. c32 |
+  c4 c16[ bes8] a16 |
+  a4 s8 \bar"|."
 }
 
 tenorWords = \lyricmode {
@@ -249,45 +182,25 @@ tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  \repeat volta 2 {
-    d,2~ |
-    d8 d g, g |
-    d'2~ |
-    d8 d d d |
-    a2~ |
-    a8 g a a |
-    d2 |
-    d\rest |
-
-    d2~ |
-    d8 d g, g |
-    d'2~ |
-    d8 d fis fis |
-    g4( e8) c |
-    g4 g |
-    c2~ |
-    c4 d\rest |
-  }
-
-  f8 f4 f8 |
-  f16 f8 f16~ f4 |
-  f8 f4 f8 |
-  f16 f8 f16~ f4 |
-
-  d8 g4 a8 |
-  c,8 c4 g'8 |
+  f,16. f32 |
+  f8 f f d16.\rest f32 |
+  c16. c32 c16. c32 f,8 f'16. f32 |
+  f8 f f d16.\rest f32 |
+  
+  c16. c32 c16. c32 f8 f16. f32 |
+  c8 e16. e32 f8 f16. f32 |
+  c8 e16. e32 f8 f16. f32 |
+  
+  bes16 bes e, e f8 d16 d |
+  g g g g c,8\fermata c16. c32 |
+  c8 c16. c32 c8 c16. c32 |
+  f8 f f\fermata bes16. bes32 |
+  
   f8 f f f |
-  f f e f |
-
-  f8 f4 f8 |
-  f16 f8 f16~ f4 |
-  f8 f4 f8 |
-  f16 f8 f16~ f8 f |
-
-  d g4 g8 |
-  c,8 c c c |
-  <f \tweak #'font-size #'-2 f,>2~ |
-  q4 d\rest \bar"|."
+  c16. c32 c16. c32 f,8 f'16. f32 |
+  f8 f f\fermata c16. c32 |
+  c4\fermata c8. f16 |
+  f4 d8\rest \bar"|."
 }
 bassWords = \lyricmode {
 }
@@ -345,7 +258,9 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Good Bye, My Lady Love"}}
-  composer = \markup\oldStyleNum"Joseph E. Howard (1878–1961)"
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"By the Sad Sea Waves"}}
+  composer = \markup\oldStyleNum"Sir Julius Benedict (1804–1885)"
   tagline = ""
 }}
+
+

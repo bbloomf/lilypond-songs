@@ -12,8 +12,18 @@
   system-system-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)
-       (padding . 1)
+       (padding . 2)
        (stretchability . 100))
+  score-markup-spacing =
+    #'((basic-distance . 0)
+       (minimum-distance . 0)
+       (padding . -14)
+       (stretchability . 80))
+  top-system-spacing =
+    #'((basic-distance . 0)
+       (minimum-distance . 0)
+       (padding . -1.5)
+       (stretchability . 0))
   ragged-last-bottom = ##f
   ragged-bottom = ##f
   two-sided = ##t
@@ -21,7 +31,7 @@
   outer-margin = 0.75\in
   top-margin = 0.26\in
   bottom-margin = 0.25\in
-  first-page-number = #179
+  first-page-number = #167
   print-first-page-number = ##t
   headerLine = ""
   oddHeaderMarkup = \markup\fill-line{
@@ -42,8 +52,8 @@
 }
 #(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
 global = {
-  \key des \major
-  \time 3/4
+  \key g \major
+  \time 4/4
   \dynamicUp
   %\set crescendoSpanner = #'dashed-line
   %\set midiInstrument = "recorder"
@@ -52,78 +62,67 @@ global = {
 }
 
 sopMusic = \relative c' {
-	\partial 4 f8. f16 |
-  f4. des8 ges8. f16 |
-  f4( des) \bar""
-  \times2/3{des8[ ees] f} |
-  ges4. bes8 aes8. ges16 |
-  f2 \bar""
-  des8. des16 |
-  ees4~ \times2/3{ees8[ d] ees} \times2/3{ees[ d] ees} |
-  f4( des?) \bar""
-  des8. des16 |
-  ees4~ \times2/3{ees8[ d] ees} \times2/3{ees[ ges] f} |
-  des?2 \bar""
-
-  aes'8. aes16 |
-  f'4. ees8 \times2/3{ees[ des] bes} |
-  aes4( f) \bar""
-  des'8. bes16 |
-  aes4. f8 ees8. f16 |
-  ges2\fermata \bar""
-  f8. aes16 |
-  f'4. ees8 \times2/3{ees[ des] bes} |
-  aes4( f) \bar""
-  des'8. bes16 |
-  aes4. des,8 f8. ees16 |
-  des2 \bar"|."
+	b'4 b c d |
+  d c b a |
+  g g a b |
+  b4. a8 a2 |
+  
+  b4 b c d |
+  d c b a |
+  g g a b |
+  a4. g8 g2 |
+  
+  a4 a b g |
+  a b8[ c] b4 g |
+  a b8[ c] b4 a |
+  g a d, b'~ |
+  
+  b b c d |
+  d c b a |
+  g^\markup\italic"rall." g a b |
+  a4. g8 g2\fermata \bar"|."
 }
 sopWords = \lyricmode {
   \set stanza = #"1. "
-  God, be mer -- ci -- ful to me; __
-  on your grace I rest my plea. 
-  My trans -- gres -- sions I __ con -- fess; __
-  grief and guilt __ my soul op -- press. 
-  Wash me, make me pure with -- in; __
-  cleanse, O cleanse me from my sin.
-  Wash me, make me pure with -- in; __
-  cleanse, O cleanse me from my sin. 
+  Hail to Joy, from heav’n de -- scend -- ing;
+  Hail Joy, all ye here be -- low.
+  At her shrine we now are bend -- ing;
+  Let the world our glad -- ness know.
+  
+  Though by cus -- tom’s law di -- vid -- ed,
+  Now we meet on com -- mon ground.
+  We __ are broth -- ers, all u -- nit -- ed
+  When joy in our hearts is found.
 }
 
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
-  I have sinned a -- gainst your grace 
-  and pro -- voked you to your face. 
-  I con -- fess __ your judg -- ment just; __
-  speech -- less, I __ your mer -- cy trust. 
-  Let my con -- trite heart re -- joice __
-  and in glad -- ness hear your voice. 
-  Let my con -- trite heart re -- joice __
-  and in glad -- ness hear your voice. 
+  We, with whom kind for -- tune fa -- vors
+  Lov -- ing friend in -- stead of foe,
+  We should be for -- e’er re -- joic -- ing,
+  For through him we heav -- en know.
+  
+  They who scorn the pledge of friend -- ship
+  On -- ly for them -- selves do live,
+  They __ are doomed to walk for -- got -- ten
+  Who re -- fuse their hearts to give.
 }
 
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
-  Gra -- cious God, my heart re -- new, 
-  make my spir -- it right and true. 
-  Do not cast __ me from your sight __
-  nor re -- move __ your Spir -- it’s light. 
-  Your sal -- va -- tion’s joy re -- store,
-  make me stead -- fast ev -- er -- more. 
-  Your sal -- va -- tion’s joy re -- store,
-  make me stead -- fast ev -- er -- more. 
+  Hail to Joy, from heav’n de -- scend -- ing;
+  Bring -- ing heav’n on earth to you!
+  Broth -- ers, in yon might -- y spac -- es
+  Dwells our God whose love is true.
+  
+  O ye mil -- lions, bow be -- fore Him;
+  Seek Him, He is ev -- er nigh!
+  We __ are broth -- ers, all u -- nit -- ed,
+  Fa -- ther’d by one God on high.
 }
 
 sopWordsIV = \lyricmode {
   \set stanza = #"4. "
-  Con -- trite spir -- it, plead -- ing cries, 
-  you, O God, will not de -- spise. 
-  Sin -- ful ways __ I will re -- prove, __
-  and my tongue __ shall sing your love. 
-  Let my right -- eous sac -- ri -- fice __
-  then de -- light your ho -- ly eyes. 
-  Let my right -- eous sac -- ri -- fice __
-  then de -- light your ho -- ly eyes. 
 }
 
 sopWordsV = \lyricmode {
@@ -131,34 +130,25 @@ sopWordsV = \lyricmode {
 }
 
 altoMusic = \relative c' {
-  \partial 4 f8. f16 |
-  f4. des8 ges8. f16 |
-  f4( des) \bar""
-  \times2/3{des8[ ees] f} |
-  ges4. bes8 aes8. ges16 |
-  f2 \bar""
-  des8. des16 |
-  ees4~ \times2/3{ees8[ d] ees} \times2/3{ees[ d] ees} |
-  f4( des) \bar""
-  des8. des16 |
-  ees4~ \times2/3{ees8[ d] ees} \times2/3{ees[ ges] f} |
-  des2 \bar""
-
-  f8. f16 |
-  aes4. ges8 \times2/3{ges4 ges8} |
-  f4( des)
-
-  f8. ges16 |
-  f4. des8 c8. des16 |
-  ees2
-
-  des8. f16 |
-  aes4. ges8 \times2/3{ges4 ges8} 
-  f4( des)
-
-  f8. ges16 |
-  f4. des8 des8. c16 |
-  des2 \bar"|."
+  d4 d d d |
+  d d d d8[ c] |
+  b4 d d d |
+  d4. d8 d2 |
+  
+  d4 d e f |
+  f e d c |
+  b b c b |
+  c4. b8 b2 |
+  
+  d4 d d d |
+  d d d d |
+  d b8[ a] fis'4 fis |
+  b, cis d d~ |
+  
+  d d e f |
+  f e d c |
+  b b c d |
+  c4. b8 b2 \bar"|."
 }
 altoWords = \lyricmode {
 }
@@ -181,37 +171,25 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
-  aes8. aes16 |
-  aes4. f8 bes8. aes16 |
-  aes4( f)
-
-  \times2/3{f8[ ges] aes} |
-  bes4. des8 c8. bes16 |
-  aes2
-
-  f8. f16 |
-  ges4~ \times2/3{ges8[ f] ges} \times2/3{ges[ f] ges} |
-  aes4( f)
-
-  f8. f16 |
-  ges4~ \times2/3{ges8[ f] ges} \times2/3{ges[ bes] aes} |
-  f2
-
-  aes8. aes16 |
-  des4. c8 \times2/3{bes4 des8} |
-  des4( aes)
-
-  aes8. bes16 |
-  des4. aes8 aes8. des16 |
-  c2
-
-  aes8. aes16 |
-  des4. c8 \times2/3{bes4 des8} |
-  des4( aes)
-
-  aes8. bes16 |
-  des4. f,8 aes8. ges16 |
-  f2 \bar"|."
+  g4 g a b |
+  b a g g8[ a] |
+  b4 b fis g |
+  g4. fis8 fis2 |
+  
+  g4 g g g |
+  g g g g |
+  g g fis g |
+  fis4. g8 g2 |
+  
+  fis4 fis g b |
+  fis g8[ a] g4 b |
+  fis g8[ a] fis4 dis |
+  e e fis g~ |
+  
+  g g g a8[ b] |
+  c4 c g e |
+  d g g g |
+  fis4. g8 g2 \bar"|."
 }
 
 tenorWords = \lyricmode {
@@ -223,38 +201,26 @@ tenorWordsII = \lyricmode {
 tenorWordsIII = \lyricmode {
 }
 
-bassMusic = \relative c' {  
-  aes8. aes16 |
-  aes4. f8 bes8. aes16 |
-  aes4( f)
-
-  \times2/3{f8[ ges] aes} |
-  bes4. des8 c8. bes16 |
-  aes2
-
-  f8. f16 |
-  ges4~ \times2/3{ges8[ f] ges} \times2/3{ges[ f] ges} |
-  aes4( f)
-
-  f8. f16 |
-  ges4~ \times2/3{ges8[ f] ges} \times2/3{ges[ bes] aes} |
-  f2
-
-  des8. des16 |
-  des4. des8 \times2/3{ges4 ges,8} |
-  des'2
-
-  des8. des16 |
-  des4. des8 aes8. aes16 |
-  aes2\fermata
-
-  des8. des16 |
-  des4. des8 \times2/3{ges4 ges,8} |
-  des'2
-
-  des8. des16 |
-  des4. des8 aes8. aes16 |
-  des2 \bar"|."
+bassMusic = \relative c' {
+  g4 g g g |
+  d d d e8[ fis] |
+  g4 d d d |
+  d4. d8 d2 |
+  
+  g4 g g g |
+  c, c c c |
+  d d d d |
+  d4. d8 g,2 |
+  
+  d'4 d d d |
+  d d d d |
+  d d dis b |
+  e a, d? d( |
+  
+  g) g g g |
+  c, c c c |
+  d d d d |
+  d4. d8 g,2 \bar"|."
 }
 bassWords = \lyricmode {
 }
@@ -312,8 +278,10 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"God Be Merciful to Me"}}
-  composer = \markup\oldStyleNum"J. P. Holbrook (1821–1889)"
-  poet = \markup\oldStyleNum"Psalm 51"
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Ode to Joy"}}
+  composer = \markup\oldStyleNum"Ludwig van Beethoven (1770–1827)"
+  poet = \markup\oldStyleNum"Friedrich von Schiller (1759–1805)"
   tagline = ""
 }}
+
+

@@ -43,7 +43,7 @@
 #(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
 global = {
   \key aes \major
-  \time 4/4
+  \time 6/8
   \dynamicUp
   %\set crescendoSpanner = #'dashed-line
   %\set midiInstrument = "recorder"
@@ -52,84 +52,65 @@ global = {
 }
 
 sopMusic = \relative c' {
-	\partial 4
-  ees4 |
-  aes2. aes4 |
-  bes2. bes4 |
-  c( aes) f( bes) |
-  aes2( g4) ees8[ f] |
-  g4( aes) bes( c) |
-  des2. c4 |
+	\partial 8
+  ees16[ ees] |
+  c'8 bes aes aes g aes |
+  bes aes f ees b'\rest c,16[ des] |
+  ees aes b8\rest ees, ees16 bes' b8\rest ees, |
   
-  c( bes) bes( aes) |
-  aes2( g4) ees |
-  aes2. aes4 |
-  \tieDashed bes2.~ bes4 |
-  \tieSolid c( aes) f( bes) |
-  aes2( g4) ees8[ f] |
-  g4( aes) bes( c) |
+  ees16 aes~ aes4 b4\rest ees,16 ees |
+  c'8 bes aes aes g aes |
+  bes aes f ees b'\rest aes16[ aes] |
+  g bes b8\rest g f16 bes b8\rest f |
   
-  des2. c4 |
-  c( bes) aes( g) |
-  aes2. ees4 |
-  ees2. ees4 |
-  aes2. aes4 |
-  bes2. bes4 |
-  c2. bes4 |
+  g16 ees~ ees4 b'\rest ees,16[ f] |
+  ges8. aes16 ges8 f8. e16 f8 |
+  c' bes a bes b\rest ees,16[ f] |
+  ges8. aes16 ges8 f8. e16 f8 |
   
-  c( des ees) c |
-  bes( c des) bes|
-  c( des ees) c |
-  bes2. ees,4 |
-  ees2. ees4 |
-  aes2. aes4 |
-  bes2. bes4 |
-  c2. bes4 |
-  c( des ees) c |
-  bes( c des) bes |
-  aes2^\markup\italic"rall."  g |
-  aes2. \bar"|."
+  c' bes a bes b\rest bes16 c |
+  des8. c16 bes8 aes f aes |
+  c8. bes16 aes8 bes\fermata b8\rest ees, |
+  ees16 aes b8\rest ees, f16 aes b8\rest f |
+  ees16 aes~ aes4 b4\rest \bar"|."
 }
 sopWords = \lyricmode {
   \set stanza = #"1. "
-	The spa -- cious firm -- a -- ment on __ high,
-  And all __ \set associatedVoice = "altos" the blue \unset associatedVoice e -- _ the -- real sky, __
-  \set ignoreMelismata = ##t And span -- gled heav’ns, \unset ignoreMelismata a shin -- ing frame,
-  Their great \set associatedVoice = "altos" O -- ri -- \unset associatedVoice gi -- _ nal pro -- claim.
-  Th’un wear -- ied sun from day to day
-  Does his __ Cre -- a -- tor’s pow’r dis -- play,
-  \set associatedVoice = "altos"
-  And pub -- lish -- es __ to ev -- ’ry land
-  \unset associatedVoice
-  The work __ of an __ al -- might -- y hand.
+  \set ignoreMelismata = ##t
+	On a tree by a riv -- er a lit -- tle tom -- tit
+  Sang, _ “Wil -- low, tit -- wil -- low, tit -- wil -- low!” _
+  And I said to him, “Dick -- y -- bird, why do you sit
+  Sing -- ing, ‘Wil -- low, tit -- wil -- low, tit -- wil -- low’?” _
+  “Is it weak -- ness of in -- tel -- lect, bird -- ie?” I cried,
+  “Or a ra -- ther tough worm in your lit -- tle in -- side?”
+  With a shake of his poor lit -- tle head, he re -- plied,
+  “Oh, wil -- low, tit -- wil -- low, tit -- wil -- low!” _
 }
 
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
-  Soon as the eve -- ning shades pre -- vail,
-  The moon \set associatedVoice = "altos" takes up \unset associatedVoice the "" won -- drous tale, __
-  \set ignoreMelismata = ##t And night -- ly to the \unset ignoreMelismata list -- ’ning earth
-  Re -- peats \set associatedVoice = "altos" the sto -- \unset associatedVoice ry "" of __ her birth;
-  Whilst all the stars that round her burn,
-  And all __ the plan -- ets in __ their turn,
-  \set associatedVoice = "altos" 
-  Con -- firm the tid -- ings as they roll,
-  \unset associatedVoice
-  And spread the truth from pole to pole.
+  \set ignoreMelismata = ##t
+  He _ slapped at his chest, as he sat on that bough,
+  Sing -- ing, “Wil -- low, tit -- wil -- low, tit -- wil -- low!” _
+  And a cold per -- spi -- ra -- tion be -- span -- gled his brow,
+  Oh, _ wil -- low, tit -- wil -- low, tit -- wil -- low! _
+  He __ _ sobbed and he sighed, and a gur -- gle he gave,
+  Then he plunged him -- self in -- to the bil -- low -- y wave,
+  And an ech -- o a -- rose from the su -- i -- cide’s grave:
+  “Oh, wil -- low, tit -- wil -- low, tit -- wil -- low!” _
 }
 
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
-  What though, in sol -- emn si -- lence, all
-  Move round \set associatedVoice = "altos" the dark \unset associatedVoice ter -- "" rest -- rial ball;
-  What though nor real __ voice, nor sound
-  A -- midst \set associatedVoice = "altos" their ra -- \unset associatedVoice diant "" orbs be __ found;
-  In rea -- son’s ear they all re -- joice,
-  And ut -- ter forth a glo -- rious voice;
-  \set associatedVoice = "altos" 
-  For ev -- er sing -- ing as they shine:
-  \unset associatedVoice
-  “The hand __ that made __ us is div -- ine.”
+  \set ignoreMelismata = ##t
+  Now I feel just as sure as I’m sure that my name
+  Is -- n’t Wil -- low, tit -- wil -- low, tit -- wil -- low, _
+  That ’twas blight -- ed af -- fec -- tion that made him ex -- claim,
+  “Oh, _ wil -- low, tit -- wil -- low, tit -- wil -- low!” _
+  And if you re -- main cal -- lous and ob -- du -- rate, I
+  Shall _ per -- ish as he did, and you will know why,
+  Though I prob -- ab -- ly shall not ex -- claim as I die,
+  “Oh, wil -- low, tit -- wil -- low, tit -- wil -- low!” _
 }
 
 sopWordsIV = \lyricmode {
@@ -141,44 +122,26 @@ sopWordsV = \lyricmode {
 }
 
 altoMusic = \relative c' {
-  \partial 4
-  ees4 |
-  c2. ees4 |
-  ees2. ees4 |
-  ees2 f |
-  ees2. ees4 |
-  ees2 ees |
-  ees ees |
+  c16[ c] |
+  ees8 des c ees ees ees |
+  f f des c s aes16[ bes] |
+  c c s s c8 des16 des s8 des |
   
-  f f |
-  ees2. ees4 |
-  c2. ees4 |
-  \tieDashed ees2.~ ees4 |
-  \tieSolid ees2 f |
-  ees2. ees4 |
-  ees2 ees |
+  c16 c~ c4 s c16 c |
+  ees8 des c ees ees ees |
+  f f des c s ees16[ ees] |
+  ees ees s8 ees d16 d s8 d |
   
-  ees ees |
-  f ees4( des) |
-  c2. ees4 |
-  ees2. ees4 |
-  ees2. ees4 |
-  ees2. ees4 |
-  ees2. ees4 |
+  ees16 ees~ ees4 s ees16[ bes] |
+  ees8. ees16 ees8 d8. cis16 d8 |
+  ees des ees des s ees16[ bes] |
+  ees8. ees16 ees8 d8. cis16 d8 |
   
-  ees2. ees4 |
-  ees2. ees4 |
-  ees2. ees4 |
-  ees2. ees4 |
-  ees2. ees4 |
-  ees( des ees) c |
-  
-  ees2. ees4 |
-  ees2. ees4 |
-  ees2. aes4 |
-  f( ees f) f |
-  ees2 des |
-  c2. \bar"|."
+  ees des ees f s des16 ees |
+  f8. ees16 des8 des des des |
+  d8. d16 d8 ees s des |
+  c16 c s8 c des16 des s8 des |
+  c16 c~ c4 s \bar"|."
 }
 altoWords = \lyricmode {
 }
@@ -201,44 +164,26 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
-  \partial 4
-  ees,4 |
-  ees2. aes4 |
-  g2. g4 |
-  aes2 aes4( des) |
-  c2( bes4) g8[ aes] |
-  bes4( aes) g( aes) |
-  bes2 aes |
+  aes16[ aes] |
+  aes8 aes aes c c c |
+  des des aes aes s ees16[ ees] |
+  ees ees s8 aes g16 g s8 g |
   
-  f f4( bes) |
-  bes2. ees,4 |
-  ees2. aes4 |
-  \tieDashed g2.~ g4 |
-  \tieSolid aes2 aes4( des) |
-  c2( bes4) g8[ aes] |
-  bes4( aes) g( aes) |
+  aes16 aes~ aes4 s aes16 aes |
+  aes8 aes aes c c c |
+  des des aes aes s c16[ c] |
+  bes g s8 bes aes16 aes s8 bes |
   
-  bes2 aes |
-  aes4( des) c( bes) |
-  aes2. ees4 |
-  ees2. g4 |
-  aes2. aes4 |
-  g2. g4 |
-  aes2. g4 |
+  bes16 g~ g4 s g16[ aes] |
+  bes8. bes16 bes8 bes8. bes16 bes8 |
+  a bes c bes s g16[ aes] |
+  bes8. bes16 bes8 bes8. bes16 bes8 |
   
-  aes4( bes c) aes |
-  g( aes bes) g |
-  aes( bes c) aes |
-  g2. g4 |
-  g2. bes4 |
-  aes2. aes4 |
-  
-  g( aes bes) g |
-  aes2. g4 |
-  aes2. ees'4 |
-  des( ees des) des |
-  c2 bes |
-  aes2. \bar"|."
+  a bes c des s bes16 a? |
+  bes8. a16 bes8 f aes f |
+  aes8. aes16 bes8 g s g |
+  aes16 aes s8 aes aes16 f s8 aes |
+  aes16 ees~ ees4 s \bar"|."
 }
 
 tenorWords = \lyricmode {
@@ -251,44 +196,26 @@ tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  \partial 4 
-  ees,4 |
-  aes,2. c4 |
-  ees2. ees4 |
-  aes( c,) des( bes) |
-  ees2. ees4 |
-  des( c) bes( aes) |
-  g2 aes |
+  aes,16[ aes] |
+  aes8 aes aes aes' aes aes |
+  des, des des aes d\rest ees16[ ees] |
+  aes, aes d8\rest aes ees'16 ees d8\rest ees |
   
-  des d |
-  ees2. ees4 |
-  aes,2. c4 |
-  \tieDashed ees2.~ ees4 |
-  \tieSolid aes( c,) des( bes) |
-  ees2. ees4 |
-  des( c) bes( aes) |
+  aes,16 aes~ aes4 d\rest aes16 aes |
+  aes8 aes aes aes' aes aes |
+  des, des des aes d\rest aes16[ aes] |
+  bes bes d8\rest bes bes16 bes d8\rest bes |
   
-  g2 aes |
-  des ees |
-  aes,2. ees'4 |
-  ees2. ees4 |
-  c2. c4 |
-  ees2. ees4 |
-  aes2. ees4 |
+  ees16 ees~ ees4 d\rest ees16[ d] |
+  ees8. ees16 ees8 bes8. bes16 bes8 |
+  f' f f bes, d\rest ees16[ d] |
+  ees8. ees16 ees8 bes8. bes16 bes8 |
   
-  ees2. ees4 |
-  ees2. ees4 |
-  ees2. ees4 |
-  ees2. ees4 |
-  ees( f ees) des |
-  c( bes c) aes |
-  
-  ees'( f g) ees |
-  aes( ees c) ees |
-  aes( bes c) aes |
-  des( c bes) des, |
-  ees2 ees |
-  aes,2. \bar"|."
+  f' f f bes, d\rest bes16 f' |
+  bes8. f16 ges8 des des des |
+  bes8. bes16 bes8 ees\fermata d\rest ees |
+  aes,16 aes d8\rest aes des16 des d8\rest des |
+  aes16 aes~ aes4 d4\rest \bar"|."
 }
 bassWords = \lyricmode {
 }
@@ -346,9 +273,9 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"The Spacious Firmament on High"}}
-  poet = \markup\oldStyleNum"Joseph Addison (1672–1719)"
-  composer = \markup\oldStyleNum"Franz Josef Haydn (1732–1809)"
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Tit-Willow"}}
+  poet = \markup\oldStyleNum"W. S. Gilbert (1836–1911)"
+  composer = \markup\oldStyleNum"Arthur Sullivan (1842–1900)"
   tagline = ""
 }}
 

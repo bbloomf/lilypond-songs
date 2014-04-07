@@ -1,4 +1,4 @@
-\version "2.14.2"
+﻿\version "2.14.2"
 \include "util.ly"
 \header{ tagline = ""}
 \paper {
@@ -12,7 +12,12 @@
   system-system-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)
-       (padding . 2)
+       (padding . -3)
+       (stretchability . 150))
+  score-markup-spacing =
+    #'((basic-distance . 0)
+       (minimum-distance . 0)
+       (padding . 0)
        (stretchability . 100))
   ragged-last-bottom = ##f
   ragged-bottom = ##f
@@ -21,7 +26,7 @@
   outer-margin = 0.75\in
   top-margin = 0.26\in
   bottom-margin = 0.25\in
-  first-page-number = #69
+  first-page-number = #85
   print-first-page-number = ##t
   headerLine = ""
   oddHeaderMarkup = \markup\fill-line{
@@ -43,77 +48,78 @@
 #(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
 global = {
   \key f \major
-  \time 6/8
+  \time 4/4
   \dynamicUp
   %\set crescendoSpanner = #'dashed-line
   %\set midiInstrument = "recorder"
   \autoBeamOff
   \override DynamicTextSpanner #'style = #'none
-  \slurDashed
 }
 
 sopMusic = \relative c' {
-	\partial 8
-  c8 |
-  \tieDashed a'4~ a8 a4 a8 |
-  bes bes~ bes bes4 bes8 |
-  \tieSolid c4 c8 a4 f8 |
-  g4.~ g4 \teeny c8 \normalsize |
-  \tieDashed f4~ f8 e4 f8 |
+	f4 f8 g a4 a8 bes |
+  c4 d8 c a4 b4\rest |
+  c bes8 a g4 b\rest |
+  bes a8 g f4 b\rest |
   
-  d4( c8) a4 f8 |
-  a4 g8 f4 e8 |
-  \tieSolid f4.~ f4 c8 |
-  a'4 a8 a4 a8 |
-  \tieDashed bes~ bes8~ bes bes4 bes8 |
-  c4 c8 a4 f8 |
+  f4 f8 g a4 a8 bes |
+  c4 d8 c a4 b\rest |
+  c4 bes8 a g4 a8.\fermata g16 |
+  f2 b\rest |
   
-  \tieSolid g4.~ g4 c8 |
-  \tieDashed f4~ f8 e4 f8 |
-  \tieSolid d d c a4 f8 |
-  a4 g8 f4 e8 |
-  f4.~ f4 \bar"||" c'8 |
-  f4.~ f4 c8 |
+  c4 bes8 a g4 c,8 c |
+  bes'4 a8 g f4 b\rest |
+  c bes8 a g4 c,8 c |
+  bes'4 a8 g f4 b\rest |
   
-  e4.~ e4 c8 |
-  d4 d8 d4 d8 |
-  c4.~ c4 c8 |
-  f4. c4 c8 |
-  e e d c4 bes8 |
-  a4 bes8 a4 g8 |
-  f4.~ f4 \bar"|."
+  f4 f8 g a4 a8 bes |
+  c4 d8 c a4 b\rest |
+  c\p bes8 a g4 a8.\fermata g16 |
+  f2 b\rest \bar"|."
 }
 sopWords = \lyricmode {
   \set stanza = #"1. "
-  \set ignoreMelismata = ##t
-  We are a band of broth -- ers, _ "" and na -- tive to the soil, __ _
-  "" Fight -- ing for our Lib -- er -- ty, With trea -- sure, blood, and toil; __ _
-  And when our rights were threat -- ened, _ "" the cry rose near and far, __ _
-  Hur -- rah __ _ for the Bon -- nie Blue Flag that bears a sin -- gle star. __ _
+	Tell me the tales that to me were so dear,
+  Long, long a -- go,
+  Long, long a -- go;
+  
+  Sing me the songs I de -- light -- ed to hear,
+  Long, long a -- go, long a -- go.
+  
+  Now you are come, all my grief is re -- moved,
+  Let me for -- get that so long you have roved,
+  Let me be -- lieve that you love as you loved,
+  Long, long a -- go, long -- a -- go.
 }
 
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
-  \set ignoreMelismata = ##t
-  As long __ _ as the U -- nion _ "" was faith -- ful to her trust, __ _
-  Like friends _ and like Bro -- _ thers, "" kind were we and just; __ _
-  But now, when North -- ern treach -- e -- ry "" at -- tempts our rights to mar, __ _
-  We hoist on high the Bon -- nie Blue Flag that bears a sin -- gle star! __ _
+  Do you re -- mem -- ber the path where we met,
+  Long, long a -- go,
+  Long, long a -- go?
   
-  \unset ignoreMelismata
-  Hur -- rah! __
-  Hur -- rah! __
-  For South -- ern rights hur -- rah! __
-  Hur -- rah for the Bon -- nie Blue Flag that bears a sin -- gle star!
+  Ah, yes, you told me you ne’er would for -- get,
+  Long, long a -- go, long -- a -- go.
+  
+  Then, to all oth -- ers my smile you pre -- ferr’d,
+  Love, when you spoke, gave a charm to each word,
+  Still my heart  trea -- sures the prais -- es I heard,
+  Long, long a -- go, long a -- go.
 }
 
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
-  \set ignoreMelismata = ##t
-  Then here’s to our Con -- fed -- e -- ra -- cy, so strong we are and brave, _
-  Like pa -- tri -- ots of old we’ll fight, our her -- i -- tage to save: __ _
-  And ra -- ther than sub -- mit __ _ to shame, to die we would pre -- fer, __ _
-  So cheer __ _ for the Bon -- nie Blue Flag that bears a sin -- gle star. __ _
+  Though by your kind -- ness my fond hopes were raised,
+  Long, long a -- go,
+  Long, long a -- go;
+  
+  You by more el -- o -- quent lips have been praised,
+  Long, long a -- go, long a -- go.
+  
+  But by long ab -- sence your truth has been tried,
+  Still to your ac -- cents I lis -- ten with pride,
+  Blest as I was when I sat by your side,
+  Long, long a -- go, long a -- go.
 }
 
 sopWordsIV = \lyricmode {
@@ -125,34 +131,25 @@ sopWordsV = \lyricmode {
 }
 
 altoMusic = \relative c' {
-  c8 |
-  \tieDashed f4~ f8 f4 f8 |
-  e e~ e e4 e8 |
-  \tieSolid a4 a8 f4 f8 |
-  e4.~ e4 \teeny bes'8 \normalsize |
-  \tieDashed a4~ a8 g4 a8 |
+  f4 f8 e f4 f8 g |
+  a4 bes8 a f4 s |
+  a g8 f e4 s |
+  f f8 e f4 s |
   
-  f4~ f8 f4 f8 |
-  f4 e8 f4 c8 |
-  \tieSolid c4.~ c4 c8 |
-  f4 f8 f4 f8 |
-  \tieDashed e~ e~ e e4 e8 |
-  f4 f8 f4 c8 |
+  c c8 e f4 f8 g |
+  a4 bes8 a f4 s |
+  f f8 f e4 e8. e16 |
+  f2 s |
   
-  \slurSolid f4.( e4) bes'8 |
-  \tieDashed a4~ a8 g4 a8 |
-  \tieSolid f f f f4 f8 |
-  f4 c8 c4 c8 |
-  \tieSolid c4.~ c4 \bar"||"
-  f8 a4.~ a4 a8 |
+  a4 g8 f e4 c8 c |
+  e4 f8 e f4 s |
+  a g8 f e4 c8 c |
+  e4 f8 e f4 s |
   
-  g4.~ g4 g8 |
-  f4 f8 f4 f8 |
-  f4.~ f4 f8 |
-  a4. f4 f8 |
-  f f f d4 d8 |
-  c4 c8 e4 e8 |
-  f4.~ f4 \bar"|."
+  c4 c8 e f4 f8 g |
+  a4 bes8 a f4 s |
+  a4 g8 f e4 e8. e16 |
+  f2 s \bar"|."
 }
 altoWords = \lyricmode {
 }
@@ -175,35 +172,25 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
-  a8 |
-  \tieDashed c4~ c8 c4 c8 |
-  c c~ c c4 c8 |
-  \tieSolid c4 c8 c4 a8 |
-  c4.~ c4 \teeny c8 \normalsize |
-  \tieDashed c4~ c8 c4 c8 |
+  a4 a8 c c4 c8 c |
+  c4 c8 c c4 s |
+  c4 c8 c c4 s |
+  d4 c8 bes a4 s |
   
-  bes4( a8) c4 a8 |
-  c4 bes8 a4 g8 |
-  \tieSolid a4.~ a4 a8 |
-  c4 c8 c4 c8 |
-  \tieDashed c~ c~ c c4 c8 |
-  c4 c8 c4 a8 |
+  a a8 c c4 c8 c |
+  c4 c8 c c4 s |
+  a d8 c bes4 c8. bes16 |
+  a2 s |
   
-  \tieSolid c4.~ c4 c8 |
-  \tieDashed c4~ c8 c4 c8 |
-  \tieSolid bes bes a c4 a8 |
-  c4 bes8 a4 g8 |
-  a4.~ a4 \bar"||"
-  a8 |
-  c4.~ c4 c8 |
+  c4 c8 c c4 g8 g |
+  c4 c8 bes a4 s |
+  c4 c8 c c4 g8 g |
+  c4 c8 c16[ bes] a4 s |
   
-  c4.~ c4 c8 |
-  bes4 bes8 bes4 bes8 |
-  a4.~ a4 a8 |
-  c4. a4 a8 |
-  bes bes bes g4 g8 |
-  f4 f8 c'4 bes8 |
-  a4.~ a4 \bar"|."
+  a4 a8 c c4 c8 c |
+  c4 c8 c c4 s |
+  c c8 c c4 c8. bes16 |
+  a2 s \bar"|."
 }
 
 tenorWords = \lyricmode {
@@ -216,35 +203,25 @@ tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  f,8 |
-  \tieDashed f4~ f8 f4 f8 |
-  g g~ g g4 g8 |
-  \tieSolid f4 f8 f4 f8 |
-  c4.~ c4 \teeny e8 \normalsize |
-  \tieDashed f4~ f8 c4 f8 |
+  f,4 f8 c f4 f8 f |
+  f4 f8 f f4 d\rest |
+  c e8 f c4 d\rest |
+  c c8 c f4 d\rest |
   
-  f4~ f8 f4 f8 |
-  c4 c8 c4 c8 |
-  \tieSolid f4.~ f4 f8 |
-  f4 f8 f4 f8 |
-  \tieDashed g~ g~ g g4 g8 |
-  a4 a8 f4 f8 |
+  f f8 c c4 f8 f |
+  f4 f8 f f4 d\rest |
+  f f8 f c4 c8.\fermata c16 |
+  f2 d\rest |
   
-  \tieSolid c4.~ c4 e8 |
-  \tieDashed f4~ f8 c4 f8 |
-  \tieSolid f f f f4 f8 |
-  c4 c8 c4 c8 |
-  f4.~ f4 \bar"||"
-  f8 |
-  f4.~ f4 f8 |
+  c4 e8 f c4 e8 e |
+  g4 f8 c f4 d\rest |
+  f e8 f c4 e8 e |
+  g4 f8 c f4 d\rest |
   
-  c4.~ c4 e8 |
-  f4 f8 f4 f8 |
-  f4.~ f4 f8 |
-  f4. f4 f8 |
-  bes, bes bes bes4 bes8 |
-  c4 c8 c4 c8 |
-  f4.~ f4 \bar"|."
+  f f8 c f4 f8 f |
+  f4 f8 f f4 d\rest |
+  f e8 f c4 c8.\fermata c16 |
+  f2 d\rest \bar"|."
 }
 bassWords = \lyricmode {
 }
@@ -302,8 +279,9 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"The Bonnie Blue Flag"}}
-  composer = \markup\oldStyleNum{"Folk Song," \italic "The Irish Jaunting Car"}
-  poet = \markup\oldStyleNum"Harry McCarthy, 1861"
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Long, Long Ago"}}
+  composer = \markup\oldStyleNum"Thomas Haynes Bayly (1797–1839)"
   tagline = ""
 }}
+
+

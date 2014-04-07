@@ -12,8 +12,13 @@
   system-system-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)
-       (padding . 1)
+       (padding . -4)
        (stretchability . 100))
+  top-markup-spacing =
+    #'((basic-distance . 0)
+       (minimum-distance . 0)
+       (padding . -2)
+       (stretchability . 0))
   ragged-last-bottom = ##f
   ragged-bottom = ##f
   two-sided = ##t
@@ -21,7 +26,7 @@
   outer-margin = 0.75\in
   top-margin = 0.26\in
   bottom-margin = 0.25\in
-  first-page-number = #179
+  first-page-number = #145
   print-first-page-number = ##t
   headerLine = ""
   oddHeaderMarkup = \markup\fill-line{
@@ -42,8 +47,8 @@
 }
 #(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
 global = {
-  \key des \major
-  \time 3/4
+  \key g \major
+  \time 6/8
   \dynamicUp
   %\set crescendoSpanner = #'dashed-line
   %\set midiInstrument = "recorder"
@@ -52,78 +57,88 @@ global = {
 }
 
 sopMusic = \relative c' {
-	\partial 4 f8. f16 |
-  f4. des8 ges8. f16 |
-  f4( des) \bar""
-  \times2/3{des8[ ees] f} |
-  ges4. bes8 aes8. ges16 |
-  f2 \bar""
-  des8. des16 |
-  ees4~ \times2/3{ees8[ d] ees} \times2/3{ees[ d] ees} |
-  f4( des?) \bar""
-  des8. des16 |
-  ees4~ \times2/3{ees8[ d] ees} \times2/3{ees[ ges] f} |
-  des?2 \bar""
+	\partial 8 d8 |
+  g8.[ g16] g8 d'4 c8 |
+  b4 g8 g[ fis] g |
+  a[ a] a d[ d] c |
+  b4 b8\rest b4\rest \bar"" d,16[ d] |
+  g4 g8 d'4 c8 |
+  b4 g8 g fis g |
+  a[ a] a d,[ e] fis |
+  g4 b8\rest b4\rest \bar"||"
+  b8 |
+  c4 b8 a4 g8 |
+  fis4 e8 d4 b'16[ b] |
+  c4 b16[ b] d4 b8 |
+  a4 b8\rest b4\rest \bar"" a16[ a] |
 
-  aes'8. aes16 |
-  f'4. ees8 \times2/3{ees[ des] bes} |
-  aes4( f) \bar""
-  des'8. bes16 |
-  aes4. f8 ees8. f16 |
-  ges2\fermata \bar""
-  f8. aes16 |
-  f'4. ees8 \times2/3{ees[ des] bes} |
-  aes4( f) \bar""
-  des'8. bes16 |
-  aes4. des,8 f8. ees16 |
-  des2 \bar"|."
+  b8[ c] a g fis g |
+  a b c b4 g16[ g] |
+  fis8 e fis d e fis |
+  g4 g8 a4 a8 |
+
+  b4 b8 c4\fermata \bar"" g16[ g] |
+  fis8 e fis d e fis |
+  g4 b8\rest b4\rest \bar"|."
 }
 sopWords = \lyricmode {
   \set stanza = #"1. "
-  God, be mer -- ci -- ful to me; __
-  on your grace I rest my plea. 
-  My trans -- gres -- sions I __ con -- fess; __
-  grief and guilt __ my soul op -- press. 
-  Wash me, make me pure with -- in; __
-  cleanse, O cleanse me from my sin.
-  Wash me, make me pure with -- in; __
-  cleanse, O cleanse me from my sin. 
+	\set ignoreMelismata = ##t
+  The Lords of cre -- a -- tion men we call,
+  And they think _ they rule _ the whole;
+  But they’re much mis -- tak -- en af -- ter all,
+  For they’re un -- _ der wom -- an’s con -- trol.
+
+  As ev -- er since the world be -- gan,
+  It has al -- ways __ _ been the way,
+  For __ _ did __ _ not A -- dam, the ver -- y first man,
+  The __ _ ver -- y first wo -- man o -- bey, o -- bey, o -- bey, o -- bey?
+  The __ _ ver -- y first wo -- man o -- bey!
 }
 
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
-  I have sinned a -- gainst your grace 
-  and pro -- voked you to your face. 
-  I con -- fess __ your judg -- ment just; __
-  speech -- less, I __ your mer -- cy trust. 
-  Let my con -- trite heart re -- joice __
-  and in glad -- ness hear your voice. 
-  Let my con -- trite heart re -- joice __
-  and in glad -- ness hear your voice. 
+  \set ignoreMelismata = ##t
+  Ye Lords, who at pres -- ent hear my song, __ _
+  I know _ you’ll quick -- _ ly say:
+  “Our __ _ size more large, our nerves more strong;
+  Shall the strong -- er the weak -- er o -- bey?”
+
+  But think not though these words we hear
+  We shall e’er mind the thing you say;
+  For as long as a wo -- man’s pos -- sessed of a tear,
+  Your _ pow -- er will van -- ish a -- way, a -- way, a -- way, a -- way;
+  Your _ pow -- er will van -- ish a -- way.
 }
 
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
-  Gra -- cious God, my heart re -- new, 
-  make my spir -- it right and true. 
-  Do not cast __ me from your sight __
-  nor re -- move __ your Spir -- it’s light. 
-  Your sal -- va -- tion’s joy re -- store,
-  make me stead -- fast ev -- er -- more. 
-  Your sal -- va -- tion’s joy re -- store,
-  make me stead -- fast ev -- er -- more. 
+  \set ignoreMelismata = ##t
+  But should _ there be so strange a wight, _
+  As not to be moved by a tear,
+  Though _ much as -- ton -- ished at the sight
+  We shall still have no cause _ for fear.
+
+  Then let them please them -- selves a -- while
+  Up -- _ on their __ _ fan -- cied sway,
+  For as long as a wo -- man’s pos -- sessed of a smile
+  She will cer -- tain -- ly have her own way, her way, her way, ah! yes,
+  She’ll _ cer -- tain -- ly have her own way.
 }
 
 sopWordsIV = \lyricmode {
   \set stanza = #"4. "
-  Con -- trite spir -- it, plead -- ing cries, 
-  you, O God, will not de -- spise. 
-  Sin -- ful ways __ I will re -- prove, __
-  and my tongue __ shall sing your love. 
-  Let my right -- eous sac -- ri -- fice __
-  then de -- light your ho -- ly eyes. 
-  Let my right -- eous sac -- ri -- fice __
-  then de -- light your ho -- ly eyes. 
+  \set ignoreMelismata = ##t
+  Now, La -- _ dies since I’ve made it plain
+  That the thing _ is real -- _ ly so,
+  We’ll __ _ e -- ven let them hold the rein,
+  But we’ll show them the way __ _ to go;
+
+  As ev -- er since the world be -- gan
+  It has al -- ways __ _ been the way,
+  And we’ll man -- age it so that the ver -- y last man
+  Shall the ver -- y last wo -- man o -- bey, o -- bey, o -- bey, o -- bey;
+  Shall the ver -- y last wo -- man o -- bey.
 }
 
 sopWordsV = \lyricmode {
@@ -131,34 +146,31 @@ sopWordsV = \lyricmode {
 }
 
 altoMusic = \relative c' {
-  \partial 4 f8. f16 |
-  f4. des8 ges8. f16 |
-  f4( des) \bar""
-  \times2/3{des8[ ees] f} |
-  ges4. bes8 aes8. ges16 |
-  f2 \bar""
-  des8. des16 |
-  ees4~ \times2/3{ees8[ d] ees} \times2/3{ees[ d] ees} |
-  f4( des) \bar""
-  des8. des16 |
-  ees4~ \times2/3{ees8[ d] ees} \times2/3{ees[ ges] f} |
-  des2 \bar""
+  d8 |
+  d8.[ d16] d8 g4 fis8 |
+  g4 d8 d[ d] d |
+  fis[ fis] fis fis[ fis] fis |
+  g4 s4.
 
-  f8. f16 |
-  aes4. ges8 \times2/3{ges4 ges8} |
-  f4( des)
+  d16[ d] |
+  d4 d8 g4 fis8 |
+  g4 d8 d d d |
+  fis[ fis] fis d[ e] c |
+  b4 s4. \bar"||"
 
-  f8. ges16 |
-  f4. des8 c8. des16 |
-  ees2
+  d8 |
+  e4 d8 fis4 g8 |
+  d4 c8 d4 d16[ d] |
+  e4 d16[ d] g4 g8 |
+  fis4 s4. fis16[ fis] |
 
-  des8. f16 |
-  aes4. ges8 \times2/3{ges4 ges8} 
-  f4( des)
-
-  f8. ges16 |
-  f4. des8 des8. c16 |
-  des2 \bar"|."
+  g8[ e] fis g e e |
+  fis fis fis g4 e16[ e] |
+  d8 c d d c d |
+  d4 d8 fis4 fis8 |
+  g4 g8 e4 e16[ e] |
+  d8 c d d e c |
+  b4 s4. \bar"|."
 }
 altoWords = \lyricmode {
 }
@@ -181,37 +193,31 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
-  aes8. aes16 |
-  aes4. f8 bes8. aes16 |
-  aes4( f)
+  d,8 |
+  b'8.[ b16] g8 b4 a8 |
+  g4  b8 b[ a] b |
+  c[ c] c c[ b] a |
+  g4 s4.
 
-  \times2/3{f8[ ges] aes} |
-  bes4. des8 c8. bes16 |
-  aes2
+  d16[ d] |
+  b'4 g8 b4 a8 |
+  g4 b8 b a b |
+  c[ c] c fis,[ g] a |
+  g4 s4. \bar"||"
 
-  f8. f16 |
-  ges4~ \times2/3{ges8[ f] ges} \times2/3{ges[ f] ges} |
-  aes4( f)
+  g8 |
+  g4 g8 c4 b8 |
+  a4 g8 fis4 g16[ g] |
+  g4 g16[ g] b4 g8 |
+  a4 s4. a16[ a] |
 
-  f8. f16 |
-  ges4~ \times2/3{ges8[ f] ges} \times2/3{ges[ bes] aes} |
-  f2
-
-  aes8. aes16 |
-  des4. c8 \times2/3{bes4 des8} |
-  des4( aes)
-
-  aes8. bes16 |
-  des4. aes8 aes8. des16 |
-  c2
-
-  aes8. aes16 |
-  des4. c8 \times2/3{bes4 des8} |
-  des4( aes)
-
-  aes8. bes16 |
-  des4. f,8 aes8. ges16 |
-  f2 \bar"|."
+  g8[ g] a b b b |
+  c b a d4 b16[ b] |
+  a8 a a fis g a |
+  b4 b8 c4 c8 |
+  d4 d8 g,4 g16[ g] |
+  a8 a a fis g a |
+  g4 s4. \bar"|."
 }
 
 tenorWords = \lyricmode {
@@ -223,38 +229,31 @@ tenorWordsII = \lyricmode {
 tenorWordsIII = \lyricmode {
 }
 
-bassMusic = \relative c' {  
-  aes8. aes16 |
-  aes4. f8 bes8. aes16 |
-  aes4( f)
+bassMusic = \relative c' {
+  d,8 |
+  g,8.[ g16] b8 d4 d8 |
+  g,4 g8 g[ d'] d |
+  d[ d] d d[ d] d |
+  g,4 d'8\rest d4\rest d16[ d] |
+  
+  g,4 b8 d4 d8 |
+  g,4 g8 g d' d |
+  d8[ d] d d[ d] d |
+  g,4 d'8\rest d4\rest
+  g,8 |
 
-  \times2/3{f8[ ges] aes} |
-  bes4. des8 c8. bes16 |
-  aes2
+  c4 g8 d'4 e8 |
+  d4 d8 d4 g,16[ g] |
+  c4 g16[ g] g4 g8 |
+  d'4 d8\rest d4\rest d16[ d] |
 
-  f8. f16 |
-  ges4~ \times2/3{ges8[ f] ges} \times2/3{ges[ f] ges} |
-  aes4( f)
-
-  f8. f16 |
-  ges4~ \times2/3{ges8[ f] ges} \times2/3{ges[ bes] aes} |
-  f2
-
-  des8. des16 |
-  des4. des8 \times2/3{ges4 ges,8} |
-  des'2
-
-  des8. des16 |
-  des4. des8 aes8. aes16 |
-  aes2\fermata
-
-  des8. des16 |
-  des4. des8 \times2/3{ges4 ges,8} |
-  des'2
-
-  des8. des16 |
-  des4. des8 aes8. aes16 |
-  des2 \bar"|."
+  d8[ c] d e e e |
+  d d d g,4 e'16[ e] |
+  d8 d d d d d |
+  g,4 g8 d'4 d8 |
+  g,4 g8 c4\fermata c16[ c] |
+  d8 d d d d d |
+  g,4 d'8\rest d4\rest \bar"|."
 }
 bassWords = \lyricmode {
 }
@@ -312,8 +311,7 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"God Be Merciful to Me"}}
-  composer = \markup\oldStyleNum"J. P. Holbrook (1821–1889)"
-  poet = \markup\oldStyleNum"Psalm 51"
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"The Lords of Creation"}}
+  composer = \markup\oldStyleNum"J.S.R."
   tagline = ""
 }}

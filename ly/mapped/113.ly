@@ -12,13 +12,8 @@
   system-system-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)
-       (padding . -4)
+       (padding . -3)
        (stretchability . 100))
-  top-markup-spacing =
-    #'((basic-distance . 0)
-       (minimum-distance . 0)
-       (padding . -2)
-       (stretchability . 0))
   ragged-last-bottom = ##f
   ragged-bottom = ##f
   two-sided = ##t
@@ -26,7 +21,7 @@
   outer-margin = 0.75\in
   top-margin = 0.26\in
   bottom-margin = 0.25\in
-  first-page-number = #139
+  first-page-number = #113
   print-first-page-number = ##t
   headerLine = ""
   oddHeaderMarkup = \markup\fill-line{
@@ -47,8 +42,8 @@
 }
 #(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
 global = {
-  \key g \major
-  \time 6/8
+  \key bes \major
+  \time 3/4
   \dynamicUp
   %\set crescendoSpanner = #'dashed-line
   %\set midiInstrument = "recorder"
@@ -57,88 +52,85 @@ global = {
 }
 
 sopMusic = \relative c' {
-	\partial 8 d8 |
-  g8.[ g16] g8 d'4 c8 |
-  b4 g8 g[ fis] g |
-  a[ a] a d[ d] c |
-  b4 b8\rest b4\rest \bar"" d,16[ d] |
-  g4 g8 d'4 c8 |
-  b4 g8 g fis g |
-  a[ a] a d,[ e] fis |
-  g4 b8\rest b4\rest \bar"||"
-  b8 |
-  c4 b8 a4 g8 |
-  fis4 e8 d4 b'16[ b] |
-  c4 b16[ b] d4 b8 |
-  a4 b8\rest b4\rest \bar"" a16[ a] |
-
-  b8[ c] a g fis g |
-  a b c b4 g16[ g] |
-  fis8 e fis d e fis |
-  g4 g8 a4 a8 |
-
-  b4 b8 c4\fermata \bar"" g16[ g] |
-  fis8 e fis d e fis |
-  g4 b8\rest b4\rest \bar"|."
+	\partial 4
+  f4 |
+  d'8. cis16 d4 ees |
+  d8. cis16 c4 f, |
+  c'8. b16 c4 d |
+  
+  \times 2/3 {c8[ bes] g} f4 \bar"" f |
+  d'8. cis16 d4 f |
+  f8. e16 ees4 ees |
+  d8. cis16 d4 f,4 |
+  
+  c'8. bes16 bes4 \bar""\break b8\rest bes |
+  c d ees4 g, |
+  f8 bes d4 bes |
+  c8 d f4 ees |
+  
+  bes8 c d4 bes8\rest \bar""\break d |
+  d d ees4 d |
+  c8 d g,4 a |
+  bes8 bes c4 bes |
+  
+  %page 2
+  a8 g d'8[\fermata ees]\fermata \bar"||"
+  ees4\fermata |
+  d8. cis16 d4 ees |
+  d8. cis16 c4 f, |
+  
+  c'8. b16 c4 d |
+  \times 2/3 {c8[ bes] g} f4 f |
+  d'8. cis16 d4 f |
+  
+  f8 e ees4\fermata ees |
+  d8. cis16 d4 f, |
+  c'8. bes16 bes4 \bar"||"
+  \once \override Score.RehearsalMark #'self-alignment-X = #RIGHT
+  \mark \markup\italic"CODA ad lib." 
+  
+  ees4\fermata|
+  d8. cis16 d4->\fermata \bar"|."
 }
 sopWords = \lyricmode {
   \set stanza = #"1. "
-	\set ignoreMelismata = ##t
-  The Lords of cre -- a -- tion men we call,
-  And they think _ they rule _ the whole;
-  But they’re much mis -- tak -- en af -- ter all,
-  For they’re un -- _ der wom -- an’s con -- trol.
-
-  As ev -- er since the world be -- gan,
-  It has al -- ways __ _ been the way,
-  For __ _ did __ _ not A -- dam, the ver -- y first man,
-  The __ _ ver -- y first wo -- man o -- bey, o -- bey, o -- bey, o -- bey?
-  The __ _ ver -- y first wo -- man o -- bey!
+	O Gen -- e -- vieve, I’d give the world
+  To live a -- gain the love -- ly past!
+  The rose of youth was dew -- im -- pearled,
+  But now it with -- ers in the blast.
+  
+  I see thy face in ev -- ’ry dream,
+  My wak -- ing thoughts are full of thee;
+  Thy glance is in the star -- ry beam
+  That falls a -- long the sum -- mer sea.
+  
+  O Gen -- e -- vieve, Sweet Gen -- e -- vieve,
+  The days may come, the days may go,
+  But still the hands of mem -- ’ry weave
+  The bliss -- ful dreams of long a -- go.
+  
+  O Gen -- e -- vieve!
 }
 
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
-  \set ignoreMelismata = ##t
-  Ye Lords, who at pres -- ent hear my song, __ _
-  I know _ you’ll quick -- _ ly say:
-  “Our __ _ size more large, our nerves more strong;
-  Shall the strong -- er the weak -- er o -- bey?”
-
-  But think not though these words we hear
-  We shall e’er mind the thing you say;
-  For as long as a wo -- man’s pos -- sessed of a tear,
-  Your _ pow -- er will van -- ish a -- way, a -- way, a -- way, a -- way;
-  Your _ pow -- er will van -- ish a -- way.
+  Fair Gen -- e -- vieve, my ear -- ly love,
+  The years but make thee dear -- er far!
+  My heart shall nev -- er, nev -- er rove:
+  Thou art my on -- ly guid -- ing star.
+  
+  For me the past has no re -- gret,
+  What -- e’er the years may bring to me;
+  I bless the hour when first we met,
+  The hour that gave me love and thee!
 }
 
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
-  \set ignoreMelismata = ##t
-  But should _ there be so strange a wight, _
-  As not to be moved by a tear,
-  Though _ much as -- ton -- ished at the sight
-  We shall still have no cause _ for fear.
-
-  Then let them please them -- selves a -- while
-  Up -- _ on their __ _ fan -- cied sway,
-  For as long as a wo -- man’s pos -- sessed of a smile
-  She will cer -- tain -- ly have her own way, her way, her way, ah! yes,
-  She’ll _ cer -- tain -- ly have her own way.
 }
 
 sopWordsIV = \lyricmode {
   \set stanza = #"4. "
-  \set ignoreMelismata = ##t
-  Now, La -- _ dies since I’ve made it plain
-  That the thing _ is real -- _ ly so,
-  We’ll __ _ e -- ven let them hold the rein,
-  But we’ll show them the way __ _ to go;
-
-  As ev -- er since the world be -- gan
-  It has al -- ways __ _ been the way,
-  And we’ll man -- age it so that the ver -- y last man
-  Shall the ver -- y last wo -- man o -- bey, o -- bey, o -- bey, o -- bey;
-  Shall the ver -- y last wo -- man o -- bey.
 }
 
 sopWordsV = \lyricmode {
@@ -146,31 +138,45 @@ sopWordsV = \lyricmode {
 }
 
 altoMusic = \relative c' {
-  d8 |
-  d8.[ d16] d8 g4 fis8 |
-  g4 d8 d[ d] d |
-  fis[ fis] fis fis[ fis] fis |
-  g4 s4.
-
-  d16[ d] |
-  d4 d8 g4 fis8 |
-  g4 d8 d d d |
-  fis[ fis] fis d[ e] c |
-  b4 s4. \bar"||"
-
-  d8 |
-  e4 d8 fis4 g8 |
-  d4 c8 d4 d16[ d] |
-  e4 d16[ d] g4 g8 |
-  fis4 s4. fis16[ fis] |
-
-  g8[ e] fis g e e |
-  fis fis fis g4 e16[ e] |
-  d8 c d d c d |
-  d4 d8 fis4 fis8 |
-  g4 g8 e4 e16[ e] |
-  d8 c d d e c |
-  b4 s4. \bar"|."
+  f4 |
+  f8. e16 f4 g |
+  f8. e16 ees4 ees |
+  
+  ees8. d16 ees4 f |
+  \times 2/3 {d8[ ees] ees} d4 d |
+  f8. e16 f4 aes |
+  
+  g8. g16 g4 ges |
+  f8. e16 f4 d |
+  ees8. d16 d4
+  
+  %interpellated
+  s8 bes'8 |
+  a aes g4 ees |
+  d8 d f4 d |
+  ees8 f g4 fis |
+  
+  fis8 fis f4 s8 fis |
+  fis8 fis fis4 fis |
+  g8 g g4 g |
+  g8 g g4 g |
+  
+  a8 g fis8[ f] \break
+  
+%chorus
+  f4 |
+  f8. e16 f4 g |
+  f8. e16 ees4 ees |
+  
+  ees8. d16 ees4 f |
+  \times 2/3 {d8[ ees] ees} d4 d |
+  f8. e16 f4 aes |
+  
+  g8 g g4 ges |
+  f8. e16 f4 d |
+  ees8. d16 d4 %\bar"||"
+  f4 |
+  f8. e16 f4
 }
 altoWords = \lyricmode {
 }
@@ -193,31 +199,43 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
-  d,8 |
-  b'8.[ b16] g8 b4 a8 |
-  g4  b8 b[ a] b |
-  c[ c] c c[ b] a |
-  g4 s4.
-
-  d16[ d] |
-  b'4 g8 b4 a8 |
-  g4 b8 b a b |
-  c[ c] c fis,[ g] a |
-  g4 s4. \bar"||"
-
-  g8 |
-  g4 g8 c4 b8 |
-  a4 g8 fis4 g16[ g] |
-  g4 g16[ g] b4 g8 |
-  a4 s4. a16[ a] |
-
-  g8[ g] a b b b |
-  c b a d4 b16[ b] |
-  a8 a a fis g a |
-  b4 b8 c4 c8 |
-  d4 d8 g,4 g16[ g] |
-  a8 a a fis g a |
-  g4 s4. \bar"|."
+  f,4 |
+  bes8. bes16 bes4 bes |
+  bes8. bes16 a4 a |
+  a8. a16 a4 a |
+  bes8 bes bes4 bes |
+  bes8. bes16 bes4 bes |
+  
+  bes8. bes16 bes4 bes |
+  bes8. bes16 bes4 bes |
+  a8. f16 f4
+  %%Interpellated
+  
+  s4 |
+  s4 bes bes |
+  bes8 bes bes4 f |
+  bes8 bes bes4 bes |
+  
+  bes8 bes bes4 s8 c8 |
+  c c c4 c |
+  bes8 bes bes4 bes |
+  bes8 bes bes4 bes |
+  
+  c8 cis c[ a]
+  
+  %%Chorus
+  c4 |
+  bes8. bes16 bes4 bes |
+  bes8. bes16 a4 a |
+  a8. a16 a4 a |
+  bes8 bes bes4 bes |
+  bes8. bes16 bes4 bes |
+  
+  bes8 bes bes4 bes |
+  bes8. bes16 bes4 bes |
+  a8. f16 f4 \bar"||"
+  a4 |
+  bes8. bes16 bes4 \bar"|."
 }
 
 tenorWords = \lyricmode {
@@ -230,30 +248,46 @@ tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  d,8 |
-  g,8.[ g16] b8 d4 d8 |
-  g,4 g8 g[ d'] d |
-  d[ d] d d[ d] d |
-  g,4 d'8\rest d4\rest d16[ d] |
+  f,4 |
+  bes,8. bes16 bes4 bes |
+  f'8. f16 f4 f |
   
-  g,4 b8 d4 d8 |
-  g,4 g8 g d' d |
-  d8[ d] d d[ d] d |
-  g,4 d'8\rest d4\rest
-  g,8 |
-
-  c4 g8 d'4 e8 |
-  d4 d8 d4 g,16[ g] |
-  c4 g16[ g] g4 g8 |
-  d'4 d8\rest d4\rest d16[ d] |
-
-  d8[ c] d e e e |
-  d d d g,4 e'16[ e] |
-  d8 d d d d d |
-  g,4 g8 d'4 d8 |
-  g,4 g8 c4\fermata c16[ c] |
-  d8 d d d d d |
-  g,4 d'8\rest d4\rest \bar"|."
+  f8. f16 f4 f |
+  bes,8 bes bes4 bes' |
+  bes8. bes16 bes,4 d |
+  
+  ees8. ees16 ees4 ees |
+  f8. f16 f4 f |
+  f8. bes,16 bes4 
+  
+  %%Interpolated
+  d4\rest |
+  d4\rest ees4 ees |
+  bes8 bes bes4 f' |
+  g8 f ees4 ees |
+  
+  ees8 ees bes4 d8\rest d |
+  d d d4 d |
+  <g g,>8 q q4 q |
+  q8 q q4 q |
+  
+  ees8 ees
+  d8\fermata[ c\fermata]
+  
+  %%Chorus
+  f4\fermata |
+  bes,8. bes16 bes4 bes |
+  f'8. f16 f4 f |
+  
+  f8. f16 f4 f |
+  bes,8 bes bes4 bes' |
+  bes8. bes16 bes,4 d |
+  
+  ees8 ees ees4\fermata ees |
+  f8. f16 f4 f |
+  f8. bes,16 bes4 \bar"||"
+  f'4\fermata |
+  bes,8. bes16 bes4\fermata \bar"|."
 }
 bassWords = \lyricmode {
 }
@@ -311,7 +345,10 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"The Lords of Creation"}}
-  composer = \markup\oldStyleNum"J.S.R."
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Sweet Genevieve"}}
+  poet = \markup\oldStyleNum"George Cooper (1840–1927)"
+  composer = \markup\oldStyleNum"Henry Tucker (1826–1882)"
   tagline = ""
 }}
+
+

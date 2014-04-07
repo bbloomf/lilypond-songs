@@ -12,7 +12,7 @@
   system-system-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)
-       (padding . 1)
+       (padding . -3)
        (stretchability . 100))
   ragged-last-bottom = ##f
   ragged-bottom = ##f
@@ -42,121 +42,107 @@
 }
 #(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
 global = {
-  \key aes \major
-  \time 4/2
+  \key f \major
+  \time 4/4
   \dynamicUp
   %\set crescendoSpanner = #'dashed-line
   %\set midiInstrument = "recorder"
   \autoBeamOff
   \override DynamicTextSpanner #'style = #'none
-  %\override TupletBracket #'bracket-visibility = ##f
+  \override DynamicLineSpanner #'staff-padding = #0.0
+  \override DynamicLineSpanner #'Y-extent = #'(-1 . 1)
 }
 
 sopMusic = \relative c' {
-	f2 \times 2/3 {f4 g aes} g2 f |
-  g \times 2/3 {g4 aes bes} aes4.( g8) f2 |
-  c' \times 2/3 {bes4 c des} c4.( bes8) aes2 |
-  bes4.( aes8) g2 f1 |
+  d4 d8[ e] f[ g] a4 |
+  f e d2 |
+  f4 e d cis? |
+  d8[ e] f4 e2 | \break
   
-  f2 \times 2/3 {f4 g aes} g2 f |
-  g \times 2/3 {g4 aes bes} aes4.( g8) f2 |
-  c' \times 2/3 {bes4 c des} c4.( bes8) aes2 |
-  bes4.( aes8) g2 f1 |
+  d4 d8[ e] f[ g] a4 |
+  f e d2 |
+  e4 f8[ g] a4 g |
+  f e d2 | \break
   
-  c'2 \times 2/3 {aes4 bes c} bes2 bes |
-  aes \times 2/3 {f4 g aes} g2 g |
-  f2 \times 2/3 {f4 g aes} bes2 bes |
-  aes \times 2/3 {bes4 aes bes} c1 |
+  d4\p c d e |
+  f a8[ g] f2 |
+  f4\< e f g |
+  a\! c8[ b] a2 | \break
   
-  f,2 \times 2/3 {f4 g aes} g2 f |
-  g \times 2/3 {g4 aes bes} aes4.( g8) f2 |
-  c' \times 2/3 {bes4 c des} c4.( bes8) aes2 |
-  bes4.( aes8) g2 f1 \bar"|."
+  d4\f d c a |
+  f g a2 |
+  d,4 d8[ e] f[ g] a4\> |
+  f e\! d2 \bar "|."
 }
 sopWords = \lyricmode {
-  \set stanza = #"1. "
-  Once to _ _ ev -- ’ry man and _ _ na -- tion
-  Comes the _ _ mo -- ment to de -- cide,
-  In the _ _ strife of truth with _ _ false -- hood,
-  For the _ _ good or e -- vil side;
-  Some great _ _ cause, some great de -- _ _ ci -- sion,
-  Of -- f’ring _ _ each the bloom or _ _ blight,
-  And the _ _ choice goes by for -- _ _ ev -- er
-  ’Twixt that _ _ dark -- ness and that light.
-}
-
-sopWordsII = \lyricmode {
-  \set stanza = #"2. "
-  Then to _ _ side with truth is _ _ no -- ble,
-  When we _ _ share her wretch -- ed crust,
-  Ere her _ _ cause bring fame and _ _ prof -- it,
-  And ’tis _ _ prosp -- ’rous to be just;
-  Then it _ _ is the brave man _ _ choos -- es,
-  While the _ _ cow -- ard stands a -- _ _ side
-  Till the _ _ mul -- ti -- tude make _ _ vir -- tue
-  Of the _ _ faith they had de -- nied.
-}
-
-sopWordsIII = \lyricmode {
-  \set stanza = #"3. "
-  By the _ _ light of burn -- ing _ _ mar -- tyrs
-  Je -- sus’ _ _ bleed -- ing feet I track,
-  Toil -- ing _ _ up new Cal -- v’ries _ _ ev -- er
-  With the _ _ cross that turns not back;
-  New oc -- _ _ ca -- sions teach new _ _ du -- ties,
-  Time makes _ _ an -- cient good un -- _ _ couth;
-  They must _ _ up -- ward still and _ _ on -- ward
-  Who would _ _ keep a -- breast of truth.
-}
-
-sopWordsIV = \lyricmode {
-  \set stanza = #"4. "
-  Though the _ _ cause of e -- vil _ _ pros -- per,
-  Yet ’tis _ _ truth a -- lone is strong;
-  Though her _ _ por -- tion be the _ _ scaf -- fold,
-  And up -- _ _ on the throne be wrong,
-  Yet that _ _ scaf -- fold sways the _ _ fu -- ture,
-  And, be -- _ _ hind the dim un -- _ _ known,
-  Stand -- eth _ _ God with -- in the _ _ shad -- ow
-  Keep -- ing _ _ watch a -- bove his own.
-}
-
-sopWordsV = \lyricmode {
-  \set stanza = #"5. "
+  
 }
 
 altoMusic = \relative c' {
-  c2 c e f |
-  f e f c |
-  c \times 2/3 {ees?2 f4} g2 f |
-  f e f1 |
+  a4 d8[ cis] d[ e] f4 |
+  d cis a2 |
+  d4 cis d a |
+  a d cis2 |
   
-  c2 c e f |
-  f e f c |
-  c \times 2/3 {ees?2 f4} g2 f |
-  f e f1 |
+  a4 a8[ cis] d[ e] f4 |
+  d cis a2 |
+  cis4 d8[ e] f4 e |
+  d cis a2 |
   
-  ees2 ees ees ees |
-  c f f e |
-  f c f ees |
-  c f e1 |
+  bes4 a bes bes |
+  c e c2 |
+  d4 cis d e8[ c] |
+  c4 e8[ d] c2 |
   
-  aes,2 f' e f |
-  f e f f |
-  ees? ees ees f |
-  f e f1 \bar"|."
+  f4 f8[ e] f4 c |
+  d d e2 |
+  d4 d8[ cis] d[ e] f4 |
+  d cis a2 \bar "|."
 }
 altoWords = \lyricmode {
+  \set stanza = #"1. "
+  Je -- sus, Lov -- er of my soul,
+  Let me to Thy bos -- om fly,
+  While the bil -- lows near me roll,
+  While the tem -- pest still is high!
+  Hide me, O my Sav -- ior, hide,
+  Till the storm of life is past;
+  Safe in -- to the ha -- ven guide,
+  O re -- ceive my soul at last!
 }
 altoWordsII = \lyricmode {
 %\markup\italic
   \set stanza = #"2. "
+  Oth -- er ref -- uge have I none,
+  Hangs my help -- less soul on Thee:
+  Leave, ah, leave me not a -- lone,
+  Still sup -- port and com -- fort me;
+  All my trust on Thee is stayed,
+  All my help from Thee I bring;
+  Cov -- er my de -- fence -- less head
+  With the shad -- ow of Thy wing!
 }
 altoWordsIII = \lyricmode {
   \set stanza = #"3. "
+  Thou, oh, Christ, art all I want,
+  More than all in Thee I find;
+  Raise the fall -- en, cheer the faint,
+  Heal the sick, and lead the blind,
+  Just and ho -- ly is Thy Name,
+  I am all un -- right -- eous -- ness!
+  Vile and full of sin I am,
+  Thou art full of truth and grace.
 }
 altoWordsIV = \lyricmode {
   \set stanza = #"4. "
+  Plen -- teous grace with Thee is found,
+  Grace to cov -- er all my sin;
+  Let the heal -- ing streams a -- bound;
+  Make and keep me pure with -- in.
+  Thou of life the foun -- tain art,
+  Free -- ly let me take of Thee;
+  Spring Thou up with -- in my heart,
+  Rise to all e -- ter -- ni -- ty.
 }
 altoWordsV = \lyricmode {
   \set stanza = #"5. "
@@ -166,116 +152,107 @@ altoWordsVI = \lyricmode {
   \set stanza = #"6. "
   \set ignoreMelismata = ##t
 }
-tenorMusic = \relative c' {
-  aes2 c c aes |
-  des c c4.( bes8) aes2 |
-  ees' \times 2/3 {bes2 aes4} c2 c |
-  des4.( c8) bes2 aes1 |
+tenorMusic = \relative c {
+  f4 a a a |
+  a a8[ g] f2 |
+  a4 a a a |
+  a a a2 |
   
-  aes2 c c aes |
-  des c c4.( bes8) aes2 |
-  ees' \times 2/3 {bes2 aes4} c2 c |
-  des4.( c8) bes2 aes1 |
+  f8[ g] a4 a a |
+  a e8[ g] f2 |
+  a4 a8[ c] c4 bes |
+  a a8[ g] f2 |
   
-  aes2 aes aes g |
-  aes c c c |
-  f, aes aes g |
-  aes f g1 |
+  f4 f f g |
+  a c8[ bes] a2 |
+  a4 a a c8[ e,] |
+  f8( a4) gis8 a2 |
   
-  f2 c' c aes |
-  des c c4.( bes8) aes2 |
-  aes \times 2/3 {g4 aes bes} aes4.( g8) f2 |
-  des'4.( c8) bes2 aes1 \bar"|."
+  bes4 bes c f, |
+  a d cis2 |
+  a8[ bes] a[ g] a4 a |
+  a e16[ f g8] f2 \bar "|."
 }
-
 tenorWords = \lyricmode {
+
 }
 
-tenorWordsII = \lyricmode {
-}
-
-tenorWordsIII = \lyricmode {
-}
-
-bassMusic = \relative c' {
-  f,2 aes, c des |
-  bes c f f |
-  aes \times 2/3 {g2 f4} e2 f |
-  bes, c f1 |
+bassMusic = \relative c {
+  d4 a d4 f,8[ g] |
+  a4 a d2 |
+  d4 e f g |
+  f8[ e] d4 a2 |
   
-  f,2 aes c des |
-  bes c f f |
-  aes \times 2/3 {g2 f4} e2 f |
-  bes, c f1 |
+  d8[ e] f[ e] d4 f,8[ g] |
+  a4 a d2 |
+  a4 d8[ c] f4 g |
+  a a, d2 |
   
-  aes,2 c ees ees |
-  f aes, c c |
-  f ees des ees |
-  f4( ees) des2 c1 |
+  bes4 f bes8[ a] g4 |
+  f c' f,2 |
+  d'4 a d c |
+  f e a,2 |
   
-  des2 aes c des |
-  bes c f f |
-  aes ees aes, des |
-  bes c f1 \bar"|."
+  bes4 bes' a f |
+  d bes a2 |
+  f'8[ g] f[ e] d4 f,8[ g] |
+  a4 a d2 \bar "|."
 }
 bassWords = \lyricmode {
+
 }
 
 pianoRH = \relative c' {
+  
 }
 pianoLH = \relative c' {
+  
 }
 
 \score {
-<<
+  <<
    \new ChoirStaff <<
     \new Staff = women <<
-      \new Voice = "sopranos" { \voiceOne << \global \sopMusic >> }
-      \new Voice = "altos" { \voiceTwo << \global \altoMusic >> }
+      \new Voice = "sopranos" \transpose f a { \voiceOne << \global \sopMusic >> }
+      \new Voice = "altos" \transpose f a { \voiceTwo << \global \altoMusic >> }
     >>
-    \new Lyrics = "altos"  \lyricsto "sopranos" \sopWords
-    \new Lyrics = "altosII"  \lyricsto "sopranos" \sopWordsII
-    \new Lyrics = "altosIII"  \lyricsto "sopranos" \sopWordsIII
-    \new Lyrics = "altosIV"  \lyricsto "sopranos" \sopWordsIV
-    \new Lyrics = "altosV"  \lyricsto "sopranos" \sopWordsV
+    \new Lyrics \lyricsto "altos" \altoWords
+    \new Lyrics \lyricsto "altos" \altoWordsII
+    \new Lyrics \lyricsto "altos" \altoWordsIII
+    \new Lyrics \lyricsto "altos" \altoWordsIV
+    \new Lyrics \lyricsto "altos" \altoWordsV
+    \new Lyrics \lyricsto "altos" \altoWordsVI
    \new Staff = men <<
       \clef bass
-      \new Voice = "tenors" { \voiceOne << \global \tenorMusic >> }
-      \new Voice = "basses" { \voiceTwo << \global \bassMusic >> }
+      \new Voice = "tenors" \transpose f a { \voiceOne << \global \tenorMusic >> }
+      \new Voice = "basses" \transpose f a { \voiceTwo << \global \bassMusic >> }
     >>
-    \new Lyrics \with { alignAboveContext = #"tenors" } \lyricsto "tenors" \tenorWordsIII
-    \new Lyrics \with { alignAboveContext = #"tenors" } \lyricsto "tenors" \tenorWordsII
-    \new Lyrics \with { alignAboveContext = #"tenors" } \lyricsto "tenors" \tenorWords
   >>
 %    \new PianoStaff << \new Staff { \new Voice { \pianoRH } } \new Staff { \clef "bass" \pianoLH } >>
   >>
   
   \layout {
-    \context {
-      \Lyrics
-      \override LyricText #'font-size = #1.3
-      \override VerticalAxisGroup #'staff-affinity = #0
-      \override LyricText #'X-offset = #center-on-word
+  \context {
+    \Lyrics
+    \override LyricText #'font-size = #1.3
+    \override VerticalAxisGroup #'staff-affinity = #0
+    \override LyricText #'X-offset = #center-on-word
     }
     \context {
       \Score
-      \override SpacingSpanner #'base-shortest-duration = #(ly:make-moment 1 8)
+      \override SpacingSpanner #'base-shortest-duration = #(ly:make-moment 1 4)
       \override SpacingSpanner #'common-shortest-duration = #(ly:make-moment 1 4)
     }
     \context {
       % Remove all empty staves
-      \Staff \RemoveEmptyStaves \override VerticalAxisGroup #'remove-first = ##t
-      
-      \override VerticalAxisGroup #'staff-staff-spacing =
-      #'((basic-distance . 0)
-         (minimum-distance . 0)
-         (padding . -1)
-         (stretchability . 2))
+      % \Staff \RemoveEmptyStaves \override VerticalAxisGroup #'remove-first = ##t
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Once to Every Man and Nation"}}
-  poet = \markup\oldStyleNum"James Russell Lowell (1819–1891)"
-  composer = \markup\oldStyleNum"Thomas John Williams (1869–1944)"
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Jesus, Lover of my soul"}}
+  poet = \markup\oldStyleNum"Charles Wesley (1707–1788)"
+  composer = \markup\concat{\italic "Aberystwyth" \oldStyleNum", Joseph Parry (1841–1903)"}
   tagline = ""
 }}
+
+

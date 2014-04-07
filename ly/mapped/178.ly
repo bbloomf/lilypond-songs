@@ -1,4 +1,4 @@
-﻿\version "2.14.2"
+\version "2.14.2"
 \include "util.ly"
 \header{ tagline = ""}
 \paper {
@@ -42,7 +42,7 @@
 }
 #(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
 global = {
-  \key g \major
+  \key d \major
   \time 4/4
   \dynamicUp
   %\set crescendoSpanner = #'dashed-line
@@ -52,72 +52,73 @@ global = {
 }
 
 sopMusic = \relative c' {
-  g'4 d g a |
-  b a b8[ c] \bar"" d4 |
-  e d c b |
-  a2. b4\rest \bar"||"
-  
-  g4 d g a |
-  b a b8[ c] \bar"" d4 |
-  e d c b |
-  a2. b4\rest \bar"||"
-  
-  d4 e d e |
-  d c8[ b] a2 |
-  b4 a8[ b] c4 b |
-  a8[ g] a[ b] a2 |
+	a'4 d a b |
+  a4. g8 fis2 |
+  a4 a g fis |
+  e e d2 |
 
-  g4 d g a |
-  b a b8[ c] \bar"" d4 |
-  e d8[ c] b4 a |
-  g2. b4\rest \bar"|."
+  a'4 d a b |
+  a4. g8 fis2 |
+  a4 a g fis |
+  e e d2 |
+
+  e4 e fis8[ gis] a4 |
+  a gis a2 |
+  b4. cis8 d4 d |
+  cis cis b2 |
+
+  fis4 fis b a |
+  a gis a2 |
+  b4 a g fis |
+  e e d2 \bar"|."
 }
 sopWords = \lyricmode {
   \set stanza = #"1. "
-  Rise, my soul, and stretch thy wings,
-  Thy bet -- ter por -- tion trace;
-  Rise from tran -- si -- to -- ry things,
-  Towards heav’n, thy na -- tive place;
-  Sun, and moon, and stars de -- cay,
-  Time shall soon this earth re -- move;
-  Rise, my soul, and haste a -- way
-  To seats pre -- pared a -- bove.
+  At the Lamb’s high feast we sing
+  Praise to our vic -- to -- rious King,
+  Who hath washed us in the tide
+  Flow -- ing from His pierc -- èd side;
+  Praise we Him, whose love di -- vine,
+  Gives His sa -- cred Blood for wine,
+  Gives His Bod -- y for the feast,
+  Christ the Vic -- tim, Christ the Priest.
 }
 
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
-  Riv -- ers to the o -- cean run,
-  Nor stay in all their course;
-  Fire as -- cend -- ing seeks the sun,
-  Both speed them to their source;
-  To a soul that's born of God,
-  Pants to view his glo -- rious face;
-  Up -- ward tends to his a -- bode,
-  To rest in his em -- brace.
+  Where the Pas -- chal blood is poured,
+  Death’s dark an -- gel sheaths his sword
+  Is -- rael’s hosts tri -- umph -- ant go
+  Through the wave that drowns the foe.
+  Praise we Christ, Whose Blood was shed,
+  Pas -- chal Vic -- tim, Pas -- chal Bread;
+  With sin -- cer -- i -- ty and love
+  Eat we man -- na from a -- bove.
+  
 }
 
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
-  Fly me rich -- es, fly me cares;
-  While I that coast ex -- plore;
-  Flat -- t’ring world, with all thy snares,
-  So -- li -- cit me no more.
-  Pil -- grims fix not here their home;
-  Stran -- gers tar -- ry but a night,
-  When the last dear morn is come,
-  They’ll rise to joy -- ful light.
+  Might -- y Vic -- tim from on high!
+  Pow’rs of hell be -- neath Thee lie;
+  Death is bro -- ken in the fight,
+  Thou hast brought us life and light:
+  Now Thy ban -- ner Thou dost wave,
+  Con -- quering Sa -- tan and the grave.
+  See the prince of dark -- ness quell’d;
+  Heav’n’s bright gates are o -- pen held.
 }
 
 sopWordsIV = \lyricmode {
   \set stanza = #"4. "
-  Cease, ye pil -- grims, cease to mourn,
-  Press on -- ward to the prize;
-  Soon our Sav -- ior will re -- turn,
-  Tri -- um -- phant in the skies:
-  Yet a sea -- son, and you know
-  Hap -- py en -- trance will be giv’n,
-  All our sor -- rows left be -- low,
-  And earth ex -- changed for heav’n.
+  Pas -- chal tri -- umph, Pas -- chal joy,
+  Sin a -- lone can this de -- stroy;
+  From sin’s death do Thou set free
+  Souls re -- born, dear Lord, in Thee.
+  Hymns of glo -- ry, songs of praise,
+  Fa -- ther, un -- to Thee we raise;
+  Ris -- en Lord, all praise to Thee,
+  With the Spir -- it, ev -- er be.
 }
 
 sopWordsV = \lyricmode {
@@ -125,24 +126,25 @@ sopWordsV = \lyricmode {
 }
 
 altoMusic = \relative c' {
-  d4 d e fis |
-  g fis g g |
-  g g g8[ fis] g4 |
-  fis2. s4 |
-  d d e fis |
-  g fis g g |
-  g g g8[ fis] g4 |
-  fis2. s4 |
+  d4 d d d |
+  d cis d2 |
+  d4 d8[ cis] b[ cis] d4 |
+  d cis d2 |
 
-  g g g g |
-  g a8[ g] fis2 |
-  g4 fis8[ g] a4 g |
-  fis8[ e] fis[ g] fis2 |
+  d4 d d d |
+  d cis d2 |
+  d4 d8[ cis] b[ cis] d4 |
+  d cis d2 |
 
-  d4 d e fis |
-  g fis g g |
-  g g8[ a] g4 fis |
-  g2. s4 \bar"|."
+  cis4 cis d cis |
+  fis e8[ d] cis2 |
+  e8[ fis] g4 fis fis |
+  fis fis8[ e] d2 |
+
+  d4 d d cis |
+  d d cis2 |
+  d4 d8[ cis] b[ cis] d4 |
+  d cis d2 \bar"|."
 }
 altoWords = \lyricmode {
 }
@@ -165,23 +167,25 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
-  b4 a b8[ cis] d4 |
-  d d d d |
-  c d e8[ d] d4 |
-  d2. s4 |
-  b4 a b8[ cis] d4 |
-  d d d d |
-  c d e8[ d] d4 |
-  d2. s4 |
+  fis,4 fis8[ g] a4 g8[ fis] |
+  e[ d] e4 d2 |
+  fis4 fis g a |
+  b a fis2 |
 
-  b c b c |
-  b d d2 |
-  d4 d d d |
-  d d d2 |
-  b4 a b8[ cis] d4 |
-  d d d d |
-  c d8[ e] d4 c |
-  b2. s4 \bar"|."
+  fis4 fis8[ g] a4 g8[ fis] |
+  e[ d] e4 d2 |
+  fis4 fis g a |
+  b a fis2 |
+
+  a4 a a a |
+  b b a2 |
+  g4. a8 b4 b |
+  b ais b2 |
+
+  a4 a g8[ fis] e4 |
+  d8[ fis] e[ d] e2 |
+  g4 fis g a |
+  b a8[ g] fis2 \bar"|."
 }
 
 tenorWords = \lyricmode {
@@ -194,23 +198,25 @@ tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  g4 fis e d |
-  g d g8[ a] b4 |
-  c b a g |
-  d2. d4\rest |
-  g fis e d |
-  g d g8[ a] b4 |
-  c b a g |
-  d2. d4\rest |
+  d,4 b fis g |
+  a a d2 |
+  d4 d e fis |
+  g8[ e] a4 d,2 |
 
-  g g g g |
-  g fis8[ g] d2 |
-  d4 d d d |
-  d d d2 |
-  g4 fis e d |
-  g d g,8[ a] b4 |
-  c b8[ c] d4 d |
-  g,2. d'4\rest \bar"|."
+  d4 b fis g |
+  a a d2 |
+  d4 d e fis |
+  g8[ e] a4 d,2 |
+
+  a4 a d fis8[ e] |
+  d4 e a,2 |
+  e'4 e b8[ cis] d[ e] |
+  fis4 fis b,2 |
+
+  d4 d g, a |
+  b b a2 |
+  g4 d' e fis |
+  g8[ e] a4 d,2 \bar"|."
 }
 bassWords = \lyricmode {
 }
@@ -268,8 +274,10 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Rise, my soul, and stretch thy wings"}}
-  composer = \markup\oldStyleNum"James Nares (1715–1783)"
-  poet = \markup\oldStyleNum"Robert Seagrave (1693–1764)"
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"At the Lamb’s High Feast We Sing"}}
+  composer = \markup\oldStyleNum"Jacob Hintze (1622–1702)"
+  arranger = \markup\oldStyleNum"Harmonized by Johann Sebastian Bach (1685–1750)"
+  poet = \markup\oldStyleNum"From 7th century Latin"
+  meter = \markup\oldStyleNum"Translated by Robert Campbell (1814–1868)"
   tagline = ""
 }}

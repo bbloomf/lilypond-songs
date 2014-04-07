@@ -21,7 +21,7 @@
   outer-margin = 0.75\in
   top-margin = 0.26\in
   bottom-margin = 0.25\in
-  first-page-number = #179
+  first-page-number = #99
   print-first-page-number = ##t
   headerLine = ""
   oddHeaderMarkup = \markup\fill-line{
@@ -42,8 +42,8 @@
 }
 #(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
 global = {
-  \key des \major
-  \time 3/4
+  \key f \major
+  \time 2/4
   \dynamicUp
   %\set crescendoSpanner = #'dashed-line
   %\set midiInstrument = "recorder"
@@ -52,78 +52,84 @@ global = {
 }
 
 sopMusic = \relative c' {
-	\partial 4 f8. f16 |
-  f4. des8 ges8. f16 |
-  f4( des) \bar""
-  \times2/3{des8[ ees] f} |
-  ges4. bes8 aes8. ges16 |
-  f2 \bar""
-  des8. des16 |
-  ees4~ \times2/3{ees8[ d] ees} \times2/3{ees[ d] ees} |
-  f4( des?) \bar""
-  des8. des16 |
-  ees4~ \times2/3{ees8[ d] ees} \times2/3{ees[ ges] f} |
-  des?2 \bar""
+  \repeat volta 2 {
+  	a'2~ |
+    a8 d c bes |
 
-  aes'8. aes16 |
-  f'4. ees8 \times2/3{ees[ des] bes} |
-  aes4( f) \bar""
-  des'8. bes16 |
-  aes4. f8 ees8. f16 |
-  ges2\fermata \bar""
-  f8. aes16 |
-  f'4. ees8 \times2/3{ees[ des] bes} |
-  aes4( f) \bar""
-  des'8. bes16 |
-  aes4. des,8 f8. ees16 |
-  des2 \bar"|."
+    a2~ |
+    a8 a g f |
+    e2~ |
+    e8 g f e |
+    d2 |
+    
+    b'2\rest |
+    a2~ |
+    a8 d c bes |
+    a2~ |
+    a8 a b c |
+
+    c4. g8 |
+    d'4. g,8 |
+    c2~ |
+    c4 b\rest |
+  } \break 
+
+  c8 c4 d8 |
+  c16 d8 c16~ c4 |
+  a8 a4 bes8 |
+  a16 bes8 a16~ a4 |
+  a8 g4 fis8 |
+
+  a8 g4 c,8 |
+  f a e' d |
+  c a bes b |
+  c c4 d8 |
+
+  c16 d8 c16~ c4 |
+  a8 a4 bes8 |
+  a16 bes8 a16~ a8 a |
+  a8 g4 a8 |
+
+  c bes g a |
+  f2~ |
+  f4 b\rest \bar"|."
 }
 sopWords = \lyricmode {
   \set stanza = #"1. "
-  God, be mer -- ci -- ful to me; __
-  on your grace I rest my plea. 
-  My trans -- gres -- sions I __ con -- fess; __
-  grief and guilt __ my soul op -- press. 
-  Wash me, make me pure with -- in; __
-  cleanse, O cleanse me from my sin.
-  Wash me, make me pure with -- in; __
-  cleanse, O cleanse me from my sin. 
+	So __ you’re going a -- way __
+  Be -- cause your heart __ has gone a -- stray,
+  And __ you prom -- ised me __
+  That you would al -- ways faith -- ful be. __
+  
+
+  Good bye, my la -- dy love,
+  Fare -- well, my tur -- tle -- dove,
+  You are the i -- dol and dar -- ling of my heart,
+  But some day you will come back to me,
+  And love me ten -- der -- ly,
+  So good bye, my la -- dy love, good bye.
 }
 
 sopWordsII = \lyricmode {
-  \set stanza = #"2. "
-  I have sinned a -- gainst your grace 
-  and pro -- voked you to your face. 
-  I con -- fess __ your judg -- ment just; __
-  speech -- less, I __ your mer -- cy trust. 
-  Let my con -- trite heart re -- joice __
-  and in glad -- ness hear your voice. 
-  Let my con -- trite heart re -- joice __
-  and in glad -- ness hear your voice. 
+  Go __ to him you love, __
+  And be as true __ as stars a -- bove;
+  But __ your heart will yearn, __
+  And then some day you will re -- turn. __
 }
 
 sopWordsIII = \lyricmode {
-  \set stanza = #"3. "
-  Gra -- cious God, my heart re -- new, 
-  make my spir -- it right and true. 
-  Do not cast __ me from your sight __
-  nor re -- move __ your Spir -- it’s light. 
-  Your sal -- va -- tion’s joy re -- store,
-  make me stead -- fast ev -- er -- more. 
-  Your sal -- va -- tion’s joy re -- store,
-  make me stead -- fast ev -- er -- more. 
+  \set stanza = #"2. "
+  When __ the dew -- drops fall, __
+  ’Tis then your heart, __ I know, will call.
+  So __ be -- ware, my dove, __
+  Don’t trust your life to some false love. __
 }
 
 sopWordsIV = \lyricmode {
-  \set stanza = #"4. "
-  Con -- trite spir -- it, plead -- ing cries, 
-  you, O God, will not de -- spise. 
-  Sin -- ful ways __ I will re -- prove, __
-  and my tongue __ shall sing your love. 
-  Let my right -- eous sac -- ri -- fice __
-  then de -- light your ho -- ly eyes. 
-  Let my right -- eous sac -- ri -- fice __
-  then de -- light your ho -- ly eyes. 
+  But __ if you must go, __
+  Re -- mem -- ber, dear, __ I love you so,
+  Sure __ as stars do shine, __
+  You’ll think of when I called you mine. __
 }
 
 sopWordsV = \lyricmode {
@@ -131,34 +137,45 @@ sopWordsV = \lyricmode {
 }
 
 altoMusic = \relative c' {
-  \partial 4 f8. f16 |
-  f4. des8 ges8. f16 |
-  f4( des) \bar""
-  \times2/3{des8[ ees] f} |
-  ges4. bes8 aes8. ges16 |
-  f2 \bar""
-  des8. des16 |
-  ees4~ \times2/3{ees8[ d] ees} \times2/3{ees[ d] ees} |
-  f4( des) \bar""
-  des8. des16 |
-  ees4~ \times2/3{ees8[ d] ees} \times2/3{ees[ ges] f} |
-  des2 \bar""
+  \repeat volta 2 {
+    f2~ |
+    f8 f g g |
+    f2~ |
+    f8 f e d |
+    cis2~ |
+    cis8 cis cis cis |
+    d2 |
+    s2 |
 
-  f8. f16 |
-  aes4. ges8 \times2/3{ges4 ges8} |
-  f4( des)
+    f2~ |
+    f8 f g g |
+    f2~ |
+    f8 f dis dis |
+    e4. e8 |
+    f4. f8 |
+    c\rest e[ f fis]( |
+    g4) s |
+  }
 
-  f8. ges16 |
-  f4. des8 c8. des16 |
-  ees2
+  f8 f4 f8 |
+  f16 f8 f16~ f4 |
+  f8 f4 f8 |
+  f16 f8 f16~ f4 |
+  
+  f8 f4 dis8 |
+  e8 e4 c8 |
+  f8 a gis gis |
+  a a g! f |
 
-  des8. f16 |
-  aes4. ges8 \times2/3{ges4 ges8} 
-  f4( des)
-
-  f8. ges16 |
-  f4. des8 des8. c16 |
-  des2 \bar"|."
+  f8 f4 f8 |
+  f16 f8 f16~ f4 |
+  f8 f4 f8 |
+  f16 f8 f16~ f8 f |
+  
+  f8 f4 f8 |
+  e8 e e e |
+  c2~ |
+  c4 s \bar"\."
 }
 altoWords = \lyricmode {
 }
@@ -181,37 +198,45 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
-  aes8. aes16 |
-  aes4. f8 bes8. aes16 |
-  aes4( f)
+  \repeat volta 2 {
+    a2~ |
+    a 8 d d d |
+    a2~ |
+    a8 f g gis |
+    a2~ |
+    a8 bes a g |
+    f2 |
+    s |
 
-  \times2/3{f8[ ges] aes} |
-  bes4. des8 c8. bes16 |
-  aes2
+    a2~ |
+    a8 d d d |
+    a2~ |
+    a8 d a a |
+    c4. c8 |
+    b4. b8 |
+    a8\rest g[ aes a]( |
+    bes4) s |
+  }
 
-  f8. f16 |
-  ges4~ \times2/3{ges8[ f] ges} \times2/3{ges[ f] ges} |
-  aes4( f)
+   a8 a4 bes8 |
+   a16 bes8 a16~ a4 |
+   c8 c4 d8 |
+   c16 d8 c16~ c4 |
+   
+   b8 b4 c8 |
+   c c4 bes!8 |
+   a a b b |
+   c f, g gis |
 
-  f8. f16 |
-  ges4~ \times2/3{ges8[ f] ges} \times2/3{ges[ bes] aes} |
-  f2
-
-  aes8. aes16 |
-  des4. c8 \times2/3{bes4 des8} |
-  des4( aes)
-
-  aes8. bes16 |
-  des4. aes8 aes8. des16 |
-  c2
-
-  aes8. aes16 |
-  des4. c8 \times2/3{bes4 des8} |
-  des4( aes)
-
-  aes8. bes16 |
-  des4. f,8 aes8. ges16 |
-  f2 \bar"|."
+   a8 a4 bes8 |
+   a16 bes8 a16~ a4 |
+   c8 c4 d8 |
+   c16 d8 c16~ c8 c |
+   
+   b b4 b8 |
+   c c bes! bes |
+   a2~ |
+   a4 s \bar"|."
 }
 
 tenorWords = \lyricmode {
@@ -223,38 +248,46 @@ tenorWordsII = \lyricmode {
 tenorWordsIII = \lyricmode {
 }
 
-bassMusic = \relative c' {  
-  aes8. aes16 |
-  aes4. f8 bes8. aes16 |
-  aes4( f)
+bassMusic = \relative c' {
+  \repeat volta 2 {
+    d,2~ |
+    d8 d g, g |
+    d'2~ |
+    d8 d d d |
+    a2~ |
+    a8 g a a |
+    d2 |
+    d\rest |
 
-  \times2/3{f8[ ges] aes} |
-  bes4. des8 c8. bes16 |
-  aes2
+    d2~ |
+    d8 d g, g |
+    d'2~ |
+    d8 d fis fis |
+    g4( e8) c |
+    g4 g |
+    c2~ |
+    c4 d\rest |
+  }
 
-  f8. f16 |
-  ges4~ \times2/3{ges8[ f] ges} \times2/3{ges[ f] ges} |
-  aes4( f)
+  f8 f4 f8 |
+  f16 f8 f16~ f4 |
+  f8 f4 f8 |
+  f16 f8 f16~ f4 |
 
-  f8. f16 |
-  ges4~ \times2/3{ges8[ f] ges} \times2/3{ges[ bes] aes} |
-  f2
+  d8 g4 a8 |
+  c,8 c4 g'8 |
+  f8 f f f |
+  f f e f |
 
-  des8. des16 |
-  des4. des8 \times2/3{ges4 ges,8} |
-  des'2
+  f8 f4 f8 |
+  f16 f8 f16~ f4 |
+  f8 f4 f8 |
+  f16 f8 f16~ f8 f |
 
-  des8. des16 |
-  des4. des8 aes8. aes16 |
-  aes2\fermata
-
-  des8. des16 |
-  des4. des8 \times2/3{ges4 ges,8} |
-  des'2
-
-  des8. des16 |
-  des4. des8 aes8. aes16 |
-  des2 \bar"|."
+  d g4 g8 |
+  c,8 c c c |
+  <f \tweak #'font-size #'-2 f,>2~ |
+  q4 d\rest \bar"|."
 }
 bassWords = \lyricmode {
 }
@@ -312,8 +345,7 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"God Be Merciful to Me"}}
-  composer = \markup\oldStyleNum"J. P. Holbrook (1821–1889)"
-  poet = \markup\oldStyleNum"Psalm 51"
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Good Bye, My Lady Love"}}
+  composer = \markup\oldStyleNum"Joseph E. Howard (1878–1961)"
   tagline = ""
 }}

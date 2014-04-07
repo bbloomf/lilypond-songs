@@ -12,7 +12,7 @@
   system-system-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)
-       (padding . -3)
+       (padding . 5)
        (stretchability . 100))
   ragged-last-bottom = ##f
   ragged-bottom = ##f
@@ -21,7 +21,7 @@
   outer-margin = 0.75\in
   top-margin = 0.26\in
   bottom-margin = 0.25\in
-  first-page-number = #111
+  first-page-number = #187
   print-first-page-number = ##t
   headerLine = ""
   oddHeaderMarkup = \markup\fill-line{
@@ -42,120 +42,125 @@
 }
 #(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
 global = {
-  \key ees \major
-  \time 2/4
+  \key c \major
+  \time 3/2
   \dynamicUp
   %\set crescendoSpanner = #'dashed-line
   %\set midiInstrument = "recorder"
   \autoBeamOff
   \override DynamicTextSpanner #'style = #'none
-  \slurDashed \tieDashed
 }
 
 sopMusic = \relative c' {
-	\partial 16
-  \teeny bes'16 |
-  \normalsize
-  ees8 bes g bes16~ bes |
-  c8 bes16~ bes g8~ g16 g |
-  f8 g aes f16~ f |
-  g8 c bes8~ bes16~ bes16 |
-  
-  ees8 bes g bes16~ bes |
-  c8 bes g8~ g16 g16 |
-  f8 g16~ g aes8 f16~ f |
-  ees8 ees ees4 |
-  
-  \repeat volta 2 {
-    c'8 c c16 d ees8 |
-    bes bes bes16 aes g8 |
-    f g aes f |
-    g16 aes bes c bes4 |
-    
-    c8 c c16 d ees8 |
-    bes bes bes16 aes g8 |
-    f16 g aes bes c8 d |
-    ees ees ees4
-  }
-  
+	\partial 2 e4 e |
+  a2 b c4 c |
+  c2 b \bar"||"
+  c4 d |
+  e2 d4( c) b b |
+  a1 \bar"||"
+  e4 e |
+  a2 b c4 c |
+
+  c2 b \bar"||"
+  c4 d |
+  e2 d4( c) b b |
+  a1. \bar"||"\break
+  a4 b c2 a |
+  b4 c d2 b |
+
+  c4 d e2 c4( e) |\break
+  f8[ e] d4 e8[ d] c4 d8[ c] b[ a] |
+  e'1 \bar"||"
+  c4 d |
+  e2 d4( c) b b |
+  a1 \bar"|."
 }
 sopWords = \lyricmode {
   \set stanza = #"1. "
-  \set ignoreMelismata = ##t
-	"" Spring once said to the night -- in -- _ gale, __ _
-  I mean to give you __ _ birds a ball; __ _ _
-  Pray, ma’am ask the __ _ bird -- ies all, __ _
-  The birds and __ _ bird -- ies, __ _ great and small.
+  Look, ye saints, the sight is glor -- ious;
+  See the Man of Sor -- rows now!
+  From the fight re -- turned vic -- tor -- ious,
+  Ev -- ’ry knee to Him shall \set associatedVoice = "altos" bow.
+
+  \unset associatedVoice
+  \repeat unfold 10 \skip1
+  Crowns be -- come the vic -- tor’s brow,
+  Crowns be -- come the vic -- tor’s brow.
 }
 
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
-  \set ignoreMelismata = ##t
-  "" Soon they came from the bush and _ tree, __ _
-  "" Sing -- ing sweet their _ songs of glee: __ _ _
-  Each one fresh from its co -- zy nest, __ _ ""
-  Each one __ _ dressed in its Sun -- day best.
+  Crown the Sav -- iour! An -- gels, crown Him;
+  Rich the tro -- phies Je -- sus brings;
+  On the seat of pow’r en -- throne Him
+  While the vault of heav -- en \set associatedVoice = "altos" rings.
+  %\dropLyricsXII
+  Crown Him! Crown Him!
+  %\raiseLyrics
+  Crown Him! Crown Him!
+  Crown Him! Crown \unset associatedVoice Him!
+  Crown the Sav -- iour King of kings,
+  Crown the Sav -- iour King of kings.
 }
 
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
-  \set ignoreMelismata = ##t
-  The Wren and Cuck -- oo __ _ danced for _ life, __ _
-  The ra -- ven waltzed with the yellow -- bird’s wife,
-  The __ _ awk -- ward owl and the bash -- ful jay, __ _ ""
-  Wished each _ other a __ _ “very good day.”
-  
-  Tra la la la la,
-  Tra la la la la,
-  Tra la la la,
-  Tra la la la la,
-  
-  Tra la la la la,
-  Tra la la la la,
-  Tra la la la la la,
-  Tra la la.
-  
+  Sin -- ners in de -- ri -- sion crowned Him
+  Mock -- ing thus the Sav -- iour’s claim;
+  Saints and an -- gels crowd a -- round Him,
+  Own His ti -- tle, praise His \set associatedVoice = "altos" Name:
+  \unset associatedVoice
+  \repeat unfold 10 \skip1
+  Spread a -- broad the vic -- tor’s fame,
+  Spread a -- broad the vic -- tor’s fame.
 }
 
 sopWordsIV = \lyricmode {
   \set stanza = #"4. "
-  \set ignoreMelismata = ##t
-  A Wood -- pecker  came from his hole in the tree, __ _
-  And brought his bill to the com -- pa -- ny,
-  For the cher -- ries ripe and the ber -- ries red;
-  ’Twas a very long __ _ bill so the bird -- ies said.
+  Hark, those bursts of ac -- cla -- ma -- tion!
+  Hark, those loud tri -- um -- phant chords!
+  Je -- sus takes the high -- est sta -- tion;
+  Oh, what joy the sight af -- \set associatedVoice = "altos" fords!
+  \unset associatedVoice
+  \repeat unfold 10 \skip1
+  King of kings, and Lord of lords!
+  King of kings, and Lord of lords!
 }
 
 sopWordsV = \lyricmode {
   \set stanza = #"5. "
-  \set ignoreMelismata = ##t
-  They danced all day till the sun was _ low,
-  ’Till the moth -- er birds pre -- _ pared to go,
-  When _ one and all both _ great and small, __ _
-  Flew home to their nests from the bird -- ies’ ball.
+}
+
+sopWordsAbove = \lyricmode {
+  \repeat unfold 30 \skip1
+  Crown Him! Crown Him!
+  Crown Him! Crown Him!
+  Crown Him! Crown Him! __
 }
 
 altoMusic = \relative c' {
-  \teeny g'16 |
-  \normalsize g8 g g g16~ g |
-  aes8 g16~ g ees8~ ees16 ees16 |
-  d8 ees f d16~ d |
-  ees8 aes g8~ g16~ g |
-  
-  g8 g ees g16~ g |
-  aes8 g ees8~ ees16 ees16 |
-  d8 ees16~ ees f8 d16~ d |
-  bes8 bes ees4 |
-  
-  ees8 ees ees16 ees ees8 |
-  ees ees ees16 ees ees8 |
-  d8 ees f d |
-  ees16 f g aes g4 |
-  
-  ees8 ees ees16 ees ees8 |
-  ees8 ees ees16 ees ees8 |
-  d16 ees f g aes8 aes |
-  g8 g g4 
+  c4 c |
+  c( e) e2 e4 e |
+  e2 e
+  e4 g |
+  g2 f4( e) e d |
+  c1
+  c4 c |
+  c( e) e2 e4 e |
+
+  e2 e
+  e4 g |
+  g2 f4( e) e d |
+  c1. |
+  c2\rest e4 e e e |
+  c2\rest gis'4 gis gis gis |
+
+  e2\rest a4 a a a |
+  a4 a a a gis8[ a] e[ a] |
+  gis1
+  a4 gis! |
+  a2 f4( e) e d |
+  c1 \bar"|."
 }
 altoWords = \lyricmode {
 }
@@ -178,26 +183,28 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
-  \teeny bes16 |
-  \normalsize bes8 bes bes ees16~ ees |
-  ees8 ees16~ ees bes8~ bes16 bes16 |
-  bes8 bes bes bes16~ bes |
-  bes8 ees ees8~ ees16~ ees |
-  
-  bes8 bes bes ees16~ ees |
-  ees8 ees bes8~ bes16 bes16 |
-  bes8 bes16~ bes bes8 aes16~ aes |
-  g8 g g4 |
-  
-  aes8 aes aes16 aes aes8 |
-  g8 g g16 aes bes8 |
-  bes bes bes bes |
-  bes16 bes bes bes bes4 |
-  
-  aes8 aes aes16 bes c8 |
-  g8 g g16 aes bes8 |
-  bes16 bes bes bes bes8 bes |
-  bes8 bes bes4 
+  a4 a |
+  a2 gis a4 a |
+  a2 gis
+  a4 b |
+  c2 c4( a) a gis |
+  a1
+  a4 a |
+  a2 gis a4 a |
+
+  a2 gis
+  a4 b |
+  c2 c4( a) a gis |
+  a1.
+  s2 a4 a8[ b] c4 c |
+  s2 b4 b8[ c] d4 d |
+
+  s2 c4 c8[ d] e4 e |
+  d8[ e] f4 e e e b |
+  b1
+  c4 b |
+  a2 a a4 gis |
+  a1 \bar"|."
 }
 
 tenorWords = \lyricmode {
@@ -210,26 +217,28 @@ tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  \teeny ees,16 |
-  \normalsize ees8 ees ees ees16~ ees |
-  ees8 ees16~ ees ees8~ ees16 ees16 |
-  bes8 bes bes bes16~ bes |
-  ees8 ees ees8~ ees16~ ees |
-  
-  ees8 ees ees ees16~ ees |
-  ees8 ees ees8~ ees16 ees16 |
-  bes8 bes16~ bes bes8 bes16~ bes |
-  ees8 ees ees4 |
-  
-  aes,8 aes aes16 bes c[ d] |
-  ees8 ees ees16 ees ees8 |
-  bes8 bes bes bes |
-  ees16 ees ees ees ees4 |
-  
-  aes8 aes aes16 aes aes8 |
-  ees8 ees ees16 ees ees8 |
-  bes16 bes bes bes bes8 bes |
-  ees8 ees ees4 
+  a,4 a |
+  a( c) e2 a4 a |
+  a2 e
+  a4 g |
+  c,2 d e4 e |
+  a,1
+  a4 a |
+  a( c) e2 a4 a |
+
+  a2 e
+  a4 g |
+  c,2 d e4 e |
+  a,1. |
+  d2\rest a'4 a a a |
+  d,2\rest e4 e e e |
+
+  d2\rest a'4 a a c |
+  d8[ c] b4 c8[ b] a4 b8[ a] g[ f] |
+  e1
+  a,4 b |
+  c2 d e4 e |
+  a,1 \bar"|."
 }
 bassWords = \lyricmode {
 }
@@ -242,10 +251,19 @@ pianoLH = \relative c' {
 \score {
 <<
    \new ChoirStaff <<
+   \new Lyrics = "sopAbove" \with {
+      \override LyricText #'font-size = #-0.9
+      \override VerticalAxisGroup #'nonstaff-relatedstaff-spacing = 
+        #'((basic-distance . 0)
+           (minimum-distance . 0)
+           (padding . 0)
+           (stretchability . 0))
+   }
     \new Staff = women <<
       \new Voice = "sopranos" { \voiceOne << \global \sopMusic >> }
       \new Voice = "altos" { \voiceTwo << \global \altoMusic >> }
     >>
+    \context Lyrics = "sopAbove" \lyricsto "sopranos" \sopWordsAbove
     \new Lyrics = "altos"  \lyricsto "sopranos" \sopWords
     \new Lyrics = "altosII"  \lyricsto "sopranos" \sopWordsII
     \new Lyrics = "altosIII"  \lyricsto "sopranos" \sopWordsIII
@@ -256,9 +274,9 @@ pianoLH = \relative c' {
       \new Voice = "tenors" { \voiceOne << \global \tenorMusic >> }
       \new Voice = "basses" { \voiceTwo << \global \bassMusic >> }
     >>
-    \new Lyrics \with { alignAboveContext = #"tenors" } \lyricsto "tenors" \tenorWordsIII
-    \new Lyrics \with { alignAboveContext = #"tenors" } \lyricsto "tenors" \tenorWordsII
-    \new Lyrics \with { alignAboveContext = #"tenors" } \lyricsto "tenors" \tenorWords
+    \new Lyrics \lyricsto "tenors" \tenorWordsIII
+    \new Lyrics \lyricsto "tenors" \tenorWordsII
+    \new Lyrics \lyricsto "tenors" \tenorWords
   >>
 %    \new PianoStaff << \new Staff { \new Voice { \pianoRH } } \new Staff { \clef "bass" \pianoLH } >>
   >>
@@ -287,9 +305,7 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"The Birds’ Ball"}}
-  composer = \markup\oldStyleNum"Septimus Winner (1827–1902)"
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Look, Ye Saints, the Sight is Glorious"}}
+  composer = \markup\oldStyleNum"William Owen (1813–1893)"
   tagline = ""
 }}
-
-

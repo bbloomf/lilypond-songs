@@ -37,14 +37,14 @@
 \markup\vspace #0.25
 \markup\fill-line \center-align {\abs-fontsize #28 \smallCapsOldStyle"benjamin bloomfield"}
 \markup\vspace #10
-\markup{\abs-fontsize #12 {First edition, \smallCapsOldStyle"6 april 2014"}}
+\markup{\abs-fontsize #12 {First edition, \smallCapsOldStyle"8 april 2014"}}
 \markup\vspace #0.1
 \markup{\abs-fontsize #12 "This work is free of known copyright restrictions."}
 \pageBreak
 \markup\fill-line \center-align {\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #32 \smallCapsOldStyle"Contents"}}
 \markup\vspace #0.9
 
-\markup{{\override #'(line-width . 41.3) \override #'(baseline-skip . 2.69) \override #'(word-space . 0) \column{
+\markup{{\override #'(line-width . 41.3) \override #'(baseline-skip . 2.54) \override #'(word-space . 0) \column{
 {\page-link #175 {\fill-with-pattern #0.1 #CENTER . "Abide with me" \smallCapsOldStyle 175}}
 {\page-link #183 {\fill-with-pattern #0.1 #CENTER . "All Hail the Power of Jesus’ Name" \smallCapsOldStyle 183}}
 {\page-link #185 {\fill-with-pattern #0.1 #CENTER . "All People That on Earth Do Dwell" \smallCapsOldStyle 185}}
@@ -90,11 +90,11 @@
 {\page-link #97 {\fill-with-pattern #0.1 #CENTER . "Down Among the Dead Men" \smallCapsOldStyle 97}}
 {\page-link #66 {\fill-with-pattern #0.1 #CENTER . "Dreaming of Home and Mother" \smallCapsOldStyle 66}}
 {\page-link #52 {\fill-with-pattern #0.1 #CENTER . "Drink to me only with Thine Eyes" \smallCapsOldStyle 52}}
-}
-\hspace #0.01 \path #0.1 #'((moveto 0 1.4) (lineto 0 -119.05)) \hspace #0.01 \fontsize #-0.75 \override #'(line-width . 41.3) \override #'(baseline-skip . 2.69) \override #'(word-space . 0) \column {
 {\page-link #100 {\fill-with-pattern #0.1 #CENTER . "Dublin Bay" \smallCapsOldStyle 100}}
 {\page-link #115 {\fill-with-pattern #0.1 #CENTER . "Ego sum pauper (Round)" \smallCapsOldStyle 115}}
 {\page-link #56 {\fill-with-pattern #0.1 #CENTER . "Ein Prosit" \smallCapsOldStyle 56}}
+}
+\hspace #0.01 \path #0.1 #'((moveto 0 1.4) (lineto 0 -119.97999999999999)) \hspace #0.01 \fontsize #-0.0 \override #'(line-width . 41.3) \override #'(baseline-skip . 2.54) \override #'(word-space . 0) \column {
 {\page-link #120 {\fill-with-pattern #0.1 #CENTER . "Fairy Belle" \smallCapsOldStyle 120}}
 {\page-link #48 {\fill-with-pattern #0.1 #CENTER . "Farewell to Fiunary" \smallCapsOldStyle 48}}
 {\page-link #29 {\fill-with-pattern #0.1 #CENTER . "The Flight of Love" \smallCapsOldStyle 29}}
@@ -137,14 +137,14 @@
 {\page-link #18 {\fill-with-pattern #0.1 #CENTER . "It was a lover and his lass" \smallCapsOldStyle 18}}
 {\page-link #134 {\fill-with-pattern #0.1 #CENTER . "It’s Delightful to be Married!" \smallCapsOldStyle 134}}
 {\page-link #116 {\fill-with-pattern #0.1 #CENTER . "Jamie’s on the Stormy Sea" \smallCapsOldStyle 116}}
-}}}
-\markup{{\override #'(line-width . 41.3) \override #'(baseline-skip . 2.69) \override #'(word-space . 0) \column{
 {\page-link #92 {\fill-with-pattern #0.1 #CENTER . "Jenny the Flower of Kildare" \smallCapsOldStyle 92}}
 {\page-link #170 {\fill-with-pattern #0.1 #CENTER . "Jesus, Lover of my soul" \smallCapsOldStyle 170}}
 {\page-link #165 {\fill-with-pattern #0.1 #CENTER . "Jesus! the very thought of Thee" \smallCapsOldStyle 165}}
 {\page-link #37 {\fill-with-pattern #0.1 #CENTER . "John Anderson, my jo" \smallCapsOldStyle 37}}
 {\page-link #142 {\fill-with-pattern #0.1 #CENTER . "Johnny Sands" \smallCapsOldStyle 142}}
 {\page-link #32 {\fill-with-pattern #0.1 #CENTER . "Killarney" \smallCapsOldStyle 32}}
+}}}
+\markup{{\override #'(line-width . 41.3) \override #'(baseline-skip . 2.54) \override #'(word-space . 0) \column{
 {\page-link #162 {\fill-with-pattern #0.1 #CENTER . "La ci darem la mano" \smallCapsOldStyle 162}}
 {\page-link #146 {\fill-with-pattern #0.1 #CENTER . "Last Week I Took a Wife" \smallCapsOldStyle 146}}
 {\page-link #172 {\fill-with-pattern #0.1 #CENTER . "Lead Kindly Light" \smallCapsOldStyle 172}}
@@ -192,11 +192,11 @@
 {\page-link #82 {\fill-with-pattern #0.1 #CENTER . "On the Banks of the Wabash, Far Away" \smallCapsOldStyle 82}}
 {\page-link #55 {\fill-with-pattern #0.1 #CENTER . "O Sole Mio" \smallCapsOldStyle 55}}
 {\page-link #189 {\fill-with-pattern #0.1 #CENTER . "Our Blest Redeemer" \smallCapsOldStyle 189}}
-}
-\hspace #0.01 \path #0.1 #'((moveto 0 1.4) (lineto 0 -140.73)) \hspace #0.01 \fontsize #-0.75 \override #'(line-width . 41.3) \override #'(baseline-skip . 2.69) \override #'(word-space . 0) \column {
 {\page-link #10 {\fill-with-pattern #0.1 #CENTER . "Praise of Spring" \smallCapsOldStyle 10}}
 {\page-link #125 {\fill-with-pattern #0.1 #CENTER . "The Pretty Girl Milking Her Cow" \smallCapsOldStyle 125}}
 {\page-link #106 {\fill-with-pattern #0.1 #CENTER . "Punchinello" \smallCapsOldStyle 106}}
+}
+\hspace #0.01 \path #0.1 #'((moveto 0 1.4) (lineto 0 -125.1)) \hspace #0.01 \fontsize #-0.0 \override #'(line-width . 41.3) \override #'(baseline-skip . 2.54) \override #'(word-space . 0) \column {
 {\page-link #65 {\fill-with-pattern #0.1 #CENTER . "Red is the Rose" \smallCapsOldStyle 65}}
 {\page-link #87 {\fill-with-pattern #0.1 #CENTER . "Red River Valley" \smallCapsOldStyle 87}}
 {\page-link #86 {\fill-with-pattern #0.1 #CENTER . "Red Wing" \smallCapsOldStyle 86}}

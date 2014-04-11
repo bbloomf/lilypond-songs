@@ -107,7 +107,7 @@ sopWordsIV = \lyricmode {
   \set stanza = #"4. "
   Let love "" and friend -- ship on that day, Hur -- rah, Hur -- rah,
   Their choic -- "" est trea -- sures then dis -- play, Hur -- rah, Hur -- rah,
-  And let each one per -- form som part,
+  And let each one per -- form some part,
   To fill with joy the war -- rior’s heart,
 }
 
@@ -126,7 +126,7 @@ altoMusic = \relative c' {
   f4.~ f4 f8 |
   fis4.~ fis4 g8 |
   f4 f8 f8[ ees] d8 |
-  f4 f8 f4 f8 |
+  f4 f8 f4 ees8 |
   
   d4 d8 d4 d8 |
   fis4 fis8 fis \bar"||"

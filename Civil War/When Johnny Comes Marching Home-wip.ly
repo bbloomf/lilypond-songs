@@ -60,12 +60,12 @@ sopMusic = \relative c' {
   bes4 a8 bes4 g8 |
   
   f4.~ f4 d8 |
-  f4.~ f4 g8 |
+  f4.~ f4 \bar"" g8 |
   d g g g4 a8 |
   bes4 a8 bes4 c8 |
   d4.~ d4 bes8 |
   
-  d4.~ d4 bes16[ c] |
+  d4.~ d4 \bar"" bes16[ c] |
   d4 d8 d[ c] bes |
   c4 c8 c4 a8 |
   bes4 bes8 bes[ a] g |
@@ -73,7 +73,7 @@ sopMusic = \relative c' {
   a4 a8 a \bar"||" bes c |
   d4. c |
   bes a |
-  d,8 g g g4 f8 |
+  g8 g g g4 f8 |
   g4.~ g4 \bar"|."
 }
 sopWords = \lyricmode {
@@ -116,25 +116,25 @@ sopWordsV = \lyricmode {
 }
 
 altoMusic = \relative c' {
-  bes8 |
-  bes bes bes bes4 d8 |
-  d4 d8 d4 d8 |
+  g'8 |
+  d d d d4 f8 |
+  d4 ees8 d4 d8 |
   d4.~ d4 bes8 |
-  c4.~ c4 bes8 |
-  bes bes bes bes4 d8 |
-  d4 d8 d4 f8 |
+  d4.~ d4 g8 |
+  d d d d4 f8 |
+  d4 f8 d4 ees8 |
   f4.~ f4 f8 |
-  fis4.~ fis4 f8 |
-  f4 f8 f4 d8 |
+  fis4.~ fis4 g8 |
+  f4 f8 f8[ ees] d8 |
   f4 f8 f4 f8 |
   
   d4 d8 d4 d8 |
   fis4 fis8 fis \bar"||"
   
-  f8 f |
-  d4. f |
-  d d |
-  bes8 bes bes bes4 d8 |
+  g8 f |
+  f4. f |
+  d fis |
+  g8 d d bes4 a8 |
   bes4.~ bes4 \bar"|."
 }
 altoWords = \lyricmode {
@@ -158,25 +158,25 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
-  d,8 |
-  g d d d4 fis8 |
-  g4 fis8 g4 bes8 |
+  g8 |
+  bes bes bes bes4 c8 |
+  bes4 c8 bes4 bes8 |
   bes4.~ bes4 f8 |
-  a4.~ a4 d,8 |
-  g d d d4 fis8 |
-  g4 fis8 g4 a8 |
+  bes4.~ bes4 g8 |
+  bes bes bes bes4 c8 |
+  bes4 c8 bes4 a8 |
   bes4.~ bes4  bes8 |
-  a4.~ a4 bes8 |
+  a4.~ a4 d8 |
   bes4 bes8 bes4 bes8 |
   a4 a8 a4 c8 |
   
-  g4 g8 g4 bes8 |
-  a4 a8 a \bar"||"
+  g4 g8 g[ a] bes8 |
+  d4 d8 d \bar"||"
   
   bes8 a |
   bes4. a |
-  g fis |
-  g8 d d d4 d8 |
+  g d' |
+  bes8 bes bes g4 d8 |
   g4.~ g4 \bar"|."
 }
 
@@ -190,24 +190,24 @@ tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  g,8 |
-  g g g g4 d'8 |
-  g,4 d'8 g,4 g8 |
+  g8 |
+  g g g g4 f8 |
+  g4 f8 g4 g,8 |
   
   bes4.~ bes4 bes8 |
-  f4.~ f4 g8 |
-  g g g g4 a8 |
-  g4 a8 g4 f8 |
-  bes4.~ bes4 d8 |
+  bes4.~ bes4 g'8 |
+  g g g g4 f8 |
+  g4 f8 g4 f8 |
+  bes,4.~ bes4 d8 |
   
-  d4.~ d4 d8 |
+  d4.~ d4 g,8 |
   bes4 bes8 bes4 bes8 |
   f4 f8 f4 f8 |
   g4 g8 g4 g8 |
   d'4 d8 d \bar"||"
-  d f |
-  bes,4. c |
-  d d |
+  g f |
+  bes,4. f |
+  g d' |
   g,8 g g8 g4 d'8 |
   g,4.~ g4 \bar"|."
 }

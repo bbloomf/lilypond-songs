@@ -1,10 +1,9 @@
 ﻿\version "2.14.2"
 \include "util.ly"
 \header {
-  title = " "
-  instrument = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Our Blest Redeemer"}}
-  composer = \markup\oldStyleNum"John Bacchus Dykes (1823–1876)"
-  poet = \markup\oldStyleNum"Harriet Auber (1773–1862)"
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"There’s a land ’mid the stars"}}
+  composer = \markup\oldStyleNum"R. A. Glenn"
+  poet = \markup\oldStyleNum"W. P. W."
   tagline = ""
 }
 \paper {
@@ -16,18 +15,8 @@
   system-system-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)
-       (padding . -3)
+       (padding . 1)
        (stretchability . 100))
-  top-markup-spacing =
-    #'((basic-distance . 0)
-       (minimum-distance . 0)
-       (padding . 0)
-       (stretchability . 0))
-  score-markup-spacing =
-    #'((basic-distance . 0)
-       (minimum-distance . 0)
-       (padding . -1)
-       (stretchability . 75))
   ragged-last-bottom = ##t
   ragged-bottom = ##f
   two-sided = ##t
@@ -56,7 +45,7 @@
 }
 #(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
 global = {
-  \key ees \major
+  \key g \major
   \time 4/4
   \dynamicUp
   %\set crescendoSpanner = #'dashed-line
@@ -66,86 +55,105 @@ global = {
 }
 
 sopMusic = \relative c' {
-  \partial 4 ees4 |
-  ees4. ees8 f4 g |
-  aes4. aes8 g4 \bar"" bes |
-  ees g, aes a |
-  bes2. \bar""\break
+  \partial 4 g'8.[ a16] |
+  b4 b8. b16 b4 a8. g16 |
+  d'2. \bar"" c8. b16 |
+  b4 b8. b16 a4 g8. g16 |
 
-  aes?4 |
-  g4. g8 aes4 bes |
-  c c bes \bar"" g |
-  bes2. aes4 |
+  a2. \bar"" g8. a16 |
+  b4 b8. b16 b4 a8. b16 |
+  d4( c2) \bar"" c8[ e] |
+
+  d4 a8. c16 b4 a8. a16 |
+  g2. \bar"||"
+  g8. c16 |
+  e2. \times 2/3 {c8[ d] e} |
+
+  d2. \bar"" b8. c16 |
+  d4 d8 d c4 b8. b16 |
+  a2. \bar"" b8. c16 |
+
+  d2. \times 2/3 {b8[ a] g} |
+  c8 e2~ e8 \bar"" e e |
+  d4 c8 c b4^\markup\italic"rit." a8. a16 |
   g2. \bar"|."
 }
 sopWords = \lyricmode {
   \set stanza = #"1. "
-  Our blest Re -- deem -- er, ere he breathed
-  His ten -- der, last fare -- well,
-  A Guide, a Com -- fort -- er, be -- queathed,
-  \set associatedVoice = "tenors"
-  With us to dwell.
+  \set ignoreMelismata = ##t
+  There’s a land ’mid the stars we are told,
+  Where they know not the sor -- row of time,
+  Crys -- tal foun -- tains in val -- leys of gold, _
+  And _ life is a trea -- sure sub -- lime.
+
+
 }
 
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
-  He came, in tongues of liv -- ing flame,
-  To teach, con -- vince, sub -- due;
-  All pow’r -- ful as the wind he came,
-  \set associatedVoice = "tenors"
-  As view -- less too.
+  \set ignoreMelismata = ##t
+  Here our gaze can -- not soar to that land,
+  But our vi -- sions have told of its bliss,
+  And our souls by its breez -- es are fanned, _
+  When we faint in the des -- ert of this.
+
+  \unset ignoreMelismata
+  ’Tis the  \set associatedVoice = "altos" sweet
+  ’Tis the \unset associatedVoice sweet
+  by and \set associatedVoice = "altos" by, 
+  by and \unset associatedVoice by, 
+  ’Tis the land of our God we are told;
+  Shall we \set associatedVoice = "altos" meet, 
+  shall we \unset associatedVoice meet 
+  in that cit -- y?
+  ’Tis the beau -- ti -- ful home of the soul.
 }
 
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
-  He came sweet in -- fluence to im -- part,
-  A gra -- cious, will -- ing guest,
-  While he can find one hum -- ble heart
-  \set associatedVoice = "tenors"
-  Where -- in to rest.
+  \set ignoreMelismata = ##t
+  Oh, the stars in the hea -- vens at night
+  Seem to tell where the ran -- somed have trod,
+  And the sun from his pal -- ace of light _
+  Seems to beam with the smiles of our God.
 }
 
 sopWordsIV = \lyricmode {
   \set stanza = #"4. "
-  And His that gen -- tle voice we hear,
-  Soft as the breath of even,
-  That checks each fault, that calms each fear
-  \set associatedVoice = "tenors"
-  And speaks of heav’n.
+  \set ignoreMelismata = ##t
+  Oh, _ then let us cling to His Son,
+  All our sor -- rows He’ll help us to bear,
+  And when life and its du -- ties are done, _
+  He has prom -- ised a crown we shall wear.
 }
 
 sopWordsV = \lyricmode {
   \set stanza = #"5. "
-  And eve -- ry vir -- tue we pos -- sess,
-  And eve -- ry vic -- t’ry won,
-  And eve -- ry thought of ho -- li -- ness,
-  \set associatedVoice = "tenors"
-  Are His a -- lone.
-}
-
-sopWordsVI = \lyricmode {
-  \set stanza = #"6. "
-  Spi -- rit of pu -- ri -- ty and grace,
-  Our weak -- ness pit -- ying see;
-  O, make our hearts Thy dwell -- ing -- place,
-  \set associatedVoice = "tenors"
-  And wor -- thier Thee!
 }
 
 altoMusic = \relative c' {
-  bes4 |
-  bes4. bes8 bes4 ees |
-  ees4. ees8 ees4 ees8[ d] |
+  d8.[ d16] |
+  g4 g8. g16 g4 fis8. e16 |
+  d2. g8. g16 |
+  g4 g8. g16 fis4 e8. e16 |
 
-  ees4 ees ees ees |
-  d2.
+  fis2. d8. d16 |
+  g4 g8. g16 g4 fis8. g16 |
+  g2. g8[ g] |
 
-  d4 |
-  bes4. ees8 ees4 des |
-  c d? ees ees |
+  g4 fis8. fis16 g4 fis8. fis16 |
+  g2. \bar"||"
+  b,4\rest |
+  e\rest g8. g16 g4 e\rest |
 
-  ees2 d |
-  ees2. \bar"|."
+  e\rest g8. g16 g4 g8. fis16 |
+  g4 g8 g fis4 g8. g16 |
+  fis2. e4\rest |
+
+  e\rest g8. g16 g4 \times 2/3 {d4 d8} |
+  e8 g2~ g8 g g |
+  g4 g8 g g4 fis8. fis16 |
+  g2. \bar"|."
 }
 altoWords = \lyricmode {
 }
@@ -168,19 +176,28 @@ altoWordsVI = \lyricmode {
   \set ignoreMelismata = ##t
 }
 tenorMusic = \relative c' {
-  g4 |
-  g4. g8 aes4 bes |
-  c c bes g8[ aes] |
+  b8.[ c16] |
+  d4 d8. d16 d4 d8. d16 |
+  b2. e8. d16 |
+  d4 d8. d16 c4 b8. b16 |
 
-  bes4 bes bes c |
-  bes2.
+  d2. b8. c16 |
+  d4 d8. d16 d4 d8. d16 |
+  b4( c2) c4 |
 
-  f4 |
-  g4. bes8 c4 g |
-  aes aes bes bes |
+  b c8. a16 d4 d8. c16 |
+  b2. \bar"||"
+  s4 |
+  s c8. c16 c4 c\rest |
 
-  g2 f4( bes) |
-  bes2. \bar"|."
+  d\rest b8. b16 b4 d8. d16 |
+  d4 d8 d d4 d8. d16 |
+  d2. s4 |
+
+  s b8. b16 b4 \times 2/3 {g8[ c] b} |
+  g c2~ c8 c c |
+  b4 c8 c d4 d8. c16 |
+  b2. \bar"|."
 }
 
 tenorWords = \lyricmode {
@@ -193,19 +210,28 @@ tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  ees,4 |
-  ees4. ees8 ees4 ees |
-  aes, aes ees' ees8[ f] |
+  g8.[ g16] |
+  g4 g8. g16 g4 d8. d16 |
+  g2. g8. g16 |
+  g4 g8. g16 d4 e8. e16 |
 
-  g4 ees c f |
-  bes,2.
+  d2. g8. g16 |
+  g4 g8. g16 g4 d8. d16 |
+  g4( e2) e4 |
 
-  bes4 |
-  ees4. ees8 ees4 ees |
-  aes f g ees |
+  d4 d8. d16 d4 d8. d16 |
+  g2. \bar"||"
+  d4\rest |
+  d\rest c8. c16 c4 \times 2/3 {e8[ d] c} |
 
-  bes2 bes |
-  ees2. \bar"|."
+  g'4 g8. g16 g4 g8. a16 |
+  b4 b8 b a4 g8. g16 |
+  d2. d4\rest |
+
+  d\rest g8. g16 g4 \times 2/3 {g,8[ a] b} |
+  c8 c2~ c8 c c |
+  d4 e8 e d4 d8. d16 |
+  <g g,>2. \bar"|."
 }
 bassWords = \lyricmode {
 }
@@ -222,23 +248,16 @@ pianoLH = \relative c' {
       \new Voice = "sopranos" { \voiceOne << \global \sopMusic >> }
       \new Voice = "altos" { \voiceTwo << \global \altoMusic >> }
     >>
-    \new Lyrics = "altos"
-    \new Lyrics = "altosII"
-    \new Lyrics = "altosIII"
-    \new Lyrics = "altosIV"
-    \new Lyrics = "altosV"
-    \new Lyrics = "altosVI"
+    \new Lyrics = "altos"  \lyricsto "sopranos" \sopWords
+    \new Lyrics = "altosII"  \lyricsto "sopranos" \sopWordsII
+    \new Lyrics = "altosIII"  \lyricsto "sopranos" \sopWordsIII
+    \new Lyrics = "altosIV"  \lyricsto "sopranos" \sopWordsIV
+    \new Lyrics = "altosV"  \lyricsto "sopranos" \sopWordsV
    \new Staff = men <<
       \clef bass
       \new Voice = "tenors" { \voiceOne << \global \tenorMusic >> }
       \new Voice = "basses" { \voiceTwo << \global \bassMusic >> }
     >>
-    \context Lyrics = "altos"  \lyricsto "altos" \sopWords
-    \context Lyrics = "altosII"  \lyricsto "altos" \sopWordsII
-    \context Lyrics = "altosIII"  \lyricsto "altos" \sopWordsIII
-    \context Lyrics = "altosIV"  \lyricsto "altos" \sopWordsIV
-    \context Lyrics = "altosV"  \lyricsto "altos" \sopWordsV
-    \context Lyrics = "altosVI"  \lyricsto "altos" \sopWordsVI
     \new Lyrics \with { alignAboveContext = #"tenors" } \lyricsto "tenors" \tenorWordsIII
     \new Lyrics \with { alignAboveContext = #"tenors" } \lyricsto "tenors" \tenorWordsII
     \new Lyrics \with { alignAboveContext = #"tenors" } \lyricsto "tenors" \tenorWords

@@ -95,7 +95,7 @@ sopWords = \lyricmode {
 sopWordsII = \lyricmode {
   \set stanza = #"2. "
   \set ignoreMelismata = ##t
-  Let __ _ charm -- _ ing bea -- _ ty’s health go round,
+  Let __ _ charm -- _ ing beau -- _ ty’s health go round,
   In whom _ ce -- les -- tial joys are found,
   And may con -- fu -- sion still pur -- _ sue
   The self -- ish wo -- man hat -- ing crew;

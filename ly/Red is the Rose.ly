@@ -129,8 +129,8 @@ altoMusic = \relative c' {
   
   f4 f8. f16 e4 e8 e |
   d16 d8. c c16 bes4. bes16[ d] |
-  d4 e16 e8. f4 f8 f |
-  e2 f2 |
+  d4 ees16 ees8. f4 f8 f |
+  e?2 f2 |
   
   c4 d8. d16 e4. c16 c |
   d8. d16 bes8 bes bes4. s8 |
@@ -205,7 +205,7 @@ bassMusic = \relative c' {
   
   d4 d8. d16 c4 c8 c |
   g16 g8. a a16 bes4.\fermata c16[ c] |
-  d4 c16 c8. bes4 a8 a |
+  d4 f16 f8. bes,4 a8 a |
   c2 f\fermata |
   
   f4 d8. d16 c4. a16 a |

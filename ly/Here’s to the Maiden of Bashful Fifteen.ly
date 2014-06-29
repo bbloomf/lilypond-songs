@@ -94,7 +94,7 @@ sopWords = \lyricmode {
   \set ignoreMelismata = ##t
 	Here’s to the maid -- en of bash -- ful fif -- teen, "" ""
   Here’s to the wid -- ow of fif -- ty;
-  Here’s to the flant -- ing, ex -- trav -- a -- gant queen,
+  Here’s to the flaunt -- ing, ex -- trav -- a -- gant queen,
   And here’s to the house -- wife who’s thrift -- y.
 }
 

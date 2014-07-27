@@ -103,7 +103,7 @@ sopWords = \lyricmode {
     For the road we glad -- ly take;
   So it’s heel and toe and for -- ward,
     Bid -- ding fare -- well to the town,
-  For the wel -- come the a -- waits us
+  For the wel -- come that a -- waits us
     Ere the sun goes down.
 }
 

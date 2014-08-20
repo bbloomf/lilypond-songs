@@ -132,7 +132,7 @@ sopWordsIII = \lyricmode {
   \repeat unfold 20 \skip1
   \set stanza = #"3."
   When she was gone, good lack, My hair like hogs was bris -- tled;
-  I though she’d ne’er come back, \set ignoreMelismata = ##t So I \unset ignoreMelismata went to work and whis -- tled:
+  I thought she’d ne’er come back, \set ignoreMelismata = ##t So I \unset ignoreMelismata went to work and whis -- tled:
   Then let her go, I’ve got my stall, Which may no rob -- bers ri -- fle:
   ’T’would break my heart to lose my awl, To lose my wife’s a tri -- fle,
 

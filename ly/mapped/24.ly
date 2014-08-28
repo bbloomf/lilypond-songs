@@ -175,10 +175,9 @@ sopMusicSecond = \relative c' {
   
   %page9
   bes2.-> |
-  bes2.->\fermata \bar":|"
+  bes2.->\fermata \bar"||"
   \mark"D.C. al Coda"
   \once \override Score.RehearsalMark #'self-alignment-X = #RIGHT
-  \key ees\major
   c2->\ff^\tweak #'X-offset #-3
   ^\markup\musicglyph #"scripts.coda" c4-> |
   ees2.-> |
@@ -367,8 +366,7 @@ altoMusic = \relative c' {
   
   %page9
   bes,8-> bes-> c4->\< d-> |
-  <d g>2->\!( <d f>4\fermata) \bar":|"
-  \key ees\major
+  <d g>2->\!( <d f>4\fermata) \bar"||"
   ees8[ f] ees[ c] ees[ aes] |
   g2.-> |
   <aes, \tweak #'font-size #-3 aes'>4-> aes-> aes-> |
@@ -548,8 +546,7 @@ tenorMusic = \relative c' {
   
   %page 9 (90) tenors
   d,4->( ees) f-> |
-  aes2.-> \bar":|"
-  \key ees\major
+  aes2.->\fermata \bar"||"
   aes2-> aes4-> |
   bes2->( ees,4) |
   ees8[ f] ees[ c] ees[ aes] |
@@ -721,8 +718,7 @@ bassMusicSecond = \relative c' {
   
   %page9 (90) bass
   bes,2.-> |
-  bes2.->\fermata \bar":|"
-  \key ees\major
+  bes2.->\fermata \bar"||"
   aes'4-> c-> aes-> |
   ees2. |
   aes,4-> c-> aes-> |

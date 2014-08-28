@@ -1,1 +1,1 @@
-git clone -b gh-pages --single-branch git@github.com:bbloomf/lilypond-songs.git gh-pages
+git clone -b gh-pages --single-branch https://github.com/bbloomf/lilypond-songs.git gh-pages

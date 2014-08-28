@@ -140,8 +140,8 @@ altoMusic = \relative c' {
 
   b8[ d] g fis4 fis8 |
   e[ c] e d4.
-  g8[ e] e c4 d8 |
-  c[ a] d d4. |
+  g8[ e] e c4 c8 |
+  b[ g] d' d4. |
 
   e4 e8 e4 e8 |
   e[ c] e fis4 fis8 |
@@ -183,7 +183,7 @@ tenorMusic = \relative c' {
   g4 b8 d[ b] d |
   c4 c8 a[ fis a] |
   b4 g8 g[ a] a |
-  a4 fis8 fis[ d fis] |
+  g4 fis8 fis[ d fis] |
 
   g[ b] g g[ e] g |
   c4 b8 b[ d] b |
@@ -216,7 +216,7 @@ bassMusic = \relative c' {
 
   c4 c8 d4. |
   e4 e8 c4 d8 |
-  a4 d8 d4. |
+  e4 d8 d4. |
   e4 e8 c4 c8 |
 
   a4 g8 b4 b8 |

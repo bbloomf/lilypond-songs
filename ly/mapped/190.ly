@@ -12,7 +12,7 @@
   system-system-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)
-       (padding . -3)
+       (padding . 1)
        (stretchability . 100))
   ragged-last-bottom = ##f
   ragged-bottom = ##f
@@ -21,7 +21,7 @@
   outer-margin = 0.75\in
   top-margin = 0.26\in
   bottom-margin = 0.25\in
-  first-page-number = #51
+  first-page-number = #190
   print-first-page-number = ##t
   headerLine = ""
   oddHeaderMarkup = \markup\fill-line{
@@ -52,131 +52,149 @@ global = {
 }
 
 sopMusic = \relative c' {
-	\partial 4 d8^\markup\italic"Chorus" e |
-  g4 d8 e g4 \bar"" g8 b |
+  \partial 4 g'8.[ a16] |
+  b4 b8. b16 b4 a8. g16 |
+  d'2. \bar"" c8. b16 |
+  b4 b8. b16 a4 g8. g16 |
 
-  d8. d16 d8 b d d \bar"" b a |
-  g4 g8 b d4 \bar"" b8 d |
-  e8. e16 d8 b b a \bar"" b d |
-  e8. e16 e8 d b a \bar"" g a |
+  a2. \bar"" g8. a16 |
+  b4 b8. b16 b4 a8. b16 |
+  d4( c2) \bar"" c8[ e] |
 
-  b8. a16 g8 e e d \bar"" d e |
-  g8. g16 g8 g e' d \bar"" b a |
-  g4*1/4 d8 e g4*7/4\fermata \bar"||"
-  \once \override Score.RehearsalMark #'break-visibility = #end-of-line-visible
-  \once \override Score.RehearsalMark #'self-alignment-X = #RIGHT
-  \mark\markup\italic"Fine"
+  d4 a8. c16 b4 a8. a16 |
+  g2. \bar"||"
+  g8. c16 |
+  e2. \times 2/3 {c8[ d] e} |
 
-  d8[ e] |
-  g d b'8. a16 g4 \bar"" g8 b |
-  d[ d] d8. b16 d4 \bar"" b8 a |
+  d2. \bar"" b8. c16 |
+  d4 d8 d c4 b8. b16 |
+  a2. \bar"" b8. c16 |
 
-  g8. g16 g8 b d[ d] \bar"" b d |
-  e8. e16 d8 b a4 \bar"" b8 d |
-
-  e8. e16 e8 d b a \bar"" g a |
-  b8. a16 g8 e e[ d] \bar"" d e |
-  g8. g16 g8 g e' d \bar"" b a |
-  g4 g g \bar"||"
-  \once \override Score.RehearsalMark #'break-visibility = #end-of-line-visible
-  \once \override Score.RehearsalMark #'self-alignment-X = #RIGHT
-  \mark"D.C."
+  d2. \times 2/3 {b8[ a] g} |
+  c8 e2~ e8 \bar"" e e |
+  d4 c8 c b4^\markup\italic"rit." a8. a16 |
+  g2. \bar"|."
 }
 sopWords = \lyricmode {
-  Come a -- long, come a -- long,
-    Let us foot it out to -- geth -- er;
-  Come a -- long, come a -- long,
-    Be it fair or storm -- y wea -- ther,
-  With the hills of home be -- fore us
-    And the pur -- ple of the hea -- ther,
-  Let us sing in hap -- py cho -- rus,
-    Come a -- long, come a -- long.
+  \set stanza = #"1. "
+  \set ignoreMelismata = ##t
+  There’s a land ’mid the stars we are told,
+  Where they know not the sor -- row of time,
+  Crys -- tal foun -- tains in val -- leys of gold, _
+  And _ life is a trea -- sure sub -- lime.
 
 
-  \set stanza = #" 1."
-  So gai -- ly sings the lark,
-    And the sky’s all a -- wake
-  With the prom -- ise of the day,
-    For the road we glad -- ly take;
-  So it’s heel and toe and for -- ward,
-    Bid -- ding fare -- well to the town,
-  For the wel -- come that a -- waits us
-    Ere the sun goes down.
 }
 
 sopWordsII = \lyricmode {
-  \repeat unfold 58 ""
-  \set stanza = #" 2."
+  \set stanza = #"2. "
   \set ignoreMelismata = ##t
-  It’s the call of sea and shore,
-    It’s the tang of bog and peat,
-  And the scent of brier and myr -- tle
-    That puts ma -- gic in our feet;
-  So it’s on we go re -- joic -- ing,
-    O -- ver brack -- en, o -- ver stile; _
-  And it’s soon we will be tramp -- ing
-    Out the last long mile.
+  Here our gaze can -- not soar to that land,
+  But our vi -- sions have told of its bliss,
+  And our souls by its breez -- es are fanned, _
+  When we faint in the des -- ert of this.
+
+  \unset ignoreMelismata
+  ’Tis the  \set associatedVoice = "altos" sweet
+  ’Tis the \unset associatedVoice sweet
+  by and \set associatedVoice = "altos" by, 
+  by and \unset associatedVoice by, 
+  ’Tis the land of our God we are told;
+  Shall we \set associatedVoice = "altos" meet, 
+  shall we \unset associatedVoice meet 
+  in that cit -- y?
+  ’Tis the beau -- ti -- ful home of the soul.
 }
 
 sopWordsIII = \lyricmode {
-
+  \set stanza = #"3. "
+  \set ignoreMelismata = ##t
+  Oh, the stars in the hea -- vens at night
+  Seem to tell where the ran -- somed have trod,
+  And the sun from his pal -- ace of light _
+  Seems to beam with the smiles of our God.
 }
 
 sopWordsIV = \lyricmode {
+  \set stanza = #"4. "
+  \set ignoreMelismata = ##t
+  Oh, _ then let us cling to His Son,
+  All our sor -- rows He’ll help us to bear,
+  And when life and its du -- ties are done, _
+  He has prom -- ised a crown we shall wear.
 }
 
 sopWordsV = \lyricmode {
+  \set stanza = #"5. "
 }
 
 altoMusic = \relative c' {
-  d8 c |
-  b4 b8 c d4 d8 d |
-  fis8. fis16 fis8 fis fis fis fis fis |
-  g4 e8 g fis4 fis8 fis |
-  g8. g16 g8 g g fis fis fis |
+  d8.[ d16] |
+  g4 g8. g16 g4 fis8. e16 |
+  d2. g8. g16 |
+  g4 g8. g16 fis4 e8. e16 |
 
-  g8. g16 g8 fis g d e fis |
-  fis8. fis16 e8 c c d d c |
-  d8. d16 d8 d g fis fis fis |
-  d4*1/4 d8 c b4*7/4 \bar"||"
+  fis2. d8. d16 |
+  g4 g8. g16 g4 fis8. g16 |
+  g2. g8[ g] |
 
+  g4 fis8. fis16 g4 fis8. fis16 |
+  g2. \bar"||"
+  b,4\rest |
+  e\rest g8. g16 g4 e\rest |
 
-  b8[ c] |
-  b b d8. c16 d4 d8 d |
-  fis[ fis] fis8. fis16 fis4 fis8 fis |
-  g8. g16 e8 g fis[ fis] fis fis |
-  g8. g16 g8 g fis4 fis8 fis |
+  e\rest g8. g16 g4 g8. fis16 |
+  g4 g8 g fis4 g8. g16 |
+  fis2. e4\rest |
 
-  g8. g16 g8 fis g d e fis |
-  fis8. fis16 e8 c c[ d] d c |
-  d8. d16 d8 d g fis fis fis |
-  g4 e g \bar"||"
+  e\rest g8. g16 g4 \times 2/3 {d4 d8} |
+  e8 g2~ g8 g g |
+  g4 g8 g g4 fis8. fis16 |
+  g2. \bar"|."
 }
 altoWords = \lyricmode {
 }
+altoWordsII = \lyricmode {
+%\markup\italic
+  \set stanza = #"2. "
+}
+altoWordsIII = \lyricmode {
+  \set stanza = #"3. "
+}
+altoWordsIV = \lyricmode {
+  \set stanza = #"4. "
+}
+altoWordsV = \lyricmode {
+  \set stanza = #"5. "
+  \set ignoreMelismata = ##t
+}
+altoWordsVI = \lyricmode {
+  \set stanza = #"6. "
+  \set ignoreMelismata = ##t
+}
 tenorMusic = \relative c' {
-  fis,8 g |
-  d4 g8 g b4 b8 g |
-  b8. b16 b8 d b b d c |
-  b4 b8 b b4 d8 b |
-  c8. c16 b8 d d d d c |
+  b8.[ c16] |
+  d4 d8. d16 d4 d8. d16 |
+  b2. e8. d16 |
+  d4 d8. d16 c4 b8. b16 |
 
-  c8. c16 c8 c d d b c |
-  d8. c16 c8 g g fis fis g |
-  b8 b b b b b d c |
-  b4*1/4 fis8 g g4*7/4 \bar"||"
+  d2. b8. c16 |
+  d4 d8. d16 d4 d8. d16 |
+  b4( c2) c4 |
 
+  b c8. a16 d4 d8. c16 |
+  b2. \bar"||"
+  s4 |
+  s c8. c16 c4 c\rest |
 
-  g8[ g] |
-  d g g8. g16 b4 b8 g |
-  b[ b] b8. d16 b4 d8 c |
-  b8. b16 b8 b b[ b] d b |
-  c8. c16 b8 d d4 d8 c |
+  d\rest b8. b16 b4 d8. d16 |
+  d4 d8 d d4 d8. d16 |
+  d2. s4 |
 
-  c8. c16 c8 c d d b c |
-  d8. c16 c8 g g[ fis] fis g |
-  b8 b b b b b d c |
-  b4 c b4 \bar"||"
+  s b8. b16 b4 \times 2/3 {g8[ c] b} |
+  g c2~ c8 c c |
+  b4 c8 c d4 d8. c16 |
+  b2. \bar"|."
 }
 
 tenorWords = \lyricmode {
@@ -189,28 +207,28 @@ tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  d,8 d |
-  g,4 g8 c g4 g8 g |
-  b8. b16 b8 b b b d d |
-  e4 e8 e b4 b8 b |
-  c8. c16 g8 g d' d b d |
-  
-  c8. c16 c8 d g fis e d |
-  b8. d16 c8 c d d d d |
-  g g fis fis e d d d |
-  g,4*1/4 d'8 d g,4*7/4\fermata \bar"||"
+  g8.[ g16] |
+  g4 g8. g16 g4 d8. d16 |
+  g2. g8. g16 |
+  g4 g8. g16 d4 e8. e16 |
 
+  d2. g8. g16 |
+  g4 g8. g16 g4 d8. d16 |
+  g4( e2) e4 |
 
-  g8[ c] |
-  g8 g g8. g16 g4 g8 g |
-  b[ b] b8. b16 b4 d8 d |
-  e8. e16 e8 e b8[ b] b b |
-  c8. c16 g8 g d'4 b8 d |
+  d4 d8. d16 d4 d8. d16 |
+  g2. \bar"||"
+  d4\rest |
+  d\rest c8. c16 c4 \times 2/3 {e8[ d] c} |
 
-  c8. c16 c8 d g fis e d |
-  b8. d16 c8 c d4 d8 d |
-  g8 g fis fis e d d d |
-  g,4 c g4 \bar"||"
+  g'4 g8. g16 g4 g8. a16 |
+  b4 b8 b a4 g8. g16 |
+  d2. d4\rest |
+
+  d\rest g8. g16 g4 \times 2/3 {g,8[ a] b} |
+  c8 c2~ c8 c c |
+  d4 e8 e d4 d8. d16 |
+  <g g,>2. \bar"|."
 }
 bassWords = \lyricmode {
 }
@@ -268,8 +286,8 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Uist Tramping Song"}}
-  composer = \markup\oldStyleNum"John R. Bannerman"
-  poet = \markup\oldStyleNum"Hugh S. Roberton"
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"There’s a land ’mid the stars"}}
+  composer = \markup\oldStyleNum"R. A. Glenn"
+  poet = \markup\oldStyleNum"W. P. W."
   tagline = ""
 }}

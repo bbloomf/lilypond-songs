@@ -1,4 +1,4 @@
-﻿\version "2.14.2"
+\version "2.14.2"
 \include "util.ly"
 \header{ tagline = ""}
 \paper {
@@ -12,7 +12,7 @@
   system-system-spacing =
     #'((basic-distance . 0)
        (minimum-distance . 0)
-       (padding . -3)
+       (padding . 1)
        (stretchability . 100))
   ragged-last-bottom = ##f
   ragged-bottom = ##f
@@ -21,7 +21,7 @@
   outer-margin = 0.75\in
   top-margin = 0.26\in
   bottom-margin = 0.25\in
-  first-page-number = #51
+  first-page-number = #192
   print-first-page-number = ##t
   headerLine = ""
   oddHeaderMarkup = \markup\fill-line{
@@ -52,131 +52,131 @@ global = {
 }
 
 sopMusic = \relative c' {
-	\partial 4 d8^\markup\italic"Chorus" e |
-  g4 d8 e g4 \bar"" g8 b |
+  b'4. b8 d4 b |
+  g a b2 |
+  b4. b8 d4 b |
+  g a b2 |
+  b4. b8 c4 c |
+  a a b2 |
+  b4 cis d g, |
+  fis e d2 |
 
-  d8. d16 d8 b d d \bar"" b a |
-  g4 g8 b d4 \bar"" b8 d |
-  e8. e16 d8 b b a \bar"" b d |
-  e8. e16 e8 d b a \bar"" g a |
-
-  b8. a16 g8 e e d \bar"" d e |
-  g8. g16 g8 g e' d \bar"" b a |
-  g4*1/4 d8 e g4*7/4\fermata \bar"||"
-  \once \override Score.RehearsalMark #'break-visibility = #end-of-line-visible
-  \once \override Score.RehearsalMark #'self-alignment-X = #RIGHT
-  \mark\markup\italic"Fine"
-
-  d8[ e] |
-  g d b'8. a16 g4 \bar"" g8 b |
-  d[ d] d8. b16 d4 \bar"" b8 a |
-
-  g8. g16 g8 b d[ d] \bar"" b d |
-  e8. e16 d8 b a4 \bar"" b8 d |
-
-  e8. e16 e8 d b a \bar"" g a |
-  b8. a16 g8 e e[ d] \bar"" d e |
-  g8. g16 g8 g e' d \bar"" b a |
-  g4 g g \bar"||"
-  \once \override Score.RehearsalMark #'break-visibility = #end-of-line-visible
-  \once \override Score.RehearsalMark #'self-alignment-X = #RIGHT
-  \mark"D.C."
+  fis4. fis8 a4 fis |
+  g a b2 |
+  b4. b8 d4 b |
+  c d e2 |
+  e4 e c a |
+  d d b2 |
+  c4 e d g, |
+  b a g2 \bar"|."
 }
 sopWords = \lyricmode {
-  Come a -- long, come a -- long,
-    Let us foot it out to -- geth -- er;
-  Come a -- long, come a -- long,
-    Be it fair or storm -- y wea -- ther,
-  With the hills of home be -- fore us
-    And the pur -- ple of the hea -- ther,
-  Let us sing in hap -- py cho -- rus,
-    Come a -- long, come a -- long.
+  \set stanza = #"1. "
+  Hark! the song of ju -- bi -- lee;
+  Loud as might -- y thun -- ders roar,
+  Or the ful -- ness of the sea,
+  When it breaks up -- on the shore:
 
-
-  \set stanza = #" 1."
-  So gai -- ly sings the lark,
-    And the sky’s all a -- wake
-  With the prom -- ise of the day,
-    For the road we glad -- ly take;
-  So it’s heel and toe and for -- ward,
-    Bid -- ding fare -- well to the town,
-  For the wel -- come that a -- waits us
-    Ere the sun goes down.
+  Al -- le -- lu -- ia! for the Lord
+  God om -- ni -- po -- tent, shall reign;
+  Al -- le -- lu -- ia! let the word
+  E -- cho round the earth and main.
 }
 
 sopWordsII = \lyricmode {
-  \repeat unfold 58 ""
-  \set stanza = #" 2."
-  \set ignoreMelismata = ##t
-  It’s the call of sea and shore,
-    It’s the tang of bog and peat,
-  And the scent of brier and myr -- tle
-    That puts ma -- gic in our feet;
-  So it’s on we go re -- joic -- ing,
-    O -- ver brack -- en, o -- ver stile; _
-  And it’s soon we will be tramp -- ing
-    Out the last long mile.
+  \set stanza = #"2. "
+
+  Al -- le -- lu -- ia! hark the sound
+  From the depths un -- to the skies,
+  Wakes a -- bove, be -- neath, a -- round,
+  All cre -- a -- tion’s har -- mo -- nies;
+
+  See the Vic -- tor’s ban -- ner furl’d,
+  Sheath’d His sword: He speaks— ’tis done,
+  And the king -- doms of this world
+  Are the king -- doms of His Son.
+
 }
 
 sopWordsIII = \lyricmode {
+  \set stanza = #"3. "
 
+  He shall reign from pole to pole
+  With il -- lim -- it -- a -- ble sway;
+  He shall reign, when like a scroll
+  Yon -- der heav’ns have passed a -- way:
+
+  Then the end; be -- neath His rod,
+  Man’s last en -- e -- my shall fall;
+  Al -- le -- lu -- ia! Christ in God,
+  God in Christ, is all in all.
 }
 
 sopWordsIV = \lyricmode {
+  \set stanza = #"4. "
 }
 
 sopWordsV = \lyricmode {
+  \set stanza = #"5. "
 }
 
 altoMusic = \relative c' {
-  d8 c |
-  b4 b8 c d4 d8 d |
-  fis8. fis16 fis8 fis fis fis fis fis |
-  g4 e8 g fis4 fis8 fis |
-  g8. g16 g8 g g fis fis fis |
+  d4. d8 d4 d |
+  e fis g2 |
+  d4. d8 d4 d |
+  e e dis2 |
+  e4. e8 e4 e |
+  d d d2 |
+  d4 e d e |
+  d cis d2 |
 
-  g8. g16 g8 fis g d e fis |
-  fis8. fis16 e8 c c d d c |
-  d8. d16 d8 d g fis fis fis |
-  d4*1/4 d8 c b4*7/4 \bar"||"
-
-
-  b8[ c] |
-  b b d8. c16 d4 d8 d |
-  fis[ fis] fis8. fis16 fis4 fis8 fis |
-  g8. g16 e8 g fis[ fis] fis fis |
-  g8. g16 g8 g fis4 fis8 fis |
-
-  g8. g16 g8 fis g d e fis |
-  fis8. fis16 e8 c c[ d] d c |
-  d8. d16 d8 d g fis fis fis |
-  g4 e g \bar"||"
+  d4. d8 d4 d |
+  d c b2 |
+  d4. d8 g4 g |
+  g f e2 |
+  e4 gis a e |
+  d fis g2 |
+  g4 g g g |
+  g fis g2 \bar"|."
 }
 altoWords = \lyricmode {
 }
+altoWordsII = \lyricmode {
+%\markup\italic
+  \set stanza = #"2. "
+}
+altoWordsIII = \lyricmode {
+  \set stanza = #"3. "
+}
+altoWordsIV = \lyricmode {
+  \set stanza = #"4. "
+}
+altoWordsV = \lyricmode {
+  \set stanza = #"5. "
+  \set ignoreMelismata = ##t
+}
+altoWordsVI = \lyricmode {
+  \set stanza = #"6. "
+  \set ignoreMelismata = ##t
+}
 tenorMusic = \relative c' {
-  fis,8 g |
-  d4 g8 g b4 b8 g |
-  b8. b16 b8 d b b d c |
-  b4 b8 b b4 d8 b |
-  c8. c16 b8 d d d d c |
+  g4. g8 a4 b |
+  b d d2 |
+  g,4. g8 a4 g |
+  b c fis,2 |
+  g4. g8 a4 a |
+  fis fis g2 |
+  g4 g a b |
+  a4. g8 fis2 |
 
-  c8. c16 c8 c d d b c |
-  d8. c16 c8 g g fis fis g |
-  b8 b b b b b d c |
-  b4*1/4 fis8 g g4*7/4 \bar"||"
-
-
-  g8[ g] |
-  d g g8. g16 b4 b8 g |
-  b[ b] b8. d16 b4 d8 c |
-  b8. b16 b8 b b[ b] d b |
-  c8. c16 b8 d d4 d8 c |
-
-  c8. c16 c8 c d d b c |
-  d8. c16 c8 g g[ fis] fis g |
-  b8 b b b b b d c |
-  b4 c b4 \bar"||"
+  a4. a8 fis4 a |
+  g4. fis8 g2 |
+  g4. g8 b4 d |
+  c4. b8 c2 |
+  b4 e e c |
+  a d d2 |
+  c4 c d b |
+  d4. c8 b2 \bar"|."
 }
 
 tenorWords = \lyricmode {
@@ -189,28 +189,23 @@ tenorWordsIII = \lyricmode {
 }
 
 bassMusic = \relative c' {
-  d,8 d |
-  g,4 g8 c g4 g8 g |
-  b8. b16 b8 b b b d d |
-  e4 e8 e b4 b8 b |
-  c8. c16 g8 g d' d b d |
-  
-  c8. c16 c8 d g fis e d |
-  b8. d16 c8 c d d d d |
-  g g fis fis e d d d |
-  g,4*1/4 d'8 d g,4*7/4\fermata \bar"||"
+  g4. g8 fis4 g |
+  e d g2 |
+  g4. g8 fis4 g |
+  e c b2 |
+  e4. e8 a,4 a |
+  d d g,2 |
+  g'4 e fis g |
+  a4 a, d2 |
 
-
-  g8[ c] |
-  g8 g g8. g16 g4 g8 g |
-  b[ b] b8. b16 b4 d8 d |
-  e8. e16 e8 e b8[ b] b b |
-  c8. c16 g8 g d'4 b8 d |
-
-  c8. c16 c8 d g fis e d |
-  b8. d16 c8 c d4 d8 d |
-  g8 g fis fis e d d d |
-  g,4 c g4 \bar"||"
+  d4. d8 d4 c |
+  b a g2 |
+  g4. g8 g'4 f |
+  e d c2 |
+  gis'4 e a a |
+  fis d g2 |
+  e4 c b e |
+  d d g2 \bar"|."
 }
 bassWords = \lyricmode {
 }
@@ -268,8 +263,8 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Uist Tramping Song"}}
-  composer = \markup\oldStyleNum"John R. Bannerman"
-  poet = \markup\oldStyleNum"Hugh S. Roberton"
+  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Hark! the Song of Jubilee"}}
+  poet = \markup\oldStyleNum"James Montgomery (1771–1854)"
+  composer = \markup\oldStyleNum"George J. Elvey (1816–1893)"
   tagline = ""
 }}

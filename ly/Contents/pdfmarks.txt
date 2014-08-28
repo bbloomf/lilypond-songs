@@ -13,6 +13,7 @@
 [/Title (The Battle Cry of Freedom) /Page 76 /OUT pdfmark
 [/Title (The Battle Hymn of the Republic) /Page 58 /OUT pdfmark
 [/Title (The Battle Prayer) /Page 171 /OUT pdfmark
+[/Title (Beautiful Home of the Soul) /Page 190 /OUT pdfmark
 [/Title (The bell doth toll (Round)) /Page 141 /OUT pdfmark
 [/Title (Be Still, My Soul) /Page 177 /OUT pdfmark
 [/Title (The Birds' Ball) /Page 117 /OUT pdfmark
@@ -73,6 +74,7 @@
 [/Title (The Hand that Holds the Bread) /Page 23 /OUT pdfmark
 [/Title (Happy Hours at Home) /Page 123 /OUT pdfmark
 [/Title (Hard Times) /Page 122 /OUT pdfmark
+[/Title (Hark! the Song of Jubilee) /Page 192 /OUT pdfmark
 [/Title (Hark! the vesper hymn is stealing) /Page 40 /OUT pdfmark
 [/Title (The Harp that Once Through Tara's Halls) /Page 54 /OUT pdfmark
 [/Title (The Hazel Dell) /Page 81 /OUT pdfmark
@@ -141,7 +143,9 @@
 [/Title (Once to Every Man and Nation) /Page 176 /OUT pdfmark
 [/Title (On the Banks of the Wabash, Far Away) /Page 82 /OUT pdfmark
 [/Title (O Sole Mio) /Page 55 /OUT pdfmark
+[/Title (O Thou that hear'st when sinners cry) /Page 193 /OUT pdfmark
 [/Title (Our Blest Redeemer) /Page 189 /OUT pdfmark
+[/Title (O Worship the King All Glorious Above) /Page 191 /OUT pdfmark
 [/Title (Praise of Spring) /Page 10 /OUT pdfmark
 [/Title (The Pretty Girl Milking Her Cow) /Page 125 /OUT pdfmark
 [/Title (Punchinello) /Page 106 /OUT pdfmark

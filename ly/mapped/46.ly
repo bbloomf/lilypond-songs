@@ -230,7 +230,7 @@ bassMusic = \relative c' {
   ees8[ ees] ees ees ees ees ees ees |
   aes, aes aes aes aes4 aes8[ aes] |
   bes4 bes8[ bes] bes bes bes bes |
-  ees2. \bar"||"
+  ees2 d4\rest \bar"||"
 
   %chorus
   bes8. bes16 |

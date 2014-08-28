@@ -94,7 +94,7 @@ sopWordsII = \lyricmode {
 
 sopWordsIII = \lyricmode {
   \set stanza = #"3. "
-  He came sweet in -- flu -- ence to impart,
+  He came sweet in -- fluence to im -- part,
   A gra -- cious, will -- ing guest,
   While he can find one hum -- ble heart
   \set associatedVoice = "tenors"

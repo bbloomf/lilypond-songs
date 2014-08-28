@@ -59,6 +59,10 @@ BookmarkTitle: The Battle Prayer
 BookmarkLevel: 1
 BookmarkPageNumber: 171
 BookmarkBegin
+BookmarkTitle: Beautiful Home of the Soul
+BookmarkLevel: 1
+BookmarkPageNumber: 190
+BookmarkBegin
 BookmarkTitle: The bell doth toll (Round)
 BookmarkLevel: 1
 BookmarkPageNumber: 141
@@ -298,6 +302,10 @@ BookmarkBegin
 BookmarkTitle: Hard Times
 BookmarkLevel: 1
 BookmarkPageNumber: 122
+BookmarkBegin
+BookmarkTitle: Hark! the Song of Jubilee
+BookmarkLevel: 1
+BookmarkPageNumber: 192
 BookmarkBegin
 BookmarkTitle: Hark! the vesper hymn is stealing
 BookmarkLevel: 1
@@ -571,9 +579,17 @@ BookmarkTitle: O Sole Mio
 BookmarkLevel: 1
 BookmarkPageNumber: 55
 BookmarkBegin
+BookmarkTitle: O Thou that hear'st when sinners cry
+BookmarkLevel: 1
+BookmarkPageNumber: 193
+BookmarkBegin
 BookmarkTitle: Our Blest Redeemer
 BookmarkLevel: 1
 BookmarkPageNumber: 189
+BookmarkBegin
+BookmarkTitle: O Worship the King All Glorious Above
+BookmarkLevel: 1
+BookmarkPageNumber: 191
 BookmarkBegin
 BookmarkTitle: Praise of Spring
 BookmarkLevel: 1

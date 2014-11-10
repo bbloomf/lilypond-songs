@@ -86,7 +86,7 @@ sopMusic = \relative c' {
   a'8 d, a' d, |
   g a16[ bes] a8 d\fermata |
   a16^\markup\italic"rall." bes a g f8[ e] |
-  d4\fermata b'4\rest \bar":|"\break
+  d4\fermata b'4\rest \bar":|."\break
   
   \key d\major
   fis4^\markup{\dynamic"p" \italic"More slowly, with feeling"} g8 a |
@@ -186,7 +186,7 @@ altoMusic = \relative c' {
   d8 d d d |
   d f16[ g] f8 f |
   f16 g f e d8[ cis] |
-  d4 s \bar":|"
+  d4 s \bar":|."
   
   \key d\major
   d4 d8 d |
@@ -248,7 +248,7 @@ tenorMusic = \relative c' {
   f'8 f f f |
   bes d d a |
   a16 a a a a8[ g] |
-  f4 s \bar":|"
+  f4 s \bar":|."
   
   \key d\major
   a4 a8 a |
@@ -300,7 +300,7 @@ bassMusic = \relative c' {
   d8 d d d |
   d d d d\fermata |
   a16 a a a a4 |
-  d4\fermata d\rest \bar":|"
+  d4\fermata d\rest \bar":|."
   
   \key d\major
   d4 e8 fis |

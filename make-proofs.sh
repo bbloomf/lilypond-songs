@@ -10,6 +10,8 @@ if git pull
 then
   cp \!full.pdf 9781484022801_content.pdf
 
+  echo 'Converting pdfmarks to WINDOWS-1252'
+  iconv -f UTF-8 -t WINDOWS-1252 ly/Contents/pdfmarks.txt > pdfmarks.txt
   echo 'Adding bookmarks to 8.5x11 version'
   gs -o gh-pages/PDFs/sftpd.pdf -dBATCH -dNOPAUSE -sDEVICE=pdfwrite -f \!full.pdf pdfmarks.txt
   echo 'Making tablet version'

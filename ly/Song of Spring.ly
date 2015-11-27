@@ -749,7 +749,7 @@ bassWords = \lyricmode {
   \repeat unfold 15 \skip 1
   Light of Day re -- turn -- eth, glo -- ry of Spring burn -- eth;
   Joy -- notes peal -- ing, gay mu -- sic make.
-  Ligh re -- turn -- eth,
+  Light re -- turn -- eth,
   Glo -- ry of Spring burn -- eth;
   Gai -- ly is the lark sing -- ing,
   Glad -- ness ring -- ing,

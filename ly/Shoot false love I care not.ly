@@ -149,7 +149,7 @@ sopWordsII = \lyricmode {
   And ev -- ’ry sim -- ple lov -- er
   All thy false -- hood can dis -- cov -- er:
   Then weep, love, and be sor -- ry,
-  For thou has lost thy glo -- ry.
+  For thou hast lost thy glo -- ry.
   
   "" \repeat unfold 37 \skip1
   \set stanza = #"2. "
@@ -416,7 +416,7 @@ altusWordsB = \lyricmode {
   And ev -- ’ry sim -- ple lov -- er
   All thy false -- hood can dis -- cov -- er:
   Then weep, love, and be sor -- ry,
-  For thou has lost thy glo -- ry.
+  For thou hast lost thy glo -- ry.
   
   "" \repeat unfold 19 \skip1
   \set stanza = #"2. "
@@ -465,7 +465,7 @@ quintusWordsB = \lyricmode {
   And ev -- ’ry sim -- ple lov -- er
   All thy false -- hood can dis -- cov -- er:
   Then weep, love, and be sor -- ry,
-  For thou has lost thy glo -- ry.
+  For thou hast lost thy glo -- ry.
   
   "" \repeat unfold 34 \skip1
   \set stanza = #"2. "
@@ -512,7 +512,7 @@ tenorWordsB = \lyricmode {
   And ev -- ’ry sim -- ple lov -- er
   All thy false -- hood can dis -- cov -- er:
   Then weep, love, and be sor -- ry,
-  For thou has lost thy glo -- ry.
+  For thou hast lost thy glo -- ry.
   
   "" \repeat unfold 29 \skip1
   \set stanza = #"2. "
@@ -555,7 +555,7 @@ bassusWordsB = \lyricmode {
   Thy art is to de -- ceive,
   
   Then weep, love, and be sor -- ry,
-  For thou has lost thy glo -- ry.
+  For thou hast lost thy glo -- ry.
   
   "" \repeat unfold 24 \skip1
   \set stanza = #"2. "

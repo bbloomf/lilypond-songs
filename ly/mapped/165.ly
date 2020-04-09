@@ -35,7 +35,7 @@
   print-first-page-number = ##t
   headerLine = ""
   oddHeaderMarkup = \markup\fill-line{
-     \override #'(font-name . "Garamond Premier Pro")\abs-fontsize #12.5
+     \override #'(font-name . "Garamond Premr Pro")\abs-fontsize #12.5
      \combine 
         \fill-line{"" \on-the-fly #print-page-number-check-first
         \oldStylePageNum""
@@ -43,14 +43,14 @@
         \fill-line{\headerLine}
   }
   evenHeaderMarkup = \markup {
-     \override #'(font-name . "Garamond Premier Pro")\abs-fontsize #12.5
+     \override #'(font-name . "Garamond Premr Pro")\abs-fontsize #12.5
      \combine
         \on-the-fly #print-page-number-check-first
         \oldStylePageNum""
         \fill-line{\headerLine}
   }
 }
-#(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
+#(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premr Pro" "Garamond Premr Pro" "Garamond Premr Pro" (/ 18 20))) }
 global = {
   \key bes \major
   \time 4/4
@@ -246,7 +246,7 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"When I in pain and sorrow moan"}}
+  title = \markup{\override #'(font-name . "Garamond Premr Pro Smdb Subh"){ \abs-fontsize #18 \smallCapsOldStyle"When I in pain and sorrow moan"}}
   composer = \markup\oldStyleNum"Burkard Waldis (1490–1556)"
   arranger = \markup\oldStyleNum"Arranged by Michael Praetorius (1571–1621)"
   tagline = ""
@@ -449,7 +449,7 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Jesus! the very thought of Thee"}}
+  title = \markup{\override #'(font-name . "Garamond Premr Pro Smdb Subh"){ \abs-fontsize #18 \smallCapsOldStyle"Jesus! the very thought of Thee"}}
   composer = \markup\oldStyleNum"John Bacchus Dykes (1823–1876)"
   poet = \markup\oldStyleNum"Edward Caswall (1814–1878)"
   tagline = ""

@@ -25,7 +25,7 @@
   print-first-page-number = ##t
   headerLine = ""
   oddHeaderMarkup = \markup\fill-line{
-     \override #'(font-name . "Garamond Premier Pro")\abs-fontsize #12.5
+     \override #'(font-name . "Garamond Premr Pro")\abs-fontsize #12.5
      \combine 
         \fill-line{"" \on-the-fly #print-page-number-check-first
         \oldStylePageNum""
@@ -33,14 +33,14 @@
         \fill-line{\headerLine}
   }
   evenHeaderMarkup = \markup {
-     \override #'(font-name . "Garamond Premier Pro")\abs-fontsize #12.5
+     \override #'(font-name . "Garamond Premr Pro")\abs-fontsize #12.5
      \combine
         \on-the-fly #print-page-number-check-first
         \oldStylePageNum""
         \fill-line{\headerLine}
   }
 }
-#(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
+#(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premr Pro" "Garamond Premr Pro" "Garamond Premr Pro" (/ 18 20))) }
 global = {
   \key c \major
   \time 3/4
@@ -379,7 +379,7 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"A Warrior Bold"}}
+  title = \markup{\override #'(font-name . "Garamond Premr Pro Smdb Subh"){ \abs-fontsize #18 \smallCapsOldStyle"A Warrior Bold"}}
   poet = \markup\oldStyleNum"Edwin Thomas"
   composer = \markup\oldStyleNum"Stephen Adams (1841–1913)"
   tagline = ""
@@ -664,7 +664,7 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Rule Britannia"}}
+  title = \markup{\override #'(font-name . "Garamond Premr Pro Smdb Subh"){ \abs-fontsize #18 \smallCapsOldStyle"Rule Britannia"}}
   poet = \markup\oldStyleNum"James Thomson (1700–1748)"
   composer = \markup\oldStyleNum"Thomas Arne (1710–1778)"
   tagline = ""

@@ -35,7 +35,7 @@
   print-first-page-number = ##t
   headerLine = ""
   oddHeaderMarkup = \markup\fill-line{
-     \override #'(font-name . "Garamond Premier Pro")\abs-fontsize #12.5
+     \override #'(font-name . "Garamond Premr Pro")\abs-fontsize #12.5
      \combine 
         \fill-line{"" \on-the-fly #print-page-number-check-first
         \oldStylePageNum""
@@ -43,14 +43,14 @@
         \fill-line{\headerLine}
   }
   evenHeaderMarkup = \markup {
-     \override #'(font-name . "Garamond Premier Pro")\abs-fontsize #12.5
+     \override #'(font-name . "Garamond Premr Pro")\abs-fontsize #12.5
      \combine
         \on-the-fly #print-page-number-check-first
         \oldStylePageNum""
         \fill-line{\headerLine}
   }
 }
-#(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
+#(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premr Pro" "Garamond Premr Pro" "Garamond Premr Pro" (/ 18 20))) }
 global = {
   \key e \major
   \time 4/4
@@ -316,7 +316,7 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"The March of Prohibition"}}
+  title = \markup{\override #'(font-name . "Garamond Premr Pro Smdb Subh"){ \abs-fontsize #18 \smallCapsOldStyle"The March of Prohibition"}}
   poet = \markup\oldStyleNum"M. Rebecca Darr"
   composer = \markup\oldStyleNum"Jas. L. Orr"
   tagline = ""
@@ -560,7 +560,7 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"God be with you till we meet again"}}
+  title = \markup{\override #'(font-name . "Garamond Premr Pro Smdb Subh"){ \abs-fontsize #18 \smallCapsOldStyle"God be with you till we meet again"}}
   composer = \markup\oldStyleNum"Jeremiah E. Rankin (1828–1904)"
   composer = \markup\oldStyleNum"William G. Tomer (1833–1896)"
   tagline = ""

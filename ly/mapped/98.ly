@@ -25,7 +25,7 @@
   print-first-page-number = ##t
   headerLine = ""
   oddHeaderMarkup = \markup\fill-line{
-     \override #'(font-name . "Garamond Premier Pro")\abs-fontsize #12.5
+     \override #'(font-name . "Garamond Premr Pro")\abs-fontsize #12.5
      \combine 
         \fill-line{"" \on-the-fly #print-page-number-check-first
         \oldStylePageNum""
@@ -33,14 +33,14 @@
         \fill-line{\headerLine}
   }
   evenHeaderMarkup = \markup {
-     \override #'(font-name . "Garamond Premier Pro")\abs-fontsize #12.5
+     \override #'(font-name . "Garamond Premr Pro")\abs-fontsize #12.5
      \combine
         \on-the-fly #print-page-number-check-first
         \oldStylePageNum""
         \fill-line{\headerLine}
   }
 }
-#(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
+#(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premr Pro" "Garamond Premr Pro" "Garamond Premr Pro" (/ 18 20))) }
 global = {
   \key ees \major
   \time 6/8
@@ -297,7 +297,7 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Here’s to the Maiden of Bashful Fifteen"}}
+  title = \markup{\override #'(font-name . "Garamond Premr Pro Smdb Subh"){ \abs-fontsize #18 \smallCapsOldStyle"Here’s to the Maiden of Bashful Fifteen"}}
   poet = \markup\oldStyleNum\concat{"from " \italic"The School for Scandal" ", by Richard Sheridan (1751–1816)"}
   composer = \markup\oldStyleNum"Thomas Linley (1725–1795)"
   tagline = ""

@@ -35,7 +35,7 @@
   print-first-page-number = ##t
   headerLine = ""
   oddHeaderMarkup = \markup\fill-line{
-     \override #'(font-name . "Garamond Premier Pro")\abs-fontsize #12.5
+     \override #'(font-name . "Garamond Premr Pro")\abs-fontsize #12.5
      \combine 
         \fill-line{"" \on-the-fly #print-page-number-check-first
         \oldStylePageNum""
@@ -43,14 +43,14 @@
         \fill-line{\headerLine}
   }
   evenHeaderMarkup = \markup {
-     \override #'(font-name . "Garamond Premier Pro")\abs-fontsize #12.5
+     \override #'(font-name . "Garamond Premr Pro")\abs-fontsize #12.5
      \combine
         \on-the-fly #print-page-number-check-first
         \oldStylePageNum""
         \fill-line{\headerLine}
   }
 }
-#(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
+#(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premr Pro" "Garamond Premr Pro" "Garamond Premr Pro" (/ 18 20))) }
 global = {
   \key aes \major
   \time 3/2
@@ -277,7 +277,7 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Lead Kindly Light"}}
+  title = \markup{\override #'(font-name . "Garamond Premr Pro Smdb Subh"){ \abs-fontsize #18 \smallCapsOldStyle"Lead Kindly Light"}}
   poet = \markup\oldStyleNum"John Henry Newman (1801–1890)"
   composer = \markup\oldStyleNum"John Bacchus Dykes (1823–1876)"
   tagline = ""
@@ -480,7 +480,7 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Glory be to Jesus"}}
+  title = \markup{\override #'(font-name . "Garamond Premr Pro Smdb Subh"){ \abs-fontsize #18 \smallCapsOldStyle"Glory be to Jesus"}}
   poet = \markup\oldStyleNum"tr. by Edward Caswall (1814–1878)"
   composer = \markup\oldStyleNum\concat{\italic"Bemerton" ", Friedrich Filitz (1804–1876)"}
   tagline = ""
@@ -694,7 +694,7 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Oh, happy is the man that hears"}}
+  title = \markup{\override #'(font-name . "Garamond Premr Pro Smdb Subh"){ \abs-fontsize #18 \smallCapsOldStyle"Oh, happy is the man that hears"}}
   poet = \markup\oldStyleNum"Michael Bruce (1746–1767)"
   composer = \markup\oldStyleNum"George Frideric Handel (1685–1759)"
   tagline = ""

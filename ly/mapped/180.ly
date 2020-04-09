@@ -10,7 +10,7 @@
   indent = 0\in
   %system-system-spacing = #'((basic-distance . 10) (padding . 0))
   system-system-spacing =
-    #'((basic-distance . 0)
+    #'((basic-distance . 10)
        (minimum-distance . 0)
        (padding . -3)
        (stretchability . 50))
@@ -30,7 +30,7 @@
   print-first-page-number = ##t
   headerLine = ""
   oddHeaderMarkup = \markup\fill-line{
-     \override #'(font-name . "Garamond Premier Pro")\abs-fontsize #12.5
+     \override #'(font-name . "Garamond Premr Pro")\abs-fontsize #12.5
      \combine 
         \fill-line{"" \on-the-fly #print-page-number-check-first
         \oldStylePageNum""
@@ -38,14 +38,14 @@
         \fill-line{\headerLine}
   }
   evenHeaderMarkup = \markup {
-     \override #'(font-name . "Garamond Premier Pro")\abs-fontsize #12.5
+     \override #'(font-name . "Garamond Premr Pro")\abs-fontsize #12.5
      \combine
         \on-the-fly #print-page-number-check-first
         \oldStylePageNum""
         \fill-line{\headerLine}
   }
 }
-#(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
+#(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premr Pro" "Garamond Premr Pro" "Garamond Premr Pro" (/ 18 20))) }
 global = {
   \key bes \major
   \time 4/4
@@ -256,7 +256,7 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Go to Dark Gethsemane"}}
+  title = \markup{\override #'(font-name . "Garamond Premr Pro Smbd Subh"){ \abs-fontsize #18 \smallCapsOldStyle"Go to Dark Gethsemane"}}
   composer = \markup\oldStyleNum"Johann Sebastian Bach (1685–1750)"
   poet = \markup\oldStyleNum"James Montgomery (1771–1854)"
   tagline = ""
@@ -479,7 +479,7 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"We Sing the Praise of Him who Died"}}
+  title = \markup{\override #'(font-name . "Garamond Premr Pro Smdb Subh"){ \abs-fontsize #18 \smallCapsOldStyle"We Sing the Praise of Him who Died"}}
   composer = \markup\oldStyleNum\concat{"From William Gardiner’s " \italic "Sacred Melodies" ", 1815"}
   poet = \markup\oldStyleNum"Thomas Kelly (1769–1854)"
   tagline = ""
@@ -703,7 +703,7 @@ pianoLH = \relative c' {
     }
   }
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Savior, when in dust to Thee"}}
+  title = \markup{\override #'(font-name . "Garamond Premr Pro Smdb Subh"){ \abs-fontsize #18 \smallCapsOldStyle"Savior, when in dust to Thee"}}
   composer = \markup\oldStyleNum"17th Century Spanish Melody"
   poet = \markup\oldStyleNum"Robert Grant (1785–1838)"
   tagline = ""

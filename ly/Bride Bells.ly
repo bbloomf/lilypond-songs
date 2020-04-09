@@ -3,7 +3,7 @@
 %http://books.google.com/books?id=37BMAQAAIAAJ&pg=PA82&dq=%22Bride+Bells%22+songs&hl=en&sa=X&ei=OdQ4UsDdCbWs4AOo1YDQCA&ved=0CD4Q6AEwAQ#v=onepage&q=%22Bride%20Bells%22%20songs&f=false
 %http://lcweb2.loc.gov/diglib/ihas/loc.natlib.ihas.100008090/pageturner.html
 \header {
-  title = \markup{\override #'(font-name . "Garamond Premier Pro Semibold"){ \abs-fontsize #18 \smallCapsOldStyle"Bride Bells"}}
+  title = \markup{\override #'(font-name . "Garamond Premr Pro Smdb Subh"){ \abs-fontsize #18 \smallCapsOldStyle"Bride Bells"}}
   poet = \markup\oldStyleNum"Frederic Weatherly (1848–1929)"
   composer = \markup\oldStyleNum"Joseph Leopold Röckel (1838–1923)"
   tagline = ""
@@ -40,7 +40,7 @@
   print-first-page-number = ##t
   headerLine = ""
   oddHeaderMarkup = \markup\fill-line{
-     \override #'(font-name . "Garamond Premier Pro")\abs-fontsize #12.5
+     \override #'(font-name . "Garamond Premr Pro")\abs-fontsize #12.5
      \combine 
         \fill-line{"" \on-the-fly #print-page-number-check-first
         \oldStylePageNum""
@@ -48,14 +48,14 @@
         \fill-line{\headerLine}
   }
   evenHeaderMarkup = \markup {
-     \override #'(font-name . "Garamond Premier Pro")\abs-fontsize #12.5
+     \override #'(font-name . "Garamond Premr Pro")\abs-fontsize #12.5
      \combine
         \on-the-fly #print-page-number-check-first
         \oldStylePageNum""
         \fill-line{\headerLine}
   }
 }
-#(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premier Pro" "Garamond Premier Pro" "Garamond Premier Pro" (/ 18 20))) }
+#(set-global-staff-size 18) \paper{ #(define fonts (make-pango-font-tree "Garamond Premr Pro" "Garamond Premr Pro" "Garamond Premr Pro" (/ 18 20))) }
 global = {
   \key aes \major
   \time 4/4
